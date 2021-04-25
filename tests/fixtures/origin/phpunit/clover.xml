@@ -1,0 +1,1417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1596451727">
+  <project timestamp="1596451727">
+    <package name="JBZoo\ToolboxCI\Commands">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Commands/AbstractCommand.php">
+        <class name="JBZoo\ToolboxCI\Commands\AbstractCommand" namespace="JBZoo\ToolboxCI\Commands" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="13" methods="5" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="19" elements="34" coveredelements="21"/>
+        </class>
+        <line num="44" type="method" name="configure" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="47" type="stmt" count="2"/>
+        <line num="48" type="stmt" count="2"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="53" type="stmt" count="2"/>
+        <line num="58" type="method" name="execute" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="60" type="stmt" count="2"/>
+        <line num="61" type="stmt" count="2"/>
+        <line num="63" type="stmt" count="2"/>
+        <line num="74" type="method" name="getSourceCode" visibility="protected" complexity="6" crap="18.35" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="78" type="stmt" count="0"/>
+        <line num="81" type="stmt" count="1"/>
+        <line num="84" type="stmt" count="0"/>
+        <line num="85" type="stmt" count="0"/>
+        <line num="87" type="stmt" count="0"/>
+        <line num="88" type="stmt" count="0"/>
+        <line num="91" type="stmt" count="0"/>
+        <line num="94" type="stmt" count="0"/>
+        <line num="100" type="method" name="saveResult" visibility="protected" complexity="2" crap="2.26" count="1"/>
+        <line num="102" type="stmt" count="1"/>
+        <line num="103" type="stmt" count="0"/>
+        <line num="104" type="stmt" count="0"/>
+        <line num="106" type="stmt" count="1"/>
+        <line num="108" type="stmt" count="1"/>
+        <line num="114" type="method" name="getOption" visibility="protected" complexity="2" crap="2.06" count="1"/>
+        <line num="116" type="stmt" count="1"/>
+        <line num="117" type="stmt" count="1"/>
+        <line num="118" type="stmt" count="0"/>
+        <line num="121" type="stmt" count="1"/>
+        <metrics loc="123" ncloc="80" classes="1" methods="5" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="19" elements="34" coveredelements="21"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Commands/Convert.php">
+        <class name="JBZoo\ToolboxCI\Commands\Convert" namespace="JBZoo\ToolboxCI\Commands" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="4" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="20" elements="26" coveredelements="22"/>
+        </class>
+        <line num="31" type="method" name="configure" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="39" type="stmt" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="50" type="method" name="executeAction" visibility="protected" complexity="1" crap="1" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="70" type="method" name="getFormat" visibility="private" complexity="2" crap="2.31" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="77" type="stmt" count="0"/>
+        <line num="78" type="stmt" count="0"/>
+        <line num="79" type="stmt" count="0"/>
+        <line num="83" type="stmt" count="1"/>
+        <metrics loc="85" ncloc="55" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="20" elements="26" coveredelements="22"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Commands/ConvertMap.php">
+        <class name="JBZoo\ToolboxCI\Commands\ConvertMap" namespace="JBZoo\ToolboxCI\Commands" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+        </class>
+        <line num="29" type="method" name="configure" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="40" type="method" name="executeAction" visibility="protected" complexity="1" crap="1" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <metrics loc="45" ncloc="22" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Commands/Exception.php">
+        <class name="JBZoo\ToolboxCI\Commands\Exception" namespace="JBZoo\ToolboxCI\Commands" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="25" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Commands/TeamCityStats.php">
+        <class name="JBZoo\ToolboxCI\Commands\TeamCityStats" namespace="JBZoo\ToolboxCI\Commands" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="4" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="6" elements="20" coveredelements="7"/>
+        </class>
+        <line num="31" type="method" name="configure" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <line num="41" type="stmt" count="2"/>
+        <line num="46" type="method" name="executeAction" visibility="protected" complexity="1" crap="2" count="0"/>
+        <line num="48" type="stmt" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="0"/>
+        <line num="54" type="stmt" count="0"/>
+        <line num="61" type="method" name="getFormat" visibility="private" complexity="2" crap="6" count="0"/>
+        <line num="63" type="stmt" count="0"/>
+        <line num="65" type="stmt" count="0"/>
+        <line num="67" type="stmt" count="0"/>
+        <line num="68" type="stmt" count="0"/>
+        <line num="69" type="stmt" count="0"/>
+        <line num="70" type="stmt" count="0"/>
+        <line num="74" type="stmt" count="0"/>
+        <metrics loc="76" ncloc="50" classes="1" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="6" elements="20" coveredelements="7"/>
+      </file>
+    </package>
+    <package name="JBZoo\ToolboxCI\Converters">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/AbstractConverter.php">
+        <class name="JBZoo\ToolboxCI\Converters\AbstractConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="22" methods="7" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="20" elements="32" coveredelements="23"/>
+        </class>
+        <line num="45" type="method" name="toInternal" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="56" type="method" name="fromInternal" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="58" type="stmt" count="0"/>
+        <line num="65" type="method" name="setRootPath" visibility="public" complexity="2" crap="2" count="5"/>
+        <line num="67" type="stmt" count="5"/>
+        <line num="68" type="stmt" count="5"/>
+        <line num="75" type="method" name="setRootSuiteName" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="78" type="stmt" count="1"/>
+        <line num="85" type="method" name="cleanFilepath" visibility="protected" complexity="3" crap="3" count="9"/>
+        <line num="87" type="stmt" count="9"/>
+        <line num="88" type="stmt" count="5"/>
+        <line num="91" type="stmt" count="4"/>
+        <line num="98" type="method" name="getFullPath" visibility="protected" complexity="7" crap="7.29" count="6"/>
+        <line num="100" type="stmt" count="6"/>
+        <line num="101" type="stmt" count="0"/>
+        <line num="104" type="stmt" count="6"/>
+        <line num="105" type="stmt" count="1"/>
+        <line num="108" type="stmt" count="5"/>
+        <line num="109" type="stmt" count="5"/>
+        <line num="110" type="stmt" count="5"/>
+        <line num="111" type="stmt" count="5"/>
+        <line num="113" type="stmt" count="5"/>
+        <line num="114" type="stmt" count="0"/>
+        <line num="118" type="stmt" count="5"/>
+        <line num="127" type="method" name="getFilePoint" visibility="protected" complexity="6" crap="6.29" count="8"/>
+        <line num="129" type="stmt" count="8"/>
+        <line num="130" type="stmt" count="0"/>
+        <line num="133" type="stmt" count="8"/>
+        <line num="134" type="stmt" count="8"/>
+        <line num="136" type="stmt" count="8"/>
+        <metrics loc="138" ncloc="82" classes="1" methods="7" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="20" elements="32" coveredelements="23"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/AbstractStatsTcConverter.php">
+        <class name="JBZoo\ToolboxCI\Converters\AbstractStatsTcConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="12" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="18" elements="22" coveredelements="20"/>
+        </class>
+        <line num="44" type="method" name="__construct" visibility="public" complexity="4" crap="4" count="2"/>
+        <line num="46" type="stmt" count="2"/>
+        <line num="47" type="stmt" count="2"/>
+        <line num="54" type="method" name="buildMetrics" visibility="protected" complexity="5" crap="5" count="2"/>
+        <line num="56" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="2"/>
+        <line num="59" type="stmt" count="2"/>
+        <line num="60" type="stmt" count="2"/>
+        <line num="61" type="stmt" count="2"/>
+        <line num="64" type="stmt" count="2"/>
+        <line num="65" type="stmt" count="2"/>
+        <line num="67" type="stmt" count="2"/>
+        <line num="71" type="stmt" count="2"/>
+        <line num="78" type="method" name="fromInternalMetric" visibility="public" complexity="3" crap="3.02" count="2"/>
+        <line num="80" type="stmt" count="2"/>
+        <line num="81" type="stmt" count="2"/>
+        <line num="82" type="stmt" count="2"/>
+        <line num="83" type="stmt" count="2"/>
+        <line num="87" type="stmt" count="2"/>
+        <line num="88" type="stmt" count="2"/>
+        <line num="89" type="stmt" count="2"/>
+        <line num="92" type="stmt" count="0"/>
+        <metrics loc="94" ncloc="60" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="18" elements="22" coveredelements="20"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/CheckStyleConverter.php">
+        <class name="JBZoo\ToolboxCI\Converters\CheckStyleConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="11" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="30" elements="32" coveredelements="32"/>
+        </class>
+        <line num="38" type="method" name="toInternal" visibility="public" complexity="9" crap="9" count="5"/>
+        <line num="40" type="stmt" count="5"/>
+        <line num="41" type="stmt" count="5"/>
+        <line num="43" type="stmt" count="5"/>
+        <line num="45" type="stmt" count="5"/>
+        <line num="46" type="stmt" count="5"/>
+        <line num="47" type="stmt" count="5"/>
+        <line num="48" type="stmt" count="5"/>
+        <line num="50" type="stmt" count="5"/>
+        <line num="51" type="stmt" count="5"/>
+        <line num="53" type="stmt" count="5"/>
+        <line num="54" type="stmt" count="5"/>
+        <line num="55" type="stmt" count="5"/>
+        <line num="57" type="stmt" count="5"/>
+        <line num="58" type="stmt" count="5"/>
+        <line num="59" type="stmt" count="5"/>
+        <line num="61" type="stmt" count="5"/>
+        <line num="62" type="stmt" count="5"/>
+        <line num="64" type="stmt" count="5"/>
+        <line num="65" type="stmt" count="5"/>
+        <line num="66" type="stmt" count="5"/>
+        <line num="67" type="stmt" count="5"/>
+        <line num="68" type="stmt" count="5"/>
+        <line num="69" type="stmt" count="5"/>
+        <line num="70" type="stmt" count="5"/>
+        <line num="75" type="stmt" count="5"/>
+        <line num="82" type="method" name="getDetails" visibility="private" complexity="2" crap="2" count="5"/>
+        <line num="84" type="stmt" count="5"/>
+        <line num="85" type="stmt" count="5"/>
+        <line num="86" type="stmt" count="5"/>
+        <line num="87" type="stmt" count="5"/>
+        <line num="88" type="stmt" count="5"/>
+        <metrics loc="91" ncloc="68" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="30" elements="32" coveredelements="32"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/Exception.php">
+        <class name="JBZoo\ToolboxCI\Converters\Exception" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="25" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/Factory.php">
+        <class name="JBZoo\ToolboxCI\Converters\Factory" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="3" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="10" elements="15" coveredelements="10"/>
+        </class>
+        <line num="33" type="method" name="convert" visibility="public" complexity="2" crap="2.00" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="0"/>
+        <line num="61" type="method" name="convertMetric" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="63" type="stmt" count="0"/>
+        <line num="65" type="stmt" count="0"/>
+        <metrics loc="67" ncloc="39" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="10" elements="15" coveredelements="10"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/JUnitConverter.php">
+        <class name="JBZoo\ToolboxCI\Converters\JUnitConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="27" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="70" coveredstatements="69" elements="74" coveredelements="72"/>
+        </class>
+        <line num="38" type="method" name="toInternal" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="40" type="stmt" count="4"/>
+        <line num="41" type="stmt" count="4"/>
+        <line num="43" type="stmt" count="4"/>
+        <line num="44" type="stmt" count="4"/>
+        <line num="46" type="stmt" count="4"/>
+        <line num="52" type="method" name="fromInternal" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="54" type="stmt" count="10"/>
+        <line num="55" type="stmt" count="10"/>
+        <line num="56" type="stmt" count="10"/>
+        <line num="66" type="method" name="createJUnitNodes" visibility="public" complexity="15" crap="15" count="10"/>
+        <line num="68" type="stmt" count="10"/>
+        <line num="69" type="stmt" count="10"/>
+        <line num="70" type="stmt" count="10"/>
+        <line num="73" type="stmt" count="10"/>
+        <line num="74" type="stmt" count="9"/>
+        <line num="77" type="stmt" count="10"/>
+        <line num="78" type="stmt" count="10"/>
+        <line num="79" type="stmt" count="10"/>
+        <line num="80" type="stmt" count="10"/>
+        <line num="81" type="stmt" count="10"/>
+        <line num="82" type="stmt" count="10"/>
+        <line num="83" type="stmt" count="10"/>
+        <line num="84" type="stmt" count="10"/>
+        <line num="85" type="stmt" count="10"/>
+        <line num="87" type="stmt" count="10"/>
+        <line num="88" type="stmt" count="9"/>
+        <line num="91" type="stmt" count="10"/>
+        <line num="92" type="stmt" count="3"/>
+        <line num="95" type="stmt" count="10"/>
+        <line num="96" type="stmt" count="2"/>
+        <line num="99" type="stmt" count="10"/>
+        <line num="100" type="stmt" count="1"/>
+        <line num="101" type="stmt" count="9"/>
+        <line num="102" type="stmt" count="1"/>
+        <line num="103" type="stmt" count="9"/>
+        <line num="104" type="stmt" count="0"/>
+        <line num="107" type="stmt" count="10"/>
+        <line num="108" type="stmt" count="2"/>
+        <line num="113" type="stmt" count="10"/>
+        <line num="122" type="method" name="createSourceNodes" visibility="private" complexity="10" crap="10" count="4"/>
+        <line num="124" type="stmt" count="4"/>
+        <line num="126" type="stmt" count="4"/>
+        <line num="127" type="stmt" count="4"/>
+        <line num="128" type="stmt" count="4"/>
+        <line num="129" type="stmt" count="4"/>
+        <line num="130" type="stmt" count="4"/>
+        <line num="131" type="stmt" count="4"/>
+        <line num="132" type="stmt" count="4"/>
+        <line num="133" type="stmt" count="4"/>
+        <line num="134" type="stmt" count="4"/>
+        <line num="135" type="stmt" count="3"/>
+        <line num="136" type="stmt" count="3"/>
+        <line num="137" type="stmt" count="3"/>
+        <line num="138" type="stmt" count="3"/>
+        <line num="140" type="stmt" count="3"/>
+        <line num="142" type="stmt" count="3"/>
+        <line num="143" type="stmt" count="3"/>
+        <line num="144" type="stmt" count="3"/>
+        <line num="145" type="stmt" count="3"/>
+        <line num="146" type="stmt" count="3"/>
+        <line num="147" type="stmt" count="3"/>
+        <line num="148" type="stmt" count="3"/>
+        <line num="149" type="stmt" count="3"/>
+        <line num="150" type="stmt" count="3"/>
+        <line num="151" type="stmt" count="3"/>
+        <line num="155" type="stmt" count="4"/>
+        <line num="156" type="stmt" count="4"/>
+        <line num="158" type="stmt" count="4"/>
+        <line num="159" type="stmt" count="4"/>
+        <line num="161" type="stmt" count="4"/>
+        <line num="162" type="stmt" count="4"/>
+        <line num="163" type="stmt" count="4"/>
+        <line num="168" type="stmt" count="4"/>
+        <metrics loc="170" ncloc="135" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="70" coveredstatements="69" elements="74" coveredelements="72"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/Map.php">
+        <class name="JBZoo\ToolboxCI\Converters\Map" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="18" methods="7" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="33" elements="47" coveredelements="38"/>
+        </class>
+        <line num="44" type="method" name="getTable" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="46" type="stmt" count="2"/>
+        <line num="48" type="stmt" count="2"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="53" type="stmt" count="2"/>
+        <line num="54" type="stmt" count="2"/>
+        <line num="55" type="stmt" count="2"/>
+        <line num="59" type="stmt" count="2"/>
+        <line num="65" type="method" name="getAvailableFormats" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="67" type="stmt" count="2"/>
+        <line num="68" type="stmt" count="2"/>
+        <line num="71" type="stmt" count="2"/>
+        <line num="72" type="stmt" count="2"/>
+        <line num="78" type="method" name="getAvailableMetrics" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="80" type="stmt" count="2"/>
+        <line num="81" type="stmt" count="2"/>
+        <line num="82" type="stmt" count="2"/>
+        <line num="85" type="stmt" count="2"/>
+        <line num="87" type="stmt" count="2"/>
+        <line num="95" type="method" name="isAvailable" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="97" type="stmt" count="2"/>
+        <line num="103" type="method" name="getMarkdownTable" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="105" type="stmt" count="2"/>
+        <line num="106" type="stmt" count="2"/>
+        <line num="109" type="stmt" count="2"/>
+        <line num="110" type="stmt" count="2"/>
+        <line num="112" type="stmt" count="2"/>
+        <line num="113" type="stmt" count="2"/>
+        <line num="115" type="stmt" count="2"/>
+        <line num="116" type="stmt" count="2"/>
+        <line num="118" type="stmt" count="2"/>
+        <line num="121" type="stmt" count="2"/>
+        <line num="123" type="stmt" count="2"/>
+        <line num="131" type="method" name="getConverter" visibility="public" complexity="4" crap="6.00" count="1"/>
+        <line num="135" type="stmt" count="1"/>
+        <line num="136" type="stmt" count="1"/>
+        <line num="137" type="stmt" count="1"/>
+        <line num="141" type="stmt" count="0"/>
+        <line num="142" type="stmt" count="0"/>
+        <line num="143" type="stmt" count="0"/>
+        <line num="151" type="method" name="getMetric" visibility="public" complexity="3" crap="12" count="0"/>
+        <line num="155" type="stmt" count="0"/>
+        <line num="156" type="stmt" count="0"/>
+        <line num="157" type="stmt" count="0"/>
+        <line num="161" type="stmt" count="0"/>
+        <metrics loc="163" ncloc="117" classes="1" methods="7" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="33" elements="47" coveredelements="38"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/PHPDependStatsTcConverter.php">
+        <class name="JBZoo\ToolboxCI\Converters\PHPDependStatsTcConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+        </class>
+        <line num="36" type="method" name="toInternalMetric" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <metrics loc="41" ncloc="21" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/PHPlocStatsTcConverter.php">
+        <class name="JBZoo\ToolboxCI\Converters\PHPlocStatsTcConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+        </class>
+        <line num="36" type="method" name="toInternalMetric" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="39" type="stmt" count="2"/>
+        <metrics loc="41" ncloc="21" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/PhpmdJsonConverter.php">
+        <class name="JBZoo\ToolboxCI\Converters\PhpmdJsonConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="15" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="38" elements="40" coveredelements="40"/>
+        </class>
+        <line num="38" type="method" name="toInternal" visibility="public" complexity="5" crap="5" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="64" type="stmt" count="1"/>
+        <line num="65" type="stmt" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="79" type="method" name="getDetails" visibility="private" complexity="10" crap="10" count="1"/>
+        <line num="81" type="stmt" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="86" type="stmt" count="1"/>
+        <line num="87" type="stmt" count="1"/>
+        <line num="90" type="stmt" count="1"/>
+        <line num="91" type="stmt" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="95" type="stmt" count="1"/>
+        <line num="97" type="stmt" count="1"/>
+        <line num="98" type="stmt" count="1"/>
+        <line num="99" type="stmt" count="1"/>
+        <line num="100" type="stmt" count="1"/>
+        <line num="101" type="stmt" count="1"/>
+        <line num="102" type="stmt" count="1"/>
+        <line num="103" type="stmt" count="1"/>
+        <metrics loc="106" ncloc="83" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="38" elements="40" coveredelements="40"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/PsalmJsonConverter.php">
+        <class name="JBZoo\ToolboxCI\Converters\PsalmJsonConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="8" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="31" elements="33" coveredelements="33"/>
+        </class>
+        <line num="38" type="method" name="toInternal" visibility="public" complexity="5" crap="5" count="3"/>
+        <line num="40" type="stmt" count="3"/>
+        <line num="42" type="stmt" count="3"/>
+        <line num="43" type="stmt" count="3"/>
+        <line num="44" type="stmt" count="3"/>
+        <line num="47" type="stmt" count="3"/>
+        <line num="48" type="stmt" count="3"/>
+        <line num="50" type="stmt" count="3"/>
+        <line num="51" type="stmt" count="3"/>
+        <line num="53" type="stmt" count="3"/>
+        <line num="54" type="stmt" count="3"/>
+        <line num="55" type="stmt" count="3"/>
+        <line num="56" type="stmt" count="3"/>
+        <line num="57" type="stmt" count="3"/>
+        <line num="59" type="stmt" count="3"/>
+        <line num="60" type="stmt" count="3"/>
+        <line num="61" type="stmt" count="3"/>
+        <line num="62" type="stmt" count="3"/>
+        <line num="65" type="stmt" count="3"/>
+        <line num="66" type="stmt" count="3"/>
+        <line num="68" type="stmt" count="3"/>
+        <line num="72" type="stmt" count="3"/>
+        <line num="79" type="method" name="getDetails" visibility="private" complexity="3" crap="3" count="3"/>
+        <line num="81" type="stmt" count="3"/>
+        <line num="83" type="stmt" count="3"/>
+        <line num="84" type="stmt" count="3"/>
+        <line num="85" type="stmt" count="3"/>
+        <line num="86" type="stmt" count="3"/>
+        <line num="87" type="stmt" count="3"/>
+        <line num="88" type="stmt" count="3"/>
+        <line num="89" type="stmt" count="3"/>
+        <line num="90" type="stmt" count="3"/>
+        <line num="91" type="stmt" count="3"/>
+        <metrics loc="94" ncloc="70" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="31" elements="33" coveredelements="33"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/TeamCityTestsConverter.php">
+        <class name="JBZoo\ToolboxCI\Converters\TeamCityTestsConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="25" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="65" coveredstatements="61" elements="69" coveredelements="63"/>
+        </class>
+        <line num="44" type="method" name="__construct" visibility="public" complexity="4" crap="4" count="6"/>
+        <line num="46" type="stmt" count="6"/>
+        <line num="47" type="stmt" count="6"/>
+        <line num="52" type="method" name="fromInternal" visibility="public" complexity="2" crap="2.02" count="6"/>
+        <line num="54" type="stmt" count="6"/>
+        <line num="56" type="stmt" count="6"/>
+        <line num="58" type="stmt" count="6"/>
+        <line num="59" type="stmt" count="6"/>
+        <line num="60" type="stmt" count="6"/>
+        <line num="63" type="stmt" count="0"/>
+        <line num="69" type="method" name="renderSuite" visibility="private" complexity="6" crap="6" count="6"/>
+        <line num="71" type="stmt" count="6"/>
+        <line num="72" type="stmt" count="6"/>
+        <line num="73" type="stmt" count="3"/>
+        <line num="76" type="stmt" count="6"/>
+        <line num="77" type="stmt" count="6"/>
+        <line num="80" type="stmt" count="6"/>
+        <line num="81" type="stmt" count="4"/>
+        <line num="84" type="stmt" count="6"/>
+        <line num="85" type="stmt" count="4"/>
+        <line num="88" type="stmt" count="6"/>
+        <line num="89" type="stmt" count="6"/>
+        <line num="91" type="stmt" count="6"/>
+        <line num="98" type="method" name="renderTestCase" visibility="private" complexity="13" crap="13.05" count="4"/>
+        <line num="100" type="stmt" count="4"/>
+        <line num="102" type="stmt" count="4"/>
+        <line num="103" type="stmt" count="4"/>
+        <line num="104" type="stmt" count="3"/>
+        <line num="105" type="stmt" count="1"/>
+        <line num="106" type="stmt" count="0"/>
+        <line num="109" type="stmt" count="4"/>
+        <line num="111" type="stmt" count="4"/>
+        <line num="112" type="stmt" count="2"/>
+        <line num="113" type="stmt" count="4"/>
+        <line num="114" type="stmt" count="3"/>
+        <line num="115" type="stmt" count="3"/>
+        <line num="116" type="stmt" count="3"/>
+        <line num="117" type="stmt" count="3"/>
+        <line num="119" type="stmt" count="3"/>
+        <line num="120" type="stmt" count="0"/>
+        <line num="123" type="stmt" count="3"/>
+        <line num="124" type="stmt" count="1"/>
+        <line num="127" type="stmt" count="3"/>
+        <line num="128" type="stmt" count="3"/>
+        <line num="129" type="stmt" count="3"/>
+        <line num="130" type="stmt" count="3"/>
+        <line num="131" type="stmt" count="3"/>
+        <line num="132" type="stmt" count="3"/>
+        <line num="133" type="stmt" count="3"/>
+        <line num="134" type="stmt" count="3"/>
+        <line num="135" type="stmt" count="3"/>
+        <line num="136" type="stmt" count="3"/>
+        <line num="140" type="stmt" count="4"/>
+        <line num="141" type="stmt" count="4"/>
+        <line num="143" type="stmt" count="3"/>
+        <line num="144" type="stmt" count="3"/>
+        <line num="145" type="stmt" count="3"/>
+        <line num="148" type="stmt" count="3"/>
+        <line num="149" type="stmt" count="3"/>
+        <line num="150" type="stmt" count="3"/>
+        <line num="151" type="stmt" count="3"/>
+        <line num="152" type="stmt" count="3"/>
+        <line num="153" type="stmt" count="3"/>
+        <line num="157" type="stmt" count="4"/>
+        <line num="158" type="stmt" count="2"/>
+        <line num="161" type="stmt" count="4"/>
+        <line num="162" type="stmt" count="0"/>
+        <line num="165" type="stmt" count="4"/>
+        <line num="166" type="stmt" count="4"/>
+        <metrics loc="167" ncloc="131" classes="1" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="65" coveredstatements="61" elements="69" coveredelements="63"/>
+      </file>
+    </package>
+    <package name="JBZoo\ToolboxCI">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Exception.php">
+        <class name="JBZoo\ToolboxCI\Exception" namespace="JBZoo\ToolboxCI" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="25" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Helper.php">
+        <class name="JBZoo\ToolboxCI\Helper" namespace="JBZoo\ToolboxCI" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="5" coveredelements="3"/>
+        </class>
+        <line num="30" type="method" name="descAsList" visibility="public" complexity="3" crap="3.14" count="10"/>
+        <line num="32" type="stmt" count="10"/>
+        <line num="33" type="stmt" count="10"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="10"/>
+        <metrics loc="39" ncloc="19" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="5" coveredelements="3"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Markdown.php">
+        <class name="JBZoo\ToolboxCI\Markdown" namespace="JBZoo\ToolboxCI" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="23" methods="8" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="54" coveredstatements="51" elements="62" coveredelements="56"/>
+        </class>
+        <line num="50" type="method" name="render" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="53" type="stmt" count="2"/>
+        <line num="55" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="2"/>
+        <line num="63" type="method" name="calculateWidths" visibility="protected" complexity="6" crap="6" count="2"/>
+        <line num="65" type="stmt" count="2"/>
+        <line num="67" type="stmt" count="2"/>
+        <line num="68" type="stmt" count="2"/>
+        <line num="70" type="stmt" count="2"/>
+        <line num="71" type="stmt" count="2"/>
+        <line num="73" type="stmt" count="2"/>
+        <line num="74" type="stmt" count="2"/>
+        <line num="81" type="stmt" count="2"/>
+        <line num="82" type="stmt" count="2"/>
+        <line num="84" type="stmt" count="2"/>
+        <line num="92" type="method" name="getLink" visibility="protected" complexity="3" crap="12" count="0"/>
+        <line num="94" type="stmt" count="0"/>
+        <line num="101" type="method" name="renderHeaders" visibility="protected" complexity="2" crap="2" count="2"/>
+        <line num="103" type="stmt" count="2"/>
+        <line num="105" type="stmt" count="2"/>
+        <line num="106" type="stmt" count="2"/>
+        <line num="107" type="stmt" count="2"/>
+        <line num="108" type="stmt" count="2"/>
+        <line num="109" type="stmt" count="2"/>
+        <line num="112" type="stmt" count="2"/>
+        <line num="115" type="stmt" count="2"/>
+        <line num="117" type="stmt" count="2"/>
+        <line num="124" type="method" name="renderRows" visibility="protected" complexity="3" crap="3" count="2"/>
+        <line num="126" type="stmt" count="2"/>
+        <line num="128" type="stmt" count="2"/>
+        <line num="129" type="stmt" count="2"/>
+        <line num="132" type="stmt" count="2"/>
+        <line num="133" type="stmt" count="2"/>
+        <line num="134" type="stmt" count="2"/>
+        <line num="137" type="stmt" count="2"/>
+        <line num="140" type="stmt" count="2"/>
+        <line num="149" type="method" name="renderCell" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="152" type="stmt" count="2"/>
+        <line num="153" type="stmt" count="2"/>
+        <line num="154" type="stmt" count="2"/>
+        <line num="157" type="stmt" count="2"/>
+        <line num="159" type="stmt" count="2"/>
+        <line num="166" type="method" name="renderAlignments" visibility="protected" complexity="5" crap="5.01" count="2"/>
+        <line num="168" type="stmt" count="2"/>
+        <line num="170" type="stmt" count="2"/>
+        <line num="171" type="stmt" count="2"/>
+        <line num="172" type="stmt" count="2"/>
+        <line num="174" type="stmt" count="2"/>
+        <line num="175" type="stmt" count="2"/>
+        <line num="178" type="stmt" count="2"/>
+        <line num="179" type="stmt" count="0"/>
+        <line num="182" type="stmt" count="2"/>
+        <line num="183" type="stmt" count="2"/>
+        <line num="186" type="stmt" count="2"/>
+        <line num="189" type="stmt" count="2"/>
+        <line num="196" type="method" name="getColumnAlign" visibility="protected" complexity="2" crap="2.03" count="2"/>
+        <line num="198" type="stmt" count="2"/>
+        <line num="199" type="stmt" count="2"/>
+        <line num="201" type="stmt" count="2"/>
+        <line num="202" type="stmt" count="0"/>
+        <line num="205" type="stmt" count="2"/>
+        <metrics loc="207" ncloc="144" classes="1" methods="8" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="54" coveredstatements="51" elements="62" coveredelements="56"/>
+      </file>
+    </package>
+    <package name="JBZoo\ToolboxCI\Formats">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/AbstractNode.php">
+        <class name="JBZoo\ToolboxCI\Formats\AbstractNode" namespace="JBZoo\ToolboxCI\Formats" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="25" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="46" coveredstatements="37" elements="52" coveredelements="41"/>
+        </class>
+        <line num="58" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="30"/>
+        <line num="60" type="stmt" count="30"/>
+        <line num="61" type="stmt" count="30"/>
+        <line num="62" type="stmt" count="30"/>
+        <line num="63" type="stmt" count="30"/>
+        <line num="70" type="method" name="__set" visibility="public" complexity="10" crap="10.39" count="30"/>
+        <line num="72" type="stmt" count="30"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="30"/>
+        <line num="77" type="stmt" count="30"/>
+        <line num="78" type="stmt" count="0"/>
+        <line num="81" type="stmt" count="30"/>
+        <line num="82" type="stmt" count="30"/>
+        <line num="83" type="stmt" count="30"/>
+        <line num="84" type="stmt" count="30"/>
+        <line num="85" type="stmt" count="23"/>
+        <line num="86" type="stmt" count="14"/>
+        <line num="87" type="stmt" count="17"/>
+        <line num="88" type="stmt" count="16"/>
+        <line num="89" type="stmt" count="15"/>
+        <line num="90" type="stmt" count="0"/>
+        <line num="91" type="stmt" count="15"/>
+        <line num="92" type="stmt" count="0"/>
+        <line num="96" type="stmt" count="30"/>
+        <line num="97" type="stmt" count="30"/>
+        <line num="103" type="method" name="__isset" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="105" type="stmt" count="5"/>
+        <line num="112" type="method" name="__get" visibility="public" complexity="1" crap="1" count="29"/>
+        <line num="114" type="stmt" count="29"/>
+        <line num="122" type="method" name="__call" visibility="public" complexity="6" crap="9.54" count="2"/>
+        <line num="124" type="stmt" count="2"/>
+        <line num="125" type="stmt" count="2"/>
+        <line num="126" type="stmt" count="2"/>
+        <line num="128" type="stmt" count="2"/>
+        <line num="129" type="stmt" count="2"/>
+        <line num="130" type="stmt" count="2"/>
+        <line num="133" type="stmt" count="2"/>
+        <line num="137" type="stmt" count="0"/>
+        <line num="138" type="stmt" count="0"/>
+        <line num="139" type="stmt" count="0"/>
+        <line num="140" type="stmt" count="0"/>
+        <line num="144" type="stmt" count="0"/>
+        <line num="145" type="stmt" count="0"/>
+        <line num="151" type="method" name="toArray" visibility="public" complexity="5" crap="5" count="7"/>
+        <line num="153" type="stmt" count="7"/>
+        <line num="155" type="stmt" count="7"/>
+        <line num="157" type="stmt" count="7"/>
+        <line num="158" type="stmt" count="7"/>
+        <line num="159" type="stmt" count="7"/>
+        <line num="160" type="stmt" count="3"/>
+        <line num="162" type="stmt" count="7"/>
+        <line num="167" type="stmt" count="7"/>
+        <metrics loc="169" ncloc="115" classes="1" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="46" coveredstatements="37" elements="52" coveredelements="41"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/Exception.php">
+        <class name="JBZoo\ToolboxCI\Formats\Exception" namespace="JBZoo\ToolboxCI\Formats" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="25" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/Xml.php">
+        <class name="JBZoo\ToolboxCI\Formats\Xml" namespace="JBZoo\ToolboxCI\Formats" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="22" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="39" coveredstatements="39" elements="42" coveredelements="42"/>
+        </class>
+        <line num="31" type="method" name="createDomDocument" visibility="public" complexity="3" crap="3" count="17"/>
+        <line num="33" type="stmt" count="17"/>
+        <line num="34" type="stmt" count="17"/>
+        <line num="36" type="stmt" count="17"/>
+        <line num="37" type="stmt" count="9"/>
+        <line num="40" type="stmt" count="17"/>
+        <line num="41" type="stmt" count="17"/>
+        <line num="42" type="stmt" count="17"/>
+        <line num="44" type="stmt" count="17"/>
+        <line num="53" type="method" name="array2Dom" visibility="public" complexity="9" crap="9" count="2"/>
+        <line num="58" type="stmt" count="2"/>
+        <line num="59" type="stmt" count="2"/>
+        <line num="62" type="stmt" count="2"/>
+        <line num="64" type="stmt" count="2"/>
+        <line num="65" type="stmt" count="2"/>
+        <line num="68" type="stmt" count="2"/>
+        <line num="69" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="2"/>
+        <line num="73" type="stmt" count="2"/>
+        <line num="74" type="stmt" count="2"/>
+        <line num="78" type="stmt" count="2"/>
+        <line num="79" type="stmt" count="2"/>
+        <line num="80" type="stmt" count="2"/>
+        <line num="83" type="stmt" count="2"/>
+        <line num="86" type="stmt" count="2"/>
+        <line num="94" type="method" name="dom2Array" visibility="public" complexity="10" crap="10" count="11"/>
+        <line num="97" type="stmt" count="11"/>
+        <line num="104" type="stmt" count="11"/>
+        <line num="105" type="stmt" count="11"/>
+        <line num="106" type="stmt" count="11"/>
+        <line num="110" type="stmt" count="11"/>
+        <line num="111" type="stmt" count="11"/>
+        <line num="113" type="stmt" count="11"/>
+        <line num="114" type="stmt" count="11"/>
+        <line num="115" type="stmt" count="5"/>
+        <line num="116" type="stmt" count="5"/>
+        <line num="119" type="stmt" count="11"/>
+        <line num="120" type="stmt" count="1"/>
+        <line num="121" type="stmt" count="1"/>
+        <line num="125" type="stmt" count="11"/>
+        <line num="126" type="stmt" count="11"/>
+        <line num="130" type="stmt" count="11"/>
+        <metrics loc="132" ncloc="100" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="39" coveredstatements="39" elements="42" coveredelements="42"/>
+      </file>
+    </package>
+    <package name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/CaseOutput/AbstractOutput.php">
+        <class name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\AbstractOutput" namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="10" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="14" elements="20" coveredelements="17"/>
+        </class>
+        <line num="50" type="method" name="__construct" visibility="public" complexity="4" crap="4" count="12"/>
+        <line num="52" type="stmt" count="12"/>
+        <line num="53" type="stmt" count="12"/>
+        <line num="54" type="stmt" count="12"/>
+        <line num="55" type="stmt" count="12"/>
+        <line num="61" type="method" name="setMessage" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="63" type="stmt" count="0"/>
+        <line num="64" type="stmt" count="0"/>
+        <line num="71" type="method" name="setDescription" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="73" type="stmt" count="5"/>
+        <line num="74" type="stmt" count="5"/>
+        <line num="83" type="method" name="toXML" visibility="public" complexity="4" crap="4" count="12"/>
+        <line num="85" type="stmt" count="12"/>
+        <line num="86" type="stmt" count="12"/>
+        <line num="88" type="stmt" count="5"/>
+        <line num="91" type="stmt" count="12"/>
+        <line num="92" type="stmt" count="12"/>
+        <line num="95" type="stmt" count="12"/>
+        <line num="96" type="stmt" count="10"/>
+        <line num="99" type="stmt" count="12"/>
+        <metrics loc="101" ncloc="53" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="14" elements="20" coveredelements="17"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/CaseOutput/Error.php">
+        <class name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\Error" namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="28" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/CaseOutput/Failure.php">
+        <class name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\Failure" namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="28" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/CaseOutput/Skipped.php">
+        <class name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\Skipped" namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="28" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/CaseOutput/SystemOut.php">
+        <class name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\SystemOut" namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="28" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/CaseOutput/Warning.php">
+        <class name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\Warning" namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="28" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="JBZoo\ToolboxCI\Formats\JUnit">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/Exception.php">
+        <class name="JBZoo\ToolboxCI\Formats\JUnit\Exception" namespace="JBZoo\ToolboxCI\Formats\JUnit" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="25" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/JUnit.php">
+        <class name="JBZoo\ToolboxCI\Formats\JUnit\JUnit" namespace="JBZoo\ToolboxCI\Formats\JUnit" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="5" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="13" coveredelements="13"/>
+        </class>
+        <line num="35" type="method" name="addSuite" visibility="public" complexity="2" crap="2" count="14"/>
+        <line num="37" type="stmt" count="14"/>
+        <line num="38" type="stmt" count="14"/>
+        <line num="39" type="stmt" count="14"/>
+        <line num="46" type="method" name="getDom" visibility="public" complexity="2" crap="2" count="14"/>
+        <line num="48" type="stmt" count="14"/>
+        <line num="50" type="stmt" count="14"/>
+        <line num="51" type="stmt" count="14"/>
+        <line num="53" type="stmt" count="14"/>
+        <line num="54" type="stmt" count="14"/>
+        <line num="57" type="stmt" count="14"/>
+        <line num="63" type="method" name="__toString" visibility="public" complexity="1" crap="1" count="13"/>
+        <line num="65" type="stmt" count="13"/>
+        <metrics loc="67" ncloc="37" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="13" coveredelements="13"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/JUnitCase.php">
+        <class name="JBZoo\ToolboxCI\Formats\JUnit\JUnitCase" namespace="JBZoo\ToolboxCI\Formats\JUnit" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="34" methods="12" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="39" coveredstatements="38" elements="51" coveredelements="49"/>
+        </class>
+        <line num="70" type="method" name="addFailure" visibility="public" complexity="5" crap="5" count="12"/>
+        <line num="72" type="stmt" count="12"/>
+        <line num="73" type="stmt" count="12"/>
+        <line num="82" type="method" name="addError" visibility="public" complexity="5" crap="5" count="5"/>
+        <line num="84" type="stmt" count="5"/>
+        <line num="85" type="stmt" count="5"/>
+        <line num="94" type="method" name="addWarning" visibility="public" complexity="5" crap="5" count="4"/>
+        <line num="96" type="stmt" count="4"/>
+        <line num="97" type="stmt" count="4"/>
+        <line num="104" type="method" name="addSystemOut" visibility="public" complexity="3" crap="3.14" count="5"/>
+        <line num="106" type="stmt" count="5"/>
+        <line num="107" type="stmt" count="5"/>
+        <line num="109" type="stmt" count="0"/>
+        <line num="112" type="stmt" count="5"/>
+        <line num="118" type="method" name="markAsSkipped" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="120" type="stmt" count="3"/>
+        <line num="121" type="stmt" count="3"/>
+        <line num="132" type="method" name="toXML" visibility="public" complexity="8" crap="8" count="14"/>
+        <line num="134" type="stmt" count="14"/>
+        <line num="136" type="stmt" count="14"/>
+        <line num="138" type="stmt" count="14"/>
+        <line num="139" type="stmt" count="10"/>
+        <line num="142" type="stmt" count="14"/>
+        <line num="143" type="stmt" count="10"/>
+        <line num="146" type="stmt" count="14"/>
+        <line num="147" type="stmt" count="10"/>
+        <line num="150" type="stmt" count="14"/>
+        <line num="151" type="stmt" count="10"/>
+        <line num="154" type="stmt" count="14"/>
+        <line num="155" type="stmt" count="3"/>
+        <line num="158" type="stmt" count="14"/>
+        <line num="159" type="stmt" count="5"/>
+        <line num="162" type="stmt" count="14"/>
+        <line num="163" type="stmt" count="12"/>
+        <line num="166" type="stmt" count="14"/>
+        <line num="172" type="method" name="getTime" visibility="public" complexity="2" crap="2" count="14"/>
+        <line num="174" type="stmt" count="14"/>
+        <line num="180" type="method" name="getAssertionsCount" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="182" type="stmt" count="14"/>
+        <line num="188" type="method" name="getErrorsCount" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="191" type="stmt" count="12"/>
+        <line num="192" type="stmt" count="14"/>
+        <line num="198" type="method" name="getWarningsCount" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="201" type="stmt" count="12"/>
+        <line num="202" type="stmt" count="14"/>
+        <line num="208" type="method" name="getFailuresCount" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="211" type="stmt" count="12"/>
+        <line num="212" type="stmt" count="14"/>
+        <line num="218" type="method" name="getSkippedCount" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="221" type="stmt" count="12"/>
+        <line num="222" type="stmt" count="14"/>
+        <metrics loc="224" ncloc="137" classes="1" methods="12" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="39" coveredstatements="38" elements="51" coveredelements="49"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/JUnitSuite.php">
+        <class name="JBZoo\ToolboxCI\Formats\JUnit\JUnitSuite" namespace="JBZoo\ToolboxCI\Formats\JUnit" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="27" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="69" coveredstatements="69" elements="79" coveredelements="79"/>
+        </class>
+        <line num="57" type="method" name="toXML" visibility="public" complexity="11" crap="11" count="14"/>
+        <line num="59" type="stmt" count="14"/>
+        <line num="61" type="stmt" count="14"/>
+        <line num="63" type="stmt" count="14"/>
+        <line num="64" type="stmt" count="9"/>
+        <line num="67" type="stmt" count="14"/>
+        <line num="68" type="stmt" count="14"/>
+        <line num="71" type="stmt" count="14"/>
+        <line num="72" type="stmt" count="3"/>
+        <line num="75" type="stmt" count="14"/>
+        <line num="76" type="stmt" count="5"/>
+        <line num="79" type="stmt" count="14"/>
+        <line num="80" type="stmt" count="4"/>
+        <line num="83" type="stmt" count="14"/>
+        <line num="84" type="stmt" count="12"/>
+        <line num="87" type="stmt" count="14"/>
+        <line num="88" type="stmt" count="3"/>
+        <line num="91" type="stmt" count="14"/>
+        <line num="92" type="stmt" count="5"/>
+        <line num="95" type="stmt" count="14"/>
+        <line num="96" type="stmt" count="9"/>
+        <line num="99" type="stmt" count="14"/>
+        <line num="100" type="stmt" count="14"/>
+        <line num="103" type="stmt" count="14"/>
+        <line num="110" type="method" name="addSuite" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="112" type="stmt" count="9"/>
+        <line num="113" type="stmt" count="9"/>
+        <line num="114" type="stmt" count="9"/>
+        <line num="121" type="method" name="addCase" visibility="public" complexity="1" crap="1" count="14"/>
+        <line num="123" type="stmt" count="14"/>
+        <line num="124" type="stmt" count="14"/>
+        <line num="125" type="stmt" count="14"/>
+        <line num="131" type="method" name="getAssertionsCount" visibility="private" complexity="2" crap="2" count="14"/>
+        <line num="133" type="stmt" count="14"/>
+        <line num="135" type="stmt" count="14"/>
+        <line num="136" type="stmt" count="9"/>
+        <line num="140" type="stmt" count="14"/>
+        <line num="141" type="stmt" count="14"/>
+        <line num="143" type="stmt" count="14"/>
+        <line num="149" type="method" name="getErrorsCount" visibility="private" complexity="2" crap="2" count="14"/>
+        <line num="151" type="stmt" count="14"/>
+        <line num="153" type="stmt" count="14"/>
+        <line num="154" type="stmt" count="9"/>
+        <line num="158" type="stmt" count="14"/>
+        <line num="159" type="stmt" count="14"/>
+        <line num="161" type="stmt" count="14"/>
+        <line num="167" type="method" name="getWarningsCount" visibility="private" complexity="2" crap="2" count="14"/>
+        <line num="169" type="stmt" count="14"/>
+        <line num="171" type="stmt" count="14"/>
+        <line num="172" type="stmt" count="9"/>
+        <line num="176" type="stmt" count="14"/>
+        <line num="177" type="stmt" count="14"/>
+        <line num="179" type="stmt" count="14"/>
+        <line num="185" type="method" name="getFailuresCount" visibility="private" complexity="2" crap="2" count="14"/>
+        <line num="187" type="stmt" count="14"/>
+        <line num="189" type="stmt" count="14"/>
+        <line num="190" type="stmt" count="9"/>
+        <line num="194" type="stmt" count="14"/>
+        <line num="195" type="stmt" count="14"/>
+        <line num="197" type="stmt" count="14"/>
+        <line num="203" type="method" name="getSkippedCount" visibility="private" complexity="2" crap="2" count="14"/>
+        <line num="205" type="stmt" count="14"/>
+        <line num="207" type="stmt" count="14"/>
+        <line num="208" type="stmt" count="9"/>
+        <line num="212" type="stmt" count="14"/>
+        <line num="213" type="stmt" count="14"/>
+        <line num="215" type="stmt" count="14"/>
+        <line num="221" type="method" name="getTime" visibility="private" complexity="2" crap="2" count="14"/>
+        <line num="223" type="stmt" count="14"/>
+        <line num="225" type="stmt" count="14"/>
+        <line num="226" type="stmt" count="9"/>
+        <line num="230" type="stmt" count="14"/>
+        <line num="231" type="stmt" count="14"/>
+        <line num="233" type="stmt" count="14"/>
+        <line num="239" type="method" name="getTestsCount" visibility="private" complexity="2" crap="2" count="14"/>
+        <line num="241" type="stmt" count="14"/>
+        <line num="243" type="stmt" count="14"/>
+        <line num="244" type="stmt" count="9"/>
+        <line num="247" type="stmt" count="14"/>
+        <metrics loc="249" ncloc="182" classes="1" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="69" coveredstatements="69" elements="79" coveredelements="79"/>
+      </file>
+    </package>
+    <package name="JBZoo\ToolboxCI\Formats\Metric">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/Metric/Metric.php">
+        <class name="JBZoo\ToolboxCI\Formats\Metric\Metric" namespace="JBZoo\ToolboxCI\Formats\Metric" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="41" ncloc="16" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/Metric/Metrics.php">
+        <class name="JBZoo\ToolboxCI\Formats\Metric\Metrics" namespace="JBZoo\ToolboxCI\Formats\Metric" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="13" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="22" elements="32" coveredelements="23"/>
+        </class>
+        <line num="42" type="method" name="add" visibility="public" complexity="4" crap="4.07" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="53" type="stmt" count="2"/>
+        <line num="60" type="method" name="setMap" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="62" type="stmt" count="2"/>
+        <line num="63" type="stmt" count="2"/>
+        <line num="69" type="method" name="toArray" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="71" type="stmt" count="0"/>
+        <line num="73" type="stmt" count="0"/>
+        <line num="74" type="stmt" count="0"/>
+        <line num="77" type="stmt" count="0"/>
+        <line num="83" type="method" name="getMetrics" visibility="public" complexity="6" crap="6.01" count="2"/>
+        <line num="85" type="stmt" count="2"/>
+        <line num="86" type="stmt" count="2"/>
+        <line num="87" type="stmt" count="2"/>
+        <line num="90" type="stmt" count="2"/>
+        <line num="92" type="stmt" count="2"/>
+        <line num="93" type="stmt" count="2"/>
+        <line num="94" type="stmt" count="2"/>
+        <line num="95" type="stmt" count="0"/>
+        <line num="98" type="stmt" count="2"/>
+        <line num="99" type="stmt" count="2"/>
+        <line num="100" type="stmt" count="2"/>
+        <line num="102" type="stmt" count="2"/>
+        <line num="103" type="stmt" count="2"/>
+        <line num="105" type="stmt" count="2"/>
+        <line num="108" type="stmt" count="2"/>
+        <line num="111" type="stmt" count="2"/>
+        <metrics loc="113" ncloc="76" classes="1" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="22" elements="32" coveredelements="23"/>
+      </file>
+    </package>
+    <package name="JBZoo\ToolboxCI\Formats\MetricMaps">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/MetricMaps/AbstractMetricMap.php">
+        <class name="JBZoo\ToolboxCI\Formats\MetricMaps\AbstractMetricMap" namespace="JBZoo\ToolboxCI\Formats\MetricMaps" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+        </class>
+        <line num="37" type="method" name="getMap" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="39" type="stmt" count="2"/>
+        <line num="45" type="method" name="getName" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="47" type="stmt" count="2"/>
+        <metrics loc="49" ncloc="21" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/MetricMaps/PHPloc.php">
+        <class name="JBZoo\ToolboxCI\Formats\MetricMaps\PHPloc" namespace="JBZoo\ToolboxCI\Formats\MetricMaps" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="99" ncloc="65" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/MetricMaps/PhpDepend.php">
+        <class name="JBZoo\ToolboxCI\Formats\MetricMaps\PhpDepend" namespace="JBZoo\ToolboxCI\Formats\MetricMaps" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="69" ncloc="50" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="JBZoo\ToolboxCI\Formats\Source">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/Source/Exception.php">
+        <class name="JBZoo\ToolboxCI\Formats\Source\Exception" namespace="JBZoo\ToolboxCI\Formats\Source" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="25" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/Source/SourceCase.php">
+        <class name="JBZoo\ToolboxCI\Formats\Source\SourceCase" namespace="JBZoo\ToolboxCI\Formats\Source" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="9" methods="6" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="5" elements="12" coveredelements="10"/>
+        </class>
+        <line num="97" type="method" name="getTime" visibility="public" complexity="3" crap="3" count="7"/>
+        <line num="99" type="stmt" count="7"/>
+        <line num="105" type="method" name="isError" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="107" type="stmt" count="5"/>
+        <line num="113" type="method" name="isWarning" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="115" type="stmt" count="5"/>
+        <line num="121" type="method" name="isFailure" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="123" type="stmt" count="5"/>
+        <line num="129" type="method" name="isSkipped" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="131" type="stmt" count="5"/>
+        <line num="137" type="method" name="isComparison" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="139" type="stmt" count="0"/>
+        <metrics loc="141" ncloc="58" classes="1" methods="6" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="5" elements="12" coveredelements="10"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/Source/SourceCaseOutput.php">
+        <class name="JBZoo\ToolboxCI\Formats\Source\SourceCaseOutput" namespace="JBZoo\ToolboxCI\Formats\Source" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="13" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="38" elements="43" coveredelements="40"/>
+        </class>
+        <line num="49" type="method" name="__construct" visibility="public" complexity="4" crap="4" count="14"/>
+        <line num="51" type="stmt" count="14"/>
+        <line num="52" type="stmt" count="14"/>
+        <line num="53" type="stmt" count="14"/>
+        <line num="54" type="stmt" count="14"/>
+        <line num="59" type="method" name="parseDescription" visibility="public" complexity="8" crap="8.01" count="3"/>
+        <line num="61" type="stmt" count="3"/>
+        <line num="63" type="stmt" count="3"/>
+        <line num="64" type="stmt" count="3"/>
+        <line num="66" type="stmt" count="3"/>
+        <line num="67" type="stmt" count="3"/>
+        <line num="68" type="stmt" count="3"/>
+        <line num="69" type="stmt" count="3"/>
+        <line num="70" type="stmt" count="3"/>
+        <line num="72" type="stmt" count="0"/>
+        <line num="73" type="stmt" count="0"/>
+        <line num="76" type="stmt" count="3"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="78" type="stmt" count="1"/>
+        <line num="80" type="stmt" count="1"/>
+        <line num="81" type="stmt" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="85" type="stmt" count="1"/>
+        <line num="86" type="stmt" count="1"/>
+        <line num="88" type="stmt" count="1"/>
+        <line num="89" type="stmt" count="1"/>
+        <line num="90" type="stmt" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="95" type="stmt" count="1"/>
+        <line num="96" type="stmt" count="1"/>
+        <line num="99" type="stmt" count="1"/>
+        <line num="100" type="stmt" count="1"/>
+        <line num="103" type="stmt" count="1"/>
+        <line num="107" type="stmt" count="1"/>
+        <line num="108" type="stmt" count="1"/>
+        <line num="109" type="stmt" count="1"/>
+        <line num="112" type="stmt" count="3"/>
+        <line num="118" type="method" name="toArray" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="121" type="stmt" count="3"/>
+        <line num="122" type="stmt" count="3"/>
+        <line num="123" type="stmt" count="3"/>
+        <metrics loc="126" ncloc="89" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="38" elements="43" coveredelements="40"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/Source/SourceSuite.php">
+        <class name="JBZoo\ToolboxCI\Formats\Source\SourceSuite" namespace="JBZoo\ToolboxCI\Formats\Source" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="48" methods="14" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="68" coveredstatements="67" elements="82" coveredelements="80"/>
+        </class>
+        <line num="54" type="method" name="hasSubSuites" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="62" type="method" name="getSuites" visibility="public" complexity="1" crap="1" count="16"/>
+        <line num="64" type="stmt" count="16"/>
+        <line num="70" type="method" name="getCases" visibility="public" complexity="1" crap="1" count="16"/>
+        <line num="72" type="stmt" count="16"/>
+        <line num="78" type="method" name="isEmpty" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="80" type="stmt" count="0"/>
+        <line num="87" type="method" name="addSuite" visibility="public" complexity="2" crap="2" count="17"/>
+        <line num="89" type="stmt" count="17"/>
+        <line num="90" type="stmt" count="17"/>
+        <line num="91" type="stmt" count="17"/>
+        <line num="94" type="stmt" count="17"/>
+        <line num="101" type="method" name="addTestCase" visibility="public" complexity="1" crap="1" count="19"/>
+        <line num="103" type="stmt" count="19"/>
+        <line num="104" type="stmt" count="19"/>
+        <line num="105" type="stmt" count="19"/>
+        <line num="111" type="method" name="toArray" visibility="public" complexity="3" crap="3" count="6"/>
+        <line num="113" type="stmt" count="6"/>
+        <line num="114" type="stmt" count="6"/>
+        <line num="115" type="stmt" count="6"/>
+        <line num="116" type="stmt" count="6"/>
+        <line num="117" type="stmt" count="6"/>
+        <line num="118" type="stmt" count="6"/>
+        <line num="119" type="stmt" count="6"/>
+        <line num="120" type="stmt" count="6"/>
+        <line num="122" type="stmt" count="6"/>
+        <line num="123" type="stmt" count="6"/>
+        <line num="126" type="stmt" count="6"/>
+        <line num="131" type="stmt" count="6"/>
+        <line num="132" type="stmt" count="4"/>
+        <line num="135" type="stmt" count="6"/>
+        <line num="136" type="stmt" count="5"/>
+        <line num="139" type="stmt" count="6"/>
+        <line num="146" type="method" name="getTime" visibility="public" complexity="5" crap="5" count="7"/>
+        <line num="148" type="stmt" count="7"/>
+        <line num="150" type="stmt" count="7"/>
+        <line num="151" type="stmt" count="5"/>
+        <line num="154" type="stmt" count="7"/>
+        <line num="155" type="stmt" count="6"/>
+        <line num="158" type="stmt" count="7"/>
+        <line num="164" type="method" name="getCasesCount" visibility="public" complexity="4" crap="4" count="12"/>
+        <line num="166" type="stmt" count="12"/>
+        <line num="168" type="stmt" count="12"/>
+        <line num="169" type="stmt" count="8"/>
+        <line num="172" type="stmt" count="12"/>
+        <line num="174" type="stmt" count="12"/>
+        <line num="180" type="method" name="getAssertionsCount" visibility="public" complexity="5" crap="5" count="6"/>
+        <line num="182" type="stmt" count="6"/>
+        <line num="184" type="stmt" count="6"/>
+        <line num="185" type="stmt" count="4"/>
+        <line num="188" type="stmt" count="6"/>
+        <line num="189" type="stmt" count="5"/>
+        <line num="192" type="stmt" count="6"/>
+        <line num="198" type="method" name="getErrorsCount" visibility="public" complexity="6" crap="6" count="6"/>
+        <line num="200" type="stmt" count="6"/>
+        <line num="202" type="stmt" count="6"/>
+        <line num="203" type="stmt" count="4"/>
+        <line num="206" type="stmt" count="6"/>
+        <line num="207" type="stmt" count="5"/>
+        <line num="210" type="stmt" count="6"/>
+        <line num="216" type="method" name="getWarningCount" visibility="public" complexity="6" crap="6" count="6"/>
+        <line num="218" type="stmt" count="6"/>
+        <line num="220" type="stmt" count="6"/>
+        <line num="221" type="stmt" count="4"/>
+        <line num="224" type="stmt" count="6"/>
+        <line num="225" type="stmt" count="5"/>
+        <line num="228" type="stmt" count="6"/>
+        <line num="234" type="method" name="getFailureCount" visibility="public" complexity="6" crap="6" count="6"/>
+        <line num="236" type="stmt" count="6"/>
+        <line num="238" type="stmt" count="6"/>
+        <line num="239" type="stmt" count="4"/>
+        <line num="242" type="stmt" count="6"/>
+        <line num="243" type="stmt" count="5"/>
+        <line num="246" type="stmt" count="6"/>
+        <line num="252" type="method" name="getSkippedCount" visibility="public" complexity="6" crap="6" count="6"/>
+        <line num="254" type="stmt" count="6"/>
+        <line num="256" type="stmt" count="6"/>
+        <line num="257" type="stmt" count="4"/>
+        <line num="260" type="stmt" count="6"/>
+        <line num="261" type="stmt" count="5"/>
+        <line num="264" type="stmt" count="6"/>
+        <metrics loc="266" ncloc="190" classes="1" methods="14" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="68" coveredstatements="67" elements="82" coveredelements="80"/>
+      </file>
+    </package>
+    <package name="JBZoo\ToolboxCI\Formats\TeamCity">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/Exception.php">
+        <class name="JBZoo\ToolboxCI\Formats\TeamCity\Exception" namespace="JBZoo\ToolboxCI\Formats\TeamCity" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="25" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/Helper.php">
+        <class name="JBZoo\ToolboxCI\Formats\TeamCity\Helper" namespace="JBZoo\ToolboxCI\Formats\TeamCity" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="13" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="21" elements="31" coveredelements="22"/>
+        </class>
+        <line num="70" type="method" name="printEvent" visibility="public" complexity="3" crap="3.01" count="8"/>
+        <line num="72" type="stmt" count="8"/>
+        <line num="74" type="stmt" count="8"/>
+        <line num="75" type="stmt" count="8"/>
+        <line num="76" type="stmt" count="8"/>
+        <line num="77" type="stmt" count="8"/>
+        <line num="78" type="stmt" count="0"/>
+        <line num="80" type="stmt" count="8"/>
+        <line num="81" type="stmt" count="8"/>
+        <line num="85" type="stmt" count="8"/>
+        <line num="87" type="stmt" count="8"/>
+        <line num="95" type="method" name="ensureValidJavaId" visibility="public" complexity="2" crap="2.15" count="8"/>
+        <line num="97" type="stmt" count="8"/>
+        <line num="98" type="stmt" count="0"/>
+        <line num="100" type="stmt" count="8"/>
+        <line num="106" type="method" name="formatTimestamp" visibility="public" complexity="2" crap="2" count="8"/>
+        <line num="108" type="stmt" count="8"/>
+        <line num="109" type="stmt" count="8"/>
+        <line num="114" type="stmt" count="8"/>
+        <line num="121" type="method" name="escapeValue" visibility="private" complexity="6" crap="7.73" count="8"/>
+        <line num="123" type="stmt" count="8"/>
+        <line num="124" type="stmt" count="0"/>
+        <line num="128" type="stmt" count="8"/>
+        <line num="136" type="stmt" count="8"/>
+        <line num="137" type="stmt" count="8"/>
+        <line num="139" type="stmt" count="3"/>
+        <line num="140" type="stmt" count="3"/>
+        <line num="143" type="stmt" count="0"/>
+        <line num="144" type="stmt" count="0"/>
+        <line num="147" type="stmt" count="0"/>
+        <line num="148" type="stmt" count="8"/>
+        <metrics loc="152" ncloc="108" classes="1" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="21" elements="31" coveredelements="22"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/TeamCity.php">
+        <class name="JBZoo\ToolboxCI\Formats\TeamCity\TeamCity" namespace="JBZoo\ToolboxCI\Formats\TeamCity" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="41" methods="12" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="63" coveredstatements="62" elements="75" coveredelements="73"/>
+        </class>
+        <line num="64" type="method" name="__construct" visibility="public" complexity="6" crap="6" count="8"/>
+        <line num="66" type="stmt" count="8"/>
+        <line num="67" type="stmt" count="8"/>
+        <line num="68" type="stmt" count="1"/>
+        <line num="70" type="stmt" count="8"/>
+        <line num="73" type="stmt" count="8"/>
+        <line num="74" type="stmt" count="8"/>
+        <line num="75" type="stmt" count="8"/>
+        <line num="82" type="method" name="getWriter" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="84" type="stmt" count="8"/>
+        <line num="91" type="method" name="testSuiteStarted" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="93" type="stmt" count="6"/>
+        <line num="94" type="stmt" count="6"/>
+        <line num="100" type="method" name="testSuiteFinished" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="102" type="stmt" count="6"/>
+        <line num="103" type="stmt" count="6"/>
+        <line num="109" type="method" name="write" visibility="public" complexity="4" crap="4" count="8"/>
+        <line num="111" type="stmt" count="8"/>
+        <line num="112" type="stmt" count="8"/>
+        <line num="113" type="stmt" count="8"/>
+        <line num="116" type="stmt" count="8"/>
+        <line num="117" type="stmt" count="6"/>
+        <line num="122" type="stmt" count="8"/>
+        <line num="123" type="stmt" count="8"/>
+        <line num="125" type="stmt" count="8"/>
+        <line num="126" type="stmt" count="8"/>
+        <line num="132" type="method" name="testStarted" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="134" type="stmt" count="4"/>
+        <line num="135" type="stmt" count="4"/>
+        <line num="141" type="method" name="testFinished" visibility="public" complexity="3" crap="3" count="4"/>
+        <line num="143" type="stmt" count="4"/>
+        <line num="144" type="stmt" count="4"/>
+        <line num="145" type="stmt" count="4"/>
+        <line num="147" type="stmt" count="4"/>
+        <line num="153" type="method" name="testFailed" visibility="public" complexity="4" crap="4" count="3"/>
+        <line num="156" type="stmt" count="3"/>
+        <line num="157" type="stmt" count="3"/>
+        <line num="158" type="stmt" count="3"/>
+        <line num="159" type="stmt" count="3"/>
+        <line num="161" type="stmt" count="3"/>
+        <line num="162" type="stmt" count="3"/>
+        <line num="166" type="stmt" count="3"/>
+        <line num="167" type="stmt" count="1"/>
+        <line num="170" type="stmt" count="3"/>
+        <line num="171" type="stmt" count="3"/>
+        <line num="179" type="method" name="testSkipped" visibility="public" complexity="5" crap="5" count="2"/>
+        <line num="185" type="stmt" count="2"/>
+        <line num="186" type="stmt" count="2"/>
+        <line num="187" type="stmt" count="2"/>
+        <line num="188" type="stmt" count="2"/>
+        <line num="189" type="stmt" count="2"/>
+        <line num="191" type="stmt" count="2"/>
+        <line num="199" type="method" name="addInspectionType" visibility="public" complexity="9" crap="9.06" count="3"/>
+        <line num="205" type="stmt" count="3"/>
+        <line num="206" type="stmt" count="3"/>
+        <line num="207" type="stmt" count="0"/>
+        <line num="210" type="stmt" count="3"/>
+        <line num="211" type="stmt" count="3"/>
+        <line num="212" type="stmt" count="3"/>
+        <line num="213" type="stmt" count="3"/>
+        <line num="214" type="stmt" count="3"/>
+        <line num="215" type="stmt" count="3"/>
+        <line num="218" type="stmt" count="3"/>
+        <line num="220" type="stmt" count="3"/>
+        <line num="222" type="method" name="addDefaultInspectionType" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="224" type="stmt" count="3"/>
+        <line num="225" type="stmt" count="3"/>
+        <line num="234" type="method" name="addInspectionIssue" visibility="public" complexity="5" crap="5" count="3"/>
+        <line num="241" type="stmt" count="3"/>
+        <line num="242" type="stmt" count="3"/>
+        <line num="243" type="stmt" count="3"/>
+        <line num="244" type="stmt" count="3"/>
+        <line num="245" type="stmt" count="3"/>
+        <line num="247" type="stmt" count="3"/>
+        <line num="249" type="stmt" count="3"/>
+        <metrics loc="250" ncloc="165" classes="1" methods="12" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="63" coveredstatements="62" elements="75" coveredelements="73"/>
+      </file>
+    </package>
+    <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/Writers/AbstractWriter.php">
+      <metrics loc="29" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <package name="JBZoo\ToolboxCI\Formats\TeamCity\Writers">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/Writers/Buffer.php">
+        <class name="JBZoo\ToolboxCI\Formats\TeamCity\Writers\Buffer" namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+        </class>
+        <line num="32" type="method" name="write" visibility="public" complexity="2" crap="2" count="8"/>
+        <line num="34" type="stmt" count="8"/>
+        <line num="35" type="stmt" count="8"/>
+        <line num="40" type="method" name="getBuffer" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="42" type="stmt" count="8"/>
+        <metrics loc="44" ncloc="19" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/Writers/CustomCallback.php">
+        <class name="JBZoo\ToolboxCI\Formats\TeamCity\Writers\CustomCallback" namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="4" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="8" coveredelements="0"/>
+        </class>
+        <line num="32" type="method" name="write" visibility="public" complexity="3" crap="12" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="43" type="method" name="setCallback" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <metrics loc="47" ncloc="22" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="8" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/Writers/Exception.php">
+        <class name="JBZoo\ToolboxCI\Formats\TeamCity\Writers\Exception" namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="25" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/Writers/Stdout.php">
+        <class name="JBZoo\ToolboxCI\Formats\TeamCity\Writers\Stdout" namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+        </class>
+        <line num="29" type="method" name="write" visibility="public" complexity="3" crap="12" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <metrics loc="35" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+      </file>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/Writers/SymfonyConsole.php">
+        <class name="JBZoo\ToolboxCI\Formats\TeamCity\Writers\SymfonyConsole" namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" fullPackage="JBZoo" package="JBZoo">
+          <metrics complexity="5" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="9" coveredelements="0"/>
+        </class>
+        <line num="34" type="method" name="write" visibility="public" complexity="4" crap="20" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="48" type="method" name="setCallback" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <metrics loc="52" ncloc="27" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="9" coveredelements="0"/>
+      </file>
+    </package>
+    <metrics files="51" loc="4542" ncloc="2869" classes="34" methods="147" coveredmethods="105" conditionals="0" coveredconditionals="0" statements="939" coveredstatements="843" elements="1086" coveredelements="948"/>
+  </project>
+</coverage>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+  <duplication lines="100" tokens="170">
+    <file path="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit1/TestCaseElement1.php" line="24"/>
+    <file path="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php" line="24"/>
+    <codefragment>class TestCaseElement1 extends \DOMElement
+{
+    public function __construct()
+    {
+        parent::__construct('testcase');
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this-&gt;setAttribute('name', $name);
+    }
+
+    /**
+     * @param string $classname
+     */
+    public function setClassname($classname)
+    {
+        $this-&gt;setAttribute('classname', $classname);
+    }
+
+    /**
+     * Time in seconds
+     *
+     * @param float $time
+     */
+    public function setTime($time)
+    {
+        $this-&gt;setAttribute('time', $time);
+    }
+
+    /**
+     * @param string $error
+     * @param string $type             -&gt; i.e. an exception class name
+     * @param string $exceptionMessage i.e a exception message -&gt; $e-&gt;getMessage() [Optional]
+     * @return \DomElement
+     */
+    public function addError($error, $type, $exceptionMessage = null)
+    {
+        $errorElement = $this-&gt;ownerDocument-&gt;createElement('error', $error);
+        $errorElement-&gt;setAttribute('type', $type);
+
+        if ($exceptionMessage !== null) {
+            $errorElement-&gt;setAttribute('message', $exceptionMessage);
+        }
+
+        $this-&gt;appendChild($errorElement);
+
+        $this-&gt;incrementErrorCount();
+        $this-&gt;parentNode-&gt;incrementErrorCount();
+
+        return $errorElement;
+    }
+
+    /**
+     * @param string $error
+     * @param string $type             -&gt; i.e. an exception class name
+     * @param string $exceptionMessage i.e a exception message -&gt; $e-&gt;getMessage() [Optional]
+     * @return \DomElement
+     */
+    public function addFailure($error, $type, $exceptionMessage = null)
+    {
+        $failureElement = $this-&gt;ownerDocument-&gt;createElement('failure', $error);
+        $failureElement-&gt;setAttribute('type', $type);
+
+        if ($exceptionMessage !== null) {
+            $failureElement-&gt;setAttribute('message', $exceptionMessage);
+        }
+
+        $this-&gt;appendChild($failureElement);
+
+        $this-&gt;incrementFailureCount();
+        $this-&gt;parentNode-&gt;incrementFailureCount();
+
+        return $failureElement;
+    }
+
+    /**
+     * Increments failure counter in test suite
+     */
+    public function incrementFailureCount()
+    {
+        if ($this-&gt;hasAttribute('failures')) {
+            $this-&gt;setAttribute('failures', (int)$this-&gt;getAttribute('failures') + 1);
+        } else {
+            $this-&gt;setAttribute('failures', 1);
+        }
+    }
+
+    /**
+     * Increments error counter in test suite
+     */
+    public function incrementErrorCount()
+    {
+        if ($this-&gt;hasAttribute('errors')) {
+            $this-&gt;setAttribute('errors', (int)$this-&gt;getAttribute('errors') + 1);
+        } else {
+            $this-&gt;setAttribute('errors', 1);
+</codefragment>
+  </duplication>
+</pmd-cpd>

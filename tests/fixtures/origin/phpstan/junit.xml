@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite
+        failures="26"
+        name="phpstan"
+        tests="26"
+>
+    <testcase name="src/JUnit/TestCaseElement.php:34">
+        <failure type="ERROR"
+                 message="Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setName() has no return typehint specified."/>
+    </testcase>
+    <testcase name="src/JUnit/TestCaseElement.php:42">
+        <failure type="ERROR"
+                 message="Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setClassname() has no return typehint specified."/>
+    </testcase>
+    <testcase name="src/JUnit/TestCaseElement.php:52">
+        <failure type="ERROR"
+                 message="Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setTime() has no return typehint specified."/>
+    </testcase>
+    <testcase name="src/JUnit/TestCaseElement.php:54">
+        <failure type="ERROR"
+                 message="Parameter #2 $value of method DOMElement::setAttribute() expects string, float given."/>
+    </testcase>
+    <testcase name="src/JUnit/TestCaseElement.php:65">
+        <failure type="ERROR" message="Cannot call method createElement() on DOMDocument|null."/>
+    </testcase>
+    <testcase name="src/JUnit/TestCaseElement.php:88">
+        <failure type="ERROR" message="Cannot call method createElement() on DOMDocument|null."/>
+    </testcase>
+    <testcase name="src/JUnit/TestCaseElement.php:106">
+        <failure type="ERROR"
+                 message="Method JBZoo\ToolboxCI\JUnit\TestCaseElement::incrementFailureCount() has no return typehint specified."/>
+    </testcase>
+    <testcase name="src/JUnit/TestCaseElement.php:109">
+        <failure type="ERROR"
+                 message="Parameter #2 $value of method DOMElement::setAttribute() expects string, int given."/>
+    </testcase>
+    <testcase name="src/JUnit/TestCaseElement.php:111">
+        <failure type="ERROR"
+                 message="Parameter #2 $value of method DOMElement::setAttribute() expects string, int given."/>
+    </testcase>
+    <testcase name="src/JUnit/TestCaseElement.php:118">
+        <failure type="ERROR"
+                 message="Method JBZoo\ToolboxCI\JUnit\TestCaseElement::incrementErrorCount() has no return typehint specified."/>
+    </testcase>
+    <testcase name="src/JUnit/TestCaseElement.php:121">
+        <failure type="ERROR"
+                 message="Parameter #2 $value of method DOMElement::setAttribute() expects string, int given."/>
+    </testcase>
+    <testcase name="src/JUnit/TestCaseElement.php:123">
+        <failure type="ERROR"
+                 message="Parameter #2 $value of method DOMElement::setAttribute() expects string, int given."/>
+    </testcase>
+    <testcase name="src/JUnit/TestSuiteElement.php:35">
+        <failure type="ERROR"
+                 message="Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setName() has no return typehint specified."/>
+    </testcase>
+    <testcase name="src/JUnit/TestSuiteElement.php:45">
+        <failure type="ERROR"
+                 message="Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setTimestamp() has no return typehint specified."/>
+    </testcase>
+    <testcase name="src/JUnit/TestSuiteElement.php:55">
+        <failure type="ERROR"
+                 message="Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setTime() has no return typehint specified."/>
+    </testcase>
+    <testcase name="src/JUnit/TestSuiteElement.php:57">
+        <failure type="ERROR"
+                 message="Parameter #2 $value of method DOMElement::setAttribute() expects string, float given."/>
+    </testcase>
+    <testcase name="src/JUnit/TestSuiteElement.php:65">
+        <failure type="ERROR"
+                 message="Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setHostname() has no return typehint specified."/>
+    </testcase>
+    <testcase name="src/JUnit/TestSuiteElement.php:86">
+        <failure type="ERROR"
+                 message="Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::incrementTestCount() has no return typehint specified."/>
+    </testcase>
+    <testcase name="src/JUnit/TestSuiteElement.php:89">
+        <failure type="ERROR"
+                 message="Parameter #2 $value of method DOMElement::setAttribute() expects string, int given."/>
+    </testcase>
+    <testcase name="src/JUnit/TestSuiteElement.php:91">
+        <failure type="ERROR"
+                 message="Parameter #2 $value of method DOMElement::setAttribute() expects string, int given."/>
+    </testcase>
+    <testcase name="src/JUnit/TestSuiteElement.php:98">
+        <failure type="ERROR"
+                 message="Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::incrementFailureCount() has no return typehint specified."/>
+    </testcase>
+    <testcase name="src/JUnit/TestSuiteElement.php:101">
+        <failure type="ERROR"
+                 message="Parameter #2 $value of method DOMElement::setAttribute() expects string, int given."/>
+    </testcase>
+    <testcase name="src/JUnit/TestSuiteElement.php:103">
+        <failure type="ERROR"
+                 message="Parameter #2 $value of method DOMElement::setAttribute() expects string, int given."/>
+    </testcase>
+    <testcase name="src/JUnit/TestSuiteElement.php:110">
+        <failure type="ERROR"
+                 message="Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::incrementErrorCount() has no return typehint specified."/>
+    </testcase>
+    <testcase name="src/JUnit/TestSuiteElement.php:113">
+        <failure type="ERROR"
+                 message="Parameter #2 $value of method DOMElement::setAttribute() expects string, int given."/>
+    </testcase>
+    <testcase name="src/JUnit/TestSuiteElement.php:115">
+        <failure type="ERROR"
+                 message="Parameter #2 $value of method DOMElement::setAttribute() expects string, int given."/>
+    </testcase>
+</testsuite>

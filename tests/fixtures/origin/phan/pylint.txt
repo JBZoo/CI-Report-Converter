@@ -1,0 +1,38 @@
+src/JUnit/JUnitXml.php:37: [W10065] PhanPossiblyFalseTypeMismatchProperty: Assigning $this->rootElement of type \DOMElement|false to property but \JBZoo\ToolboxCI\JUnit\JUnitXml->rootElement is \DOMElement (false is incompatible)
+src/JUnit/JUnitXml.php:44: [W999] PhanPluginCanUseReturnType: Can use \JBZoo\ToolboxCI\JUnit\TestSuiteElement as a return type of addTestSuite
+src/JUnit/TestCaseElement.php:34: [W999] PhanPluginCanUseParamType: Can use string as the type of parameter $name of setName
+src/JUnit/TestCaseElement.php:36: [W999] PhanPluginSuspiciousParamPositionInternal: Suspicious order for argument name - This is getting passed to parameter #1 (string $name) of \JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute(string $name, string $value)
+src/JUnit/TestCaseElement.php:42: [W999] PhanPluginCanUseParamType: Can use string as the type of parameter $classname of setClassname
+src/JUnit/TestCaseElement.php:52: [W999] PhanPluginCanUseParamType: Can use float as the type of parameter $time of setTime
+src/JUnit/TestCaseElement.php:54: [W10004] PhanTypeMismatchArgumentInternal: Argument 2 ($value) is $time of type float but \JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute() takes string
+src/JUnit/TestCaseElement.php:63: [W999] PhanPluginCanUseParamType: Can use string as the type of parameter $error of addError
+src/JUnit/TestCaseElement.php:63: [W999] PhanPluginCanUseParamType: Can use string as the type of parameter $exceptionMessage of addError
+src/JUnit/TestCaseElement.php:63: [W999] PhanPluginCanUseParamType: Can use string as the type of parameter $type of addError
+src/JUnit/TestCaseElement.php:63: [W999] PhanPluginCanUseReturnType: Can use \DOMElement as a return type of addError
+src/JUnit/TestCaseElement.php:66: [W10094] PhanPossiblyNonClassMethodCall: Call to method setAttribute on type \DOMElement|false that could be a non-object
+src/JUnit/TestCaseElement.php:69: [W10094] PhanPossiblyNonClassMethodCall: Call to method setAttribute on type \DOMElement|false that could be a non-object
+src/JUnit/TestCaseElement.php:77: [W10062] PhanPossiblyFalseTypeReturn: Returning $errorElement of type \DOMElement|false but addError() is declared to return \DOMElement (false is incompatible)
+src/JUnit/TestCaseElement.php:86: [W999] PhanPluginCanUseParamType: Can use string as the type of parameter $error of addFailure
+src/JUnit/TestCaseElement.php:86: [W999] PhanPluginCanUseParamType: Can use string as the type of parameter $exceptionMessage of addFailure
+src/JUnit/TestCaseElement.php:86: [W999] PhanPluginCanUseParamType: Can use string as the type of parameter $type of addFailure
+src/JUnit/TestCaseElement.php:86: [W999] PhanPluginCanUseReturnType: Can use \DOMElement as a return type of addFailure
+src/JUnit/TestCaseElement.php:89: [W10094] PhanPossiblyNonClassMethodCall: Call to method setAttribute on type \DOMElement|false that could be a non-object
+src/JUnit/TestCaseElement.php:92: [W10094] PhanPossiblyNonClassMethodCall: Call to method setAttribute on type \DOMElement|false that could be a non-object
+src/JUnit/TestCaseElement.php:100: [W10062] PhanPossiblyFalseTypeReturn: Returning $failureElement of type \DOMElement|false but addFailure() is declared to return \DOMElement (false is incompatible)
+src/JUnit/TestCaseElement.php:109: [W10004] PhanTypeMismatchArgumentInternal: Argument 2 ($value) is ((int)($this->getAttribute('failures')) + 1) of type int but \JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute() takes string
+src/JUnit/TestCaseElement.php:111: [W10004] PhanTypeMismatchArgumentInternal: Argument 2 ($value) is 1 of type 1 but \JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute() takes string
+src/JUnit/TestCaseElement.php:121: [W10004] PhanTypeMismatchArgumentInternal: Argument 2 ($value) is ((int)($this->getAttribute('errors')) + 1) of type int but \JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute() takes string
+src/JUnit/TestCaseElement.php:123: [W10004] PhanTypeMismatchArgumentInternal: Argument 2 ($value) is 1 of type 1 but \JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute() takes string
+src/JUnit/TestSuiteElement.php:35: [W999] PhanPluginCanUseParamType: Can use string as the type of parameter $name of setName
+src/JUnit/TestSuiteElement.php:37: [W999] PhanPluginSuspiciousParamPositionInternal: Suspicious order for argument name - This is getting passed to parameter #1 (string $name) of \JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute(string $name, string $value)
+src/JUnit/TestSuiteElement.php:55: [W999] PhanPluginCanUseParamType: Can use float as the type of parameter $duration of setTime
+src/JUnit/TestSuiteElement.php:57: [W10004] PhanTypeMismatchArgumentInternal: Argument 2 ($value) is $duration of type float but \JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute() takes string
+src/JUnit/TestSuiteElement.php:65: [W999] PhanPluginCanUseParamType: Can use string as the type of parameter $hostname of setHostname
+src/JUnit/TestSuiteElement.php:73: [W999] PhanPluginCanUseReturnType: Can use \JBZoo\ToolboxCI\JUnit\TestCaseElement as a return type of addTestCase
+src/JUnit/TestSuiteElement.php:86: [W999] PhanPluginCanUsePHP71Void: Can use php 7.1's void as a return type of incrementTestCount
+src/JUnit/TestSuiteElement.php:89: [W10004] PhanTypeMismatchArgumentInternal: Argument 2 ($value) is ((int)($this->getAttribute('tests')) + 1) of type int but \JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute() takes string
+src/JUnit/TestSuiteElement.php:91: [W10004] PhanTypeMismatchArgumentInternal: Argument 2 ($value) is 1 of type 1 but \JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute() takes string
+src/JUnit/TestSuiteElement.php:101: [W10004] PhanTypeMismatchArgumentInternal: Argument 2 ($value) is ((int)($this->getAttribute('failures')) + 1) of type int but \JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute() takes string
+src/JUnit/TestSuiteElement.php:103: [W10004] PhanTypeMismatchArgumentInternal: Argument 2 ($value) is 1 of type 1 but \JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute() takes string
+src/JUnit/TestSuiteElement.php:113: [W10004] PhanTypeMismatchArgumentInternal: Argument 2 ($value) is ((int)($this->getAttribute('errors')) + 1) of type int but \JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute() takes string
+src/JUnit/TestSuiteElement.php:115: [W10004] PhanTypeMismatchArgumentInternal: Argument 2 ($value) is 1 of type 1 but \JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute() takes string

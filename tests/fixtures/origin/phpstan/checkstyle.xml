@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+    <file name="src/JUnit/TestCaseElement.php">
+        <error line="34" column="1" severity="error"
+               message="Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setName() has no return typehint specified."/>
+        <error line="42" column="1" severity="error"
+               message="Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setClassname() has no return typehint specified."/>
+        <error line="52" column="1" severity="error"
+               message="Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setTime() has no return typehint specified."/>
+        <error line="54" column="1" severity="error"
+               message="Parameter #2 $value of method DOMElement::setAttribute() expects string, float given."/>
+    </file>
+    <file>
+        <error severity="error"
+               message="Ignored error pattern #Variable \$undefined might not be defined.# was not matched in reported errors."/>
+    </file>
+</checkstyle>

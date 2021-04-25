@@ -1,0 +1,125 @@
+{
+    "totals"    : {
+        "errors"      : 0,
+        "file_errors" : 26
+    },
+    "files"     : {
+        "./src/JUnit/TestCaseElement.php"  : {
+            "errors"   : 12,
+            "messages" : [
+                {
+                    "message"   : "Method JBZoo\\ToolboxCI\\JUnit\\TestCaseElement::setName() has no return typehint specified.",
+                    "line"      : 34,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Method JBZoo\\ToolboxCI\\JUnit\\TestCaseElement::setClassname() has no return typehint specified.",
+                    "line"      : 42,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Method JBZoo\\ToolboxCI\\JUnit\\TestCaseElement::setTime() has no return typehint specified.",
+                    "line"      : 52,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Parameter #2 $value of method DOMElement::setAttribute() expects string, float given.",
+                    "line"      : 54,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Cannot call method createElement() on DOMDocument|null.",
+                    "line"      : 65,
+                    "ignorable" : true
+                },
+                {
+                    "message"   : "Cannot call method createElement() on DOMDocument|null.",
+                    "line"      : 88,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Method JBZoo\\ToolboxCI\\JUnit\\TestCaseElement::incrementFailureCount() has no return typehint specified.",
+                    "line"      : 106,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+                    "line"      : 109,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+                    "line"      : 111,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Method JBZoo\\ToolboxCI\\JUnit\\TestCaseElement::incrementErrorCount() has no return typehint specified.",
+                    "line"      : 118,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+                    "line"      : 121,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+                    "line"      : 123,
+                    "ignorable" : true
+                }
+            ]
+        },
+        "./src/JUnit/TestSuiteElement.php" : {
+            "errors"   : 14,
+            "messages" : [
+                {
+                    "message"   : "Method JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::setName() has no return typehint specified.",
+                    "line"      : 35,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Method JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::setTimestamp() has no return typehint specified.",
+                    "line"      : 45,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Method JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::setTime() has no return typehint specified.",
+                    "line"      : 55,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Parameter #2 $value of method DOMElement::setAttribute() expects string, float given.",
+                    "line"      : 57,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Method JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::setHostname() has no return typehint specified.",
+                    "line"      : 65,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Method JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::incrementTestCount() has no return typehint specified.",
+                    "line"      : 86,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+                    "line"      : 89,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+                    "line"      : 91,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Method JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::incrementFailureCount() has no return typehint specified.",
+                    "line"      : 98,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+                    "line"      : 101,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+                    "line"      : 103,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Method JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::incrementErrorCount() has no return typehint specified.",
+                    "line"      : 110,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+                    "line"      : 113,
+                    "ignorable" : true
+                }, {
+                    "message"   : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+                    "line"      : 115,
+                    "ignorable" : true
+                }
+            ]
+        }
+    }, "errors" : []
+}

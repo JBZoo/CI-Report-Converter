@@ -1,0 +1,152 @@
+{
+    "version"   : "@project.version@",
+    "package"   : "phpmd",
+    "timestamp" : "2020-07-19T21:40:40+03:00",
+    "files"     : [
+        {
+            "file"       : "\/Users\/smetdenis\/Work\/projects\/jbzoo-toolbox-ci\/vendor\/povils\/phpmnd\/src\/Console\/Application.php",
+            "violations" : [
+                {
+                    "beginLine"       : 26,
+                    "endLine"         : 26,
+                    "package"         : null,
+                    "function"        : null,
+                    "class"           : null,
+                    "method"          : null,
+                    "description"     : "Avoid unused parameters such as \u0027$input\u0027.",
+                    "rule"            : "UnusedFormalParameter",
+                    "ruleSet"         : "Unused Code Rules",
+                    "externalInfoUrl" : "https:\/\/phpmd.org\/rules\/unusedcode.html#unusedformalparameter",
+                    "priority"        : 3
+                },
+                {
+                    "beginLine"       : 26,
+                    "endLine"         : 26,
+                    "package"         : null,
+                    "function"        : null,
+                    "class"           : null,
+                    "method"          : null,
+                    "description"     : "Avoid unused parameters such as \u0027$input\u0027.",
+                    "rule"            : "UnusedFormalParameter",
+                    "ruleSet"         : "Unused Code Rules",
+                    "externalInfoUrl" : "https:\/\/phpmd.org\/rules\/unusedcode.html#unusedformalparameter",
+                    "priority"        : 3
+                }
+            ]
+        },
+        {
+            "file"       : "\/Users\/smetdenis\/Work\/projects\/jbzoo-toolbox-ci\/vendor\/povils\/phpmnd\/src\/Console\/Command.php",
+            "violations" : [
+                {
+                    "beginLine"       : 24,
+                    "endLine"         : 284,
+                    "package"         : "Povils\\PHPMND\\Console",
+                    "function"        : null,
+                    "class"           : "Command",
+                    "method"          : null,
+                    "description"     : "The class Command has a coupling between objects value of 16. Consider to reduce the number of dependencies under 13.",
+                    "rule"            : "CouplingBetweenObjects",
+                    "ruleSet"         : "Design Rules",
+                    "externalInfoUrl" : "https:\/\/phpmd.org\/rules\/design.html#couplingbetweenobjects",
+                    "priority"        : 2
+                },
+                {
+                    "beginLine"       : 29,
+                    "endLine"         : 142,
+                    "package"         : "Povils\\PHPMND\\Console",
+                    "function"        : null,
+                    "class"           : "Command",
+                    "method"          : "configure",
+                    "description"     : "The method configure() has 114 lines of code. Current threshold is set to 100. Avoid really long methods.",
+                    "rule"            : "ExcessiveMethodLength",
+                    "ruleSet"         : "Code Size Rules",
+                    "externalInfoUrl" : "https:\/\/phpmd.org\/rules\/codesize.html#excessivemethodlength",
+                    "priority"        : 3
+                },
+                {
+                    "beginLine"       : 144,
+                    "endLine"         : 207,
+                    "package"         : "Povils\\PHPMND\\Console",
+                    "function"        : null,
+                    "class"           : "Command",
+                    "method"          : "execute",
+                    "description"     : "The method execute() has a Cyclomatic Complexity of 15. The configured cyclomatic complexity threshold is 10.",
+                    "rule"            : "CyclomaticComplexity",
+                    "ruleSet"         : "Code Size Rules",
+                    "externalInfoUrl" : "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+                    "priority"        : 3
+                },
+                {
+                    "beginLine"       : 144,
+                    "endLine"         : 207,
+                    "package"         : "Povils\\PHPMND\\Console",
+                    "function"        : null,
+                    "class"           : "Command",
+                    "method"          : "execute",
+                    "description"     : "The method execute() has an NPath complexity of 2736. The configured NPath complexity threshold is 200.",
+                    "rule"            : "NPathComplexity",
+                    "ruleSet"         : "Code Size Rules",
+                    "externalInfoUrl" : "https:\/\/phpmd.org\/rules\/codesize.html#npathcomplexity",
+                    "priority"        : 3
+                },
+                {
+                    "beginLine"       : 256,
+                    "endLine"         : 263,
+                    "package"         : "Povils\\PHPMND\\Console",
+                    "function"        : null,
+                    "class"           : "Command",
+                    "method"          : "castToNumber",
+                    "description"     : "Avoid unused private methods such as \u0027castToNumber\u0027.",
+                    "rule"            : "UnusedPrivateMethod",
+                    "ruleSet"         : "Unused Code Rules",
+                    "externalInfoUrl" : "https:\/\/phpmd.org\/rules\/unusedcode.html#unusedprivatemethod",
+                    "priority"        : 3
+                },
+                {
+                    "beginLine"       : 256,
+                    "endLine"         : 263,
+                    "package"         : "Povils\\PHPMND\\Console",
+                    "function"        : null,
+                    "class"           : "Command",
+                    "method"          : "castToNumber",
+                    "description"     : "Avoid unused private methods such as \u0027castToNumber\u0027.",
+                    "rule"            : "UnusedPrivateMethod",
+                    "ruleSet"         : "Unused Code Rules",
+                    "externalInfoUrl" : "https:\/\/phpmd.org\/rules\/unusedcode.html#unusedprivatemethod",
+                    "priority"        : 3
+                }
+            ]
+        },
+        {
+            "file"       : "\/Users\/smetdenis\/Work\/projects\/jbzoo-toolbox-ci\/vendor\/povils\/phpmnd\/src\/Console\/Option.php",
+            "violations" : [
+                {
+                    "beginLine"       : 49,
+                    "endLine"         : 49,
+                    "package"         : null,
+                    "function"        : null,
+                    "class"           : null,
+                    "method"          : null,
+                    "description"     : "Avoid excessively long variable names like $includeNumericStrings. Keep variable name length under 20.",
+                    "rule"            : "LongVariable",
+                    "ruleSet"         : "Naming Rules",
+                    "externalInfoUrl" : "https:\/\/phpmd.org\/rules\/naming.html#longvariable",
+                    "priority"        : 3
+                },
+                {
+                    "beginLine"       : 121,
+                    "endLine"         : 121,
+                    "package"         : null,
+                    "function"        : null,
+                    "class"           : null,
+                    "method"          : null,
+                    "description"     : "Avoid excessively long variable names like $includeNumericStrings. Keep variable name length under 20.",
+                    "rule"            : "LongVariable",
+                    "ruleSet"         : "Naming Rules",
+                    "externalInfoUrl" : "https:\/\/phpmd.org\/rules\/naming.html#longvariable",
+                    "priority"        : 3
+                }
+            ]
+        }
+    ]
+}

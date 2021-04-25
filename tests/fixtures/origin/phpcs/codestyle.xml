@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="3.5.5">
+    <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/JUnitXml.php">
+        <error line="24"
+               column="5"
+               severity="warning"
+               message="Visibility must be declared on all constants if your project supports PHP 7.1 or later"
+               source="PSR12.Properties.ConstantVisibility.NotFound"
+        />
+        <error line="44"
+               column="35"
+               severity="error"
+               message="Opening brace should be on a new line"
+               source="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"
+        />
+        <error line="50"
+               column="1"
+               severity="error"
+               message="Expected 1 newline at end of file; 0 found"
+               source="PSR2.Files.EndFileNewline.NoneFound"
+        />
+    </file>
+</checkstyle>

@@ -1,0 +1,2362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies generated="2020-08-04T02:04:03" pdepend="@package_version@">
+  <package name="+global">
+    <class name="CreateObject">
+      <efferent>
+        <type namespace="JBZoo\PHPunit" name="Fixture"/>
+        <type namespace="" name="ArrayObject"/>
+        <type namespace="" name="ArrayObjectExt"/>
+        <type namespace="JBZoo\Data" name="Data"/>
+        <type namespace="JBZoo\Data" name="PhpArray"/>
+        <type namespace="JBZoo\Data" name="Ini"/>
+        <type namespace="JBZoo\Data" name="JSON"/>
+        <type namespace="JBZoo\Data" name="Yml"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/phpbench/CreateObject.php"/>
+    </class>
+    <class name="GetUndefinedValue">
+      <efferent>
+        <type namespace="JBZoo\PHPunit" name="Fixture"/>
+        <type namespace="JBZoo\Data" name="Data"/>
+        <type namespace="" name="ArrayObject"/>
+        <type namespace="" name="ArrayObjectExt"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/phpbench/GetUndefinedValue.php"/>
+    </class>
+    <class name="GetValue">
+      <efferent>
+        <type namespace="JBZoo\PHPunit" name="Fixture"/>
+        <type namespace="JBZoo\Data" name="Data"/>
+        <type namespace="" name="ArrayObject"/>
+        <type namespace="" name="ArrayObjectExt"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/phpbench/GetValue.php"/>
+    </class>
+    <class name="GetValueInner">
+      <efferent>
+        <type namespace="JBZoo\PHPunit" name="Fixture"/>
+        <type namespace="JBZoo\Data" name="Data"/>
+        <type namespace="" name="ArrayObject"/>
+        <type namespace="" name="ArrayObjectExt"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/phpbench/GetValueInner.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\ComposerDiff\Commands">
+    <class name="AbstractCommand">
+      <efferent>
+        <type namespace="Symfony\Component\Console\Command" name="Command"/>
+        <type namespace="Symfony\Component\Console\Input" name="InputInterface"/>
+        <type namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
+        <type namespace="Symfony\Component\Console\Formatter" name="OutputFormatterStyle"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ComposerDiff\Commands" name="DiffAction"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Commands/AbstractCommand.php"/>
+    </class>
+    <class name="DiffAction">
+      <efferent>
+        <type namespace="JBZoo\ComposerDiff\Commands" name="AbstractCommand"/>
+        <type namespace="JBZoo\ComposerDiff" name="Comparator"/>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="AbstractRender"/>
+        <type namespace="Symfony\Component\Console\Input" name="InputOption"/>
+        <type namespace="Symfony\Component\Console\Input" name="InputInterface"/>
+        <type namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ComposerDiffTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Commands/DiffAction.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\ComposerDiff">
+    <class name="Comparator">
+      <efferent>
+        <type namespace="JBZoo\ComposerDiff" name="ComposerLock"/>
+        <type namespace="JBZoo\ComposerDiff" name="Diff"/>
+        <type namespace="JBZoo\ComposerDiff" name="Url"/>
+        <type namespace="JBZoo\ComposerDiff" name="Exception"/>
+        <type namespace="JBZoo\Utils" name="Cli"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ComposerDiff\Commands" name="DiffAction"/>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="AbstractRender"/>
+        <type namespace="JBZoo\PHPUnit" name="ComposerDiffTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Comparator.php"/>
+    </class>
+    <class name="ComposerLock">
+      <efferent>
+        <type namespace="JBZoo\ComposerDiff" name="Package"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ComposerDiff" name="Comparator"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/ComposerLock.php"/>
+    </class>
+    <class name="Diff">
+      <efferent>
+        <type namespace="JBZoo\ComposerDiff" name="Package"/>
+        <type namespace="JBZoo\ComposerDiff" name="Exception"/>
+        <type namespace="Composer\Semver" name="Comparator"/>
+        <type namespace="JBZoo\ComposerDiff" name="Url"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ComposerDiff" name="Comparator"/>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="Console"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Diff.php"/>
+    </class>
+    <class name="Exception">
+      <efferent>
+        <type namespace="" name="RuntimeException"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ComposerDiff" name="Comparator"/>
+        <type namespace="JBZoo\ComposerDiff" name="Diff"/>
+        <type namespace="JBZoo\ComposerDiff" name="Package"/>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="AbstractRender"/>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="Markdown"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Exception.php"/>
+    </class>
+    <class name="Package">
+      <efferent>
+        <type namespace="JBZoo\ComposerDiff" name="Exception"/>
+        <type namespace="JBZoo\ComposerDiff" name="Url"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ComposerDiff" name="ComposerLock"/>
+        <type namespace="JBZoo\ComposerDiff" name="Diff"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Package.php"/>
+    </class>
+    <class name="Url">
+      <efferent/>
+      <afferent>
+        <type namespace="JBZoo\ComposerDiff" name="Comparator"/>
+        <type namespace="JBZoo\ComposerDiff" name="Diff"/>
+        <type namespace="JBZoo\ComposerDiff" name="Package"/>
+        <type namespace="JBZoo\PHPUnit" name="ComposerDiffTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Url.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\ComposerDiff\Renders">
+    <class name="AbstractRender">
+      <efferent>
+        <type namespace="JBZoo\Data" name="Data"/>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="Console"/>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="Markdown"/>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="JsonOutput"/>
+        <type namespace="JBZoo\ComposerDiff" name="Exception"/>
+        <type namespace="JBZoo\ComposerDiff" name="Comparator"/>
+        <type namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ComposerDiff\Commands" name="DiffAction"/>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="Console"/>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="JsonOutput"/>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="Markdown"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Renders/AbstractRender.php"/>
+    </class>
+    <class name="Console">
+      <efferent>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="AbstractRender"/>
+        <type namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
+        <type namespace="Symfony\Component\Console\Helper" name="Table"/>
+        <type namespace="Symfony\Component\Console\Helper" name="TableStyle"/>
+        <type namespace="JBZoo\ComposerDiff" name="Diff"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="AbstractRender"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Renders/Console.php"/>
+    </class>
+    <class name="JsonOutput">
+      <efferent>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="AbstractRender"/>
+        <type namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="AbstractRender"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Renders/JsonOutput.php"/>
+    </class>
+    <class name="Markdown">
+      <efferent>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="AbstractRender"/>
+        <type namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
+        <type namespace="JBZoo\ComposerDiff" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="AbstractRender"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Renders/Markdown.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\PHPUnit">
+    <class name="ComposerDiffCodestyleTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCodestyleTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/tests/ComposerDiffCodestyleTest.php"/>
+    </class>
+    <class name="ComposerDiffComposerTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractComposerTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/tests/ComposerDiffComposerTest.php"/>
+    </class>
+    <class name="ComposerDiffCopyrightTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCopyrightTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/tests/ComposerDiffCopyrightTest.php"/>
+    </class>
+    <class name="ComposerDiffReadmeTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractReadmeTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/tests/ComposerDiffReadmeTest.php"/>
+    </class>
+    <class name="ComposerDiffTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\ComposerDiff" name="Url"/>
+        <type namespace="JBZoo\ComposerDiff" name="Comparator"/>
+        <type namespace="" name="Exception"/>
+        <type namespace="Symfony\Component\Console" name="Application"/>
+        <type namespace="JBZoo\ComposerDiff\Commands" name="DiffAction"/>
+        <type namespace="Symfony\Component\Console\Output" name="BufferedOutput"/>
+        <type namespace="Symfony\Component\Console\Input" name="StringInput"/>
+        <type namespace="JBZoo\Utils" name="Cli"/>
+        <type namespace="" name="RuntimeException"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/tests/ComposerDiffTest.php"/>
+    </class>
+    <class name="AbstractGraphTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Str"/>
+        <type namespace="Symfony\Component\Console" name="Application"/>
+        <type namespace="JBZoo\ComposerGraph" name="CommandBuild"/>
+        <type namespace="Symfony\Component\Console\Output" name="BufferedOutput"/>
+        <type namespace="Symfony\Component\Console\Input" name="StringInput"/>
+        <type namespace="JBZoo\Utils" name="Cli"/>
+        <type namespace="" name="RuntimeException"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ComplexTest"/>
+        <type namespace="JBZoo\PHPUnit" name="GraphBuildTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/tests/AbstractGraphTest.php"/>
+    </class>
+    <class name="ComplexTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractGraphTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/tests/ComplexTest.php"/>
+    </class>
+    <class name="ComposerGraphCodestyleTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCodestyleTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/tests/ComposerGraphCodestyleTest.php"/>
+    </class>
+    <class name="ComposerGraphComposerTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractComposerTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/tests/ComposerGraphComposerTest.php"/>
+    </class>
+    <class name="ComposerGraphCopyrightTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCopyrightTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/tests/ComposerGraphCopyrightTest.php"/>
+    </class>
+    <class name="ComposerGraphReadmeTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractReadmeTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/tests/ComposerGraphReadmeTest.php"/>
+    </class>
+    <class name="GraphBuildTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractGraphTest"/>
+        <type namespace="JBZoo\ComposerGraph" name="Collection"/>
+        <type namespace="JBZoo\ComposerGraph" name="ComposerGraph"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/tests/GraphBuildTest.php"/>
+    </class>
+    <class name="DataCodeStyleTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCodestyleTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/DataCodeStyleTest.php"/>
+    </class>
+    <class name="DataComposerTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractComposerTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/DataComposerTest.php"/>
+    </class>
+    <class name="DataCopyrightTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCopyrightTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/DataCopyrightTest.php"/>
+    </class>
+    <class name="DataReadmeTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractReadmeTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/DataReadmeTest.php"/>
+    </class>
+    <class name="DataTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Data" name="Data"/>
+        <type namespace="" name="IteratorAggregate"/>
+        <type namespace="" name="ArrayAccess"/>
+        <type namespace="" name="Serializable"/>
+        <type namespace="" name="Countable"/>
+        <type namespace="" name="ArrayObject"/>
+        <type namespace="JBZoo\Data" name="JSON"/>
+        <type namespace="" name="stdClass"/>
+        <type namespace="JBZoo\Data" name="PhpArray"/>
+        <type namespace="JBZoo\Data" name="Ini"/>
+        <type namespace="JBZoo\Data" name="Yml"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/DataTest.php"/>
+    </class>
+    <class name="FilterTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Data" name="Data"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/FilterTest.php"/>
+    </class>
+    <class name="IniDataTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Data" name="Ini"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/IniDataTest.php"/>
+    </class>
+    <class name="JsonDataTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Data" name="Data"/>
+        <type namespace="JBZoo\Data" name="JSON"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/JsonDataTest.php"/>
+    </class>
+    <class name="PhpArrayDataTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Data" name="PhpArray"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/PhpArrayDataTest.php"/>
+    </class>
+    <class name="YmlDataTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Data" name="Yml"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/YmlDataTest.php"/>
+    </class>
+    <class name="FlowchartTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\MermaidPHP" name="Node"/>
+        <type namespace="JBZoo\MermaidPHP" name="Graph"/>
+        <type namespace="JBZoo\MermaidPHP" name="Link"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/tests/FlowchartTest.php"/>
+    </class>
+    <class name="MermaidCodeStyleTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCodestyleTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/tests/MermaidCodeStyleTest.php"/>
+    </class>
+    <class name="MermaidComposerTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractComposerTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/tests/MermaidComposerTest.php"/>
+    </class>
+    <class name="MermaidCopyrightsTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCopyrightTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/tests/MermaidCopyrightsTest.php"/>
+    </class>
+    <class name="MermaidPhpReadmeTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractReadmeTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/tests/MermaidReadmeTest.php"/>
+    </class>
+    <class name="AbstractCodestyleTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\PHPUnit" name="Exception"/>
+        <type namespace="Symfony\Component\Finder" name="Finder"/>
+        <type namespace="hanneskod\classtools\Iterator" name="ClassIterator"/>
+        <type namespace="" name="ReflectionClass"/>
+        <type namespace="JBZoo\Utils" name="Str"/>
+        <type namespace="JBZoo\Utils" name="PhpDocs"/>
+        <type namespace="JBZoo\Utils" name="Cli"/>
+        <type namespace="" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ComposerDiffCodestyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ComposerGraphCodestyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="DataCodeStyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="MermaidCodeStyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnitCodeStyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ToolboxCICodestyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="UtilsCodestyleTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/AbstractCodestyleTest.php"/>
+    </class>
+    <class name="AbstractComposerTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ComposerDiffComposerTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ComposerGraphComposerTest"/>
+        <type namespace="JBZoo\PHPUnit" name="DataComposerTest"/>
+        <type namespace="JBZoo\PHPUnit" name="MermaidComposerTest"/>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnitComposerTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ToolboxCIComposerTest"/>
+        <type namespace="JBZoo\PHPUnit" name="UtilsComposerTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/AbstractComposerTest.php"/>
+    </class>
+    <class name="AbstractCopyrightTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\PHPUnit" name="Exception"/>
+        <type namespace="Symfony\Component\Finder" name="Finder"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ComposerDiffCopyrightTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ComposerGraphCopyrightTest"/>
+        <type namespace="JBZoo\PHPUnit" name="DataCopyrightTest"/>
+        <type namespace="JBZoo\PHPUnit" name="MermaidCopyrightsTest"/>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnitCopyrightTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ToolboxCICopyrightTest"/>
+        <type namespace="JBZoo\PHPUnit" name="UtilsCopyrightsTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/AbstractCopyrightTest.php"/>
+    </class>
+    <class name="AbstractReadmeTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ComposerDiffReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ComposerGraphReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="DataReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="MermaidPhpReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnitReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ToolboxCIReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="UtilsReadmeTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/AbstractReadmeTest.php"/>
+    </class>
+    <class name="CovCatcher">
+      <efferent>
+        <type namespace="JBZoo\Data" name="Data"/>
+        <type namespace="JBZoo\PHPUnit" name="Exception"/>
+        <type namespace="JBZoo\Utils" name="Env"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+        <type namespace="SebastianBergmann\CodeCoverage" name="Filter"/>
+        <type namespace="SebastianBergmann\CodeCoverage" name="CodeCoverage"/>
+        <type namespace="SebastianBergmann\CodeCoverage\Report" name="Clover"/>
+        <type namespace="SebastianBergmann\CodeCoverage\Report" name="PHP"/>
+        <type namespace="SebastianBergmann\CodeCoverage\Report\Html" name="Facade"/>
+        <type namespace="" name="RuntimeException"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnitCovCatcherTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/CovCatcher.php"/>
+    </class>
+    <class name="Exception">
+      <efferent>
+        <type namespace="" name="RuntimeException"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCodestyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCopyrightTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CovCatcher"/>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnitCovCatcherTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FormatJUnitTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ExampleTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/Exception.php"/>
+    </class>
+    <class name="PHPUnit">
+      <efferent>
+        <type namespace="PHPUnit\Framework" name="TestCase"/>
+        <type namespace="JBZoo\Utils" name="Env"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ComposerDiffTest"/>
+        <type namespace="JBZoo\PHPUnit" name="AbstractGraphTest"/>
+        <type namespace="JBZoo\PHPUnit" name="DataTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FilterTest"/>
+        <type namespace="JBZoo\PHPUnit" name="IniDataTest"/>
+        <type namespace="JBZoo\PHPUnit" name="JsonDataTest"/>
+        <type namespace="JBZoo\PHPUnit" name="PhpArrayDataTest"/>
+        <type namespace="JBZoo\PHPUnit" name="YmlDataTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FlowchartTest"/>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCodestyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="AbstractComposerTest"/>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCopyrightTest"/>
+        <type namespace="JBZoo\PHPUnit" name="AbstractReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnitAliasesTest"/>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnitCovCatcherTest"/>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnitHttpServerTest"/>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnitToolsTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CliCommandsTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterCheckStyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterJUnitTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterPhpmdJsonTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterPsalmJsonTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityStatsTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FormatJUnitTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FormatSourceTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ExampleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ToolsTest"/>
+        <type namespace="JBZoo\PHPUnit" name="AliasesTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ArrayTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CliTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CsvTest"/>
+        <type namespace="JBZoo\PHPUnit" name="DatesTest"/>
+        <type namespace="JBZoo\PHPUnit" name="EmailTest"/>
+        <type namespace="JBZoo\PHPUnit" name="EnvTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FileSystemTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FilterTest"/>
+        <type namespace="JBZoo\PHPUnit" name="HttpTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ImageTest"/>
+        <type namespace="JBZoo\PHPUnit" name="IpTest"/>
+        <type namespace="JBZoo\PHPUnit" name="PhpDocTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="SerTest"/>
+        <type namespace="JBZoo\PHPUnit" name="SlugTest"/>
+        <type namespace="JBZoo\PHPUnit" name="StatsTest"/>
+        <type namespace="JBZoo\PHPUnit" name="StringTest"/>
+        <type namespace="JBZoo\PHPUnit" name="SysTest"/>
+        <type namespace="JBZoo\PHPUnit" name="TimerTest"/>
+        <type namespace="JBZoo\PHPUnit" name="UrlTest"/>
+        <type namespace="JBZoo\PHPUnit" name="VarsTest"/>
+        <type namespace="JBZoo\PHPUnit" name="XmlTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/PHPUnit.php"/>
+    </class>
+    <class name="PHPUnitAliasesTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="" name="stdClass"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitAliasesTest.php"/>
+    </class>
+    <class name="PHPUnitCodeStyleTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCodestyleTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitCodeStyleTest.php"/>
+    </class>
+    <class name="PHPUnitComposerTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractComposerTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitComposerTest.php"/>
+    </class>
+    <class name="PHPUnitCopyrightTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCopyrightTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitCopyrightTest.php"/>
+    </class>
+    <class name="PHPUnitCovCatcherTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="FS"/>
+        <type namespace="JBZoo\PHPUnit" name="Exception"/>
+        <type namespace="JBZoo\PHPUnit" name="CovCatcher"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+        <type namespace="" name="RuntimeException"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitCovCatcherTest.php"/>
+    </class>
+    <class name="PHPUnitHttpServerTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="FS"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+        <type namespace="JBZoo\HttpClient" name="Response"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitHttpServerTest.php"/>
+    </class>
+    <class name="PHPUnitReadmeTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractReadmeTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitReadmeTest.php"/>
+    </class>
+    <class name="PHPUnitToolsTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitToolsTest.php"/>
+    </class>
+    <class name="CliCommandsTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="CheckStyleConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
+        <type namespace="Symfony\Component\Console" name="Application"/>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="Convert"/>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="ConvertMap"/>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="TeamCityStats"/>
+        <type namespace="Symfony\Component\Console\Output" name="BufferedOutput"/>
+        <type namespace="Symfony\Component\Console\Input" name="StringInput"/>
+        <type namespace="JBZoo\Utils" name="Cli"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/CliCommandsTest.php"/>
+    </class>
+    <class name="ConverterCheckStyleTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="CheckStyleConverter"/>
+        <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\PHPUnit" name="Aliases"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterCheckStyleTest.php"/>
+    </class>
+    <class name="ConverterJUnitTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnit"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\PHPUnit" name="ExampleTest"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCaseOutput"/>
+        <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
+        <type namespace="JBZoo\PHPUnit" name="Aliases"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterJUnitTest.php"/>
+    </class>
+    <class name="ConverterPhpmdJsonTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMdJsonConverter"/>
+        <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\PHPUnit" name="Aliases"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterPhpmdJsonTest.php"/>
+    </class>
+    <class name="ConverterPsalmJsonTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PsalmJsonConverter"/>
+        <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="TeamCityTestsConverter"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterPsalmJsonTest.php"/>
+    </class>
+    <class name="ConverterTeamCityStatsTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpLocStatsTcConverter"/>
+        <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpDependStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMetricsStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpUnitCloverStatsTcConverter"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterTeamCityStatsTest.php"/>
+    </class>
+    <class name="ConverterTeamCityTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="TeamCityTestsConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterTeamCityTest.php"/>
+    </class>
+    <class name="FormatJUnitTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\PHPUnit" name="ExampleTest"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnit"/>
+        <type namespace="PHPUnit\Framework" name="ExpectationFailedException"/>
+        <type namespace="PHPUnit\Framework" name="AssertionFailedError"/>
+        <type namespace="PHPUnit\Framework" name="RiskyTestError"/>
+        <type namespace="PHPUnit\Framework\Error" name="Notice"/>
+        <type namespace="PHPUnit\Framework" name="Warning"/>
+        <type namespace="JBZoo\PHPUnit" name="Exception"/>
+        <type namespace="JBZoo\PHPUnit" name="Aliases"/>
+        <type namespace="" name="DOMDocument"/>
+        <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/FormatJUnitTest.php"/>
+    </class>
+    <class name="FormatSourceTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\PHPUnit" name="ExampleTest"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCaseOutput"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCase"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="Exception"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/FormatSourceTest.php"/>
+    </class>
+    <class name="ToolboxCICodestyleTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCodestyleTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolboxCICodestyleTest.php"/>
+    </class>
+    <class name="ToolboxCIComposerTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractComposerTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolboxCIComposerTest.php"/>
+    </class>
+    <class name="ToolboxCICopyrightTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCopyrightTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolboxCICopyrightTest.php"/>
+    </class>
+    <class name="ToolboxCIReadmeTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractReadmeTest"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolboxCIReadmeTest.php"/>
+    </class>
+    <class name="Aliases">
+      <efferent>
+        <type namespace="" name="DOMDocument"/>
+        <type namespace="" name="Exception"/>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="Xml"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ConverterCheckStyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterJUnitTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterPhpmdJsonTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FormatJUnitTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ToolsTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/Tools/Aliases.php"/>
+    </class>
+    <class name="ExampleTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Cli"/>
+        <type namespace="PHPUnit\Framework" name="Warning"/>
+        <type namespace="JBZoo\PHPUnit" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ConverterJUnitTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FormatJUnitTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FormatSourceTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/Tools/ExampleTest.php"/>
+    </class>
+    <class name="Fixtures">
+      <efferent/>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="CliCommandsTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterCheckStyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterJUnitTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterPhpmdJsonTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterPsalmJsonTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityStatsTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FormatJUnitTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ToolsTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/Tools/Fixtures.php"/>
+    </class>
+    <class name="ToolsTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\ToolboxCI" name="Helper"/>
+        <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
+        <type namespace="JBZoo\PHPUnit" name="Aliases"/>
+        <type namespace="" name="ReflectionClass"/>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="Xml"/>
+        <type namespace="" name="DOMDocument"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnit"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolsTest.php"/>
+    </class>
+    <class name="AliasesTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/AliasesTest.php"/>
+    </class>
+    <class name="ArrayTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Arr"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/ArrayTest.php"/>
+    </class>
+    <class name="CliTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Cli"/>
+        <type namespace="Symfony\Component\Process\Exception" name="ProcessFailedException"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/CliTest.php"/>
+    </class>
+    <class name="CsvTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Csv"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/CsvTest.php"/>
+    </class>
+    <class name="DatesTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Dates"/>
+        <type namespace="" name="DateTime"/>
+        <type namespace="" name="DateTimeZone"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/DatesTest.php"/>
+    </class>
+    <class name="EmailTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Email"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/EmailTest.php"/>
+    </class>
+    <class name="EnvTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Env"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/EnvTest.php"/>
+    </class>
+    <class name="FileSystemTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="FS"/>
+        <type namespace="" name="Exception"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/FileSystemTest.php"/>
+    </class>
+    <class name="FilterTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Filter"/>
+        <type namespace="JBZoo\Utils" name="Exception"/>
+        <type namespace="JBZoo\Data" name="JSON"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/FilterTest.php"/>
+    </class>
+    <class name="HttpTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Http"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/HttpTest.php"/>
+    </class>
+    <class name="ImageTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Image"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/ImageTest.php"/>
+    </class>
+    <class name="IpTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="IP"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/IpTest.php"/>
+    </class>
+    <class name="PhpDocTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="" name="ReflectionClass"/>
+        <type namespace="JBZoo\Utils" name="Str"/>
+        <type namespace="JBZoo\Utils" name="PhpDocs"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/PhpDocTest.php"/>
+    </class>
+    <class name="ReadmeTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Env"/>
+        <type namespace="JBZoo\Utils" name="Arr"/>
+        <type namespace="JBZoo\Utils" name="Cli"/>
+        <type namespace="JBZoo\Utils" name="Csv"/>
+        <type namespace="JBZoo\Utils" name="Dates"/>
+        <type namespace="JBZoo\Utils" name="Email"/>
+        <type namespace="JBZoo\Utils" name="Filter"/>
+        <type namespace="JBZoo\Utils" name="FS"/>
+        <type namespace="JBZoo\Utils" name="Http"/>
+        <type namespace="JBZoo\Utils" name="Image"/>
+        <type namespace="JBZoo\Utils" name="IP"/>
+        <type namespace="JBZoo\Utils" name="Ser"/>
+        <type namespace="JBZoo\Utils" name="Slug"/>
+        <type namespace="JBZoo\Utils" name="Stats"/>
+        <type namespace="JBZoo\Utils" name="Str"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+        <type namespace="JBZoo\Utils" name="Timer"/>
+        <type namespace="JBZoo\Utils" name="Url"/>
+        <type namespace="JBZoo\Utils" name="Vars"/>
+        <type namespace="JBZoo\Utils" name="PhpDocs"/>
+        <type namespace="JBZoo\Utils" name="Xml"/>
+        <type namespace="" name="ReflectionClass"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/ReadmeTest.php"/>
+    </class>
+    <class name="SerTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="" name="stdClass"/>
+        <type namespace="JBZoo\Utils" name="Ser"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/SerTest.php"/>
+    </class>
+    <class name="SlugTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Slug"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/SlugTest.php"/>
+    </class>
+    <class name="StatsTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Stats"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/StatsTest.php"/>
+    </class>
+    <class name="StringTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Str"/>
+        <type namespace="JBZoo\Utils" name="Slug"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/StringTest.php"/>
+    </class>
+    <class name="SysTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/SysTest.php"/>
+    </class>
+    <class name="TimerTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Timer"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/TimerTest.php"/>
+    </class>
+    <class name="UrlTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Url"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/UrlTest.php"/>
+    </class>
+    <class name="UtilsCopyrightsTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCopyrightTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/UtilsCodestyleTest.php"/>
+    </class>
+    <class name="UtilsComposerTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractComposerTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/UtilsComposerTest.php"/>
+    </class>
+    <class name="UtilsCodestyleTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCodestyleTest"/>
+        <type namespace="Symfony\Component\Finder" name="Finder"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/UtilsCopyrightsTest.php"/>
+    </class>
+    <class name="UtilsReadmeTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractReadmeTest"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/UtilsReadmeTest.php"/>
+    </class>
+    <class name="VarsTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Vars"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/VarsTest.php"/>
+    </class>
+    <class name="XmlTest">
+      <efferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\Utils" name="Xml"/>
+        <type namespace="" name="DOMDocument"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/XmlTest.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\ComposerGraph">
+    <class name="Collection">
+      <efferent>
+        <type namespace="JBZoo\Data" name="JSON"/>
+        <type namespace="JBZoo\ComposerGraph" name="Package"/>
+        <type namespace="JBZoo\ComposerGraph" name="Helper"/>
+        <type namespace="JBZoo\ComposerGraph" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="GraphBuildTest"/>
+        <type namespace="JBZoo\ComposerGraph" name="CommandBuild"/>
+        <type namespace="JBZoo\ComposerGraph" name="ComposerGraph"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/src/Collection.php"/>
+    </class>
+    <class name="CommandBuild">
+      <efferent>
+        <type namespace="Symfony\Component\Console\Command" name="Command"/>
+        <type namespace="Symfony\Component\Console\Input" name="InputOption"/>
+        <type namespace="JBZoo\ComposerGraph" name="ComposerGraph"/>
+        <type namespace="JBZoo\MermaidPHP" name="Graph"/>
+        <type namespace="Symfony\Component\Console\Input" name="InputInterface"/>
+        <type namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
+        <type namespace="JBZoo\ComposerGraph" name="Collection"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+        <type namespace="JBZoo\ComposerGraph" name="Exception"/>
+        <type namespace="JBZoo\Data" name="JSON"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractGraphTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/src/CommandBuild.php"/>
+    </class>
+    <class name="ComposerGraph">
+      <efferent>
+        <type namespace="JBZoo\ComposerGraph" name="Collection"/>
+        <type namespace="JBZoo\MermaidPHP" name="Graph"/>
+        <type namespace="JBZoo\MermaidPHP" name="Node"/>
+        <type namespace="JBZoo\ComposerGraph" name="Package"/>
+        <type namespace="JBZoo\ComposerGraph" name="Exception"/>
+        <type namespace="JBZoo\MermaidPHP" name="Link"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="GraphBuildTest"/>
+        <type namespace="JBZoo\ComposerGraph" name="CommandBuild"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/src/ComposerGraph.php"/>
+    </class>
+    <class name="Exception">
+      <efferent>
+        <type namespace="" name="RuntimeException"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ComposerGraph" name="Collection"/>
+        <type namespace="JBZoo\ComposerGraph" name="CommandBuild"/>
+        <type namespace="JBZoo\ComposerGraph" name="ComposerGraph"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/src/Exception.php"/>
+    </class>
+    <class name="Helper">
+      <efferent>
+        <type namespace="JBZoo\Utils" name="Cli"/>
+        <type namespace="" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ComposerGraph" name="Collection"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/src/Helper.php"/>
+    </class>
+    <class name="Package">
+      <efferent/>
+      <afferent>
+        <type namespace="JBZoo\ComposerGraph" name="Collection"/>
+        <type namespace="JBZoo\ComposerGraph" name="ComposerGraph"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/src/Package.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\Data">
+    <class name="Data">
+      <efferent>
+        <type namespace="" name="ArrayObject"/>
+        <type namespace="JBZoo\Utils" name="Filter"/>
+        <type namespace="" name="RecursiveArrayIterator"/>
+        <type namespace="" name="RecursiveIteratorIterator"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="CreateObject"/>
+        <type namespace="+global" name="GetUndefinedValue"/>
+        <type namespace="+global" name="GetValue"/>
+        <type namespace="+global" name="GetValueInner"/>
+        <type namespace="JBZoo\ComposerDiff\Renders" name="AbstractRender"/>
+        <type namespace="JBZoo\PHPUnit" name="DataTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FilterTest"/>
+        <type namespace="JBZoo\PHPUnit" name="JsonDataTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CovCatcher"/>
+        <type namespace="JBZoo\Data" name="Ini"/>
+        <type namespace="JBZoo\Data" name="JSON"/>
+        <type namespace="JBZoo\Data" name="PhpArray"/>
+        <type namespace="JBZoo\Data" name="Yml"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="CheckStyleConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMdJsonConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PsalmJsonConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCaseOutput"/>
+        <type namespace="JBZoo\Utils" name="Filter"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/src/Data.php"/>
+    </class>
+    <class name="Exception">
+      <efferent>
+        <type namespace="" name="RuntimeException"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/src/Exception.php"/>
+    </class>
+    <class name="Ini">
+      <efferent>
+        <type namespace="JBZoo\Data" name="Data"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="CreateObject"/>
+        <type namespace="JBZoo\PHPUnit" name="DataTest"/>
+        <type namespace="JBZoo\PHPUnit" name="IniDataTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/src/Ini.php"/>
+    </class>
+    <class name="JSON">
+      <efferent>
+        <type namespace="JBZoo\Data" name="Data"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="CreateObject"/>
+        <type namespace="JBZoo\PHPUnit" name="DataTest"/>
+        <type namespace="JBZoo\PHPUnit" name="JsonDataTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FilterTest"/>
+        <type namespace="JBZoo\ComposerGraph" name="Collection"/>
+        <type namespace="JBZoo\ComposerGraph" name="CommandBuild"/>
+        <type namespace="JBZoo\Utils" name="Filter"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/src/JSON.php"/>
+    </class>
+    <class name="PhpArray">
+      <efferent>
+        <type namespace="JBZoo\Data" name="Data"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="CreateObject"/>
+        <type namespace="JBZoo\PHPUnit" name="DataTest"/>
+        <type namespace="JBZoo\PHPUnit" name="PhpArrayDataTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/src/PhpArray.php"/>
+    </class>
+    <class name="Yml">
+      <efferent>
+        <type namespace="JBZoo\Data" name="Data"/>
+        <type namespace="Symfony\Component\Yaml" name="Yaml"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="CreateObject"/>
+        <type namespace="JBZoo\PHPUnit" name="DataTest"/>
+        <type namespace="JBZoo\PHPUnit" name="YmlDataTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/src/Yml.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\PHPunit">
+    <class name="Fixture">
+      <efferent/>
+      <afferent>
+        <type namespace="+global" name="CreateObject"/>
+        <type namespace="+global" name="GetUndefinedValue"/>
+        <type namespace="+global" name="GetValue"/>
+        <type namespace="+global" name="GetValueInner"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/Fixture.php"/>
+    </class>
+    <class name="ArrayObjectExt">
+      <efferent>
+        <type namespace="" name="ArrayObject"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/fixtures.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\MermaidPHP">
+    <class name="Exception">
+      <efferent>
+        <type namespace="" name="RuntimeException"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\MermaidPHP" name="Graph"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/src/Exception.php"/>
+    </class>
+    <class name="Graph">
+      <efferent>
+        <type namespace="JBZoo\MermaidPHP" name="Helper"/>
+        <type namespace="JBZoo\MermaidPHP" name="Node"/>
+        <type namespace="JBZoo\MermaidPHP" name="Link"/>
+        <type namespace="JBZoo\MermaidPHP" name="Exception"/>
+        <type namespace="JBZoo\MermaidPHP" name="Render"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="FlowchartTest"/>
+        <type namespace="JBZoo\ComposerGraph" name="CommandBuild"/>
+        <type namespace="JBZoo\ComposerGraph" name="ComposerGraph"/>
+        <type namespace="JBZoo\MermaidPHP" name="Helper"/>
+        <type namespace="JBZoo\MermaidPHP" name="Render"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/src/Graph.php"/>
+    </class>
+    <class name="Helper">
+      <efferent>
+        <type namespace="JBZoo\MermaidPHP" name="Graph"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\MermaidPHP" name="Graph"/>
+        <type namespace="JBZoo\MermaidPHP" name="Link"/>
+        <type namespace="JBZoo\MermaidPHP" name="Node"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/src/Helper.php"/>
+    </class>
+    <class name="Link">
+      <efferent>
+        <type namespace="JBZoo\MermaidPHP" name="Node"/>
+        <type namespace="JBZoo\MermaidPHP" name="Helper"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="FlowchartTest"/>
+        <type namespace="JBZoo\ComposerGraph" name="ComposerGraph"/>
+        <type namespace="JBZoo\MermaidPHP" name="Graph"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/src/Link.php"/>
+    </class>
+    <class name="Node">
+      <efferent>
+        <type namespace="JBZoo\MermaidPHP" name="Helper"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="FlowchartTest"/>
+        <type namespace="JBZoo\ComposerGraph" name="ComposerGraph"/>
+        <type namespace="JBZoo\MermaidPHP" name="Graph"/>
+        <type namespace="JBZoo\MermaidPHP" name="Link"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/src/Node.php"/>
+    </class>
+    <class name="Render">
+      <efferent>
+        <type namespace="JBZoo\MermaidPHP" name="Graph"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\MermaidPHP" name="Graph"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/src/Render.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\ToolboxCI\Commands">
+    <class name="AbstractCommand">
+      <efferent>
+        <type namespace="Symfony\Component\Console\Command" name="Command"/>
+        <type namespace="Symfony\Component\Console\Input" name="InputOption"/>
+        <type namespace="Symfony\Component\Console\Input" name="InputInterface"/>
+        <type namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="Convert"/>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="ConvertMap"/>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="TeamCityStats"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/AbstractCommand.php"/>
+    </class>
+    <class name="Convert">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="AbstractCommand"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
+        <type namespace="Symfony\Component\Console\Input" name="InputOption"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="Factory"/>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="CliCommandsTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/Convert.php"/>
+    </class>
+    <class name="ConvertMap">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="AbstractCommand"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="CliCommandsTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/ConvertMap.php"/>
+    </class>
+    <class name="Exception">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="AbstractCommand"/>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="Convert"/>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="TeamCityStats"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/Exception.php"/>
+    </class>
+    <class name="TeamCityStats">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="AbstractCommand"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
+        <type namespace="Symfony\Component\Console\Input" name="InputOption"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="Factory"/>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="CliCommandsTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/TeamCityStats.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\ToolboxCI\Converters">
+    <class name="AbstractConverter">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="CheckStyleConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMdJsonConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PsalmJsonConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="TeamCityTestsConverter"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/AbstractConverter.php"/>
+    </class>
+    <class name="AbstractStatsTcConverter">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="AbstractWriter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="TeamCity"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="Buffer"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="AbstractMetricMap"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metrics"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpDependStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpLocStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMetricsStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpUnitCloverStatsTcConverter"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/AbstractStatsTcConverter.php"/>
+    </class>
+    <class name="CheckStyleConverter">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="Xml"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCaseOutput"/>
+        <type namespace="JBZoo\Data" name="Data"/>
+        <type namespace="JBZoo\ToolboxCI" name="Helper"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="CliCommandsTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterCheckStyleTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/CheckStyleConverter.php"/>
+    </class>
+    <class name="Exception">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/Exception.php"/>
+    </class>
+    <class name="Factory">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="Convert"/>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="TeamCityStats"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/Factory.php"/>
+    </class>
+    <class name="JUnitConverter">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="Xml"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnit"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitSuite"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCaseOutput"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="CliCommandsTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterCheckStyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterJUnitTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterPhpmdJsonTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterPsalmJsonTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/JUnitConverter.php"/>
+    </class>
+    <class name="Map">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI" name="Markdown"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="Exception"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ToolboxCIReadmeTest"/>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="Convert"/>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="ConvertMap"/>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="TeamCityStats"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="Factory"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/Map.php"/>
+    </class>
+    <class name="PhpDependStatsTcConverter">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metrics"/>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="Xml"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="PhpDepend"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityStatsTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpDependStatsTcConverter.php"/>
+    </class>
+    <class name="PhpLocStatsTcConverter">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metrics"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="PhpLoc"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityStatsTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpLocStatsTcConverter.php"/>
+    </class>
+    <class name="PhpMdJsonConverter">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCaseOutput"/>
+        <type namespace="JBZoo\Data" name="Data"/>
+        <type namespace="JBZoo\ToolboxCI" name="Helper"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ConverterPhpmdJsonTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpMdJsonConverter.php"/>
+    </class>
+    <class name="PhpMetricsStatsTcConverter">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metrics"/>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="Xml"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="PhpMetrics"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityStatsTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpMetricsStatsTcConverter.php"/>
+    </class>
+    <class name="PhpUnitCloverStatsTcConverter">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metrics"/>
+        <type namespace="" name="SimpleXMLElement"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="PhpUnitClover"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityStatsTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpUnitCloverStatsTcConverter.php"/>
+    </class>
+    <class name="PsalmJsonConverter">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCaseOutput"/>
+        <type namespace="JBZoo\Data" name="Data"/>
+        <type namespace="JBZoo\ToolboxCI" name="Helper"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ConverterPsalmJsonTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PsalmJsonConverter.php"/>
+    </class>
+    <class name="TeamCityTestsConverter">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="AbstractWriter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="TeamCity"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="Buffer"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCase"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ConverterPsalmJsonTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/TeamCityTestsConverter.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\ToolboxCI">
+    <class name="Exception">
+      <efferent>
+        <type namespace="" name="RuntimeException"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Commands" name="Exception"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="Exception"/>
+        <type namespace="JBZoo\ToolboxCI" name="Markdown"/>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="Exception"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Exception.php"/>
+    </class>
+    <class name="Helper">
+      <efferent>
+        <type namespace="JBZoo\Utils" name="Str"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ToolsTest"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="CheckStyleConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMdJsonConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PsalmJsonConverter"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Helper.php"/>
+    </class>
+    <class name="Markdown">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Markdown.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\ToolboxCI\Formats">
+    <class name="AbstractNode">
+      <efferent>
+        <type namespace="JBZoo\Data" name="Data"/>
+        <type namespace="JBZoo\Utils" name="Str"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="Exception"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCaseOutput"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitCase"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitSuite"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metric"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metrics"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCase"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/AbstractNode.php"/>
+    </class>
+    <class name="Exception">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="Exception"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="Exception"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="Exception"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Exception.php"/>
+    </class>
+    <class name="Xml">
+      <efferent>
+        <type namespace="" name="DOMDocument"/>
+        <type namespace="" name="DOMElement"/>
+        <type namespace="" name="DOMNode"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="Aliases"/>
+        <type namespace="JBZoo\PHPUnit" name="ToolsTest"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="CheckStyleConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpDependStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMetricsStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnit"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Xml.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput">
+    <class name="AbstractOutput">
+      <efferent>
+        <type namespace="" name="DOMDocument"/>
+        <type namespace="" name="DOMNode"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="Error"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="Failure"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="Skipped"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="SystemOut"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="Warning"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitCase"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/AbstractOutput.php"/>
+    </class>
+    <class name="Error">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitCase"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/Error.php"/>
+    </class>
+    <class name="Failure">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitCase"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/Failure.php"/>
+    </class>
+    <class name="Skipped">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitCase"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/Skipped.php"/>
+    </class>
+    <class name="SystemOut">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitCase"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/SystemOut.php"/>
+    </class>
+    <class name="Warning">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitCase"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/Warning.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\ToolboxCI\Formats\JUnit">
+    <class name="Exception">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="Exception"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/Exception.php"/>
+    </class>
+    <class name="JUnit">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitSuite"/>
+        <type namespace="" name="DOMDocument"/>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="Xml"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ConverterJUnitTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FormatJUnitTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ToolsTest"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/JUnit.php"/>
+    </class>
+    <class name="JUnitCase">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="Failure"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="Error"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="Warning"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="SystemOut"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="Skipped"/>
+        <type namespace="" name="DOMDocument"/>
+        <type namespace="" name="DOMNode"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitSuite"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/JUnitCase.php"/>
+    </class>
+    <class name="JUnitSuite">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
+        <type namespace="" name="DOMDocument"/>
+        <type namespace="" name="DOMNode"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitCase"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnit"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/JUnitSuite.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\ToolboxCI\Formats\Metric">
+    <class name="Metric">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metrics"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Metric/Metric.php"/>
+    </class>
+    <class name="Metrics">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="AbstractMetricMap"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metric"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpDependStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpLocStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMetricsStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpUnitCloverStatsTcConverter"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Metric/Metrics.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\ToolboxCI\Formats\MetricMaps">
+    <class name="AbstractMetricMap">
+      <efferent/>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metrics"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="PhpDepend"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="PhpLoc"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="PhpMetrics"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="PhpUnitClover"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/AbstractMetricMap.php"/>
+    </class>
+    <class name="PhpDepend">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="AbstractMetricMap"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpDependStatsTcConverter"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/PhpDepend.php"/>
+    </class>
+    <class name="PhpLoc">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="AbstractMetricMap"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpLocStatsTcConverter"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/PhpLoc.php"/>
+    </class>
+    <class name="PhpMetrics">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="AbstractMetricMap"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMetricsStatsTcConverter"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/PhpMetrics.php"/>
+    </class>
+    <class name="PhpUnitClover">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="AbstractMetricMap"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpUnitCloverStatsTcConverter"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/PhpUnitClover.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\ToolboxCI\Formats\Source">
+    <class name="Exception">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="FormatSourceTest"/>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Source/Exception.php"/>
+    </class>
+    <class name="SourceCase">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="FormatSourceTest"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="TeamCityTestsConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Source/SourceCase.php"/>
+    </class>
+    <class name="SourceCaseOutput">
+      <efferent>
+        <type namespace="JBZoo\Data" name="Data"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ConverterJUnitTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FormatSourceTest"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="CheckStyleConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMdJsonConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PsalmJsonConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Source/SourceCaseOutput.php"/>
+    </class>
+    <class name="SourceSuite">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCase"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ConverterJUnitTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FormatSourceTest"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="CheckStyleConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMdJsonConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="PsalmJsonConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="TeamCityTestsConverter"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Source/SourceSuite.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\ToolboxCI\Formats\TeamCity">
+    <class name="Exception">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="Helper"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="TeamCity"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="Exception"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Exception.php"/>
+    </class>
+    <class name="Helper">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="Exception"/>
+        <type namespace="" name="DateTime"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="TeamCity"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Helper.php"/>
+    </class>
+    <class name="TeamCity">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="AbstractWriter"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="Helper"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="TeamCityTestsConverter"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/TeamCity.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\ToolboxCI\Formats\TeamCity\Writers">
+    <interface name="AbstractWriter">
+      <efferent/>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="TeamCityTestsConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="TeamCity"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="Buffer"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="CustomCallback"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="Stdout"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="SymfonyConsole"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/AbstractWriter.php"/>
+    </interface>
+    <class name="Buffer">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="AbstractWriter"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\ToolboxCI\Converters" name="TeamCityTestsConverter"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/Buffer.php"/>
+    </class>
+    <class name="CustomCallback">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="AbstractWriter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="Exception"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/CustomCallback.php"/>
+    </class>
+    <class name="Exception">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="CustomCallback"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="SymfonyConsole"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/Exception.php"/>
+    </class>
+    <class name="Stdout">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="AbstractWriter"/>
+        <type namespace="JBZoo\Utils" name="Cli"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/Stdout.php"/>
+    </class>
+    <class name="SymfonyConsole">
+      <efferent>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="AbstractWriter"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="Exception"/>
+        <type namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
+      </efferent>
+      <afferent/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/SymfonyConsole.php"/>
+    </class>
+  </package>
+  <package name="JBZoo\Utils">
+    <class name="Arr">
+      <efferent>
+        <type namespace="" name="Closure"/>
+        <type namespace="JBZoo\Utils" name="Str"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ArrayTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+        <type namespace="JBZoo\Utils" name="Email"/>
+        <type namespace="JBZoo\Utils" name="Filter"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Arr.php"/>
+    </class>
+    <class name="Cli">
+      <efferent>
+        <type namespace="Symfony\Component\Process" name="Process"/>
+        <type namespace="JBZoo\Utils" name="Exception"/>
+        <type namespace="" name="Exception"/>
+        <type namespace="Symfony\Component\Process\Exception" name="ProcessFailedException"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+        <type namespace="JBZoo\Utils" name="Env"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\ComposerDiff" name="Comparator"/>
+        <type namespace="JBZoo\PHPUnit" name="ComposerDiffTest"/>
+        <type namespace="JBZoo\PHPUnit" name="AbstractGraphTest"/>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCodestyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CliCommandsTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ExampleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CliTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+        <type namespace="JBZoo\ComposerGraph" name="Helper"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="Stdout"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Cli.php"/>
+    </class>
+    <class name="Csv">
+      <efferent/>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="CsvTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Csv.php"/>
+    </class>
+    <class name="Dates">
+      <efferent>
+        <type namespace="" name="DateTime"/>
+        <type namespace="" name="DateTimeZone"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="DatesTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Dates.php"/>
+    </class>
+    <class name="Email">
+      <efferent>
+        <type namespace="JBZoo\Utils" name="Str"/>
+        <type namespace="JBZoo\Utils" name="Url"/>
+        <type namespace="JBZoo\Utils" name="Vars"/>
+        <type namespace="JBZoo\Utils" name="Filter"/>
+        <type namespace="JBZoo\Utils" name="Arr"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="EmailTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Email.php"/>
+    </class>
+    <class name="Env">
+      <efferent>
+        <type namespace="JBZoo\Utils" name="Filter"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="CovCatcher"/>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
+        <type namespace="JBZoo\PHPUnit" name="EnvTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+        <type namespace="JBZoo\Utils" name="Cli"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Env.php"/>
+    </class>
+    <class name="Exception">
+      <efferent>
+        <type namespace="" name="RuntimeException"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="FilterTest"/>
+        <type namespace="JBZoo\Utils" name="Cli"/>
+        <type namespace="JBZoo\Utils" name="FS"/>
+        <type namespace="JBZoo\Utils" name="Filter"/>
+        <type namespace="JBZoo\Utils" name="Http"/>
+        <type namespace="JBZoo\Utils" name="Image"/>
+        <type namespace="JBZoo\Utils" name="Stats"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Exception.php"/>
+    </class>
+    <class name="FS">
+      <efferent>
+        <type namespace="JBZoo\Utils" name="Exception"/>
+        <type namespace="" name="FilesystemIterator"/>
+        <type namespace="" name="RecursiveIteratorIterator"/>
+        <type namespace="" name="RecursiveDirectoryIterator"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnitCovCatcherTest"/>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnitHttpServerTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FileSystemTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+        <type namespace="JBZoo\Utils" name="Url"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/FS.php"/>
+    </class>
+    <class name="Filter">
+      <efferent>
+        <type namespace="JBZoo\Utils" name="Str"/>
+        <type namespace="JBZoo\Utils" name="Exception"/>
+        <type namespace="JBZoo\Utils" name="Arr"/>
+        <type namespace="" name="Closure"/>
+        <type namespace="JBZoo\Utils" name="Xml"/>
+        <type namespace="JBZoo\Data" name="Data"/>
+        <type namespace="JBZoo\Data" name="JSON"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="FilterTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+        <type namespace="JBZoo\Data" name="Data"/>
+        <type namespace="JBZoo\Utils" name="Email"/>
+        <type namespace="JBZoo\Utils" name="Env"/>
+        <type namespace="JBZoo\Utils" name="Image"/>
+        <type namespace="JBZoo\Utils" name="Str"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+        <type namespace="JBZoo\Utils" name="Vars"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Filter.php"/>
+    </class>
+    <class name="Http">
+      <efferent>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+        <type namespace="JBZoo\Utils" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="HttpTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Http.php"/>
+    </class>
+    <class name="IP">
+      <efferent/>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="IpTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/IP.php"/>
+    </class>
+    <class name="Image">
+      <efferent>
+        <type namespace="JBZoo\Utils" name="Exception"/>
+        <type namespace="JBZoo\Utils" name="Filter"/>
+        <type namespace="JBZoo\Utils" name="Vars"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ImageTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Image.php"/>
+    </class>
+    <class name="PhpDocs">
+      <efferent/>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCodestyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="PhpDocTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/PhpDocs.php"/>
+    </class>
+    <class name="Ser">
+      <efferent/>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="SerTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Ser.php"/>
+    </class>
+    <class name="Slug">
+      <efferent>
+        <type namespace="JBZoo\Utils" name="Str"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="SlugTest"/>
+        <type namespace="JBZoo\PHPUnit" name="StringTest"/>
+        <type namespace="JBZoo\Utils" name="Str"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Slug.php"/>
+    </class>
+    <class name="Stats">
+      <efferent>
+        <type namespace="JBZoo\Utils" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="StatsTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Stats.php"/>
+    </class>
+    <class name="Str">
+      <efferent>
+        <type namespace="JBZoo\Utils" name="Slug"/>
+        <type namespace="JBZoo\Utils" name="Filter"/>
+        <type namespace="JBZoo\Utils" name="Sys"/>
+        <type namespace="JBZoo\Utils" name="Xml"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="AbstractGraphTest"/>
+        <type namespace="JBZoo\PHPUnit" name="AbstractCodestyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="PhpDocTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="StringTest"/>
+        <type namespace="JBZoo\ToolboxCI" name="Helper"/>
+        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
+        <type namespace="JBZoo\Utils" name="Arr"/>
+        <type namespace="JBZoo\Utils" name="Email"/>
+        <type namespace="JBZoo\Utils" name="Filter"/>
+        <type namespace="JBZoo\Utils" name="Slug"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Str.php"/>
+    </class>
+    <class name="Sys">
+      <efferent>
+        <type namespace="JBZoo\Utils" name="Filter"/>
+        <type namespace="JBZoo\Utils" name="FS"/>
+        <type namespace="JBZoo\Utils" name="Env"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ComposerDiffTest"/>
+        <type namespace="JBZoo\PHPUnit" name="AbstractGraphTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CovCatcher"/>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnitCovCatcherTest"/>
+        <type namespace="JBZoo\PHPUnit" name="PHPUnitHttpServerTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CliCommandsTest"/>
+        <type namespace="JBZoo\PHPUnit" name="FileSystemTest"/>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="SysTest"/>
+        <type namespace="JBZoo\ComposerGraph" name="CommandBuild"/>
+        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="TeamCity"/>
+        <type namespace="JBZoo\Utils" name="Cli"/>
+        <type namespace="JBZoo\Utils" name="Email"/>
+        <type namespace="JBZoo\Utils" name="FS"/>
+        <type namespace="JBZoo\Utils" name="Http"/>
+        <type namespace="JBZoo\Utils" name="Str"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Sys.php"/>
+    </class>
+    <class name="Timer">
+      <efferent/>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="TimerTest"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Timer.php"/>
+    </class>
+    <class name="Url">
+      <efferent>
+        <type namespace="JBZoo\Utils" name="FS"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="UrlTest"/>
+        <type namespace="JBZoo\Utils" name="Email"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Url.php"/>
+    </class>
+    <class name="Vars">
+      <efferent>
+        <type namespace="JBZoo\Utils" name="Filter"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="VarsTest"/>
+        <type namespace="JBZoo\Utils" name="Email"/>
+        <type namespace="JBZoo\Utils" name="Image"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Vars.php"/>
+    </class>
+    <class name="Xml">
+      <efferent>
+        <type namespace="" name="DOMDocument"/>
+        <type namespace="" name="DOMElement"/>
+        <type namespace="" name="DOMNode"/>
+      </efferent>
+      <afferent>
+        <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="XmlTest"/>
+        <type namespace="JBZoo\Utils" name="Filter"/>
+        <type namespace="JBZoo\Utils" name="Str"/>
+      </afferent>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Xml.php"/>
+    </class>
+  </package>
+</dependencies>

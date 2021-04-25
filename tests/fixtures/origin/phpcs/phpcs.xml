@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpcs version="3.5.5">
+    <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/JUnitXml.php" errors="2" warnings="1"
+          fixable="2">
+        <warning line="24" column="5" source="PSR12.Properties.ConstantVisibility.NotFound" severity="5" fixable="0">
+            Visibility must be declared on all constants if your project supports PHP 7.1 or later
+        </warning>
+        <error line="44" column="35" source="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine" severity="5"
+               fixable="1">Opening brace should be on a new line
+        </error>
+        <error line="50" column="1" source="PSR2.Files.EndFileNewline.NoneFound" severity="5" fixable="1">Expected 1
+            newline at end of file; 0 found
+        </error>
+    </file>
+</phpcs>

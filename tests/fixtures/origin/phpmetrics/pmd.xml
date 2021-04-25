@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="@package_version@" timestamp="2020-08-04T01:25:36+03:00">
+  <file name="JBZoo\ComposerDiff\">
+    <violation beginline="1" rule="Stable Dependencies Principle" ruleset="Stable Dependencies Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should depend in the direction of stability.
+
+This package is more stable (0.75) than 1 package(s) that it depends on.
+The packages that are more stable are
+
+* JBZoo\ComposerDiff\Renders (0.75)</violation>
+  </file>
+  <file name="JBZoo\ComposerDiff\Renders\Markdown">
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.58 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\ComposerDiff\Renders\">
+    <violation beginline="1" rule="Stable Dependencies Principle" ruleset="Stable Dependencies Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should depend in the direction of stability.
+
+This package is more stable (0.75) than 1 package(s) that it depends on.
+The packages that are more stable are
+
+* JBZoo\ComposerDiff (0.75)</violation>
+  </file>
+  <file name="JBZoo\ComposerDiff\Renders\Console">
+    <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Max cyclomatic complexity of class methods is 11)
+
+Maybe you should delegate some code to other objects or split complex method.</violation>
+  </file>
+  <file name="JBZoo\ToolboxCI\Markdown">
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.42 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\ToolboxCI\">
+    <violation beginline="1" rule="Stable Abstractions Principle" ruleset="Stable Abstractions Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should be either abstract and stable or concrete and instable.
+
+This package is instable and abstract.</violation>
+    <violation beginline="1" rule="Stable Dependencies Principle" ruleset="Stable Dependencies Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should depend in the direction of stability.
+
+This package is more stable (0.222) than 1 package(s) that it depends on.
+The packages that are more stable are
+
+* JBZoo\Utils (0.545)</violation>
+  </file>
+  <file name="JBZoo\ToolboxCI\Formats\MetricMaps\">
+    <violation beginline="1" rule="Stable Abstractions Principle" ruleset="Stable Abstractions Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should be either abstract and stable or concrete and instable.
+
+This package is instable and abstract.</violation>
+  </file>
+  <file name="JBZoo\ToolboxCI\Formats\JUnit\JUnitSuite">
+    <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Max cyclomatic complexity of class methods is 11)
+
+Maybe you should delegate some code to other objects or split complex method.</violation>
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.41 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\ToolboxCI\Formats\Source\SourceSuite">
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.4 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\ToolboxCI\Formats\Source\">
+    <violation beginline="1" rule="Stable Abstractions Principle" ruleset="Stable Abstractions Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should be either abstract and stable or concrete and instable.
+
+This package is instable and abstract.</violation>
+    <violation beginline="1" rule="Stable Dependencies Principle" ruleset="Stable Dependencies Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should depend in the direction of stability.
+
+This package is more stable (0.333) than 1 package(s) that it depends on.
+The packages that are more stable are
+
+* JBZoo\Data (0.412)</violation>
+  </file>
+  <file name="JBZoo\ToolboxCI\Formats\AbstractNode">
+    <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Max cyclomatic complexity of class methods is 12)
+
+Maybe you should delegate some code to other objects or split complex method.</violation>
+  </file>
+  <file name="JBZoo\ToolboxCI\Formats\">
+    <violation beginline="1" rule="Stable Abstractions Principle" ruleset="Stable Abstractions Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should be either abstract and stable or concrete and instable.
+
+This package is instable and abstract.</violation>
+    <violation beginline="1" rule="Stable Dependencies Principle" ruleset="Stable Dependencies Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should depend in the direction of stability.
+
+This package is more stable (0.3) than 3 package(s) that it depends on.
+The packages that are more stable are
+
+* JBZoo\Data (0.412)
+* JBZoo\Utils (0.545)
+* JBZoo\ToolboxCI\Formats\Source (0.333)</violation>
+  </file>
+  <file name="JBZoo\ToolboxCI\Formats\TeamCity\TeamCity">
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.42 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\ToolboxCI\Formats\TeamCity\Writers\">
+    <violation beginline="1" rule="Stable Dependencies Principle" ruleset="Stable Dependencies Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should depend in the direction of stability.
+
+This package is more stable (0.6) than 1 package(s) that it depends on.
+The packages that are more stable are
+
+* JBZoo\ToolboxCI\Formats\TeamCity (0.667)</violation>
+  </file>
+  <file name="JBZoo\ToolboxCI\Formats\Metric\">
+    <violation beginline="1" rule="Stable Abstractions Principle" ruleset="Stable Abstractions Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should be either abstract and stable or concrete and instable.
+
+This package is instable and abstract.</violation>
+    <violation beginline="1" rule="Stable Dependencies Principle" ruleset="Stable Dependencies Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should depend in the direction of stability.
+
+This package is more stable (0.286) than 1 package(s) that it depends on.
+The packages that are more stable are
+
+* JBZoo\ToolboxCI\Formats (0.3)</violation>
+  </file>
+  <file name="JBZoo\ToolboxCI\Converters\">
+    <violation beginline="1" rule="Stable Dependencies Principle" ruleset="Stable Dependencies Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should depend in the direction of stability.
+
+This package is more stable (0.857) than 1 package(s) that it depends on.
+The packages that are more stable are
+
+* JBZoo\ToolboxCI\Formats\JUnit (0.909)</violation>
+  </file>
+  <file name="JBZoo\ToolboxCI\Converters\JUnitConverter">
+    <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Max cyclomatic complexity of class methods is 17)
+
+Maybe you should delegate some code to other objects or split complex method.</violation>
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.47 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\ToolboxCI\Converters\PhpMdJsonConverter">
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.35 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\Utils\Email">
+    <violation beginline="1" rule="Blob / God object" ruleset="Blob / God object" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">A blob object (or "god class") does not follow the Single responsibility principle.
+
+* object has lot of public methods  (8, excluding getters and setters)
+* object has a high Lack of cohesion of methods (LCOM=10)
+* object knows everything (and use lot of external classes)
+
+Maybe you should reducing the number of methods splitting this object in many sub objects.</violation>
+  </file>
+  <file name="JBZoo\Utils\Sys">
+    <violation beginline="1" rule="Too complex class code" ruleset="Too complex class code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Total cyclomatic complexity of class is 32)
+* Component uses 91 operators
+
+Maybe you should delegate some code to other objects.</violation>
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.42 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\Utils\Str">
+    <violation beginline="1" rule="Too complex class code" ruleset="Too complex class code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Total cyclomatic complexity of class is 100)
+* Component uses 370 operators
+
+Maybe you should delegate some code to other objects.</violation>
+    <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Max cyclomatic complexity of class methods is 31)
+
+Maybe you should delegate some code to other objects or split complex method.</violation>
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 3.03 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+    <violation beginline="1" rule="Too long" ruleset="Too long" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="4">This class looks really long.
+
+* Class has 445 logical lines of code
+* Class has 787 lines of code
+
+Maybe your class should not exceed 200 lines of logical code</violation>
+  </file>
+  <file name="JBZoo\Utils\Xml">
+    <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Max cyclomatic complexity of class methods is 14)
+
+Maybe you should delegate some code to other objects or split complex method.</violation>
+  </file>
+  <file name="JBZoo\Utils\Http">
+    <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Max cyclomatic complexity of class methods is 19)
+
+Maybe you should delegate some code to other objects or split complex method.</violation>
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.42 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\Utils\Cli">
+    <violation beginline="1" rule="Blob / God object" ruleset="Blob / God object" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">A blob object (or "god class") does not follow the Single responsibility principle.
+
+* object has lot of public methods  (8, excluding getters and setters)
+* object has a high Lack of cohesion of methods (LCOM=8)
+* object knows everything (and use lot of external classes)
+
+Maybe you should reducing the number of methods splitting this object in many sub objects.</violation>
+    <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Max cyclomatic complexity of class methods is 11)
+
+Maybe you should delegate some code to other objects or split complex method.</violation>
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.54 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\Utils\FS">
+    <violation beginline="1" rule="Blob / God object" ruleset="Blob / God object" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">A blob object (or "god class") does not follow the Single responsibility principle.
+
+* object has lot of public methods  (21, excluding getters and setters)
+* object has a high Lack of cohesion of methods (LCOM=23)
+* object knows everything (and use lot of external classes)
+
+Maybe you should reducing the number of methods splitting this object in many sub objects.</violation>
+    <violation beginline="1" rule="Too complex class code" ruleset="Too complex class code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Total cyclomatic complexity of class is 69)
+* Component uses 217 operators
+
+Maybe you should delegate some code to other objects.</violation>
+    <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Max cyclomatic complexity of class methods is 25)
+
+Maybe you should delegate some code to other objects or split complex method.</violation>
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 1.53 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+    <violation beginline="1" rule="Too long" ruleset="Too long" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="4">This class looks really long.
+
+* Class has 275 logical lines of code
+* Class has 468 lines of code
+
+Maybe your class should not exceed 200 lines of logical code</violation>
+  </file>
+  <file name="JBZoo\Utils\Url">
+    <violation beginline="1" rule="Too complex class code" ruleset="Too complex class code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Total cyclomatic complexity of class is 72)
+* Component uses 202 operators
+
+Maybe you should delegate some code to other objects.</violation>
+    <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Max cyclomatic complexity of class methods is 33)
+
+Maybe you should delegate some code to other objects or split complex method.</violation>
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 1.56 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+    <violation beginline="1" rule="Too long" ruleset="Too long" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="4">This class looks really long.
+
+* Class has 309 logical lines of code
+* Class has 476 lines of code
+
+Maybe your class should not exceed 200 lines of logical code</violation>
+  </file>
+  <file name="JBZoo\Utils\IP">
+    <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Max cyclomatic complexity of class methods is 11)
+
+Maybe you should delegate some code to other objects or split complex method.</violation>
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.43 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\Utils\Stats">
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.37 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\Utils\Filter">
+    <violation beginline="1" rule="Blob / God object" ruleset="Blob / God object" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">A blob object (or "god class") does not follow the Single responsibility principle.
+
+* object has lot of public methods  (28, excluding getters and setters)
+* object has a high Lack of cohesion of methods (LCOM=28)
+* object knows everything (and use lot of external classes)
+
+Maybe you should reducing the number of methods splitting this object in many sub objects.</violation>
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.88 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\Utils\Slug">
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 4.16 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+    <violation beginline="1" rule="Too long" ruleset="Too long" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="4">This class looks really long.
+
+* Class has 611 logical lines of code
+* Class has 716 lines of code
+
+Maybe your class should not exceed 200 lines of logical code</violation>
+  </file>
+  <file name="JBZoo\Utils\Image">
+    <violation beginline="1" rule="Blob / God object" ruleset="Blob / God object" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">A blob object (or "god class") does not follow the Single responsibility principle.
+
+* object has lot of public methods  (26, excluding getters and setters)
+* object has a high Lack of cohesion of methods (LCOM=28)
+* object knows everything (and use lot of external classes)
+
+Maybe you should reducing the number of methods splitting this object in many sub objects.</violation>
+    <violation beginline="1" rule="Too complex class code" ruleset="Too complex class code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Total cyclomatic complexity of class is 58)
+* Component uses 233 operators
+
+Maybe you should delegate some code to other objects.</violation>
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 1.7 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+    <violation beginline="1" rule="Too long" ruleset="Too long" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="4">This class looks really long.
+
+* Class has 287 logical lines of code
+* Class has 500 lines of code
+
+Maybe your class should not exceed 200 lines of logical code</violation>
+  </file>
+  <file name="JBZoo\Utils\Arr">
+    <violation beginline="1" rule="Too complex class code" ruleset="Too complex class code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Total cyclomatic complexity of class is 49)
+* Component uses 117 operators
+
+Maybe you should delegate some code to other objects.</violation>
+    <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Max cyclomatic complexity of class methods is 15)
+
+Maybe you should delegate some code to other objects or split complex method.</violation>
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.71 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+    <violation beginline="1" rule="Too long" ruleset="Too long" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="4">This class looks really long.
+
+* Class has 222 logical lines of code
+* Class has 405 lines of code
+
+Maybe your class should not exceed 200 lines of logical code</violation>
+  </file>
+  <file name="JBZoo\PHPUnit\CovCatcher">
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.36 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\MermaidPHP\Graph">
+    <violation beginline="1" rule="Blob / God object" ruleset="Blob / God object" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">A blob object (or "god class") does not follow the Single responsibility principle.
+
+* object has lot of public methods  (12, excluding getters and setters)
+* object has a high Lack of cohesion of methods (LCOM=3)
+* object knows everything (and use lot of external classes)
+
+Maybe you should reducing the number of methods splitting this object in many sub objects.</violation>
+    <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Max cyclomatic complexity of class methods is 15)
+
+Maybe you should delegate some code to other objects or split complex method.</violation>
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.39 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\MermaidPHP\Render">
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.36 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\ComposerGraph\ComposerGraph">
+    <violation beginline="1" rule="Too complex class code" ruleset="Too complex class code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Total cyclomatic complexity of class is 49)
+* Component uses 114 operators
+
+Maybe you should delegate some code to other objects.</violation>
+    <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Max cyclomatic complexity of class methods is 22)
+
+Maybe you should delegate some code to other objects or split complex method.</violation>
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.87 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\ComposerGraph\CommandBuild">
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.56 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\ComposerGraph\Collection">
+    <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Max cyclomatic complexity of class methods is 12)
+
+Maybe you should delegate some code to other objects or split complex method.</violation>
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.35 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+  <file name="JBZoo\Data\">
+    <violation beginline="1" rule="Stable Abstractions Principle" ruleset="Stable Abstractions Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should be either abstract and stable or concrete and instable.
+
+This package is instable and abstract.</violation>
+    <violation beginline="1" rule="Stable Dependencies Principle" ruleset="Stable Dependencies Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should depend in the direction of stability.
+
+This package is more stable (0.412) than 1 package(s) that it depends on.
+The packages that are more stable are
+
+* JBZoo\Utils (0.545)</violation>
+  </file>
+  <file name="JBZoo\Data\Data">
+    <violation beginline="1" rule="Blob / God object" ruleset="Blob / God object" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">A blob object (or "god class") does not follow the Single responsibility principle.
+
+* object has lot of public methods  (24, excluding getters and setters)
+* object has a high Lack of cohesion of methods (LCOM=7)
+* object knows everything (and use lot of external classes)
+
+Maybe you should reducing the number of methods splitting this object in many sub objects.</violation>
+    <violation beginline="1" rule="Too complex class code" ruleset="Too complex class code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
+
+* Algorithms are complex (Total cyclomatic complexity of class is 27)
+* Component uses 86 operators
+
+Maybe you should delegate some code to other objects.</violation>
+    <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.55 bugs.
+
+* Calculation is based on number of operators, operands, cyclomatic complexity
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures
+*  testsuites has dependency to this class.
+
+Maybe you should check your unit tests for this class.</violation>
+  </file>
+</pmd>

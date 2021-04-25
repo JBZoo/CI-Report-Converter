@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<metrics generated="2016-03-20T03:01:04" pdepend="@package_version@" ahh="2.5" andc="0.63157894736842" calls="167"
+         ccn="110" ccn2="130" cloc="630" clsa="3" clsc="13" eloc="688" fanout="42" leafs="8" lloc="429" loc="1553"
+         maxDIT="4" ncloc="923" noc="16" nof="5" noi="0" nom="51" nop="10" roots="4">
+    <files>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/atoms/core/src/Controller/Index.php"
+              loc="33" cloc="19" eloc="10" lloc="4" ncloc="14"/>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/atoms/core/src/Core.php"
+              loc="34" cloc="20" eloc="10" lloc="4" ncloc="14"/>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/atoms/core/src/Helper/Debug.php"
+              loc="280" cloc="99" eloc="149" lloc="83" ncloc="181"/>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/atoms/test/src/Controller/Index.php"
+              loc="33" cloc="19" eloc="10" lloc="4" ncloc="14"/>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/atoms/test/src/Controller/Other.php"
+              loc="33" cloc="19" eloc="10" lloc="4" ncloc="14"/>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/atoms/test/src/Core.php"
+              loc="27" cloc="16" eloc="6" lloc="2" ncloc="11"/>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/atoms/test/src/Helper/Test.php"
+              loc="33" cloc="19" eloc="10" lloc="4" ncloc="14"/>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/App.php" loc="316"
+              cloc="100" eloc="162" lloc="120" ncloc="216"/>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/AppAware.php"
+              loc="75" cloc="41" eloc="26" lloc="12" ncloc="34"/>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/Container.php"
+              loc="40" cloc="22" eloc="12" lloc="6" ncloc="18"/>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/Atom/Atom.php"
+              loc="199" cloc="72" eloc="91" lloc="64" ncloc="127"/>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/Atom/AtomDefault.php"
+              loc="25" cloc="16" eloc="5" lloc="1" ncloc="9"/>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/Atom/Controller.php"
+              loc="55" cloc="28" eloc="20" lloc="10" ncloc="27"/>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/Atom/Helper.php"
+              loc="58" cloc="30" eloc="19" lloc="11" ncloc="28"/>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/Atom/Manager.php"
+              loc="183" cloc="54" eloc="93" lloc="67" ncloc="129"/>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/Exception/Exception.php"
+              loc="25" cloc="16" eloc="5" lloc="1" ncloc="9"/>
+        <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/defines.php"
+              loc="104" cloc="40" eloc="50" lloc="32" ncloc="64"/>
+    </files>
+    <package name="JBZoo\CCK\Atom\Core\Controller" noc="1" noi="0" nom="1" nof="0" cr="0.15" rcr="0.21659598214286">
+        <class name="Index" start="23" end="32" loc="10" cloc="3" eloc="3" lloc="1" ncloc="7" dit="2" noam="0" nocc="0"
+               noom="1" nom="1" cr="0.15" rcr="0.225915625" ca="0" cbo="0" ce="0" impl="1" cis="1" csz="1" npm="1"
+               vars="0" varsi="2" varsnp="0" wmc="1" wmci="7" wmcnp="1">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/atoms/core/src/Controller/Index.php"/>
+            <method name="index" start="28" end="31" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494"
+                    ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+        </class>
+    </package>
+    <package name="JBZoo\CCK\Atom\Core" noc="1" noi="0" nom="1" nof="0" cr="0.15" rcr="0.21659598214286">
+        <class name="Core" start="24" end="33" loc="10" cloc="4" eloc="2" lloc="0" ncloc="6" dit="4" noam="0" nocc="0"
+               noom="1" nom="1" cr="0.15" rcr="0.225915625" ca="0" cbo="1" ce="1" impl="0" cis="1" csz="1" npm="1"
+               vars="0" varsi="8" varsnp="0" wmc="1" wmci="15" wmcnp="1">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/atoms/core/src/Core.php"/>
+            <method name="init" start="29" end="32" ccn="1" ccn2="1" loc="4" cloc="1" eloc="2" lloc="0" ncloc="3"
+                    npath="1" hnt="2" hnd="2" hv="2" hd="2" hl="0.5" he="4" ht="0.22222222222222"
+                    hb="0.00083994736659658" hi="1" mi="91.191023588314"/>
+        </class>
+    </package>
+    <package name="JBZoo\CCK\Atom\Core\Helper" noc="1" noi="0" nom="8" nof="0" cr="0.15" rcr="0.21659598214286">
+        <class name="Debug" start="29" end="279" loc="251" cloc="83" eloc="102" lloc="63" ncloc="168" dit="2" noam="7"
+               nocc="0" noom="1" nom="8" cr="0.15" rcr="0.2638734375" ca="0" cbo="7" ce="7" impl="1" cis="8" csz="12"
+               npm="8" vars="4" varsi="7" varsnp="0" wmc="42" wmci="47" wmcnp="42">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/atoms/core/src/Helper/Debug.php"/>
+            <method name="__construct" start="79" end="98" ccn="2" ccn2="3" loc="20" cloc="2" eloc="11" lloc="8"
+                    ncloc="18" npath="3" hnt="31" hnd="55" hv="179.22215111926" hd="7.75" hl="0.12903225806452"
+                    he="1388.9716711743" ht="77.165092843017" hb="0.041496137181788" hi="23.125438854099"
+                    mi="61.101310432493"/>
+            <method name="sql" start="104" end="113" ccn="3" ccn2="5" loc="10" cloc="0" eloc="9" lloc="4" ncloc="10"
+                    npath="5" hnt="21" hnd="34" hv="106.83671966626" hd="8.0769230769231" hl="0.12380952380952"
+                    he="862.91196653515" ht="47.939553696397" hb="0.030212714009667" hi="13.227403387251"
+                    mi="64.306545665248"/>
+            <method name="dump" start="126" end="162" ccn="7" ccn2="11" loc="37" cloc="3" eloc="22" lloc="18" ncloc="34"
+                    npath="128" hnt="63" hnd="159" hv="460.71162618291" hd="9.9154929577465" hl="0.10085227272727"
+                    he="4568.1828849686" ht="253.78793805381" hb="0.091771479552329" hi="46.463814572425"
+                    mi="50.587541670427"/>
+            <method name="mark" start="171" end="176" ccn="2" ccn2="4" loc="6" cloc="0" eloc="5" lloc="2" ncloc="6"
+                    npath="4" hnt="13" hnd="16" hv="52" hd="5.8333333333333" hl="0.17142857142857" he="303.33333333333"
+                    ht="16.851851851852" hb="0.01504846388525" hi="8.9142857142857" mi="72.199203790611"/>
+            <method name="log" start="187" end="193" ccn="3" ccn2="5" loc="7" cloc="0" eloc="6" lloc="3" ncloc="7"
+                    npath="8" hnt="23" hnd="31" hv="113.9465151389" hd="7.6153846153846" hl="0.13131313131313"
+                    he="867.74653836546" ht="48.208141020303" hb="0.030325455894909" hi="14.962673705108"
+                    mi="67.951874210331"/>
+            <method name="logArray" start="201" end="215" ccn="2" ccn2="5" loc="15" cloc="0" eloc="14" lloc="3"
+                    ncloc="15" npath="5" hnt="28" hnd="44" hv="152.86408532184" hd="7.8947368421053"
+                    hl="0.12666666666667" he="1206.8217262251" ht="67.045651456949" hb="0.037783961671919"
+                    hi="19.362784140767" mi="62.218985776381"/>
+            <method name="trace" start="222" end="267" ccn="6" ccn2="8" loc="46" cloc="6" eloc="31" lloc="23" ncloc="40"
+                    npath="11" hnt="62" hnd="185" hv="466.94565055201" hd="9.4207317073171" hl="0.10614886731392"
+                    he="4398.9696957491" ht="244.3872053194" hb="0.089491006388439" hi="49.565751903256"
+                    mi="48.011868706596"/>
+            <method name="isShow" start="274" end="278" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5"
+                    npath="1" hnt="15" hnd="19" hv="63.718912701654" hd="5.5" hl="0.18181818181818" he="350.4540198591"
+                    ht="19.46966776995" hb="0.016569119971719" hi="11.585256854846" mi="74.098671321396"/>
+        </class>
+    </package>
+    <package name="JBZoo\CCK\Atom\Test\Controller" noc="2" noi="0" nom="2" nof="0" cr="0.15" rcr="0.28319196428571">
+        <class name="Index" start="23" end="32" loc="10" cloc="3" eloc="3" lloc="1" ncloc="7" dit="2" noam="1" nocc="0"
+               noom="0" nom="1" cr="0.15" rcr="0.225915625" ca="0" cbo="0" ce="0" impl="1" cis="1" csz="1" npm="1"
+               vars="0" varsi="2" varsnp="0" wmc="1" wmci="8" wmcnp="1">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/atoms/test/src/Controller/Index.php"/>
+            <method name="checkReturn" start="28" end="31" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494"
+                    ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+        </class>
+        <class name="Other" start="23" end="32" loc="10" cloc="3" eloc="3" lloc="1" ncloc="7" dit="2" noam="1" nocc="0"
+               noom="0" nom="1" cr="0.15" rcr="0.225915625" ca="0" cbo="0" ce="0" impl="1" cis="1" csz="1" npm="1"
+               vars="0" varsi="2" varsnp="0" wmc="1" wmci="8" wmcnp="1">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/atoms/test/src/Controller/Other.php"/>
+            <method name="checkEcho" start="28" end="31" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="9" hnd="9" hv="28.529325012981" hd="6" hl="0.16666666666667" he="171.17595007788"
+                    ht="9.5097750043269" hb="0.010276389970974" hi="4.7548875021635" mi="79.267620989406"/>
+        </class>
+    </package>
+    <package name="JBZoo\CCK\Atom\Test" noc="1" noi="0" nom="0" nof="0" cr="0.15" rcr="0.21659598214286">
+        <class name="Test" start="23" end="26" loc="4" cloc="0" eloc="0" lloc="0" ncloc="4" dit="4" noam="0" nocc="0"
+               noom="0" nom="0" cr="0.15" rcr="0.225915625" ca="0" cbo="0" ce="0" impl="0" cis="0" csz="0" npm="0"
+               vars="0" varsi="8" varsnp="0" wmc="0" wmci="16" wmcnp="0">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/atoms/test/src/Core.php"/>
+        </class>
+    </package>
+    <package name="JBZoo\CCK\Atom\Test\Helper" noc="1" noi="0" nom="1" nof="0" cr="0.15" rcr="0.21659598214286">
+        <class name="Test" start="23" end="32" loc="10" cloc="3" eloc="3" lloc="1" ncloc="7" dit="2" noam="1" nocc="0"
+               noom="0" nom="1" cr="0.15" rcr="0.2638734375" ca="0" cbo="0" ce="0" impl="1" cis="1" csz="1" npm="1"
+               vars="0" varsi="3" varsnp="0" wmc="1" wmci="7" wmcnp="1">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/atoms/test/src/Helper/Test.php"/>
+            <method name="getRand" start="28" end="31" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="9" hnd="9" hv="28.529325012981" hd="6" hl="0.16666666666667" he="171.17595007788"
+                    ht="9.5097750043269" hb="0.010276389970974" hi="4.7548875021635" mi="79.267620989406"/>
+        </class>
+    </package>
+    <package name="JBZoo\CCK" noc="3" noi="0" nom="19" nof="0" cr="0.92775" rcr="0.46875">
+        <class name="App" start="30" end="315" loc="286" cloc="84" eloc="136" lloc="98" ncloc="202" dit="2" noam="13"
+               nocc="0" noom="0" nom="13" cr="0.15" rcr="0.2775" ca="8" cbo="9" ce="9" impl="0" cis="10" csz="13"
+               npm="10" vars="0" varsi="0" varsnp="0" wmc="29" wmci="29" wmcnp="26">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/App.php"/>
+            <method name="getInstance" start="35" end="44" ccn="2" ccn2="2" loc="10" cloc="0" eloc="7" lloc="4"
+                    ncloc="10" npath="2" hnt="12" hnd="19" hv="50.975130161323" hd="14" hl="0.071428571428571"
+                    he="713.65182225852" ht="39.647323458807" hb="0.026619690270194" hi="3.6410807258088"
+                    mi="69.341110328577"/>
+            <method name="init" start="49" end="102" ccn="3" ccn2="3" loc="54" cloc="5" eloc="36" lloc="32" ncloc="49"
+                    npath="4" hnt="52" hnd="135" hv="367.99441104664" hd="9" hl="0.11111111111111" he="3311.9496994198"
+                    ht="183.99720552332" hb="0.074062988716361" hi="40.888267894071" mi="47.421741234869"/>
+            <method name="trigger" start="111" end="116" ccn="1" ccn2="1" loc="6" cloc="1" eloc="3" lloc="1" ncloc="5"
+                    npath="1" hnt="10" hnd="10" hv="33.219280948874" hd="8.1666666666667" hl="0.12244897959184"
+                    he="271.2907944158" ht="15.071710800878" hb="0.013969111487834" hi="4.0676670549641"
+                    mi="78.804796805669"/>
+            <method name="error" start="125" end="128" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="10" hnd="10" hv="33.219280948874" hd="4.5" hl="0.22222222222222" he="149.48676426993"
+                    ht="8.3048202372184" hb="0.0093888825486208" hi="7.382062433083" mi="78.804796805669"/>
+            <method name="show404" start="137" end="140" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="10" hnd="10" hv="33.219280948874" hd="4.5" hl="0.22222222222222" he="149.48676426993"
+                    ht="8.3048202372184" hb="0.0093888825486208" hi="7.382062433083" mi="78.804796805669"/>
+            <method name="mark" start="149" end="154" ccn="2" ccn2="2" loc="6" cloc="1" eloc="5" lloc="2" ncloc="5"
+                    npath="2" hnt="10" hnd="12" hv="35.849625007212" hd="6" hl="0.16666666666667" he="215.09775004327"
+                    ht="11.949875002404" hb="0.01196656002761" hi="5.9749375012019" mi="73.599165884488"/>
+            <method name="addLoadPath" start="162" end="178" ccn="3" ccn2="3" loc="17" cloc="0" eloc="13" lloc="9"
+                    ncloc="17" npath="4" hnt="25" hnd="64" hv="150" hd="7.537037037037" hl="0.13267813267813"
+                    he="1130.5555555556" ht="62.808641975309" hb="0.036174845441343" hi="19.90171990172"
+                    mi="60.059951391709"/>
+            <method name="execute" start="189" end="224" ccn="7" ccn2="7" loc="36" cloc="3" eloc="24" lloc="21"
+                    ncloc="33" npath="6250" hnt="45" hnd="148" hv="324.4254014533" hd="8.0757575757576"
+                    hl="0.12382739212008" he="2619.9808935547" ht="145.55449408637" hb="0.063349641483907"
+                    hi="40.172751399471" mi="51.36774193783"/>
+            <method name="isDebug" start="231" end="234" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="8" hnd="8" hv="24" hd="9" hl="0.11111111111111" he="216" ht="12" hb="0.012"
+                    hi="2.6666666666667" mi="79.793333921501"/>
+            <method name="offsetGet" start="239" end="252" ccn="3" ccn2="5" loc="14" cloc="0" eloc="10" lloc="6"
+                    ncloc="14" npath="5" hnt="33" hnd="78" hv="207.41827322245" hd="15.206896551724"
+                    hl="0.065759637188209" he="3154.1882238311" ht="175.23267910173" hb="0.071691964751536"
+                    hi="13.639750393313" mi="61.290928083853"/>
+            <method name="_initPaths" start="258" end="273" ccn="1" ccn2="1" loc="16" cloc="4" eloc="9" lloc="7"
+                    ncloc="12" npath="1" hnt="22" hnd="54" hv="126.6075250476" hd="3.2307692307692"
+                    hl="0.30952380952381" he="409.03969630762" ht="22.724427572645" hb="0.018367739728656"
+                    hi="39.188043467113" mi="64.328236093663"/>
+            <method name="_initAssets" start="278" end="295" ccn="1" ccn2="1" loc="18" cloc="0" eloc="12" lloc="7"
+                    ncloc="18" npath="1" hnt="23" hnd="49" hv="129.13832641465" hd="6.525" hl="0.15325670498084"
+                    he="842.62757985559" ht="46.812643325311" hb="0.029737367855012" hi="19.79131439305"
+                    mi="61.542640239567"/>
+            <method name="_initAtoms" start="300" end="314" ccn="1" ccn2="1" loc="15" cloc="3" eloc="8" lloc="6"
+                    ncloc="12" npath="1" hnt="17" hnd="28" hv="81.725033674979" hd="3.4615384615385"
+                    hl="0.28888888888889" he="282.89434733647" ht="15.716352629804" hb="0.014364645910201"
+                    hi="23.609454172772" mi="66.775188964059"/>
+        </class>
+        <class name="AppAware" start="21" end="74" loc="54" cloc="25" eloc="15" lloc="5" ncloc="29" dit="0" noam="0"
+               nocc="2" noom="0" nom="5" cr="0.946875" rcr="0.2775" ca="0" cbo="1" ce="1" impl="1" cis="6" csz="6"
+               npm="5" vars="1" varsi="1" varsnp="1" wmc="5" wmci="5" wmcnp="5">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/AppAware.php"/>
+            <method name="__construct" start="31" end="34" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="7" hnd="7" hv="19.651484454403" hd="6.25" hl="0.16" he="122.82177784002"
+                    ht="6.8234321022233" hb="0.0082362400950509" hi="3.1442375127045" mi="80.401219851729"/>
+            <method name="offsetExists" start="41" end="44" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1"
+                    ncloc="4" npath="1" hnt="9" hnd="9" hv="28.529325012981" hd="12.25" hl="0.081632653061224"
+                    he="349.48423140901" ht="19.415790633834" hb="0.016538538763157" hi="2.3289244908556"
+                    mi="79.267620989406"/>
+            <method name="offsetGet" start="51" end="54" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="7" hnd="7" hv="19.651484454403" hd="6.25" hl="0.16" he="122.82177784002"
+                    ht="6.8234321022233" hb="0.0082362400950509" hi="3.1442375127045" mi="80.401219851729"/>
+            <method name="offsetSet" start="61" end="64" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="8" hnd="8" hv="24" hd="4.1666666666667" hl="0.24" he="100" ht="5.5555555555556"
+                    hb="0.0071814489667729" hi="5.76" mi="79.793333921501"/>
+            <method name="offsetUnset" start="70" end="73" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="8" hnd="8" hv="24" hd="9" hl="0.11111111111111" he="216" ht="12" hb="0.012"
+                    hi="2.6666666666667" mi="79.793333921501"/>
+        </class>
+        <class name="Container" start="23" end="39" loc="17" cloc="6" eloc="4" lloc="2" ncloc="11" dit="2" noam="1"
+               nocc="2" noom="0" nom="1" cr="0.730125" rcr="0.2775" ca="0" cbo="1" ce="1" impl="0" cis="2" csz="2"
+               npm="1" vars="1" varsi="1" varsnp="1" wmc="1" wmci="1" wmcnp="1">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/Container.php"/>
+            <method name="__construct" start="33" end="38" ccn="1" ccn2="1" loc="6" cloc="0" eloc="4" lloc="2" ncloc="6"
+                    npath="1" hnt="10" hnd="12" hv="35.849625007212" hd="6" hl="0.16666666666667" he="215.09775004327"
+                    ht="11.949875002404" hb="0.01196656002761" hi="5.9749375012019" mi="75.847660347231"/>
+        </class>
+    </package>
+    <package name="JBZoo\CCK\Atom" noc="5" noi="0" nom="19" nof="0" cr="0.915" rcr="0.5484375">
+        <class name="Atom" start="27" end="198" loc="172" cloc="56" eloc="66" lloc="43" ncloc="116" dit="3" noam="7"
+               nocc="3" noom="1" nom="8" cr="0.5325" rcr="0.2679375" ca="4" cbo="6" ce="6" impl="0" cis="8" csz="15"
+               npm="8" vars="7" varsi="8" varsnp="0" wmc="16" wmci="16" wmcnp="16">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/Atom/Atom.php"/>
+            <method name="__construct" start="69" end="90" ccn="3" ccn2="3" loc="22" cloc="0" eloc="16" lloc="12"
+                    ncloc="22" npath="4" hnt="43" hnd="100" hv="285.68581616031" hd="8.6162790697674"
+                    hl="0.11605937921727" he="2461.5487183115" ht="136.75270657286" hb="0.060769318930226"
+                    hi="33.156518474746" mi="56.133696407534"/>
+            <method name="getConfig" start="96" end="99" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494"
+                    ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+            <method name="getMeta" start="105" end="108" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494"
+                    ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+            <method name="init" start="113" end="118" ccn="2" ccn2="2" loc="6" cloc="0" eloc="5" lloc="2" ncloc="6"
+                    npath="2" hnt="12" hnd="16" hv="48" hd="5.8333333333333" hl="0.17142857142857" he="280"
+                    ht="15.555555555556" hb="0.014266499740868" hi="8.2285714285714" mi="72.711614363653"/>
+            <method name="getClass" start="125" end="128" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="11" hnd="17" hv="44.962091253754" hd="4.2857142857143" hl="0.23333333333333"
+                    he="192.6946768018" ht="10.705259822322" hb="0.01112052327893" hi="10.491154625876"
+                    mi="77.884338239282"/>
+            <method name="getId" start="133" end="136" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494"
+                    ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+            <method name="execute" start="145" end="180" ccn="4" ccn2="4" loc="36" cloc="1" eloc="24" lloc="19"
+                    ncloc="35" npath="7" hnt="40" hnd="140" hv="285.1713206778" hd="9.4649122807018"
+                    hl="0.10565338276182" he="2699.1215351872" ht="149.95119639929" hb="0.064619020717922"
+                    hi="30.129314696264" mi="52.163426490725"/>
+            <method name="offsetGet" start="185" end="197" ccn="2" ccn2="3" loc="13" cloc="0" eloc="9" lloc="6"
+                    ncloc="13" npath="3" hnt="20" hnd="40" hv="106.43856189775" hd="12.071428571429"
+                    hl="0.082840236686391" he="1284.8654971942" ht="71.381416510791" hb="0.039395854364902"
+                    hi="8.8173956601684" mi="64.586905605052"/>
+        </class>
+        <class name="AtomDefault" start="21" end="24" loc="4" cloc="0" eloc="0" lloc="0" ncloc="4" dit="4" noam="0"
+               nocc="0" noom="0" nom="0" cr="0.15" rcr="0.225915625" ca="1" cbo="0" ce="0" impl="0" cis="0" csz="0"
+               npm="0" vars="0" varsi="8" varsnp="0" wmc="0" wmci="16" wmcnp="0">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/Atom/AtomDefault.php"/>
+        </class>
+        <class name="Controller" start="24" end="54" loc="31" cloc="12" eloc="9" lloc="3" ncloc="19" dit="1" noam="2"
+               nocc="3" noom="1" nom="3" cr="0.5325" rcr="0.2679375" ca="0" cbo="2" ce="2" impl="1" cis="4" csz="4"
+               npm="3" vars="1" varsi="2" varsnp="1" wmc="3" wmci="7" wmcnp="3">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/Atom/Controller.php"/>
+            <method name="setAtom" start="34" end="37" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="6" hnd="6" hv="15.509775004327" hd="4" hl="0.25" he="62.039100017308"
+                    ht="3.4466166676282" hb="0.0052238304343202" hi="3.8774437510817" mi="81.120955834208"/>
+            <method name="offsetGet" start="42" end="45" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="7" hnd="7" hv="19.651484454403" hd="6.25" hl="0.16" he="122.82177784002"
+                    ht="6.8234321022233" hb="0.0082362400950509" hi="3.1442375127045" mi="80.401219851729"/>
+            <method name="index" start="50" end="53" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="7" hnd="7" hv="19.651484454403" hd="6.25" hl="0.16" he="122.82177784002"
+                    ht="6.8234321022233" hb="0.0082362400950509" hi="3.1442375127045" mi="80.401219851729"/>
+        </class>
+        <class name="Helper" start="23" end="57" loc="35" cloc="14" eloc="9" lloc="5" ncloc="21" dit="1" noam="1"
+               nocc="2" noom="1" nom="2" cr="0.405" rcr="0.2679375" ca="0" cbo="1" ce="1" impl="1" cis="3" csz="4"
+               npm="2" vars="2" varsi="3" varsnp="1" wmc="2" wmci="6" wmcnp="2">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/Atom/Helper.php"/>
+            <method name="__construct" start="40" end="48" ccn="1" ccn2="1" loc="9" cloc="0" eloc="6" lloc="4" ncloc="9"
+                    npath="1" hnt="17" hnd="27" hv="80.833087536779" hd="5.0909090909091" hl="0.19642857142857"
+                    he="411.51390018724" ht="22.861883343735" hb="0.018441733916832" hi="15.87792790901"
+                    mi="69.533969250121"/>
+            <method name="getId" start="53" end="56" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494"
+                    ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821"/>
+        </class>
+        <class name="Manager" start="27" end="182" loc="156" cloc="38" eloc="75" lloc="53" ncloc="118" dit="3" noam="6"
+               nocc="0" noom="0" nom="6" cr="0.15" rcr="0.2679375" ca="1" cbo="6" ce="6" impl="0" cis="4" csz="8"
+               npm="4" vars="2" varsi="3" varsnp="0" wmc="17" wmci="18" wmcnp="9">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/Atom/Manager.php"/>
+            <method name="addPath" start="42" end="45" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4"
+                    npath="1" hnt="10" hnd="10" hv="33.219280948874" hd="4.5" hl="0.22222222222222" he="149.48676426993"
+                    ht="8.3048202372184" hb="0.0093888825486208" hi="7.382062433083" mi="78.804796805669"/>
+            <method name="loadInfo" start="53" end="75" ccn="3" ccn2="3" loc="23" cloc="0" eloc="15" lloc="11"
+                    ncloc="23" npath="3" hnt="31" hnd="70" hv="190.00777352529" hd="7.5483870967742"
+                    hl="0.13247863247863" he="1434.2522259651" ht="79.680679220285" hb="0.04239315773283"
+                    hi="25.171969996941" mi="57.985291708859"/>
+            <method name="init" start="81" end="98" ccn="3" ccn2="3" loc="18" cloc="1" eloc="13" lloc="9" ncloc="17"
+                    npath="3" hnt="26" hnd="56" hv="150.9912279735" hd="6.82" hl="0.1466275659824" he="1029.7601747793"
+                    ht="57.208898598847" hb="0.033991432947266" hi="22.139476242448" mi="60.039922426604"/>
+            <method name="offsetGet" start="103" end="110" ccn="2" ccn2="2" loc="8" cloc="0" eloc="6" lloc="3" ncloc="8"
+                    npath="2" hnt="15" hnd="21" hv="65.884761341681" hd="10" hl="0.1" he="658.84761341681"
+                    ht="36.602645189823" hb="0.025238801618547" hi="6.5884761341681" mi="70.021274435765"/>
+            <method name="_getInitCallback" start="118" end="153" ccn="3" ccn2="4" loc="36" cloc="2" eloc="24" lloc="19"
+                    ncloc="34" npath="6" hnt="43" hnd="123" hv="298.52812372959" hd="9.9056603773585"
+                    hl="0.10095238095238" he="2957.1182067553" ht="164.28434481974" hb="0.068673819409496"
+                    hi="30.137124871749" mi="52.024230639236"/>
+            <method name="_registerAtom" start="159" end="181" ccn="4" ccn2="4" loc="23" cloc="3" eloc="14" lloc="10"
+                    ncloc="20" npath="6" hnt="26" hnd="72" hv="160.4180500375" hd="8.4" hl="0.11904761904762"
+                    he="1347.511620315" ht="74.861756684167" hb="0.040666215520122" hi="19.097386909226"
+                    mi="59.019180417308"/>
+        </class>
+    </package>
+    <package name="JBZoo\CCK\Exception" noc="1" noi="0" nom="0" nof="0" cr="0.15" rcr="0.21375">
+        <class name="Exception" start="21" end="24" loc="4" cloc="0" eloc="0" lloc="0" ncloc="4" dit="2" noam="0"
+               nocc="0" noom="0" nom="0" cr="0.15" rcr="0.2775" ca="2" cbo="0" ce="0" impl="0" cis="0" csz="0" npm="0"
+               vars="0" varsi="0" varsnp="0" wmc="0" wmci="0" wmcnp="0">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/Exception/Exception.php"/>
+        </class>
+    </package>
+    <package name="CCK" noc="0" noi="0" nom="0" nof="5">
+        <function name="jbApp" start="28" end="36" ccn="2" ccn2="2" loc="9" cloc="0" eloc="7" lloc="4" ncloc="9"
+                  npath="2" hnt="5" hnd="5" hv="11.609640474437" hd="8" hl="0.125" he="92.877123795494"
+                  ht="5.1598402108608" hb="0.0068362496969366" hi="1.4512050593046" mi="82.001716149821">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/defines.php"/>
+        </function>
+        <function name="jbAtom" start="42" end="50" ccn="2" ccn2="2" loc="9" cloc="0" eloc="7" lloc="4" ncloc="9"
+                  npath="2" hnt="10" hnd="13" hv="37.004397181411" hd="4.8" hl="0.20833333333333" he="177.62110647077"
+                  ht="9.8678392483762" hb="0.010532750402133" hi="7.7092494127939" mi="75.751251613201">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/defines.php"/>
+        </function>
+        <function name="jbData" start="56" end="69" ccn="3" ccn2="3" loc="14" cloc="0" eloc="11" lloc="6" ncloc="14"
+                  npath="4" hnt="14" hnd="32" hv="70" hd="7.5" hl="0.13333333333333" he="525" ht="29.166666666667"
+                  hb="0.021692933298438" hi="9.3333333333333" mi="63.960187907608">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/defines.php"/>
+        </function>
+        <function name="jbt" start="76" end="80" ccn="1" ccn2="1" loc="5" cloc="0" eloc="4" lloc="2" ncloc="5" npath="1"
+                  hnt="13" hnd="19" hv="55.223057674767" hd="6" hl="0.16666666666667" he="331.3383460486"
+                  ht="18.407685891589" hb="0.015960991952897" hi="9.2038429457944" mi="74.53383178159">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/defines.php"/>
+        </function>
+        <function name="jbd" start="93" end="102" ccn="2" ccn2="2" loc="10" cloc="0" eloc="7" lloc="4" ncloc="10"
+                  npath="2" hnt="19" hnd="30" hv="93.230921316562" hd="5.8846153846154" hl="0.16993464052288"
+                  he="548.62811390131" ht="30.479339661184" hb="0.022339020045475" hi="15.843163099546"
+                  mi="67.505171049688">
+            <file name="/home/ci.jbzoo.com/teamcity/buildAgent/work/7c122f8c076b4757/src/jbzoo/framework/defines.php"/>
+        </function>
+    </package>
+</metrics>

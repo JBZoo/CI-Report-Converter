@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<phpmnd version="2.3.0" fileCount="20" errorCount="20">
+    <files>
+        <file path="src/IP.php" errors="3">
+            <entry line="81" start="36" end="37">
+                <snippet><![CDATA[            while (count($blocks) < 4) {]]></snippet>
+                <suggestions>
+                    <suggestion>Env::VAR_INT</suggestion>
+                    <suggestion>FS::PERM_ALL_READ</suggestion>
+                    <suggestion>Url::URL_JOIN_QUERY</suggestion>
+                </suggestions>
+            </entry>
+            <entry line="137" start="" end="10">
+                <snippet><![CDATA[        } elseif (($ipAddressLong & 0xC0000000) === 0x80000000) {]]></snippet>
+                <suggestions/>
+            </entry>
+            <entry line="139" start="" end="10">
+                <snippet><![CDATA[        } elseif (($ipAddressLong & 0xE0000000) === 0xC0000000) {]]></snippet>
+                <suggestions/>
+            </entry>
+        </file>
+
+        <file path="tests/CliTest.php" errors="1">
+            <entry line="107" start="44" end="46">
+                <snippet><![CDATA[        isTrue(Cli::getNumberOfColumns() >= 80);]]></snippet>
+                <suggestions>
+                    <suggestion>Cli::DEFAULT_WIDTH</suggestion>
+                    <suggestion>Url::PORT_HTTP</suggestion>
+                </suggestions>
+            </entry>
+        </file>
+
+        <file path="src/Timer.php" errors="1">
+            <entry line="49" start="56" end="57">
+                <snippet><![CDATA[                return $time . ' ' . $unit . ($time === 1.0 ? '' : 's');]]></snippet>
+                <suggestions/>
+            </entry>
+        </file>
+
+        <file path="src/Dates.php" errors="2">
+            <entry line="112" start="23" end="28">
+                <snippet><![CDATA[        return $time > 10000;]]></snippet>
+                <suggestions/>
+            </entry>
+            <entry line="212" start="23" end="24">
+                <snippet><![CDATA[        if ($seconds < 2) {]]></snippet>
+                <suggestions>
+                    <suggestion>Env::VAR_BOOL</suggestion>
+                    <suggestion>Cli::STDERR</suggestion>
+                    <suggestion>FS::PERM_ALL_WRITE</suggestion>
+                    <suggestion>Url::URL_JOIN_PATH</suggestion>
+                </suggestions>
+            </entry>
+        </file>
+
+        <file path="src/Http.php" errors="1">
+            <entry line="166" start="45" end="46">
+                <snippet><![CDATA[                    if (count($exploded) === 2) {]]></snippet>
+                <suggestions>
+                    <suggestion>Env::VAR_BOOL</suggestion>
+                    <suggestion>Cli::STDERR</suggestion>
+                    <suggestion>FS::PERM_ALL_WRITE</suggestion>
+                    <suggestion>Url::URL_JOIN_PATH</suggestion>
+                </suggestions>
+            </entry>
+        </file>
+    </files>
+</phpmnd>

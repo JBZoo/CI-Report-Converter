@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <item>
+    <severity>error</severity>
+    <line_from>34</line_from>
+    <line_to>34</line_to>
+    <type>MissingReturnType</type>
+    <message>Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setName does not have a return type, expecting void</message>
+    <file_name>src/JUnit/TestCaseElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php</file_path>
+    <snippet>    public function setName($name)</snippet>
+    <selected_text>setName</selected_text>
+    <from>728</from>
+    <to>735</to>
+    <snippet_from>708</snippet_from>
+    <snippet_to>742</snippet_to>
+    <column_from>21</column_from>
+    <column_to>28</column_to>
+    <error_level>2</error_level>
+    <shortcode>50</shortcode>
+    <link>https://psalm.dev/050</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>42</line_from>
+    <line_to>42</line_to>
+    <type>MissingReturnType</type>
+    <message>Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setClassname does not have a return type, expecting void</message>
+    <file_name>src/JUnit/TestCaseElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php</file_path>
+    <snippet>    public function setClassname($classname)</snippet>
+    <selected_text>setClassname</selected_text>
+    <from>868</from>
+    <to>880</to>
+    <snippet_from>848</snippet_from>
+    <snippet_to>892</snippet_to>
+    <column_from>21</column_from>
+    <column_to>33</column_to>
+    <error_level>2</error_level>
+    <shortcode>50</shortcode>
+    <link>https://psalm.dev/050</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>52</line_from>
+    <line_to>52</line_to>
+    <type>MissingReturnType</type>
+    <message>Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setTime does not have a return type, expecting void</message>
+    <file_name>src/JUnit/TestCaseElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php</file_path>
+    <snippet>    public function setTime($time)</snippet>
+    <selected_text>setTime</selected_text>
+    <from>1052</from>
+    <to>1059</to>
+    <snippet_from>1032</snippet_from>
+    <snippet_to>1066</snippet_to>
+    <column_from>21</column_from>
+    <column_to>28</column_to>
+    <error_level>2</error_level>
+    <shortcode>50</shortcode>
+    <link>https://psalm.dev/050</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>54</line_from>
+    <line_to>54</line_to>
+    <type>InvalidScalarArgument</type>
+    <message>Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, float provided</message>
+    <file_name>src/JUnit/TestCaseElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php</file_path>
+    <snippet>        $this-&gt;setAttribute('time', $time);</snippet>
+    <selected_text>$time</selected_text>
+    <from>1109</from>
+    <to>1114</to>
+    <snippet_from>1073</snippet_from>
+    <snippet_to>1116</snippet_to>
+    <column_from>37</column_from>
+    <column_to>42</column_to>
+    <error_level>4</error_level>
+    <shortcode>12</shortcode>
+    <link>https://psalm.dev/012</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>65</line_from>
+    <line_to>65</line_to>
+    <type>PossiblyNullReference</type>
+    <message>Cannot call method createElement on possibly null value</message>
+    <file_name>src/JUnit/TestCaseElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php</file_path>
+    <snippet>        $errorElement = $this-&gt;ownerDocument-&gt;createElement('error', $error);</snippet>
+    <selected_text>createElement</selected_text>
+    <from>1482</from>
+    <to>1495</to>
+    <snippet_from>1436</snippet_from>
+    <snippet_to>1513</snippet_to>
+    <column_from>47</column_from>
+    <column_to>60</column_to>
+    <error_level>3</error_level>
+    <shortcode>83</shortcode>
+    <link>https://psalm.dev/083</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>88</line_from>
+    <line_to>88</line_to>
+    <type>PossiblyNullReference</type>
+    <message>Cannot call method createElement on possibly null value</message>
+    <file_name>src/JUnit/TestCaseElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php</file_path>
+    <snippet>        $failureElement = $this-&gt;ownerDocument-&gt;createElement('failure', $error);</snippet>
+    <selected_text>createElement</selected_text>
+    <from>2223</from>
+    <to>2236</to>
+    <snippet_from>2175</snippet_from>
+    <snippet_to>2256</snippet_to>
+    <column_from>49</column_from>
+    <column_to>62</column_to>
+    <error_level>3</error_level>
+    <shortcode>83</shortcode>
+    <link>https://psalm.dev/083</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>106</line_from>
+    <line_to>106</line_to>
+    <type>MissingReturnType</type>
+    <message>Method JBZoo\ToolboxCI\JUnit\TestCaseElement::incrementFailureCount does not have a return type, expecting void</message>
+    <file_name>src/JUnit/TestCaseElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php</file_path>
+    <snippet>    public function incrementFailureCount()</snippet>
+    <selected_text>incrementFailureCount</selected_text>
+    <from>2700</from>
+    <to>2721</to>
+    <snippet_from>2680</snippet_from>
+    <snippet_to>2723</snippet_to>
+    <column_from>21</column_from>
+    <column_to>42</column_to>
+    <error_level>2</error_level>
+    <shortcode>50</shortcode>
+    <link>https://psalm.dev/050</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>109</line_from>
+    <line_to>109</line_to>
+    <type>InvalidScalarArgument</type>
+    <message>Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, int provided</message>
+    <file_name>src/JUnit/TestCaseElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php</file_path>
+    <snippet>            $this-&gt;setAttribute('failures', (int)$this-&gt;getAttribute('failures') + 1);</snippet>
+    <selected_text>(int)$this-&gt;getAttribute('failures') + 1</selected_text>
+    <from>2821</from>
+    <to>2861</to>
+    <snippet_from>2777</snippet_from>
+    <snippet_to>2863</snippet_to>
+    <column_from>45</column_from>
+    <column_to>85</column_to>
+    <error_level>4</error_level>
+    <shortcode>12</shortcode>
+    <link>https://psalm.dev/012</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>111</line_from>
+    <line_to>111</line_to>
+    <type>InvalidScalarArgument</type>
+    <message>Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, int(1) provided</message>
+    <file_name>src/JUnit/TestCaseElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php</file_path>
+    <snippet>            $this-&gt;setAttribute('failures', 1);</snippet>
+    <selected_text>1</selected_text>
+    <from>2925</from>
+    <to>2926</to>
+    <snippet_from>2881</snippet_from>
+    <snippet_to>2928</snippet_to>
+    <column_from>45</column_from>
+    <column_to>46</column_to>
+    <error_level>4</error_level>
+    <shortcode>12</shortcode>
+    <link>https://psalm.dev/012</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>118</line_from>
+    <line_to>118</line_to>
+    <type>MissingReturnType</type>
+    <message>Method JBZoo\ToolboxCI\JUnit\TestCaseElement::incrementErrorCount does not have a return type, expecting void</message>
+    <file_name>src/JUnit/TestCaseElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php</file_path>
+    <snippet>    public function incrementErrorCount()</snippet>
+    <selected_text>incrementErrorCount</selected_text>
+    <from>3028</from>
+    <to>3047</to>
+    <snippet_from>3008</snippet_from>
+    <snippet_to>3049</snippet_to>
+    <column_from>21</column_from>
+    <column_to>40</column_to>
+    <error_level>2</error_level>
+    <shortcode>50</shortcode>
+    <link>https://psalm.dev/050</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>121</line_from>
+    <line_to>121</line_to>
+    <type>InvalidScalarArgument</type>
+    <message>Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, int provided</message>
+    <file_name>src/JUnit/TestCaseElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php</file_path>
+    <snippet>            $this-&gt;setAttribute('errors', (int)$this-&gt;getAttribute('errors') + 1);</snippet>
+    <selected_text>(int)$this-&gt;getAttribute('errors') + 1</selected_text>
+    <from>3143</from>
+    <to>3181</to>
+    <snippet_from>3101</snippet_from>
+    <snippet_to>3183</snippet_to>
+    <column_from>43</column_from>
+    <column_to>81</column_to>
+    <error_level>4</error_level>
+    <shortcode>12</shortcode>
+    <link>https://psalm.dev/012</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>123</line_from>
+    <line_to>123</line_to>
+    <type>InvalidScalarArgument</type>
+    <message>Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, int(1) provided</message>
+    <file_name>src/JUnit/TestCaseElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php</file_path>
+    <snippet>            $this-&gt;setAttribute('errors', 1);</snippet>
+    <selected_text>1</selected_text>
+    <from>3243</from>
+    <to>3244</to>
+    <snippet_from>3201</snippet_from>
+    <snippet_to>3246</snippet_to>
+    <column_from>43</column_from>
+    <column_to>44</column_to>
+    <error_level>4</error_level>
+    <shortcode>12</shortcode>
+    <link>https://psalm.dev/012</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>35</line_from>
+    <line_to>35</line_to>
+    <type>MissingReturnType</type>
+    <message>Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setName does not have a return type, expecting void</message>
+    <file_name>src/JUnit/TestSuiteElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php</file_path>
+    <snippet>    public function setName($name)</snippet>
+    <selected_text>setName</selected_text>
+    <from>842</from>
+    <to>849</to>
+    <snippet_from>822</snippet_from>
+    <snippet_to>856</snippet_to>
+    <column_from>21</column_from>
+    <column_to>28</column_to>
+    <error_level>2</error_level>
+    <shortcode>50</shortcode>
+    <link>https://psalm.dev/050</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>45</line_from>
+    <line_to>45</line_to>
+    <type>MissingReturnType</type>
+    <message>Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setTimestamp does not have a return type, expecting void</message>
+    <file_name>src/JUnit/TestSuiteElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php</file_path>
+    <snippet>    public function setTimestamp(\DateTime $timestamp)</snippet>
+    <selected_text>setTimestamp</selected_text>
+    <from>1023</from>
+    <to>1035</to>
+    <snippet_from>1003</snippet_from>
+    <snippet_to>1057</snippet_to>
+    <column_from>21</column_from>
+    <column_to>33</column_to>
+    <error_level>2</error_level>
+    <shortcode>50</shortcode>
+    <link>https://psalm.dev/050</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>55</line_from>
+    <line_to>55</line_to>
+    <type>MissingReturnType</type>
+    <message>Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setTime does not have a return type, expecting void</message>
+    <file_name>src/JUnit/TestSuiteElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php</file_path>
+    <snippet>    public function setTime($duration)</snippet>
+    <selected_text>setTime</selected_text>
+    <from>1260</from>
+    <to>1267</to>
+    <snippet_from>1240</snippet_from>
+    <snippet_to>1278</snippet_to>
+    <column_from>21</column_from>
+    <column_to>28</column_to>
+    <error_level>2</error_level>
+    <shortcode>50</shortcode>
+    <link>https://psalm.dev/050</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>57</line_from>
+    <line_to>57</line_to>
+    <type>InvalidScalarArgument</type>
+    <message>Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, float provided</message>
+    <file_name>src/JUnit/TestSuiteElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php</file_path>
+    <snippet>        $this-&gt;setAttribute('time', $duration);</snippet>
+    <selected_text>$duration</selected_text>
+    <from>1321</from>
+    <to>1330</to>
+    <snippet_from>1285</snippet_from>
+    <snippet_to>1332</snippet_to>
+    <column_from>37</column_from>
+    <column_to>46</column_to>
+    <error_level>4</error_level>
+    <shortcode>12</shortcode>
+    <link>https://psalm.dev/012</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>65</line_from>
+    <line_to>65</line_to>
+    <type>MissingReturnType</type>
+    <message>Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setHostname does not have a return type, expecting void</message>
+    <file_name>src/JUnit/TestSuiteElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php</file_path>
+    <snippet>    public function setHostname($hostname)</snippet>
+    <selected_text>setHostname</selected_text>
+    <from>1455</from>
+    <to>1466</to>
+    <snippet_from>1435</snippet_from>
+    <snippet_to>1477</snippet_to>
+    <column_from>21</column_from>
+    <column_to>32</column_to>
+    <error_level>2</error_level>
+    <shortcode>50</shortcode>
+    <link>https://psalm.dev/050</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>86</line_from>
+    <line_to>86</line_to>
+    <type>MissingReturnType</type>
+    <message>Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::incrementTestCount does not have a return type, expecting void</message>
+    <file_name>src/JUnit/TestSuiteElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php</file_path>
+    <snippet>    private function incrementTestCount()</snippet>
+    <selected_text>incrementTestCount</selected_text>
+    <from>1939</from>
+    <to>1957</to>
+    <snippet_from>1918</snippet_from>
+    <snippet_to>1959</snippet_to>
+    <column_from>22</column_from>
+    <column_to>40</column_to>
+    <error_level>2</error_level>
+    <shortcode>50</shortcode>
+    <link>https://psalm.dev/050</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>89</line_from>
+    <line_to>89</line_to>
+    <type>InvalidScalarArgument</type>
+    <message>Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int provided</message>
+    <file_name>src/JUnit/TestSuiteElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php</file_path>
+    <snippet>            $this-&gt;setAttribute('tests', (int)$this-&gt;getAttribute('tests') + 1);</snippet>
+    <selected_text>(int)$this-&gt;getAttribute('tests') + 1</selected_text>
+    <from>2051</from>
+    <to>2088</to>
+    <snippet_from>2010</snippet_from>
+    <snippet_to>2090</snippet_to>
+    <column_from>42</column_from>
+    <column_to>79</column_to>
+    <error_level>4</error_level>
+    <shortcode>12</shortcode>
+    <link>https://psalm.dev/012</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>91</line_from>
+    <line_to>91</line_to>
+    <type>InvalidScalarArgument</type>
+    <message>Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided</message>
+    <file_name>src/JUnit/TestSuiteElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php</file_path>
+    <snippet>            $this-&gt;setAttribute('tests', 1);</snippet>
+    <selected_text>1</selected_text>
+    <from>2149</from>
+    <to>2150</to>
+    <snippet_from>2108</snippet_from>
+    <snippet_to>2152</snippet_to>
+    <column_from>42</column_from>
+    <column_to>43</column_to>
+    <error_level>4</error_level>
+    <shortcode>12</shortcode>
+    <link>https://psalm.dev/012</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>98</line_from>
+    <line_to>98</line_to>
+    <type>MissingReturnType</type>
+    <message>Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::incrementFailureCount does not have a return type, expecting void</message>
+    <file_name>src/JUnit/TestSuiteElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php</file_path>
+    <snippet>    public function incrementFailureCount()</snippet>
+    <selected_text>incrementFailureCount</selected_text>
+    <from>2254</from>
+    <to>2275</to>
+    <snippet_from>2234</snippet_from>
+    <snippet_to>2277</snippet_to>
+    <column_from>21</column_from>
+    <column_to>42</column_to>
+    <error_level>2</error_level>
+    <shortcode>50</shortcode>
+    <link>https://psalm.dev/050</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>101</line_from>
+    <line_to>101</line_to>
+    <type>InvalidScalarArgument</type>
+    <message>Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int provided</message>
+    <file_name>src/JUnit/TestSuiteElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php</file_path>
+    <snippet>            $this-&gt;setAttribute('failures', (int)$this-&gt;getAttribute('failures') + 1);</snippet>
+    <selected_text>(int)$this-&gt;getAttribute('failures') + 1</selected_text>
+    <from>2375</from>
+    <to>2415</to>
+    <snippet_from>2331</snippet_from>
+    <snippet_to>2417</snippet_to>
+    <column_from>45</column_from>
+    <column_to>85</column_to>
+    <error_level>4</error_level>
+    <shortcode>12</shortcode>
+    <link>https://psalm.dev/012</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>103</line_from>
+    <line_to>103</line_to>
+    <type>InvalidScalarArgument</type>
+    <message>Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided</message>
+    <file_name>src/JUnit/TestSuiteElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php</file_path>
+    <snippet>            $this-&gt;setAttribute('failures', 1);</snippet>
+    <selected_text>1</selected_text>
+    <from>2479</from>
+    <to>2480</to>
+    <snippet_from>2435</snippet_from>
+    <snippet_to>2482</snippet_to>
+    <column_from>45</column_from>
+    <column_to>46</column_to>
+    <error_level>4</error_level>
+    <shortcode>12</shortcode>
+    <link>https://psalm.dev/012</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>110</line_from>
+    <line_to>110</line_to>
+    <type>MissingReturnType</type>
+    <message>Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::incrementErrorCount does not have a return type, expecting void</message>
+    <file_name>src/JUnit/TestSuiteElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php</file_path>
+    <snippet>    public function incrementErrorCount()</snippet>
+    <selected_text>incrementErrorCount</selected_text>
+    <from>2582</from>
+    <to>2601</to>
+    <snippet_from>2562</snippet_from>
+    <snippet_to>2603</snippet_to>
+    <column_from>21</column_from>
+    <column_to>40</column_to>
+    <error_level>2</error_level>
+    <shortcode>50</shortcode>
+    <link>https://psalm.dev/050</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>113</line_from>
+    <line_to>113</line_to>
+    <type>InvalidScalarArgument</type>
+    <message>Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int provided</message>
+    <file_name>src/JUnit/TestSuiteElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php</file_path>
+    <snippet>            $this-&gt;setAttribute('errors', (int)$this-&gt;getAttribute('errors') + 1);</snippet>
+    <selected_text>(int)$this-&gt;getAttribute('errors') + 1</selected_text>
+    <from>2697</from>
+    <to>2735</to>
+    <snippet_from>2655</snippet_from>
+    <snippet_to>2737</snippet_to>
+    <column_from>43</column_from>
+    <column_to>81</column_to>
+    <error_level>4</error_level>
+    <shortcode>12</shortcode>
+    <link>https://psalm.dev/012</link>
+    <taint_trace></taint_trace>
+  </item>
+  <item>
+    <severity>error</severity>
+    <line_from>115</line_from>
+    <line_to>115</line_to>
+    <type>InvalidScalarArgument</type>
+    <message>Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided</message>
+    <file_name>src/JUnit/TestSuiteElement.php</file_name>
+    <file_path>/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php</file_path>
+    <snippet>            $this-&gt;setAttribute('errors', 1);</snippet>
+    <selected_text>1</selected_text>
+    <from>2797</from>
+    <to>2798</to>
+    <snippet_from>2755</snippet_from>
+    <snippet_to>2800</snippet_to>
+    <column_from>43</column_from>
+    <column_to>44</column_to>
+    <error_level>4</error_level>
+    <shortcode>12</shortcode>
+    <link>https://psalm.dev/012</link>
+    <taint_trace></taint_trace>
+  </item>
+</report>

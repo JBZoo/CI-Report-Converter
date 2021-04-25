@@ -1,0 +1,53 @@
+#
+# JBZoo Toolbox - Toolbox-CI
+#
+# This file is part of the JBZoo Toolbox project.
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+#
+# @package    Toolbox-CI
+# @license    MIT
+# @copyright  Copyright (C) JBZoo.com, All rights reserved.
+# @link       https://github.com/JBZoo/Toolbox-CI
+#
+
+language: php
+os: linux
+dist: xenial
+
+git:
+  depth: false
+
+php:
+  - 7.2
+  - 7.3
+  - 7.4
+  - 8.0
+  - nightly
+
+jobs:
+  fast_finish: true
+  allow_failures:
+    - php: 8.0
+    - php: nightly
+
+before_script:
+  - composer self-update
+
+script:
+  - make build    --no-print-directory
+  - make test-all --no-print-directory
+
+after_script:
+  - make report-coveralls
+
+deploy:
+  provider: releases
+  token:
+    secure: rhU9LVWAlMfJgpW87Mptx4GBSPZn7/I/wAEqmsIFez2XXthfR3KrMrAydlovwn0fQvbwYsipSW7Bi0mwxhUPlK7BvoMG7LhnsPGEwOWQ6vHNWPhwd1tb36pbgvT+V2IUXQ00Yo6H86oQHL732F0d1yRyMvkoJiPm+k3zyU/7czlVvcuPuW6RND0ViUlDbfDXj72Re8dYikBUZ0laqjaR6SaJmK4pvdeYqcz5+dN3zqa4AWd1KeAxptLNMechT6m2Wc+vYpFLvkWgdtWVQfnFksw8ZXxIaYe5kwCVVcu58YytyalMJHpXpC0d2ksjDHL4SFxVwH+xWXPw3iVnT4enuG2P+tAslcKelY8gdYNlmke3+8y98r/HL6e6V5l0qg+YqnmSuPeX30/jeUVrEvAo6xcZ24DBAy83HhS9X75NSTDfTngoZ0rZcX+VrzF/nnNnq3nWdLmbVKYuIGHd3zcNHSa2IZovnyK0Xvc5mY9vwKvJjtqkfXXpUbRkgnOwjzajU/6p8K/RuThY8/vRze36GtMs0BNu8qarH5RCcPmh7d/oCh3ExF581Offut8lSykDGA41iPOUaCP56i7Ev2iX4A0vSbkCcxuXV+zg/1Xo0WQ9VmLrXcHn/rnq39/oR9sz4rOfMRNR+I9MccyEsQtWvMuiMOB2EhyMSdzEm5h6Q5Q=
+  file: "./build/toolbox-ci.phar"
+  skip_cleanup: true
+  on:
+    tags: true
+    branch: master
+    php: 7.2

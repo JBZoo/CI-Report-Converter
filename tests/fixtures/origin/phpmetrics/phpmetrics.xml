@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project loc="1790" lloc="363" cyclomaticComplexity="4.76" maintainabilityIndex="117.48" volume="660.36"
+         vocabulary="27.28" difficulty="8.15" effort="15348.57" bugs="0.22" time="852.64" intelligentContent="43.46"
+         commentWeight="43.64" length="109.52" lcom="1.04" instability="0.34" efferentCoupling="1.48"
+         afferentCoupling="0.24" sysc="6.08" rsysc="1.09" dc="2" rdc="0.41" sc="4.08" rsc="0.68" noc="16" noca="3"
+         nocc="13" noi="0" nom="55">
+    <modules>
+        <module loc="1790" lloc="363" cyclomaticComplexity="4.76" maintainabilityIndex="117.48" volume="660.36"
+                vocabulary="27.28" difficulty="8.15" effort="15348.57" bugs="0.22" time="852.64"
+                intelligentContent="43.46" commentWeight="43.64" length="109.52" lcom="1.04" instability="0.34"
+                efferentCoupling="1.48" afferentCoupling="0.24" sysc="6.08" rsysc="1.09" dc="2" rdc="0.41" sc="4.08"
+                rsc="0.68" noc="16" noca="3" nocc="13" noi="0" nom="55" namespace="."/>
+        <module loc="1790" lloc="363" cyclomaticComplexity="4.76" maintainabilityIndex="117.48" volume="660.36"
+                vocabulary="27.28" difficulty="8.15" effort="15348.57" bugs="0.22" time="852.64"
+                intelligentContent="43.46" commentWeight="43.64" length="109.52" lcom="1.04" instability="0.34"
+                efferentCoupling="1.48" afferentCoupling="0.24" sysc="6.08" rsysc="1.09" dc="2" rdc="0.41" sc="4.08"
+                rsc="0.68" noc="16" noca="3" nocc="13" noi="0" nom="55" namespace="./src"/>
+        <module loc="1790" lloc="363" cyclomaticComplexity="4.76" maintainabilityIndex="117.48" volume="660.36"
+                vocabulary="27.28" difficulty="8.15" effort="15348.57" bugs="0.22" time="852.64"
+                intelligentContent="43.46" commentWeight="43.64" length="109.52" lcom="1.04" instability="0.34"
+                efferentCoupling="1.48" afferentCoupling="0.24" sysc="6.08" rsysc="1.09" dc="2" rdc="0.41" sc="4.08"
+                rsc="0.68" noc="16" noca="3" nocc="13" noi="0" nom="55" namespace="./src/jbzoo"/>
+        <module loc="653" lloc="107" cyclomaticComplexity="4.15" maintainabilityIndex="130.01" volume="415.51"
+                vocabulary="17.85" difficulty="5.35" effort="9543.97" bugs="0.14" time="530.23"
+                intelligentContent="34.59" commentWeight="44.12" length="70.54" lcom="0.54" instability="0.15"
+                efferentCoupling="0.54" afferentCoupling="0" sysc="2.47" rsysc="0.58" dc="1.17" rdc="0.37" sc="1.31"
+                rsc="0.21" noc="7" noca="0" nocc="7" noi="0" nom="14" namespace="./src/jbzoo/atoms"/>
+        <module loc="148" lloc="12" cyclomaticComplexity="1" maintainabilityIndex="142.77" volume="46.76" vocabulary="8"
+                difficulty="1.51" effort="97.49" bugs="0.02" time="5.4" intelligentContent="24.88" commentWeight="45.95"
+                length="14" lcom="0.6" instability="0" efferentCoupling="0" afferentCoupling="0" sysc="0.4" rsysc="0.4"
+                dc="0.4" rdc="0.4" sc="0" rsc="0" noc="4" noca="0" nocc="4" noi="0" nom="3"
+                namespace="./src/jbzoo/atoms/test"/>
+        <module loc="122" lloc="11" cyclomaticComplexity="1" maintainabilityIndex="124.86" volume="58.46"
+                vocabulary="10" difficulty="1.89" effort="121.86" bugs="0.02" time="6.75" intelligentContent="31.1"
+                commentWeight="46.59" length="17.5" lcom="0.75" instability="0" efferentCoupling="0"
+                afferentCoupling="0" sysc="0.5" rsysc="0.5" dc="0.5" rdc="0.5" sc="0" rsc="0" noc="4" noca="0" nocc="4"
+                noi="0" nom="3" namespace="./src/jbzoo/atoms/test/src"/>
+        <module loc="64" lloc="6" cyclomaticComplexity="1" maintainabilityIndex="123.08" volume="70.12" vocabulary="12"
+                difficulty="2.32" effort="171.53" bugs="0.03" time="9.5" intelligentContent="31.34"
+                commentWeight="46.49" length="19.5" lcom="1" instability="0" efferentCoupling="0" afferentCoupling="0"
+                sysc="0.5" rsysc="0.5" dc="0.5" rdc="0.5" sc="0" rsc="0" noc="2" noca="0" nocc="2" noi="0" nom="2"
+                namespace="./src/jbzoo/atoms/test/src/Controller"/>
+        <module loc="32" lloc="3" cyclomaticComplexity="1" maintainabilityIndex="123.22" volume="65.73" vocabulary="11"
+                difficulty="1.67" effort="109.55" bugs="0.02" time="6" intelligentContent="39.44" commentWeight="46.49"
+                length="19" lcom="1" instability="0" efferentCoupling="0" afferentCoupling="0" sysc="1" rsysc="1" dc="1"
+                rdc="1" sc="0" rsc="0" noc="1" noca="0" nocc="1" noi="0" nom="1"
+                namespace="./src/jbzoo/atoms/test/src/Helper"/>
+        <module loc="26" lloc="4" cyclomaticComplexity="1" maintainabilityIndex="117.42" volume="92.51" vocabulary="13"
+                difficulty="4.71" effort="436.12" bugs="0.03" time="24" intelligentContent="19.62" commentWeight="44.46"
+                length="25" lcom="0" instability="0" efferentCoupling="0" afferentCoupling="0" sysc="0" rsysc="0" dc="0"
+                rdc="0" sc="0" rsc="0" noc="0" noca="0" nocc="0" noi="0" nom="0"
+                namespace="./src/jbzoo/atoms/assets-js-utils"/>
+        <module loc="57" lloc="18" cyclomaticComplexity="5" maintainabilityIndex="88.08" volume="618.14" vocabulary="27"
+                difficulty="20.28" effort="12536.56" bugs="0.21" time="696" intelligentContent="30.48"
+                commentWeight="35.68" length="130" lcom="0" instability="0" efferentCoupling="0" afferentCoupling="0"
+                sysc="0" rsysc="0" dc="0" rdc="0" sc="0" rsc="0" noc="0" noca="0" nocc="0" noi="0" nom="0"
+                namespace="./src/jbzoo/atoms/assets"/>
+        <module loc="21" lloc="3" cyclomaticComplexity="1" maintainabilityIndex="123.44" volume="53.15" vocabulary="10"
+                difficulty="3.5" effort="186.03" bugs="0.02" time="10" intelligentContent="15.19" commentWeight="46.06"
+                length="16" lcom="0" instability="0" efferentCoupling="0" afferentCoupling="0" sysc="0" rsysc="0" dc="0"
+                rdc="0" sc="0" rsc="0" noc="0" noca="0" nocc="0" noi="0" nom="0"
+                namespace="./src/jbzoo/atoms/assets-jquery"/>
+        <module loc="370" lloc="66" cyclomaticComplexity="10.25" maintainabilityIndex="133.27" volume="1079.43"
+                vocabulary="33" difficulty="7.24" effort="27509.18" bugs="0.36" time="1528.5" intelligentContent="60.19"
+                commentWeight="44.13" length="162.5" lcom="1" instability="0.5" efferentCoupling="1.75"
+                afferentCoupling="0" sysc="7.54" rsysc="1.39" dc="3.29" rdc="0.7" sc="4.25" rsc="0.7" noc="3" noca="0"
+                nocc="3" noi="0" nom="11" namespace="./src/jbzoo/atoms/core"/>
+        <module loc="344" lloc="65" cyclomaticComplexity="13.33" maintainabilityIndex="106.21" volume="1439.23"
+                vocabulary="44" difficulty="9.65" effort="36678.91" bugs="0.48" time="2038" intelligentContent="80.26"
+                commentWeight="44.36" length="216.67" lcom="1.33" instability="0.67" efferentCoupling="2.33"
+                afferentCoupling="0" sysc="10.06" rsysc="1.86" dc="4.39" rdc="0.93" sc="5.67" rsc="0.93" noc="3"
+                noca="0" nocc="3" noi="0" nom="11" namespace="./src/jbzoo/atoms/core/src"/>
+        <module loc="32" lloc="3" cyclomaticComplexity="1" maintainabilityIndex="124.01" volume="50.72" vocabulary="9"
+                difficulty="1.71" effort="86.95" bugs="0.02" time="5" intelligentContent="29.59" commentWeight="46.49"
+                length="16" lcom="1" instability="0" efferentCoupling="0" afferentCoupling="0" sysc="1" rsysc="1" dc="1"
+                rdc="1" sc="0" rsc="0" noc="1" noca="0" nocc="1" noi="0" nom="1"
+                namespace="./src/jbzoo/atoms/core/src/Controller"/>
+        <module loc="279" lloc="59" cyclomaticComplexity="38" maintainabilityIndex="70.75" volume="4209.98"
+                vocabulary="115" difficulty="26.1" effort="109884.64" bugs="1.4" time="6105" intelligentContent="161.3"
+                commentWeight="39.87" length="615" lcom="2" instability="1" efferentCoupling="6" afferentCoupling="0"
+                sysc="27.67" rsysc="3.07" dc="11.67" rdc="1.3" sc="16" rsc="1.78" noc="1" noca="0" nocc="1" noi="0"
+                nom="9" namespace="./src/jbzoo/atoms/core/src/Helper"/>
+        <module loc="31" lloc="4" cyclomaticComplexity="1" maintainabilityIndex="114.24" volume="86.37" vocabulary="10"
+                difficulty="4.5" effort="388.67" bugs="0.03" time="22" intelligentContent="19.19" commentWeight="41.07"
+                length="26" lcom="0" instability="0" efferentCoupling="0" afferentCoupling="0" sysc="0" rsysc="0" dc="0"
+                rdc="0" sc="0" rsc="0" noc="0" noca="0" nocc="0" noi="0" nom="0"
+                namespace="./src/jbzoo/atoms/assets-jquery-ui"/>
+        <module loc="1070" lloc="239" cyclomaticComplexity="5.7" maintainabilityIndex="103.48" volume="1077.92"
+                vocabulary="41" difficulty="12.12" effort="25713.3" bugs="0.36" time="1428.4" intelligentContent="58.26"
+                commentWeight="43.4" length="174.6" lcom="1.9" instability="0.66" efferentCoupling="3"
+                afferentCoupling="0.6" sysc="11.98" rsysc="1.97" dc="3.48" rdc="0.55" sc="8.5" rsc="1.43" noc="9"
+                noca="3" nocc="6" noi="0" nom="41" namespace="./src/jbzoo/framework"/>
+        <module loc="24" lloc="1" cyclomaticComplexity="1" maintainabilityIndex="139.99" volume="12" vocabulary="4"
+                difficulty="0.83" effort="10" bugs="0" time="1" intelligentContent="14.4" commentWeight="47.68"
+                length="6" lcom="0" instability="0" efferentCoupling="0" afferentCoupling="0" sysc="0" rsysc="0" dc="0"
+                rdc="0" sc="0" rsc="0" noc="1" noca="0" nocc="1" noi="0" nom="0"
+                namespace="./src/jbzoo/framework/Exception"/>
+        <module loc="515" lloc="116" cyclomaticComplexity="5" maintainabilityIndex="102.12" volume="1062.55"
+                vocabulary="40.6" difficulty="14.08" effort="27687.44" bugs="0.35" time="1538"
+                intelligentContent="52.01" commentWeight="43.05" length="176.2" lcom="1.4" instability="0.76"
+                efferentCoupling="3.4" afferentCoupling="0.6" sysc="12.7" rsysc="2.19" dc="3.5" rdc="0.66" sc="9.2"
+                rsc="1.53" noc="5" noca="2" nocc="3" noi="0" nom="21" namespace="./src/jbzoo/framework/Atom"/>
+    </modules>
+</project>

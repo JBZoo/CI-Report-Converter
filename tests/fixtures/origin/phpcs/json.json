@@ -1,0 +1,56 @@
+{
+    "totals" : {
+        "errors"   : 2,
+        "warnings" : 1,
+        "fixable"  : 2
+    },
+
+    "files"  : {
+        ".\/src\/JUnit\/TestCaseElement.php"  : {
+            "errors" : 0, "warnings" : 0, "messages" : []
+        },
+
+        ".\/src\/JUnit\/JUnitXml.php"         : {
+            "errors"   : 2,
+            "warnings" : 1,
+            "messages" : [
+                {
+                    "message"  : "Visibility must be declared on all constants if your project supports PHP 7.1 or later",
+                    "source"   : "PSR12.Properties.ConstantVisibility.NotFound",
+                    "severity" : 5,
+                    "fixable"  : false,
+                    "type"     : "WARNING",
+                    "line"     : 24,
+                    "column"   : 5
+                }, {
+                    "message" : "Opening brace should be on a new line",
+                    "source"  : "Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine", "severity" : 5,
+                    "fixable" : true,
+                    "type"    : "ERROR",
+                    "line"    : 44,
+                    "column"  : 35
+                }, {
+                    "message"  : "Expected 1 newline at end of file; 0 found",
+                    "source"   : "PSR2.Files.EndFileNewline.NoneFound",
+                    "severity" : 5,
+                    "fixable"  : true,
+                    "type"     : "ERROR",
+                    "line"     : 50,
+                    "column"   : 1
+                }
+            ]
+        },
+
+        ".\/src\/JUnit\/TestSuiteElement.php" : {
+            "errors"   : 0,
+            "warnings" : 0,
+            "messages" : []
+        },
+
+        ".\/src\/Exception.php"               : {
+            "errors"   : 0,
+            "warnings" : 0,
+            "messages" : []
+        }
+    }
+}

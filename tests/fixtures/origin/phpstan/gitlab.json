@@ -1,0 +1,262 @@
+[
+    {
+        "description" : "Method JBZoo\\ToolboxCI\\JUnit\\TestCaseElement::setName() has no return typehint specified.",
+        "fingerprint" : "aea772c778f246ed5a99ab9fd3a8517ff7e69309ffccd84939ecf646dea8ae23",
+        "location"    : {
+            "path"  : "src/JUnit/TestCaseElement.php",
+            "lines" : {
+                "begin" : 34
+            }
+        }
+    },
+    {
+        "description" : "Method JBZoo\\ToolboxCI\\JUnit\\TestCaseElement::setClassname() has no return typehint specified.",
+        "fingerprint" : "290dd7ea67a8e3dad2458bde3a4aabd02323caebd1b2a47317a292f3892ced4f",
+        "location"    : {
+            "path"  : "src/JUnit/TestCaseElement.php",
+            "lines" : {
+                "begin" : 42
+            }
+        }
+    },
+    {
+        "description" : "Method JBZoo\\ToolboxCI\\JUnit\\TestCaseElement::setTime() has no return typehint specified.",
+        "fingerprint" : "bca475e51d19a2a2d345d503f9a7ae48582f53f931229cbe7ba00c71e21a63ae",
+        "location"    : {
+            "path"  : "src/JUnit/TestCaseElement.php",
+            "lines" : {
+                "begin" : 52
+            }
+        }
+    },
+    {
+        "description" : "Parameter #2 $value of method DOMElement::setAttribute() expects string, float given.",
+        "fingerprint" : "4f955b38926f799c3cc81ffdf1436d282403f0af649cfd5e463380c44aeea50f",
+        "location"    : {
+            "path"  : "src/JUnit/TestCaseElement.php",
+            "lines" : {
+                "begin" : 54
+            }
+        }
+    },
+    {
+        "description" : "Cannot call method createElement() on DOMDocument|null.",
+        "fingerprint" : "66fe05f718683cf3a24105d5cd7bd42b4841a5fc960d9f4f1d45314aa5c33c81",
+        "location"    : {
+            "path"  : "src/JUnit/TestCaseElement.php",
+            "lines" : {
+                "begin" : 65
+            }
+        }
+    },
+    {
+        "description" : "Cannot call method createElement() on DOMDocument|null.",
+        "fingerprint" : "417b2efd0be700e8260c6a56fc6ec63e5e5e69e40a32a4fadfe7216a359b2c13",
+        "location"    : {
+            "path"  : "src/JUnit/TestCaseElement.php",
+            "lines" : {
+                "begin" : 88
+            }
+        }
+    },
+    {
+        "description" : "Method JBZoo\\ToolboxCI\\JUnit\\TestCaseElement::incrementFailureCount() has no return typehint specified.",
+        "fingerprint" : "39776773050bcbcc901b2212b8e435e32079deab8788ab90c15090bbd17e95da",
+        "location"    : {
+            "path"  : "src/JUnit/TestCaseElement.php",
+            "lines" : {
+                "begin" : 106
+            }
+        }
+    },
+    {
+        "description" : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+        "fingerprint" : "9d30bbbe66c33cd85942d404d7c77759137fabf9bca37cdc0b17ff73fe0ff3a9",
+        "location"    : {
+            "path"  : "src/JUnit/TestCaseElement.php",
+            "lines" : {
+                "begin" : 109
+            }
+        }
+    },
+    {
+        "description" : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+        "fingerprint" : "11e71bc1eab420a15419717f652c0101ebee55ccac7929cbb3e348ee5e0dcccf",
+        "location"    : {
+            "path"  : "src/JUnit/TestCaseElement.php",
+            "lines" : {
+                "begin" : 111
+            }
+        }
+    },
+    {
+        "description" : "Method JBZoo\\ToolboxCI\\JUnit\\TestCaseElement::incrementErrorCount() has no return typehint specified.",
+        "fingerprint" : "dd8ee83414abab59c0858344419741bbed680389afa931b256f8d6feed8d0f18",
+        "location"    : {
+            "path"  : "src/JUnit/TestCaseElement.php",
+            "lines" : {
+                "begin" : 118
+            }
+        }
+    },
+    {
+        "description" : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+        "fingerprint" : "8705a2c9f44af1f65291a13bec5a79d72c046490dfbd2f2f0adc6f5e6d0c46ac",
+        "location"    : {
+            "path"  : "src/JUnit/TestCaseElement.php",
+            "lines" : {
+                "begin" : 121
+            }
+        }
+    },
+    {
+        "description" : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+        "fingerprint" : "e43b242a0edac56f79a28df305cba3f40d46b08a49ed4bcc95072050a45d7a3b",
+        "location"    : {
+            "path"  : "src/JUnit/TestCaseElement.php",
+            "lines" : {
+                "begin" : 123
+            }
+        }
+    },
+    {
+        "description" : "Method JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::setName() has no return typehint specified.",
+        "fingerprint" : "26600bcf761b9fb9d2b9b047f87583169e7368129ca141151ba0f56bad0ce5b5",
+        "location"    : {
+            "path"  : "src/JUnit/TestSuiteElement.php",
+            "lines" : {
+                "begin" : 35
+            }
+        }
+    },
+    {
+        "description" : "Method JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::setTimestamp() has no return typehint specified.",
+        "fingerprint" : "2bad00be4bc4e2dea9b2c13cfb9ccf11c00dc055a59284a7287e4c9226a1c662",
+        "location"    : {
+            "path"  : "src/JUnit/TestSuiteElement.php",
+            "lines" : {
+                "begin" : 45
+            }
+        }
+    },
+    {
+        "description" : "Method JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::setTime() has no return typehint specified.",
+        "fingerprint" : "af56e5192c076739244e2f61c93e20b16ab0834eb0036e62baa416d150f7b20c",
+        "location"    : {
+            "path"  : "src/JUnit/TestSuiteElement.php",
+            "lines" : {
+                "begin" : 55
+            }
+        }
+    },
+    {
+        "description" : "Parameter #2 $value of method DOMElement::setAttribute() expects string, float given.",
+        "fingerprint" : "ea9834867031f1533cfd2d7f647f0ae28012e120e80e554a7e81ecffb48418e8",
+        "location"    : {
+            "path"  : "src/JUnit/TestSuiteElement.php",
+            "lines" : {
+                "begin" : 57
+            }
+        }
+    },
+    {
+        "description" : "Method JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::setHostname() has no return typehint specified.",
+        "fingerprint" : "36b18b52bcc5ee4eebdcb0a92fec9f1d131617d24d6af269f12893dc33f24ef4",
+        "location"    : {
+            "path"  : "src/JUnit/TestSuiteElement.php",
+            "lines" : {
+                "begin" : 65
+            }
+        }
+    },
+    {
+        "description" : "Method JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::incrementTestCount() has no return typehint specified.",
+        "fingerprint" : "c0c869172407dd6a559dc2f19da36a80dedfc857b86beeb7687e9721ef352a8f",
+        "location"    : {
+            "path"  : "src/JUnit/TestSuiteElement.php",
+            "lines" : {
+                "begin" : 86
+            }
+        }
+    },
+    {
+        "description" : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+        "fingerprint" : "d976b47f2d42790a05c836a6270a81953b168913b9d67d3ce1fa0c52dfd50426",
+        "location"    : {
+            "path"  : "src/JUnit/TestSuiteElement.php",
+            "lines" : {
+                "begin" : 89
+            }
+        }
+    },
+    {
+        "description" : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+        "fingerprint" : "93d21c6a46e58cf13a803b92ee98d4fffdaf6b1a26cd0e957b13d5f64e454962",
+        "location"    : {
+            "path"  : "src/JUnit/TestSuiteElement.php",
+            "lines" : {
+                "begin" : 91
+            }
+        }
+    },
+    {
+        "description" : "Method JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::incrementFailureCount() has no return typehint specified.",
+        "fingerprint" : "d6b2cadc2bf66a1656a9bf3209067fe66c85fc4472c55e20856a1159193bfefe",
+        "location"    : {
+            "path"  : "src/JUnit/TestSuiteElement.php",
+            "lines" : {
+                "begin" : 98
+            }
+        }
+    },
+    {
+        "description" : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+        "fingerprint" : "f911cc12f889db04feb906cb5a2f943e291464252ffc95c0f0c2dbb46b294f92",
+        "location"    : {
+            "path"  : "src/JUnit/TestSuiteElement.php",
+            "lines" : {
+                "begin" : 101
+            }
+        }
+    },
+    {
+        "description" : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+        "fingerprint" : "44ee7f8a690ca17d0de00a9a7a32aacf9968d1e7d966e6cd09afd51e110915fd",
+        "location"    : {
+            "path"  : "src/JUnit/TestSuiteElement.php",
+            "lines" : {
+                "begin" : 103
+            }
+        }
+    },
+    {
+        "description" : "Method JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::incrementErrorCount() has no return typehint specified.",
+        "fingerprint" : "9997b8a89f78552075a6907de52cb3720f1910837380b1e33d17a6373f09a4fc",
+        "location"    : {
+            "path"  : "src/JUnit/TestSuiteElement.php",
+            "lines" : {
+                "begin" : 110
+            }
+        }
+    },
+    {
+        "description" : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+        "fingerprint" : "61eb23c8da2ebdbf19fc8c2a6d487b7b7155182f4d174399adcdc678ee2dd516",
+        "location"    : {
+            "path"  : "src/JUnit/TestSuiteElement.php",
+            "lines" : {
+                "begin" : 113
+            }
+        }
+    },
+    {
+        "description" : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
+        "fingerprint" : "b3f330b05748f8af7e003bbd314cd195068e883fb03efbad9ac58826e796ca1a",
+        "location"    : {
+            "path"  : "src/JUnit/TestSuiteElement.php",
+            "lines" : {
+                "begin" : 115
+            }
+        }
+    }
+]

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="PHP_CodeSniffer 3.5.5" errors="0" tests="6" failures="3">
+    <testsuite name="./src/JUnit/TestCaseElement.php" errors="0" tests="1" failures="0">
+        <testcase name="./src/JUnit/TestCaseElement.php"/>
+    </testsuite>
+
+    <testsuite name="./src/JUnit/JUnitXml.php" errors="0" tests="3" failures="3">
+        <testcase name="PSR12.Properties.ConstantVisibility.NotFound at ./src/JUnit/JUnitXml.php (24:5)">
+            <failure type="warning" message="Visibility must be declared on all constants if your project supports PHP 7.1 or later"/>
+        </testcase>
+
+        <testcase name="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine at ./src/JUnit/JUnitXml.php (44:35)">
+            <failure type="error" message="Opening brace should be on a new line"/>
+        </testcase>
+
+        <testcase name="PSR2.Files.EndFileNewline.NoneFound at ./src/JUnit/JUnitXml.php (50:1)">
+            <failure type="error" message="Expected 1 newline at end of file; 0 found"/>
+        </testcase>
+    </testsuite>
+
+    <testsuite name="./src/JUnit/TestSuiteElement.php" errors="0" tests="1" failures="0">
+        <testcase name="./src/JUnit/TestSuiteElement.php"/>
+    </testsuite>
+
+    <testsuite name="./src/Exception.php" errors="0" tests="1" failures="0">
+        <testcase name="./src/Exception.php"/>
+    </testsuite>
+</testsuites>

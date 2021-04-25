@@ -1,0 +1,165 @@
+[
+    {
+        "type"        : "issue",
+        "type_id"     : 10065,
+        "check_name"  : "PhanPossiblyFalseTypeMismatchProperty",
+        "description" : "TypeError PhanPossiblyFalseTypeMismatchProperty Assigning \u001b[35m$this->rootElement\u001b[0m of type \u001b[90m\\DOMElement|false\u001b[0m to property but \u001b[36m\\JBZoo\\ToolboxCI\\JUnit\\JUnitXml->rootElement\u001b[0m is \u001b[90m\\DOMElement\u001b[0m (\u001b[90mfalse\u001b[0m is incompatible)",
+        "severity"    : 5,
+        "location"    : {
+            "path"  : "src/JUnit/JUnitXml.php",
+            "lines" : {
+                "begin" : 37,
+                "end"   : 37
+            }
+        }
+    },
+    {
+        "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUseReturnType",
+        "description" : "Plugin PhanPluginCanUseReturnType Can use \u001b[90m\\JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement\u001b[0m as a return type of \u001b[33maddTestSuite\u001b[0m",
+        "severity"    : 5, "location" : {"path" : "src/JUnit/JUnitXml.php", "lines" : {"begin" : 44, "end" : 44}}
+    }, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUseParamType",
+    "description" : "Plugin PhanPluginCanUseParamType Can use \u001b[90mstring\u001b[0m as the type of parameter \u001b[36m$name\u001b[0m of \u001b[33msetName\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 34, "end" : 34}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginSuspiciousParamPositionInternal",
+    "description" : "Plugin PhanPluginSuspiciousParamPositionInternal Suspicious order for argument \u001b[32mname\u001b[0m - This is getting passed to parameter \u001b[32m#1 (string $name)\u001b[0m of \u001b[33m\\JBZoo\\ToolboxCI\\JUnit\\TestCaseElement::setAttribute(string $name, string $value)\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 36, "end" : 36}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUseParamType",
+    "description" : "Plugin PhanPluginCanUseParamType Can use \u001b[90mstring\u001b[0m as the type of parameter \u001b[36m$classname\u001b[0m of \u001b[33msetClassname\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 42, "end" : 42}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUseParamType",
+    "description" : "Plugin PhanPluginCanUseParamType Can use \u001b[90mfloat\u001b[0m as the type of parameter \u001b[36m$time\u001b[0m of \u001b[33msetTime\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 52, "end" : 52}}
+}, {
+    "type"        : "issue", "type_id" : 10004, "check_name" : "PhanTypeMismatchArgumentInternal",
+    "description" : "TypeError PhanTypeMismatchArgumentInternal Argument \u001b[35m2\u001b[0m (\u001b[36m$value\u001b[0m) is \u001b[35m$time\u001b[0m of type \u001b[90mfloat\u001b[0m but \u001b[33m\\JBZoo\\ToolboxCI\\JUnit\\TestCaseElement::setAttribute()\u001b[0m takes \u001b[90mstring\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 54, "end" : 54}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUseParamType",
+    "description" : "Plugin PhanPluginCanUseParamType Can use \u001b[90mstring\u001b[0m as the type of parameter \u001b[36m$error\u001b[0m of \u001b[33maddError\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 63, "end" : 63}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUseParamType",
+    "description" : "Plugin PhanPluginCanUseParamType Can use \u001b[90mstring\u001b[0m as the type of parameter \u001b[36m$exceptionMessage\u001b[0m of \u001b[33maddError\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 63, "end" : 63}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUseParamType",
+    "description" : "Plugin PhanPluginCanUseParamType Can use \u001b[90mstring\u001b[0m as the type of parameter \u001b[36m$type\u001b[0m of \u001b[33maddError\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 63, "end" : 63}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUseReturnType",
+    "description" : "Plugin PhanPluginCanUseReturnType Can use \u001b[90m\\DOMElement\u001b[0m as a return type of \u001b[33maddError\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 63, "end" : 63}}
+}, {
+    "type"        : "issue", "type_id" : 10094, "check_name" : "PhanPossiblyNonClassMethodCall",
+    "description" : "TypeError PhanPossiblyNonClassMethodCall Call to method \u001b[33msetAttribute\u001b[0m on type \u001b[90m\\DOMElement|false\u001b[0m that could be a non-object",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 66, "end" : 66}}
+}, {
+    "type"        : "issue", "type_id" : 10094, "check_name" : "PhanPossiblyNonClassMethodCall",
+    "description" : "TypeError PhanPossiblyNonClassMethodCall Call to method \u001b[33msetAttribute\u001b[0m on type \u001b[90m\\DOMElement|false\u001b[0m that could be a non-object",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 69, "end" : 69}}
+}, {
+    "type"        : "issue", "type_id" : 10062, "check_name" : "PhanPossiblyFalseTypeReturn",
+    "description" : "TypeError PhanPossiblyFalseTypeReturn Returning \u001b[35m$errorElement\u001b[0m of type \u001b[90m\\DOMElement|false\u001b[0m but \u001b[33maddError()\u001b[0m is declared to return \u001b[90m\\DOMElement\u001b[0m (\u001b[90mfalse\u001b[0m is incompatible)",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 77, "end" : 77}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUseParamType",
+    "description" : "Plugin PhanPluginCanUseParamType Can use \u001b[90mstring\u001b[0m as the type of parameter \u001b[36m$error\u001b[0m of \u001b[33maddFailure\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 86, "end" : 86}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUseParamType",
+    "description" : "Plugin PhanPluginCanUseParamType Can use \u001b[90mstring\u001b[0m as the type of parameter \u001b[36m$exceptionMessage\u001b[0m of \u001b[33maddFailure\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 86, "end" : 86}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUseParamType",
+    "description" : "Plugin PhanPluginCanUseParamType Can use \u001b[90mstring\u001b[0m as the type of parameter \u001b[36m$type\u001b[0m of \u001b[33maddFailure\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 86, "end" : 86}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUseReturnType",
+    "description" : "Plugin PhanPluginCanUseReturnType Can use \u001b[90m\\DOMElement\u001b[0m as a return type of \u001b[33maddFailure\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 86, "end" : 86}}
+}, {
+    "type"        : "issue", "type_id" : 10094, "check_name" : "PhanPossiblyNonClassMethodCall",
+    "description" : "TypeError PhanPossiblyNonClassMethodCall Call to method \u001b[33msetAttribute\u001b[0m on type \u001b[90m\\DOMElement|false\u001b[0m that could be a non-object",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 89, "end" : 89}}
+}, {
+    "type"        : "issue", "type_id" : 10094, "check_name" : "PhanPossiblyNonClassMethodCall",
+    "description" : "TypeError PhanPossiblyNonClassMethodCall Call to method \u001b[33msetAttribute\u001b[0m on type \u001b[90m\\DOMElement|false\u001b[0m that could be a non-object",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 92, "end" : 92}}
+}, {
+    "type"        : "issue", "type_id" : 10062, "check_name" : "PhanPossiblyFalseTypeReturn",
+    "description" : "TypeError PhanPossiblyFalseTypeReturn Returning \u001b[35m$failureElement\u001b[0m of type \u001b[90m\\DOMElement|false\u001b[0m but \u001b[33maddFailure()\u001b[0m is declared to return \u001b[90m\\DOMElement\u001b[0m (\u001b[90mfalse\u001b[0m is incompatible)",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 100, "end" : 100}}
+}, {
+    "type"        : "issue", "type_id" : 10004, "check_name" : "PhanTypeMismatchArgumentInternal",
+    "description" : "TypeError PhanTypeMismatchArgumentInternal Argument \u001b[35m2\u001b[0m (\u001b[36m$value\u001b[0m) is \u001b[35m((int)($this->getAttribute('failures')) + 1)\u001b[0m of type \u001b[90mint\u001b[0m but \u001b[33m\\JBZoo\\ToolboxCI\\JUnit\\TestCaseElement::setAttribute()\u001b[0m takes \u001b[90mstring\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 109, "end" : 109}}
+}, {
+    "type"        : "issue", "type_id" : 10004, "check_name" : "PhanTypeMismatchArgumentInternal",
+    "description" : "TypeError PhanTypeMismatchArgumentInternal Argument \u001b[35m2\u001b[0m (\u001b[36m$value\u001b[0m) is \u001b[35m1\u001b[0m of type \u001b[90m1\u001b[0m but \u001b[33m\\JBZoo\\ToolboxCI\\JUnit\\TestCaseElement::setAttribute()\u001b[0m takes \u001b[90mstring\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 111, "end" : 111}}
+}, {
+    "type"        : "issue", "type_id" : 10004, "check_name" : "PhanTypeMismatchArgumentInternal",
+    "description" : "TypeError PhanTypeMismatchArgumentInternal Argument \u001b[35m2\u001b[0m (\u001b[36m$value\u001b[0m) is \u001b[35m((int)($this->getAttribute('errors')) + 1)\u001b[0m of type \u001b[90mint\u001b[0m but \u001b[33m\\JBZoo\\ToolboxCI\\JUnit\\TestCaseElement::setAttribute()\u001b[0m takes \u001b[90mstring\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 121, "end" : 121}}
+}, {
+    "type"        : "issue", "type_id" : 10004, "check_name" : "PhanTypeMismatchArgumentInternal",
+    "description" : "TypeError PhanTypeMismatchArgumentInternal Argument \u001b[35m2\u001b[0m (\u001b[36m$value\u001b[0m) is \u001b[35m1\u001b[0m of type \u001b[90m1\u001b[0m but \u001b[33m\\JBZoo\\ToolboxCI\\JUnit\\TestCaseElement::setAttribute()\u001b[0m takes \u001b[90mstring\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestCaseElement.php", "lines" : {"begin" : 123, "end" : 123}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUseParamType",
+    "description" : "Plugin PhanPluginCanUseParamType Can use \u001b[90mstring\u001b[0m as the type of parameter \u001b[36m$name\u001b[0m of \u001b[33msetName\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestSuiteElement.php", "lines" : {"begin" : 35, "end" : 35}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginSuspiciousParamPositionInternal",
+    "description" : "Plugin PhanPluginSuspiciousParamPositionInternal Suspicious order for argument \u001b[32mname\u001b[0m - This is getting passed to parameter \u001b[32m#1 (string $name)\u001b[0m of \u001b[33m\\JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::setAttribute(string $name, string $value)\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestSuiteElement.php", "lines" : {"begin" : 37, "end" : 37}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUseParamType",
+    "description" : "Plugin PhanPluginCanUseParamType Can use \u001b[90mfloat\u001b[0m as the type of parameter \u001b[36m$duration\u001b[0m of \u001b[33msetTime\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestSuiteElement.php", "lines" : {"begin" : 55, "end" : 55}}
+}, {
+    "type"        : "issue", "type_id" : 10004, "check_name" : "PhanTypeMismatchArgumentInternal",
+    "description" : "TypeError PhanTypeMismatchArgumentInternal Argument \u001b[35m2\u001b[0m (\u001b[36m$value\u001b[0m) is \u001b[35m$duration\u001b[0m of type \u001b[90mfloat\u001b[0m but \u001b[33m\\JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::setAttribute()\u001b[0m takes \u001b[90mstring\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestSuiteElement.php", "lines" : {"begin" : 57, "end" : 57}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUseParamType",
+    "description" : "Plugin PhanPluginCanUseParamType Can use \u001b[90mstring\u001b[0m as the type of parameter \u001b[36m$hostname\u001b[0m of \u001b[33msetHostname\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestSuiteElement.php", "lines" : {"begin" : 65, "end" : 65}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUseReturnType",
+    "description" : "Plugin PhanPluginCanUseReturnType Can use \u001b[90m\\JBZoo\\ToolboxCI\\JUnit\\TestCaseElement\u001b[0m as a return type of \u001b[33maddTestCase\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestSuiteElement.php", "lines" : {"begin" : 73, "end" : 73}}
+}, {
+    "type"        : "issue", "type_id" : 999, "check_name" : "PhanPluginCanUsePHP71Void",
+    "description" : "Plugin PhanPluginCanUsePHP71Void Can use php 7.1's \u001b[90mvoid\u001b[0m as a return type of \u001b[33mincrementTestCount\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestSuiteElement.php", "lines" : {"begin" : 86, "end" : 86}}
+}, {
+    "type"        : "issue", "type_id" : 10004, "check_name" : "PhanTypeMismatchArgumentInternal",
+    "description" : "TypeError PhanTypeMismatchArgumentInternal Argument \u001b[35m2\u001b[0m (\u001b[36m$value\u001b[0m) is \u001b[35m((int)($this->getAttribute('tests')) + 1)\u001b[0m of type \u001b[90mint\u001b[0m but \u001b[33m\\JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::setAttribute()\u001b[0m takes \u001b[90mstring\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestSuiteElement.php", "lines" : {"begin" : 89, "end" : 89}}
+}, {
+    "type"        : "issue", "type_id" : 10004, "check_name" : "PhanTypeMismatchArgumentInternal",
+    "description" : "TypeError PhanTypeMismatchArgumentInternal Argument \u001b[35m2\u001b[0m (\u001b[36m$value\u001b[0m) is \u001b[35m1\u001b[0m of type \u001b[90m1\u001b[0m but \u001b[33m\\JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::setAttribute()\u001b[0m takes \u001b[90mstring\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestSuiteElement.php", "lines" : {"begin" : 91, "end" : 91}}
+}, {
+    "type"        : "issue", "type_id" : 10004, "check_name" : "PhanTypeMismatchArgumentInternal",
+    "description" : "TypeError PhanTypeMismatchArgumentInternal Argument \u001b[35m2\u001b[0m (\u001b[36m$value\u001b[0m) is \u001b[35m((int)($this->getAttribute('failures')) + 1)\u001b[0m of type \u001b[90mint\u001b[0m but \u001b[33m\\JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::setAttribute()\u001b[0m takes \u001b[90mstring\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestSuiteElement.php", "lines" : {"begin" : 101, "end" : 101}}
+}, {
+    "type"        : "issue", "type_id" : 10004, "check_name" : "PhanTypeMismatchArgumentInternal",
+    "description" : "TypeError PhanTypeMismatchArgumentInternal Argument \u001b[35m2\u001b[0m (\u001b[36m$value\u001b[0m) is \u001b[35m1\u001b[0m of type \u001b[90m1\u001b[0m but \u001b[33m\\JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::setAttribute()\u001b[0m takes \u001b[90mstring\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestSuiteElement.php", "lines" : {"begin" : 103, "end" : 103}}
+}, {
+    "type"        : "issue", "type_id" : 10004, "check_name" : "PhanTypeMismatchArgumentInternal",
+    "description" : "TypeError PhanTypeMismatchArgumentInternal Argument \u001b[35m2\u001b[0m (\u001b[36m$value\u001b[0m) is \u001b[35m((int)($this->getAttribute('errors')) + 1)\u001b[0m of type \u001b[90mint\u001b[0m but \u001b[33m\\JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::setAttribute()\u001b[0m takes \u001b[90mstring\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestSuiteElement.php", "lines" : {"begin" : 113, "end" : 113}}
+}, {
+    "type"        : "issue", "type_id" : 10004, "check_name" : "PhanTypeMismatchArgumentInternal",
+    "description" : "TypeError PhanTypeMismatchArgumentInternal Argument \u001b[35m2\u001b[0m (\u001b[36m$value\u001b[0m) is \u001b[35m1\u001b[0m of type \u001b[90m1\u001b[0m but \u001b[33m\\JBZoo\\ToolboxCI\\JUnit\\TestSuiteElement::setAttribute()\u001b[0m takes \u001b[90mstring\u001b[0m",
+    "severity"    : 5, "location" : {"path" : "src/JUnit/TestSuiteElement.php", "lines" : {"begin" : 115, "end" : 115}}
+}
+]

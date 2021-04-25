@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PDepend>
+  <Packages>
+    <Package name="+global">
+      <Stats>
+        <TotalClasses>4</TotalClasses>
+        <ConcreteClasses>4</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>3</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/phpbench/CreateObject.php">CreateObject</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/phpbench/GetUndefinedValue.php">GetUndefinedValue</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/phpbench/GetValue.php">GetValue</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/phpbench/GetValueInner.php">GetValueInner</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>JBZoo\Data</Package>
+        <Package>JBZoo\PHPunit</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="JBZoo\ComposerDiff\Commands">
+      <Stats>
+        <TotalClasses>2</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>1</AbstractClasses>
+        <Ca>1</Ca>
+        <Ce>6</Ce>
+        <A>0.5</A>
+        <I>0.85714285714286</I>
+        <D>0.35714285714286</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Commands/DiffAction.php">DiffAction</Class>
+      </ConcreteClasses>
+      <AbstractClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Commands/AbstractCommand.php">AbstractCommand</Class>
+      </AbstractClasses>
+      <DependsUpon>
+        <Package>JBZoo\ComposerDiff</Package>
+        <Package>JBZoo\ComposerDiff\Renders</Package>
+        <Package>Symfony\Component\Console\Command</Package>
+        <Package>Symfony\Component\Console\Formatter</Package>
+        <Package>Symfony\Component\Console\Input</Package>
+        <Package>Symfony\Component\Console\Output</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>JBZoo\PHPUnit</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\ComposerDiff">
+      <Stats>
+        <TotalClasses>6</TotalClasses>
+        <ConcreteClasses>6</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>3</Ca>
+        <Ce>3</Ce>
+        <A>0</A>
+        <I>0.5</I>
+        <D>0.5</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Comparator.php">Comparator</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/ComposerLock.php">ComposerLock</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Diff.php">Diff</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Package.php">Package</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Url.php">Url</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>Composer\Semver</Package>
+        <Package>JBZoo\Utils</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>JBZoo\ComposerDiff\Commands</Package>
+        <Package>JBZoo\ComposerDiff\Renders</Package>
+        <Package>JBZoo\PHPUnit</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\ComposerDiff\Renders">
+      <Stats>
+        <TotalClasses>4</TotalClasses>
+        <ConcreteClasses>3</ConcreteClasses>
+        <AbstractClasses>1</AbstractClasses>
+        <Ca>1</Ca>
+        <Ce>4</Ce>
+        <A>0.25</A>
+        <I>0.8</I>
+        <D>0.05</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Renders/Console.php">Console</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Renders/JsonOutput.php">JsonOutput</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Renders/Markdown.php">Markdown</Class>
+      </ConcreteClasses>
+      <AbstractClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/src/Renders/AbstractRender.php">AbstractRender</Class>
+      </AbstractClasses>
+      <DependsUpon>
+        <Package>JBZoo\ComposerDiff</Package>
+        <Package>JBZoo\Data</Package>
+        <Package>Symfony\Component\Console\Helper</Package>
+        <Package>Symfony\Component\Console\Output</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>JBZoo\ComposerDiff\Commands</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\PHPUnit">
+      <Stats>
+        <TotalClasses>86</TotalClasses>
+        <ConcreteClasses>80</ConcreteClasses>
+        <AbstractClasses>6</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>25</Ce>
+        <A>0.069767441860465</A>
+        <I>1</I>
+        <D>0.069767441860465</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/tests/ComposerDiffCodestyleTest.php">ComposerDiffCodestyleTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/tests/ComposerDiffComposerTest.php">ComposerDiffComposerTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/tests/ComposerDiffCopyrightTest.php">ComposerDiffCopyrightTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/tests/ComposerDiffReadmeTest.php">ComposerDiffReadmeTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-diff/tests/ComposerDiffTest.php">ComposerDiffTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/tests/ComplexTest.php">ComplexTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/tests/ComposerGraphCodestyleTest.php">ComposerGraphCodestyleTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/tests/ComposerGraphComposerTest.php">ComposerGraphComposerTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/tests/ComposerGraphCopyrightTest.php">ComposerGraphCopyrightTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/tests/ComposerGraphReadmeTest.php">ComposerGraphReadmeTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/tests/GraphBuildTest.php">GraphBuildTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/DataCodeStyleTest.php">DataCodeStyleTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/DataComposerTest.php">DataComposerTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/DataCopyrightTest.php">DataCopyrightTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/DataReadmeTest.php">DataReadmeTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/DataTest.php">DataTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/FilterTest.php">FilterTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/IniDataTest.php">IniDataTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/JsonDataTest.php">JsonDataTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/PhpArrayDataTest.php">PhpArrayDataTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/YmlDataTest.php">YmlDataTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/tests/FlowchartTest.php">FlowchartTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/tests/MermaidCodeStyleTest.php">MermaidCodeStyleTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/tests/MermaidComposerTest.php">MermaidComposerTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/tests/MermaidCopyrightsTest.php">MermaidCopyrightsTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/tests/MermaidReadmeTest.php">MermaidPhpReadmeTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/CovCatcher.php">CovCatcher</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitAliasesTest.php">PHPUnitAliasesTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitCodeStyleTest.php">PHPUnitCodeStyleTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitComposerTest.php">PHPUnitComposerTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitCopyrightTest.php">PHPUnitCopyrightTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitCovCatcherTest.php">PHPUnitCovCatcherTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitHttpServerTest.php">PHPUnitHttpServerTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitReadmeTest.php">PHPUnitReadmeTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitToolsTest.php">PHPUnitToolsTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/CliCommandsTest.php">CliCommandsTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterCheckStyleTest.php">ConverterCheckStyleTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterJUnitTest.php">ConverterJUnitTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterPhpmdJsonTest.php">ConverterPhpmdJsonTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterPsalmJsonTest.php">ConverterPsalmJsonTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterTeamCityStatsTest.php">ConverterTeamCityStatsTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterTeamCityTest.php">ConverterTeamCityTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/FormatJUnitTest.php">FormatJUnitTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/FormatSourceTest.php">FormatSourceTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolboxCICodestyleTest.php">ToolboxCICodestyleTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolboxCIComposerTest.php">ToolboxCIComposerTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolboxCICopyrightTest.php">ToolboxCICopyrightTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolboxCIReadmeTest.php">ToolboxCIReadmeTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/Tools/Aliases.php">Aliases</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/Tools/ExampleTest.php">ExampleTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/Tools/Fixtures.php">Fixtures</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolsTest.php">ToolsTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/AliasesTest.php">AliasesTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/ArrayTest.php">ArrayTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/CliTest.php">CliTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/CsvTest.php">CsvTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/DatesTest.php">DatesTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/EmailTest.php">EmailTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/EnvTest.php">EnvTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/FileSystemTest.php">FileSystemTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/FilterTest.php">FilterTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/HttpTest.php">HttpTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/ImageTest.php">ImageTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/IpTest.php">IpTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/PhpDocTest.php">PhpDocTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/ReadmeTest.php">ReadmeTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/SerTest.php">SerTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/SlugTest.php">SlugTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/StatsTest.php">StatsTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/StringTest.php">StringTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/SysTest.php">SysTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/TimerTest.php">TimerTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/UrlTest.php">UrlTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/UtilsCodestyleTest.php">UtilsCopyrightsTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/UtilsComposerTest.php">UtilsComposerTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/UtilsCopyrightsTest.php">UtilsCodestyleTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/UtilsReadmeTest.php">UtilsReadmeTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/VarsTest.php">VarsTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/XmlTest.php">XmlTest</Class>
+      </ConcreteClasses>
+      <AbstractClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/tests/AbstractGraphTest.php">AbstractGraphTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/AbstractCodestyleTest.php">AbstractCodestyleTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/AbstractComposerTest.php">AbstractComposerTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/AbstractCopyrightTest.php">AbstractCopyrightTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/AbstractReadmeTest.php">AbstractReadmeTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/PHPUnit.php">PHPUnit</Class>
+      </AbstractClasses>
+      <DependsUpon>
+        <Package></Package>
+        <Package>JBZoo\ComposerDiff</Package>
+        <Package>JBZoo\ComposerDiff\Commands</Package>
+        <Package>JBZoo\ComposerGraph</Package>
+        <Package>JBZoo\Data</Package>
+        <Package>JBZoo\HttpClient</Package>
+        <Package>JBZoo\MermaidPHP</Package>
+        <Package>JBZoo\ToolboxCI</Package>
+        <Package>JBZoo\ToolboxCI\Commands</Package>
+        <Package>JBZoo\ToolboxCI\Converters</Package>
+        <Package>JBZoo\ToolboxCI\Formats</Package>
+        <Package>JBZoo\ToolboxCI\Formats\JUnit</Package>
+        <Package>JBZoo\ToolboxCI\Formats\Source</Package>
+        <Package>JBZoo\Utils</Package>
+        <Package>PHPUnit\Framework</Package>
+        <Package>PHPUnit\Framework\Error</Package>
+        <Package>SebastianBergmann\CodeCoverage</Package>
+        <Package>SebastianBergmann\CodeCoverage\Report</Package>
+        <Package>SebastianBergmann\CodeCoverage\Report\Html</Package>
+        <Package>Symfony\Component\Console</Package>
+        <Package>Symfony\Component\Console\Input</Package>
+        <Package>Symfony\Component\Console\Output</Package>
+        <Package>Symfony\Component\Finder</Package>
+        <Package>Symfony\Component\Process\Exception</Package>
+        <Package>hanneskod\classtools\Iterator</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="JBZoo\ComposerGraph">
+      <Stats>
+        <TotalClasses>6</TotalClasses>
+        <ConcreteClasses>6</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>1</Ca>
+        <Ce>7</Ce>
+        <A>0</A>
+        <I>0.875</I>
+        <D>0.125</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/src/Collection.php">Collection</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/src/CommandBuild.php">CommandBuild</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/src/ComposerGraph.php">ComposerGraph</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/src/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/src/Helper.php">Helper</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/composer-graph/src/Package.php">Package</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>JBZoo\Data</Package>
+        <Package>JBZoo\MermaidPHP</Package>
+        <Package>JBZoo\Utils</Package>
+        <Package>Symfony\Component\Console\Command</Package>
+        <Package>Symfony\Component\Console\Input</Package>
+        <Package>Symfony\Component\Console\Output</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>JBZoo\PHPUnit</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\Data">
+      <Stats>
+        <TotalClasses>6</TotalClasses>
+        <ConcreteClasses>6</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>8</Ca>
+        <Ce>3</Ce>
+        <A>0</A>
+        <I>0.27272727272727</I>
+        <D>0.72727272727273</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/src/Data.php">Data</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/src/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/src/Ini.php">Ini</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/src/JSON.php">JSON</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/src/PhpArray.php">PhpArray</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/src/Yml.php">Yml</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>JBZoo\Utils</Package>
+        <Package>Symfony\Component\Yaml</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>+global</Package>
+        <Package>JBZoo\ComposerDiff\Renders</Package>
+        <Package>JBZoo\ComposerGraph</Package>
+        <Package>JBZoo\PHPUnit</Package>
+        <Package>JBZoo\ToolboxCI\Converters</Package>
+        <Package>JBZoo\ToolboxCI\Formats</Package>
+        <Package>JBZoo\ToolboxCI\Formats\Source</Package>
+        <Package>JBZoo\Utils</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\PHPunit">
+      <Stats>
+        <TotalClasses>2</TotalClasses>
+        <ConcreteClasses>2</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>1</Ca>
+        <Ce>1</Ce>
+        <A>0</A>
+        <I>0.5</I>
+        <D>0.5</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/Fixture.php">Fixture</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/tests/fixtures.php">ArrayObjectExt</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>+global</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\MermaidPHP">
+      <Stats>
+        <TotalClasses>6</TotalClasses>
+        <ConcreteClasses>6</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>2</Ca>
+        <Ce>1</Ce>
+        <A>0</A>
+        <I>0.33333333333333</I>
+        <D>0.66666666666667</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/src/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/src/Graph.php">Graph</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/src/Helper.php">Helper</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/src/Link.php">Link</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/src/Node.php">Node</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/src/Render.php">Render</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>JBZoo\ComposerGraph</Package>
+        <Package>JBZoo\PHPUnit</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\ToolboxCI\Commands">
+      <Stats>
+        <TotalClasses>5</TotalClasses>
+        <ConcreteClasses>4</ConcreteClasses>
+        <AbstractClasses>1</AbstractClasses>
+        <Ca>1</Ca>
+        <Ce>5</Ce>
+        <A>0.2</A>
+        <I>0.83333333333333</I>
+        <D>0.033333333333333</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/Convert.php">Convert</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/ConvertMap.php">ConvertMap</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/TeamCityStats.php">TeamCityStats</Class>
+      </ConcreteClasses>
+      <AbstractClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/AbstractCommand.php">AbstractCommand</Class>
+      </AbstractClasses>
+      <DependsUpon>
+        <Package>JBZoo\ToolboxCI</Package>
+        <Package>JBZoo\ToolboxCI\Converters</Package>
+        <Package>Symfony\Component\Console\Command</Package>
+        <Package>Symfony\Component\Console\Input</Package>
+        <Package>Symfony\Component\Console\Output</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>JBZoo\PHPUnit</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\ToolboxCI\Converters">
+      <Stats>
+        <TotalClasses>14</TotalClasses>
+        <ConcreteClasses>12</ConcreteClasses>
+        <AbstractClasses>2</AbstractClasses>
+        <Ca>2</Ca>
+        <Ce>10</Ce>
+        <A>0.14285714285714</A>
+        <I>0.83333333333333</I>
+        <D>0.023809523809524</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/CheckStyleConverter.php">CheckStyleConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/Factory.php">Factory</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/JUnitConverter.php">JUnitConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/Map.php">Map</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpDependStatsTcConverter.php">PhpDependStatsTcConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpLocStatsTcConverter.php">PhpLocStatsTcConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpMdJsonConverter.php">PhpMdJsonConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpMetricsStatsTcConverter.php">PhpMetricsStatsTcConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpUnitCloverStatsTcConverter.php">PhpUnitCloverStatsTcConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PsalmJsonConverter.php">PsalmJsonConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/TeamCityTestsConverter.php">TeamCityTestsConverter</Class>
+      </ConcreteClasses>
+      <AbstractClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/AbstractConverter.php">AbstractConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/AbstractStatsTcConverter.php">AbstractStatsTcConverter</Class>
+      </AbstractClasses>
+      <DependsUpon>
+        <Package></Package>
+        <Package>JBZoo\Data</Package>
+        <Package>JBZoo\ToolboxCI</Package>
+        <Package>JBZoo\ToolboxCI\Formats</Package>
+        <Package>JBZoo\ToolboxCI\Formats\JUnit</Package>
+        <Package>JBZoo\ToolboxCI\Formats\Metric</Package>
+        <Package>JBZoo\ToolboxCI\Formats\MetricMaps</Package>
+        <Package>JBZoo\ToolboxCI\Formats\Source</Package>
+        <Package>JBZoo\ToolboxCI\Formats\TeamCity</Package>
+        <Package>JBZoo\ToolboxCI\Formats\TeamCity\Writers</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>JBZoo\PHPUnit</Package>
+        <Package>JBZoo\ToolboxCI\Commands</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\ToolboxCI">
+      <Stats>
+        <TotalClasses>3</TotalClasses>
+        <ConcreteClasses>3</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>4</Ca>
+        <Ce>2</Ce>
+        <A>0</A>
+        <I>0.33333333333333</I>
+        <D>0.66666666666667</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Helper.php">Helper</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Markdown.php">Markdown</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>JBZoo\Utils</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>JBZoo\PHPUnit</Package>
+        <Package>JBZoo\ToolboxCI\Commands</Package>
+        <Package>JBZoo\ToolboxCI\Converters</Package>
+        <Package>JBZoo\ToolboxCI\Formats</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\ToolboxCI\Formats">
+      <Stats>
+        <TotalClasses>3</TotalClasses>
+        <ConcreteClasses>3</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>6</Ca>
+        <Ce>5</Ce>
+        <A>0</A>
+        <I>0.45454545454545</I>
+        <D>0.54545454545455</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/AbstractNode.php">AbstractNode</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Xml.php">Xml</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>JBZoo\Data</Package>
+        <Package>JBZoo\ToolboxCI</Package>
+        <Package>JBZoo\ToolboxCI\Formats\Source</Package>
+        <Package>JBZoo\Utils</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>JBZoo\PHPUnit</Package>
+        <Package>JBZoo\ToolboxCI\Converters</Package>
+        <Package>JBZoo\ToolboxCI\Formats\JUnit</Package>
+        <Package>JBZoo\ToolboxCI\Formats\Metric</Package>
+        <Package>JBZoo\ToolboxCI\Formats\Source</Package>
+        <Package>JBZoo\ToolboxCI\Formats\TeamCity</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput">
+      <Stats>
+        <TotalClasses>6</TotalClasses>
+        <ConcreteClasses>5</ConcreteClasses>
+        <AbstractClasses>1</AbstractClasses>
+        <Ca>1</Ca>
+        <Ce>1</Ce>
+        <A>0.16666666666667</A>
+        <I>0.5</I>
+        <D>0.33333333333333</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/Error.php">Error</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/Failure.php">Failure</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/Skipped.php">Skipped</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/SystemOut.php">SystemOut</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/Warning.php">Warning</Class>
+      </ConcreteClasses>
+      <AbstractClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/AbstractOutput.php">AbstractOutput</Class>
+      </AbstractClasses>
+      <DependsUpon>
+        <Package></Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>JBZoo\ToolboxCI\Formats\JUnit</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\ToolboxCI\Formats\JUnit">
+      <Stats>
+        <TotalClasses>4</TotalClasses>
+        <ConcreteClasses>4</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>2</Ca>
+        <Ce>3</Ce>
+        <A>0</A>
+        <I>0.6</I>
+        <D>0.4</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/JUnit.php">JUnit</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/JUnitCase.php">JUnitCase</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/JUnitSuite.php">JUnitSuite</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>JBZoo\ToolboxCI\Formats</Package>
+        <Package>JBZoo\ToolboxCI\Formats\JUnit\CaseOutput</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>JBZoo\PHPUnit</Package>
+        <Package>JBZoo\ToolboxCI\Converters</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\ToolboxCI\Formats\Metric">
+      <Stats>
+        <TotalClasses>2</TotalClasses>
+        <ConcreteClasses>2</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>1</Ca>
+        <Ce>2</Ce>
+        <A>0</A>
+        <I>0.66666666666667</I>
+        <D>0.33333333333333</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Metric/Metric.php">Metric</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Metric/Metrics.php">Metrics</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>JBZoo\ToolboxCI\Formats</Package>
+        <Package>JBZoo\ToolboxCI\Formats\MetricMaps</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>JBZoo\ToolboxCI\Converters</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\ToolboxCI\Formats\MetricMaps">
+      <Stats>
+        <TotalClasses>5</TotalClasses>
+        <ConcreteClasses>4</ConcreteClasses>
+        <AbstractClasses>1</AbstractClasses>
+        <Ca>2</Ca>
+        <Ce>0</Ce>
+        <A>0.2</A>
+        <I>0</I>
+        <D>0.8</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/PhpDepend.php">PhpDepend</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/PhpLoc.php">PhpLoc</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/PhpMetrics.php">PhpMetrics</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/PhpUnitClover.php">PhpUnitClover</Class>
+      </ConcreteClasses>
+      <AbstractClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/AbstractMetricMap.php">AbstractMetricMap</Class>
+      </AbstractClasses>
+      <DependsUpon/>
+      <UsedBy>
+        <Package>JBZoo\ToolboxCI\Converters</Package>
+        <Package>JBZoo\ToolboxCI\Formats\Metric</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\ToolboxCI\Formats\Source">
+      <Stats>
+        <TotalClasses>4</TotalClasses>
+        <ConcreteClasses>4</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>3</Ca>
+        <Ce>2</Ce>
+        <A>0</A>
+        <I>0.4</I>
+        <D>0.6</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Source/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Source/SourceCase.php">SourceCase</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Source/SourceCaseOutput.php">SourceCaseOutput</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Source/SourceSuite.php">SourceSuite</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>JBZoo\Data</Package>
+        <Package>JBZoo\ToolboxCI\Formats</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>JBZoo\PHPUnit</Package>
+        <Package>JBZoo\ToolboxCI\Converters</Package>
+        <Package>JBZoo\ToolboxCI\Formats</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\ToolboxCI\Formats\TeamCity">
+      <Stats>
+        <TotalClasses>3</TotalClasses>
+        <ConcreteClasses>3</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>2</Ca>
+        <Ce>4</Ce>
+        <A>0</A>
+        <I>0.66666666666667</I>
+        <D>0.33333333333333</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Helper.php">Helper</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/TeamCity.php">TeamCity</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>JBZoo\ToolboxCI\Formats</Package>
+        <Package>JBZoo\ToolboxCI\Formats\TeamCity\Writers</Package>
+        <Package>JBZoo\Utils</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>JBZoo\ToolboxCI\Converters</Package>
+        <Package>JBZoo\ToolboxCI\Formats\TeamCity\Writers</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\ToolboxCI\Formats\TeamCity\Writers">
+      <Stats>
+        <TotalClasses>6</TotalClasses>
+        <ConcreteClasses>5</ConcreteClasses>
+        <AbstractClasses>1</AbstractClasses>
+        <Ca>2</Ca>
+        <Ce>3</Ce>
+        <A>0.16666666666667</A>
+        <I>0.6</I>
+        <D>0.23333333333333</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/Buffer.php">Buffer</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/CustomCallback.php">CustomCallback</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/Stdout.php">Stdout</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/SymfonyConsole.php">SymfonyConsole</Class>
+      </ConcreteClasses>
+      <AbstractClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/AbstractWriter.php">AbstractWriter</Class>
+      </AbstractClasses>
+      <DependsUpon>
+        <Package>JBZoo\ToolboxCI\Formats\TeamCity</Package>
+        <Package>JBZoo\Utils</Package>
+        <Package>Symfony\Component\Console\Output</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>JBZoo\ToolboxCI\Converters</Package>
+        <Package>JBZoo\ToolboxCI\Formats\TeamCity</Package>
+      </UsedBy>
+    </Package>
+    <Package name="JBZoo\Utils">
+      <Stats>
+        <TotalClasses>22</TotalClasses>
+        <ConcreteClasses>22</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>8</Ca>
+        <Ce>4</Ce>
+        <A>0</A>
+        <I>0.33333333333333</I>
+        <D>0.66666666666667</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Arr.php">Arr</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Cli.php">Cli</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Csv.php">Csv</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Dates.php">Dates</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Email.php">Email</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Env.php">Env</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/FS.php">FS</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Filter.php">Filter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Http.php">Http</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/IP.php">IP</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Image.php">Image</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/PhpDocs.php">PhpDocs</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Ser.php">Ser</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Slug.php">Slug</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Stats.php">Stats</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Str.php">Str</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Sys.php">Sys</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Timer.php">Timer</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Url.php">Url</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Vars.php">Vars</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Xml.php">Xml</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>JBZoo\Data</Package>
+        <Package>Symfony\Component\Process</Package>
+        <Package>Symfony\Component\Process\Exception</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>JBZoo\ComposerDiff</Package>
+        <Package>JBZoo\ComposerGraph</Package>
+        <Package>JBZoo\Data</Package>
+        <Package>JBZoo\PHPUnit</Package>
+        <Package>JBZoo\ToolboxCI</Package>
+        <Package>JBZoo\ToolboxCI\Formats</Package>
+        <Package>JBZoo\ToolboxCI\Formats\TeamCity</Package>
+        <Package>JBZoo\ToolboxCI\Formats\TeamCity\Writers</Package>
+      </UsedBy>
+    </Package>
+  </Packages>
+  <Cycles>
+    <Package Name="+global">
+      <Package>+global</Package>
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+    </Package>
+    <Package Name="JBZoo\ComposerDiff\Commands">
+      <Package>JBZoo\ComposerDiff\Commands</Package>
+      <Package>JBZoo\ComposerDiff</Package>
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+    </Package>
+    <Package Name="JBZoo\ComposerDiff">
+      <Package>JBZoo\ComposerDiff</Package>
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+    </Package>
+    <Package Name="JBZoo\ComposerDiff\Renders">
+      <Package>JBZoo\ComposerDiff\Renders</Package>
+      <Package>JBZoo\ComposerDiff</Package>
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+    </Package>
+    <Package Name="JBZoo\PHPUnit">
+      <Package>JBZoo\PHPUnit</Package>
+      <Package>JBZoo\ComposerDiff</Package>
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+    </Package>
+    <Package Name="JBZoo\ComposerGraph">
+      <Package>JBZoo\ComposerGraph</Package>
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+    </Package>
+    <Package Name="JBZoo\Data">
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+    </Package>
+    <Package Name="JBZoo\ToolboxCI\Commands">
+      <Package>JBZoo\ToolboxCI\Commands</Package>
+      <Package>JBZoo\ToolboxCI</Package>
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+    </Package>
+    <Package Name="JBZoo\ToolboxCI\Converters">
+      <Package>JBZoo\ToolboxCI\Converters</Package>
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+    </Package>
+    <Package Name="JBZoo\ToolboxCI">
+      <Package>JBZoo\ToolboxCI</Package>
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+    </Package>
+    <Package Name="JBZoo\ToolboxCI\Formats">
+      <Package>JBZoo\ToolboxCI\Formats</Package>
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+    </Package>
+    <Package Name="JBZoo\ToolboxCI\Formats\JUnit">
+      <Package>JBZoo\ToolboxCI\Formats\JUnit</Package>
+      <Package>JBZoo\ToolboxCI\Formats</Package>
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+    </Package>
+    <Package Name="JBZoo\ToolboxCI\Formats\Metric">
+      <Package>JBZoo\ToolboxCI\Formats\Metric</Package>
+      <Package>JBZoo\ToolboxCI\Formats</Package>
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+    </Package>
+    <Package Name="JBZoo\ToolboxCI\Formats\Source">
+      <Package>JBZoo\ToolboxCI\Formats\Source</Package>
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+    </Package>
+    <Package Name="JBZoo\ToolboxCI\Formats\TeamCity">
+      <Package>JBZoo\ToolboxCI\Formats\TeamCity</Package>
+      <Package>JBZoo\ToolboxCI\Formats</Package>
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+    </Package>
+    <Package Name="JBZoo\ToolboxCI\Formats\TeamCity\Writers">
+      <Package>JBZoo\ToolboxCI\Formats\TeamCity\Writers</Package>
+      <Package>JBZoo\ToolboxCI\Formats\TeamCity</Package>
+      <Package>JBZoo\ToolboxCI\Formats</Package>
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+    </Package>
+    <Package Name="JBZoo\Utils">
+      <Package>JBZoo\Utils</Package>
+      <Package>JBZoo\Data</Package>
+      <Package>JBZoo\Utils</Package>
+    </Package>
+  </Cycles>
+</PDepend>

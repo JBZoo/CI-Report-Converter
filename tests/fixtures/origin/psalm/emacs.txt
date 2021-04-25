@@ -1,0 +1,26 @@
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php:34:21:error - Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setName does not have a return type, expecting void
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php:42:21:error - Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setClassname does not have a return type, expecting void
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php:52:21:error - Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setTime does not have a return type, expecting void
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php:54:37:error - Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, float provided
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php:65:47:error - Cannot call method createElement on possibly null value
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php:88:49:error - Cannot call method createElement on possibly null value
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php:106:21:error - Method JBZoo\ToolboxCI\JUnit\TestCaseElement::incrementFailureCount does not have a return type, expecting void
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php:109:45:error - Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, int provided
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php:111:45:error - Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, int(1) provided
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php:118:21:error - Method JBZoo\ToolboxCI\JUnit\TestCaseElement::incrementErrorCount does not have a return type, expecting void
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php:121:43:error - Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, int provided
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php:123:43:error - Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, int(1) provided
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php:35:21:error - Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setName does not have a return type, expecting void
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php:45:21:error - Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setTimestamp does not have a return type, expecting void
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php:55:21:error - Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setTime does not have a return type, expecting void
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php:57:37:error - Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, float provided
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php:65:21:error - Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setHostname does not have a return type, expecting void
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php:86:22:error - Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::incrementTestCount does not have a return type, expecting void
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php:89:42:error - Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int provided
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php:91:42:error - Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php:98:21:error - Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::incrementFailureCount does not have a return type, expecting void
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php:101:45:error - Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int provided
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php:103:45:error - Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php:110:21:error - Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::incrementErrorCount does not have a return type, expecting void
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php:113:43:error - Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int provided
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestSuiteElement.php:115:43:error - Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided

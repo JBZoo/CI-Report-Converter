@@ -1,0 +1,3 @@
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/JUnitXml.php:24:5: warning - Visibility must be declared on all constants if your project supports PHP 7.1 or later (PSR12.Properties.ConstantVisibility.NotFound)
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/JUnitXml.php:44:35: error - Opening brace should be on a new line (Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine)
+/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/JUnitXml.php:50:1: error - Expected 1 newline at end of file; 0 found (PSR2.Files.EndFileNewline.NoneFound)
