@@ -8,11 +8,11 @@
 ### Installing
 
 ```sh
-composer require jbzoo/toolbox-ci
+composer require jbzoo/ci-report-converter
 
 # OR use phar file.
 # Replace <VERSION> to the latest version. See releases page or badge above
-wget https://github.com/JBZoo/Toolbox-CI/releases/download/<VERSION>/toolbox-ci.phar
+wget https://github.com/JBZoo/CI-Report-Converter/releases/download/<VERSION>/ci-report-converter.phar
 ```
 
 

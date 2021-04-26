@@ -149,7 +149,7 @@ class Map
 
         throw new Exception(
             "The format \"{$format}\" is not available as \"{$direction}\" direction. " .
-            "See `toolbox-ci convert:map`"
+            "See `ci-report-converter convert:map`"
         );
     }
 
@@ -166,6 +166,6 @@ class Map
             }
         }
 
-        throw new Exception("The format \"{$sourceFormat}\" is not available. See `toolbox-ci convert:map`");
+        throw new Exception("The format \"{$sourceFormat}\" is not available. See `ci-report-converter convert:map`");
     }
 }

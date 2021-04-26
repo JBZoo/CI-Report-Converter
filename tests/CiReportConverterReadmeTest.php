@@ -87,7 +87,7 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
         ]))
             ->addStyle('linkStyle default interpolate basis');
 
-        $graph->addNode($toolbox = new Node('ci-report-converter', 'Toolbox-CI', Node::CIRCLE));
+        $graph->addNode($toolbox = new Node('ci-report-converter', 'CI-Report-Converter', Node::CIRCLE));
 
         foreach ($sources as $sourceType => $sourceName) {
             $node = new Node($sourceType . "_src", $sourceName);

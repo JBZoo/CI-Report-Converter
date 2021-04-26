@@ -37,7 +37,7 @@ foreach ($vendorPaths as $file) {
 
 require JBZOO_AUTOLOAD_FILE;
 
-$application = new Application('JBZoo/Toolbox-CI', '@git-version@');
+$application = new Application('JBZoo/CI-Report-Converter', '@git-version@');
 $application->add(new Convert());
 $application->add(new ConvertMap());
 $application->add(new TeamCityStats());
