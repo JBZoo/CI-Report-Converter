@@ -2,17 +2,17 @@
 <checkstyle version="6.5">
     <file name="src/JUnit/JUnitXml.php">
         <error line="37" severity="warning"
-               message="Assigning $this-&amp;gt;rootElement of type \DOMElement|false to property but \JBZoo\ToolboxCI\JUnit\JUnitXml-&amp;gt;rootElement is \DOMElement (false is incompatible)"
+               message="Assigning $this-&amp;gt;rootElement of type \DOMElement|false to property but \JBZoo\CiReportConverter\JUnit\JUnitXml-&amp;gt;rootElement is \DOMElement (false is incompatible)"
                source="PhanPossiblyFalseTypeMismatchProperty"/>
         <error line="44" severity="warning"
-               message="Can use \JBZoo\ToolboxCI\JUnit\TestSuiteElement as a return type of addTestSuite"
+               message="Can use \JBZoo\CiReportConverter\JUnit\TestSuiteElement as a return type of addTestSuite"
                source="PhanPluginCanUseReturnType"/>
     </file>
     <file name="src/JUnit/TestCaseElement.php">
         <error line="34" severity="warning" message="Can use string as the type of parameter $name of setName"
                source="PhanPluginCanUseParamType"/>
         <error line="36" severity="warning"
-               message="Suspicious order for argument name - This is getting passed to parameter #1 (string $name) of \JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute(string $name, string $value)"
+               message="Suspicious order for argument name - This is getting passed to parameter #1 (string $name) of \JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute(string $name, string $value)"
                source="PhanPluginSuspiciousParamPositionInternal"/>
         <error line="42" severity="warning" message="Can use string as the type of parameter $classname of setClassname"
                source="PhanPluginCanUseParamType"/>
@@ -21,7 +21,7 @@
         <error line="35" severity="warning" message="Can use string as the type of parameter $name of setName"
                source="PhanPluginCanUseParamType"/>
         <error line="37" severity="warning"
-               message="Suspicious order for argument name - This is getting passed to parameter #1 (string $name) of \JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute(string $name, string $value)"
+               message="Suspicious order for argument name - This is getting passed to parameter #1 (string $name) of \JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute(string $name, string $value)"
                source="PhanPluginSuspiciousParamPositionInternal"/>
     </file>
 </checkstyle>

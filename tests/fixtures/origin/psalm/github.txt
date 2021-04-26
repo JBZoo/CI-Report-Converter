@@ -1,26 +1,26 @@
-::error file=src/JUnit/TestCaseElement.php,line=34,col=21::Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setName does not have a return type, expecting void
-::error file=src/JUnit/TestCaseElement.php,line=42,col=21::Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setClassname does not have a return type, expecting void
-::error file=src/JUnit/TestCaseElement.php,line=52,col=21::Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setTime does not have a return type, expecting void
-::error file=src/JUnit/TestCaseElement.php,line=54,col=37::Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, float provided
+::error file=src/JUnit/TestCaseElement.php,line=34,col=21::Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setName does not have a return type, expecting void
+::error file=src/JUnit/TestCaseElement.php,line=42,col=21::Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setClassname does not have a return type, expecting void
+::error file=src/JUnit/TestCaseElement.php,line=52,col=21::Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setTime does not have a return type, expecting void
+::error file=src/JUnit/TestCaseElement.php,line=54,col=37::Argument 2 of JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute expects string, float provided
 ::error file=src/JUnit/TestCaseElement.php,line=65,col=47::Cannot call method createElement on possibly null value
 ::error file=src/JUnit/TestCaseElement.php,line=88,col=49::Cannot call method createElement on possibly null value
-::error file=src/JUnit/TestCaseElement.php,line=106,col=21::Method JBZoo\ToolboxCI\JUnit\TestCaseElement::incrementFailureCount does not have a return type, expecting void
-::error file=src/JUnit/TestCaseElement.php,line=109,col=45::Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, int provided
-::error file=src/JUnit/TestCaseElement.php,line=111,col=45::Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, int(1) provided
-::error file=src/JUnit/TestCaseElement.php,line=118,col=21::Method JBZoo\ToolboxCI\JUnit\TestCaseElement::incrementErrorCount does not have a return type, expecting void
-::error file=src/JUnit/TestCaseElement.php,line=121,col=43::Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, int provided
-::error file=src/JUnit/TestCaseElement.php,line=123,col=43::Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, int(1) provided
-::error file=src/JUnit/TestSuiteElement.php,line=35,col=21::Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setName does not have a return type, expecting void
-::error file=src/JUnit/TestSuiteElement.php,line=45,col=21::Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setTimestamp does not have a return type, expecting void
-::error file=src/JUnit/TestSuiteElement.php,line=55,col=21::Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setTime does not have a return type, expecting void
-::error file=src/JUnit/TestSuiteElement.php,line=57,col=37::Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, float provided
-::error file=src/JUnit/TestSuiteElement.php,line=65,col=21::Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setHostname does not have a return type, expecting void
-::error file=src/JUnit/TestSuiteElement.php,line=86,col=22::Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::incrementTestCount does not have a return type, expecting void
-::error file=src/JUnit/TestSuiteElement.php,line=89,col=42::Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int provided
-::error file=src/JUnit/TestSuiteElement.php,line=91,col=42::Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided
-::error file=src/JUnit/TestSuiteElement.php,line=98,col=21::Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::incrementFailureCount does not have a return type, expecting void
-::error file=src/JUnit/TestSuiteElement.php,line=101,col=45::Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int provided
-::error file=src/JUnit/TestSuiteElement.php,line=103,col=45::Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided
-::error file=src/JUnit/TestSuiteElement.php,line=110,col=21::Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::incrementErrorCount does not have a return type, expecting void
-::error file=src/JUnit/TestSuiteElement.php,line=113,col=43::Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int provided
-::error file=src/JUnit/TestSuiteElement.php,line=115,col=43::Argument 2 of JBZoo\ToolboxCI\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided
+::error file=src/JUnit/TestCaseElement.php,line=106,col=21::Method JBZoo\CiReportConverter\JUnit\TestCaseElement::incrementFailureCount does not have a return type, expecting void
+::error file=src/JUnit/TestCaseElement.php,line=109,col=45::Argument 2 of JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute expects string, int provided
+::error file=src/JUnit/TestCaseElement.php,line=111,col=45::Argument 2 of JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute expects string, int(1) provided
+::error file=src/JUnit/TestCaseElement.php,line=118,col=21::Method JBZoo\CiReportConverter\JUnit\TestCaseElement::incrementErrorCount does not have a return type, expecting void
+::error file=src/JUnit/TestCaseElement.php,line=121,col=43::Argument 2 of JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute expects string, int provided
+::error file=src/JUnit/TestCaseElement.php,line=123,col=43::Argument 2 of JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute expects string, int(1) provided
+::error file=src/JUnit/TestSuiteElement.php,line=35,col=21::Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::setName does not have a return type, expecting void
+::error file=src/JUnit/TestSuiteElement.php,line=45,col=21::Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::setTimestamp does not have a return type, expecting void
+::error file=src/JUnit/TestSuiteElement.php,line=55,col=21::Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::setTime does not have a return type, expecting void
+::error file=src/JUnit/TestSuiteElement.php,line=57,col=37::Argument 2 of JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute expects string, float provided
+::error file=src/JUnit/TestSuiteElement.php,line=65,col=21::Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::setHostname does not have a return type, expecting void
+::error file=src/JUnit/TestSuiteElement.php,line=86,col=22::Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::incrementTestCount does not have a return type, expecting void
+::error file=src/JUnit/TestSuiteElement.php,line=89,col=42::Argument 2 of JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int provided
+::error file=src/JUnit/TestSuiteElement.php,line=91,col=42::Argument 2 of JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided
+::error file=src/JUnit/TestSuiteElement.php,line=98,col=21::Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::incrementFailureCount does not have a return type, expecting void
+::error file=src/JUnit/TestSuiteElement.php,line=101,col=45::Argument 2 of JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int provided
+::error file=src/JUnit/TestSuiteElement.php,line=103,col=45::Argument 2 of JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided
+::error file=src/JUnit/TestSuiteElement.php,line=110,col=21::Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::incrementErrorCount does not have a return type, expecting void
+::error file=src/JUnit/TestSuiteElement.php,line=113,col=43::Argument 2 of JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int provided
+::error file=src/JUnit/TestSuiteElement.php,line=115,col=43::Argument 2 of JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided

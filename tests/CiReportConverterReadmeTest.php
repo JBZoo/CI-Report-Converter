@@ -1,16 +1,16 @@
 <?php
 
 /**
- * JBZoo Toolbox - Toolbox-CI
+ * JBZoo Toolbox - CI-Report-Converter
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    Toolbox-CI
+ * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/Toolbox-CI
+ * @link       https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
@@ -21,19 +21,19 @@ use JBZoo\MermaidPHP\Graph;
 use JBZoo\MermaidPHP\Helper;
 use JBZoo\MermaidPHP\Link;
 use JBZoo\MermaidPHP\Node;
-use JBZoo\ToolboxCI\Converters\Map;
+use JBZoo\CiReportConverter\Converters\Map;
 
 /**
- * Class ToolboxCIReadmeTest
+ * Class CiReportConverterReadmeTest
  *
  * @package JBZoo\PHPUnit
  */
-class ToolboxCIReadmeTest extends AbstractReadmeTest
+class CiReportConverterReadmeTest extends AbstractReadmeTest
 {
     /**
      * @var string
      */
-    protected $packageName = 'Toolbox-CI';
+    protected $packageName = 'CI-Report-Converter';
 
     /**
      * @inheritDoc
@@ -87,7 +87,7 @@ class ToolboxCIReadmeTest extends AbstractReadmeTest
         ]))
             ->addStyle('linkStyle default interpolate basis');
 
-        $graph->addNode($toolbox = new Node('toolbox-ci', 'Toolbox-CI', Node::CIRCLE));
+        $graph->addNode($toolbox = new Node('ci-report-converter', 'Toolbox-CI', Node::CIRCLE));
 
         foreach ($sources as $sourceType => $sourceName) {
             $node = new Node($sourceType . "_src", $sourceName);

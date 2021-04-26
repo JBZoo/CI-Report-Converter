@@ -1,31 +1,31 @@
 <?php
 
 /**
- * JBZoo Toolbox - Toolbox-CI
+ * JBZoo Toolbox - CI-Report-Converter
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    Toolbox-CI
+ * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/Toolbox-CI
+ * @link       https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\ToolboxCI\Converters;
+namespace JBZoo\CiReportConverter\Converters;
 
-use JBZoo\ToolboxCI\Formats\Source\SourceCase;
-use JBZoo\ToolboxCI\Formats\Source\SourceSuite;
-use JBZoo\ToolboxCI\Formats\TeamCity\TeamCity;
-use JBZoo\ToolboxCI\Formats\TeamCity\Writers\AbstractWriter;
-use JBZoo\ToolboxCI\Formats\TeamCity\Writers\Buffer;
+use JBZoo\CiReportConverter\Formats\Source\SourceCase;
+use JBZoo\CiReportConverter\Formats\Source\SourceSuite;
+use JBZoo\CiReportConverter\Formats\TeamCity\TeamCity;
+use JBZoo\CiReportConverter\Formats\TeamCity\Writers\AbstractWriter;
+use JBZoo\CiReportConverter\Formats\TeamCity\Writers\Buffer;
 
 /**
  * Class TeamCityTestsConverter
- * @package JBZoo\ToolboxCI\Converters
+ * @package JBZoo\CiReportConverter\Converters
  */
 class TeamCityTestsConverter extends AbstractConverter
 {

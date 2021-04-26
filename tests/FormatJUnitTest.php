@@ -1,23 +1,23 @@
 <?php
 
 /**
- * JBZoo Toolbox - Toolbox-CI
+ * JBZoo Toolbox - CI-Report-Converter
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    Toolbox-CI
+ * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/Toolbox-CI
+ * @link       https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
 namespace JBZoo\PHPUnit;
 
-use JBZoo\ToolboxCI\Formats\JUnit\JUnit;
+use JBZoo\CiReportConverter\Formats\JUnit\JUnit;
 use PHPUnit\Framework\AssertionFailedError;
 use PHPUnit\Framework\Error\Notice;
 use PHPUnit\Framework\ExpectationFailedException;
@@ -25,7 +25,7 @@ use PHPUnit\Framework\RiskyTestError;
 use PHPUnit\Framework\Warning;
 
 /**
- * Class JUnitTest
+ * Class FormatJUnitTest
  *
  * @package JBZoo\PHPUnit
  */
@@ -36,7 +36,7 @@ class FormatJUnitTest extends PHPUnit
         // Fixtures
         $class = ExampleTest::class;
         $className = str_replace('\\', '.', $class);
-        $filename = '/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php';
+        $filename = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php';
 
         // Build XML
         $junit = new JUnit();
@@ -51,8 +51,8 @@ class FormatJUnitTest extends PHPUnit
                 'JBZoo\PHPUnit\ExampleTest::testInValid',
                 'Failed asserting that false is true.',
                 '',
-                '/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/vendor/jbzoo/phpunit/src/functions/aliases.php:107',
-                '/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php:35',
+                '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/phpunit/src/functions/aliases.php:107',
+                '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php:35',
                 '',
             ]));
 
@@ -68,8 +68,8 @@ class FormatJUnitTest extends PHPUnit
                 'JBZoo\PHPUnit\ExampleTest::testFail',
                 'Some reason to fail',
                 '',
-                '/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/vendor/jbzoo/phpunit/src/functions/aliases.php:51',
-                '/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php:50',
+                '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/phpunit/src/functions/aliases.php:51',
+                '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php:50',
                 '',
             ]));
 
@@ -93,7 +93,7 @@ class FormatJUnitTest extends PHPUnit
                 'JBZoo\PHPUnit\ExampleTest::testNotice',
                 'Undefined variable: aaa',
                 '',
-                '/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php:77',
+                '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php:77',
                 '',
             ]));
 
@@ -103,7 +103,7 @@ class FormatJUnitTest extends PHPUnit
                 'JBZoo\PHPUnit\ExampleTest::testWarning',
                 'Some warning',
                 '',
-                '/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php:82',
+                '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php:82',
                 '',
             ]));
 
@@ -115,7 +115,7 @@ class FormatJUnitTest extends PHPUnit
                 'JBZoo\PHPUnit\ExampleTest::testException',
                 'JBZoo\PHPUnit\Exception: Exception message',
                 '',
-                '/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php:88',
+                '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php:88',
                 '',
             ]))
             ->addSystemOut('Some echo output');

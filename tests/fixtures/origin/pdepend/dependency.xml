@@ -452,7 +452,7 @@
         <type namespace="JBZoo\PHPUnit" name="DataCodeStyleTest"/>
         <type namespace="JBZoo\PHPUnit" name="MermaidCodeStyleTest"/>
         <type namespace="JBZoo\PHPUnit" name="PHPUnitCodeStyleTest"/>
-        <type namespace="JBZoo\PHPUnit" name="ToolboxCICodestyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CiReportConverterCodestyleTest"/>
         <type namespace="JBZoo\PHPUnit" name="UtilsCodestyleTest"/>
       </afferent>
       <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/AbstractCodestyleTest.php"/>
@@ -467,7 +467,7 @@
         <type namespace="JBZoo\PHPUnit" name="DataComposerTest"/>
         <type namespace="JBZoo\PHPUnit" name="MermaidComposerTest"/>
         <type namespace="JBZoo\PHPUnit" name="PHPUnitComposerTest"/>
-        <type namespace="JBZoo\PHPUnit" name="ToolboxCIComposerTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CiReportConverterComposerTest"/>
         <type namespace="JBZoo\PHPUnit" name="UtilsComposerTest"/>
       </afferent>
       <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/AbstractComposerTest.php"/>
@@ -484,7 +484,7 @@
         <type namespace="JBZoo\PHPUnit" name="DataCopyrightTest"/>
         <type namespace="JBZoo\PHPUnit" name="MermaidCopyrightsTest"/>
         <type namespace="JBZoo\PHPUnit" name="PHPUnitCopyrightTest"/>
-        <type namespace="JBZoo\PHPUnit" name="ToolboxCICopyrightTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CiReportConverterCopyrightTest"/>
         <type namespace="JBZoo\PHPUnit" name="UtilsCopyrightsTest"/>
       </afferent>
       <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/AbstractCopyrightTest.php"/>
@@ -499,7 +499,7 @@
         <type namespace="JBZoo\PHPUnit" name="DataReadmeTest"/>
         <type namespace="JBZoo\PHPUnit" name="MermaidPhpReadmeTest"/>
         <type namespace="JBZoo\PHPUnit" name="PHPUnitReadmeTest"/>
-        <type namespace="JBZoo\PHPUnit" name="ToolboxCIReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CiReportConverterReadmeTest"/>
         <type namespace="JBZoo\PHPUnit" name="UtilsReadmeTest"/>
       </afferent>
       <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/AbstractReadmeTest.php"/>
@@ -664,96 +664,96 @@
     <class name="CliCommandsTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="CheckStyleConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="CheckStyleConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="JUnitConverter"/>
         <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
         <type namespace="Symfony\Component\Console" name="Application"/>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="Convert"/>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="ConvertMap"/>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="TeamCityStats"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="Convert"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="ConvertMap"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="TeamCityStats"/>
         <type namespace="Symfony\Component\Console\Output" name="BufferedOutput"/>
         <type namespace="Symfony\Component\Console\Input" name="StringInput"/>
         <type namespace="JBZoo\Utils" name="Cli"/>
         <type namespace="JBZoo\Utils" name="Sys"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/CliCommandsTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CliCommandsTest.php"/>
     </class>
     <class name="ConverterCheckStyleTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="CheckStyleConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="CheckStyleConverter"/>
         <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="JUnitConverter"/>
         <type namespace="JBZoo\PHPUnit" name="Aliases"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterCheckStyleTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/ConverterCheckStyleTest.php"/>
     </class>
     <class name="ConverterJUnitTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnit"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnit"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceSuite"/>
         <type namespace="JBZoo\PHPUnit" name="ExampleTest"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCaseOutput"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceCaseOutput"/>
         <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
         <type namespace="JBZoo\PHPUnit" name="Aliases"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterJUnitTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/ConverterJUnitTest.php"/>
     </class>
     <class name="ConverterPhpmdJsonTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMdJsonConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpMdJsonConverter"/>
         <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="JUnitConverter"/>
         <type namespace="JBZoo\PHPUnit" name="Aliases"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterPhpmdJsonTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/ConverterPhpmdJsonTest.php"/>
     </class>
     <class name="ConverterPsalmJsonTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PsalmJsonConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PsalmJsonConverter"/>
         <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="TeamCityTestsConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="TeamCityTestsConverter"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterPsalmJsonTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/ConverterPsalmJsonTest.php"/>
     </class>
     <class name="ConverterTeamCityStatsTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpLocStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpLocStatsTcConverter"/>
         <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpDependStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMetricsStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpUnitCloverStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpDependStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpMetricsStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpUnitCloverStatsTcConverter"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterTeamCityStatsTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/ConverterTeamCityStatsTest.php"/>
     </class>
     <class name="ConverterTeamCityTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="JUnitConverter"/>
         <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="TeamCityTestsConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="TeamCityTestsConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceSuite"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterTeamCityTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/ConverterTeamCityTest.php"/>
     </class>
     <class name="FormatJUnitTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
         <type namespace="JBZoo\PHPUnit" name="ExampleTest"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnit"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnit"/>
         <type namespace="PHPUnit\Framework" name="ExpectationFailedException"/>
         <type namespace="PHPUnit\Framework" name="AssertionFailedError"/>
         <type namespace="PHPUnit\Framework" name="RiskyTestError"/>
@@ -765,54 +765,54 @@
         <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/FormatJUnitTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/FormatJUnitTest.php"/>
     </class>
     <class name="FormatSourceTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceSuite"/>
         <type namespace="JBZoo\PHPUnit" name="ExampleTest"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCaseOutput"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCase"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceCaseOutput"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceCase"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="Exception"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/FormatSourceTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/FormatSourceTest.php"/>
     </class>
-    <class name="ToolboxCICodestyleTest">
+    <class name="CiReportConverterCodestyleTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="AbstractCodestyleTest"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolboxCICodestyleTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterCodestyleTest.php"/>
     </class>
-    <class name="ToolboxCIComposerTest">
+    <class name="CiReportConverterComposerTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="AbstractComposerTest"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolboxCIComposerTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterComposerTest.php"/>
     </class>
-    <class name="ToolboxCICopyrightTest">
+    <class name="CiReportConverterCopyrightTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="AbstractCopyrightTest"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolboxCICopyrightTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterCopyrightTest.php"/>
     </class>
-    <class name="ToolboxCIReadmeTest">
+    <class name="CiReportConverterReadmeTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="AbstractReadmeTest"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="Map"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolboxCIReadmeTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterReadmeTest.php"/>
     </class>
     <class name="Aliases">
       <efferent>
         <type namespace="" name="DOMDocument"/>
         <type namespace="" name="Exception"/>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="Xml"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="Xml"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="ConverterCheckStyleTest"/>
@@ -821,7 +821,7 @@
         <type namespace="JBZoo\PHPUnit" name="FormatJUnitTest"/>
         <type namespace="JBZoo\PHPUnit" name="ToolsTest"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/Tools/Aliases.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/Tools/Aliases.php"/>
     </class>
     <class name="ExampleTest">
       <efferent>
@@ -835,7 +835,7 @@
         <type namespace="JBZoo\PHPUnit" name="FormatJUnitTest"/>
         <type namespace="JBZoo\PHPUnit" name="FormatSourceTest"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/Tools/ExampleTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/Tools/ExampleTest.php"/>
     </class>
     <class name="Fixtures">
       <efferent/>
@@ -850,21 +850,21 @@
         <type namespace="JBZoo\PHPUnit" name="FormatJUnitTest"/>
         <type namespace="JBZoo\PHPUnit" name="ToolsTest"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/Tools/Fixtures.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/Tools/Fixtures.php"/>
     </class>
     <class name="ToolsTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="PHPUnit"/>
-        <type namespace="JBZoo\ToolboxCI" name="Helper"/>
+        <type namespace="JBZoo\CiReportConverter" name="Helper"/>
         <type namespace="JBZoo\PHPUnit" name="Fixtures"/>
         <type namespace="JBZoo\PHPUnit" name="Aliases"/>
         <type namespace="" name="ReflectionClass"/>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="Xml"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="Xml"/>
         <type namespace="" name="DOMDocument"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnit"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnit"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolsTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/ToolsTest.php"/>
     </class>
     <class name="AliasesTest">
       <efferent>
@@ -1212,11 +1212,11 @@
         <type namespace="JBZoo\Data" name="JSON"/>
         <type namespace="JBZoo\Data" name="PhpArray"/>
         <type namespace="JBZoo\Data" name="Yml"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="CheckStyleConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMdJsonConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PsalmJsonConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCaseOutput"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="CheckStyleConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpMdJsonConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PsalmJsonConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="AbstractNode"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceCaseOutput"/>
         <type namespace="JBZoo\Utils" name="Filter"/>
       </afferent>
       <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/data/src/Data.php"/>
@@ -1369,150 +1369,150 @@
       <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/mermaid-php/src/Render.php"/>
     </class>
   </package>
-  <package name="JBZoo\ToolboxCI\Commands">
+  <package name="JBZoo\CiReportConverter\Commands">
     <class name="AbstractCommand">
       <efferent>
         <type namespace="Symfony\Component\Console\Command" name="Command"/>
         <type namespace="Symfony\Component\Console\Input" name="InputOption"/>
         <type namespace="Symfony\Component\Console\Input" name="InputInterface"/>
         <type namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="Exception"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="Convert"/>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="ConvertMap"/>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="TeamCityStats"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="Convert"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="ConvertMap"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="TeamCityStats"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/AbstractCommand.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Commands/AbstractCommand.php"/>
     </class>
     <class name="Convert">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="AbstractCommand"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="AbstractCommand"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="Map"/>
         <type namespace="Symfony\Component\Console\Input" name="InputOption"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="Factory"/>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="Factory"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="Exception"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="CliCommandsTest"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/Convert.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Commands/Convert.php"/>
     </class>
     <class name="ConvertMap">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="AbstractCommand"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="AbstractCommand"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="Map"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="CliCommandsTest"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/ConvertMap.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Commands/ConvertMap.php"/>
     </class>
     <class name="Exception">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter" name="Exception"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="AbstractCommand"/>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="Convert"/>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="TeamCityStats"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="AbstractCommand"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="Convert"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="TeamCityStats"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/Exception.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Commands/Exception.php"/>
     </class>
     <class name="TeamCityStats">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="AbstractCommand"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="AbstractCommand"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="Map"/>
         <type namespace="Symfony\Component\Console\Input" name="InputOption"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="Factory"/>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="Factory"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="Exception"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="CliCommandsTest"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/TeamCityStats.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Commands/TeamCityStats.php"/>
     </class>
   </package>
-  <package name="JBZoo\ToolboxCI\Converters">
+  <package name="JBZoo\CiReportConverter\Converters">
     <class name="AbstractConverter">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="Exception"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="CheckStyleConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMdJsonConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PsalmJsonConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="TeamCityTestsConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="CheckStyleConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="Map"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpMdJsonConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PsalmJsonConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="TeamCityTestsConverter"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/AbstractConverter.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/AbstractConverter.php"/>
     </class>
     <class name="AbstractStatsTcConverter">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="AbstractWriter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="TeamCity"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="Buffer"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="AbstractMetricMap"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metrics"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="AbstractWriter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity" name="TeamCity"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="Buffer"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\MetricMaps" name="AbstractMetricMap"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Metric" name="Metrics"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="Exception"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpDependStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpLocStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMetricsStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpUnitCloverStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="Map"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpDependStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpLocStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpMetricsStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpUnitCloverStatsTcConverter"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/AbstractStatsTcConverter.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/AbstractStatsTcConverter.php"/>
     </class>
     <class name="CheckStyleConverter">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="Xml"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCaseOutput"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="Xml"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceCaseOutput"/>
         <type namespace="JBZoo\Data" name="Data"/>
-        <type namespace="JBZoo\ToolboxCI" name="Helper"/>
+        <type namespace="JBZoo\CiReportConverter" name="Helper"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="CliCommandsTest"/>
         <type namespace="JBZoo\PHPUnit" name="ConverterCheckStyleTest"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/CheckStyleConverter.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/CheckStyleConverter.php"/>
     </class>
     <class name="Exception">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter" name="Exception"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="Map"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/Exception.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/Exception.php"/>
     </class>
     <class name="Factory">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="Map"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="Convert"/>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="TeamCityStats"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="Convert"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="TeamCityStats"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/Factory.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/Factory.php"/>
     </class>
     <class name="JUnitConverter">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="Xml"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnit"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitSuite"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCaseOutput"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="Xml"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnit"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnitSuite"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceCaseOutput"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="CliCommandsTest"/>
@@ -1522,125 +1522,125 @@
         <type namespace="JBZoo\PHPUnit" name="ConverterPsalmJsonTest"/>
         <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityTest"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/JUnitConverter.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/JUnitConverter.php"/>
     </class>
     <class name="Map">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI" name="Markdown"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="Exception"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter" name="Markdown"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractStatsTcConverter"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\PHPUnit" name="ToolboxCIReadmeTest"/>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="Convert"/>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="ConvertMap"/>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="TeamCityStats"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="Factory"/>
+        <type namespace="JBZoo\PHPUnit" name="CiReportConverterReadmeTest"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="Convert"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="ConvertMap"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="TeamCityStats"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="Factory"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/Map.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/Map.php"/>
     </class>
     <class name="PhpDependStatsTcConverter">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metrics"/>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="Xml"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="PhpDepend"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Metric" name="Metrics"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="Xml"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\MetricMaps" name="PhpDepend"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityStatsTest"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpDependStatsTcConverter.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/PhpDependStatsTcConverter.php"/>
     </class>
     <class name="PhpLocStatsTcConverter">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metrics"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="PhpLoc"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Metric" name="Metrics"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\MetricMaps" name="PhpLoc"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityStatsTest"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpLocStatsTcConverter.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/PhpLocStatsTcConverter.php"/>
     </class>
     <class name="PhpMdJsonConverter">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCaseOutput"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceCaseOutput"/>
         <type namespace="JBZoo\Data" name="Data"/>
-        <type namespace="JBZoo\ToolboxCI" name="Helper"/>
+        <type namespace="JBZoo\CiReportConverter" name="Helper"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="ConverterPhpmdJsonTest"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpMdJsonConverter.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/PhpMdJsonConverter.php"/>
     </class>
     <class name="PhpMetricsStatsTcConverter">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metrics"/>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="Xml"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="PhpMetrics"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Metric" name="Metrics"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="Xml"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\MetricMaps" name="PhpMetrics"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityStatsTest"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpMetricsStatsTcConverter.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/PhpMetricsStatsTcConverter.php"/>
     </class>
     <class name="PhpUnitCloverStatsTcConverter">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metrics"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Metric" name="Metrics"/>
         <type namespace="" name="SimpleXMLElement"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="PhpUnitClover"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\MetricMaps" name="PhpUnitClover"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityStatsTest"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpUnitCloverStatsTcConverter.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/PhpUnitCloverStatsTcConverter.php"/>
     </class>
     <class name="PsalmJsonConverter">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCaseOutput"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceCaseOutput"/>
         <type namespace="JBZoo\Data" name="Data"/>
-        <type namespace="JBZoo\ToolboxCI" name="Helper"/>
+        <type namespace="JBZoo\CiReportConverter" name="Helper"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="ConverterPsalmJsonTest"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PsalmJsonConverter.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/PsalmJsonConverter.php"/>
     </class>
     <class name="TeamCityTestsConverter">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="AbstractWriter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="TeamCity"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="Buffer"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCase"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="AbstractWriter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity" name="TeamCity"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="Buffer"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceCase"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="ConverterPsalmJsonTest"/>
         <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityTest"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/TeamCityTestsConverter.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/TeamCityTestsConverter.php"/>
     </class>
   </package>
-  <package name="JBZoo\ToolboxCI">
+  <package name="JBZoo\CiReportConverter">
     <class name="Exception">
       <efferent>
         <type namespace="" name="RuntimeException"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Commands" name="Exception"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="Exception"/>
-        <type namespace="JBZoo\ToolboxCI" name="Markdown"/>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Commands" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter" name="Markdown"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="Exception"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Exception.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Exception.php"/>
     </class>
     <class name="Helper">
       <efferent>
@@ -1648,50 +1648,50 @@
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="ToolsTest"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="CheckStyleConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMdJsonConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PsalmJsonConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="CheckStyleConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpMdJsonConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PsalmJsonConverter"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Helper.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Helper.php"/>
     </class>
     <class name="Markdown">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter" name="Exception"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="Map"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="Map"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Markdown.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Markdown.php"/>
     </class>
   </package>
-  <package name="JBZoo\ToolboxCI\Formats">
+  <package name="JBZoo\CiReportConverter\Formats">
     <class name="AbstractNode">
       <efferent>
         <type namespace="JBZoo\Data" name="Data"/>
         <type namespace="JBZoo\Utils" name="Str"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="Exception"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCaseOutput"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceCaseOutput"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitCase"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitSuite"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metric"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metrics"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCase"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnitCase"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnitSuite"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Metric" name="Metric"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Metric" name="Metrics"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceCase"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceSuite"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/AbstractNode.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/AbstractNode.php"/>
     </class>
     <class name="Exception">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter" name="Exception"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="Exception"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="Exception"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity" name="Exception"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Exception.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/Exception.php"/>
     </class>
     <class name="Xml">
       <efferent>
@@ -1702,227 +1702,227 @@
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="Aliases"/>
         <type namespace="JBZoo\PHPUnit" name="ToolsTest"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="CheckStyleConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpDependStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMetricsStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnit"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="CheckStyleConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpDependStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpMetricsStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnit"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Xml.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/Xml.php"/>
     </class>
   </package>
-  <package name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput">
+  <package name="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput">
     <class name="AbstractOutput">
       <efferent>
         <type namespace="" name="DOMDocument"/>
         <type namespace="" name="DOMNode"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="Error"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="Failure"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="Skipped"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="SystemOut"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="Warning"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitCase"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" name="Error"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" name="Failure"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" name="Skipped"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" name="SystemOut"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" name="Warning"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnitCase"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/AbstractOutput.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/CaseOutput/AbstractOutput.php"/>
     </class>
     <class name="Error">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitCase"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnitCase"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/Error.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/CaseOutput/Error.php"/>
     </class>
     <class name="Failure">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitCase"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnitCase"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/Failure.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/CaseOutput/Failure.php"/>
     </class>
     <class name="Skipped">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitCase"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnitCase"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/Skipped.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/CaseOutput/Skipped.php"/>
     </class>
     <class name="SystemOut">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitCase"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnitCase"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/SystemOut.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/CaseOutput/SystemOut.php"/>
     </class>
     <class name="Warning">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitCase"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnitCase"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/Warning.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/CaseOutput/Warning.php"/>
     </class>
   </package>
-  <package name="JBZoo\ToolboxCI\Formats\JUnit">
+  <package name="JBZoo\CiReportConverter\Formats\JUnit">
     <class name="Exception">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="Exception"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/Exception.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/Exception.php"/>
     </class>
     <class name="JUnit">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitSuite"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnitSuite"/>
         <type namespace="" name="DOMDocument"/>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="Xml"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="Xml"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="ConverterJUnitTest"/>
         <type namespace="JBZoo\PHPUnit" name="FormatJUnitTest"/>
         <type namespace="JBZoo\PHPUnit" name="ToolsTest"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="JUnitConverter"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/JUnit.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/JUnit.php"/>
     </class>
     <class name="JUnitCase">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="Failure"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="Error"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="Warning"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="SystemOut"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="Skipped"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="AbstractNode"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" name="Failure"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" name="Error"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" name="Warning"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" name="SystemOut"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" name="Skipped"/>
         <type namespace="" name="DOMDocument"/>
         <type namespace="" name="DOMNode"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" name="AbstractOutput"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitSuite"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnitSuite"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/JUnitCase.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/JUnitCase.php"/>
     </class>
     <class name="JUnitSuite">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="AbstractNode"/>
         <type namespace="" name="DOMDocument"/>
         <type namespace="" name="DOMNode"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnitCase"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnitCase"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\JUnit" name="JUnit"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\JUnit" name="JUnit"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/JUnitSuite.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/JUnitSuite.php"/>
     </class>
   </package>
-  <package name="JBZoo\ToolboxCI\Formats\Metric">
+  <package name="JBZoo\CiReportConverter\Formats\Metric">
     <class name="Metric">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="AbstractNode"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metrics"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Metric" name="Metrics"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Metric/Metric.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/Metric/Metric.php"/>
     </class>
     <class name="Metrics">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="AbstractMetricMap"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metric"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="AbstractNode"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\MetricMaps" name="AbstractMetricMap"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Metric" name="Metric"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpDependStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpLocStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMetricsStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpUnitCloverStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpDependStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpLocStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpMetricsStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpUnitCloverStatsTcConverter"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Metric/Metrics.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/Metric/Metrics.php"/>
     </class>
   </package>
-  <package name="JBZoo\ToolboxCI\Formats\MetricMaps">
+  <package name="JBZoo\CiReportConverter\Formats\MetricMaps">
     <class name="AbstractMetricMap">
       <efferent/>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Metric" name="Metrics"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="PhpDepend"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="PhpLoc"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="PhpMetrics"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="PhpUnitClover"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Metric" name="Metrics"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\MetricMaps" name="PhpDepend"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\MetricMaps" name="PhpLoc"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\MetricMaps" name="PhpMetrics"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\MetricMaps" name="PhpUnitClover"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/AbstractMetricMap.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/MetricMaps/AbstractMetricMap.php"/>
     </class>
     <class name="PhpDepend">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="AbstractMetricMap"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\MetricMaps" name="AbstractMetricMap"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpDependStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpDependStatsTcConverter"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/PhpDepend.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/MetricMaps/PhpDepend.php"/>
     </class>
     <class name="PhpLoc">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="AbstractMetricMap"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\MetricMaps" name="AbstractMetricMap"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpLocStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpLocStatsTcConverter"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/PhpLoc.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/MetricMaps/PhpLoc.php"/>
     </class>
     <class name="PhpMetrics">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="AbstractMetricMap"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\MetricMaps" name="AbstractMetricMap"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMetricsStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpMetricsStatsTcConverter"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/PhpMetrics.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/MetricMaps/PhpMetrics.php"/>
     </class>
     <class name="PhpUnitClover">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\MetricMaps" name="AbstractMetricMap"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\MetricMaps" name="AbstractMetricMap"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpUnitCloverStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpUnitCloverStatsTcConverter"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/PhpUnitClover.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/MetricMaps/PhpUnitClover.php"/>
     </class>
   </package>
-  <package name="JBZoo\ToolboxCI\Formats\Source">
+  <package name="JBZoo\CiReportConverter\Formats\Source">
     <class name="Exception">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="Exception"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="FormatSourceTest"/>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="AbstractNode"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Source/Exception.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/Source/Exception.php"/>
     </class>
     <class name="SourceCase">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="AbstractNode"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="FormatSourceTest"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="TeamCityTestsConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceSuite"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="TeamCityTestsConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceSuite"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Source/SourceCase.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/Source/SourceCase.php"/>
     </class>
     <class name="SourceCaseOutput">
       <efferent>
@@ -1931,127 +1931,127 @@
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="ConverterJUnitTest"/>
         <type namespace="JBZoo\PHPUnit" name="FormatSourceTest"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="CheckStyleConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMdJsonConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PsalmJsonConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="CheckStyleConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpMdJsonConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PsalmJsonConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="AbstractNode"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Source/SourceCaseOutput.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/Source/SourceCaseOutput.php"/>
     </class>
     <class name="SourceSuite">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\Source" name="SourceCase"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="AbstractNode"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\Source" name="SourceCase"/>
       </efferent>
       <afferent>
         <type namespace="JBZoo\PHPUnit" name="ConverterJUnitTest"/>
         <type namespace="JBZoo\PHPUnit" name="ConverterTeamCityTest"/>
         <type namespace="JBZoo\PHPUnit" name="FormatSourceTest"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="CheckStyleConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="JUnitConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PhpMdJsonConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="PsalmJsonConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="TeamCityTestsConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="CheckStyleConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="JUnitConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PhpMdJsonConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="PsalmJsonConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="TeamCityTestsConverter"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Source/SourceSuite.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/Source/SourceSuite.php"/>
     </class>
   </package>
-  <package name="JBZoo\ToolboxCI\Formats\TeamCity">
+  <package name="JBZoo\CiReportConverter\Formats\TeamCity">
     <class name="Exception">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="Exception"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="Helper"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="TeamCity"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity" name="Helper"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity" name="TeamCity"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="Exception"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Exception.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Exception.php"/>
     </class>
     <class name="Helper">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity" name="Exception"/>
         <type namespace="" name="DateTime"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="TeamCity"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity" name="TeamCity"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Helper.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Helper.php"/>
     </class>
     <class name="TeamCity">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="AbstractWriter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="AbstractWriter"/>
         <type namespace="JBZoo\Utils" name="Sys"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="Helper"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity" name="Helper"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity" name="Exception"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="TeamCityTestsConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="TeamCityTestsConverter"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/TeamCity.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/TeamCity.php"/>
     </class>
   </package>
-  <package name="JBZoo\ToolboxCI\Formats\TeamCity\Writers">
+  <package name="JBZoo\CiReportConverter\Formats\TeamCity\Writers">
     <interface name="AbstractWriter">
       <efferent/>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="TeamCityTestsConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="TeamCity"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="Buffer"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="CustomCallback"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="Stdout"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="SymfonyConsole"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="TeamCityTestsConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity" name="TeamCity"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="Buffer"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="CustomCallback"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="Stdout"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="SymfonyConsole"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/AbstractWriter.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Writers/AbstractWriter.php"/>
     </interface>
     <class name="Buffer">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="AbstractWriter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="AbstractWriter"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="AbstractStatsTcConverter"/>
-        <type namespace="JBZoo\ToolboxCI\Converters" name="TeamCityTestsConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="AbstractStatsTcConverter"/>
+        <type namespace="JBZoo\CiReportConverter\Converters" name="TeamCityTestsConverter"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/Buffer.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Writers/Buffer.php"/>
     </class>
     <class name="CustomCallback">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="AbstractWriter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="AbstractWriter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="Exception"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/CustomCallback.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Writers/CustomCallback.php"/>
     </class>
     <class name="Exception">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity" name="Exception"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="CustomCallback"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="SymfonyConsole"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="CustomCallback"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="SymfonyConsole"/>
       </afferent>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/Exception.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Writers/Exception.php"/>
     </class>
     <class name="Stdout">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="AbstractWriter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="AbstractWriter"/>
         <type namespace="JBZoo\Utils" name="Cli"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/Stdout.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Writers/Stdout.php"/>
     </class>
     <class name="SymfonyConsole">
       <efferent>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="AbstractWriter"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="Exception"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="AbstractWriter"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="Exception"/>
         <type namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/SymfonyConsole.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Writers/SymfonyConsole.php"/>
     </class>
   </package>
   <package name="JBZoo\Utils">
@@ -2087,7 +2087,7 @@
         <type namespace="JBZoo\PHPUnit" name="CliTest"/>
         <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
         <type namespace="JBZoo\ComposerGraph" name="Helper"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" name="Stdout"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" name="Stdout"/>
       </afferent>
       <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/src/Cli.php"/>
     </class>
@@ -2278,8 +2278,8 @@
         <type namespace="JBZoo\PHPUnit" name="PhpDocTest"/>
         <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
         <type namespace="JBZoo\PHPUnit" name="StringTest"/>
-        <type namespace="JBZoo\ToolboxCI" name="Helper"/>
-        <type namespace="JBZoo\ToolboxCI\Formats" name="AbstractNode"/>
+        <type namespace="JBZoo\CiReportConverter" name="Helper"/>
+        <type namespace="JBZoo\CiReportConverter\Formats" name="AbstractNode"/>
         <type namespace="JBZoo\Utils" name="Arr"/>
         <type namespace="JBZoo\Utils" name="Email"/>
         <type namespace="JBZoo\Utils" name="Filter"/>
@@ -2304,7 +2304,7 @@
         <type namespace="JBZoo\PHPUnit" name="ReadmeTest"/>
         <type namespace="JBZoo\PHPUnit" name="SysTest"/>
         <type namespace="JBZoo\ComposerGraph" name="CommandBuild"/>
-        <type namespace="JBZoo\ToolboxCI\Formats\TeamCity" name="TeamCity"/>
+        <type namespace="JBZoo\CiReportConverter\Formats\TeamCity" name="TeamCity"/>
         <type namespace="JBZoo\Utils" name="Cli"/>
         <type namespace="JBZoo\Utils" name="Email"/>
         <type namespace="JBZoo\Utils" name="FS"/>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <coverage generated="1596451727">
   <project timestamp="1596451727">
-    <package name="JBZoo\ToolboxCI\Commands">
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Commands/AbstractCommand.php">
-        <class name="JBZoo\ToolboxCI\Commands\AbstractCommand" namespace="JBZoo\ToolboxCI\Commands" fullPackage="JBZoo" package="JBZoo">
+    <package name="JBZoo\CiReportConverter\Commands">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Commands/AbstractCommand.php">
+        <class name="JBZoo\CiReportConverter\Commands\AbstractCommand" namespace="JBZoo\CiReportConverter\Commands" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="13" methods="5" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="19" elements="34" coveredelements="21"/>
         </class>
         <line num="44" type="method" name="configure" visibility="protected" complexity="1" crap="1" count="2"/>
@@ -42,8 +42,8 @@
         <line num="121" type="stmt" count="1"/>
         <metrics loc="123" ncloc="80" classes="1" methods="5" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="19" elements="34" coveredelements="21"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Commands/Convert.php">
-        <class name="JBZoo\ToolboxCI\Commands\Convert" namespace="JBZoo\ToolboxCI\Commands" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Commands/Convert.php">
+        <class name="JBZoo\CiReportConverter\Commands\Convert" namespace="JBZoo\CiReportConverter\Commands" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="4" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="20" elements="26" coveredelements="22"/>
         </class>
         <line num="31" type="method" name="configure" visibility="protected" complexity="1" crap="1" count="2"/>
@@ -74,8 +74,8 @@
         <line num="83" type="stmt" count="1"/>
         <metrics loc="85" ncloc="55" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="20" elements="26" coveredelements="22"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Commands/ConvertMap.php">
-        <class name="JBZoo\ToolboxCI\Commands\ConvertMap" namespace="JBZoo\ToolboxCI\Commands" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Commands/ConvertMap.php">
+        <class name="JBZoo\CiReportConverter\Commands\ConvertMap" namespace="JBZoo\CiReportConverter\Commands" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
         </class>
         <line num="29" type="method" name="configure" visibility="protected" complexity="1" crap="1" count="2"/>
@@ -87,14 +87,14 @@
         <line num="43" type="stmt" count="1"/>
         <metrics loc="45" ncloc="22" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Commands/Exception.php">
-        <class name="JBZoo\ToolboxCI\Commands\Exception" namespace="JBZoo\ToolboxCI\Commands" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Commands/Exception.php">
+        <class name="JBZoo\CiReportConverter\Commands\Exception" namespace="JBZoo\CiReportConverter\Commands" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="25" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Commands/TeamCityStats.php">
-        <class name="JBZoo\ToolboxCI\Commands\TeamCityStats" namespace="JBZoo\ToolboxCI\Commands" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Commands/TeamCityStats.php">
+        <class name="JBZoo\CiReportConverter\Commands\TeamCityStats" namespace="JBZoo\CiReportConverter\Commands" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="4" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="6" elements="20" coveredelements="7"/>
         </class>
         <line num="31" type="method" name="configure" visibility="protected" complexity="1" crap="1" count="2"/>
@@ -120,9 +120,9 @@
         <metrics loc="76" ncloc="50" classes="1" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="6" elements="20" coveredelements="7"/>
       </file>
     </package>
-    <package name="JBZoo\ToolboxCI\Converters">
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/AbstractConverter.php">
-        <class name="JBZoo\ToolboxCI\Converters\AbstractConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+    <package name="JBZoo\CiReportConverter\Converters">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/AbstractConverter.php">
+        <class name="JBZoo\CiReportConverter\Converters\AbstractConverter" namespace="JBZoo\CiReportConverter\Converters" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="22" methods="7" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="20" elements="32" coveredelements="23"/>
         </class>
         <line num="45" type="method" name="toInternal" visibility="public" complexity="1" crap="2" count="0"/>
@@ -159,8 +159,8 @@
         <line num="136" type="stmt" count="8"/>
         <metrics loc="138" ncloc="82" classes="1" methods="7" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="20" elements="32" coveredelements="23"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/AbstractStatsTcConverter.php">
-        <class name="JBZoo\ToolboxCI\Converters\AbstractStatsTcConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/AbstractStatsTcConverter.php">
+        <class name="JBZoo\CiReportConverter\Converters\AbstractStatsTcConverter" namespace="JBZoo\CiReportConverter\Converters" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="12" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="18" elements="22" coveredelements="20"/>
         </class>
         <line num="44" type="method" name="__construct" visibility="public" complexity="4" crap="4" count="2"/>
@@ -187,8 +187,8 @@
         <line num="92" type="stmt" count="0"/>
         <metrics loc="94" ncloc="60" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="18" elements="22" coveredelements="20"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/CheckStyleConverter.php">
-        <class name="JBZoo\ToolboxCI\Converters\CheckStyleConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php">
+        <class name="JBZoo\CiReportConverter\Converters\CheckStyleConverter" namespace="JBZoo\CiReportConverter\Converters" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="11" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="30" elements="32" coveredelements="32"/>
         </class>
         <line num="38" type="method" name="toInternal" visibility="public" complexity="9" crap="9" count="5"/>
@@ -225,14 +225,14 @@
         <line num="88" type="stmt" count="5"/>
         <metrics loc="91" ncloc="68" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="30" elements="32" coveredelements="32"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/Exception.php">
-        <class name="JBZoo\ToolboxCI\Converters\Exception" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/Exception.php">
+        <class name="JBZoo\CiReportConverter\Converters\Exception" namespace="JBZoo\CiReportConverter\Converters" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="25" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/Factory.php">
-        <class name="JBZoo\ToolboxCI\Converters\Factory" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/Factory.php">
+        <class name="JBZoo\CiReportConverter\Converters\Factory" namespace="JBZoo\CiReportConverter\Converters" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="3" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="10" elements="15" coveredelements="10"/>
         </class>
         <line num="33" type="method" name="convert" visibility="public" complexity="2" crap="2.00" count="1"/>
@@ -252,8 +252,8 @@
         <line num="65" type="stmt" count="0"/>
         <metrics loc="67" ncloc="39" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="10" elements="15" coveredelements="10"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/JUnitConverter.php">
-        <class name="JBZoo\ToolboxCI\Converters\JUnitConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/JUnitConverter.php">
+        <class name="JBZoo\CiReportConverter\Converters\JUnitConverter" namespace="JBZoo\CiReportConverter\Converters" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="27" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="70" coveredstatements="69" elements="74" coveredelements="72"/>
         </class>
         <line num="38" type="method" name="toInternal" visibility="public" complexity="1" crap="1" count="4"/>
@@ -332,8 +332,8 @@
         <line num="168" type="stmt" count="4"/>
         <metrics loc="170" ncloc="135" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="70" coveredstatements="69" elements="74" coveredelements="72"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/Map.php">
-        <class name="JBZoo\ToolboxCI\Converters\Map" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/Map.php">
+        <class name="JBZoo\CiReportConverter\Converters\Map" namespace="JBZoo\CiReportConverter\Converters" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="18" methods="7" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="33" elements="47" coveredelements="38"/>
         </class>
         <line num="44" type="method" name="getTable" visibility="public" complexity="3" crap="3" count="2"/>
@@ -385,8 +385,8 @@
         <line num="161" type="stmt" count="0"/>
         <metrics loc="163" ncloc="117" classes="1" methods="7" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="33" elements="47" coveredelements="38"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/PHPDependStatsTcConverter.php">
-        <class name="JBZoo\ToolboxCI\Converters\PHPDependStatsTcConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PHPDependStatsTcConverter.php">
+        <class name="JBZoo\CiReportConverter\Converters\PHPDependStatsTcConverter" namespace="JBZoo\CiReportConverter\Converters" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
         </class>
         <line num="36" type="method" name="toInternalMetric" visibility="public" complexity="1" crap="2" count="0"/>
@@ -394,8 +394,8 @@
         <line num="39" type="stmt" count="0"/>
         <metrics loc="41" ncloc="21" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/PHPlocStatsTcConverter.php">
-        <class name="JBZoo\ToolboxCI\Converters\PHPlocStatsTcConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PHPlocStatsTcConverter.php">
+        <class name="JBZoo\CiReportConverter\Converters\PHPlocStatsTcConverter" namespace="JBZoo\CiReportConverter\Converters" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
         </class>
         <line num="36" type="method" name="toInternalMetric" visibility="public" complexity="1" crap="1" count="2"/>
@@ -403,8 +403,8 @@
         <line num="39" type="stmt" count="2"/>
         <metrics loc="41" ncloc="21" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/PhpmdJsonConverter.php">
-        <class name="JBZoo\ToolboxCI\Converters\PhpmdJsonConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpmdJsonConverter.php">
+        <class name="JBZoo\CiReportConverter\Converters\PhpmdJsonConverter" namespace="JBZoo\CiReportConverter\Converters" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="15" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="38" elements="40" coveredelements="40"/>
         </class>
         <line num="38" type="method" name="toInternal" visibility="public" complexity="5" crap="5" count="1"/>
@@ -449,8 +449,8 @@
         <line num="103" type="stmt" count="1"/>
         <metrics loc="106" ncloc="83" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="38" elements="40" coveredelements="40"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/PsalmJsonConverter.php">
-        <class name="JBZoo\ToolboxCI\Converters\PsalmJsonConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PsalmJsonConverter.php">
+        <class name="JBZoo\CiReportConverter\Converters\PsalmJsonConverter" namespace="JBZoo\CiReportConverter\Converters" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="8" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="31" elements="33" coveredelements="33"/>
         </class>
         <line num="38" type="method" name="toInternal" visibility="public" complexity="5" crap="5" count="3"/>
@@ -488,8 +488,8 @@
         <line num="91" type="stmt" count="3"/>
         <metrics loc="94" ncloc="70" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="31" elements="33" coveredelements="33"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Converters/TeamCityTestsConverter.php">
-        <class name="JBZoo\ToolboxCI\Converters\TeamCityTestsConverter" namespace="JBZoo\ToolboxCI\Converters" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php">
+        <class name="JBZoo\CiReportConverter\Converters\TeamCityTestsConverter" namespace="JBZoo\CiReportConverter\Converters" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="25" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="65" coveredstatements="61" elements="69" coveredelements="63"/>
         </class>
         <line num="44" type="method" name="__construct" visibility="public" complexity="4" crap="4" count="6"/>
@@ -564,15 +564,15 @@
         <metrics loc="167" ncloc="131" classes="1" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="65" coveredstatements="61" elements="69" coveredelements="63"/>
       </file>
     </package>
-    <package name="JBZoo\ToolboxCI">
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Exception.php">
-        <class name="JBZoo\ToolboxCI\Exception" namespace="JBZoo\ToolboxCI" fullPackage="JBZoo" package="JBZoo">
+    <package name="JBZoo\CiReportConverter">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Exception.php">
+        <class name="JBZoo\CiReportConverter\Exception" namespace="JBZoo\CiReportConverter" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="25" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Helper.php">
-        <class name="JBZoo\ToolboxCI\Helper" namespace="JBZoo\ToolboxCI" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper.php">
+        <class name="JBZoo\CiReportConverter\Helper" namespace="JBZoo\CiReportConverter" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="5" coveredelements="3"/>
         </class>
         <line num="30" type="method" name="descAsList" visibility="public" complexity="3" crap="3.14" count="10"/>
@@ -582,8 +582,8 @@
         <line num="37" type="stmt" count="10"/>
         <metrics loc="39" ncloc="19" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="5" coveredelements="3"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Markdown.php">
-        <class name="JBZoo\ToolboxCI\Markdown" namespace="JBZoo\ToolboxCI" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Markdown.php">
+        <class name="JBZoo\CiReportConverter\Markdown" namespace="JBZoo\CiReportConverter" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="23" methods="8" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="54" coveredstatements="51" elements="62" coveredelements="56"/>
         </class>
         <line num="50" type="method" name="render" visibility="public" complexity="1" crap="1" count="2"/>
@@ -651,9 +651,9 @@
         <metrics loc="207" ncloc="144" classes="1" methods="8" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="54" coveredstatements="51" elements="62" coveredelements="56"/>
       </file>
     </package>
-    <package name="JBZoo\ToolboxCI\Formats">
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/AbstractNode.php">
-        <class name="JBZoo\ToolboxCI\Formats\AbstractNode" namespace="JBZoo\ToolboxCI\Formats" fullPackage="JBZoo" package="JBZoo">
+    <package name="JBZoo\CiReportConverter\Formats">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/AbstractNode.php">
+        <class name="JBZoo\CiReportConverter\Formats\AbstractNode" namespace="JBZoo\CiReportConverter\Formats" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="25" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="46" coveredstatements="37" elements="52" coveredelements="41"/>
         </class>
         <line num="58" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="30"/>
@@ -710,14 +710,14 @@
         <line num="167" type="stmt" count="7"/>
         <metrics loc="169" ncloc="115" classes="1" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="46" coveredstatements="37" elements="52" coveredelements="41"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/Exception.php">
-        <class name="JBZoo\ToolboxCI\Formats\Exception" namespace="JBZoo\ToolboxCI\Formats" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/Exception.php">
+        <class name="JBZoo\CiReportConverter\Formats\Exception" namespace="JBZoo\CiReportConverter\Formats" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="25" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/Xml.php">
-        <class name="JBZoo\ToolboxCI\Formats\Xml" namespace="JBZoo\ToolboxCI\Formats" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/Xml.php">
+        <class name="JBZoo\CiReportConverter\Formats\Xml" namespace="JBZoo\CiReportConverter\Formats" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="22" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="39" coveredstatements="39" elements="42" coveredelements="42"/>
         </class>
         <line num="31" type="method" name="createDomDocument" visibility="public" complexity="3" crap="3" count="17"/>
@@ -765,9 +765,9 @@
         <metrics loc="132" ncloc="100" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="39" coveredstatements="39" elements="42" coveredelements="42"/>
       </file>
     </package>
-    <package name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput">
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/CaseOutput/AbstractOutput.php">
-        <class name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\AbstractOutput" namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
+    <package name="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/CaseOutput/AbstractOutput.php">
+        <class name="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput\AbstractOutput" namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="10" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="14" elements="20" coveredelements="17"/>
         </class>
         <line num="50" type="method" name="__construct" visibility="public" complexity="4" crap="4" count="12"/>
@@ -792,46 +792,46 @@
         <line num="99" type="stmt" count="12"/>
         <metrics loc="101" ncloc="53" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="14" elements="20" coveredelements="17"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/CaseOutput/Error.php">
-        <class name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\Error" namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/CaseOutput/Error.php">
+        <class name="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput\Error" namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="28" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/CaseOutput/Failure.php">
-        <class name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\Failure" namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/CaseOutput/Failure.php">
+        <class name="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput\Failure" namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="28" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/CaseOutput/Skipped.php">
-        <class name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\Skipped" namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/CaseOutput/Skipped.php">
+        <class name="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput\Skipped" namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="28" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/CaseOutput/SystemOut.php">
-        <class name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\SystemOut" namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/CaseOutput/SystemOut.php">
+        <class name="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput\SystemOut" namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="28" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/CaseOutput/Warning.php">
-        <class name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\Warning" namespace="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/CaseOutput/Warning.php">
+        <class name="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput\Warning" namespace="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="28" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
     </package>
-    <package name="JBZoo\ToolboxCI\Formats\JUnit">
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/Exception.php">
-        <class name="JBZoo\ToolboxCI\Formats\JUnit\Exception" namespace="JBZoo\ToolboxCI\Formats\JUnit" fullPackage="JBZoo" package="JBZoo">
+    <package name="JBZoo\CiReportConverter\Formats\JUnit">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/Exception.php">
+        <class name="JBZoo\CiReportConverter\Formats\JUnit\Exception" namespace="JBZoo\CiReportConverter\Formats\JUnit" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="25" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/JUnit.php">
-        <class name="JBZoo\ToolboxCI\Formats\JUnit\JUnit" namespace="JBZoo\ToolboxCI\Formats\JUnit" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/JUnit.php">
+        <class name="JBZoo\CiReportConverter\Formats\JUnit\JUnit" namespace="JBZoo\CiReportConverter\Formats\JUnit" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="5" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="13" coveredelements="13"/>
         </class>
         <line num="35" type="method" name="addSuite" visibility="public" complexity="2" crap="2" count="14"/>
@@ -849,8 +849,8 @@
         <line num="65" type="stmt" count="13"/>
         <metrics loc="67" ncloc="37" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="13" coveredelements="13"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/JUnitCase.php">
-        <class name="JBZoo\ToolboxCI\Formats\JUnit\JUnitCase" namespace="JBZoo\ToolboxCI\Formats\JUnit" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/JUnitCase.php">
+        <class name="JBZoo\CiReportConverter\Formats\JUnit\JUnitCase" namespace="JBZoo\CiReportConverter\Formats\JUnit" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="34" methods="12" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="39" coveredstatements="38" elements="51" coveredelements="49"/>
         </class>
         <line num="70" type="method" name="addFailure" visibility="public" complexity="5" crap="5" count="12"/>
@@ -906,8 +906,8 @@
         <line num="222" type="stmt" count="14"/>
         <metrics loc="224" ncloc="137" classes="1" methods="12" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="39" coveredstatements="38" elements="51" coveredelements="49"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/JUnit/JUnitSuite.php">
-        <class name="JBZoo\ToolboxCI\Formats\JUnit\JUnitSuite" namespace="JBZoo\ToolboxCI\Formats\JUnit" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/JUnitSuite.php">
+        <class name="JBZoo\CiReportConverter\Formats\JUnit\JUnitSuite" namespace="JBZoo\CiReportConverter\Formats\JUnit" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="27" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="69" coveredstatements="69" elements="79" coveredelements="79"/>
         </class>
         <line num="57" type="method" name="toXML" visibility="public" complexity="11" crap="11" count="14"/>
@@ -992,15 +992,15 @@
         <metrics loc="249" ncloc="182" classes="1" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="69" coveredstatements="69" elements="79" coveredelements="79"/>
       </file>
     </package>
-    <package name="JBZoo\ToolboxCI\Formats\Metric">
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/Metric/Metric.php">
-        <class name="JBZoo\ToolboxCI\Formats\Metric\Metric" namespace="JBZoo\ToolboxCI\Formats\Metric" fullPackage="JBZoo" package="JBZoo">
+    <package name="JBZoo\CiReportConverter\Formats\Metric">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/Metric/Metric.php">
+        <class name="JBZoo\CiReportConverter\Formats\Metric\Metric" namespace="JBZoo\CiReportConverter\Formats\Metric" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="41" ncloc="16" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/Metric/Metrics.php">
-        <class name="JBZoo\ToolboxCI\Formats\Metric\Metrics" namespace="JBZoo\ToolboxCI\Formats\Metric" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/Metric/Metrics.php">
+        <class name="JBZoo\CiReportConverter\Formats\Metric\Metrics" namespace="JBZoo\CiReportConverter\Formats\Metric" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="13" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="22" elements="32" coveredelements="23"/>
         </class>
         <line num="42" type="method" name="add" visibility="public" complexity="4" crap="4.07" count="2"/>
@@ -1038,9 +1038,9 @@
         <metrics loc="113" ncloc="76" classes="1" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="22" elements="32" coveredelements="23"/>
       </file>
     </package>
-    <package name="JBZoo\ToolboxCI\Formats\MetricMaps">
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/MetricMaps/AbstractMetricMap.php">
-        <class name="JBZoo\ToolboxCI\Formats\MetricMaps\AbstractMetricMap" namespace="JBZoo\ToolboxCI\Formats\MetricMaps" fullPackage="JBZoo" package="JBZoo">
+    <package name="JBZoo\CiReportConverter\Formats\MetricMaps">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/MetricMaps/AbstractMetricMap.php">
+        <class name="JBZoo\CiReportConverter\Formats\MetricMaps\AbstractMetricMap" namespace="JBZoo\CiReportConverter\Formats\MetricMaps" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
         </class>
         <line num="37" type="method" name="getMap" visibility="public" complexity="1" crap="1" count="2"/>
@@ -1049,28 +1049,28 @@
         <line num="47" type="stmt" count="2"/>
         <metrics loc="49" ncloc="21" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/MetricMaps/PHPloc.php">
-        <class name="JBZoo\ToolboxCI\Formats\MetricMaps\PHPloc" namespace="JBZoo\ToolboxCI\Formats\MetricMaps" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/MetricMaps/PHPloc.php">
+        <class name="JBZoo\CiReportConverter\Formats\MetricMaps\PHPloc" namespace="JBZoo\CiReportConverter\Formats\MetricMaps" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="99" ncloc="65" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/MetricMaps/PhpDepend.php">
-        <class name="JBZoo\ToolboxCI\Formats\MetricMaps\PhpDepend" namespace="JBZoo\ToolboxCI\Formats\MetricMaps" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/MetricMaps/PhpDepend.php">
+        <class name="JBZoo\CiReportConverter\Formats\MetricMaps\PhpDepend" namespace="JBZoo\CiReportConverter\Formats\MetricMaps" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="69" ncloc="50" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
     </package>
-    <package name="JBZoo\ToolboxCI\Formats\Source">
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/Source/Exception.php">
-        <class name="JBZoo\ToolboxCI\Formats\Source\Exception" namespace="JBZoo\ToolboxCI\Formats\Source" fullPackage="JBZoo" package="JBZoo">
+    <package name="JBZoo\CiReportConverter\Formats\Source">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/Source/Exception.php">
+        <class name="JBZoo\CiReportConverter\Formats\Source\Exception" namespace="JBZoo\CiReportConverter\Formats\Source" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="25" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/Source/SourceCase.php">
-        <class name="JBZoo\ToolboxCI\Formats\Source\SourceCase" namespace="JBZoo\ToolboxCI\Formats\Source" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/Source/SourceCase.php">
+        <class name="JBZoo\CiReportConverter\Formats\Source\SourceCase" namespace="JBZoo\CiReportConverter\Formats\Source" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="9" methods="6" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="5" elements="12" coveredelements="10"/>
         </class>
         <line num="97" type="method" name="getTime" visibility="public" complexity="3" crap="3" count="7"/>
@@ -1087,8 +1087,8 @@
         <line num="139" type="stmt" count="0"/>
         <metrics loc="141" ncloc="58" classes="1" methods="6" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="5" elements="12" coveredelements="10"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/Source/SourceCaseOutput.php">
-        <class name="JBZoo\ToolboxCI\Formats\Source\SourceCaseOutput" namespace="JBZoo\ToolboxCI\Formats\Source" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/Source/SourceCaseOutput.php">
+        <class name="JBZoo\CiReportConverter\Formats\Source\SourceCaseOutput" namespace="JBZoo\CiReportConverter\Formats\Source" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="13" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="38" elements="43" coveredelements="40"/>
         </class>
         <line num="49" type="method" name="__construct" visibility="public" complexity="4" crap="4" count="14"/>
@@ -1136,8 +1136,8 @@
         <line num="123" type="stmt" count="3"/>
         <metrics loc="126" ncloc="89" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="38" elements="43" coveredelements="40"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/Source/SourceSuite.php">
-        <class name="JBZoo\ToolboxCI\Formats\Source\SourceSuite" namespace="JBZoo\ToolboxCI\Formats\Source" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/Source/SourceSuite.php">
+        <class name="JBZoo\CiReportConverter\Formats\Source\SourceSuite" namespace="JBZoo\CiReportConverter\Formats\Source" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="48" methods="14" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="68" coveredstatements="67" elements="82" coveredelements="80"/>
         </class>
         <line num="54" type="method" name="hasSubSuites" visibility="public" complexity="1" crap="1" count="1"/>
@@ -1225,15 +1225,15 @@
         <metrics loc="266" ncloc="190" classes="1" methods="14" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="68" coveredstatements="67" elements="82" coveredelements="80"/>
       </file>
     </package>
-    <package name="JBZoo\ToolboxCI\Formats\TeamCity">
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/Exception.php">
-        <class name="JBZoo\ToolboxCI\Formats\TeamCity\Exception" namespace="JBZoo\ToolboxCI\Formats\TeamCity" fullPackage="JBZoo" package="JBZoo">
+    <package name="JBZoo\CiReportConverter\Formats\TeamCity">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/TeamCity/Exception.php">
+        <class name="JBZoo\CiReportConverter\Formats\TeamCity\Exception" namespace="JBZoo\CiReportConverter\Formats\TeamCity" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="25" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/Helper.php">
-        <class name="JBZoo\ToolboxCI\Formats\TeamCity\Helper" namespace="JBZoo\ToolboxCI\Formats\TeamCity" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/TeamCity/Helper.php">
+        <class name="JBZoo\CiReportConverter\Formats\TeamCity\Helper" namespace="JBZoo\CiReportConverter\Formats\TeamCity" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="13" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="21" elements="31" coveredelements="22"/>
         </class>
         <line num="70" type="method" name="printEvent" visibility="public" complexity="3" crap="3.01" count="8"/>
@@ -1269,8 +1269,8 @@
         <line num="148" type="stmt" count="8"/>
         <metrics loc="152" ncloc="108" classes="1" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="21" elements="31" coveredelements="22"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/TeamCity.php">
-        <class name="JBZoo\ToolboxCI\Formats\TeamCity\TeamCity" namespace="JBZoo\ToolboxCI\Formats\TeamCity" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/TeamCity/TeamCity.php">
+        <class name="JBZoo\CiReportConverter\Formats\TeamCity\TeamCity" namespace="JBZoo\CiReportConverter\Formats\TeamCity" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="41" methods="12" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="63" coveredstatements="62" elements="75" coveredelements="73"/>
         </class>
         <line num="64" type="method" name="__construct" visibility="public" complexity="6" crap="6" count="8"/>
@@ -1351,12 +1351,12 @@
         <metrics loc="250" ncloc="165" classes="1" methods="12" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="63" coveredstatements="62" elements="75" coveredelements="73"/>
       </file>
     </package>
-    <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/Writers/AbstractWriter.php">
+    <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/TeamCity/Writers/AbstractWriter.php">
       <metrics loc="29" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <package name="JBZoo\ToolboxCI\Formats\TeamCity\Writers">
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/Writers/Buffer.php">
-        <class name="JBZoo\ToolboxCI\Formats\TeamCity\Writers\Buffer" namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" fullPackage="JBZoo" package="JBZoo">
+    <package name="JBZoo\CiReportConverter\Formats\TeamCity\Writers">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/TeamCity/Writers/Buffer.php">
+        <class name="JBZoo\CiReportConverter\Formats\TeamCity\Writers\Buffer" namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
         </class>
         <line num="32" type="method" name="write" visibility="public" complexity="2" crap="2" count="8"/>
@@ -1366,8 +1366,8 @@
         <line num="42" type="stmt" count="8"/>
         <metrics loc="44" ncloc="19" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/Writers/CustomCallback.php">
-        <class name="JBZoo\ToolboxCI\Formats\TeamCity\Writers\CustomCallback" namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/TeamCity/Writers/CustomCallback.php">
+        <class name="JBZoo\CiReportConverter\Formats\TeamCity\Writers\CustomCallback" namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="4" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="8" coveredelements="0"/>
         </class>
         <line num="32" type="method" name="write" visibility="public" complexity="3" crap="12" count="0"/>
@@ -1380,14 +1380,14 @@
         <line num="46" type="stmt" count="0"/>
         <metrics loc="47" ncloc="22" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="8" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/Writers/Exception.php">
-        <class name="JBZoo\ToolboxCI\Formats\TeamCity\Writers\Exception" namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/TeamCity/Writers/Exception.php">
+        <class name="JBZoo\CiReportConverter\Formats\TeamCity\Writers\Exception" namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="25" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/Writers/Stdout.php">
-        <class name="JBZoo\ToolboxCI\Formats\TeamCity\Writers\Stdout" namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/TeamCity/Writers/Stdout.php">
+        <class name="JBZoo\CiReportConverter\Formats\TeamCity\Writers\Stdout" namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
         </class>
         <line num="29" type="method" name="write" visibility="public" complexity="3" crap="12" count="0"/>
@@ -1396,8 +1396,8 @@
         <line num="34" type="stmt" count="0"/>
         <metrics loc="35" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
       </file>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/Formats/TeamCity/Writers/SymfonyConsole.php">
-        <class name="JBZoo\ToolboxCI\Formats\TeamCity\Writers\SymfonyConsole" namespace="JBZoo\ToolboxCI\Formats\TeamCity\Writers" fullPackage="JBZoo" package="JBZoo">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/TeamCity/Writers/SymfonyConsole.php">
+        <class name="JBZoo\CiReportConverter\Formats\TeamCity\Writers\SymfonyConsole" namespace="JBZoo\CiReportConverter\Formats\TeamCity\Writers" fullPackage="JBZoo" package="JBZoo">
           <metrics complexity="5" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="9" coveredelements="0"/>
         </class>
         <line num="34" type="method" name="write" visibility="public" complexity="4" crap="20" count="0"/>

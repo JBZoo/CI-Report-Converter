@@ -1,23 +1,23 @@
 <?php
 
 /**
- * JBZoo Toolbox - Toolbox-CI
+ * JBZoo Toolbox - CI-Report-Converter
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    Toolbox-CI
+ * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/Toolbox-CI
+ * @link       https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-use JBZoo\ToolboxCI\Commands\Convert;
-use JBZoo\ToolboxCI\Commands\ConvertMap;
-use JBZoo\ToolboxCI\Commands\TeamCityStats;
+use JBZoo\CiReportConverter\Commands\Convert;
+use JBZoo\CiReportConverter\Commands\ConvertMap;
+use JBZoo\CiReportConverter\Commands\TeamCityStats;
 use Symfony\Component\Console\Application;
 
 define('PATH_ROOT', __DIR__);
@@ -30,12 +30,12 @@ $vendorPaths = [
 
 foreach ($vendorPaths as $file) {
     if (file_exists($file)) {
-        define('JBZOO_COMPOSER_GRAPH', $file);
+        define('JBZOO_AUTOLOAD_FILE', $file);
         break;
     }
 }
 
-require JBZOO_COMPOSER_GRAPH;
+require JBZOO_AUTOLOAD_FILE;
 
 $application = new Application('JBZoo/Toolbox-CI', '@git-version@');
 $application->add(new Convert());

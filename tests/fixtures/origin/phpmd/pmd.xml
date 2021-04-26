@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pmd version="@project.version@" timestamp="2020-07-19T21:42:26+03:00">
-    <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/vendor/povils/phpmnd/src/Console/Application.php">
+    <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/povils/phpmnd/src/Console/Application.php">
         <violation beginline="26" endline="26" rule="UnusedFormalParameter" ruleset="Unused Code Rules"
                    externalInfoUrl="https://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3">
             Avoid unused parameters such as '$input'.
@@ -10,7 +10,7 @@
             Avoid unused parameters such as '$input'.
         </violation>
     </file>
-    <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/vendor/povils/phpmnd/src/Console/Command.php">
+    <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/povils/phpmnd/src/Console/Command.php">
         <violation beginline="24" endline="284" rule="CouplingBetweenObjects" ruleset="Design Rules"
                    package="Povils\PHPMND\Console"
                    externalInfoUrl="https://phpmd.org/rules/design.html#couplingbetweenobjects" class="Command"
@@ -50,7 +50,7 @@
             Avoid unused private methods such as 'castToNumber'.
         </violation>
     </file>
-    <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/vendor/povils/phpmnd/src/Console/Option.php">
+    <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/povils/phpmnd/src/Console/Option.php">
         <violation beginline="49" endline="49" rule="LongVariable" ruleset="Naming Rules"
                    externalInfoUrl="https://phpmd.org/rules/naming.html#longvariable" priority="3">
             Avoid excessively long variable names like $includeNumericStrings. Keep variable name length under 20.

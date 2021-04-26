@@ -6,15 +6,15 @@
 >
     <testcase name="src/JUnit/TestCaseElement.php:34">
         <failure type="ERROR"
-                 message="Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setName() has no return typehint specified."/>
+                 message="Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setName() has no return typehint specified."/>
     </testcase>
     <testcase name="src/JUnit/TestCaseElement.php:42">
         <failure type="ERROR"
-                 message="Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setClassname() has no return typehint specified."/>
+                 message="Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setClassname() has no return typehint specified."/>
     </testcase>
     <testcase name="src/JUnit/TestCaseElement.php:52">
         <failure type="ERROR"
-                 message="Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setTime() has no return typehint specified."/>
+                 message="Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setTime() has no return typehint specified."/>
     </testcase>
     <testcase name="src/JUnit/TestCaseElement.php:54">
         <failure type="ERROR"
@@ -28,7 +28,7 @@
     </testcase>
     <testcase name="src/JUnit/TestCaseElement.php:106">
         <failure type="ERROR"
-                 message="Method JBZoo\ToolboxCI\JUnit\TestCaseElement::incrementFailureCount() has no return typehint specified."/>
+                 message="Method JBZoo\CiReportConverter\JUnit\TestCaseElement::incrementFailureCount() has no return typehint specified."/>
     </testcase>
     <testcase name="src/JUnit/TestCaseElement.php:109">
         <failure type="ERROR"
@@ -40,7 +40,7 @@
     </testcase>
     <testcase name="src/JUnit/TestCaseElement.php:118">
         <failure type="ERROR"
-                 message="Method JBZoo\ToolboxCI\JUnit\TestCaseElement::incrementErrorCount() has no return typehint specified."/>
+                 message="Method JBZoo\CiReportConverter\JUnit\TestCaseElement::incrementErrorCount() has no return typehint specified."/>
     </testcase>
     <testcase name="src/JUnit/TestCaseElement.php:121">
         <failure type="ERROR"
@@ -52,15 +52,15 @@
     </testcase>
     <testcase name="src/JUnit/TestSuiteElement.php:35">
         <failure type="ERROR"
-                 message="Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setName() has no return typehint specified."/>
+                 message="Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::setName() has no return typehint specified."/>
     </testcase>
     <testcase name="src/JUnit/TestSuiteElement.php:45">
         <failure type="ERROR"
-                 message="Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setTimestamp() has no return typehint specified."/>
+                 message="Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::setTimestamp() has no return typehint specified."/>
     </testcase>
     <testcase name="src/JUnit/TestSuiteElement.php:55">
         <failure type="ERROR"
-                 message="Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setTime() has no return typehint specified."/>
+                 message="Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::setTime() has no return typehint specified."/>
     </testcase>
     <testcase name="src/JUnit/TestSuiteElement.php:57">
         <failure type="ERROR"
@@ -68,11 +68,11 @@
     </testcase>
     <testcase name="src/JUnit/TestSuiteElement.php:65">
         <failure type="ERROR"
-                 message="Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::setHostname() has no return typehint specified."/>
+                 message="Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::setHostname() has no return typehint specified."/>
     </testcase>
     <testcase name="src/JUnit/TestSuiteElement.php:86">
         <failure type="ERROR"
-                 message="Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::incrementTestCount() has no return typehint specified."/>
+                 message="Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::incrementTestCount() has no return typehint specified."/>
     </testcase>
     <testcase name="src/JUnit/TestSuiteElement.php:89">
         <failure type="ERROR"
@@ -84,7 +84,7 @@
     </testcase>
     <testcase name="src/JUnit/TestSuiteElement.php:98">
         <failure type="ERROR"
-                 message="Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::incrementFailureCount() has no return typehint specified."/>
+                 message="Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::incrementFailureCount() has no return typehint specified."/>
     </testcase>
     <testcase name="src/JUnit/TestSuiteElement.php:101">
         <failure type="ERROR"
@@ -96,7 +96,7 @@
     </testcase>
     <testcase name="src/JUnit/TestSuiteElement.php:110">
         <failure type="ERROR"
-                 message="Method JBZoo\ToolboxCI\JUnit\TestSuiteElement::incrementErrorCount() has no return typehint specified."/>
+                 message="Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::incrementErrorCount() has no return typehint specified."/>
     </testcase>
     <testcase name="src/JUnit/TestSuiteElement.php:113">
         <failure type="ERROR"

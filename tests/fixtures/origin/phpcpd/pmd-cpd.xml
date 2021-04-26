@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
   <duplication lines="100" tokens="170">
-    <file path="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit1/TestCaseElement1.php" line="24"/>
-    <file path="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/TestCaseElement.php" line="24"/>
+    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit1/TestCaseElement1.php" line="24"/>
+    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestCaseElement.php" line="24"/>
     <codefragment>class TestCaseElement1 extends \DOMElement
 {
     public function __construct()

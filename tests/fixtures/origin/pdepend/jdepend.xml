@@ -163,23 +163,23 @@
         <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitHttpServerTest.php">PHPUnitHttpServerTest</Class>
         <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitReadmeTest.php">PHPUnitReadmeTest</Class>
         <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/tests/PHPUnitToolsTest.php">PHPUnitToolsTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/CliCommandsTest.php">CliCommandsTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterCheckStyleTest.php">ConverterCheckStyleTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterJUnitTest.php">ConverterJUnitTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterPhpmdJsonTest.php">ConverterPhpmdJsonTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterPsalmJsonTest.php">ConverterPsalmJsonTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterTeamCityStatsTest.php">ConverterTeamCityStatsTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ConverterTeamCityTest.php">ConverterTeamCityTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/FormatJUnitTest.php">FormatJUnitTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/FormatSourceTest.php">FormatSourceTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolboxCICodestyleTest.php">ToolboxCICodestyleTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolboxCIComposerTest.php">ToolboxCIComposerTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolboxCICopyrightTest.php">ToolboxCICopyrightTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolboxCIReadmeTest.php">ToolboxCIReadmeTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/Tools/Aliases.php">Aliases</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/Tools/ExampleTest.php">ExampleTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/Tools/Fixtures.php">Fixtures</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/tests/ToolsTest.php">ToolsTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CliCommandsTest.php">CliCommandsTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/ConverterCheckStyleTest.php">ConverterCheckStyleTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/ConverterJUnitTest.php">ConverterJUnitTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/ConverterPhpmdJsonTest.php">ConverterPhpmdJsonTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/ConverterPsalmJsonTest.php">ConverterPsalmJsonTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/ConverterTeamCityStatsTest.php">ConverterTeamCityStatsTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/ConverterTeamCityTest.php">ConverterTeamCityTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/FormatJUnitTest.php">FormatJUnitTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/FormatSourceTest.php">FormatSourceTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterCodestyleTest.php">CiReportConverterCodestyleTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterComposerTest.php">CiReportConverterComposerTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterCopyrightTest.php">CiReportConverterCopyrightTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterReadmeTest.php">CiReportConverterReadmeTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/Tools/Aliases.php">Aliases</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/Tools/ExampleTest.php">ExampleTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/Tools/Fixtures.php">Fixtures</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/ToolsTest.php">ToolsTest</Class>
         <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/AliasesTest.php">AliasesTest</Class>
         <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/ArrayTest.php">ArrayTest</Class>
         <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/utils/tests/CliTest.php">CliTest</Class>
@@ -224,12 +224,12 @@
         <Package>JBZoo\Data</Package>
         <Package>JBZoo\HttpClient</Package>
         <Package>JBZoo\MermaidPHP</Package>
-        <Package>JBZoo\ToolboxCI</Package>
-        <Package>JBZoo\ToolboxCI\Commands</Package>
-        <Package>JBZoo\ToolboxCI\Converters</Package>
-        <Package>JBZoo\ToolboxCI\Formats</Package>
-        <Package>JBZoo\ToolboxCI\Formats\JUnit</Package>
-        <Package>JBZoo\ToolboxCI\Formats\Source</Package>
+        <Package>JBZoo\CiReportConverter</Package>
+        <Package>JBZoo\CiReportConverter\Commands</Package>
+        <Package>JBZoo\CiReportConverter\Converters</Package>
+        <Package>JBZoo\CiReportConverter\Formats</Package>
+        <Package>JBZoo\CiReportConverter\Formats\JUnit</Package>
+        <Package>JBZoo\CiReportConverter\Formats\Source</Package>
         <Package>JBZoo\Utils</Package>
         <Package>PHPUnit\Framework</Package>
         <Package>PHPUnit\Framework\Error</Package>
@@ -308,9 +308,9 @@
         <Package>JBZoo\ComposerDiff\Renders</Package>
         <Package>JBZoo\ComposerGraph</Package>
         <Package>JBZoo\PHPUnit</Package>
-        <Package>JBZoo\ToolboxCI\Converters</Package>
-        <Package>JBZoo\ToolboxCI\Formats</Package>
-        <Package>JBZoo\ToolboxCI\Formats\Source</Package>
+        <Package>JBZoo\CiReportConverter\Converters</Package>
+        <Package>JBZoo\CiReportConverter\Formats</Package>
+        <Package>JBZoo\CiReportConverter\Formats\Source</Package>
         <Package>JBZoo\Utils</Package>
       </UsedBy>
     </Package>
@@ -365,7 +365,7 @@
         <Package>JBZoo\PHPUnit</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\ToolboxCI\Commands">
+    <Package name="JBZoo\CiReportConverter\Commands">
       <Stats>
         <TotalClasses>5</TotalClasses>
         <ConcreteClasses>4</ConcreteClasses>
@@ -377,17 +377,17 @@
         <D>0.033333333333333</D>
       </Stats>
       <ConcreteClasses>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/Convert.php">Convert</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/ConvertMap.php">ConvertMap</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/Exception.php">Exception</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/TeamCityStats.php">TeamCityStats</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Commands/Convert.php">Convert</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Commands/ConvertMap.php">ConvertMap</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Commands/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Commands/TeamCityStats.php">TeamCityStats</Class>
       </ConcreteClasses>
       <AbstractClasses>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Commands/AbstractCommand.php">AbstractCommand</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Commands/AbstractCommand.php">AbstractCommand</Class>
       </AbstractClasses>
       <DependsUpon>
-        <Package>JBZoo\ToolboxCI</Package>
-        <Package>JBZoo\ToolboxCI\Converters</Package>
+        <Package>JBZoo\CiReportConverter</Package>
+        <Package>JBZoo\CiReportConverter\Converters</Package>
         <Package>Symfony\Component\Console\Command</Package>
         <Package>Symfony\Component\Console\Input</Package>
         <Package>Symfony\Component\Console\Output</Package>
@@ -396,7 +396,7 @@
         <Package>JBZoo\PHPUnit</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\ToolboxCI\Converters">
+    <Package name="JBZoo\CiReportConverter\Converters">
       <Stats>
         <TotalClasses>14</TotalClasses>
         <ConcreteClasses>12</ConcreteClasses>
@@ -408,41 +408,41 @@
         <D>0.023809523809524</D>
       </Stats>
       <ConcreteClasses>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/CheckStyleConverter.php">CheckStyleConverter</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/Exception.php">Exception</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/Factory.php">Factory</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/JUnitConverter.php">JUnitConverter</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/Map.php">Map</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpDependStatsTcConverter.php">PhpDependStatsTcConverter</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpLocStatsTcConverter.php">PhpLocStatsTcConverter</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpMdJsonConverter.php">PhpMdJsonConverter</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpMetricsStatsTcConverter.php">PhpMetricsStatsTcConverter</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PhpUnitCloverStatsTcConverter.php">PhpUnitCloverStatsTcConverter</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/PsalmJsonConverter.php">PsalmJsonConverter</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/TeamCityTestsConverter.php">TeamCityTestsConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/CheckStyleConverter.php">CheckStyleConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/Factory.php">Factory</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/JUnitConverter.php">JUnitConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/Map.php">Map</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/PhpDependStatsTcConverter.php">PhpDependStatsTcConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/PhpLocStatsTcConverter.php">PhpLocStatsTcConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/PhpMdJsonConverter.php">PhpMdJsonConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/PhpMetricsStatsTcConverter.php">PhpMetricsStatsTcConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/PhpUnitCloverStatsTcConverter.php">PhpUnitCloverStatsTcConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/PsalmJsonConverter.php">PsalmJsonConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/TeamCityTestsConverter.php">TeamCityTestsConverter</Class>
       </ConcreteClasses>
       <AbstractClasses>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/AbstractConverter.php">AbstractConverter</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Converters/AbstractStatsTcConverter.php">AbstractStatsTcConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/AbstractConverter.php">AbstractConverter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Converters/AbstractStatsTcConverter.php">AbstractStatsTcConverter</Class>
       </AbstractClasses>
       <DependsUpon>
         <Package></Package>
         <Package>JBZoo\Data</Package>
-        <Package>JBZoo\ToolboxCI</Package>
-        <Package>JBZoo\ToolboxCI\Formats</Package>
-        <Package>JBZoo\ToolboxCI\Formats\JUnit</Package>
-        <Package>JBZoo\ToolboxCI\Formats\Metric</Package>
-        <Package>JBZoo\ToolboxCI\Formats\MetricMaps</Package>
-        <Package>JBZoo\ToolboxCI\Formats\Source</Package>
-        <Package>JBZoo\ToolboxCI\Formats\TeamCity</Package>
-        <Package>JBZoo\ToolboxCI\Formats\TeamCity\Writers</Package>
+        <Package>JBZoo\CiReportConverter</Package>
+        <Package>JBZoo\CiReportConverter\Formats</Package>
+        <Package>JBZoo\CiReportConverter\Formats\JUnit</Package>
+        <Package>JBZoo\CiReportConverter\Formats\Metric</Package>
+        <Package>JBZoo\CiReportConverter\Formats\MetricMaps</Package>
+        <Package>JBZoo\CiReportConverter\Formats\Source</Package>
+        <Package>JBZoo\CiReportConverter\Formats\TeamCity</Package>
+        <Package>JBZoo\CiReportConverter\Formats\TeamCity\Writers</Package>
       </DependsUpon>
       <UsedBy>
         <Package>JBZoo\PHPUnit</Package>
-        <Package>JBZoo\ToolboxCI\Commands</Package>
+        <Package>JBZoo\CiReportConverter\Commands</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\ToolboxCI">
+    <Package name="JBZoo\CiReportConverter">
       <Stats>
         <TotalClasses>3</TotalClasses>
         <ConcreteClasses>3</ConcreteClasses>
@@ -454,9 +454,9 @@
         <D>0.66666666666667</D>
       </Stats>
       <ConcreteClasses>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Exception.php">Exception</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Helper.php">Helper</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Markdown.php">Markdown</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Helper.php">Helper</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Markdown.php">Markdown</Class>
       </ConcreteClasses>
       <AbstractClasses/>
       <DependsUpon>
@@ -465,12 +465,12 @@
       </DependsUpon>
       <UsedBy>
         <Package>JBZoo\PHPUnit</Package>
-        <Package>JBZoo\ToolboxCI\Commands</Package>
-        <Package>JBZoo\ToolboxCI\Converters</Package>
-        <Package>JBZoo\ToolboxCI\Formats</Package>
+        <Package>JBZoo\CiReportConverter\Commands</Package>
+        <Package>JBZoo\CiReportConverter\Converters</Package>
+        <Package>JBZoo\CiReportConverter\Formats</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\ToolboxCI\Formats">
+    <Package name="JBZoo\CiReportConverter\Formats">
       <Stats>
         <TotalClasses>3</TotalClasses>
         <ConcreteClasses>3</ConcreteClasses>
@@ -482,28 +482,28 @@
         <D>0.54545454545455</D>
       </Stats>
       <ConcreteClasses>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/AbstractNode.php">AbstractNode</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Exception.php">Exception</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Xml.php">Xml</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/AbstractNode.php">AbstractNode</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/Xml.php">Xml</Class>
       </ConcreteClasses>
       <AbstractClasses/>
       <DependsUpon>
         <Package></Package>
         <Package>JBZoo\Data</Package>
-        <Package>JBZoo\ToolboxCI</Package>
-        <Package>JBZoo\ToolboxCI\Formats\Source</Package>
+        <Package>JBZoo\CiReportConverter</Package>
+        <Package>JBZoo\CiReportConverter\Formats\Source</Package>
         <Package>JBZoo\Utils</Package>
       </DependsUpon>
       <UsedBy>
         <Package>JBZoo\PHPUnit</Package>
-        <Package>JBZoo\ToolboxCI\Converters</Package>
-        <Package>JBZoo\ToolboxCI\Formats\JUnit</Package>
-        <Package>JBZoo\ToolboxCI\Formats\Metric</Package>
-        <Package>JBZoo\ToolboxCI\Formats\Source</Package>
-        <Package>JBZoo\ToolboxCI\Formats\TeamCity</Package>
+        <Package>JBZoo\CiReportConverter\Converters</Package>
+        <Package>JBZoo\CiReportConverter\Formats\JUnit</Package>
+        <Package>JBZoo\CiReportConverter\Formats\Metric</Package>
+        <Package>JBZoo\CiReportConverter\Formats\Source</Package>
+        <Package>JBZoo\CiReportConverter\Formats\TeamCity</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\ToolboxCI\Formats\JUnit\CaseOutput">
+    <Package name="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput">
       <Stats>
         <TotalClasses>6</TotalClasses>
         <ConcreteClasses>5</ConcreteClasses>
@@ -515,23 +515,23 @@
         <D>0.33333333333333</D>
       </Stats>
       <ConcreteClasses>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/Error.php">Error</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/Failure.php">Failure</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/Skipped.php">Skipped</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/SystemOut.php">SystemOut</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/Warning.php">Warning</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/CaseOutput/Error.php">Error</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/CaseOutput/Failure.php">Failure</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/CaseOutput/Skipped.php">Skipped</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/CaseOutput/SystemOut.php">SystemOut</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/CaseOutput/Warning.php">Warning</Class>
       </ConcreteClasses>
       <AbstractClasses>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/CaseOutput/AbstractOutput.php">AbstractOutput</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/CaseOutput/AbstractOutput.php">AbstractOutput</Class>
       </AbstractClasses>
       <DependsUpon>
         <Package></Package>
       </DependsUpon>
       <UsedBy>
-        <Package>JBZoo\ToolboxCI\Formats\JUnit</Package>
+        <Package>JBZoo\CiReportConverter\Formats\JUnit</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\ToolboxCI\Formats\JUnit">
+    <Package name="JBZoo\CiReportConverter\Formats\JUnit">
       <Stats>
         <TotalClasses>4</TotalClasses>
         <ConcreteClasses>4</ConcreteClasses>
@@ -543,23 +543,23 @@
         <D>0.4</D>
       </Stats>
       <ConcreteClasses>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/Exception.php">Exception</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/JUnit.php">JUnit</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/JUnitCase.php">JUnitCase</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/JUnit/JUnitSuite.php">JUnitSuite</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/JUnit.php">JUnit</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/JUnitCase.php">JUnitCase</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/JUnit/JUnitSuite.php">JUnitSuite</Class>
       </ConcreteClasses>
       <AbstractClasses/>
       <DependsUpon>
         <Package></Package>
-        <Package>JBZoo\ToolboxCI\Formats</Package>
-        <Package>JBZoo\ToolboxCI\Formats\JUnit\CaseOutput</Package>
+        <Package>JBZoo\CiReportConverter\Formats</Package>
+        <Package>JBZoo\CiReportConverter\Formats\JUnit\CaseOutput</Package>
       </DependsUpon>
       <UsedBy>
         <Package>JBZoo\PHPUnit</Package>
-        <Package>JBZoo\ToolboxCI\Converters</Package>
+        <Package>JBZoo\CiReportConverter\Converters</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\ToolboxCI\Formats\Metric">
+    <Package name="JBZoo\CiReportConverter\Formats\Metric">
       <Stats>
         <TotalClasses>2</TotalClasses>
         <ConcreteClasses>2</ConcreteClasses>
@@ -571,19 +571,19 @@
         <D>0.33333333333333</D>
       </Stats>
       <ConcreteClasses>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Metric/Metric.php">Metric</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Metric/Metrics.php">Metrics</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/Metric/Metric.php">Metric</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/Metric/Metrics.php">Metrics</Class>
       </ConcreteClasses>
       <AbstractClasses/>
       <DependsUpon>
-        <Package>JBZoo\ToolboxCI\Formats</Package>
-        <Package>JBZoo\ToolboxCI\Formats\MetricMaps</Package>
+        <Package>JBZoo\CiReportConverter\Formats</Package>
+        <Package>JBZoo\CiReportConverter\Formats\MetricMaps</Package>
       </DependsUpon>
       <UsedBy>
-        <Package>JBZoo\ToolboxCI\Converters</Package>
+        <Package>JBZoo\CiReportConverter\Converters</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\ToolboxCI\Formats\MetricMaps">
+    <Package name="JBZoo\CiReportConverter\Formats\MetricMaps">
       <Stats>
         <TotalClasses>5</TotalClasses>
         <ConcreteClasses>4</ConcreteClasses>
@@ -595,21 +595,21 @@
         <D>0.8</D>
       </Stats>
       <ConcreteClasses>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/PhpDepend.php">PhpDepend</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/PhpLoc.php">PhpLoc</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/PhpMetrics.php">PhpMetrics</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/PhpUnitClover.php">PhpUnitClover</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/MetricMaps/PhpDepend.php">PhpDepend</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/MetricMaps/PhpLoc.php">PhpLoc</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/MetricMaps/PhpMetrics.php">PhpMetrics</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/MetricMaps/PhpUnitClover.php">PhpUnitClover</Class>
       </ConcreteClasses>
       <AbstractClasses>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/MetricMaps/AbstractMetricMap.php">AbstractMetricMap</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/MetricMaps/AbstractMetricMap.php">AbstractMetricMap</Class>
       </AbstractClasses>
       <DependsUpon/>
       <UsedBy>
-        <Package>JBZoo\ToolboxCI\Converters</Package>
-        <Package>JBZoo\ToolboxCI\Formats\Metric</Package>
+        <Package>JBZoo\CiReportConverter\Converters</Package>
+        <Package>JBZoo\CiReportConverter\Formats\Metric</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\ToolboxCI\Formats\Source">
+    <Package name="JBZoo\CiReportConverter\Formats\Source">
       <Stats>
         <TotalClasses>4</TotalClasses>
         <ConcreteClasses>4</ConcreteClasses>
@@ -621,23 +621,23 @@
         <D>0.6</D>
       </Stats>
       <ConcreteClasses>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Source/Exception.php">Exception</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Source/SourceCase.php">SourceCase</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Source/SourceCaseOutput.php">SourceCaseOutput</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/Source/SourceSuite.php">SourceSuite</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/Source/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/Source/SourceCase.php">SourceCase</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/Source/SourceCaseOutput.php">SourceCaseOutput</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/Source/SourceSuite.php">SourceSuite</Class>
       </ConcreteClasses>
       <AbstractClasses/>
       <DependsUpon>
         <Package>JBZoo\Data</Package>
-        <Package>JBZoo\ToolboxCI\Formats</Package>
+        <Package>JBZoo\CiReportConverter\Formats</Package>
       </DependsUpon>
       <UsedBy>
         <Package>JBZoo\PHPUnit</Package>
-        <Package>JBZoo\ToolboxCI\Converters</Package>
-        <Package>JBZoo\ToolboxCI\Formats</Package>
+        <Package>JBZoo\CiReportConverter\Converters</Package>
+        <Package>JBZoo\CiReportConverter\Formats</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\ToolboxCI\Formats\TeamCity">
+    <Package name="JBZoo\CiReportConverter\Formats\TeamCity">
       <Stats>
         <TotalClasses>3</TotalClasses>
         <ConcreteClasses>3</ConcreteClasses>
@@ -649,23 +649,23 @@
         <D>0.33333333333333</D>
       </Stats>
       <ConcreteClasses>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Exception.php">Exception</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Helper.php">Helper</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/TeamCity.php">TeamCity</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Helper.php">Helper</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/TeamCity.php">TeamCity</Class>
       </ConcreteClasses>
       <AbstractClasses/>
       <DependsUpon>
         <Package></Package>
-        <Package>JBZoo\ToolboxCI\Formats</Package>
-        <Package>JBZoo\ToolboxCI\Formats\TeamCity\Writers</Package>
+        <Package>JBZoo\CiReportConverter\Formats</Package>
+        <Package>JBZoo\CiReportConverter\Formats\TeamCity\Writers</Package>
         <Package>JBZoo\Utils</Package>
       </DependsUpon>
       <UsedBy>
-        <Package>JBZoo\ToolboxCI\Converters</Package>
-        <Package>JBZoo\ToolboxCI\Formats\TeamCity\Writers</Package>
+        <Package>JBZoo\CiReportConverter\Converters</Package>
+        <Package>JBZoo\CiReportConverter\Formats\TeamCity\Writers</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\ToolboxCI\Formats\TeamCity\Writers">
+    <Package name="JBZoo\CiReportConverter\Formats\TeamCity\Writers">
       <Stats>
         <TotalClasses>6</TotalClasses>
         <ConcreteClasses>5</ConcreteClasses>
@@ -677,23 +677,23 @@
         <D>0.23333333333333</D>
       </Stats>
       <ConcreteClasses>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/Buffer.php">Buffer</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/CustomCallback.php">CustomCallback</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/Exception.php">Exception</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/Stdout.php">Stdout</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/SymfonyConsole.php">SymfonyConsole</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Writers/Buffer.php">Buffer</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Writers/CustomCallback.php">CustomCallback</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Writers/Exception.php">Exception</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Writers/Stdout.php">Stdout</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Writers/SymfonyConsole.php">SymfonyConsole</Class>
       </ConcreteClasses>
       <AbstractClasses>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/toolbox-ci/src/Formats/TeamCity/Writers/AbstractWriter.php">AbstractWriter</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Writers/AbstractWriter.php">AbstractWriter</Class>
       </AbstractClasses>
       <DependsUpon>
-        <Package>JBZoo\ToolboxCI\Formats\TeamCity</Package>
+        <Package>JBZoo\CiReportConverter\Formats\TeamCity</Package>
         <Package>JBZoo\Utils</Package>
         <Package>Symfony\Component\Console\Output</Package>
       </DependsUpon>
       <UsedBy>
-        <Package>JBZoo\ToolboxCI\Converters</Package>
-        <Package>JBZoo\ToolboxCI\Formats\TeamCity</Package>
+        <Package>JBZoo\CiReportConverter\Converters</Package>
+        <Package>JBZoo\CiReportConverter\Formats\TeamCity</Package>
       </UsedBy>
     </Package>
     <Package name="JBZoo\Utils">
@@ -743,10 +743,10 @@
         <Package>JBZoo\ComposerGraph</Package>
         <Package>JBZoo\Data</Package>
         <Package>JBZoo\PHPUnit</Package>
-        <Package>JBZoo\ToolboxCI</Package>
-        <Package>JBZoo\ToolboxCI\Formats</Package>
-        <Package>JBZoo\ToolboxCI\Formats\TeamCity</Package>
-        <Package>JBZoo\ToolboxCI\Formats\TeamCity\Writers</Package>
+        <Package>JBZoo\CiReportConverter</Package>
+        <Package>JBZoo\CiReportConverter\Formats</Package>
+        <Package>JBZoo\CiReportConverter\Formats\TeamCity</Package>
+        <Package>JBZoo\CiReportConverter\Formats\TeamCity\Writers</Package>
       </UsedBy>
     </Package>
   </Packages>
@@ -795,62 +795,62 @@
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
     </Package>
-    <Package Name="JBZoo\ToolboxCI\Commands">
-      <Package>JBZoo\ToolboxCI\Commands</Package>
-      <Package>JBZoo\ToolboxCI</Package>
+    <Package Name="JBZoo\CiReportConverter\Commands">
+      <Package>JBZoo\CiReportConverter\Commands</Package>
+      <Package>JBZoo\CiReportConverter</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
     </Package>
-    <Package Name="JBZoo\ToolboxCI\Converters">
-      <Package>JBZoo\ToolboxCI\Converters</Package>
+    <Package Name="JBZoo\CiReportConverter\Converters">
+      <Package>JBZoo\CiReportConverter\Converters</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
     </Package>
-    <Package Name="JBZoo\ToolboxCI">
-      <Package>JBZoo\ToolboxCI</Package>
+    <Package Name="JBZoo\CiReportConverter">
+      <Package>JBZoo\CiReportConverter</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
     </Package>
-    <Package Name="JBZoo\ToolboxCI\Formats">
-      <Package>JBZoo\ToolboxCI\Formats</Package>
+    <Package Name="JBZoo\CiReportConverter\Formats">
+      <Package>JBZoo\CiReportConverter\Formats</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
     </Package>
-    <Package Name="JBZoo\ToolboxCI\Formats\JUnit">
-      <Package>JBZoo\ToolboxCI\Formats\JUnit</Package>
-      <Package>JBZoo\ToolboxCI\Formats</Package>
+    <Package Name="JBZoo\CiReportConverter\Formats\JUnit">
+      <Package>JBZoo\CiReportConverter\Formats\JUnit</Package>
+      <Package>JBZoo\CiReportConverter\Formats</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
     </Package>
-    <Package Name="JBZoo\ToolboxCI\Formats\Metric">
-      <Package>JBZoo\ToolboxCI\Formats\Metric</Package>
-      <Package>JBZoo\ToolboxCI\Formats</Package>
+    <Package Name="JBZoo\CiReportConverter\Formats\Metric">
+      <Package>JBZoo\CiReportConverter\Formats\Metric</Package>
+      <Package>JBZoo\CiReportConverter\Formats</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
     </Package>
-    <Package Name="JBZoo\ToolboxCI\Formats\Source">
-      <Package>JBZoo\ToolboxCI\Formats\Source</Package>
+    <Package Name="JBZoo\CiReportConverter\Formats\Source">
+      <Package>JBZoo\CiReportConverter\Formats\Source</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
     </Package>
-    <Package Name="JBZoo\ToolboxCI\Formats\TeamCity">
-      <Package>JBZoo\ToolboxCI\Formats\TeamCity</Package>
-      <Package>JBZoo\ToolboxCI\Formats</Package>
+    <Package Name="JBZoo\CiReportConverter\Formats\TeamCity">
+      <Package>JBZoo\CiReportConverter\Formats\TeamCity</Package>
+      <Package>JBZoo\CiReportConverter\Formats</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
     </Package>
-    <Package Name="JBZoo\ToolboxCI\Formats\TeamCity\Writers">
-      <Package>JBZoo\ToolboxCI\Formats\TeamCity\Writers</Package>
-      <Package>JBZoo\ToolboxCI\Formats\TeamCity</Package>
-      <Package>JBZoo\ToolboxCI\Formats</Package>
+    <Package Name="JBZoo\CiReportConverter\Formats\TeamCity\Writers">
+      <Package>JBZoo\CiReportConverter\Formats\TeamCity\Writers</Package>
+      <Package>JBZoo\CiReportConverter\Formats\TeamCity</Package>
+      <Package>JBZoo\CiReportConverter\Formats</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>

@@ -1,33 +1,33 @@
 <?php
 
 /**
- * JBZoo Toolbox - Toolbox-CI
+ * JBZoo Toolbox - CI-Report-Converter
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    Toolbox-CI
+ * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/Toolbox-CI
+ * @link       https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\ToolboxCI\Formats\JUnit;
+namespace JBZoo\CiReportConverter\Formats\JUnit;
 
-use JBZoo\ToolboxCI\Formats\AbstractNode;
-use JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\AbstractOutput;
-use JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\Error;
-use JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\Failure;
-use JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\Skipped;
-use JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\SystemOut;
-use JBZoo\ToolboxCI\Formats\JUnit\CaseOutput\Warning;
+use JBZoo\CiReportConverter\Formats\AbstractNode;
+use JBZoo\CiReportConverter\Formats\JUnit\CaseOutput\AbstractOutput;
+use JBZoo\CiReportConverter\Formats\JUnit\CaseOutput\Error;
+use JBZoo\CiReportConverter\Formats\JUnit\CaseOutput\Failure;
+use JBZoo\CiReportConverter\Formats\JUnit\CaseOutput\Skipped;
+use JBZoo\CiReportConverter\Formats\JUnit\CaseOutput\SystemOut;
+use JBZoo\CiReportConverter\Formats\JUnit\CaseOutput\Warning;
 
 /**
  * Class JUnitCase
- * @package JBZoo\ToolboxCI\Formats\JUnit
+ * @package JBZoo\CiReportConverter\Formats\JUnit
  *
  * @property string|null $class
  * @property string|null $classname

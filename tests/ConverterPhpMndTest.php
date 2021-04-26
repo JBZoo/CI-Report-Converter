@@ -1,25 +1,25 @@
 <?php
 
 /**
- * JBZoo Toolbox - Toolbox-CI
+ * JBZoo Toolbox - CI-Report-Converter
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    Toolbox-CI
+ * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/Toolbox-CI
+ * @link       https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
 namespace JBZoo\PHPUnit;
 
-use JBZoo\ToolboxCI\Converters\PhpMndConverter;
-use JBZoo\ToolboxCI\Converters\TeamCityInspectionsConverter;
-use JBZoo\ToolboxCI\Converters\TeamCityTestsConverter;
+use JBZoo\CiReportConverter\Converters\PhpMndConverter;
+use JBZoo\CiReportConverter\Converters\TeamCityInspectionsConverter;
+use JBZoo\CiReportConverter\Converters\TeamCityTestsConverter;
 
 /**
  * Class ConverterPhpMndTest
@@ -31,7 +31,7 @@ class ConverterPhpMndTest extends PHPUnit
     public function testToTcTests()
     {
         $source = (new PhpMndConverter())
-            //->setRootPath('/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/vendor/jbzoo/utils')
+            //->setRootPath('/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/utils')
             ->toInternal(file_get_contents(Fixtures::PHPMND_XML));
 
         $converter = (new TeamCityTestsConverter(['show-datetime' => false], 1))->fromInternal($source);

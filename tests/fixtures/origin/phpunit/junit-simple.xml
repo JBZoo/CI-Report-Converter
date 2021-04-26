@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="JBZoo\PHPUnit\ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php" tests="11" assertions="6" errors="2" warnings="1" failures="2" skipped="2" time="0.009100">
-    <testcase name="testValid" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php" line="28" assertions="1" time="0.002791"/>
-    <testcase name="testInValid" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php" line="33" assertions="1" time="0.001824">
+  <testsuite name="JBZoo\PHPUnit\ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php" tests="11" assertions="6" errors="2" warnings="1" failures="2" skipped="2" time="0.009100">
+    <testcase name="testValid" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php" line="28" assertions="1" time="0.002791"/>
+    <testcase name="testInValid" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php" line="33" assertions="1" time="0.001824">
       <failure type="PHPUnit\Framework\ExpectationFailedException">JBZoo\PHPUnit\ExampleTest::testInValid
 Failed asserting that false is true.
 
-/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/vendor/jbzoo/phpunit/src/functions/aliases.php:107
-/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php:35
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/phpunit/src/functions/aliases.php:107
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php:35
 </failure>
     </testcase>
-    <testcase name="testSkipped" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php" line="38" assertions="0" time="0.001036">
+    <testcase name="testSkipped" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php" line="38" assertions="0" time="0.001036">
       <skipped/>
     </testcase>
-    <testcase name="testIncomplete" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php" line="43" assertions="0" time="0.001092">
+    <testcase name="testIncomplete" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php" line="43" assertions="0" time="0.001092">
       <skipped/>
     </testcase>
-    <testcase name="testFail" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php" line="48" assertions="1" time="0.000142">
+    <testcase name="testFail" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php" line="48" assertions="1" time="0.000142">
       <failure type="PHPUnit\Framework\AssertionFailedError">JBZoo\PHPUnit\ExampleTest::testFail
 Some reason to fail
 
-/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/vendor/jbzoo/phpunit/src/functions/aliases.php:51
-/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php:50
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/phpunit/src/functions/aliases.php:51
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php:50
 </failure>
     </testcase>
-    <testcase name="testEcho" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php" line="53" assertions="1" time="0.000098">
+    <testcase name="testEcho" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php" line="53" assertions="1" time="0.000098">
       <system-out>Some echo output</system-out>
     </testcase>
-    <testcase name="testStdOutput" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php" line="59" assertions="1" time="0.001125"/>
-    <testcase name="testErrOutput" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php" line="65" assertions="1" time="0.000198"/>
-    <testcase name="testNoAssert" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php" line="71" assertions="0" time="0.000107">
+    <testcase name="testStdOutput" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php" line="59" assertions="1" time="0.001125"/>
+    <testcase name="testErrOutput" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php" line="65" assertions="1" time="0.000198"/>
+    <testcase name="testNoAssert" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php" line="71" assertions="0" time="0.000107">
       <error type="PHPUnit\Framework\RiskyTestError">Risky Test
 </error>
     </testcase>
-    <testcase name="testNotice" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php" line="75" assertions="0" time="0.000370">
+    <testcase name="testNotice" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php" line="75" assertions="0" time="0.000370">
       <error type="PHPUnit\Framework\Error\Notice">JBZoo\PHPUnit\ExampleTest::testNotice
 Undefined variable: aaa
 
-/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php:77
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php:77
 </error>
     </testcase>
-    <testcase name="testWarning" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php" line="80" assertions="0" time="0.000317">
+    <testcase name="testWarning" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php" line="80" assertions="0" time="0.000317">
       <warning type="PHPUnit\Framework\Warning">JBZoo\PHPUnit\ExampleTest::testWarning
 Some warning
 
-/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php:82
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php:82
 </warning>
     </testcase>
   </testsuite>
-  <testsuite name="JBZoo\PHPUnit\ExampleTest-2" file="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php" tests="1" errors="1" time="5.000593">
-    <testcase name="testException" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php" line="85" assertions="0" time="5.000593">
+  <testsuite name="JBZoo\PHPUnit\ExampleTest-2" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php" tests="1" errors="1" time="5.000593">
+    <testcase name="testException" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php" line="85" assertions="0" time="5.000593">
       <error type="JBZoo\PHPUnit\Exception">JBZoo\PHPUnit\ExampleTest::testException
 JBZoo\PHPUnit\Exception: Exception message
 
-/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php:88
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php:88
 </error>
       <system-out>Some echo output</system-out>
     </testcase>

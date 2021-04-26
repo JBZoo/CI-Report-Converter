@@ -1,32 +1,32 @@
 <?php
 
 /**
- * JBZoo Toolbox - Toolbox-CI
+ * JBZoo Toolbox - CI-Report-Converter
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    Toolbox-CI
+ * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/Toolbox-CI
+ * @link       https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
 namespace JBZoo\PHPUnit;
 
-use JBZoo\ToolboxCI\Commands\Convert;
-use JBZoo\ToolboxCI\Commands\ConvertMap;
-use JBZoo\ToolboxCI\Commands\TeamCityStats;
-use JBZoo\ToolboxCI\Converters\CheckStyleConverter;
-use JBZoo\ToolboxCI\Converters\GithubCliConverter;
-use JBZoo\ToolboxCI\Converters\JUnitConverter;
-use JBZoo\ToolboxCI\Converters\PhpLocStatsTcConverter;
-use JBZoo\ToolboxCI\Converters\PhpMdJsonConverter;
-use JBZoo\ToolboxCI\Converters\TeamCityInspectionsConverter;
-use JBZoo\ToolboxCI\Converters\TeamCityTestsConverter;
+use JBZoo\CiReportConverter\Commands\Convert;
+use JBZoo\CiReportConverter\Commands\ConvertMap;
+use JBZoo\CiReportConverter\Commands\TeamCityStats;
+use JBZoo\CiReportConverter\Converters\CheckStyleConverter;
+use JBZoo\CiReportConverter\Converters\GithubCliConverter;
+use JBZoo\CiReportConverter\Converters\JUnitConverter;
+use JBZoo\CiReportConverter\Converters\PhpLocStatsTcConverter;
+use JBZoo\CiReportConverter\Converters\PhpMdJsonConverter;
+use JBZoo\CiReportConverter\Converters\TeamCityInspectionsConverter;
+use JBZoo\CiReportConverter\Converters\TeamCityTestsConverter;
 use JBZoo\Utils\Cli;
 use JBZoo\Utils\Sys;
 use Symfony\Component\Console\Application;
@@ -46,7 +46,7 @@ class CliCommandsTest extends PHPUnit
             $helpMessage = implode("\n", [
                 '',
                 '```',
-                '$ php ./vendor/bin/toolbox-ci convert --help',
+                '$ php ./vendor/bin/ci-report-converter convert --help',
                 $helpMessage,
                 '```',
                 '',
@@ -64,7 +64,7 @@ class CliCommandsTest extends PHPUnit
         $helpMessage = implode("\n", [
             '',
             '```sh',
-            'php ./vendor/bin/toolbox-ci convert:map',
+            'php ./vendor/bin/ci-report-converter convert:map',
             '```',
             '',
             $helpMessage,
@@ -161,29 +161,29 @@ class CliCommandsTest extends PHPUnit
             '  <testsuite name="Test Suite" tests="5" failures="5">',
             '    <testsuite name="JUnit/TestCaseElement.php" file="JUnit/TestCaseElement.php" tests="5" failures="5">',
             '      <testcase name="JUnit/TestCaseElement.php line 34, column 21" class="ERROR" classname="ERROR" file="JUnit/TestCaseElement.php" line="34">',
-            '        <failure type="ERROR" message="MissingReturnType: Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setName does not have a return type, expecting void">',
-            'MissingReturnType: Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setName does not have a return type, expecting void',
+            '        <failure type="ERROR" message="MissingReturnType: Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setName does not have a return type, expecting void">',
+            'MissingReturnType: Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setName does not have a return type, expecting void',
             'File Path: JUnit/TestCaseElement.php:34:21',
             'Severity : error',
             '</failure>',
             '      </testcase>',
             '      <testcase name="JUnit/TestCaseElement.php line 42, column 21" class="ERROR" classname="ERROR" file="JUnit/TestCaseElement.php" line="42">',
-            '        <failure type="ERROR" message="MissingReturnType: Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setClassname does not have a return type, expecting void">',
-            'MissingReturnType: Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setClassname does not have a return type, expecting void',
+            '        <failure type="ERROR" message="MissingReturnType: Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setClassname does not have a return type, expecting void">',
+            'MissingReturnType: Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setClassname does not have a return type, expecting void',
             'File Path: JUnit/TestCaseElement.php:42:21',
             'Severity : error',
             '</failure>',
             '      </testcase>',
             '      <testcase name="JUnit/TestCaseElement.php line 52, column 21" class="ERROR" classname="ERROR" file="JUnit/TestCaseElement.php" line="52">',
-            '        <failure type="ERROR" message="MissingReturnType: Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setTime does not have a return type, expecting void">',
-            'MissingReturnType: Method JBZoo\ToolboxCI\JUnit\TestCaseElement::setTime does not have a return type, expecting void',
+            '        <failure type="ERROR" message="MissingReturnType: Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setTime does not have a return type, expecting void">',
+            'MissingReturnType: Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setTime does not have a return type, expecting void',
             'File Path: JUnit/TestCaseElement.php:52:21',
             'Severity : error',
             '</failure>',
             '      </testcase>',
             '      <testcase name="JUnit/TestCaseElement.php line 54, column 37" class="ERROR" classname="ERROR" file="JUnit/TestCaseElement.php" line="54">',
-            '        <failure type="ERROR" message="InvalidScalarArgument: Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, float provided">',
-            'InvalidScalarArgument: Argument 2 of JBZoo\ToolboxCI\JUnit\TestCaseElement::setAttribute expects string, float provided',
+            '        <failure type="ERROR" message="InvalidScalarArgument: Argument 2 of JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute expects string, float provided">',
+            'InvalidScalarArgument: Argument 2 of JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute expects string, float provided',
             'File Path: JUnit/TestCaseElement.php:54:37',
             'Severity : error',
             '</failure>',
@@ -235,7 +235,7 @@ class CliCommandsTest extends PHPUnit
         return Cli::exec(
             implode(' ', [
                 Sys::getBinary(),
-                "{$rootDir}/toolbox-ci.php --no-ansi",
+                "{$rootDir}/ci-report-converter.php --no-ansi",
                 $action,
             ]),
             $params,

@@ -1,31 +1,31 @@
 <?php
 
 /**
- * JBZoo Toolbox - Toolbox-CI
+ * JBZoo Toolbox - CI-Report-Converter
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    Toolbox-CI
+ * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/Toolbox-CI
+ * @link       https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\ToolboxCI\Converters;
+namespace JBZoo\CiReportConverter\Converters;
 
-use JBZoo\ToolboxCI\Formats\Metric\Metrics;
-use JBZoo\ToolboxCI\Formats\MetricMaps\PhpUnitClover;
+use JBZoo\CiReportConverter\Formats\Metric\Metrics;
+use JBZoo\CiReportConverter\Formats\MetricMaps\PhpUnitClover;
 
 use function JBZoo\Data\data;
 use function JBZoo\Utils\float;
 
 /**
  * Class PhpUnitCloverStatsTcConverter
- * @package JBZoo\ToolboxCI\Converters
+ * @package JBZoo\CiReportConverter\Converters
  */
 class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
 {

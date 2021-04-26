@@ -1,28 +1,28 @@
 <?php
 
 /**
- * JBZoo Toolbox - Toolbox-CI
+ * JBZoo Toolbox - CI-Report-Converter
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    Toolbox-CI
+ * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/Toolbox-CI
+ * @link       https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\ToolboxCI\Formats\Metric;
+namespace JBZoo\CiReportConverter\Formats\Metric;
 
-use JBZoo\ToolboxCI\Formats\AbstractNode;
-use JBZoo\ToolboxCI\Formats\MetricMaps\AbstractMetricMap;
+use JBZoo\CiReportConverter\Formats\AbstractNode;
+use JBZoo\CiReportConverter\Formats\MetricMaps\AbstractMetricMap;
 
 /**
  * Class Metrics
- * @package JBZoo\ToolboxCI\Formats\Metric
+ * @package JBZoo\CiReportConverter\Formats\Metric
  */
 class Metrics extends AbstractNode
 {

@@ -4,7 +4,7 @@
     "timestamp" : "2020-07-19T21:40:40+03:00",
     "files"     : [
         {
-            "file"       : "\/Users\/smetdenis\/Work\/projects\/jbzoo-toolbox-ci\/vendor\/povils\/phpmnd\/src\/Console\/Application.php",
+            "file"       : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/povils\/phpmnd\/src\/Console\/Application.php",
             "violations" : [
                 {
                     "beginLine"       : 26,
@@ -35,7 +35,7 @@
             ]
         },
         {
-            "file"       : "\/Users\/smetdenis\/Work\/projects\/jbzoo-toolbox-ci\/vendor\/povils\/phpmnd\/src\/Console\/Command.php",
+            "file"       : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/povils\/phpmnd\/src\/Console\/Command.php",
             "violations" : [
                 {
                     "beginLine"       : 24,
@@ -118,7 +118,7 @@
             ]
         },
         {
-            "file"       : "\/Users\/smetdenis\/Work\/projects\/jbzoo-toolbox-ci\/vendor\/povils\/phpmnd\/src\/Console\/Option.php",
+            "file"       : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/povils\/phpmnd\/src\/Console\/Option.php",
             "violations" : [
                 {
                     "beginLine"       : 49,

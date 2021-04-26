@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="3.5.5">
-    <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/JUnitXml.php">
+    <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/JUnitXml.php">
         <error line="24"
                column="5"
                severity="warning"

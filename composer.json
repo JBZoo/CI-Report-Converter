@@ -1,8 +1,32 @@
 {
-    "name"         : "jbzoo/toolbox-ci",
+    "name"         : "jbzoo/ci-report-converter",
     "type"         : "project",
-    "description"  : "Toolbox for continuous integration system",
     "license"      : "MIT",
+    "description"  : "The tool converts different error reporting standards for deep compatibility with popular CI systems (TeamCity, intellij idea, GitHub Actions, etc)",
+    "keywords"     : [
+        "checkstyle",
+        "codestyle",
+        "phpstorm",
+        "teamcity",
+        "github",
+        "github actions",
+        "actions",
+        "junit",
+        "pmd",
+        "phpmd",
+        "phpmnd",
+        "psalm",
+        "phpstan",
+        "phan",
+        "phpcs",
+        "phpmd",
+        "phploc",
+        "teamcity-inspections",
+        "inspections",
+        "tests",
+        "ci",
+        "continuous integration"
+    ],
 
     "authors"      : [
         {
@@ -29,9 +53,13 @@
         "roave/security-advisories" : "dev-master"
     },
 
+    "replace"      : {
+        "jbzoo/toolbox-ci" : "*"
+    },
+
     "autoload"     : {
         "psr-4" : {
-            "JBZoo\\ToolboxCI\\" : "src"
+            "JBZoo\\CiReportConverter\\" : "src"
         }
     },
 
@@ -39,7 +67,7 @@
         "classmap" : ["tests"]
     },
 
-    "bin"          : ["toolbox-ci"],
+    "bin"          : ["ci-report-converter"],
 
     "config"       : {
         "optimize-autoloader" : true
@@ -47,7 +75,7 @@
 
     "extra"        : {
         "branch-alias" : {
-            "dev-master" : "1.x-dev"
+            "dev-master" : "2.x-dev"
         }
     }
 }

@@ -1,27 +1,27 @@
 <?php
 
 /**
- * JBZoo Toolbox - Toolbox-CI
+ * JBZoo Toolbox - CI-Report-Converter
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    Toolbox-CI
+ * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/Toolbox-CI
+ * @link       https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
 namespace JBZoo\PHPUnit;
 
-use JBZoo\ToolboxCI\Converters\CheckStyleConverter;
-use JBZoo\ToolboxCI\Converters\GithubCliConverter;
-use JBZoo\ToolboxCI\Converters\JUnitConverter;
-use JBZoo\ToolboxCI\Formats\GithubActions\GithubActions;
-use JBZoo\ToolboxCI\Formats\GithubActions\GithubCase;
+use JBZoo\CiReportConverter\Converters\CheckStyleConverter;
+use JBZoo\CiReportConverter\Converters\GithubCliConverter;
+use JBZoo\CiReportConverter\Converters\JUnitConverter;
+use JBZoo\CiReportConverter\Formats\GithubActions\GithubActions;
+use JBZoo\CiReportConverter\Formats\GithubActions\GithubCase;
 
 /**
  * Class ConverterGithubTest
@@ -31,7 +31,7 @@ class ConverterGithubTest extends PHPUnit
 {
     public function testJUnitSimple()
     {
-        $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-toolbox-ci';
+        $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
 
         $sourceCode = (new JUnitConverter())
             ->setRootPath($pathPrefix)
@@ -57,7 +57,7 @@ class ConverterGithubTest extends PHPUnit
 
     public function testJUnitNested()
     {
-        $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-toolbox-ci';
+        $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
 
         $sourceCode = (new JUnitConverter())
             ->setRootPath($pathPrefix)
@@ -85,7 +85,7 @@ class ConverterGithubTest extends PHPUnit
 
     public function testCodeStyle()
     {
-        $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-toolbox-ci';
+        $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
 
         $sourceCode = (new CheckStyleConverter())
             ->setRootPath($pathPrefix)

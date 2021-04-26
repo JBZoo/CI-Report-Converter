@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpcs version="3.5.5">
-    <file name="/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/src/JUnit/JUnitXml.php" errors="2" warnings="1"
+    <file name="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/JUnitXml.php" errors="2" warnings="1"
           fixable="2">
         <warning line="24" column="5" source="PSR12.Properties.ConstantVisibility.NotFound" severity="5" fixable="0">
             Visibility must be declared on all constants if your project supports PHP 7.1 or later

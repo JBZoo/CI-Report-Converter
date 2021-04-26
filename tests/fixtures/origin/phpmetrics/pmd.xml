@@ -32,7 +32,7 @@ The packages that are more stable are
 
 Maybe you should delegate some code to other objects or split complex method.</violation>
   </file>
-  <file name="JBZoo\ToolboxCI\Markdown">
+  <file name="JBZoo\CiReportConverter\Markdown">
     <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.42 bugs.
 
 * Calculation is based on number of operators, operands, cyclomatic complexity
@@ -41,7 +41,7 @@ Maybe you should delegate some code to other objects or split complex method.</v
 
 Maybe you should check your unit tests for this class.</violation>
   </file>
-  <file name="JBZoo\ToolboxCI\">
+  <file name="JBZoo\CiReportConverter\">
     <violation beginline="1" rule="Stable Abstractions Principle" ruleset="Stable Abstractions Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should be either abstract and stable or concrete and instable.
 
 This package is instable and abstract.</violation>
@@ -52,12 +52,12 @@ The packages that are more stable are
 
 * JBZoo\Utils (0.545)</violation>
   </file>
-  <file name="JBZoo\ToolboxCI\Formats\MetricMaps\">
+  <file name="JBZoo\CiReportConverter\Formats\MetricMaps\">
     <violation beginline="1" rule="Stable Abstractions Principle" ruleset="Stable Abstractions Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should be either abstract and stable or concrete and instable.
 
 This package is instable and abstract.</violation>
   </file>
-  <file name="JBZoo\ToolboxCI\Formats\JUnit\JUnitSuite">
+  <file name="JBZoo\CiReportConverter\Formats\JUnit\JUnitSuite">
     <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
 
 * Algorithms are complex (Max cyclomatic complexity of class methods is 11)
@@ -71,7 +71,7 @@ Maybe you should delegate some code to other objects or split complex method.</v
 
 Maybe you should check your unit tests for this class.</violation>
   </file>
-  <file name="JBZoo\ToolboxCI\Formats\Source\SourceSuite">
+  <file name="JBZoo\CiReportConverter\Formats\Source\SourceSuite">
     <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.4 bugs.
 
 * Calculation is based on number of operators, operands, cyclomatic complexity
@@ -80,7 +80,7 @@ Maybe you should check your unit tests for this class.</violation>
 
 Maybe you should check your unit tests for this class.</violation>
   </file>
-  <file name="JBZoo\ToolboxCI\Formats\Source\">
+  <file name="JBZoo\CiReportConverter\Formats\Source\">
     <violation beginline="1" rule="Stable Abstractions Principle" ruleset="Stable Abstractions Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should be either abstract and stable or concrete and instable.
 
 This package is instable and abstract.</violation>
@@ -91,14 +91,14 @@ The packages that are more stable are
 
 * JBZoo\Data (0.412)</violation>
   </file>
-  <file name="JBZoo\ToolboxCI\Formats\AbstractNode">
+  <file name="JBZoo\CiReportConverter\Formats\AbstractNode">
     <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
 
 * Algorithms are complex (Max cyclomatic complexity of class methods is 12)
 
 Maybe you should delegate some code to other objects or split complex method.</violation>
   </file>
-  <file name="JBZoo\ToolboxCI\Formats\">
+  <file name="JBZoo\CiReportConverter\Formats\">
     <violation beginline="1" rule="Stable Abstractions Principle" ruleset="Stable Abstractions Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should be either abstract and stable or concrete and instable.
 
 This package is instable and abstract.</violation>
@@ -109,9 +109,9 @@ The packages that are more stable are
 
 * JBZoo\Data (0.412)
 * JBZoo\Utils (0.545)
-* JBZoo\ToolboxCI\Formats\Source (0.333)</violation>
+* JBZoo\CiReportConverter\Formats\Source (0.333)</violation>
   </file>
-  <file name="JBZoo\ToolboxCI\Formats\TeamCity\TeamCity">
+  <file name="JBZoo\CiReportConverter\Formats\TeamCity\TeamCity">
     <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.42 bugs.
 
 * Calculation is based on number of operators, operands, cyclomatic complexity
@@ -120,15 +120,15 @@ The packages that are more stable are
 
 Maybe you should check your unit tests for this class.</violation>
   </file>
-  <file name="JBZoo\ToolboxCI\Formats\TeamCity\Writers\">
+  <file name="JBZoo\CiReportConverter\Formats\TeamCity\Writers\">
     <violation beginline="1" rule="Stable Dependencies Principle" ruleset="Stable Dependencies Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should depend in the direction of stability.
 
 This package is more stable (0.6) than 1 package(s) that it depends on.
 The packages that are more stable are
 
-* JBZoo\ToolboxCI\Formats\TeamCity (0.667)</violation>
+* JBZoo\CiReportConverter\Formats\TeamCity (0.667)</violation>
   </file>
-  <file name="JBZoo\ToolboxCI\Formats\Metric\">
+  <file name="JBZoo\CiReportConverter\Formats\Metric\">
     <violation beginline="1" rule="Stable Abstractions Principle" ruleset="Stable Abstractions Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should be either abstract and stable or concrete and instable.
 
 This package is instable and abstract.</violation>
@@ -137,17 +137,17 @@ This package is instable and abstract.</violation>
 This package is more stable (0.286) than 1 package(s) that it depends on.
 The packages that are more stable are
 
-* JBZoo\ToolboxCI\Formats (0.3)</violation>
+* JBZoo\CiReportConverter\Formats (0.3)</violation>
   </file>
-  <file name="JBZoo\ToolboxCI\Converters\">
+  <file name="JBZoo\CiReportConverter\Converters\">
     <violation beginline="1" rule="Stable Dependencies Principle" ruleset="Stable Dependencies Principle" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">Packages should depend in the direction of stability.
 
 This package is more stable (0.857) than 1 package(s) that it depends on.
 The packages that are more stable are
 
-* JBZoo\ToolboxCI\Formats\JUnit (0.909)</violation>
+* JBZoo\CiReportConverter\Formats\JUnit (0.909)</violation>
   </file>
-  <file name="JBZoo\ToolboxCI\Converters\JUnitConverter">
+  <file name="JBZoo\CiReportConverter\Converters\JUnitConverter">
     <violation beginline="1" rule="Too complex method code" ruleset="Too complex method code" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="2">This class looks really complex.
 
 * Algorithms are complex (Max cyclomatic complexity of class methods is 17)
@@ -161,7 +161,7 @@ Maybe you should delegate some code to other objects or split complex method.</v
 
 Maybe you should check your unit tests for this class.</violation>
   </file>
-  <file name="JBZoo\ToolboxCI\Converters\PhpMdJsonConverter">
+  <file name="JBZoo\CiReportConverter\Converters\PhpMdJsonConverter">
     <violation beginline="1" rule="Probably bugged" ruleset="Probably bugged" externalInfoUrl="http://www.phpmetrics.org/documentation/index.html" priority="3">This component contains in theory 0.35 bugs.
 
 * Calculation is based on number of operators, operands, cyclomatic complexity

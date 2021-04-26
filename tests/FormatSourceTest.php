@@ -1,25 +1,25 @@
 <?php
 
 /**
- * JBZoo Toolbox - Toolbox-CI
+ * JBZoo Toolbox - CI-Report-Converter
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    Toolbox-CI
+ * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/Toolbox-CI
+ * @link       https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
 namespace JBZoo\PHPUnit;
 
-use JBZoo\ToolboxCI\Formats\Source\SourceCase;
-use JBZoo\ToolboxCI\Formats\Source\SourceCaseOutput;
-use JBZoo\ToolboxCI\Formats\Source\SourceSuite;
+use JBZoo\CiReportConverter\Formats\Source\SourceCase;
+use JBZoo\CiReportConverter\Formats\Source\SourceCaseOutput;
+use JBZoo\CiReportConverter\Formats\Source\SourceSuite;
 
 /**
  * Class FormatSourceTest
@@ -119,7 +119,7 @@ class FormatSourceTest extends PHPUnit
         $suite = new SourceSuite('Suite');
         $case = $suite->addTestCase('Test Name');
         $case->time = 0.001824;
-        $case->file = '/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php';
+        $case->file = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php';
         $case->line = 28;
         $case->class = ExampleTest::class;
         $case->classname = str_replace('\\', '.', ExampleTest::class);
@@ -149,7 +149,7 @@ class FormatSourceTest extends PHPUnit
                     'name'       => 'Test Name',
                     'class'      => ExampleTest::class,
                     'classname'  => 'JBZoo.PHPUnit.ExampleTest',
-                    'file'       => '/Users/smetdenis/Work/projects/jbzoo-toolbox-ci/tests/ExampleTest.php',
+                    'file'       => '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php',
                     'line'       => 28,
                     'stdOut'     => 'Some std output',
                     'errOut'     => 'Some err output',
@@ -228,7 +228,7 @@ class FormatSourceTest extends PHPUnit
 
     public function testSettingInvalidProperty()
     {
-        $this->expectException(\JBZoo\ToolboxCI\Formats\Source\Exception::class);
+        $this->expectException(\JBZoo\CiReportConverter\Formats\Source\Exception::class);
         $this->expectExceptionMessage('Undefined property "invalid_prop"');
 
         $suite = new SourceCase('Case');
