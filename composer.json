@@ -1,6 +1,6 @@
 {
     "name"         : "jbzoo/ci-report-converter",
-    "type"         : "project",
+    "type"         : "library",
     "license"      : "MIT",
     "description"  : "The tool converts different error reporting standards for deep compatibility with popular CI systems (TeamCity, IntelliJ IDEA, GitHub Actions, etc)",
     "keywords"     : [
