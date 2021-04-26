@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "410916b2e78ce112ddbae8fd65eaa4bc",
+    "content-hash": "2ae2b7891116e713c93625de4cbf30f5",
     "packages": [
         {
             "name": "jbzoo/data",
@@ -1297,16 +1297,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.8.1",
+            "version": "1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1"
+                "reference": "dc960a912984efb74d0a90222870c72c87f10c91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/35ea11d335fd638b5882ff1725228b3d35496ab1",
-                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/dc960a912984efb74d0a90222870c72c87f10c91",
+                "reference": "dc960a912984efb74d0a90222870c72c87f10c91",
                 "shasum": ""
             },
             "require": {
@@ -1366,9 +1366,9 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/1.8.1"
+                "source": "https://github.com/guzzle/psr7/tree/1.8.2"
             },
-            "time": "2021-03-21T16:25:00+00:00"
+            "time": "2021-04-26T09:17:50+00:00"
         },
         {
             "name": "hanneskod/classtools",
@@ -1530,16 +1530,16 @@
         },
         {
             "name": "jbzoo/codestyle",
-            "version": "2.14.0",
+            "version": "2.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JBZoo/Codestyle.git",
-                "reference": "2867f5730fe0b64f63b84f1e733dc6aaaf2b7797"
+                "reference": "c157020598bb2a6c7d68879647fdcd015eaab50d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBZoo/Codestyle/zipball/2867f5730fe0b64f63b84f1e733dc6aaaf2b7797",
-                "reference": "2867f5730fe0b64f63b84f1e733dc6aaaf2b7797",
+                "url": "https://api.github.com/repos/JBZoo/Codestyle/zipball/c157020598bb2a6c7d68879647fdcd015eaab50d",
+                "reference": "c157020598bb2a6c7d68879647fdcd015eaab50d",
                 "shasum": ""
             },
             "require": {
@@ -1556,8 +1556,8 @@
                 "symfony/yaml": ">=4.4.16"
             },
             "require-dev": {
+                "jbzoo/ci-report-converter": "^2.0.0",
                 "jbzoo/phpunit": "^4.9.0",
-                "jbzoo/toolbox-ci": "^1.6.0",
                 "jbzoo/utils": "^4.4.0",
                 "phpbench/phpbench": "^0.17.1"
             },
@@ -1594,9 +1594,9 @@
             ],
             "support": {
                 "issues": "https://github.com/JBZoo/Codestyle/issues",
-                "source": "https://github.com/JBZoo/Codestyle/tree/2.14.0"
+                "source": "https://github.com/JBZoo/Codestyle/tree/2.15.0"
             },
-            "time": "2021-04-25T22:47:37+00:00"
+            "time": "2021-04-26T11:08:17+00:00"
         },
         {
             "name": "jbzoo/jbdump",

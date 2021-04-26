@@ -50,7 +50,7 @@
     "require-dev"  : {
         "jbzoo/toolbox-dev"         : "^2.11.0",
         "jbzoo/mermaid-php"         : "^2.2.0",
-        "jbzoo/codestyle"           : "^2.14.0",
+        "jbzoo/codestyle"           : "^2.15.0",
         "roave/security-advisories" : "dev-master"
     },
 
