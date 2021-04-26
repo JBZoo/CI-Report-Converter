@@ -39,6 +39,7 @@ test-all: ##@Project Run all project tests at once
 
 create-symlink: ##@Project Create Symlink (alias for testing)
 	@ln -sfv `pwd`/ci-report-converter `pwd`/vendor/bin/ci-report-converter
+	@ln -sfv `pwd`/ci-report-converter `pwd`/vendor/bin/toolbox-ci
 
 
 test-example:
