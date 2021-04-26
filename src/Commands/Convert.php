@@ -32,14 +32,24 @@ class Convert extends AbstractCommand
      */
     protected function configure(): void
     {
-        $formats = 'Available options: <comment>' . implode(', ', Map::getAvailableFormats()) . '</comment>';
-
         $this
             ->setName('convert')
             ->setDescription('Convert one report format to another')
             // Required
-            ->addOption('input-format', 'S', InputOption::VALUE_REQUIRED, "Source format. {$formats}")
-            ->addOption('output-format', 'T', InputOption::VALUE_REQUIRED, "Target format. {$formats}")
+            ->addOption(
+                'input-format',
+                'S',
+                InputOption::VALUE_REQUIRED,
+                'Source format. Available options: <comment>'
+                . implode(', ', Map::getAvailableFormats(Map::INPUT)) . '</comment>'
+            )
+            ->addOption(
+                'output-format',
+                'T',
+                InputOption::VALUE_REQUIRED,
+                'Target format. Available options: <comment>'
+                . implode(', ', Map::getAvailableFormats(Map::OUTPUT)) . '</comment>'
+            )
             // Optional
             ->addOption('suite-name', 'N', InputOption::VALUE_REQUIRED, 'Set name of root suite');
 

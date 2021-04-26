@@ -69,12 +69,22 @@ class Map
     }
 
     /**
+     * @param string|null $direction
      * @return array
      */
-    public static function getAvailableFormats(): array
+    public static function getAvailableFormats(?string $direction = null): array
     {
         $drivers = array_keys(self::MAP_TESTS);
         sort($drivers);
+
+        if (null !== $direction) {
+            return array_filter(array_map(static function (string $converterClass) use ($direction): ?string {
+                if (self::MAP_TESTS[$converterClass][$direction]) {
+                    return $converterClass::TYPE;
+                }
+                return null;
+            }, $drivers));
+        }
 
         return array_map(static function (string $converterClass): string {
             return $converterClass::TYPE;
