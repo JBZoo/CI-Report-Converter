@@ -2,7 +2,7 @@
     "name"         : "jbzoo/ci-report-converter",
     "type"         : "project",
     "license"      : "MIT",
-    "description"  : "The tool converts different error reporting standards for deep compatibility with popular CI systems (TeamCity, intellij idea, GitHub Actions, etc)",
+    "description"  : "The tool converts different error reporting standards for deep compatibility with popular CI systems (TeamCity, IntelliJ IDEA, GitHub Actions, etc)",
     "keywords"     : [
         "checkstyle",
         "codestyle",
@@ -25,7 +25,8 @@
         "inspections",
         "tests",
         "ci",
-        "continuous integration"
+        "continuous integration",
+        "IntelliJ IDEA"
     ],
 
     "authors"      : [
