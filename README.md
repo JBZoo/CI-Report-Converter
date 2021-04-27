@@ -11,11 +11,11 @@
 composer require jbzoo/ci-report-converter
 php ./vendor/bin/ci-report-converter --help
 
-# OR use phar file.
+# OR use phar file
 wget https://github.com/JBZoo/CI-Report-Converter/releases/latest/download/ci-report-converter.phar
 php ./ci-report-converter.phar --help
 
-# OR just pull the Docker image
+# OR just pull the Docker Image
 docker run --rm jbzoo/ci-report-converter --help 
 ```
 
