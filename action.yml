@@ -33,9 +33,9 @@ runs:
   image: 'docker://jbzoo/ci-report-converter:latest'
   args:
     - 'convert'
-    - '--output-format'
-    - 'github-cli'
     - '--input-format'
     - ${{ inputs.format }}
-    - '--source-file'
+    - '--input-file'
     - ${{ inputs.file }}
+    - '--output-format'
+    - 'github-cli'
