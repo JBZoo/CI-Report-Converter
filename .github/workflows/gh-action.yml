@@ -77,7 +77,7 @@ jobs:
 
       - name: JUnit.xml
         continue-on-error: true
-        uses: jbzoo/ci-report-converter@v2
+        uses: jbzoo/ci-report-converter
         with:
           file: tests/fixtures/origin/phpunit/junit-nested.xml
 
