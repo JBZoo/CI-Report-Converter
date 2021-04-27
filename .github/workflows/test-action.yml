@@ -35,4 +35,4 @@ jobs:
         continue-on-error: true
         uses: ./
         with:
-          file: fixtures/origin/phpunit/junit-nested.xml
+          file: ./fixtures/origin/phpunit/junit-nested.xml
