@@ -22,8 +22,8 @@ on:
       - 'master'
 
 jobs:
-  genetal:
-    name: Testing GitHub Action
+  develop:
+    name: Develop
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -61,6 +61,50 @@ jobs:
       - name: Psalm.json
         continue-on-error: true
         uses: ./
+        with:
+          format: psalm-json
+          file: tests/fixtures/origin/psalm/json.json
+
+
+  production:
+    name: Production
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: JUnit.xml
+        continue-on-error: true
+        uses: jbzoo/ci-report-converter@v2
+        with:
+          file: tests/fixtures/origin/phpunit/junit-nested.xml
+
+      - name: CheckStyle.xml
+        continue-on-error: true
+        uses: jbzoo/ci-report-converter@v2
+        with:
+          format: checkstyle
+          file: tests/fixtures/origin/phpcs/codestyle.xml
+
+      - name: PHP Mess Detector
+        continue-on-error: true
+        uses: jbzoo/ci-report-converter@v2
+        with:
+          format: phpmd-json
+          file: tests/fixtures/origin/phpmd/json.json
+
+      - name: PHP Magic Numbers Detector
+        continue-on-error: true
+        uses: jbzoo/ci-report-converter@v2
+        with:
+          format: phpmd-json
+          file: tests/fixtures/origin/phpmd/json.json
+
+      - name: Psalm.json
+        continue-on-error: true
+        uses: jbzoo/ci-report-converter@v2
         with:
           format: psalm-json
           file: tests/fixtures/origin/psalm/json.json
