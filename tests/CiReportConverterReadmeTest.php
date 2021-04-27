@@ -47,9 +47,11 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
         'scrutinizer',
         'strict_types',
         '__BR__',
+        'php_version',
         'latest_stable_version',
         'total_downloads',
         'docker_pulls',
+        'github_issues',
         'github_license',
     ];
 
@@ -65,6 +67,7 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
         $this->params['docker_pulls'] = true;
         $this->params['github_actions'] = true;
         $this->params['scrutinizer'] = true;
+        $this->params['php_version'] = true;
     }
 
     /**
@@ -88,6 +91,18 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
             'CI',
             'https://github.com/__VENDOR_ORIG__/__PACKAGE_ORIG__/actions/workflows/main.yml/badge.svg?branch=master',
             'https://github.com/__VENDOR_ORIG__/__PACKAGE_ORIG__/actions/workflows/main.yml'
+        ));
+    }
+
+    /**
+     * @return string|null
+     */
+    protected function checkBadgePhpVersion(): ?string
+    {
+        return $this->getPreparedBadge($this->getBadge(
+            'PHP Version',
+            'https://img.shields.io/packagist/php-v/__VENDOR__/__PACKAGE__',
+            'https://github.com/__VENDOR_ORIG__/__PACKAGE_ORIG__/blob/master/composer.json'
         ));
     }
 
