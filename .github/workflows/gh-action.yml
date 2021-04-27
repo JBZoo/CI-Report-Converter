@@ -83,28 +83,28 @@ jobs:
 
       - name: CheckStyle.xml
         continue-on-error: true
-        uses: jbzoo/ci-report-converter@v2.2
+        uses: JBZoo/CI-Report-Converter@v2
         with:
           format: checkstyle
           file: tests/fixtures/origin/phpcs/codestyle.xml
 
       - name: PHP Mess Detector
         continue-on-error: true
-        uses: jbzoo/ci-report-converter@v2.2.0
+        uses: JBZoo/CI-Report-Converter@v2
         with:
           format: phpmd-json
           file: tests/fixtures/origin/phpmd/json.json
 
       - name: PHP Magic Numbers Detector
         continue-on-error: true
-        uses: jbzoo/ci-report-converter@v2
+        uses: JBZoo/CI-Report-Converter@v2
         with:
           format: phpmd-json
           file: tests/fixtures/origin/phpmd/json.json
 
       - name: Psalm.json
         continue-on-error: true
-        uses: jbzoo/ci-report-converter@v2.2.0
+        uses: JBZoo/CI-Report-Converter@v2
         with:
           format: psalm-json
           file: tests/fixtures/origin/psalm/json.json
