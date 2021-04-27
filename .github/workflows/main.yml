@@ -67,7 +67,7 @@ jobs:
 
 
   linters:
-    name: Liters
+    name: Linters
     runs-on: ubuntu-latest
     strategy:
       matrix:
