@@ -12,7 +12,7 @@
 #
 
 name: 'CI Report Converter'
-description: 'The tool converts different error reporting standards for deep compatibility with popular CI systems (TeamCity, IntelliJ IDEA, GitHub Actions, etc)'
+description: 'The tool converts different error reports to GitHub Actions (Annotations)'
 author: 'Denis Smetannikov <admin@jbzoo.com>'
 
 branding:
@@ -25,7 +25,7 @@ inputs:
     required: true
     default: 'junit'
   file:
-    description: 'Define filename of source report'
+    description: 'Relative path to the file with the error report'
     required: true
 
 runs:
