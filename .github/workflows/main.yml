@@ -11,7 +11,7 @@
 # @link       https://github.com/JBZoo/CI-Report-Converter
 #
 
-name: Continuous Integration
+name: CI
 
 on:
   pull_request:
@@ -28,7 +28,7 @@ env:
   TERM_PROGRAM: Hyper
 
 jobs:
-  phpunit:
+  genetal:
     name: PHPUnit Tests
     runs-on: ubuntu-latest
     env:
@@ -65,6 +65,96 @@ jobs:
         continue-on-error: ${{ matrix.experimental }}
         run: make test --no-print-directory
 
+
+  linters:
+    name: Liters
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-version: [ 7.4 ]
+        experimental: [ false ]
+        include:
+          - php-version: "8.0"
+            experimental: true
+          - php-version: "8.1"
+            experimental: true
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup PHP and composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          tools: composer
+
+      - name: Build the Project
+        continue-on-error: ${{ matrix.experimental }}
+        run: make update --no-print-directory
+
       - name: 👍 Code Quality
         continue-on-error: ${{ matrix.experimental }}
         run: make codestyle --no-print-directory
+
+
+  phar:
+    name: Phar
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-version: [ 7.2, 7.3, 7.4 ]
+        experimental: [ false ]
+        include:
+          - php-version: "8.0"
+            experimental: true
+          - php-version: "8.1"
+            experimental: true
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup PHP and composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          tools: composer
+
+      - name: Building Phar binary file
+        continue-on-error: ${{ matrix.experimental }}
+        run: make build --no-print-directory
+
+      - name: Trying to use the phar file
+        continue-on-error: ${{ matrix.experimental }}
+        run: |
+          echo "::group::Try to run it"
+          ./build/ci-report-converter.phar
+          echo "::endgroup::"
+          echo "::group::Show help message"
+          ./build/ci-report-converter.phar --help
+          echo "::endgroup::"
+
+
+  docker:
+    name: Docker
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: 🐳 Building Docker Image
+        run: make build-docker
+
+      - name: Trying to use the Docker Image
+        run: |
+          echo "::group::Try to run it"
+          docker run --rm jbzoo-ci-report-converter
+          echo "::endgroup::"
+          echo "::group::Show help message"
+          docker run --rm jbzoo-ci-report-converter convert --help
+          echo "::endgroup::"

@@ -17,11 +17,11 @@ declare(strict_types=1);
 
 namespace JBZoo\PHPUnit;
 
+use JBZoo\CiReportConverter\Converters\Map;
 use JBZoo\MermaidPHP\Graph;
 use JBZoo\MermaidPHP\Helper;
 use JBZoo\MermaidPHP\Link;
 use JBZoo\MermaidPHP\Node;
-use JBZoo\CiReportConverter\Converters\Map;
 
 /**
  * Class CiReportConverterReadmeTest
@@ -36,6 +36,26 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
     protected $packageName = 'CI-Report-Converter';
 
     /**
+     * @var string[]
+     */
+    protected $badgesTemplate = [
+        'travis',
+        'github_actions',
+        'docker_build',
+        'coveralls',
+        'psalm_coverage',
+        'scrutinizer',
+        'strict_types',
+        '__BR__',
+        'php_version',
+        'latest_stable_version',
+        'total_downloads',
+        'docker_pulls',
+        'github_issues',
+        'github_license',
+    ];
+
+    /**
      * @inheritDoc
      */
     protected function setUp(): void
@@ -43,6 +63,11 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
         parent::setUp();
 
         $this->params['strict_types'] = true;
+        $this->params['docker_build'] = true;
+        $this->params['docker_pulls'] = true;
+        $this->params['github_actions'] = true;
+        $this->params['scrutinizer'] = true;
+        $this->params['php_version'] = true;
     }
 
     /**
@@ -51,9 +76,33 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
     protected function checkBadgeTravis(): ?string
     {
         return $this->getPreparedBadge($this->getBadge(
-            'Build Status',
+            'Travis',
             'https://travis-ci.org/__VENDOR_ORIG__/__PACKAGE_ORIG__.svg?branch=master',
             'https://travis-ci.org/__VENDOR_ORIG__/__PACKAGE_ORIG__'
+        ));
+    }
+
+    /**
+     * @return string|null
+     */
+    protected function checkBadgeGithubActions(): ?string
+    {
+        return $this->getPreparedBadge($this->getBadge(
+            'CI',
+            'https://github.com/__VENDOR_ORIG__/__PACKAGE_ORIG__/actions/workflows/main.yml/badge.svg?branch=master',
+            'https://github.com/__VENDOR_ORIG__/__PACKAGE_ORIG__/actions/workflows/main.yml'
+        ));
+    }
+
+    /**
+     * @return string|null
+     */
+    protected function checkBadgePhpVersion(): ?string
+    {
+        return $this->getPreparedBadge($this->getBadge(
+            'PHP Version',
+            'https://img.shields.io/packagist/php-v/__VENDOR__/__PACKAGE__',
+            'https://github.com/__VENDOR_ORIG__/__PACKAGE_ORIG__/blob/master/composer.json'
         ));
     }
 
