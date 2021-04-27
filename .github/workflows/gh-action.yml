@@ -19,7 +19,7 @@ on:
       - "*"
   push:
     branches:
-      - 'master'
+      - 'v2.2.0'
   schedule:
     - cron: '15 */8 * * *'
 
@@ -75,34 +75,34 @@ jobs:
 
       - name: JUnit.xml
         continue-on-error: true
-        uses: jbzoo/ci-report-converter@v2
+        uses: jbzoo/ci-report-converter@v2.2.0
         with:
           file: tests/fixtures/origin/phpunit/junit-nested.xml
 
       - name: CheckStyle.xml
         continue-on-error: true
-        uses: jbzoo/ci-report-converter@master
+        uses: jbzoo/ci-report-converter@v2.2.0
         with:
           format: checkstyle
           file: tests/fixtures/origin/phpcs/codestyle.xml
 
       - name: PHP Mess Detector
         continue-on-error: true
-        uses: jbzoo/ci-report-converter@master
+        uses: jbzoo/ci-report-converter@v2.2.0
         with:
           format: phpmd-json
           file: tests/fixtures/origin/phpmd/json.json
 
       - name: PHP Magic Numbers Detector
         continue-on-error: true
-        uses: jbzoo/ci-report-converter@master
+        uses: jbzoo/ci-report-converter@v2.2.0
         with:
           format: phpmnd
           file: tests/fixtures/origin/phpmnd/phpmnd.xml
 
       - name: Psalm.json
         continue-on-error: true
-        uses: jbzoo/ci-report-converter@master
+        uses: jbzoo/ci-report-converter@v2.2.0
         with:
           format: psalm-json
           file: tests/fixtures/origin/psalm/json.json
