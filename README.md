@@ -63,7 +63,7 @@ Action allows you to convert errors to the [GitHub Annotations format](https://d
  * To learn more [see different examples](.github/workflows/gh-action.yml?query=is%3Asuccess)
 
 ```yaml
-- uses: jbzoo/ci-report-converter@master # or see tha latest version on releases page 
+- uses: jbzoo/ci-report-converter@v2.2.0 # or see the latest version on releases page 
   with:
     # Source format of error report. Available options: checkstyle, junit, phpmd-json, phpmnd, psalm-json
     # Default value: junit
