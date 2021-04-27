@@ -98,36 +98,17 @@ jobs:
         continue-on-error: ${{ matrix.experimental }}
         run: make codestyle --no-print-directory
 
-  docker:
-    name: Docker
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      - name: 🐳 Building Docker Image
-        run: make build-docker
-
-      - name: Trying to use the Docker Image
-        run: |
-          echo "::group::Try to run it"
-          docker run --rm jbzoo-ci-report-converter
-          echo "::endgroup::"
-          echo "::group::Show help message"
-          docker run --rm jbzoo-ci-report-converter convert --help
-          echo "::endgroup::"
-
 
   phar:
     name: Phar
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-version: [ 7.2, 7.3, 7.4, 8.0 ]
+        php-version: [ 7.2, 7.3, 7.4 ]
         experimental: [ false ]
         include:
+          - php-version: "8.0"
+            experimental: true
           - php-version: "8.1"
             experimental: true
     steps:
@@ -154,4 +135,26 @@ jobs:
           echo "::endgroup::"
           echo "::group::Show help message"
           ./build/ci-report-converter.phar --help
+          echo "::endgroup::"
+
+
+  docker:
+    name: Docker
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: 🐳 Building Docker Image
+        run: make build-docker
+
+      - name: Trying to use the Docker Image
+        run: |
+          echo "::group::Try to run it"
+          docker run --rm jbzoo-ci-report-converter
+          echo "::endgroup::"
+          echo "::group::Show help message"
+          docker run --rm jbzoo-ci-report-converter convert --help
           echo "::endgroup::"
