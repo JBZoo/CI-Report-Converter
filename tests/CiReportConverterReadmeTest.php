@@ -44,6 +44,7 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
         'docker_build',
         'coveralls',
         'psalm_coverage',
+        'scrutinizer',
         'strict_types',
         '__BR__',
         'latest_stable_version',
@@ -63,6 +64,7 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
         $this->params['docker_build'] = true;
         $this->params['docker_pulls'] = true;
         $this->params['github_actions'] = true;
+        $this->params['scrutinizer'] = true;
     }
 
     /**
