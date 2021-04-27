@@ -4,6 +4,17 @@
 [![PHP Version](https://img.shields.io/packagist/php-v/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/blob/master/composer.json)    [![PHP Strict Types](https://img.shields.io/badge/strict__types-%3D1-brightgreen)](https://www.php.net/manual/en/language.types.declarations.php#language.types.declarations.strict)    [![Stable Version](https://poser.pugx.org/jbzoo/ci-report-converter/version)](https://packagist.org/packages/jbzoo/ci-report-converter)    [![Total Downloads](https://poser.pugx.org/jbzoo/ci-report-converter/downloads)](https://packagist.org/packages/jbzoo/ci-report-converter/stats)    [![Docker Pulls](https://img.shields.io/docker/pulls/jbzoo/ci-report-converter.svg)](https://hub.docker.com/r/jbzoo/ci-report-converter)    [![GitHub Issues](https://img.shields.io/github/issues/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/issues)    [![GitHub License](https://img.shields.io/github/license/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/blob/master/LICENSE)
 
 
+<!-- START doctoc -->
+ * [Installing](#installing)
+ * [GitHub Action](#github-action)
+ * [Usage](#usage)
+ * [Examples](#examples)
+ * [Available Directions](#available-directions)
+ * [Unit tests and check code style](#unit-tests-and-check-code-style)
+ * [License](#license)
+<!-- END doctoc -->
+
+
 I believe you are familiar with the huge zoo of various utilities for testing, checking code standards, linters etc. 
 It's really often the output of utilities is not supported in popular CI systems (TeamCity, GitHub, etc...).
 I guess you are lucky if the utility saves the error report in the `junit.xml` format, because it works pretty fine with almost all modern dev software.
@@ -27,7 +38,7 @@ At the moment it works with
     * `github-cli` - [GitHub Actions](https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-a-warning-message).
     * `tc-inspections` [Reporting Inspections in TeamCity](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Inspections)
 
-Well... It may seem to you it's a useless thing, and your "favorite super tool" works fine in TeamCity/PhpStorm. Then just take a look at the examples below.
+Well... It may seem to you it's a useless thing, and _your favorite super tool_ works fine in TeamCity/PhpStorm. Just take a look at [the examples below](#examples).
 
 ### Installing
 
@@ -46,8 +57,6 @@ docker run --rm jbzoo/ci-report-converter --help
 
 ### GitHub Action
 Action allows you to convert errors to the [GitHub Annotations format](https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-a-warning-message).
-
-Also, 
  * See [demo of error output](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/gh-action.yml)
  * To learn more [see different examples](.github/workflows/gh-action.yml)
 
@@ -95,7 +104,8 @@ Options:
 
 ### Examples
 
-...Screenshots are coming soon...
+... Screenshots are coming soon ...
+
 
 ### Available Directions
 
