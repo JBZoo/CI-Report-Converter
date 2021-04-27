@@ -59,8 +59,8 @@ docker run --rm jbzoo/ci-report-converter --help
 
 ### GitHub Action
 Action allows you to convert errors to the [GitHub Annotations format](https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-a-warning-message).
- * See [demo of error output](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/gh-action.yml)
- * To learn more [see different examples](.github/workflows/gh-action.yml?query=is%3Asuccess)
+ * See [demo of error output](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/gh-action.yml?query=is%3Asuccess)
+ * To learn more [see different examples](.github/workflows/gh-action.yml)
 
 ```yaml
 - uses: jbzoo/ci-report-converter@2.2.0 # or see the latest version on releases page 
