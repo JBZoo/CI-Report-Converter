@@ -97,14 +97,14 @@ jobs:
 
       - name: PHP Magic Numbers Detector
         continue-on-error: true
-        uses: jbzoo/ci-report-converter
+        uses: jbzoo/ci-report-converter@v2
         with:
           format: phpmd-json
           file: tests/fixtures/origin/phpmd/json.json
 
       - name: Psalm.json
         continue-on-error: true
-        uses: jbzoo/ci-report-converter@v2
+        uses: jbzoo/ci-report-converter@v2.2.0
         with:
           format: psalm-json
           file: tests/fixtures/origin/psalm/json.json
