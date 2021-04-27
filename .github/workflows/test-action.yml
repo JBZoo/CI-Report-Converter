@@ -33,8 +33,8 @@ jobs:
 
       - name: Checkout code
         run: |
-          ls -la
-          pwd
+          ls -la fixtures/origin/phpunit/junit-nested.xml
+          ls -la ./fixtures/origin/phpunit/junit-nested.xml
 
       - name: Test Action Output
         uses: ./
