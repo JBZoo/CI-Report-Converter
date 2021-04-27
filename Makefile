@@ -24,6 +24,11 @@ build: ##@Project Install all 3rd party dependencies
 	@make create-symlink
 
 
+build-docker:
+	$(call title,"Building Docker Image")
+	@docker build -t jbzoo-ci-report-converter .
+
+
 update: ##@Project Install/Update all 3rd party dependencies
 	@echo "Composer flags: $(JBZOO_COMPOSER_UPDATE_FLAGS)"
 	@composer update --optimize-autoloader --no-progress $(JBZOO_COMPOSER_UPDATE_FLAGS)

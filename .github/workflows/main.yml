@@ -11,7 +11,7 @@
 # @link       https://github.com/JBZoo/CI-Report-Converter
 #
 
-name: Continuous Integration
+name: CI
 
 on:
   pull_request:

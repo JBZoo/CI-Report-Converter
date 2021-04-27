@@ -1,7 +1,7 @@
 # JBZoo / CI-Report-Converter
 
-[![Build Status](https://travis-ci.org/JBZoo/CI-Report-Converter.svg?branch=master)](https://travis-ci.org/JBZoo/CI-Report-Converter)    [![Coverage Status](https://coveralls.io/repos/JBZoo/CI-Report-Converter/badge.svg)](https://coveralls.io/github/JBZoo/CI-Report-Converter)    [![Psalm Coverage](https://shepherd.dev/github/JBZoo/CI-Report-Converter/coverage.svg)](https://shepherd.dev/github/JBZoo/CI-Report-Converter)    [![PHP Strict Types](https://img.shields.io/badge/strict__types-%3D1-brightgreen)](https://www.php.net/manual/en/language.types.declarations.php#language.types.declarations.strict)    
-[![Stable Version](https://poser.pugx.org/jbzoo/ci-report-converter/version)](https://packagist.org/packages/jbzoo/ci-report-converter)    [![Latest Unstable Version](https://poser.pugx.org/jbzoo/ci-report-converter/v/unstable)](https://packagist.org/packages/jbzoo/ci-report-converter)    [![Dependents](https://poser.pugx.org/jbzoo/ci-report-converter/dependents)](https://packagist.org/packages/jbzoo/ci-report-converter/dependents?order_by=downloads)    [![GitHub Issues](https://img.shields.io/github/issues/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/issues)    [![Total Downloads](https://poser.pugx.org/jbzoo/ci-report-converter/downloads)](https://packagist.org/packages/jbzoo/ci-report-converter/stats)    [![GitHub License](https://img.shields.io/github/license/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/blob/master/LICENSE)
+[![Travis](https://travis-ci.org/JBZoo/CI-Report-Converter.svg?branch=master)](https://travis-ci.org/JBZoo/CI-Report-Converter)    [![CI](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/main.yml)    [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/jbzoo/ci-report-converter.svg)](https://hub.docker.com/r/jbzoo/ci-report-converter)    [![Coverage Status](https://coveralls.io/repos/JBZoo/CI-Report-Converter/badge.svg)](https://coveralls.io/github/JBZoo/CI-Report-Converter)    [![Psalm Coverage](https://shepherd.dev/github/JBZoo/CI-Report-Converter/coverage.svg)](https://shepherd.dev/github/JBZoo/CI-Report-Converter)    [![PHP Strict Types](https://img.shields.io/badge/strict__types-%3D1-brightgreen)](https://www.php.net/manual/en/language.types.declarations.php#language.types.declarations.strict)    
+[![Stable Version](https://poser.pugx.org/jbzoo/ci-report-converter/version)](https://packagist.org/packages/jbzoo/ci-report-converter)    [![Total Downloads](https://poser.pugx.org/jbzoo/ci-report-converter/downloads)](https://packagist.org/packages/jbzoo/ci-report-converter/stats)    [![Docker Pulls](https://img.shields.io/docker/pulls/jbzoo/ci-report-converter.svg)](https://hub.docker.com/r/jbzoo/ci-report-converter)    [![GitHub License](https://img.shields.io/github/license/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/blob/master/LICENSE)
 
 
 
@@ -9,9 +9,14 @@
 
 ```sh
 composer require jbzoo/ci-report-converter
+php ./vendor/bin/ci-report-converter --help
 
 # OR use phar file.
 wget https://github.com/JBZoo/CI-Report-Converter/releases/latest/download/ci-report-converter.phar
+php ./ci-report-converter.phar --help
+
+# OR just pull the Docker image
+docker run --rm jbzoo/ci-report-converter --help 
 ```
 
 
