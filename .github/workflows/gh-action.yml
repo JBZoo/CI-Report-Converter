@@ -55,8 +55,8 @@ jobs:
         continue-on-error: true
         uses: ./
         with:
-          format: phpmd-json
-          file: tests/fixtures/origin/phpmd/json.json
+          format: phpmnd
+          file: tests/fixtures/origin/phpmnd/phpmnd.xml
 
       - name: Psalm.json
         continue-on-error: true
@@ -75,7 +75,7 @@ jobs:
 
       - name: JUnit.xml
         continue-on-error: true
-        uses: jbzoo/ci-report-converter@master
+        uses: jbzoo/ci-report-converter@v2
         with:
           file: tests/fixtures/origin/phpunit/junit-nested.xml
 
@@ -97,8 +97,8 @@ jobs:
         continue-on-error: true
         uses: jbzoo/ci-report-converter@master
         with:
-          format: phpmd-json
-          file: tests/fixtures/origin/phpmd/json.json
+          format: phpmnd
+          file: tests/fixtures/origin/phpmnd/phpmnd.xml
 
       - name: Psalm.json
         continue-on-error: true
