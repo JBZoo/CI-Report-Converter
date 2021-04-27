@@ -30,7 +30,7 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'docker://jbzoo/ci-report-converter:latest'
+  image: 'docker://jbzoo/ci-report-converter:2.2.0'
   args:
     - 'convert'
     - '--input-format'
