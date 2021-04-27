@@ -66,6 +66,7 @@ jobs:
           file: tests/fixtures/origin/psalm/json.json
 
 
+  # Check compatibility fixtures with master branch
   production:
     name: Production
     runs-on: ubuntu-latest
@@ -81,7 +82,7 @@ jobs:
 
       - name: CheckStyle.xml
         continue-on-error: true
-        uses: jbzoo/ci-report-converter@2
+        uses: jbzoo/ci-report-converter@2.2
         with:
           format: checkstyle
           file: tests/fixtures/origin/phpcs/codestyle.xml
