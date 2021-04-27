@@ -20,16 +20,17 @@ on:
   push:
     branches:
       - 'master'
+  schedule:
+    - cron: '15 */8 * * *'
 
 jobs:
-  genetal:
-    name: Testing GitHub Action
+  # Trying to run current version of GH action
+  develop:
+    name: Develop
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
       - name: JUnit.xml
         continue-on-error: true
@@ -55,12 +56,55 @@ jobs:
         continue-on-error: true
         uses: ./
         with:
-          format: phpmd-json
-          file: tests/fixtures/origin/phpmd/json.json
+          format: phpmnd
+          file: tests/fixtures/origin/phpmnd/phpmnd.xml
 
       - name: Psalm.json
         continue-on-error: true
         uses: ./
+        with:
+          format: psalm-json
+          file: tests/fixtures/origin/psalm/json.json
+
+
+  # Check compatibility of fixtures with master branch in GH Marketplace
+  production:
+    name: Production
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: JUnit.xml
+        continue-on-error: true
+        uses: jbzoo/ci-report-converter@master
+        with:
+          file: tests/fixtures/origin/phpunit/junit-nested.xml
+
+      - name: CheckStyle.xml
+        continue-on-error: true
+        uses: jbzoo/ci-report-converter@master
+        with:
+          format: checkstyle
+          file: tests/fixtures/origin/phpcs/codestyle.xml
+
+      - name: PHP Mess Detector
+        continue-on-error: true
+        uses: jbzoo/ci-report-converter@master
+        with:
+          format: phpmd-json
+          file: tests/fixtures/origin/phpmd/json.json
+
+      - name: PHP Magic Numbers Detector
+        continue-on-error: true
+        uses: jbzoo/ci-report-converter@master
+        with:
+          format: phpmnd
+          file: tests/fixtures/origin/phpmnd/phpmnd.xml
+
+      - name: Psalm.json
+        continue-on-error: true
+        uses: jbzoo/ci-report-converter@master
         with:
           format: psalm-json
           file: tests/fixtures/origin/psalm/json.json
