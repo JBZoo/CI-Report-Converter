@@ -79,7 +79,7 @@ jobs:
 
       - name: JUnit.xml
         continue-on-error: true
-        uses: JBZoo/CI-Report-Converter@master
+        uses: jbzoo/ci-report-converter@master
         with:
           file: tests/fixtures/origin/phpunit/junit-nested.xml
 
@@ -92,21 +92,21 @@ jobs:
 
       - name: PHP Mess Detector
         continue-on-error: true
-        uses: JBZoo/CI-Report-Converter@master
+        uses: jbzoo/ci-report-converter@master
         with:
           format: phpmd-json
           file: tests/fixtures/origin/phpmd/json.json
 
       - name: PHP Magic Numbers Detector
         continue-on-error: true
-        uses: JBZoo/CI-Report-Converter@master
+        uses: jbzoo/ci-report-converter@master
         with:
           format: phpmd-json
           file: tests/fixtures/origin/phpmd/json.json
 
       - name: Psalm.json
         continue-on-error: true
-        uses: JBZoo/CI-Report-Converter@master
+        uses: jbzoo/ci-report-converter@master
         with:
           format: psalm-json
           file: tests/fixtures/origin/psalm/json.json
