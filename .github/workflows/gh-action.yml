@@ -24,6 +24,7 @@ on:
     - cron: '15 */8 * * *'
 
 jobs:
+  # Trying to run current version of GH action
   develop:
     name: Develop
     runs-on: ubuntu-latest
@@ -66,7 +67,7 @@ jobs:
           file: tests/fixtures/origin/psalm/json.json
 
 
-  # Check compatibility fixtures with master branch
+  # Check compatibility of fixtures with master branch in GH Marketplace
   production:
     name: Production
     runs-on: ubuntu-latest
