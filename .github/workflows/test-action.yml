@@ -31,12 +31,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Checkout code
-        run: |
-          ls -la fixtures/origin/phpunit/junit-nested.xml
-          ls -la ./fixtures/origin/phpunit/junit-nested.xml
-
       - name: Test Action Output
         uses: ./
         with:
-          file: ./fixtures/origin/phpunit/junit-nested.xml
+          file: tests/fixtures/origin/phpunit/junit-nested.xml
