@@ -22,9 +22,13 @@ RUN chmod +x /usr/local/bin/install-php-extensions      \
         zip                                             \
         @composer
 
+ENV COMPOSER_ALLOW_SUPERUSER=1
 COPY . /app
 RUN cd /app                                                           \
     && composer install --no-dev --optimize-autoloader --no-progress  \
     && composer clear-cache
+
+# Experimental. Forced colored output
+ENV TERM_PROGRAM=Hyper
 
 ENTRYPOINT ["/app/ci-report-converter"]
