@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ae2b7891116e713c93625de4cbf30f5",
+    "content-hash": "4ed6fd9bd4e899fecdecf55ee7b3918e",
     "packages": [
         {
             "name": "jbzoo/data",
@@ -1813,28 +1813,28 @@
         },
         {
             "name": "jbzoo/toolbox-dev",
-            "version": "2.11.0",
+            "version": "2.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JBZoo/Toolbox-Dev.git",
-                "reference": "ed39c839334993872843e8260de79fe577487ffd"
+                "reference": "1958ad256f2a37c46db65c7ab08f9282e038af23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBZoo/Toolbox-Dev/zipball/ed39c839334993872843e8260de79fe577487ffd",
-                "reference": "ed39c839334993872843e8260de79fe577487ffd",
+                "url": "https://api.github.com/repos/JBZoo/Toolbox-Dev/zipball/1958ad256f2a37c46db65c7ab08f9282e038af23",
+                "reference": "1958ad256f2a37c46db65c7ab08f9282e038af23",
                 "shasum": ""
             },
             "require": {
                 "fakerphp/faker": "^1.14.1",
-                "jbzoo/codestyle": "^2.12.0",
+                "jbzoo/ci-report-converter": "^2.0.1",
+                "jbzoo/codestyle": "^2.15.0",
                 "jbzoo/jbdump": "^1.5.6",
                 "jbzoo/phpunit": "^4.9.0",
-                "jbzoo/toolbox-ci": "^1.4.0",
                 "php": ">=7.2",
                 "php-coveralls/php-coveralls": "^2.4.3",
                 "phpbench/phpbench": "^0.17.1",
-                "symfony/var-dumper": "^4.4|^5.2.5"
+                "symfony/var-dumper": "^4.4|^5.0"
             },
             "type": "library",
             "extra": {
@@ -1864,9 +1864,9 @@
             "description": "Developer toolbox only for JBZoo libs on github+travis",
             "support": {
                 "issues": "https://github.com/JBZoo/Toolbox-Dev/issues",
-                "source": "https://github.com/JBZoo/Toolbox-Dev/tree/2.11.0"
+                "source": "https://github.com/JBZoo/Toolbox-Dev/tree/2.12.0"
             },
-            "time": "2021-04-23T15:32:13+00:00"
+            "time": "2021-04-26T21:09:30+00:00"
         },
         {
             "name": "lstrojny/functional-php",
@@ -2913,16 +2913,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.84",
+            "version": "0.12.85",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "9c43f15da8798c8f30a4b099e6a94530a558cfd5"
+                "reference": "20e6333c0067875ad7697cd8acdf245c6ef69d03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/9c43f15da8798c8f30a4b099e6a94530a558cfd5",
-                "reference": "9c43f15da8798c8f30a4b099e6a94530a558cfd5",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/20e6333c0067875ad7697cd8acdf245c6ef69d03",
+                "reference": "20e6333c0067875ad7697cd8acdf245c6ef69d03",
                 "shasum": ""
             },
             "require": {
@@ -2953,7 +2953,7 @@
             "description": "PHPStan - PHP Static Analysis Tool",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/0.12.84"
+                "source": "https://github.com/phpstan/phpstan/tree/0.12.85"
             },
             "funding": [
                 {
@@ -2969,7 +2969,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-04-19T17:10:54+00:00"
+            "time": "2021-04-27T14:13:16+00:00"
         },
         {
             "name": "phpstan/phpstan-strict-rules",
@@ -3531,16 +3531,16 @@
         },
         {
             "name": "psalm/phar",
-            "version": "4.7.0",
+            "version": "4.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/psalm/phar.git",
-                "reference": "ca25f9b91842cfe0186259aaaa694d2a6fe83c05"
+                "reference": "9e96a91f1bca15fa89ddce177872f440d62940b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/psalm/phar/zipball/ca25f9b91842cfe0186259aaaa694d2a6fe83c05",
-                "reference": "ca25f9b91842cfe0186259aaaa694d2a6fe83c05",
+                "url": "https://api.github.com/repos/psalm/phar/zipball/9e96a91f1bca15fa89ddce177872f440d62940b7",
+                "reference": "9e96a91f1bca15fa89ddce177872f440d62940b7",
                 "shasum": ""
             },
             "require": {
@@ -3560,9 +3560,9 @@
             "description": "Composer-based Psalm Phar",
             "support": {
                 "issues": "https://github.com/psalm/phar/issues",
-                "source": "https://github.com/psalm/phar/tree/refs/tags/4.7.0"
+                "source": "https://github.com/psalm/phar/tree/4.7.1"
             },
-            "time": "2021-03-29T04:06:44+00:00"
+            "time": "2021-04-25T21:29:13+00:00"
         },
         {
             "name": "psr/http-client",

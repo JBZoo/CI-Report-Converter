@@ -2,7 +2,7 @@
     "name"         : "jbzoo/ci-report-converter",
     "type"         : "library",
     "license"      : "MIT",
-    "description"  : "The tool converts different error reporting standards for deep compatibility with popular CI systems (TeamCity, IntelliJ IDEA, GitHub Actions, etc)",
+    "description"  : "The tool converts different error reporting standards for deep integration with popular CI systems (TeamCity, IntelliJ IDEA, GitHub Actions, etc)",
     "keywords"     : [
         "checkstyle",
         "codestyle",
@@ -48,7 +48,7 @@
     },
 
     "require-dev"  : {
-        "jbzoo/toolbox-dev"         : "^2.11.0",
+        "jbzoo/toolbox-dev"         : "^2.12.0",
         "jbzoo/mermaid-php"         : "^2.2.0",
         "jbzoo/codestyle"           : "^2.15.0",
         "roave/security-advisories" : "dev-master"

@@ -1,0 +1,41 @@
+#
+# JBZoo Toolbox - CI-Report-Converter
+#
+# This file is part of the JBZoo Toolbox project.
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+#
+# @package    CI-Report-Converter
+# @license    MIT
+# @copyright  Copyright (C) JBZoo.com, All rights reserved.
+# @link       https://github.com/JBZoo/CI-Report-Converter
+#
+
+name: 'CI Report Converter'
+description: 'The tool converts different error reports to GitHub Actions (Annotations)'
+author: 'Denis Smetannikov <admin@jbzoo.com>'
+
+branding:
+  icon: 'check-square'
+  color: 'blue'
+
+inputs:
+  format:
+    description: 'Source format. Available options: checkstyle, junit, phpmd-json, phpmnd, psalm-json'
+    required: true
+    default: 'junit'
+  file:
+    description: 'Relative path to the file with the error report'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'docker://jbzoo/ci-report-converter:latest'
+  args:
+    - 'convert'
+    - '--input-format'
+    - ${{ inputs.format }}
+    - '--input-file'
+    - ${{ inputs.file }}
+    - '--output-format'
+    - 'github-cli'
