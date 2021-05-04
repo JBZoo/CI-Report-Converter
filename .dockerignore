@@ -11,6 +11,20 @@
 # @link       https://github.com/JBZoo/CI-Report-Converter
 #
 
+.git
 .idea
-.phan
+.github
+build
+tests
 vendor
+.DS_Store
+.editorconfig
+.gitattributes
+.gitignore
+.phan.php
+.phpunit.result.cache
+.travis.yml
+action.yml
+box.json.dist
+phpunit.xml.dist
+Makefile

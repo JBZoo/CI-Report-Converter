@@ -12,7 +12,7 @@
 #
 
 /.github             export-ignore
-/.phan               export-ignore
+/.phan.php           export-ignore
 /build               export-ignore
 /tests               export-ignore
 /.editorconfig       export-ignore
