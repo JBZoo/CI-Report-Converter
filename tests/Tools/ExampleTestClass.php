@@ -25,7 +25,7 @@ use PHPUnit\Framework\Warning;
  *
  * @package JBZoo\PHPUnit
  */
-class ExampleTest extends PHPUnit
+class ExampleTestClass extends PHPUnit
 {
     protected function setUp(): void
     {
