@@ -17,8 +17,10 @@ declare(strict_types=1);
 
 namespace JBZoo\CiReportConverter\Commands;
 
+use JBZoo\CiReportConverter\Converters\CheckStyleConverter;
 use JBZoo\CiReportConverter\Converters\Factory;
 use JBZoo\CiReportConverter\Converters\Map;
+use JBZoo\CiReportConverter\Converters\TeamCityTestsConverter;
 use Symfony\Component\Console\Input\InputOption;
 
 /**
@@ -34,24 +36,26 @@ class Convert extends AbstractCommand
     {
         $this
             ->setName('convert')
-            ->setDescription('Convert one report format to another')
+            ->setDescription('Convert one report format to another one')
             // Required
             ->addOption(
                 'input-format',
                 'S',
                 InputOption::VALUE_REQUIRED,
                 'Source format. Available options: <comment>'
-                . implode(', ', Map::getAvailableFormats(Map::INPUT)) . '</comment>'
+                . implode(', ', Map::getAvailableFormats(Map::INPUT)) . '</comment>',
+                CheckStyleConverter::TYPE
             )
             ->addOption(
                 'output-format',
                 'T',
                 InputOption::VALUE_REQUIRED,
                 'Target format. Available options: <comment>'
-                . implode(', ', Map::getAvailableFormats(Map::OUTPUT)) . '</comment>'
+                . implode(', ', Map::getAvailableFormats(Map::OUTPUT)) . '</comment>',
+                TeamCityTestsConverter::TYPE
             )
             // Optional
-            ->addOption('suite-name', 'N', InputOption::VALUE_REQUIRED, 'Set name of root suite');
+            ->addOption('suite-name', 'N', InputOption::VALUE_REQUIRED, 'Set custom name of root group/suite');
 
         parent::configure();
     }
