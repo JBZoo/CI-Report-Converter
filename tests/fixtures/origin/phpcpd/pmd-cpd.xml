@@ -1,108 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
-  <duplication lines="100" tokens="170">
-    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit1/TestCaseElement1.php" line="24"/>
-    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestCaseElement.php" line="24"/>
-    <codefragment>class TestCaseElement1 extends \DOMElement
+  <duplication lines="24" tokens="34">
+    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper.php" line="16"/>
+    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper1.php" line="17"/>
+    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper2.php" line="18"/>
+    <codefragment>declare(strict_types=1);
+
+namespace JBZoo\CiReportConverter;
+
+use JBZoo\Utils\Str;
+
+/**
+ * Class Helper
+ * @package JBZoo\CiReportConverter
+ */
+class Helper
 {
-    public function __construct()
-    {
-        parent::__construct('testcase');
-    }
-
     /**
-     * @param string $name
+     * @param array $data
+     * @return string|null
      */
-    public function setName($name)
+    public static function descAsList(array $data): ?string
     {
-        $this-&gt;setAttribute('name', $name);
-    }
-
-    /**
-     * @param string $classname
-     */
-    public function setClassname($classname)
-    {
-        $this-&gt;setAttribute('classname', $classname);
-    }
-
-    /**
-     * Time in seconds
-     *
-     * @param float $time
-     */
-    public function setTime($time)
-    {
-        $this-&gt;setAttribute('time', $time);
-    }
-
-    /**
-     * @param string $error
-     * @param string $type             -&gt; i.e. an exception class name
-     * @param string $exceptionMessage i.e a exception message -&gt; $e-&gt;getMessage() [Optional]
-     * @return \DomElement
-     */
-    public function addError($error, $type, $exceptionMessage = null)
-    {
-        $errorElement = $this-&gt;ownerDocument-&gt;createElement('error', $error);
-        $errorElement-&gt;setAttribute('type', $type);
-
-        if ($exceptionMessage !== null) {
-            $errorElement-&gt;setAttribute('message', $exceptionMessage);
+        $result = Str::listToDescription($data, true);
+        if (null === $result) {
+            return null;
         }
 
-        $this-&gt;appendChild($errorElement);
+        return "\n{$result}";
+</codefragment>
+  </duplication>
+  <duplication lines="14" tokens="28">
+    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php" line="65"/>
+    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityInspectionsConverter.php" line="66"/>
+    <codefragment>        $this-&gt;renderSuite($sourceSuite);
 
-        $this-&gt;incrementErrorCount();
-        $this-&gt;parentNode-&gt;incrementErrorCount();
-
-        return $errorElement;
-    }
-
-    /**
-     * @param string $error
-     * @param string $type             -&gt; i.e. an exception class name
-     * @param string $exceptionMessage i.e a exception message -&gt; $e-&gt;getMessage() [Optional]
-     * @return \DomElement
-     */
-    public function addFailure($error, $type, $exceptionMessage = null)
-    {
-        $failureElement = $this-&gt;ownerDocument-&gt;createElement('failure', $error);
-        $failureElement-&gt;setAttribute('type', $type);
-
-        if ($exceptionMessage !== null) {
-            $failureElement-&gt;setAttribute('message', $exceptionMessage);
+        $buffer = $this-&gt;tcLogger-&gt;getWriter();
+        if ($buffer instanceof Buffer) {
+            return implode('', $buffer-&gt;getBuffer());
         }
 
-        $this-&gt;appendChild($failureElement);
-
-        $this-&gt;incrementFailureCount();
-        $this-&gt;parentNode-&gt;incrementFailureCount();
-
-        return $failureElement;
+        return '';
     }
 
     /**
-     * Increments failure counter in test suite
+     * @param SourceSuite $sourceSuite
      */
-    public function incrementFailureCount()
+    private function renderSuite(SourceSuite $sourceSuite): void
+</codefragment>
+  </duplication>
+  <duplication lines="12" tokens="40">
+    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php" line="46"/>
+    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityInspectionsConverter.php" line="51"/>
+    <codefragment>    public function __construct(array $params = [], ?int $flowId = null, ?AbstractWriter $tcWriter = null)
     {
-        if ($this-&gt;hasAttribute('failures')) {
-            $this-&gt;setAttribute('failures', (int)$this-&gt;getAttribute('failures') + 1);
-        } else {
-            $this-&gt;setAttribute('failures', 1);
-        }
+        $this-&gt;tcLogger = new TeamCity($tcWriter ?: new Buffer(), $flowId, $params);
     }
 
     /**
-     * Increments error counter in test suite
+     * @inheritDoc
      */
-    public function incrementErrorCount()
+    public function fromInternal(SourceSuite $sourceSuite): string
     {
-        if ($this-&gt;hasAttribute('errors')) {
-            $this-&gt;setAttribute('errors', (int)$this-&gt;getAttribute('errors') + 1);
-        } else {
-            $this-&gt;setAttribute('errors', 1);
+        if ($this-&gt;flowId &gt; 0) {
+            $this-&gt;tcLogger-&gt;setFlowId($this-&gt;flowId);
+</codefragment>
+  </duplication>
+  <duplication lines="11" tokens="31">
+    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpDependStatsTcConverter.php" line="38"/>
+    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMetricsStatsTcConverter.php" line="38"/>
+    <codefragment>    public function toInternalMetric(string $sourceCode): Metrics
+    {
+        $xmlAsArray = Xml::dom2Array(Xml::createDomDocument($sourceCode));
+
+        $attrs = data($xmlAsArray)-&gt;findArray('_children.0._attrs');
+        unset(
+            $attrs['generated'],
+            $attrs['pdepend']
+        );
+
+        return self::buildMetrics($attrs, new PhpDepend());
+</codefragment>
+  </duplication>
+  <duplication lines="8" tokens="24">
+    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php" line="49"/>
+    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMndConverter.php" line="49"/>
+    <codefragment>                $relFilename = $this-&gt;cleanFilepath($file['_attrs']['name'] ?? 'undefined');
+                $absFilename = $this-&gt;getFullPath($relFilename);
+
+                $suite = $sourceSuite-&gt;addSuite($relFilename);
+                $suite-&gt;file = $absFilename;
+
+                foreach ($file['_children'] as $errorNode) {
+                    $error = data($errorNode['_attrs']);
+</codefragment>
+  </duplication>
+  <duplication lines="7" tokens="29">
+    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php" line="66"/>
+    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMndConverter.php" line="67"/>
+    <codefragment>                    $case = $suite-&gt;addTestCase($caseName);
+                    $case-&gt;file = $absFilename;
+                    $case-&gt;line = $line ?: null;
+                    $case-&gt;column = $column ?: null;
+                    $case-&gt;class = $type;
+                    $case-&gt;classname = $type;
+                    $case-&gt;failure = new SourceCaseOutput($type, $error-&gt;get('message'), self::getDetails($error));
 </codefragment>
   </duplication>
 </pmd-cpd>

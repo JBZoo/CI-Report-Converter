@@ -17,6 +17,8 @@ declare(strict_types=1);
 
 namespace JBZoo\CiReportConverter\Formats\JUnit\CaseOutput;
 
+use JBZoo\Utils\Xml;
+
 /**
  * Class AbstractOutput
  * @package JBZoo\CiReportConverter\Formats\JUnit\CaseOutput
@@ -85,7 +87,7 @@ abstract class AbstractOutput
     public function toXML(\DOMDocument $document): \DOMNode
     {
         if (null !== $this->description) {
-            $node = $document->createElement($this->elementName, str_replace(' &0 ', ' &amp;0 ', $this->description));
+            $node = $document->createElement($this->elementName, Xml::escape($this->description));
         } else {
             $node = $document->createElement($this->elementName);
         }

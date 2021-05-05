@@ -83,4 +83,14 @@ class Fixtures
     public const PHP_METRICS_XML     = self::ROOT_ORIG . '/phpmetrics/phpmetrics.xml';
     public const PHP_METRICS_JSON    = self::ROOT_ORIG . '/phpmetrics/phpmetrics.json';
     public const PHP_METRICS_PMD_XML = self::ROOT_ORIG . '/phpmetrics/pmd.xml';
+
+    /**
+     * @param string $fileExt
+     * @return string
+     */
+    public static function getExpectedFileContent(string $fileExt = 'xml'): string
+    {
+        $filename = str_replace('__', '/', getTestName());
+        return file_get_contents(dirname(__DIR__) . "/fixtures/test-cases/{$filename}.{$fileExt}");
+    }
 }

@@ -37,6 +37,7 @@ class Map
         TeamCityInspectionsConverter::class => [self::INPUT => false, self::OUTPUT => true],
         PhpMndConverter::class              => [self::INPUT => true, self::OUTPUT => false],
         GithubCliConverter::class           => [self::INPUT => false, self::OUTPUT => true],
+        PmdCpdConverter::class              => [self::INPUT => true, self::OUTPUT => false],
     ];
 
     public const MAP_METRICS = [
