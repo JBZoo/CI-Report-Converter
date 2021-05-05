@@ -35,6 +35,7 @@ jobs:
       - name: JUnit.xml
         uses: ./
         with:
+          input-format: junit
           input-file: tests/fixtures/origin/phpunit/junit-nested.xml
 
       - name: CheckStyle.xml
