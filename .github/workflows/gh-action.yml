@@ -35,31 +35,37 @@ jobs:
       - name: JUnit.xml
         uses: ./
         with:
-          file: tests/fixtures/origin/phpunit/junit-nested.xml
+          input-file: tests/fixtures/origin/phpunit/junit-nested.xml
 
       - name: CheckStyle.xml
         uses: ./
         with:
-          format: checkstyle
-          file: tests/fixtures/origin/phpcs/codestyle.xml
+          input-format: checkstyle
+          input-file: tests/fixtures/origin/phpcs/codestyle.xml
 
       - name: PHP Mess Detector
         uses: ./
         with:
-          format: phpmd-json
-          file: tests/fixtures/origin/phpmd/json.json
+          input-format: phpmd-json
+          input-file: tests/fixtures/origin/phpmd/json.json
 
       - name: PHP Magic Numbers Detector
         uses: ./
         with:
-          format: phpmnd
-          file: tests/fixtures/origin/phpmnd/phpmnd.xml
+          input-format: phpmnd
+          input-file: tests/fixtures/origin/phpmnd/phpmnd.xml
 
       - name: Psalm.json
         uses: ./
         with:
-          format: psalm-json
-          file: tests/fixtures/origin/psalm/json.json
+          input-format: psalm-json
+          input-file: tests/fixtures/origin/psalm/json.json
+
+      - name: PMD CPD.xml
+        uses: ./
+        with:
+          input-format: pmd-cpd
+          input-file: tests/fixtures/origin/phpcpd/pmd-cpd.xml
 
 
   # Check compatibility of fixtures with master branch in GH Marketplace
