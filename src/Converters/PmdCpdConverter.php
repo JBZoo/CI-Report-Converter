@@ -94,7 +94,7 @@ class PmdCpdConverter extends AbstractConverter
 
     /**
      * @param Data $duplication
-     * @return string
+     * @return string|null
      */
     private static function getCodeFragment(Data $duplication): ?string
     {
