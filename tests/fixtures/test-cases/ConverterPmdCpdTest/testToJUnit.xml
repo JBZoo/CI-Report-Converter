@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="PMD Copy/Paste Detector" tests="6" warnings="6">
+    <testcase name="src/Helper.php:16-40 (24 lines)" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper.php" line="16">
+      <warning type="Warning" message="Duplicate code found (lines=24, tokens=34)">
+Found 24 cloned lines in 3 files (34 tokens):
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper.php:16-40
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper1.php:17-41
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper2.php:18-42
+
+Code Fragment:
+```
+declare(strict_types=1);
+
+namespace JBZoo\CiReportConverter;
+
+use JBZoo\Utils\Str;
+
+/**
+ * Class Helper
+ * @package JBZoo\CiReportConverter
+ */
+class Helper
+{
+    /**
+     * @param array $data
+     * @return string|null
+     */
+    public static function descAsList(array $data): ?string
+    {
+        $result = Str::listToDescription($data, true);
+        if (null === $result) {
+            return null;
+        }
+
+        return "\n{$result}";
+
+```</warning>
+    </testcase>
+    <testcase name="src/Converters/TeamCityTestsConverter.php:65-79 (14 lines)" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php" line="65">
+      <warning type="Warning" message="Duplicate code found (lines=14, tokens=28)">
+Found 14 cloned lines in 2 files (28 tokens):
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php:65-79
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityInspectionsConverter.php:66-80
+
+Code Fragment:
+```
+        $this-&gt;renderSuite($sourceSuite);
+
+        $buffer = $this-&gt;tcLogger-&gt;getWriter();
+        if ($buffer instanceof Buffer) {
+            return implode('', $buffer-&gt;getBuffer());
+        }
+
+        return '';
+    }
+
+    /**
+     * @param SourceSuite $sourceSuite
+     */
+    private function renderSuite(SourceSuite $sourceSuite): void
+
+```</warning>
+    </testcase>
+    <testcase name="src/Converters/TeamCityTestsConverter.php:46-58 (12 lines)" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php" line="46">
+      <warning type="Warning" message="Duplicate code found (lines=12, tokens=40)">
+Found 12 cloned lines in 2 files (40 tokens):
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php:46-58
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityInspectionsConverter.php:51-63
+
+Code Fragment:
+```
+    public function __construct(array $params = [], ?int $flowId = null, ?AbstractWriter $tcWriter = null)
+    {
+        $this-&gt;tcLogger = new TeamCity($tcWriter ?: new Buffer(), $flowId, $params);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function fromInternal(SourceSuite $sourceSuite): string
+    {
+        if ($this-&gt;flowId &gt; 0) {
+            $this-&gt;tcLogger-&gt;setFlowId($this-&gt;flowId);
+
+```</warning>
+    </testcase>
+    <testcase name="src/Converters/PhpDependStatsTcConverter.php:38-49 (11 lines)" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpDependStatsTcConverter.php" line="38">
+      <warning type="Warning" message="Duplicate code found (lines=11, tokens=31)">
+Found 11 cloned lines in 2 files (31 tokens):
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpDependStatsTcConverter.php:38-49
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMetricsStatsTcConverter.php:38-49
+
+Code Fragment:
+```
+    public function toInternalMetric(string $sourceCode): Metrics
+    {
+        $xmlAsArray = Xml::dom2Array(Xml::createDomDocument($sourceCode));
+
+        $attrs = data($xmlAsArray)-&gt;findArray('_children.0._attrs');
+        unset(
+            $attrs['generated'],
+            $attrs['pdepend']
+        );
+
+        return self::buildMetrics($attrs, new PhpDepend());
+
+```</warning>
+    </testcase>
+    <testcase name="src/Converters/CheckStyleConverter.php:49-57 (8 lines)" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php" line="49">
+      <warning type="Warning" message="Duplicate code found (lines=8, tokens=24)">
+Found 8 cloned lines in 2 files (24 tokens):
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php:49-57
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMndConverter.php:49-57
+
+Code Fragment:
+```
+                $relFilename = $this-&gt;cleanFilepath($file['_attrs']['name'] ?? 'undefined');
+                $absFilename = $this-&gt;getFullPath($relFilename);
+
+                $suite = $sourceSuite-&gt;addSuite($relFilename);
+                $suite-&gt;file = $absFilename;
+
+                foreach ($file['_children'] as $errorNode) {
+                    $error = data($errorNode['_attrs']);
+
+```</warning>
+    </testcase>
+    <testcase name="src/Converters/CheckStyleConverter.php:66" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php" line="66">
+      <warning type="Warning" message="Duplicate code found (lines=0, tokens=0)">
+Found 0 cloned lines in 1 files (0 tokens):
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php:66
+
+Code Fragment: Not Found</warning>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,42 @@
+
+##teamcity[testCount count='6' flowId='42']
+
+##teamcity[testSuiteStarted name='PMD Copy/Paste Detector' flowId='42']
+
+##teamcity[testStarted name='src/Helper.php:16-40 (24 lines)' locationHint='php_qn:///Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper.php' flowId='42']
+
+##teamcity[testFailed name='src/Helper.php:16-40 (24 lines)' message='Found 24 cloned lines in 3 files (34 tokens):' details=' - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper.php:16-40|n - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper1.php:17-41|n - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper2.php:18-42|n |n Code Fragment:|n ```|n declare(strict_types=1);|n |n namespace JBZoo\CiReportConverter;|n |n use JBZoo\Utils\Str;|n |n /**|n  * Class Helper|n  * @package JBZoo\CiReportConverter|n  */|n class Helper|n {|n     /**|n      * @param array $data|n      * @return string||null|n      */|n     public static function descAsList(array $data): ?string|n     {|n         $result = Str::listToDescription($data, true);|n         if (null === $result) {|n             return null;|n         }|n |n         return "\n{$result}";|n |n ```' flowId='42']
+
+##teamcity[testFinished name='src/Helper.php:16-40 (24 lines)' flowId='42']
+
+##teamcity[testStarted name='src/Converters/TeamCityTestsConverter.php:65-79 (14 lines)' locationHint='php_qn:///Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php' flowId='42']
+
+##teamcity[testFailed name='src/Converters/TeamCityTestsConverter.php:65-79 (14 lines)' message='Found 14 cloned lines in 2 files (28 tokens):' details=' - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php:65-79|n - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityInspectionsConverter.php:66-80|n |n Code Fragment:|n ```|n         $this->renderSuite($sourceSuite);|n |n         $buffer = $this->tcLogger->getWriter();|n         if ($buffer instanceof Buffer) {|n             return implode(|'|', $buffer->getBuffer());|n         }|n |n         return |'|';|n     }|n |n     /**|n      * @param SourceSuite $sourceSuite|n      */|n     private function renderSuite(SourceSuite $sourceSuite): void|n |n ```' flowId='42']
+
+##teamcity[testFinished name='src/Converters/TeamCityTestsConverter.php:65-79 (14 lines)' flowId='42']
+
+##teamcity[testStarted name='src/Converters/TeamCityTestsConverter.php:46-58 (12 lines)' locationHint='php_qn:///Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php' flowId='42']
+
+##teamcity[testFailed name='src/Converters/TeamCityTestsConverter.php:46-58 (12 lines)' message='Found 12 cloned lines in 2 files (40 tokens):' details=' - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php:46-58|n - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityInspectionsConverter.php:51-63|n |n Code Fragment:|n ```|n     public function __construct(array $params = |[|], ?int $flowId = null, ?AbstractWriter $tcWriter = null)|n     {|n         $this->tcLogger = new TeamCity($tcWriter ?: new Buffer(), $flowId, $params);|n     }|n |n     /**|n      * @inheritDoc|n      */|n     public function fromInternal(SourceSuite $sourceSuite): string|n     {|n         if ($this->flowId > 0) {|n             $this->tcLogger->setFlowId($this->flowId);|n |n ```' flowId='42']
+
+##teamcity[testFinished name='src/Converters/TeamCityTestsConverter.php:46-58 (12 lines)' flowId='42']
+
+##teamcity[testStarted name='src/Converters/PhpDependStatsTcConverter.php:38-49 (11 lines)' locationHint='php_qn:///Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpDependStatsTcConverter.php' flowId='42']
+
+##teamcity[testFailed name='src/Converters/PhpDependStatsTcConverter.php:38-49 (11 lines)' message='Found 11 cloned lines in 2 files (31 tokens):' details=' - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpDependStatsTcConverter.php:38-49|n - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMetricsStatsTcConverter.php:38-49|n |n Code Fragment:|n ```|n     public function toInternalMetric(string $sourceCode): Metrics|n     {|n         $xmlAsArray = Xml::dom2Array(Xml::createDomDocument($sourceCode));|n |n         $attrs = data($xmlAsArray)->findArray(|'_children.0._attrs|');|n         unset(|n             $attrs|[|'generated|'|],|n             $attrs|[|'pdepend|'|]|n         );|n |n         return self::buildMetrics($attrs, new PhpDepend());|n |n ```' flowId='42']
+
+##teamcity[testFinished name='src/Converters/PhpDependStatsTcConverter.php:38-49 (11 lines)' flowId='42']
+
+##teamcity[testStarted name='src/Converters/CheckStyleConverter.php:49-57 (8 lines)' locationHint='php_qn:///Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php' flowId='42']
+
+##teamcity[testFailed name='src/Converters/CheckStyleConverter.php:49-57 (8 lines)' message='Found 8 cloned lines in 2 files (24 tokens):' details=' - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php:49-57|n - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMndConverter.php:49-57|n |n Code Fragment:|n ```|n                 $relFilename = $this->cleanFilepath($file|[|'_attrs|'|]|[|'name|'|] ?? |'undefined|');|n                 $absFilename = $this->getFullPath($relFilename);|n |n                 $suite = $sourceSuite->addSuite($relFilename);|n                 $suite->file = $absFilename;|n |n                 foreach ($file|[|'_children|'|] as $errorNode) {|n                     $error = data($errorNode|[|'_attrs|'|]);|n |n ```' flowId='42']
+
+##teamcity[testFinished name='src/Converters/CheckStyleConverter.php:49-57 (8 lines)' flowId='42']
+
+##teamcity[testStarted name='src/Converters/CheckStyleConverter.php:66' locationHint='php_qn:///Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php' flowId='42']
+
+##teamcity[testFailed name='src/Converters/CheckStyleConverter.php:66' message='Found 0 cloned lines in 1 files (0 tokens):' details=' - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php:66|n |n Code Fragment: Not Found' flowId='42']
+
+##teamcity[testFinished name='src/Converters/CheckStyleConverter.php:66' flowId='42']
+
+##teamcity[testSuiteFinished name='PMD Copy/Paste Detector' flowId='42']

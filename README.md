@@ -35,6 +35,7 @@ At the moment it works with
     * `phpmd-json` - [see example](tests/fixtures/origin/phpmd/json.json). The most detailed report of [PHPMD](https://github.com/phpmd/phpmd).
     * `phpmnd` - [see example](tests/fixtures/origin/phpmnd/phpmnd.xml). I know only [PHP Magic Numbers Detector](https://github.com/povils/phpmnd).
     * `psalm-json` - [see example](tests/fixtures/origin/psalm/json.json). The most detailed report of [Psalm](https://github.com/vimeo/psalm).
+    * `pmd-cpd` - [see example](tests/fixtures/origin/phpcpd/pmd-cpd.xml). PMD-CPD XML format. An example of tool is [Copy/Paste Detector](https://github.com/sebastianbergmann/phpcpd).
   * Output formats:
     * `junit` - The most popular sort of reporting.
     * `tc-tests` - [Reporting for TeamCity/PhpStorm/JetBrains](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Tests).
@@ -87,7 +88,7 @@ Usage:
   convert [options]
 
 Options:
-  -S, --input-format=INPUT-FORMAT    Source format. Available options: checkstyle, junit, phpmd-json, phpmnd, psalm-json
+  -S, --input-format=INPUT-FORMAT    Source format. Available options: checkstyle, junit, phpmd-json, phpmnd, pmd-cpd, psalm-json
   -T, --output-format=OUTPUT-FORMAT  Target format. Available options: github-cli, junit, tc-inspections, tc-tests
   -N, --suite-name=SUITE-NAME        Set name of root suite
   -I, --input-file[=INPUT-FILE]      Use CLI input (STDIN, pipeline) OR use the option to define filename of source report
@@ -112,24 +113,24 @@ Options:
 ### Available Directions
 
 <p align="center"><!-- Auto-created image via JBZoo\PHPUnit\CiReportConverterReadmeTest__testBuildGraphManually -->
-  <img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFI7XG4gICAgY2hlY2tzdHlsZV9zcmMoXCJDaGVja1N0eWxlLnhtbFwiKTtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyKChcIkNJLVJlcG9ydC1Db252ZXJ0ZXJcIikpO1xuICAgIGdpdGh1Yi1jbGlfdGFyZ2V0KFwiR2l0SHViIEFjdGlvbnMgLSBDTElcIik7XG4gICAganVuaXRfc3JjKFwiSlVuaXQueG1sXCIpO1xuICAgIGp1bml0X3RhcmdldChcIkpVbml0LnhtbFwiKTtcbiAgICBwaHBtZC1qc29uX3NyYyhcIlBIUG1kLmpzb25cIik7XG4gICAgcGhwbW5kX3NyYyhcIlBIUG1uZC54bWxcIik7XG4gICAgcHNhbG0tanNvbl9zcmMoXCJQc2FsbS5qc29uXCIpO1xuICAgIHRjLWluc3BlY3Rpb25zX3RhcmdldChcIlRlYW1DaXR5IC0gSW5zcGVjdGlvbnNcIik7XG4gICAgdGMtdGVzdHNfdGFyZ2V0KFwiVGVhbUNpdHkgLSBUZXN0c1wiKTtcblxuICAgIGNoZWNrc3R5bGVfc3JjID09PiBjaS1yZXBvcnQtY29udmVydGVyO1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IGdpdGh1Yi1jbGlfdGFyZ2V0O1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IGp1bml0X3RhcmdldDtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyID09PiB0Yy1pbnNwZWN0aW9uc190YXJnZXQ7XG4gICAgY2ktcmVwb3J0LWNvbnZlcnRlciA9PT4gdGMtdGVzdHNfdGFyZ2V0O1xuICAgIGp1bml0X3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwaHBtZC1qc29uX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwaHBtbmRfc3JjID09PiBjaS1yZXBvcnQtY29udmVydGVyO1xuICAgIHBzYWxtLWpzb25fc3JjID09PiBjaS1yZXBvcnQtY29udmVydGVyO1xuXG5saW5rU3R5bGUgZGVmYXVsdCBpbnRlcnBvbGF0ZSBiYXNpczsiLCJtZXJtYWlkIjp7InRoZW1lIjoiZm9yZXN0In19">
+  <img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFI7XG4gICAgY2hlY2tzdHlsZV9zcmMoXCJDaGVja1N0eWxlLnhtbFwiKTtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyKChcIkNJLVJlcG9ydC1Db252ZXJ0ZXJcIikpO1xuICAgIGdpdGh1Yi1jbGlfdGFyZ2V0KFwiR2l0SHViIEFjdGlvbnMgLSBDTElcIik7XG4gICAganVuaXRfc3JjKFwiSlVuaXQueG1sXCIpO1xuICAgIGp1bml0X3RhcmdldChcIkpVbml0LnhtbFwiKTtcbiAgICBwaHBtZC1qc29uX3NyYyhcIlBIUG1kLmpzb25cIik7XG4gICAgcGhwbW5kX3NyYyhcIlBIUG1uZC54bWxcIik7XG4gICAgcG1kLWNwZF9zcmMoXCJQbWRDcGQueG1sXCIpO1xuICAgIHBzYWxtLWpzb25fc3JjKFwiUHNhbG0uanNvblwiKTtcbiAgICB0Yy1pbnNwZWN0aW9uc190YXJnZXQoXCJUZWFtQ2l0eSAtIEluc3BlY3Rpb25zXCIpO1xuICAgIHRjLXRlc3RzX3RhcmdldChcIlRlYW1DaXR5IC0gVGVzdHNcIik7XG5cbiAgICBjaGVja3N0eWxlX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyID09PiBnaXRodWItY2xpX3RhcmdldDtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyID09PiBqdW5pdF90YXJnZXQ7XG4gICAgY2ktcmVwb3J0LWNvbnZlcnRlciA9PT4gdGMtaW5zcGVjdGlvbnNfdGFyZ2V0O1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IHRjLXRlc3RzX3RhcmdldDtcbiAgICBqdW5pdF9zcmMgPT0+IGNpLXJlcG9ydC1jb252ZXJ0ZXI7XG4gICAgcGhwbWQtanNvbl9zcmMgPT0+IGNpLXJlcG9ydC1jb252ZXJ0ZXI7XG4gICAgcGhwbW5kX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwbWQtY3BkX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwc2FsbS1qc29uX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcblxubGlua1N0eWxlIGRlZmF1bHQgaW50ZXJwb2xhdGUgYmFzaXM7IiwibWVybWFpZCI6eyJ0aGVtZSI6ImZvcmVzdCJ9fQ==">
 </p>
 
 ```sh
 php ./vendor/bin/ci-report-converter convert:map
 ```
 
-| Source/Target          | CheckStyle.xml | GitHub Actions - CLI | JUnit.xml | PHPmd.json | PHPmnd.xml | Psalm.json | TeamCity - Inspections | TeamCity - Tests |
-|:-----------------------|:--------------:|:--------------------:|:---------:|:----------:|:----------:|:----------:|:----------------------:|:----------------:|
-| CheckStyle.xml         |       -        |         Yes          |    Yes    |     -      |     -      |     -      |          Yes           |       Yes        |
-| GitHub Actions - CLI   |       -        |          -           |     -     |     -      |     -      |     -      |           -            |        -         |
-| JUnit.xml              |       -        |         Yes          |    Yes    |     -      |     -      |     -      |          Yes           |       Yes        |
-| PHPmd.json             |       -        |         Yes          |    Yes    |     -      |     -      |     -      |          Yes           |       Yes        |
-| PHPmnd.xml             |       -        |         Yes          |    Yes    |     -      |     -      |     -      |          Yes           |       Yes        |
-| Psalm.json             |       -        |         Yes          |    Yes    |     -      |     -      |     -      |          Yes           |       Yes        |
-| TeamCity - Inspections |       -        |          -           |     -     |     -      |     -      |     -      |           -            |        -         |
-| TeamCity - Tests       |       -        |          -           |     -     |     -      |     -      |     -      |           -            |        -         |
-
+| Source/Target          | CheckStyle.xml | GitHub Actions - CLI | JUnit.xml | PHPmd.json | PHPmnd.xml | PmdCpd.xml | Psalm.json | TeamCity - Inspections | TeamCity - Tests |
+|:-----------------------|:--------------:|:--------------------:|:---------:|:----------:|:----------:|:----------:|:----------:|:----------------------:|:----------------:|
+| CheckStyle.xml         |       -        |         Yes          |    Yes    |     -      |     -      |     -      |     -      |          Yes           |       Yes        |
+| GitHub Actions - CLI   |       -        |          -           |     -     |     -      |     -      |     -      |     -      |           -            |        -         |
+| JUnit.xml              |       -        |         Yes          |    Yes    |     -      |     -      |     -      |     -      |          Yes           |       Yes        |
+| PHPmd.json             |       -        |         Yes          |    Yes    |     -      |     -      |     -      |     -      |          Yes           |       Yes        |
+| PHPmnd.xml             |       -        |         Yes          |    Yes    |     -      |     -      |     -      |     -      |          Yes           |       Yes        |
+| PmdCpd.xml             |       -        |         Yes          |    Yes    |     -      |     -      |     -      |     -      |          Yes           |       Yes        |
+| Psalm.json             |       -        |         Yes          |    Yes    |     -      |     -      |     -      |     -      |          Yes           |       Yes        |
+| TeamCity - Inspections |       -        |          -           |     -     |     -      |     -      |     -      |     -      |           -            |        -         |
+| TeamCity - Tests       |       -        |          -           |     -     |     -      |     -      |     -      |     -      |           -            |        -         |
 
 
 
