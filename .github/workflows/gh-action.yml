@@ -41,7 +41,6 @@ jobs:
       - name: CheckStyle.xml
         uses: ./
         with:
-          input-format: checkstyle
           input-file: tests/fixtures/origin/phpcs/codestyle.xml
 
       - name: PHP Mess Detector
@@ -86,7 +85,6 @@ jobs:
       - name: CheckStyle.xml
         uses: jbzoo/ci-report-converter@master
         with:
-          input-format: checkstyle
           input-file: tests/fixtures/origin/phpcs/codestyle.xml
 
       - name: PHP Mess Detector

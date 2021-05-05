@@ -30,8 +30,8 @@ Well... It may seem to you it's a useless thing, and _your favorite super tool_ 
 
 At the moment it works with
   * Input formats:
-    * `junit` - [see example](tests/fixtures/origin/phpunit/junit-simple.xml). The most popular sort of error report. 
-    * `checkstyle` - [see example](tests/fixtures/origin/phpcs/codestyle.xml). It works for [Phan](https://github.com/phan/phan), [PHPcs](https://github.com/squizlabs/PHP_CodeSniffer) and others.
+    * `checkstyle` - [see example](tests/fixtures/origin/phpcs/codestyle.xml). The most popular sort of error report. It works for [Phan](https://github.com/phan/phan), [PHPcs](https://github.com/squizlabs/PHP_CodeSniffer) and others.    
+    * `junit` - [see example](tests/fixtures/origin/phpunit/junit-simple.xml). Also, the most popular sort of error report. Usually, the format is used to display unit test results.
     * `phpmd-json` - [see example](tests/fixtures/origin/phpmd/json.json). The most detailed report of [PHPMD](https://github.com/phpmd/phpmd).
     * `phpmnd` - [see example](tests/fixtures/origin/phpmnd/phpmnd.xml). I know only [PHP Magic Numbers Detector](https://github.com/povils/phpmnd).
     * `psalm-json` - [see example](tests/fixtures/origin/psalm/json.json). The most detailed report of [Psalm](https://github.com/vimeo/psalm).
