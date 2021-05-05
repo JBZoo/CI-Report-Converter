@@ -95,16 +95,7 @@ class Helper
                     $error = data($errorNode['_attrs']);
 </codefragment>
   </duplication>
-  <duplication lines="7" tokens="29">
+  <duplication>
     <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php" line="66"/>
-    <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMndConverter.php" line="67"/>
-    <codefragment>                    $case = $suite-&gt;addTestCase($caseName);
-                    $case-&gt;file = $absFilename;
-                    $case-&gt;line = $line ?: null;
-                    $case-&gt;column = $column ?: null;
-                    $case-&gt;class = $type;
-                    $case-&gt;classname = $type;
-                    $case-&gt;failure = new SourceCaseOutput($type, $error-&gt;get('message'), self::getDetails($error));
-</codefragment>
   </duplication>
 </pmd-cpd>

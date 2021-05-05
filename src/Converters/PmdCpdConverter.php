@@ -96,15 +96,15 @@ class PmdCpdConverter extends AbstractConverter
      * @param Data $duplication
      * @return string
      */
-    private static function getCodeFragment(Data $duplication): string
+    private static function getCodeFragment(Data $duplication): ?string
     {
         foreach ($duplication->getArray('_children') as $child) {
             if (isset($child['_node']) && $child['_node'] === 'codefragment') {
-                return $child['_text'] ?? 'Undefined Code Fragment';
+                return $child['_text'] ?? null;
             }
         }
 
-        return 'Undefined Code Fragment';
+        return null;
     }
 
     /**
@@ -143,17 +143,22 @@ class PmdCpdConverter extends AbstractConverter
             $filesAsString .= "- {$filePoint}\n";
         }
 
-        return implode("\n", [
+        $result = [
             '',
             "Found {$lines} cloned lines in {$fileNumber} files ({$tokens} tokens):",
             $filesAsString,
-            '',
-            "Code Fragment:",
-            '',
-            '```',
-            self::getCodeFragment($duplication),
-            '```',
-        ]);
+        ];
+
+        if ($codeFragment = self::getCodeFragment($duplication)) {
+            $result[] = "Code Fragment:";
+            $result[] = '```';
+            $result[] = $codeFragment;
+            $result[] = '```';
+        } else {
+            $result[] = "Code Fragment: Not Found";
+        }
+
+        return implode("\n", $result);
     }
 
     /**

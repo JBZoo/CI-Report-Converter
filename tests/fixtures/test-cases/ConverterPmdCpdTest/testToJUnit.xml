@@ -8,9 +8,7 @@ Found 24 cloned lines in 3 files (34 tokens):
 - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper1.php:17-41
 - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper2.php:18-42
 
-
 Code Fragment:
-
 ```
 declare(strict_types=1);
 
@@ -45,9 +43,7 @@ Found 14 cloned lines in 2 files (28 tokens):
 - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php:65-79
 - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityInspectionsConverter.php:66-80
 
-
 Code Fragment:
-
 ```
         $this-&gt;renderSuite($sourceSuite);
 
@@ -72,9 +68,7 @@ Found 12 cloned lines in 2 files (40 tokens):
 - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php:46-58
 - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityInspectionsConverter.php:51-63
 
-
 Code Fragment:
-
 ```
     public function __construct(array $params = [], ?int $flowId = null, ?AbstractWriter $tcWriter = null)
     {
@@ -97,9 +91,7 @@ Found 11 cloned lines in 2 files (31 tokens):
 - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpDependStatsTcConverter.php:38-49
 - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMetricsStatsTcConverter.php:38-49
 
-
 Code Fragment:
-
 ```
     public function toInternalMetric(string $sourceCode): Metrics
     {
@@ -121,9 +113,7 @@ Found 8 cloned lines in 2 files (24 tokens):
 - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php:49-57
 - /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMndConverter.php:49-57
 
-
 Code Fragment:
-
 ```
                 $relFilename = $this-&gt;cleanFilepath($file['_attrs']['name'] ?? 'undefined');
                 $absFilename = $this-&gt;getFullPath($relFilename);
@@ -136,25 +126,12 @@ Code Fragment:
 
 ```</warning>
     </testcase>
-    <testcase name="src/Converters/CheckStyleConverter.php:66-73 (7 lines)" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php" line="66">
-      <warning type="Warning" message="Duplicate code found (lines=7, tokens=29)">
-Found 7 cloned lines in 2 files (29 tokens):
-- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php:66-73
-- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMndConverter.php:67-74
+    <testcase name="src/Converters/CheckStyleConverter.php:66" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php" line="66">
+      <warning type="Warning" message="Duplicate code found (lines=0, tokens=0)">
+Found 0 cloned lines in 1 files (0 tokens):
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php:66
 
-
-Code Fragment:
-
-```
-                    $case = $suite-&gt;addTestCase($caseName);
-                    $case-&gt;file = $absFilename;
-                    $case-&gt;line = $line ?: null;
-                    $case-&gt;column = $column ?: null;
-                    $case-&gt;class = $type;
-                    $case-&gt;classname = $type;
-                    $case-&gt;failure = new SourceCaseOutput($type, $error-&gt;get('message'), self::getDetails($error));
-
-```</warning>
+Code Fragment: Not Found</warning>
     </testcase>
   </testsuite>
 </testsuites>
