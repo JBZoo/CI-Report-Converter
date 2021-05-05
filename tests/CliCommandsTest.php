@@ -33,6 +33,9 @@ use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\StringInput;
 use Symfony\Component\Console\Output\BufferedOutput;
 
+use function JBZoo\Data\json;
+use function JBZoo\Data\yml;
+
 /**
  * Class CliCommandsTest
  * @package JBZoo\PHPUnit
@@ -56,6 +59,88 @@ class CliCommandsTest extends PHPUnit
         } else {
             skip('Old help text is different for different libs/php versions');
         }
+    }
+
+    public function testGitHubActionsYml()
+    {
+        $helpJson = json($this->taskReal('convert', ['help' => null, 'format' => 'json']));
+        $actionYml = yml(__DIR__ . '/../action.yml');
+
+        $excludedOptions = [
+            'help',
+            'quiet',
+            'verbose',
+            'version',
+            'ansi',
+            'no-ansi',
+            'no-interaction',
+            //
+            'tc-flow-id',
+            'root-path'
+        ];
+
+        $expectedInputs = [];
+        $expectedRunsArgs = ['convert'];
+        foreach ($helpJson->findArray('definition.options') as $key => $option) {
+            if (in_array($key, $excludedOptions, true)) {
+                continue;
+            }
+
+            $expectedInputs[$key] = array_filter([
+                'description' => strip_tags($option['description']),
+                'default'     => $option['default'],
+                'required'    => $option['is_value_required'],
+            ]);
+
+            $expectedRunsArgs[] = "--{$key}";
+            $expectedRunsArgs[] = "\${{ inputs.{$key} }}";
+        }
+
+        $expectedRunsArgs[] = '-vvv';
+
+        $expectedInputs['output-format']['default'] = GithubCliConverter::TYPE;
+        ksort($expectedInputs);
+
+        $errorMessage = (string)yml(['inputs' => $expectedInputs]);
+        isSame($expectedInputs, $actionYml->getArray('inputs'), $errorMessage);
+
+        $errorMessage = str_replace(["'\${{", "}}'"], ["\${{", "}}"], (string)yml($expectedRunsArgs));
+        isSame($expectedRunsArgs, $actionYml->findArray('runs.args'), $errorMessage);
+    }
+
+    /**
+     * @depends testGitHubActionsYml
+     */
+    public function testGitHubActionsReadMe()
+    {
+        $inputs = yml(__DIR__ . '/../action.yml')->findArray('inputs');
+        $examples = [
+            'input-file'    => './build/checkstyle.xml',
+            'input-format'  => 'checkstyle',
+            'output-file'   => './build/junit.xml',
+            'output-format' => 'junit',
+            'suite-name'    => 'My Tests',
+        ];
+
+        $expectedMessage = [
+            '  with:'
+        ];
+        foreach ($inputs as $key => $input) {
+            $expectedMessage[] = "    # {$input['description']}";
+
+            if (isset($input['default'])) {
+                $expectedMessage[] = "    # Default value: {$input['default']}";
+            }
+
+            if (isset($input['required']) && $input['required']) {
+                $expectedMessage[] = '    # Required: true';
+            }
+
+            $expectedMessage[] = "    {$key}: {$examples[$key]}";
+            $expectedMessage[] = '';
+        }
+
+        isFileContains(implode("\n", $expectedMessage), PROJECT_ROOT . '/README.md');
     }
 
     public function testConvertCommandMapReadMe()

@@ -30,8 +30,8 @@ Well... It may seem to you it's a useless thing, and _your favorite super tool_ 
 
 At the moment it works with
   * Input formats:
-    * `junit` - [see example](tests/fixtures/origin/phpunit/junit-simple.xml). The most popular sort of error report. 
-    * `checkstyle` - [see example](tests/fixtures/origin/phpcs/codestyle.xml). It works for [Phan](https://github.com/phan/phan), [PHPcs](https://github.com/squizlabs/PHP_CodeSniffer) and others.
+    * `checkstyle` - [see example](tests/fixtures/origin/phpcs/codestyle.xml). The most popular sort of error report. It works for [Phan](https://github.com/phan/phan), [PHPcs](https://github.com/squizlabs/PHP_CodeSniffer) and others.    
+    * `junit` - [see example](tests/fixtures/origin/phpunit/junit-simple.xml). Also, the most popular sort of error report. Usually, the format is used to display unit test results.
     * `phpmd-json` - [see example](tests/fixtures/origin/phpmd/json.json). The most detailed report of [PHPMD](https://github.com/phpmd/phpmd).
     * `phpmnd` - [see example](tests/fixtures/origin/phpmnd/phpmnd.xml). I know only [PHP Magic Numbers Detector](https://github.com/povils/phpmnd).
     * `psalm-json` - [see example](tests/fixtures/origin/psalm/json.json). The most detailed report of [Psalm](https://github.com/vimeo/psalm).
@@ -66,14 +66,25 @@ Action allows you to convert errors to the [GitHub Annotations format](https://d
 ```yaml
 - uses: jbzoo/ci-report-converter@2.2.0 # or see the latest version on releases page 
   with:
-    # Source format of error report. Available options: checkstyle, junit, phpmd-json, phpmnd, psalm-json
-    # Default value: junit
+    # File path with the original report format. If not set or empty, then the STDIN is used.
+    input-file: ./build/checkstyle.xml
+
+    # Source format. Available options: checkstyle, junit, phpmd-json, phpmnd, pmd-cpd, psalm-json
+    # Default value: checkstyle
     # Required: true
-    format: junit
-    
-    # Relative path to the file with the error report
+    input-format: checkstyle
+
+    # File path with the result report format. If not set or empty, then the STDOUT is used.
+    output-file: ./build/junit.xml
+
+    # Target format. Available options: github-cli, junit, tc-inspections, tc-tests
+    # Default value: github-cli
     # Required: true
-    file: build/junit.xml
+    output-format: junit
+
+    # Set custom name of root group/suite
+    # Required: true
+    suite-name: My Tests
 ```
 
 
@@ -82,18 +93,18 @@ Action allows you to convert errors to the [GitHub Annotations format](https://d
 ```
 $ php ./vendor/bin/ci-report-converter convert --help
 Description:
-  Convert one report format to another
+  Convert one report format to another one
 
 Usage:
   convert [options]
 
 Options:
-  -S, --input-format=INPUT-FORMAT    Source format. Available options: checkstyle, junit, phpmd-json, phpmnd, pmd-cpd, psalm-json
-  -T, --output-format=OUTPUT-FORMAT  Target format. Available options: github-cli, junit, tc-inspections, tc-tests
-  -N, --suite-name=SUITE-NAME        Set name of root suite
-  -I, --input-file[=INPUT-FILE]      Use CLI input (STDIN, pipeline) OR use the option to define filename of source report
-  -O, --output-file[=OUTPUT-FILE]    Use CLI output (STDOUT, pipeline) OR use the option to define filename with result
-  -R, --root-path[=ROOT-PATH]        If option is set all absolute file paths will be converted to relative
+  -S, --input-format=INPUT-FORMAT    Source format. Available options: checkstyle, junit, phpmd-json, phpmnd, pmd-cpd, psalm-json [default: "checkstyle"]
+  -T, --output-format=OUTPUT-FORMAT  Target format. Available options: github-cli, junit, tc-inspections, tc-tests [default: "tc-tests"]
+  -N, --suite-name=SUITE-NAME        Set custom name of root group/suite
+  -I, --input-file[=INPUT-FILE]      File path with the original report format. If not set or empty, then the STDIN is used.
+  -O, --output-file[=OUTPUT-FILE]    File path with the result report format. If not set or empty, then the STDOUT is used.
+  -R, --root-path[=ROOT-PATH]        If option is set, all absolute file paths will be converted to relative once.
   -F, --tc-flow-id[=TC-FLOW-ID]      Custom flowId for TeamCity output
   -h, --help                         Display this help message
   -q, --quiet                        Do not output any message

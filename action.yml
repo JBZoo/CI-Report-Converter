@@ -20,22 +20,35 @@ branding:
   color: 'blue'
 
 inputs:
-  format:
-    description: 'Source format. Available options: checkstyle, junit, phpmd-json, phpmnd, psalm-json'
+  input-file:
+    description: 'File path with the original report format. If not set or empty, then the STDIN is used.'
+  input-format:
+    description: 'Source format. Available options: checkstyle, junit, phpmd-json, phpmnd, pmd-cpd, psalm-json'
+    default: checkstyle
     required: true
-    default: 'junit'
-  file:
-    description: 'Relative path to the file with the error report'
+  output-file:
+    description: 'File path with the result report format. If not set or empty, then the STDOUT is used.'
+  output-format:
+    description: 'Target format. Available options: github-cli, junit, tc-inspections, tc-tests'
+    default: github-cli
+    required: true
+  suite-name:
+    description: 'Set custom name of root group/suite'
     required: true
 
 runs:
   using: 'docker'
-  image: 'docker://jbzoo/ci-report-converter:2.2.0'
+  image: 'docker://jbzoo/ci-report-converter'
   args:
     - 'convert'
     - '--input-format'
-    - ${{ inputs.format }}
-    - '--input-file'
-    - ${{ inputs.file }}
+    - ${{ inputs.input-format }}
     - '--output-format'
-    - 'github-cli'
+    - ${{ inputs.output-format }}
+    - '--suite-name'
+    - ${{ inputs.suite-name }}
+    - '--input-file'
+    - ${{ inputs.input-file }}
+    - '--output-file'
+    - ${{ inputs.output-file }}
+    - '-vvv'

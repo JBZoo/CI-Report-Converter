@@ -46,12 +46,12 @@ abstract class AbstractCommand extends Command
     protected function configure(): void
     {
         $this
-            ->addOption('input-file', 'I', InputOption::VALUE_OPTIONAL, "Use CLI input (STDIN, pipeline) " .
-                "OR use the option to define filename of source report")
-            ->addOption('output-file', 'O', InputOption::VALUE_OPTIONAL, "Use CLI output (STDOUT, pipeline) " .
-                "OR use the option to define filename with result")
-            ->addOption('root-path', 'R', InputOption::VALUE_OPTIONAL, 'If option is set ' .
-                'all absolute file paths will be converted to relative')
+            ->addOption('input-file', 'I', InputOption::VALUE_OPTIONAL, "File path with the original report format. " .
+                "If not set or empty, then the STDIN is used.")
+            ->addOption('output-file', 'O', InputOption::VALUE_OPTIONAL, "File path with the result report format. " .
+                "If not set or empty, then the STDOUT is used.")
+            ->addOption('root-path', 'R', InputOption::VALUE_OPTIONAL, 'If option is set, ' .
+                'all absolute file paths will be converted to relative once.')
             ->addOption('tc-flow-id', 'F', InputOption::VALUE_OPTIONAL, 'Custom flowId for TeamCity output');
     }
 
@@ -95,7 +95,7 @@ abstract class AbstractCommand extends Command
             return $contents;
         }
 
-        throw new Exception("Please provide a filename or pipe template content to STDIN.");
+        throw new Exception("Please provide input-file or use STDIN as input (CLI pipeline).");
     }
 
     /**
@@ -105,7 +105,7 @@ abstract class AbstractCommand extends Command
     {
         if ($filename = (string)$this->getOption('output-file')) {
             file_put_contents($filename, $result);
-            $this->output->writeln("Result save: {$filename}");
+            $this->output->writeln("Result is saved: {$filename}");
         } else {
             $this->output->write($result);
         }
