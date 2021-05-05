@@ -11,7 +11,7 @@
 # @link       https://github.com/JBZoo/CI-Report-Converter
 #
 
-name: 'CI Report Converter'
+name: 'Any Report to GitHub Annotations'
 description: 'The tool converts different error reports to GitHub Actions (Annotations)'
 author: 'Denis Smetannikov <admin@jbzoo.com>'
 
