@@ -95,7 +95,7 @@ abstract class AbstractCommand extends Command
             return $contents;
         }
 
-        throw new Exception("Please provide a filename or pipe template content to STDIN.");
+        throw new Exception("Please provide input-file or use STDIN as input (CLI pipeline).");
     }
 
     /**

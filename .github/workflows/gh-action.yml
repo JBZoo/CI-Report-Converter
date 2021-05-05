@@ -33,34 +33,29 @@ jobs:
         uses: actions/checkout@v2
 
       - name: JUnit.xml
-        continue-on-error: true
         uses: ./
         with:
           file: tests/fixtures/origin/phpunit/junit-nested.xml
 
       - name: CheckStyle.xml
-        continue-on-error: true
         uses: ./
         with:
           format: checkstyle
           file: tests/fixtures/origin/phpcs/codestyle.xml
 
       - name: PHP Mess Detector
-        continue-on-error: true
         uses: ./
         with:
           format: phpmd-json
           file: tests/fixtures/origin/phpmd/json.json
 
       - name: PHP Magic Numbers Detector
-        continue-on-error: true
         uses: ./
         with:
           format: phpmnd
           file: tests/fixtures/origin/phpmnd/phpmnd.xml
 
       - name: Psalm.json
-        continue-on-error: true
         uses: ./
         with:
           format: psalm-json
