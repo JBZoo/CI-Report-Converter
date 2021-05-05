@@ -45,12 +45,13 @@ class PmdCpdConverter extends AbstractConverter
 
         foreach ($xmlAsArray->find('_children.0._children') as $duplication) {
             $duplication = data($duplication);
+            $lines = self::getLinesNumber($duplication);
+            $tokens = self::getTokens($duplication);
 
             $mainFile = $this->getFileByIndex($duplication);
-            $errorTitle = "Duplicate code found (lines={$this->getLinesNumber($duplication)}, " .
-                "tokens={$this->getTokens($duplication)})";
+            $errorTitle = "Duplicate code found (lines={$lines}, tokens={$tokens})";
 
-            $case = $sourceSuite->addTestCase($mainFile->getShortName());
+            $case = $sourceSuite->addTestCase(self::getTestCaseName($mainFile, $lines));
             $case->file = $mainFile->fullpath;
             $case->line = $mainFile->line;
             $case->warning = new SourceCaseOutput('Warning', $errorTitle, $this->getDetails($duplication));
@@ -69,7 +70,7 @@ class PmdCpdConverter extends AbstractConverter
         $fileRef = new FileRef();
         $fileRef->fullpath = $duplication->findString("_children.{$index}._attrs.path");
         $fileRef->line = $duplication->findInt("_children.{$index}._attrs.line");
-        $fileRef->name = $this->cleanFilepath((string)$fileRef->fullpath);
+        $fileRef->name = $this->cleanFilepath($fileRef->fullpath ?: '');
 
         return $fileRef;
     }
@@ -95,7 +96,7 @@ class PmdCpdConverter extends AbstractConverter
      * @param Data $duplication
      * @return string
      */
-    private function getCodeFragment(Data $duplication): string
+    private static function getCodeFragment(Data $duplication): string
     {
         foreach ($duplication->getArray('_children') as $child) {
             if (isset($child['_node']) && $child['_node'] === 'codefragment') {
@@ -110,7 +111,7 @@ class PmdCpdConverter extends AbstractConverter
      * @param Data $duplication
      * @return int
      */
-    private function getLinesNumber(Data $duplication): int
+    private static function getLinesNumber(Data $duplication): int
     {
         return $duplication->findInt('_attrs.lines');
     }
@@ -119,7 +120,7 @@ class PmdCpdConverter extends AbstractConverter
      * @param Data $duplication
      * @return int
      */
-    private function getTokens(Data $duplication): int
+    private static function getTokens(Data $duplication): int
     {
         return $duplication->findInt('_attrs.tokens');
     }
@@ -132,21 +133,58 @@ class PmdCpdConverter extends AbstractConverter
     {
         $fileList = $this->getFileList($duplication);
 
+        $lines = self::getLinesNumber($duplication);
+        $tokens = self::getTokens($duplication);
+        $fileNumber = count($fileList);
+
         $filesAsString = '';
         foreach ($fileList as $fileRef) {
-            $filesAsString .= "- {$fileRef->getFullName()}\n";
+            $filePoint = self::getFileName($fileRef, $lines);
+            $filesAsString .= "- {$filePoint}\n";
         }
 
         return implode("\n", [
             '',
-            'Copy&Paste is found in files:',
+            "Found {$lines} cloned lines in {$fileNumber} files ({$tokens} tokens):",
             $filesAsString,
             '',
             "Code Fragment:",
             '',
             '```',
-            $this->getCodeFragment($duplication),
+            self::getCodeFragment($duplication),
             '```',
         ]);
+    }
+
+    /**
+     * @param FileRef $fileRef
+     * @param int     $lines
+     * @return string
+     */
+    private static function getTestCaseName(FileRef $fileRef, int $lines): string
+    {
+        $startLine = (int)$fileRef->line;
+        $endLine = $startLine + $lines;
+        $place = $startLine === $endLine ? (string)$startLine : "{$startLine}-{$endLine}";
+
+        if ($lines > 0) {
+            return "{$fileRef->name}:{$place} ({$lines} lines)";
+        }
+
+        return "{$fileRef->name}:{$place}";
+    }
+
+    /**
+     * @param FileRef $fileRef
+     * @param int     $lines
+     * @return string
+     */
+    private static function getFileName(FileRef $fileRef, int $lines = 0): string
+    {
+        $startLine = (int)$fileRef->line;
+        $endLine = $startLine + $lines;
+        $place = $startLine === $endLine ? (string)$startLine : "{$startLine}-{$endLine}";
+
+        return "{$fileRef->fullpath}:{$place}";
     }
 }

@@ -19,6 +19,7 @@ namespace JBZoo\PHPUnit;
 
 use JBZoo\CiReportConverter\Converters\JUnitConverter;
 use JBZoo\CiReportConverter\Converters\PmdCpdConverter;
+use JBZoo\CiReportConverter\Converters\TeamCityTestsConverter;
 
 /**
  * Class ConverterPmdCpdTest
@@ -37,5 +38,17 @@ class ConverterPmdCpdTest extends PHPUnit
 
         Aliases::isValidXml($actual);
         isSame(Fixtures::getExpectedFileContent(), $actual);
+    }
+
+    public function testToTeamCity()
+    {
+        $source = (new PmdCpdConverter())
+            ->setRootPath('/Users/smetdenis/Work/projects/jbzoo-ci-report-converter')
+            ->toInternal(file_get_contents(Fixtures::PHPCPD_XML));
+
+        $actual = (new TeamCityTestsConverter(['show-datetime' => false], 42))
+            ->fromInternal($source);
+
+        isSame(Fixtures::getExpectedFileContent('txt'), $actual);
     }
 }

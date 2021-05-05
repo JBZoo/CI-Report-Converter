@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
   <testsuite name="PMD Copy/Paste Detector" tests="6" warnings="6">
-    <testcase name="src/Helper.php on line 16" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper.php" line="16">
+    <testcase name="src/Helper.php:16-40 (24 lines)" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper.php" line="16">
       <warning type="Warning" message="Duplicate code found (lines=24, tokens=34)">
-Copy&amp;Paste is found in files:
-- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper.php:16
-- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper1.php:17
-- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper2.php:18
+Found 24 cloned lines in 3 files (34 tokens):
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper.php:16-40
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper1.php:17-41
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper2.php:18-42
 
 
 Code Fragment:
@@ -39,11 +39,11 @@ class Helper
 
 ```</warning>
     </testcase>
-    <testcase name="src/Converters/TeamCityTestsConverter.php on line 65" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php" line="65">
+    <testcase name="src/Converters/TeamCityTestsConverter.php:65-79 (14 lines)" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php" line="65">
       <warning type="Warning" message="Duplicate code found (lines=14, tokens=28)">
-Copy&amp;Paste is found in files:
-- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php:65
-- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityInspectionsConverter.php:66
+Found 14 cloned lines in 2 files (28 tokens):
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php:65-79
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityInspectionsConverter.php:66-80
 
 
 Code Fragment:
@@ -66,11 +66,11 @@ Code Fragment:
 
 ```</warning>
     </testcase>
-    <testcase name="src/Converters/TeamCityTestsConverter.php on line 46" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php" line="46">
+    <testcase name="src/Converters/TeamCityTestsConverter.php:46-58 (12 lines)" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php" line="46">
       <warning type="Warning" message="Duplicate code found (lines=12, tokens=40)">
-Copy&amp;Paste is found in files:
-- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php:46
-- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityInspectionsConverter.php:51
+Found 12 cloned lines in 2 files (40 tokens):
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php:46-58
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityInspectionsConverter.php:51-63
 
 
 Code Fragment:
@@ -91,11 +91,11 @@ Code Fragment:
 
 ```</warning>
     </testcase>
-    <testcase name="src/Converters/PhpDependStatsTcConverter.php on line 38" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpDependStatsTcConverter.php" line="38">
+    <testcase name="src/Converters/PhpDependStatsTcConverter.php:38-49 (11 lines)" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpDependStatsTcConverter.php" line="38">
       <warning type="Warning" message="Duplicate code found (lines=11, tokens=31)">
-Copy&amp;Paste is found in files:
-- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpDependStatsTcConverter.php:38
-- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMetricsStatsTcConverter.php:38
+Found 11 cloned lines in 2 files (31 tokens):
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpDependStatsTcConverter.php:38-49
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMetricsStatsTcConverter.php:38-49
 
 
 Code Fragment:
@@ -115,11 +115,11 @@ Code Fragment:
 
 ```</warning>
     </testcase>
-    <testcase name="src/Converters/CheckStyleConverter.php on line 49" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php" line="49">
+    <testcase name="src/Converters/CheckStyleConverter.php:49-57 (8 lines)" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php" line="49">
       <warning type="Warning" message="Duplicate code found (lines=8, tokens=24)">
-Copy&amp;Paste is found in files:
-- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php:49
-- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMndConverter.php:49
+Found 8 cloned lines in 2 files (24 tokens):
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php:49-57
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMndConverter.php:49-57
 
 
 Code Fragment:
@@ -136,11 +136,11 @@ Code Fragment:
 
 ```</warning>
     </testcase>
-    <testcase name="src/Converters/CheckStyleConverter.php on line 66" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php" line="66">
+    <testcase name="src/Converters/CheckStyleConverter.php:66-73 (7 lines)" file="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php" line="66">
       <warning type="Warning" message="Duplicate code found (lines=7, tokens=29)">
-Copy&amp;Paste is found in files:
-- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php:66
-- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMndConverter.php:67
+Found 7 cloned lines in 2 files (29 tokens):
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php:66-73
+- /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMndConverter.php:67-74
 
 
 Code Fragment:
