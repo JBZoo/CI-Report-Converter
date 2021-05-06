@@ -68,8 +68,8 @@ jobs:
       - uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          directory: ./coverage_xml/
-          fail_ci_if_error: true
+          directory: ./build/coverage_xml/
+          fail_ci_if_error: false
           verbose: true
 
 
