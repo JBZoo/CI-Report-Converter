@@ -65,6 +65,15 @@ jobs:
         continue-on-error: ${{ matrix.experimental }}
         run: make test --no-print-directory
 
+      - name: Codecov Report
+        uses: codecov/codecov-action@v1
+        continue-on-error: ${{ matrix.experimental }}
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: '*.xml'
+          directory: ./build/coverage_xml/
+          fail_ci_if_error: true
+
 
   linters:
     name: Linters
