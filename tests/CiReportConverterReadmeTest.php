@@ -42,7 +42,7 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
         'travis',
         'github_actions',
         'docker_build',
-        'coveralls',
+        'codecov',
         'psalm_coverage',
         'scrutinizer',
         '__BR__',
@@ -68,6 +68,7 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
         $this->params['github_actions'] = true;
         $this->params['scrutinizer'] = true;
         $this->params['php_version'] = true;
+        $this->params['codecov'] = true;
     }
 
     /**
@@ -103,6 +104,20 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
             'PHP Version',
             'https://img.shields.io/packagist/php-v/__VENDOR__/__PACKAGE__',
             'https://github.com/__VENDOR_ORIG__/__PACKAGE_ORIG__/blob/master/composer.json'
+        ));
+    }
+
+    /**
+     * @return string|null
+     */
+    protected function checkBadgeCodecov(): ?string
+    {
+        // [![](?token=UZFE4SIEUC)]()
+
+        return $this->getPreparedBadge($this->getBadge(
+            'codecov',
+            'https://codecov.io/gh/__VENDOR_ORIG__/__PACKAGE_ORIG__/branch/master/graph/badge.svg',
+            'https://codecov.io/gh/__VENDOR_ORIG__/__PACKAGE_ORIG__'
         ));
     }
 
