@@ -69,9 +69,8 @@ jobs:
         continue-on-error: ${{ matrix.experimental }}
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./build/coverage_xml/*.xml
+          files: ./build/coverage_xml/main.xml
           fail_ci_if_error: false
-          verbose: true
 
 
   linters:
