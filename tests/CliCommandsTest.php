@@ -99,6 +99,7 @@ class CliCommandsTest extends PHPUnit
         $expectedRunsArgs[] = '-vvv';
 
         $expectedInputs['output-format']['default'] = GithubCliConverter::TYPE;
+        $expectedInputs['input-file']['required'] = true;
         ksort($expectedInputs);
 
         $errorMessage = (string)yml(['inputs' => $expectedInputs]);
@@ -123,8 +124,11 @@ class CliCommandsTest extends PHPUnit
         ];
 
         $expectedMessage = [
+            '```yaml',
+            '- uses: jbzoo/ci-report-converter@master # or see the specific version on releases page',
             '  with:'
         ];
+
         foreach ($inputs as $key => $input) {
             $expectedMessage[] = "    # {$input['description']}";
 
@@ -139,6 +143,8 @@ class CliCommandsTest extends PHPUnit
             $expectedMessage[] = "    {$key}: {$examples[$key]}";
             $expectedMessage[] = '';
         }
+
+        $expectedMessage[] = '```';
 
         isFileContains(implode("\n", $expectedMessage), PROJECT_ROOT . '/README.md');
     }

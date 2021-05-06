@@ -22,6 +22,7 @@ branding:
 inputs:
   input-file:
     description: 'File path with the original report format. If not set or empty, then the STDIN is used.'
+    required: true
   input-format:
     description: 'Source format. Available options: checkstyle, junit, phpmd-json, phpmnd, pmd-cpd, psalm-json'
     default: checkstyle

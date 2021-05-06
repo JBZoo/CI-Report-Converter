@@ -64,9 +64,10 @@ Action allows you to convert errors to the [GitHub Annotations format](https://d
  * To learn more [see different examples](.github/workflows/gh-action.yml)
 
 ```yaml
-- uses: jbzoo/ci-report-converter@2.2.0 # or see the latest version on releases page 
+- uses: jbzoo/ci-report-converter@master # or see the specific version on releases page
   with:
     # File path with the original report format. If not set or empty, then the STDIN is used.
+    # Required: true
     input-file: ./build/checkstyle.xml
 
     # Source format. Available options: checkstyle, junit, phpmd-json, phpmnd, pmd-cpd, psalm-json
@@ -85,6 +86,7 @@ Action allows you to convert errors to the [GitHub Annotations format](https://d
     # Set custom name of root group/suite
     # Required: true
     suite-name: My Tests
+
 ```
 
 
