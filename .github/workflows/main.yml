@@ -66,9 +66,10 @@ jobs:
         run: make test --no-print-directory
 
       - uses: codecov/codecov-action@v1
+        continue-on-error: ${{ matrix.experimental }}
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          directory: ./build/coverage_xml/
+          files: ./build/coverage_xml/*.xml
           fail_ci_if_error: false
           verbose: true
 
