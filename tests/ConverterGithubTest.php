@@ -40,19 +40,7 @@ class ConverterGithubTest extends PHPUnit
             ->setRootPath($pathPrefix)
             ->fromInternal($sourceReport);
 
-        $file = 'tests/ExampleTest.php';
-
-        isSame(implode("\n", [
-            "::error file={$file},line=33::JBZoo\PHPUnit\ExampleTest::testInValid%0AFailed asserting that false is true.%0A%0Avendor/jbzoo/phpunit/src/functions/aliases.php:107%0Atests/ExampleTest.php:35",
-            "::debug file={$file},line=38::Skipped",
-            "::debug file={$file},line=43::Skipped",
-            "::error file={$file},line=48::JBZoo\PHPUnit\ExampleTest::testFail%0ASome reason to fail%0A%0Avendor/jbzoo/phpunit/src/functions/aliases.php:51%0Atests/ExampleTest.php:50",
-            "::error file={$file},line=53::Some echo output",
-            "::error file={$file},line=71::Risky Test",
-            "::error file={$file},line=75::JBZoo\PHPUnit\ExampleTest::testNotice%0AUndefined variable: aaa%0A%0Atests/ExampleTest.php:77",
-            "::warning file={$file},line=80::JBZoo\PHPUnit\ExampleTest::testWarning%0ASome warning%0A%0Atests/ExampleTest.php:82",
-            "::error file={$file},line=85::Some echo output",
-        ]), $targetReport);
+        isSame(Fixtures::getExpectedFileContent('txt'), $targetReport);
     }
 
     public function testJUnitNested()
@@ -66,21 +54,7 @@ class ConverterGithubTest extends PHPUnit
             ->setRootPath($pathPrefix)
             ->fromInternal($sourceReport);
 
-        $file = 'tests/ExampleTest.php';
-
-        isSame(implode("\n", [
-            "::error file={$file},line=38::JBZoo\PHPUnit\ExampleTest::testInValid%0AFailed asserting that false is true.%0A%0Avendor/jbzoo/phpunit/src/functions/aliases.php:107%0Atests/ExampleTest.php:40",
-            "::debug file={$file},line=43::Skipped",
-            "::debug file={$file},line=48::Skipped",
-            "::error file={$file},line=53::JBZoo\PHPUnit\ExampleTest::testFail%0ASome reason to fail%0A%0Avendor/jbzoo/phpunit/src/functions/aliases.php:51%0Atests/ExampleTest.php:55",
-            "::error file={$file},line=58::Some echo output",
-            "::error file={$file},line=76::Risky Test",
-            "::error file={$file},line=80::JBZoo\PHPUnit\ExampleTest::testNotice%0AUndefined variable: aaa%0A%0Atests/ExampleTest.php:82",
-            "::warning file={$file},line=85::JBZoo\PHPUnit\ExampleTest::testWarning%0ASome warning%0A%0Atests/ExampleTest.php:87",
-            "::error file={$file},line=90::Some echo output",
-            "::error file={$file},line=96::JBZoo\PHPUnit\ExampleTest::testCompareArrays%0AFailed asserting that two arrays are identical.%0A--- Expected%0A+++ Actual%0A@@ @@%0A-Array &0 ()%0A+Array &0 (%0A+    0 => 1%0A+)%0A%0Avendor/jbzoo/phpunit/src/functions/aliases.php:197%0Atests/ExampleTest.php:98",
-            "::error file={$file},line=101::JBZoo\PHPUnit\ExampleTest::testCompareString%0AFailed asserting that two strings are identical.%0A--- Expected%0A+++ Actual%0A@@ @@%0A-'132'%0A+'123'%0A%0Avendor/jbzoo/phpunit/src/functions/aliases.php:197%0Atests/ExampleTest.php:103",
-        ]), $targetReport);
+        isSame(Fixtures::getExpectedFileContent('txt'), $targetReport);
     }
 
     public function testCodeStyle()
@@ -95,13 +69,7 @@ class ConverterGithubTest extends PHPUnit
             ->setRootSuiteName('Tests')
             ->fromInternal($sourceReport);
 
-        isSame(implode("\n", [
-            "::group::Tests",
-            "::error file=src/JUnit/JUnitXml.php,line=24,col=5::Visibility must be declared on all constants if your project supports PHP 7.1 or later%0A%0AVisibility must be declared on all constants if your project supports PHP 7.1 or later%0ARule     : PSR12.Properties.ConstantVisibility.NotFound%0AFile Path: src/JUnit/JUnitXml.php:24:5%0ASeverity : warning",
-            "::error file=src/JUnit/JUnitXml.php,line=44,col=35::Opening brace should be on a new line%0A%0AOpening brace should be on a new line%0ARule     : Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine%0AFile Path: src/JUnit/JUnitXml.php:44:35%0ASeverity : error",
-            "::error file=src/JUnit/JUnitXml.php,line=50,col=1::Expected 1 newline at end of file; 0 found%0A%0AExpected 1 newline at end of file; 0 found%0ARule     : PSR2.Files.EndFileNewline.NoneFound%0AFile Path: src/JUnit/JUnitXml.php:50%0ASeverity : error",
-            "::endgroup::"
-        ]), $targetReport);
+        isSame(Fixtures::getExpectedFileContent('txt'), $targetReport);
     }
 
     public function testGithubActionsPrinter()

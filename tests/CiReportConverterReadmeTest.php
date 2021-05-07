@@ -112,8 +112,6 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
      */
     protected function checkBadgeCodecov(): ?string
     {
-        // [![](?token=UZFE4SIEUC)]()
-
         return $this->getPreparedBadge($this->getBadge(
             'codecov',
             'https://codecov.io/gh/__VENDOR_ORIG__/__PACKAGE_ORIG__/branch/master/graph/badge.svg',

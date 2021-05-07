@@ -28,21 +28,6 @@ Therefore, I developed a converter that changes the report format for deep integ
 Well... It may seem to you it's a useless thing, and _your favorite super tool_ works fine in TeamCity/PhpStorm. Just take a look at [the examples below](#examples).
 
 
-At the moment it works with
-  * Input formats:
-    * `checkstyle` - [see example](tests/fixtures/origin/phpcs/codestyle.xml). The most popular sort of error report. It works for [Phan](https://github.com/phan/phan), [PHPcs](https://github.com/squizlabs/PHP_CodeSniffer) and others.    
-    * `junit` - [see example](tests/fixtures/origin/phpunit/junit-simple.xml). Also, the most popular sort of error report. Usually, the format is used to display unit test results.
-    * `phpmd-json` - [see example](tests/fixtures/origin/phpmd/json.json). The most detailed report of [PHPMD](https://github.com/phpmd/phpmd).
-    * `phpmnd` - [see example](tests/fixtures/origin/phpmnd/phpmnd.xml). I know only [PHP Magic Numbers Detector](https://github.com/povils/phpmnd).
-    * `psalm-json` - [see example](tests/fixtures/origin/psalm/json.json). The most detailed report of [Psalm](https://github.com/vimeo/psalm).
-    * `pmd-cpd` - [see example](tests/fixtures/origin/phpcpd/pmd-cpd.xml). PMD-CPD XML format. An example of tool is [Copy/Paste Detector](https://github.com/sebastianbergmann/phpcpd).
-  * Output formats:
-    * `junit` - The most popular sort of reporting.
-    * `tc-tests` - [Reporting for TeamCity/PhpStorm/JetBrains](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Tests).
-    * `github-cli` - [GitHub Actions](https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-a-warning-message).
-    * `tc-inspections` [Reporting Inspections in TeamCity](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Inspections).
-
-
 ### Installing
 
 ```sh
@@ -124,6 +109,21 @@ Options:
 
 
 ### Available Directions
+
+At the moment it works with
+  * Input Formats:
+    * [checkstyle](tests/fixtures/origin/phpcs/codestyle.xml) - the most popular sort of error report. It works for [Phan](https://github.com/phan/phan), [PHPcs](https://github.com/squizlabs/PHP_CodeSniffer) and others.
+    * [junit](tests/fixtures/origin/phpunit/junit-simple.xml) - also it's really popular sort of error report. Usually, the format is used to display unit test results.
+    * [phpmd-json](tests/fixtures/origin/phpmd/json.json) - the most detailed report of [PHPMD](https://github.com/phpmd/phpmd).
+    * [phpmnd](tests/fixtures/origin/phpmnd/phpmnd.xml) - I know only [PHP Magic Numbers Detector](https://github.com/povils/phpmnd).
+    * [psalm-json](tests/fixtures/origin/psalm/json.json) - the most detailed report of [Psalm](https://github.com/vimeo/psalm).
+    * [pmd-cpd](tests/fixtures/origin/phpcpd/pmd-cpd.xml) - it's PMD-CPD XML format. An example of tool is [Copy/Paste Detector](https://github.com/sebastianbergmann/phpcpd).
+  * Output Formats:
+    * [gitlab-json](tests/fixtures/origin/phpstan/gitlab.json) - [GitLab Custom Report](https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html#implementing-a-custom-tool).
+    * [junit](tests/fixtures/origin/phpunit/junit-simple.xml) - The most popular sort of reporting.
+    * `tc-tests` - [Reporting for TeamCity/PhpStorm/JetBrains](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Tests).
+    * `tc-inspections` [Reporting Inspections in TeamCity](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Inspections).
+
 
 <p align="center"><!-- Auto-created image via JBZoo\PHPUnit\CiReportConverterReadmeTest__testBuildGraphManually -->
   <img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFI7XG4gICAgY2hlY2tzdHlsZV9zcmMoXCJDaGVja1N0eWxlLnhtbFwiKTtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyKChcIkNJLVJlcG9ydDxicj5Db252ZXJ0ZXJcIikpO1xuICAgIGdpdGh1Yi1jbGlfdGFyZ2V0KFwiR2l0SHViIEFjdGlvbnMgLSBDTElcIik7XG4gICAgZ2l0bGFiLWpzb25fdGFyZ2V0KFwiR2l0TGFiIC0gSlNPTlwiKTtcbiAgICBqdW5pdF9zcmMoXCJKVW5pdC54bWxcIik7XG4gICAganVuaXRfdGFyZ2V0KFwiSlVuaXQueG1sXCIpO1xuICAgIHBocG1kLWpzb25fc3JjKFwiUEhQbWQuanNvblwiKTtcbiAgICBwaHBtbmRfc3JjKFwiUEhQbW5kLnhtbFwiKTtcbiAgICBwbWQtY3BkX3NyYyhcIlBtZENwZC54bWxcIik7XG4gICAgcHNhbG0tanNvbl9zcmMoXCJQc2FsbS5qc29uXCIpO1xuICAgIHRjLWluc3BlY3Rpb25zX3RhcmdldChcIlRlYW1DaXR5IC0gSW5zcGVjdGlvbnNcIik7XG4gICAgdGMtdGVzdHNfdGFyZ2V0KFwiVGVhbUNpdHkgLSBUZXN0c1wiKTtcblxuICAgIGNoZWNrc3R5bGVfc3JjID09PiBjaS1yZXBvcnQtY29udmVydGVyO1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IGdpdGh1Yi1jbGlfdGFyZ2V0O1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IGdpdGxhYi1qc29uX3RhcmdldDtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyID09PiBqdW5pdF90YXJnZXQ7XG4gICAgY2ktcmVwb3J0LWNvbnZlcnRlciA9PT4gdGMtaW5zcGVjdGlvbnNfdGFyZ2V0O1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IHRjLXRlc3RzX3RhcmdldDtcbiAgICBqdW5pdF9zcmMgPT0+IGNpLXJlcG9ydC1jb252ZXJ0ZXI7XG4gICAgcGhwbWQtanNvbl9zcmMgPT0+IGNpLXJlcG9ydC1jb252ZXJ0ZXI7XG4gICAgcGhwbW5kX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwbWQtY3BkX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwc2FsbS1qc29uX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcblxubGlua1N0eWxlIGRlZmF1bHQgaW50ZXJwb2xhdGUgYmFzaXM7IiwibWVybWFpZCI6eyJ0aGVtZSI6ImZvcmVzdCJ9fQ==">

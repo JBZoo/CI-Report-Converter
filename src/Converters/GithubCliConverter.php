@@ -71,29 +71,21 @@ class GithubCliConverter extends AbstractConverter
     {
         if (null !== $sourceCase->stdOut) {
             $level = GithubCase::LEVEL_ERROR;
-            $message = $sourceCase->stdOut;
         } elseif (null !== $sourceCase->errOut) {
             $level = GithubCase::LEVEL_ERROR;
-            $message = $sourceCase->errOut;
         } elseif (null !== $sourceCase->failure) {
             $level = GithubCase::LEVEL_ERROR;
-            $message = implode("\n", [$sourceCase->failure->message ?? '', $sourceCase->failure->details ?? '']);
         } elseif (null !== $sourceCase->error) {
             $level = GithubCase::LEVEL_ERROR;
-            $message = implode("\n", [$sourceCase->error->message ?? '', $sourceCase->error->details ?? '']);
         } elseif (null !== $sourceCase->warning) {
             $level = GithubCase::LEVEL_WARNING;
-            $message = implode("\n", [$sourceCase->warning->message ?? '', $sourceCase->warning->details ?? '']);
         } elseif (null !== $sourceCase->skipped) {
             $level = GithubCase::LEVEL_DEBUG;
-            $message = implode("\n", [$sourceCase->skipped->message ?? '', $sourceCase->skipped->details ?? '']);
-            $message = trim($message) ?: 'Skipped';
         } else {
             $level = GithubCase::LEVEL_ERROR;
-            $message = '';
         }
 
-        $message = trim($message ?: '');
+        $message = $sourceCase->getMessage();
         if ($message) {
             $case = $ghActions->addCase($this->cleanFilepath($sourceCase->file ?: ''));
             $case->line = $sourceCase->line;
