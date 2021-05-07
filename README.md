@@ -32,19 +32,20 @@ Well... It may seem to you it's a useless thing, and _your favorite super tool_ 
 
 ```sh
 composer require jbzoo/ci-report-converter
-php ./vendor/bin/ci-report-converter --help
+php ./vendor/bin/ci-report-converter convert --help
 
 # OR use phar file
 wget https://github.com/JBZoo/CI-Report-Converter/releases/latest/download/ci-report-converter.phar
-php ./ci-report-converter.phar --help
+php ./ci-report-converter.phar convert --help
 
 # OR just pull the Docker Image
-docker run --rm jbzoo/ci-report-converter --help 
+docker run --rm jbzoo/ci-report-converter convert --help 
 ```
 
 
-### GitHub Action
-Action allows you to convert errors to the [GitHub Annotations format](https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-a-warning-message).
+### Using as GitHub Action
+
+Action allows you to convert error reports to the [GitHub Annotations format](https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-a-warning-message)
  * See [demo of error output](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/gh-action.yml?query=is%3Asuccess)
  * To learn more [see different examples](.github/workflows/gh-action.yml)
 
@@ -122,7 +123,7 @@ At the moment it works with
     * [gitlab-json](tests/fixtures/origin/phpstan/gitlab.json) - [GitLab Custom Report](https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html#implementing-a-custom-tool).
     * [junit](tests/fixtures/origin/phpunit/junit-simple.xml) - The most popular sort of reporting.
     * `tc-tests` - [Reporting for TeamCity/PhpStorm/JetBrains](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Tests).
-    * `tc-inspections` [Reporting Inspections in TeamCity](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Inspections).
+    * `tc-inspections` - [Reporting Inspections in TeamCity](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Inspections).
 
 
 <p align="center"><!-- Auto-created image via JBZoo\PHPUnit\CiReportConverterReadmeTest__testBuildGraphManually -->
