@@ -12,15 +12,17 @@
 - [Using as GitHub Action](#using-as-github-action)
 - [Available Directions](#available-directions)
 - [Help description in terminal](#help-description-in-terminal)
+  - [Converting](#converting)
+  - [Custom Metrics in TeamCity](#custom-metrics-in-teamcity)
 - [Examples](#examples)
   - [JetBrains IDE (IntelliJ IDEA, PhpStorm, WebStorm, etc)](#jetbrains-ide-intellij-idea-phpstorm-webstorm-etc)
-    - [PHP Code Sniffer](#php-code-sniffer)
-    - [PHPmd](#phpmd)
-    - [PHP Magic Number Detector](#php-magic-number-detector)
-    - [PHP Copy/Paste Detector](#php-copypaste-detector)
-    - [PHPStan](#phpstan)
-    - [Psalm](#psalm)
-    - [Phan](#phan)
+    - [Code Sniffer (checkstyle)](#code-sniffer-checkstyle)
+    - [Mess Detector (phpmd-json)](#mess-detector-phpmd-json)
+    - [Magic Number Detector (phpmnd)](#magic-number-detector-phpmnd)
+    - [Copy/Paste Detector (pmd-cpd)](#copypaste-detector-pmd-cpd)
+    - [PHPStan (checkstyle)](#phpstan-checkstyle)
+    - [Psalm (psalm-json)](#psalm-psalm-json)
+    - [Phan (checkstyle)](#phan-checkstyle)
   - [TeamCity](#teamcity)
     - [As Failed Unit test](#as-failed-unit-test)
     - [As Code Inspections](#as-code-inspections)
@@ -129,7 +131,7 @@ Als, you can follow [metrics around your code in TeamCity](https://www.jetbrains
 
 ## Help description in terminal
 
-Convert one report format to another one
+### Converting
 
 ```
 $ php ./vendor/bin/ci-report-converter convert --help
@@ -158,7 +160,7 @@ Options:
 ```
 
 
-Push code metrics to TeamCity Stats
+### Custom Metrics in TeamCity
 
 ```
 $ php ./vendor/bin/ci-report-converter teamcity:stats --help
@@ -189,13 +191,13 @@ Options:
 ## Examples
 
 ### JetBrains IDE (IntelliJ IDEA, PhpStorm, WebStorm, etc)
-#### PHP Code Sniffer
-#### PHPmd
-#### PHP Magic Number Detector
-#### PHP Copy/Paste Detector
-#### PHPStan
-#### Psalm
-#### Phan
+#### Code Sniffer (checkstyle)
+#### Mess Detector (phpmd-json)
+#### Magic Number Detector (phpmnd)
+#### Copy/Paste Detector (pmd-cpd)
+#### PHPStan (checkstyle)
+#### Psalm (psalm-json)
+#### Phan (checkstyle)
 
 ### TeamCity
 #### As Failed Unit test
