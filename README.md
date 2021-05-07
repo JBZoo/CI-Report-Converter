@@ -30,7 +30,7 @@ Well... It may seem to you it's a useless thing, and _your favorite super tool_ 
 
 ### Installing
 
-```sh
+```shell
 composer require jbzoo/ci-report-converter
 php ./vendor/bin/ci-report-converter convert --help
 

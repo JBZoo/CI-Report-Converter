@@ -23,6 +23,7 @@ use JBZoo\CiReportConverter\Commands\TeamCityStats;
 use JBZoo\CiReportConverter\Converters\CheckStyleConverter;
 use JBZoo\CiReportConverter\Converters\GithubCliConverter;
 use JBZoo\CiReportConverter\Converters\JUnitConverter;
+use JBZoo\CiReportConverter\Converters\Map;
 use JBZoo\CiReportConverter\Converters\PhpLocStatsTcConverter;
 use JBZoo\CiReportConverter\Converters\PhpMdJsonConverter;
 use JBZoo\CiReportConverter\Converters\TeamCityInspectionsConverter;
@@ -163,18 +164,8 @@ class CliCommandsTest extends PHPUnit
 
     public function testConvertCommandMapReadMe()
     {
-        skip('Disabled test. Useless table');
-        $helpMessage = $this->task('convert:map');
-        $helpMessage = implode("\n", [
-            '',
-            '```sh',
-            'php ./vendor/bin/ci-report-converter convert:map',
-            '```',
-            '',
-            $helpMessage,
-        ]);
-
-        isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
+        isSame(Fixtures::getExpectedFileContent('md'), $this->task('convert:map'));
+        isSame(Fixtures::getExpectedFileContent('md'), $this->taskReal('convert:map'));
     }
 
     public function testConvertStatsUndefinedFile()

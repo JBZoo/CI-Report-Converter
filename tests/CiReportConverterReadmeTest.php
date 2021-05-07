@@ -119,11 +119,6 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
         ));
     }
 
-    public function testMapTable()
-    {
-        isSame(Fixtures::getExpectedFileContent('md'), Map::getMarkdownTable());
-    }
-
     public function testBuildGraphManually()
     {
         $sources = [];

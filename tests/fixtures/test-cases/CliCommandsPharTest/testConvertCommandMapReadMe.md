@@ -10,3 +10,4 @@
 | Psalm.json             |       -        |      Yes      |         Yes          |    Yes    |     -      |     -      |     -      |     -      |          Yes           |       Yes        |
 | TeamCity - Inspections |       -        |       -       |          -           |     -     |     -      |     -      |     -      |     -      |           -            |        -         |
 | TeamCity - Tests       |       -        |       -       |          -           |     -     |     -      |     -      |     -      |     -      |           -            |        -         |
+
