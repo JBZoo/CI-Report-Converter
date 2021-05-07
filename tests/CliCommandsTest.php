@@ -102,10 +102,22 @@ class CliCommandsTest extends PHPUnit
         $expectedInputs['input-file']['required'] = true;
         ksort($expectedInputs);
 
-        $errorMessage = (string)yml(['inputs' => $expectedInputs]);
+        $errorMessage = implode("\n", [
+            "See: " . PROJECT_ROOT . "/action.yml",
+            'Expected',
+            '``',
+            yml(['inputs' => $expectedInputs]),
+            '``',
+        ]);
         isSame($expectedInputs, $actionYml->getArray('inputs'), $errorMessage);
 
-        $errorMessage = str_replace(["'\${{", "}}'"], ["\${{", "}}"], (string)yml($expectedRunsArgs));
+        $errorMessage = implode("\n", [
+            "See: " . PROJECT_ROOT . "/action.yml",
+            'Expected',
+            '``',
+            str_replace(["'\${{", "}}'"], ["\${{", "}}"], (string)yml($expectedRunsArgs)),
+            '``',
+        ]);
         isSame($expectedRunsArgs, $actionYml->findArray('runs.args'), $errorMessage);
     }
 
@@ -151,6 +163,7 @@ class CliCommandsTest extends PHPUnit
 
     public function testConvertCommandMapReadMe()
     {
+        skip('Disabled test. Useless table');
         $helpMessage = $this->task('convert:map');
         $helpMessage = implode("\n", [
             '',

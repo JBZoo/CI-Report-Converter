@@ -1,0 +1,68 @@
+[
+    {
+        "description": "Found 24 cloned lines in 3 files (34 tokens):\n- src\/Helper.php:16-40\n- src\/Helper1.php:17-41\n- src\/Helper2.php:18-42\n\nCode Fragment:\n```\ndeclare(strict_types=1);\n\nnamespace JBZoo\\CiReportConverter;\n\nuse JBZoo\\Utils\\Str;\n\n\/**\n * Class Helper\n * @package JBZoo\\CiReportConverter\n *\/\nclass Helper\n{\n    \/**\n     * @param array $data\n     * @return string|null\n     *\/\n    public static function descAsList(array $data): ?string\n    {\n        $result = Str::listToDescription($data, true);\n        if (null === $result) {\n            return null;\n        }\n\n        return \"\\n{$result}\";\n\n```",
+        "fingerprint": "bdb6af15462990297d3b73e27a491c6877c71feb763062953dda7429b9e439d0",
+        "severity": "major",
+        "location": {
+            "path": "src\/Helper.php",
+            "lines": {
+                "begin": 16
+            }
+        }
+    },
+    {
+        "description": "Found 14 cloned lines in 2 files (28 tokens):\n- src\/Converters\/TeamCityTestsConverter.php:65-79\n- src\/Converters\/TeamCityInspectionsConverter.php:66-80\n\nCode Fragment:\n```\n        $this->renderSuite($sourceSuite);\n\n        $buffer = $this->tcLogger->getWriter();\n        if ($buffer instanceof Buffer) {\n            return implode('', $buffer->getBuffer());\n        }\n\n        return '';\n    }\n\n    \/**\n     * @param SourceSuite $sourceSuite\n     *\/\n    private function renderSuite(SourceSuite $sourceSuite): void\n\n```",
+        "fingerprint": "987df19de975fc2e989eaacf20414c14ffa37bd97bcfafc27d3232175675fcfb",
+        "severity": "major",
+        "location": {
+            "path": "src\/Converters\/TeamCityTestsConverter.php",
+            "lines": {
+                "begin": 65
+            }
+        }
+    },
+    {
+        "description": "Found 12 cloned lines in 2 files (40 tokens):\n- src\/Converters\/TeamCityTestsConverter.php:46-58\n- src\/Converters\/TeamCityInspectionsConverter.php:51-63\n\nCode Fragment:\n```\n    public function __construct(array $params = [], ?int $flowId = null, ?AbstractWriter $tcWriter = null)\n    {\n        $this->tcLogger = new TeamCity($tcWriter ?: new Buffer(), $flowId, $params);\n    }\n\n    \/**\n     * @inheritDoc\n     *\/\n    public function fromInternal(SourceSuite $sourceSuite): string\n    {\n        if ($this->flowId > 0) {\n            $this->tcLogger->setFlowId($this->flowId);\n\n```",
+        "fingerprint": "c0e625678672eaf39c4b063a115b5acd558a693c9b5d0dad49c7b922bcbfc8e2",
+        "severity": "major",
+        "location": {
+            "path": "src\/Converters\/TeamCityTestsConverter.php",
+            "lines": {
+                "begin": 46
+            }
+        }
+    },
+    {
+        "description": "Found 11 cloned lines in 2 files (31 tokens):\n- src\/Converters\/PhpDependStatsTcConverter.php:38-49\n- src\/Converters\/PhpMetricsStatsTcConverter.php:38-49\n\nCode Fragment:\n```\n    public function toInternalMetric(string $sourceCode): Metrics\n    {\n        $xmlAsArray = Xml::dom2Array(Xml::createDomDocument($sourceCode));\n\n        $attrs = data($xmlAsArray)->findArray('_children.0._attrs');\n        unset(\n            $attrs['generated'],\n            $attrs['pdepend']\n        );\n\n        return self::buildMetrics($attrs, new PhpDepend());\n\n```",
+        "fingerprint": "a676d3557738f66157c8884df53a304560087040fadc458a4f6b52e3834aefb0",
+        "severity": "major",
+        "location": {
+            "path": "src\/Converters\/PhpDependStatsTcConverter.php",
+            "lines": {
+                "begin": 38
+            }
+        }
+    },
+    {
+        "description": "Found 8 cloned lines in 2 files (24 tokens):\n- src\/Converters\/CheckStyleConverter.php:49-57\n- src\/Converters\/PhpMndConverter.php:49-57\n\nCode Fragment:\n```\n                $relFilename = $this->cleanFilepath($file['_attrs']['name'] ?? 'undefined');\n                $absFilename = $this->getFullPath($relFilename);\n\n                $suite = $sourceSuite->addSuite($relFilename);\n                $suite->file = $absFilename;\n\n                foreach ($file['_children'] as $errorNode) {\n                    $error = data($errorNode['_attrs']);\n\n```",
+        "fingerprint": "1bceaa5a152094c274840b4a98a215a58c5d4ca9848d684eb24be698965cfa7f",
+        "severity": "major",
+        "location": {
+            "path": "src\/Converters\/CheckStyleConverter.php",
+            "lines": {
+                "begin": 49
+            }
+        }
+    },
+    {
+        "description": "Found 0 cloned lines in 1 files (0 tokens):\n- src\/Converters\/CheckStyleConverter.php:66\n\nCode Fragment: Not Found",
+        "fingerprint": "15e882a246f3534805f50c9dc6fda4f39f938e519b7238b1fae42af7d973190e",
+        "severity": "major",
+        "location": {
+            "path": "src\/Converters\/CheckStyleConverter.php",
+            "lines": {
+                "begin": 66
+            }
+        }
+    }
+]

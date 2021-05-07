@@ -30,7 +30,7 @@ inputs:
   output-file:
     description: 'File path with the result report format. If not set or empty, then the STDOUT is used.'
   output-format:
-    description: 'Target format. Available options: github-cli, junit, tc-inspections, tc-tests'
+    description: 'Target format. Available options: gitlab-json, github-cli, junit, tc-inspections, tc-tests'
     default: github-cli
     required: true
   suite-name:

@@ -123,6 +123,7 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
 
     public function testMapTable()
     {
+        skip('Disabled test. Useless table');
         isFileContains(Map::getMarkdownTable(), PROJECT_ROOT . '/README.md');
     }
 
@@ -149,7 +150,7 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
         ]))
             ->addStyle('linkStyle default interpolate basis');
 
-        $graph->addNode($toolbox = new Node('ci-report-converter', 'CI-Report-Converter', Node::CIRCLE));
+        $graph->addNode($toolbox = new Node('ci-report-converter', 'CI-Report<br>Converter', Node::CIRCLE));
 
         foreach ($sources as $sourceType => $sourceName) {
             $node = new Node($sourceType . "_src", $sourceName);

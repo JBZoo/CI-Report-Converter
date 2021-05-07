@@ -1,0 +1,101 @@
+[
+    {
+        "description": "JBZoo\\PHPUnit\\ExampleTest::testInValid\nFailed asserting that false is true.\n\nvendor\/jbzoo\/phpunit\/src\/functions\/aliases.php:107\ntests\/ExampleTest.php:35",
+        "fingerprint": "874ab6478ef6032f792d1e287e0dc5a924024f85313af8f938c54178f1bca95e",
+        "severity": "blocker",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 33
+            }
+        }
+    },
+    {
+        "description": "Skipped",
+        "fingerprint": "b3f4d4158e2e4cde51ad88ad4f0bf8c5f97eb4db3d91a7237c83f53eb04a8167",
+        "severity": "info",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 38
+            }
+        }
+    },
+    {
+        "description": "Skipped",
+        "fingerprint": "3f0772507e9339abf6608fba378346159bd80fbdd52a85deafcfc520f74088a8",
+        "severity": "info",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 43
+            }
+        }
+    },
+    {
+        "description": "JBZoo\\PHPUnit\\ExampleTest::testFail\nSome reason to fail\n\nvendor\/jbzoo\/phpunit\/src\/functions\/aliases.php:51\ntests\/ExampleTest.php:50",
+        "fingerprint": "5ff9f1a5d4d9ad0d6cd9f684cd59167bf57ab9024808fdffdf3f8da91844c0f9",
+        "severity": "blocker",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 48
+            }
+        }
+    },
+    {
+        "description": "testEcho\nSome echo output",
+        "fingerprint": "f182f209edb029014123232458010781af63139df663e10fff731fb209f13852",
+        "severity": "info",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 53
+            }
+        }
+    },
+    {
+        "description": "Risky Test",
+        "fingerprint": "cadfe4700622d9e678b04023bf4b8bfc138f537b006c9d25267addfb14ae6edf",
+        "severity": "blocker",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 71
+            }
+        }
+    },
+    {
+        "description": "JBZoo\\PHPUnit\\ExampleTest::testNotice\nUndefined variable: aaa\n\ntests\/ExampleTest.php:77",
+        "fingerprint": "5ff8559f98af0be62e660d647f39cbaf6d8bc4da93450cc08399efbb14e957bb",
+        "severity": "blocker",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 75
+            }
+        }
+    },
+    {
+        "description": "JBZoo\\PHPUnit\\ExampleTest::testWarning\nSome warning\n\ntests\/ExampleTest.php:82",
+        "fingerprint": "526f299f2fdc5d42908324b0cd068be25638e3a639461e051e07805d226239c3",
+        "severity": "major",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 80
+            }
+        }
+    },
+    {
+        "description": "testException\nSome echo output",
+        "fingerprint": "dc16a72df6f0a005a371b10b538468311c165cd55612b17c08f40bd55e69f972",
+        "severity": "info",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 85
+            }
+        }
+    }
+]

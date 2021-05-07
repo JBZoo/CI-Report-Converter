@@ -1,0 +1,123 @@
+[
+    {
+        "description": "JBZoo\\PHPUnit\\ExampleTest::testInValid\nFailed asserting that false is true.\n\nvendor\/jbzoo\/phpunit\/src\/functions\/aliases.php:107\ntests\/ExampleTest.php:40",
+        "fingerprint": "38d8cd8ce1b10dd6c4b3de0c85a767788a1de498c593dda42acfa4dc149122ae",
+        "severity": "blocker",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 38
+            }
+        }
+    },
+    {
+        "description": "Skipped",
+        "fingerprint": "3f0772507e9339abf6608fba378346159bd80fbdd52a85deafcfc520f74088a8",
+        "severity": "info",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 43
+            }
+        }
+    },
+    {
+        "description": "Skipped",
+        "fingerprint": "5753c63a3c39244e0c1d8bcd2f9f1b2224560beb2ac2bcb69d1a85f61666f797",
+        "severity": "info",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 48
+            }
+        }
+    },
+    {
+        "description": "JBZoo\\PHPUnit\\ExampleTest::testFail\nSome reason to fail\n\nvendor\/jbzoo\/phpunit\/src\/functions\/aliases.php:51\ntests\/ExampleTest.php:55",
+        "fingerprint": "1f5b9d105027a9c7ee3428fc285b6fe1e5e9a69db86c3a4a14b2c847461151b3",
+        "severity": "blocker",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 53
+            }
+        }
+    },
+    {
+        "description": "testEcho\nSome echo output",
+        "fingerprint": "a3a50301354cda64fd88632a5044df6079cfb2323e5ebcf54f955066e6336201",
+        "severity": "info",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 58
+            }
+        }
+    },
+    {
+        "description": "Risky Test",
+        "fingerprint": "ee09cbca9e4d081f9c57eb3b379f58dbbc9efc8c914c06dfbdf939c716b9ee34",
+        "severity": "blocker",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 76
+            }
+        }
+    },
+    {
+        "description": "JBZoo\\PHPUnit\\ExampleTest::testNotice\nUndefined variable: aaa\n\ntests\/ExampleTest.php:82",
+        "fingerprint": "66a6c8cab00072388f4c0956feee4b71a684b2b99338fef36f4ecd32a5dbc0b9",
+        "severity": "blocker",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 80
+            }
+        }
+    },
+    {
+        "description": "JBZoo\\PHPUnit\\ExampleTest::testWarning\nSome warning\n\ntests\/ExampleTest.php:87",
+        "fingerprint": "49fb5a99cc76401e280f1c4124e607a15962b9cef01b12da25679ca04dfdb6f3",
+        "severity": "major",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 85
+            }
+        }
+    },
+    {
+        "description": "testException\nSome echo output",
+        "fingerprint": "3f94096c2c98bb01ccbae0a8b5eecbabbc72e0379bfd193acc1d6a84e81305a1",
+        "severity": "info",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 90
+            }
+        }
+    },
+    {
+        "description": "JBZoo\\PHPUnit\\ExampleTest::testCompareArrays\nFailed asserting that two arrays are identical.\n--- Expected\n+++ Actual\n@@ @@\n-Array \u00260 ()\n+Array \u00260 (\n+    0 => 1\n+)\n\nvendor\/jbzoo\/phpunit\/src\/functions\/aliases.php:197\ntests\/ExampleTest.php:98",
+        "fingerprint": "99e7a14a661a2e2e22411efef926f91a3fd9415413b5fb1dbf6a8c14c18f76fa",
+        "severity": "blocker",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 96
+            }
+        }
+    },
+    {
+        "description": "JBZoo\\PHPUnit\\ExampleTest::testCompareString\nFailed asserting that two strings are identical.\n--- Expected\n+++ Actual\n@@ @@\n-'132'\n+'123'\n\nvendor\/jbzoo\/phpunit\/src\/functions\/aliases.php:197\ntests\/ExampleTest.php:103",
+        "fingerprint": "da3b664af2e6ff02238e489030ecb6db13d24da1beb0fb5c16b74b898a511215",
+        "severity": "blocker",
+        "location": {
+            "path": "tests\/ExampleTest.php",
+            "lines": {
+                "begin": 101
+            }
+        }
+    }
+]

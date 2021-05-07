@@ -1,0 +1,35 @@
+[
+    {
+        "description": "Visibility must be declared on all constants if your project supports PHP 7.1 or later\nRule     : PSR12.Properties.ConstantVisibility.NotFound\nFile Path: src\/JUnit\/JUnitXml.php:24:5\nSeverity : warning",
+        "fingerprint": "487790167fc38eaf537d5bca202b64f8adba7fa633c7e57d8436432ce2bf77d8",
+        "severity": "blocker",
+        "location": {
+            "path": "src\/JUnit\/JUnitXml.php",
+            "lines": {
+                "begin": 24
+            }
+        }
+    },
+    {
+        "description": "Opening brace should be on a new line\nRule     : Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine\nFile Path: src\/JUnit\/JUnitXml.php:44:35\nSeverity : error",
+        "fingerprint": "1a5987570da3f20e8dabff7d93a430c5d09fbf921af65334f00923b9fe31ba0b",
+        "severity": "blocker",
+        "location": {
+            "path": "src\/JUnit\/JUnitXml.php",
+            "lines": {
+                "begin": 44
+            }
+        }
+    },
+    {
+        "description": "Expected 1 newline at end of file; 0 found\nRule     : PSR2.Files.EndFileNewline.NoneFound\nFile Path: src\/JUnit\/JUnitXml.php:50\nSeverity : error",
+        "fingerprint": "28f74feb63d0d3dc89457a3d747b25e6c3a24410e16029e4ed1d4b873182400d",
+        "severity": "blocker",
+        "location": {
+            "path": "src\/JUnit\/JUnitXml.php",
+            "lines": {
+                "begin": 50
+            }
+        }
+    }
+]

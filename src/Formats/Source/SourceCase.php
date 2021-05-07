@@ -140,4 +140,42 @@ class SourceCase extends AbstractNode
     {
         return $this->actual !== null && $this->expected !== null;
     }
+
+    /**
+     * @return string|null
+     */
+    public function getMessage(): ?string
+    {
+        $message = null;
+        if (null !== $this->stdOut) {
+            $message = self::buildMessage([$this->name, $this->stdOut]);
+        } elseif (null !== $this->errOut) {
+            $message = self::buildMessage([$this->name, $this->errOut]);
+        } elseif (null !== $this->failure) {
+            $message = self::buildMessage([$this->failure->details]) ?: self::buildMessage([$this->failure->message]);
+        } elseif (null !== $this->error) {
+            $message = self::buildMessage([$this->error->details]) ?: self::buildMessage([$this->error->message]);
+        } elseif (null !== $this->warning) {
+            $message = self::buildMessage([$this->warning->details]) ?: self::buildMessage([$this->warning->message]);
+        } elseif (null !== $this->skipped) {
+            $message = self::buildMessage([$this->skipped->details]) ?: self::buildMessage([$this->skipped->message]);
+            $message = $message ?: 'Skipped';
+        }
+
+        return $message ?: null;
+    }
+
+    /**
+     * @param array $parts
+     * @return string
+     */
+    private static function buildMessage(array $parts): string
+    {
+        $parts = array_map('\trim', $parts);
+        $parts = array_filter($parts);
+        $parts = array_unique($parts);
+        $message = implode("\n", $parts);
+
+        return trim($message);
+    }
 }

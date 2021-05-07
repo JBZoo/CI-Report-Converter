@@ -43,7 +43,7 @@ class GithubCase extends AbstractNode
      */
     protected $meta = [
         'name'    => ['string'], // It's relative path to file
-        'level'   => ['level'],  // error|warning|debug
+        'level'   => ['string'], // See self::LEVEL_*
         'line'    => ['int'],
         'column'  => ['int'],
         'message' => ['string'],
@@ -58,7 +58,7 @@ class GithubCase extends AbstractNode
         parent::__construct($name);
 
         // Set default values
-        $this->level = self::LEVEL_ERROR;
+        $this->level = self::DEFAULT_LEVEL;
         $this->message = self::DEFAULT_MESSAGE;
     }
 

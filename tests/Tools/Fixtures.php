@@ -90,7 +90,10 @@ class Fixtures
      */
     public static function getExpectedFileContent(string $fileExt = 'xml'): string
     {
-        $filename = str_replace('__', '/', getTestName());
-        return file_get_contents(dirname(__DIR__) . "/fixtures/test-cases/{$filename}.{$fileExt}");
+        $filename = str_replace('__', '/', getTestName()) . '.' . $fileExt;
+        $filepath = dirname(__DIR__) . "/fixtures/test-cases/{$filename}";
+        isFile($filepath);
+
+        return file_get_contents($filepath);
     }
 }

@@ -33,12 +33,12 @@ class ConverterGithubTest extends PHPUnit
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
 
-        $sourceCode = (new JUnitConverter())
+        $sourceReport = (new JUnitConverter())
             ->setRootPath($pathPrefix)
             ->toInternal(file_get_contents(Fixtures::PHPUNIT_JUNIT_SIMPLE));
-        $targetSource = (new GithubCliConverter())
+        $targetReport = (new GithubCliConverter())
             ->setRootPath($pathPrefix)
-            ->fromInternal($sourceCode);
+            ->fromInternal($sourceReport);
 
         $file = 'tests/ExampleTest.php';
 
@@ -52,19 +52,19 @@ class ConverterGithubTest extends PHPUnit
             "::error file={$file},line=75::JBZoo\PHPUnit\ExampleTest::testNotice%0AUndefined variable: aaa%0A%0Atests/ExampleTest.php:77",
             "::warning file={$file},line=80::JBZoo\PHPUnit\ExampleTest::testWarning%0ASome warning%0A%0Atests/ExampleTest.php:82",
             "::error file={$file},line=85::Some echo output",
-        ]), $targetSource);
+        ]), $targetReport);
     }
 
     public function testJUnitNested()
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
 
-        $sourceCode = (new JUnitConverter())
+        $sourceReport = (new JUnitConverter())
             ->setRootPath($pathPrefix)
             ->toInternal(file_get_contents(Fixtures::PHPUNIT_JUNIT_NESTED));
-        $targetSource = (new GithubCliConverter())
+        $targetReport = (new GithubCliConverter())
             ->setRootPath($pathPrefix)
-            ->fromInternal($sourceCode);
+            ->fromInternal($sourceReport);
 
         $file = 'tests/ExampleTest.php';
 
@@ -80,20 +80,20 @@ class ConverterGithubTest extends PHPUnit
             "::error file={$file},line=90::Some echo output",
             "::error file={$file},line=96::JBZoo\PHPUnit\ExampleTest::testCompareArrays%0AFailed asserting that two arrays are identical.%0A--- Expected%0A+++ Actual%0A@@ @@%0A-Array &0 ()%0A+Array &0 (%0A+    0 => 1%0A+)%0A%0Avendor/jbzoo/phpunit/src/functions/aliases.php:197%0Atests/ExampleTest.php:98",
             "::error file={$file},line=101::JBZoo\PHPUnit\ExampleTest::testCompareString%0AFailed asserting that two strings are identical.%0A--- Expected%0A+++ Actual%0A@@ @@%0A-'132'%0A+'123'%0A%0Avendor/jbzoo/phpunit/src/functions/aliases.php:197%0Atests/ExampleTest.php:103",
-        ]), $targetSource);
+        ]), $targetReport);
     }
 
     public function testCodeStyle()
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
 
-        $sourceCode = (new CheckStyleConverter())
+        $sourceReport = (new CheckStyleConverter())
             ->setRootPath($pathPrefix)
             ->toInternal(file_get_contents(Fixtures::PHPCS_CODESTYLE));
-        $targetSource = (new GithubCliConverter())
+        $targetReport = (new GithubCliConverter())
             ->setRootPath($pathPrefix)
             ->setRootSuiteName('Tests')
-            ->fromInternal($sourceCode);
+            ->fromInternal($sourceReport);
 
         isSame(implode("\n", [
             "::group::Tests",
@@ -101,7 +101,7 @@ class ConverterGithubTest extends PHPUnit
             "::error file=src/JUnit/JUnitXml.php,line=44,col=35::Opening brace should be on a new line%0A%0AOpening brace should be on a new line%0ARule     : Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine%0AFile Path: src/JUnit/JUnitXml.php:44:35%0ASeverity : error",
             "::error file=src/JUnit/JUnitXml.php,line=50,col=1::Expected 1 newline at end of file; 0 found%0A%0AExpected 1 newline at end of file; 0 found%0ARule     : PSR2.Files.EndFileNewline.NoneFound%0AFile Path: src/JUnit/JUnitXml.php:50%0ASeverity : error",
             "::endgroup::"
-        ]), $targetSource);
+        ]), $targetReport);
     }
 
     public function testGithubActionsPrinter()
