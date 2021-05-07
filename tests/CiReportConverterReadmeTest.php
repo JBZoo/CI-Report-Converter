@@ -112,18 +112,11 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
      */
     protected function checkBadgeCodecov(): ?string
     {
-        // [![](?token=UZFE4SIEUC)]()
-
         return $this->getPreparedBadge($this->getBadge(
             'codecov',
             'https://codecov.io/gh/__VENDOR_ORIG__/__PACKAGE_ORIG__/branch/master/graph/badge.svg',
             'https://codecov.io/gh/__VENDOR_ORIG__/__PACKAGE_ORIG__'
         ));
-    }
-
-    public function testMapTable()
-    {
-        isFileContains(Map::getMarkdownTable(), PROJECT_ROOT . '/README.md');
     }
 
     public function testBuildGraphManually()
@@ -149,7 +142,7 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
         ]))
             ->addStyle('linkStyle default interpolate basis');
 
-        $graph->addNode($toolbox = new Node('ci-report-converter', 'CI-Report-Converter', Node::CIRCLE));
+        $graph->addNode($toolbox = new Node('ci-report-converter', 'CI-Report<br>Converter', Node::CIRCLE));
 
         foreach ($sources as $sourceType => $sourceName) {
             $node = new Node($sourceType . "_src", $sourceName);

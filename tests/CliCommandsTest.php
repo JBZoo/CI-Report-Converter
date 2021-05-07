@@ -23,6 +23,7 @@ use JBZoo\CiReportConverter\Commands\TeamCityStats;
 use JBZoo\CiReportConverter\Converters\CheckStyleConverter;
 use JBZoo\CiReportConverter\Converters\GithubCliConverter;
 use JBZoo\CiReportConverter\Converters\JUnitConverter;
+use JBZoo\CiReportConverter\Converters\Map;
 use JBZoo\CiReportConverter\Converters\PhpLocStatsTcConverter;
 use JBZoo\CiReportConverter\Converters\PhpMdJsonConverter;
 use JBZoo\CiReportConverter\Converters\TeamCityInspectionsConverter;
@@ -102,10 +103,22 @@ class CliCommandsTest extends PHPUnit
         $expectedInputs['input-file']['required'] = true;
         ksort($expectedInputs);
 
-        $errorMessage = (string)yml(['inputs' => $expectedInputs]);
+        $errorMessage = implode("\n", [
+            "See: " . PROJECT_ROOT . "/action.yml",
+            'Expected',
+            '``',
+            yml(['inputs' => $expectedInputs]),
+            '``',
+        ]);
         isSame($expectedInputs, $actionYml->getArray('inputs'), $errorMessage);
 
-        $errorMessage = str_replace(["'\${{", "}}'"], ["\${{", "}}"], (string)yml($expectedRunsArgs));
+        $errorMessage = implode("\n", [
+            "See: " . PROJECT_ROOT . "/action.yml",
+            'Expected',
+            '``',
+            str_replace(["'\${{", "}}'"], ["\${{", "}}"], (string)yml($expectedRunsArgs)),
+            '``',
+        ]);
         isSame($expectedRunsArgs, $actionYml->findArray('runs.args'), $errorMessage);
     }
 
@@ -151,17 +164,8 @@ class CliCommandsTest extends PHPUnit
 
     public function testConvertCommandMapReadMe()
     {
-        $helpMessage = $this->task('convert:map');
-        $helpMessage = implode("\n", [
-            '',
-            '```sh',
-            'php ./vendor/bin/ci-report-converter convert:map',
-            '```',
-            '',
-            $helpMessage,
-        ]);
-
-        isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
+        isSame(Fixtures::getExpectedFileContent('md'), $this->task('convert:map'));
+        isSame(Fixtures::getExpectedFileContent('md'), $this->taskReal('convert:map'));
     }
 
     public function testConvertStatsUndefinedFile()

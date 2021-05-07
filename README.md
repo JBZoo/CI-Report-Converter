@@ -28,38 +28,24 @@ Therefore, I developed a converter that changes the report format for deep integ
 Well... It may seem to you it's a useless thing, and _your favorite super tool_ works fine in TeamCity/PhpStorm. Just take a look at [the examples below](#examples).
 
 
-At the moment it works with
-  * Input formats:
-    * `checkstyle` - [see example](tests/fixtures/origin/phpcs/codestyle.xml). The most popular sort of error report. It works for [Phan](https://github.com/phan/phan), [PHPcs](https://github.com/squizlabs/PHP_CodeSniffer) and others.    
-    * `junit` - [see example](tests/fixtures/origin/phpunit/junit-simple.xml). Also, the most popular sort of error report. Usually, the format is used to display unit test results.
-    * `phpmd-json` - [see example](tests/fixtures/origin/phpmd/json.json). The most detailed report of [PHPMD](https://github.com/phpmd/phpmd).
-    * `phpmnd` - [see example](tests/fixtures/origin/phpmnd/phpmnd.xml). I know only [PHP Magic Numbers Detector](https://github.com/povils/phpmnd).
-    * `psalm-json` - [see example](tests/fixtures/origin/psalm/json.json). The most detailed report of [Psalm](https://github.com/vimeo/psalm).
-    * `pmd-cpd` - [see example](tests/fixtures/origin/phpcpd/pmd-cpd.xml). PMD-CPD XML format. An example of tool is [Copy/Paste Detector](https://github.com/sebastianbergmann/phpcpd).
-  * Output formats:
-    * `junit` - The most popular sort of reporting.
-    * `tc-tests` - [Reporting for TeamCity/PhpStorm/JetBrains](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Tests).
-    * `github-cli` - [GitHub Actions](https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-a-warning-message).
-    * `tc-inspections` [Reporting Inspections in TeamCity](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Inspections).
-
-
 ### Installing
 
-```sh
+```shell
 composer require jbzoo/ci-report-converter
-php ./vendor/bin/ci-report-converter --help
+php ./vendor/bin/ci-report-converter convert --help
 
 # OR use phar file
 wget https://github.com/JBZoo/CI-Report-Converter/releases/latest/download/ci-report-converter.phar
-php ./ci-report-converter.phar --help
+php ./ci-report-converter.phar convert --help
 
 # OR just pull the Docker Image
-docker run --rm jbzoo/ci-report-converter --help 
+docker run --rm jbzoo/ci-report-converter convert --help 
 ```
 
 
-### GitHub Action
-Action allows you to convert errors to the [GitHub Annotations format](https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-a-warning-message).
+### Using as GitHub Action
+
+Action allows you to convert error reports to the [GitHub Annotations format](https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-a-warning-message)
  * See [demo of error output](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/gh-action.yml?query=is%3Asuccess)
  * To learn more [see different examples](.github/workflows/gh-action.yml)
 
@@ -78,7 +64,7 @@ Action allows you to convert errors to the [GitHub Annotations format](https://d
     # File path with the result report format. If not set or empty, then the STDOUT is used.
     output-file: ./build/junit.xml
 
-    # Target format. Available options: github-cli, junit, tc-inspections, tc-tests
+    # Target format. Available options: gitlab-json, github-cli, junit, tc-inspections, tc-tests
     # Default value: github-cli
     # Required: true
     output-format: junit
@@ -102,7 +88,7 @@ Usage:
 
 Options:
   -S, --input-format=INPUT-FORMAT    Source format. Available options: checkstyle, junit, phpmd-json, phpmnd, pmd-cpd, psalm-json [default: "checkstyle"]
-  -T, --output-format=OUTPUT-FORMAT  Target format. Available options: github-cli, junit, tc-inspections, tc-tests [default: "tc-tests"]
+  -T, --output-format=OUTPUT-FORMAT  Target format. Available options: gitlab-json, github-cli, junit, tc-inspections, tc-tests [default: "tc-tests"]
   -N, --suite-name=SUITE-NAME        Set custom name of root group/suite
   -I, --input-file[=INPUT-FILE]      File path with the original report format. If not set or empty, then the STDIN is used.
   -O, --output-file[=OUTPUT-FILE]    File path with the result report format. If not set or empty, then the STDOUT is used.
@@ -125,26 +111,24 @@ Options:
 
 ### Available Directions
 
+At the moment it works with
+  * Input Formats:
+    * [checkstyle](tests/fixtures/origin/phpcs/codestyle.xml) - the most popular sort of error report. It works for [Phan](https://github.com/phan/phan), [PHPcs](https://github.com/squizlabs/PHP_CodeSniffer) and others.
+    * [junit](tests/fixtures/origin/phpunit/junit-simple.xml) - also it's really popular sort of error report. Usually, the format is used to display unit test results.
+    * [phpmd-json](tests/fixtures/origin/phpmd/json.json) - the most detailed report of [PHPMD](https://github.com/phpmd/phpmd).
+    * [phpmnd](tests/fixtures/origin/phpmnd/phpmnd.xml) - I know only [PHP Magic Numbers Detector](https://github.com/povils/phpmnd).
+    * [psalm-json](tests/fixtures/origin/psalm/json.json) - the most detailed report of [Psalm](https://github.com/vimeo/psalm).
+    * [pmd-cpd](tests/fixtures/origin/phpcpd/pmd-cpd.xml) - it's PMD-CPD XML format. An example of tool is [Copy/Paste Detector](https://github.com/sebastianbergmann/phpcpd).
+  * Output Formats:
+    * [gitlab-json](tests/fixtures/origin/phpstan/gitlab.json) - [GitLab Custom Report](https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html#implementing-a-custom-tool).
+    * [junit](tests/fixtures/origin/phpunit/junit-simple.xml) - The most popular sort of reporting.
+    * `tc-tests` - [Reporting for TeamCity/PhpStorm/JetBrains](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Tests).
+    * `tc-inspections` - [Reporting Inspections in TeamCity](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Inspections).
+
+
 <p align="center"><!-- Auto-created image via JBZoo\PHPUnit\CiReportConverterReadmeTest__testBuildGraphManually -->
-  <img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFI7XG4gICAgY2hlY2tzdHlsZV9zcmMoXCJDaGVja1N0eWxlLnhtbFwiKTtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyKChcIkNJLVJlcG9ydC1Db252ZXJ0ZXJcIikpO1xuICAgIGdpdGh1Yi1jbGlfdGFyZ2V0KFwiR2l0SHViIEFjdGlvbnMgLSBDTElcIik7XG4gICAganVuaXRfc3JjKFwiSlVuaXQueG1sXCIpO1xuICAgIGp1bml0X3RhcmdldChcIkpVbml0LnhtbFwiKTtcbiAgICBwaHBtZC1qc29uX3NyYyhcIlBIUG1kLmpzb25cIik7XG4gICAgcGhwbW5kX3NyYyhcIlBIUG1uZC54bWxcIik7XG4gICAgcG1kLWNwZF9zcmMoXCJQbWRDcGQueG1sXCIpO1xuICAgIHBzYWxtLWpzb25fc3JjKFwiUHNhbG0uanNvblwiKTtcbiAgICB0Yy1pbnNwZWN0aW9uc190YXJnZXQoXCJUZWFtQ2l0eSAtIEluc3BlY3Rpb25zXCIpO1xuICAgIHRjLXRlc3RzX3RhcmdldChcIlRlYW1DaXR5IC0gVGVzdHNcIik7XG5cbiAgICBjaGVja3N0eWxlX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyID09PiBnaXRodWItY2xpX3RhcmdldDtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyID09PiBqdW5pdF90YXJnZXQ7XG4gICAgY2ktcmVwb3J0LWNvbnZlcnRlciA9PT4gdGMtaW5zcGVjdGlvbnNfdGFyZ2V0O1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IHRjLXRlc3RzX3RhcmdldDtcbiAgICBqdW5pdF9zcmMgPT0+IGNpLXJlcG9ydC1jb252ZXJ0ZXI7XG4gICAgcGhwbWQtanNvbl9zcmMgPT0+IGNpLXJlcG9ydC1jb252ZXJ0ZXI7XG4gICAgcGhwbW5kX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwbWQtY3BkX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwc2FsbS1qc29uX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcblxubGlua1N0eWxlIGRlZmF1bHQgaW50ZXJwb2xhdGUgYmFzaXM7IiwibWVybWFpZCI6eyJ0aGVtZSI6ImZvcmVzdCJ9fQ==">
+  <img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFI7XG4gICAgY2hlY2tzdHlsZV9zcmMoXCJDaGVja1N0eWxlLnhtbFwiKTtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyKChcIkNJLVJlcG9ydDxicj5Db252ZXJ0ZXJcIikpO1xuICAgIGdpdGh1Yi1jbGlfdGFyZ2V0KFwiR2l0SHViIEFjdGlvbnMgLSBDTElcIik7XG4gICAgZ2l0bGFiLWpzb25fdGFyZ2V0KFwiR2l0TGFiIC0gSlNPTlwiKTtcbiAgICBqdW5pdF9zcmMoXCJKVW5pdC54bWxcIik7XG4gICAganVuaXRfdGFyZ2V0KFwiSlVuaXQueG1sXCIpO1xuICAgIHBocG1kLWpzb25fc3JjKFwiUEhQbWQuanNvblwiKTtcbiAgICBwaHBtbmRfc3JjKFwiUEhQbW5kLnhtbFwiKTtcbiAgICBwbWQtY3BkX3NyYyhcIlBtZENwZC54bWxcIik7XG4gICAgcHNhbG0tanNvbl9zcmMoXCJQc2FsbS5qc29uXCIpO1xuICAgIHRjLWluc3BlY3Rpb25zX3RhcmdldChcIlRlYW1DaXR5IC0gSW5zcGVjdGlvbnNcIik7XG4gICAgdGMtdGVzdHNfdGFyZ2V0KFwiVGVhbUNpdHkgLSBUZXN0c1wiKTtcblxuICAgIGNoZWNrc3R5bGVfc3JjID09PiBjaS1yZXBvcnQtY29udmVydGVyO1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IGdpdGh1Yi1jbGlfdGFyZ2V0O1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IGdpdGxhYi1qc29uX3RhcmdldDtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyID09PiBqdW5pdF90YXJnZXQ7XG4gICAgY2ktcmVwb3J0LWNvbnZlcnRlciA9PT4gdGMtaW5zcGVjdGlvbnNfdGFyZ2V0O1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IHRjLXRlc3RzX3RhcmdldDtcbiAgICBqdW5pdF9zcmMgPT0+IGNpLXJlcG9ydC1jb252ZXJ0ZXI7XG4gICAgcGhwbWQtanNvbl9zcmMgPT0+IGNpLXJlcG9ydC1jb252ZXJ0ZXI7XG4gICAgcGhwbW5kX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwbWQtY3BkX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwc2FsbS1qc29uX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcblxubGlua1N0eWxlIGRlZmF1bHQgaW50ZXJwb2xhdGUgYmFzaXM7IiwibWVybWFpZCI6eyJ0aGVtZSI6ImZvcmVzdCJ9fQ==">
 </p>
-
-```sh
-php ./vendor/bin/ci-report-converter convert:map
-```
-
-| Source/Target          | CheckStyle.xml | GitHub Actions - CLI | JUnit.xml | PHPmd.json | PHPmnd.xml | PmdCpd.xml | Psalm.json | TeamCity - Inspections | TeamCity - Tests |
-|:-----------------------|:--------------:|:--------------------:|:---------:|:----------:|:----------:|:----------:|:----------:|:----------------------:|:----------------:|
-| CheckStyle.xml         |       -        |         Yes          |    Yes    |     -      |     -      |     -      |     -      |          Yes           |       Yes        |
-| GitHub Actions - CLI   |       -        |          -           |     -     |     -      |     -      |     -      |     -      |           -            |        -         |
-| JUnit.xml              |       -        |         Yes          |    Yes    |     -      |     -      |     -      |     -      |          Yes           |       Yes        |
-| PHPmd.json             |       -        |         Yes          |    Yes    |     -      |     -      |     -      |     -      |          Yes           |       Yes        |
-| PHPmnd.xml             |       -        |         Yes          |    Yes    |     -      |     -      |     -      |     -      |          Yes           |       Yes        |
-| PmdCpd.xml             |       -        |         Yes          |    Yes    |     -      |     -      |     -      |     -      |          Yes           |       Yes        |
-| Psalm.json             |       -        |         Yes          |    Yes    |     -      |     -      |     -      |     -      |          Yes           |       Yes        |
-| TeamCity - Inspections |       -        |          -           |     -     |     -      |     -      |     -      |     -      |           -            |        -         |
-| TeamCity - Tests       |       -        |          -           |     -     |     -      |     -      |     -      |     -      |           -            |        -         |
-
 
 
 ### Unit tests and check code style
