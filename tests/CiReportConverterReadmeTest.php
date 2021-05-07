@@ -121,8 +121,7 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
 
     public function testMapTable()
     {
-        skip('Disabled test. Useless table');
-        isFileContains(Map::getMarkdownTable(), PROJECT_ROOT . '/README.md');
+        isSame(Fixtures::getExpectedFileContent('md'), Map::getMarkdownTable());
     }
 
     public function testBuildGraphManually()
