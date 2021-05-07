@@ -42,6 +42,10 @@ test-all: ##@Project Run all project tests at once
 	@make codestyle
 
 
+update-titles:
+	@doctoc --notitle --update-only --github README.md
+
+
 create-symlink: ##@Project Create Symlink (alias for testing)
 	@ln -sfv `pwd`/ci-report-converter `pwd`/vendor/bin/ci-report-converter
 

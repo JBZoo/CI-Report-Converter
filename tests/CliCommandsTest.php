@@ -23,7 +23,6 @@ use JBZoo\CiReportConverter\Commands\TeamCityStats;
 use JBZoo\CiReportConverter\Converters\CheckStyleConverter;
 use JBZoo\CiReportConverter\Converters\GithubCliConverter;
 use JBZoo\CiReportConverter\Converters\JUnitConverter;
-use JBZoo\CiReportConverter\Converters\Map;
 use JBZoo\CiReportConverter\Converters\PhpLocStatsTcConverter;
 use JBZoo\CiReportConverter\Converters\PhpMdJsonConverter;
 use JBZoo\CiReportConverter\Converters\TeamCityInspectionsConverter;
@@ -51,6 +50,25 @@ class CliCommandsTest extends PHPUnit
                 '',
                 '```',
                 '$ php ./vendor/bin/ci-report-converter convert --help',
+                $helpMessage,
+                '```',
+                '',
+            ]);
+
+            isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
+        } else {
+            skip('Old help text is different for different libs/php versions');
+        }
+    }
+
+    public function testTcStatsCommandReadMe()
+    {
+        if (version_compare(PHP_VERSION, '7.3.0') < 0) {
+            $helpMessage = $this->taskReal('teamcity:stats', ['help' => null]);
+            $helpMessage = implode("\n", [
+                '',
+                '```',
+                '$ php ./vendor/bin/ci-report-converter teamcity:stats --help',
                 $helpMessage,
                 '```',
                 '',

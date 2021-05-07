@@ -1,0 +1,110 @@
+
+##teamcity[buildStatisticValue key='Calls / Attributes (PHPloc:attributeAccesses)' value='8' flowId='1']
+
+##teamcity[buildStatisticValue key='Calls / Attributes / Non-Static (PHPloc:instanceAttributeAccesses)' value='8' flowId='1']
+
+##teamcity[buildStatisticValue key='Calls / Attributes / Static (PHPloc:staticAttributeAccesses)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Calls / Global (PHPloc:globalAccesses)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Calls / Global / Constants (PHPloc:globalConstantAccesses)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Calls / Global / Variables (PHPloc:globalVariableAccesses)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Calls / Methods (PHPloc:methodCalls)' value='50' flowId='1']
+
+##teamcity[buildStatisticValue key='Calls / Methods / Non-Static (PHPloc:instanceMethodCalls)' value='47' flowId='1']
+
+##teamcity[buildStatisticValue key='Calls / Methods / Static Methods (PHPloc:staticMethodCalls)' value='3' flowId='1']
+
+##teamcity[buildStatisticValue key='Calls / Super-Global Variables (PHPloc:superGlobalVariableAccesses)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Classes (PHPloc:classes)' value='4' flowId='1']
+
+##teamcity[buildStatisticValue key='Classes / Abstract (PHPloc:abstractClasses)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Classes / Concrete (PHPloc:concreteClasses)' value='4' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Average (PHPloc:ccnByLloc)' value='0.134615' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Classes / Average (PHPloc:classCcnAvg)' value='2.75' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Classes / Max (PHPloc:classCcnMax)' value='5' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Classes / Min (PHPloc:classCcnMin)' value='1' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Methods / Average (PHPloc:methodCcnAvg)' value='1.368421' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Methods / Max (PHPloc:methodCcnMax)' value='2' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Methods / Min (PHPloc:methodCcnMin)' value='1' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Total (PHPloc:ccn)' value='7' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Total in Methods (PHPloc:ccnMethods)' value='7' flowId='1']
+
+##teamcity[buildStatisticValue key='Constants (PHPloc:constants)' value='1' flowId='1']
+
+##teamcity[buildStatisticValue key='Constants / Classes (PHPloc:classConstants)' value='1' flowId='1']
+
+##teamcity[buildStatisticValue key='Constants / Global (PHPloc:globalConstants)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='FileSystem / Directories (PHPloc:directories)' value='1' flowId='1']
+
+##teamcity[buildStatisticValue key='FileSystem / Files (PHPloc:files)' value='4' flowId='1']
+
+##teamcity[buildStatisticValue key='Functions (PHPloc:functions)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Functions / Anonymous (PHPloc:anonymousFunctions)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Functions / Named (PHPloc:namedFunctions)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Interfaces (PHPloc:interfaces)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines (PHPloc:loc)' value='318' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Classes (PHPloc:llocClasses)' value='48' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Classes / Length / Average (PHPloc:classLlocAvg)' value='12' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Classes / Length / Max (PHPloc:classLlocMax)' value='22' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Classes / Length / Min (PHPloc:classLlocMin)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Comments (PHPloc:cloc)' value='133' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Functions (PHPloc:llocFunctions)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Functions / Average Length (PHPloc:llocByNof)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Logical (PHPloc:lloc)' value='52' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Methods / Length / Average  (PHPloc:methodLlocAvg)' value='2.421053' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Methods / Length / Max (PHPloc:methodLlocMax)' value='7' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Methods / Length / Min (PHPloc:methodLlocMin)' value='1' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Non-Comment (PHPloc:ncloc)' value='185' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Outside Functions or Classes (PHPloc:llocGlobal)' value='4' flowId='1']
+
+##teamcity[buildStatisticValue key='Methods (PHPloc:methods)' value='19' flowId='1']
+
+##teamcity[buildStatisticValue key='Methods / Non-Public (PHPloc:nonPublicMethods)' value='1' flowId='1']
+
+##teamcity[buildStatisticValue key='Methods / Non-Static (PHPloc:nonStaticMethods)' value='19' flowId='1']
+
+##teamcity[buildStatisticValue key='Methods / Public (PHPloc:publicMethods)' value='18' flowId='1']
+
+##teamcity[buildStatisticValue key='Methods / Static (PHPloc:staticMethods)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Namespaces (PHPloc:namespaces)' value='2' flowId='1']
+
+##teamcity[buildStatisticValue key='PHPloc:undefined' value='42' flowId='1']
+
+##teamcity[buildStatisticValue key='Tests / Classes (PHPloc:testClasses)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Tests / Methods (PHPloc:testMethods)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Traits (PHPloc:traits)' value='0' flowId='1']

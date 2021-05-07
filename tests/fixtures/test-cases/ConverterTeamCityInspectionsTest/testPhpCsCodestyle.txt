@@ -1,0 +1,12 @@
+
+##teamcity[inspectionType id='CheckStyle:PSR12.Properties.ConstantVisibility.NotFound' name='PSR12.Properties.ConstantVisibility.NotFound' category='CheckStyle' description='Issues found while checking coding standards' flowId='1']
+
+##teamcity[inspection typeId='CheckStyle:PSR12.Properties.ConstantVisibility.NotFound' file='src/JUnit/JUnitXml.php' line='24' message='------------------------------------------------------------------------------------------------------------------------|nsrc/JUnit/JUnitXml.php line 24, column 5|nVisibility must be declared on all constants if your project supports PHP 7.1 or later|n Rule     : PSR12.Properties.ConstantVisibility.NotFound|n File Path: src/JUnit/JUnitXml.php:24:5|n Severity : warning' SEVERITY='ERROR' flowId='1']
+
+##teamcity[inspectionType id='CheckStyle:Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine' name='Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine' category='CheckStyle' description='Issues found while checking coding standards' flowId='1']
+
+##teamcity[inspection typeId='CheckStyle:Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine' file='src/JUnit/JUnitXml.php' line='44' message='------------------------------------------------------------------------------------------------------------------------|nsrc/JUnit/JUnitXml.php line 44, column 35|nOpening brace should be on a new line|n Rule     : Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine|n File Path: src/JUnit/JUnitXml.php:44:35|n Severity : error' SEVERITY='ERROR' flowId='1']
+
+##teamcity[inspectionType id='CheckStyle:PSR2.Files.EndFileNewline.NoneFound' name='PSR2.Files.EndFileNewline.NoneFound' category='CheckStyle' description='Issues found while checking coding standards' flowId='1']
+
+##teamcity[inspection typeId='CheckStyle:PSR2.Files.EndFileNewline.NoneFound' file='src/JUnit/JUnitXml.php' line='50' message='------------------------------------------------------------------------------------------------------------------------|nsrc/JUnit/JUnitXml.php line 50, column 1|nExpected 1 newline at end of file; 0 found|n Rule     : PSR2.Files.EndFileNewline.NoneFound|n File Path: src/JUnit/JUnitXml.php:50|n Severity : error' SEVERITY='ERROR' flowId='1']

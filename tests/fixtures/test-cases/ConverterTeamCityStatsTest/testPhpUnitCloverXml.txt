@@ -1,0 +1,40 @@
+
+##teamcity[buildStatisticValue key='CRAP / Amount (PHPUnit:CRAPAmount)' value='147' flowId='1']
+
+##teamcity[buildStatisticValue key='CRAP / Average (PHPUnit:CRAPAverage)' value='3.829524' flowId='1']
+
+##teamcity[buildStatisticValue key='CRAP / Maximum (PHPUnit:CRAPMaximum)' value='20' flowId='1']
+
+##teamcity[buildStatisticValue key='CRAP / Percent (PHPUnit:CRAPPercent)' value='100' flowId='1']
+
+##teamcity[buildStatisticValue key='CRAP / Total (PHPUnit:CRAPTotal)' value='562.94' flowId='1']
+
+##teamcity[buildStatisticValue key='Coverage / Block-level, % (PHPUnit:CodeCoverageB)' value='89.776358' flowId='1']
+
+##teamcity[buildStatisticValue key='Coverage / Class-level, % (PHPUnit:CodeCoverageC)' value='76.470588' flowId='1']
+
+##teamcity[buildStatisticValue key='Coverage / Covered Blocks (PHPUnit:CodeCoverageAbsBCovered)' value='843' flowId='1']
+
+##teamcity[buildStatisticValue key='Coverage / Covered Classes (PHPUnit:CodeCoverageAbsCCovered)' value='26' flowId='1']
+
+##teamcity[buildStatisticValue key='Coverage / Covered LOC (PHPUnit:CodeCoverageAbsLCovered)' value='948' flowId='1']
+
+##teamcity[buildStatisticValue key='Coverage / Covered Methods (PHPUnit:CodeCoverageAbsMCovered)' value='105' flowId='1']
+
+##teamcity[buildStatisticValue key='Coverage / Files (PHPUnit:Files)' value='51' flowId='1']
+
+##teamcity[buildStatisticValue key='Coverage / Found Blocks (PHPUnit:CodeCoverageAbsBTotal)' value='939' flowId='1']
+
+##teamcity[buildStatisticValue key='Coverage / Found Classes (PHPUnit:CodeCoverageAbsCTotal)' value='34' flowId='1']
+
+##teamcity[buildStatisticValue key='Coverage / Found LOC (PHPUnit:CodeCoverageAbsLTotal)' value='1086' flowId='1']
+
+##teamcity[buildStatisticValue key='Coverage / Found Methods (PHPUnit:CodeCoverageAbsMTotal)' value='147' flowId='1']
+
+##teamcity[buildStatisticValue key='Coverage / Line-level, % (PHPUnit:CodeCoverageL)' value='87.292818' flowId='1']
+
+##teamcity[buildStatisticValue key='Coverage / Lines (PHPUnit:LinesOfCode)' value='4542' flowId='1']
+
+##teamcity[buildStatisticValue key='Coverage / Lines Non-Comment (PHPUnit:NonCommentLinesOfCode)' value='2869' flowId='1']
+
+##teamcity[buildStatisticValue key='Coverage / Method-level, % (PHPUnit:CodeCoverageM)' value='71.428571' flowId='1']

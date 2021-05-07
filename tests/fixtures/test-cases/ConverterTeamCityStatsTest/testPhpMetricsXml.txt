@@ -1,0 +1,56 @@
+
+##teamcity[buildStatisticValue key='Complexity (PHPMetrics:cyclomaticComplexity)' value='4.76' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Data (PHPMetrics:dc)' value='2' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Relative Data (PHPMetrics:rdc)' value='0.41' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Relative Structural (PHPMetrics:rsc)' value='0.68' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Relative System (PHPMetrics:rsysc)' value='1.09' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / System (PHPMetrics:sc)' value='4.08' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Total System (PHPMetrics:sysc)' value='6.08' flowId='1']
+
+##teamcity[buildStatisticValue key='Coupling / Afferent (PHPMetrics:afferentCoupling)' value='0.24' flowId='1']
+
+##teamcity[buildStatisticValue key='Coupling / Efferent (PHPMetrics:efferentCoupling)' value='1.48' flowId='1']
+
+##teamcity[buildStatisticValue key='Difficulty / Index (PHPMetrics:difficulty)' value='8.15' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines (PHPMetrics:loc)' value='1790' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Classes (PHPMetrics:noc)' value='16' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Classes / Abstract (PHPMetrics:noca)' value='3' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Classes / Concrete (PHPMetrics:nocc)' value='13' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Interfaces (PHPMetrics:noi)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Logical (PHPMetrics:lloc)' value='363' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Methods (PHPMetrics:nom)' value='55' flowId='1']
+
+##teamcity[buildStatisticValue key='Maintainability / Class Resilience to Change (PHPMetrics:instability)' value='0.34' flowId='1']
+
+##teamcity[buildStatisticValue key='Maintainability / Comment Weight (PHPMetrics:commentWeight)' value='43.64' flowId='1']
+
+##teamcity[buildStatisticValue key='Maintainability / Effort to Understand (PHPMetrics:effort)' value='15348.57' flowId='1']
+
+##teamcity[buildStatisticValue key='Maintainability / Estimated Bugs (PHPMetrics:bugs)' value='0.22' flowId='1']
+
+##teamcity[buildStatisticValue key='Maintainability / Index (PHPMetrics:maintainabilityIndex)' value='117.48' flowId='1']
+
+##teamcity[buildStatisticValue key='Maintainability / Intelligent Content (PHPMetrics:intelligentContent)' value='43.46' flowId='1']
+
+##teamcity[buildStatisticValue key='Maintainability / Lack of Cohesion (PHPMetrics:lcom)' value='1.04' flowId='1']
+
+##teamcity[buildStatisticValue key='Maintainability / Length (PHPMetrics:length)' value='109.52' flowId='1']
+
+##teamcity[buildStatisticValue key='Maintainability / Time to Understand (PHPMetrics:time)' value='852.64' flowId='1']
+
+##teamcity[buildStatisticValue key='Maintainability / Used Vocabulary (PHPMetrics:vocabulary)' value='27.28' flowId='1']
+
+##teamcity[buildStatisticValue key='Maintainability / Volume (PHPMetrics:volume)' value='660.36' flowId='1']

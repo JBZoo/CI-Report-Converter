@@ -1,0 +1,42 @@
+
+##teamcity[buildStatisticValue key='Calls / Fanouts (PHPDepend:fanout)' value='42' flowId='1']
+
+##teamcity[buildStatisticValue key='Calls / Methods or Functions (PHPDepend:calls)' value='167' flowId='1']
+
+##teamcity[buildStatisticValue key='Classes (PHPDepend:noc)' value='16' flowId='1']
+
+##teamcity[buildStatisticValue key='Classes / Abstract (PHPDepend:clsa)' value='3' flowId='1']
+
+##teamcity[buildStatisticValue key='Classes / Average Number of Derived (PHPDepend:andc)' value='0.631579' flowId='1']
+
+##teamcity[buildStatisticValue key='Classes / Concrete (PHPDepend:clsc)' value='13' flowId='1']
+
+##teamcity[buildStatisticValue key='Classes / Leaf (PHPDepend:leafs)' value='8' flowId='1']
+
+##teamcity[buildStatisticValue key='Classes / Root (PHPDepend:roots)' value='4' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Depth of Inheritance Tree / Max (PHPDepend:maxDIT)' value='4' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Extended (PHPDepend:ccn2)' value='130' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Hierarchy Height / Average (PHPDepend:ahh)' value='2.5' flowId='1']
+
+##teamcity[buildStatisticValue key='Complexity / Total (PHPDepend:ccn)' value='110' flowId='1']
+
+##teamcity[buildStatisticValue key='Functions (PHPDepend:nof)' value='5' flowId='1']
+
+##teamcity[buildStatisticValue key='Interfaces (PHPDepend:noi)' value='0' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines (PHPDepend:loc)' value='1553' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Comments (PHPDepend:cloc)' value='630' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Executable (PHPDepend:eloc)' value='688' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Logical (PHPDepend:lloc)' value='429' flowId='1']
+
+##teamcity[buildStatisticValue key='Lines / Non-Comment (PHPDepend:ncloc)' value='923' flowId='1']
+
+##teamcity[buildStatisticValue key='Methods (PHPDepend:nom)' value='51' flowId='1']
+
+##teamcity[buildStatisticValue key='Namespaces (PHPDepend:nop)' value='10' flowId='1']
