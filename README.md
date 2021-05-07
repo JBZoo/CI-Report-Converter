@@ -4,16 +4,22 @@
 [![PHP Version](https://img.shields.io/packagist/php-v/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/blob/master/composer.json)    [![PHP Strict Types](https://img.shields.io/badge/strict__types-%3D1-brightgreen)](https://www.php.net/manual/en/language.types.declarations.php#language.types.declarations.strict)    [![Stable Version](https://poser.pugx.org/jbzoo/ci-report-converter/version)](https://packagist.org/packages/jbzoo/ci-report-converter)    [![Total Downloads](https://poser.pugx.org/jbzoo/ci-report-converter/downloads)](https://packagist.org/packages/jbzoo/ci-report-converter/stats)    [![Docker Pulls](https://img.shields.io/docker/pulls/jbzoo/ci-report-converter.svg)](https://hub.docker.com/r/jbzoo/ci-report-converter)    [![GitHub Issues](https://img.shields.io/github/issues/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/issues)    [![GitHub License](https://img.shields.io/github/license/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/blob/master/LICENSE)
 
 
-<!-- START doctoc -->
- * [Installing](#installing)
- * [GitHub Action](#github-action)
- * [Usage](#usage)
- * [Examples](#examples)
- * [Available Directions](#available-directions)
- * [Unit tests and check code style](#unit-tests-and-check-code-style)
- * [License](#license)
-<!-- END doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [Why?](#why)
+- [Installing](#installing)
+- [Using as GitHub Action](#using-as-github-action)
+- [Available Directions](#available-directions)
+- [Help description in terminal](#help-description-in-terminal)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
+### Why?
 
 I believe you are familiar with the huge zoo of various utilities for testing, checking code standards, linters etc. 
 It's really often the output of utilities is not supported in popular CI systems (TeamCity, GitHub, etc...).
@@ -32,14 +38,14 @@ Well... It may seem to you it's a useless thing, and _your favorite super tool_ 
 
 ```shell
 composer require jbzoo/ci-report-converter
-php ./vendor/bin/ci-report-converter convert --help
+php ./vendor/bin/ci-report-converter --help
 
 # OR use phar file
 wget https://github.com/JBZoo/CI-Report-Converter/releases/latest/download/ci-report-converter.phar
-php ./ci-report-converter.phar convert --help
+php ./ci-report-converter.phar --help
 
 # OR just pull the Docker Image
-docker run --rm jbzoo/ci-report-converter convert --help 
+docker run --rm jbzoo/ci-report-converter --help 
 ```
 
 
@@ -76,7 +82,40 @@ Action allows you to convert error reports to the [GitHub Annotations format](ht
 ```
 
 
-### Usage
+### Available Directions
+
+
+<p align="center"><!-- Auto-created image via JBZoo\PHPUnit\CiReportConverterReadmeTest__testBuildGraphManually -->
+  <img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFI7XG4gICAgY2hlY2tzdHlsZV9zcmMoXCJDaGVja1N0eWxlLnhtbFwiKTtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyKChcIkNJLVJlcG9ydDxicj5Db252ZXJ0ZXJcIikpO1xuICAgIGdpdGh1Yi1jbGlfdGFyZ2V0KFwiR2l0SHViIEFjdGlvbnMgLSBDTElcIik7XG4gICAgZ2l0bGFiLWpzb25fdGFyZ2V0KFwiR2l0TGFiIC0gSlNPTlwiKTtcbiAgICBqdW5pdF9zcmMoXCJKVW5pdC54bWxcIik7XG4gICAganVuaXRfdGFyZ2V0KFwiSlVuaXQueG1sXCIpO1xuICAgIHBocG1kLWpzb25fc3JjKFwiUEhQbWQuanNvblwiKTtcbiAgICBwaHBtbmRfc3JjKFwiUEhQbW5kLnhtbFwiKTtcbiAgICBwbWQtY3BkX3NyYyhcIlBtZENwZC54bWxcIik7XG4gICAgcHNhbG0tanNvbl9zcmMoXCJQc2FsbS5qc29uXCIpO1xuICAgIHRjLWluc3BlY3Rpb25zX3RhcmdldChcIlRlYW1DaXR5IC0gSW5zcGVjdGlvbnNcIik7XG4gICAgdGMtdGVzdHNfdGFyZ2V0KFwiVGVhbUNpdHkgLSBUZXN0c1wiKTtcblxuICAgIGNoZWNrc3R5bGVfc3JjID09PiBjaS1yZXBvcnQtY29udmVydGVyO1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IGdpdGh1Yi1jbGlfdGFyZ2V0O1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IGdpdGxhYi1qc29uX3RhcmdldDtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyID09PiBqdW5pdF90YXJnZXQ7XG4gICAgY2ktcmVwb3J0LWNvbnZlcnRlciA9PT4gdGMtaW5zcGVjdGlvbnNfdGFyZ2V0O1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IHRjLXRlc3RzX3RhcmdldDtcbiAgICBqdW5pdF9zcmMgPT0+IGNpLXJlcG9ydC1jb252ZXJ0ZXI7XG4gICAgcGhwbWQtanNvbl9zcmMgPT0+IGNpLXJlcG9ydC1jb252ZXJ0ZXI7XG4gICAgcGhwbW5kX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwbWQtY3BkX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwc2FsbS1qc29uX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcblxubGlua1N0eWxlIGRlZmF1bHQgaW50ZXJwb2xhdGUgYmFzaXM7IiwibWVybWFpZCI6eyJ0aGVtZSI6ImZvcmVzdCJ9fQ==">
+</p>
+
+
+At the moment, conversion of reports works with
+  * Input Formats:
+    * [checkstyle](tests/fixtures/origin/phpcs/codestyle.xml) - the most popular sort of error report. It works for [Phan](https://github.com/phan/phan), [PHPcs](https://github.com/squizlabs/PHP_CodeSniffer) and others.
+    * [junit](tests/fixtures/origin/phpunit/junit-simple.xml) - also it's really popular sort of error report. Usually, the format is used to display unit test results.
+    * [phpmd-json](tests/fixtures/origin/phpmd/json.json) - the most detailed report of [PHPMD](https://github.com/phpmd/phpmd).
+    * [phpmnd](tests/fixtures/origin/phpmnd/phpmnd.xml) - I know only [PHP Magic Numbers Detector](https://github.com/povils/phpmnd).
+    * [psalm-json](tests/fixtures/origin/psalm/json.json) - the most detailed report of [Psalm](https://github.com/vimeo/psalm).
+    * [pmd-cpd](tests/fixtures/origin/phpcpd/pmd-cpd.xml) - it's PMD-CPD XML format. An example of tool is [Copy/Paste Detector](https://github.com/sebastianbergmann/phpcpd).
+  * Output Formats:
+    * [gitlab-json](tests/fixtures/origin/phpstan/gitlab.json) - [GitLab Custom Report](https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html#implementing-a-custom-tool).
+    * [junit](tests/fixtures/origin/phpunit/junit-simple.xml) - The most popular sort of reporting.
+    * [tc-tests](tests/fixtures/test-cases/ConverterTeamCityTest) - [Reporting Tests in TeamCity/PhpStorm/JetBrains](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Tests).
+    * [tc-inspections](tests/fixtures/test-cases/ConverterTeamCityInspectionsTest) - [Reporting Inspections in TeamCity](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Inspections).
+
+
+Als, you can follow [metrics around your code in TeamCity](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Build+Statistics) via `teamcity:stats`
+ * [JUnit.xml](tests/fixtures/origin/phpunit/junit-nested.xml) => [Example in TeamCity](tests/fixtures/test-cases/ConverterTeamCityStatsTest/testJUnitXml.txt)
+ * [PHPUnitClover.xml](tests/fixtures/origin/phpunit/clover.xml) => [Example in TeamCity](tests/fixtures/test-cases/ConverterTeamCityStatsTest/testPhpUnitCloverXml.txt)
+ * [PHPDepend.xml](tests/fixtures/origin/pdepend/pdepend-old.xml) => [Example in TeamCity](tests/fixtures/test-cases/ConverterTeamCityStatsTest/testPhpDependXml.txt)
+ * [PHPloc.json](tests/fixtures/origin/phploc/json.json) => [Example in TeamCity](tests/fixtures/test-cases/ConverterTeamCityStatsTest/testPhpLocJson.txt)
+ * [PHPMetrics.xml](tests/fixtures/origin/phpmetrics/phpmetrics.xml) => [Example in TeamCity](tests/fixtures/test-cases/ConverterTeamCityStatsTest/testJUnitXml.txt)
+
+
+### Help description in terminal
+
+Convert one report format to another one
 
 ```
 $ php ./vendor/bin/ci-report-converter convert --help
@@ -104,38 +143,51 @@ Options:
 
 ```
 
+
+Push code metrics to TeamCity Stats
+
+```
+$ php ./vendor/bin/ci-report-converter teamcity:stats --help
+Description:
+  Push code metrics to TeamCity Stats
+
+Usage:
+  teamcity:stats [options]
+
+Options:
+  -S, --input-format=INPUT-FORMAT  Source format. Available options: junit-xml, pdepend-xml, phploc-json, phpmetrics-xml, phpunit-clover-xml
+  -I, --input-file[=INPUT-FILE]    File path with the original report format. If not set or empty, then the STDIN is used.
+  -O, --output-file[=OUTPUT-FILE]  File path with the result report format. If not set or empty, then the STDOUT is used.
+  -R, --root-path[=ROOT-PATH]      If option is set, all absolute file paths will be converted to relative once.
+  -F, --tc-flow-id[=TC-FLOW-ID]    Custom flowId for TeamCity output
+  -h, --help                       Display this help message
+  -q, --quiet                      Do not output any message
+  -V, --version                    Display this application version
+      --ansi                       Force ANSI output
+      --no-ansi                    Disable ANSI output
+  -n, --no-interaction             Do not ask any interactive question
+  -v|vv|vvv, --verbose             Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+```
+
+
+
 ### Examples
 
 ... Screenshots are coming soon ...
 
 
-### Available Directions
+### Contributing
 
-At the moment it works with
-  * Input Formats:
-    * [checkstyle](tests/fixtures/origin/phpcs/codestyle.xml) - the most popular sort of error report. It works for [Phan](https://github.com/phan/phan), [PHPcs](https://github.com/squizlabs/PHP_CodeSniffer) and others.
-    * [junit](tests/fixtures/origin/phpunit/junit-simple.xml) - also it's really popular sort of error report. Usually, the format is used to display unit test results.
-    * [phpmd-json](tests/fixtures/origin/phpmd/json.json) - the most detailed report of [PHPMD](https://github.com/phpmd/phpmd).
-    * [phpmnd](tests/fixtures/origin/phpmnd/phpmnd.xml) - I know only [PHP Magic Numbers Detector](https://github.com/povils/phpmnd).
-    * [psalm-json](tests/fixtures/origin/psalm/json.json) - the most detailed report of [Psalm](https://github.com/vimeo/psalm).
-    * [pmd-cpd](tests/fixtures/origin/phpcpd/pmd-cpd.xml) - it's PMD-CPD XML format. An example of tool is [Copy/Paste Detector](https://github.com/sebastianbergmann/phpcpd).
-  * Output Formats:
-    * [gitlab-json](tests/fixtures/origin/phpstan/gitlab.json) - [GitLab Custom Report](https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html#implementing-a-custom-tool).
-    * [junit](tests/fixtures/origin/phpunit/junit-simple.xml) - The most popular sort of reporting.
-    * `tc-tests` - [Reporting for TeamCity/PhpStorm/JetBrains](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Tests).
-    * `tc-inspections` - [Reporting Inspections in TeamCity](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Inspections).
-
-
-<p align="center"><!-- Auto-created image via JBZoo\PHPUnit\CiReportConverterReadmeTest__testBuildGraphManually -->
-  <img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFI7XG4gICAgY2hlY2tzdHlsZV9zcmMoXCJDaGVja1N0eWxlLnhtbFwiKTtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyKChcIkNJLVJlcG9ydDxicj5Db252ZXJ0ZXJcIikpO1xuICAgIGdpdGh1Yi1jbGlfdGFyZ2V0KFwiR2l0SHViIEFjdGlvbnMgLSBDTElcIik7XG4gICAgZ2l0bGFiLWpzb25fdGFyZ2V0KFwiR2l0TGFiIC0gSlNPTlwiKTtcbiAgICBqdW5pdF9zcmMoXCJKVW5pdC54bWxcIik7XG4gICAganVuaXRfdGFyZ2V0KFwiSlVuaXQueG1sXCIpO1xuICAgIHBocG1kLWpzb25fc3JjKFwiUEhQbWQuanNvblwiKTtcbiAgICBwaHBtbmRfc3JjKFwiUEhQbW5kLnhtbFwiKTtcbiAgICBwbWQtY3BkX3NyYyhcIlBtZENwZC54bWxcIik7XG4gICAgcHNhbG0tanNvbl9zcmMoXCJQc2FsbS5qc29uXCIpO1xuICAgIHRjLWluc3BlY3Rpb25zX3RhcmdldChcIlRlYW1DaXR5IC0gSW5zcGVjdGlvbnNcIik7XG4gICAgdGMtdGVzdHNfdGFyZ2V0KFwiVGVhbUNpdHkgLSBUZXN0c1wiKTtcblxuICAgIGNoZWNrc3R5bGVfc3JjID09PiBjaS1yZXBvcnQtY29udmVydGVyO1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IGdpdGh1Yi1jbGlfdGFyZ2V0O1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IGdpdGxhYi1qc29uX3RhcmdldDtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyID09PiBqdW5pdF90YXJnZXQ7XG4gICAgY2ktcmVwb3J0LWNvbnZlcnRlciA9PT4gdGMtaW5zcGVjdGlvbnNfdGFyZ2V0O1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IHRjLXRlc3RzX3RhcmdldDtcbiAgICBqdW5pdF9zcmMgPT0+IGNpLXJlcG9ydC1jb252ZXJ0ZXI7XG4gICAgcGhwbWQtanNvbl9zcmMgPT0+IGNpLXJlcG9ydC1jb252ZXJ0ZXI7XG4gICAgcGhwbW5kX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwbWQtY3BkX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwc2FsbS1qc29uX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcblxubGlua1N0eWxlIGRlZmF1bHQgaW50ZXJwb2xhdGUgYmFzaXM7IiwibWVybWFpZCI6eyJ0aGVtZSI6ImZvcmVzdCJ9fQ==">
-</p>
-
-
-### Unit tests and check code style
-
-```sh
+```shell
+# Clone the repo and build project
 make build
-make test-all
+
+# Make your local changes
+
+# Run all tests and check code style
+make test
+make codestyle
 ```
 
 
