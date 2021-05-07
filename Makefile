@@ -32,6 +32,7 @@ build-docker:
 update: ##@Project Install/Update all 3rd party dependencies
 	@echo "Composer flags: $(JBZOO_COMPOSER_UPDATE_FLAGS)"
 	@composer update --optimize-autoloader --no-progress $(JBZOO_COMPOSER_UPDATE_FLAGS)
+	@$(PHP_BIN) `pwd`/vendor/bin/composer-diff
 	@make create-symlink
 	@make build-phar
 

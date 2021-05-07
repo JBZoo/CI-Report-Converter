@@ -13,13 +13,27 @@
 - [Available Directions](#available-directions)
 - [Help description in terminal](#help-description-in-terminal)
 - [Examples](#examples)
+  - [JetBrains IDE (IntelliJ IDEA, PhpStorm, WebStorm, etc)](#jetbrains-ide-intellij-idea-phpstorm-webstorm-etc)
+    - [PHP Code Sniffer](#php-code-sniffer)
+    - [PHPmd](#phpmd)
+    - [PHP Magic Number Detector](#php-magic-number-detector)
+    - [PHP Copy/Paste Detector](#php-copypaste-detector)
+    - [PHPStan](#phpstan)
+    - [Psalm](#psalm)
+    - [Phan](#phan)
+  - [TeamCity](#teamcity)
+    - [As Failed Unit test](#as-failed-unit-test)
+    - [As Code Inspections](#as-code-inspections)
+    - [As Custom Metrics](#as-custom-metrics)
+  - [GitHub Actions](#github-actions)
+  - [GitLab CI](#gitlab-ci)
 - [Contributing](#contributing)
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
-### Why?
+## Why?
 
 I believe you are familiar with the huge zoo of various utilities for testing, checking code standards, linters etc. 
 It's really often the output of utilities is not supported in popular CI systems (TeamCity, GitHub, etc...).
@@ -34,7 +48,7 @@ Therefore, I developed a converter that changes the report format for deep integ
 Well... It may seem to you it's a useless thing, and _your favorite super tool_ works fine in TeamCity/PhpStorm. Just take a look at [the examples below](#examples).
 
 
-### Installing
+## Installing
 
 ```shell
 composer require jbzoo/ci-report-converter
@@ -49,7 +63,7 @@ docker run --rm jbzoo/ci-report-converter --help
 ```
 
 
-### Using as GitHub Action
+## Using as GitHub Action
 
 Action allows you to convert error reports to the [GitHub Annotations format](https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-a-warning-message)
  * See [demo of error output](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/gh-action.yml?query=is%3Asuccess)
@@ -82,7 +96,7 @@ Action allows you to convert error reports to the [GitHub Annotations format](ht
 ```
 
 
-### Available Directions
+## Available Directions
 
 
 <p align="center"><!-- Auto-created image via JBZoo\PHPUnit\CiReportConverterReadmeTest__testBuildGraphManually -->
@@ -113,7 +127,7 @@ Als, you can follow [metrics around your code in TeamCity](https://www.jetbrains
  * [PHPMetrics.xml](tests/fixtures/origin/phpmetrics/phpmetrics.xml) => [Example in TeamCity](tests/fixtures/test-cases/ConverterTeamCityStatsTest/testPhpMetricsXml.txt)
 
 
-### Help description in terminal
+## Help description in terminal
 
 Convert one report format to another one
 
@@ -172,12 +186,29 @@ Options:
 
 
 
-### Examples
+## Examples
 
-... Screenshots are coming soon ...
+### JetBrains IDE (IntelliJ IDEA, PhpStorm, WebStorm, etc)
+#### PHP Code Sniffer
+#### PHPmd
+#### PHP Magic Number Detector
+#### PHP Copy/Paste Detector
+#### PHPStan
+#### Psalm
+#### Phan
+
+### TeamCity
+#### As Failed Unit test
+#### As Code Inspections
+#### As Custom Metrics
 
 
-### Contributing
+### GitHub Actions
+
+### GitLab CI
+
+
+## Contributing
 
 ```shell
 # Clone the repo and build project
@@ -191,6 +222,6 @@ make codestyle
 ```
 
 
-### License
+## License
 
 MIT
