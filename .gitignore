@@ -17,3 +17,4 @@ build
 vendor
 phpunit.xml
 *.cache
+ci-report-converter.phar

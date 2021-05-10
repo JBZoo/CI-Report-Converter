@@ -41,4 +41,5 @@ $application = new Application('JBZoo/CI-Report-Converter', '@git-version@');
 $application->add(new Convert());
 $application->add(new ConvertMap());
 $application->add(new TeamCityStats());
+$application->setDefaultCommand('convert');
 $application->run();

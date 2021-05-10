@@ -16,7 +16,7 @@
   - [Custom Metrics in TeamCity](#custom-metrics-in-teamcity)
 - [Examples](#examples)
   - [JetBrains IDE (IntelliJ IDEA, PhpStorm, WebStorm, etc)](#jetbrains-ide-intellij-idea-phpstorm-webstorm-etc)
-    - [Code Sniffer (checkstyle)](#code-sniffer-checkstyle)
+    - [General idea](#general-idea)
     - [Mess Detector (phpmd-json)](#mess-detector-phpmd-json)
     - [Magic Number Detector (phpmnd)](#magic-number-detector-phpmnd)
     - [Copy/Paste Detector (pmd-cpd)](#copypaste-detector-pmd-cpd)
@@ -191,7 +191,93 @@ Options:
 ## Examples
 
 ### JetBrains IDE (IntelliJ IDEA, PhpStorm, WebStorm, etc)
-#### Code Sniffer (checkstyle)
+
+One of the unique features of the tool is converting reports to a unit test format compatible with JetBrains IDE and TeamCity.
+The following examples show how to use JetBrains IDE UI to display any kind of stylish issues.
+Yeah, I know that the integration is not the cleanest, and it's not super beautiful. However, this code/screenshots demonstrate the usability of the approach.
+
+NOTE: I believe that coding style issues have the same level of severity as any other sort of errors.
+Therefore, I prefer to use the same workflow to check the quality of the code as I have with regular PHPUnit tests.
+This is the smartest thing for navigating the project and gives the most detailed information about errors.
+
+#### General idea
+
+The idea is pretty simple: 
+ - We take almost any utility for testing. 
+ - It saves report in the file or outputs error to StdOut as xml/json.
+ - CI-Report-Converter changes the report type. It saves result somewhere or just outputs it in StdOut.
+ - ???
+ - Profit.
+
+In the next case, we will see how to integrate JetBrains UI with Code Sniffer deeply. I use PHPcs just as example. This is the most popular linter in PHP.
+However, the approach is independent of the programming language or unit testing framework.
+
+```php
+use PHPUnit\Framework\Assert;
+use PHPUnit\Framework\TestCase;
+
+class CheckStyleExamplesTest extends TestCase
+{
+    /**
+     * The short example which uses pipe as way to pass error report.
+     */
+    public function testPipelineWay(): void
+    {
+        echo shell_exec(                       # Execute command via shell and return the complete output as a string.
+            'php ./vendor/bin/phpcs' .         # Path to bin of third-party tool (PHP Code Sniffer is just example).
+            ' --report=checkstyle' .           # Output format of PHPcs. ci-report-converter expects it by default as `--input-format` option.
+            ' --standard=PSR12 -q ./src' .     # The custom tool options. For phpcs `-q` is important!
+            ' | ' .                            # The pipe operator, it passes the output of one command as input to another. See https://en.wikipedia.org/wiki/Pipeline_(Unix)
+            ' php ./ci-report-converter.phar'  # The converter does all the magic. Look at help description ( --help) to lean more about options and default values.
+        );
+
+        # Usually PHPUnit expects at least one assert in a test.
+        # Otherwise, it may show useless warning messages. It depends on PHPUnit version and your configurations.
+        # So, just in case, we make a fake assertion.
+        Assert::assertTrue(true);
+    }
+
+    /**
+     * The super detailed example which uses files as way to pass error report.
+     */
+    public function testXmlFileWay(): void
+    {
+        echo shell_exec(                                # Execute command via shell and return the complete output as a string.
+            'php ./vendor/bin/phpcs' .                  # Path to bin of third-party tool (PHP Code Sniffer is just example).
+            ' --report=checkstyle' .                    # Output format of PHPcs. CI-Report-Converter expects it by default as `--input-format` option.
+            ' --report-file=./build/phpcs-report.xml' . # Save result of phpcs work in XML file in "checkstyle" format.
+            ' --standard=PSR12 -q ./src' .              # The custom tool options. For phpcs `-q` is important!
+            ' || true > /dev/null'                      # We don't expect any output of phpcs and ignore error exit codes.
+                                                        # Lol, we are very self-confident. Actually, we need only XML file, that's it.
+        );
+
+        // I've shown all the options explicitly just to add transparency.
+        // In fact, this example does the same thing as the code above in `testPipelineWay()`.
+        echo shell_exec(
+            'php ./ci-report-converter.phar' .          # The path to bin file of CI-Report-Converter. It depends of your installation way. See above.
+            ' --input-format=checkstyle' .              # Source reporting format. Default value is "checkstyle".
+            ' --input-file=./build/phpcs-report.xml' .  # Using prepared file on previous step as source.
+            ' --output-format=tc-tests' .               # Target reporting format. Default value is "tc-tests".
+            ' --suite-name=PHPcs' .                     # Define the name of group. See screenshot below.
+            ' --root-path=`pwd`'                        # Specify the project path for pretty printing paths in UI. Default value is `.` (current dir). 
+        );
+
+        # The same reason like in `testPipelineWay()`.
+        Assert::assertTrue(true);
+    }
+}
+```
+
+![PHPcs in JetBrains PhpStorm](.github/assets/general-idea.png)
+
+
+See what happens under hood (manual mode).
+```shell
+cd  ~/your/project/root/directory
+php ./vendor/bin/phpunit ./tests/CheckStyleExamplesTest.php
+```
+
+
 #### Mess Detector (phpmd-json)
 #### Magic Number Detector (phpmnd)
 #### Copy/Paste Detector (pmd-cpd)
