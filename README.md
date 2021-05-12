@@ -200,9 +200,7 @@ NOTE: I believe that coding style issues have the same level of severity as any 
 Therefore, I prefer to use the same workflow to check the quality of the code as I have with regular PHPUnit tests.
 This is the smartest thing for navigating the project and gives the most detailed information about errors.
 
-#### General idea
-
-The idea is pretty simple: 
+The general idea is pretty simple: 
  - We take almost any utility for testing. 
  - It saves report in the file or outputs error to StdOut as xml/json.
  - CI-Report-Converter changes the report type. It saves result somewhere or just outputs it in StdOut.
