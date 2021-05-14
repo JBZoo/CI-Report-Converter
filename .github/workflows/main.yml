@@ -157,13 +157,7 @@ jobs:
         run: make build-docker
 
       - name: Trying to use the Docker Image
-        run: |
-          echo "::group::Try to run it"
-          docker run --rm jbzoo-ci-report-converter
-          echo "::endgroup::"
-          echo "::group::Show help message"
-          docker run --rm jbzoo-ci-report-converter convert --help
-          echo "::endgroup::"
+        run: docker run --rm jbzoo-ci-report-converter --help
 
 
   release:
