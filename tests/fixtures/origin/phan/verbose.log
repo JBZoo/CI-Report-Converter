@@ -1,0 +1,1125 @@
+vendor/jbzoo/composer-diff/composer-diff.php:41 PhanUndeclaredClassMethod Call to method __construct from undeclared class \Symfony\Component\Console\Application
+> $application = new Application();
+
+vendor/jbzoo/composer-diff/composer-diff.php:42 PhanUndeclaredClassMethod Call to method add from undeclared class \Symfony\Component\Console\Application
+> $application->add(new DiffAction());
+
+vendor/jbzoo/composer-diff/composer-diff.php:43 PhanUndeclaredClassMethod Call to method setDefaultCommand from undeclared class \Symfony\Component\Console\Application
+> $application->setDefaultCommand('diff');
+
+vendor/jbzoo/composer-diff/composer-diff.php:44 PhanUndeclaredClassMethod Call to method run from undeclared class \Symfony\Component\Console\Application
+> $application->run();
+
+vendor/jbzoo/composer-diff/src/Commands/AbstractCommand.php:29 PhanUndeclaredExtendedClass Class extends undeclared class \Symfony\Component\Console\Command\Command
+> abstract class AbstractCommand extends Command
+
+vendor/jbzoo/composer-diff/src/Commands/AbstractCommand.php:35 PhanUndeclaredTypeProperty Property \JBZoo\ComposerDiff\Commands\AbstractCommand->input has undeclared type \Symfony\Component\Console\Input\InputInterface
+>     protected $input;
+
+vendor/jbzoo/composer-diff/src/Commands/AbstractCommand.php:41 PhanUndeclaredTypeProperty Property \JBZoo\ComposerDiff\Commands\AbstractCommand->output has undeclared type \Symfony\Component\Console\Output\OutputInterface
+>     protected $output;
+
+vendor/jbzoo/composer-diff/src/Commands/AbstractCommand.php:46 PhanUndeclaredTypeParameter Parameter $input has undeclared type \Symfony\Component\Console\Input\InputInterface
+>     protected function execute(InputInterface $input, OutputInterface $output)
+
+vendor/jbzoo/composer-diff/src/Commands/AbstractCommand.php:46 PhanUndeclaredTypeParameter Parameter $output has undeclared type \Symfony\Component\Console\Output\OutputInterface
+>     protected function execute(InputInterface $input, OutputInterface $output)
+
+vendor/jbzoo/composer-diff/src/Commands/AbstractCommand.php:48 PhanUndeclaredClassMethod Call to method getFormatter from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>         $formatter = $output->getFormatter();
+
+vendor/jbzoo/composer-diff/src/Commands/AbstractCommand.php:52 PhanUndeclaredClassMethod Call to method __construct from undeclared class \Symfony\Component\Console\Formatter\OutputFormatterStyle
+>             $formatter->setStyle($color, new OutputFormatterStyle($color));
+
+vendor/jbzoo/composer-diff/src/Commands/AbstractCommand.php:70 PhanUndeclaredClassMethod Call to method getOption from undeclared class \Symfony\Component\Console\Input\InputInterface
+>         $result = $this->input->getOption($optionName);
+
+vendor/jbzoo/composer-diff/src/Commands/AbstractCommand.php:84 PhanUndeclaredTypeParameter Parameter $input has undeclared type \Symfony\Component\Console\Input\InputInterface
+>     abstract protected function runCommand(InputInterface $input, OutputInterface $output): int;
+
+vendor/jbzoo/composer-diff/src/Commands/AbstractCommand.php:84 PhanUndeclaredTypeParameter Parameter $output has undeclared type \Symfony\Component\Console\Output\OutputInterface
+>     abstract protected function runCommand(InputInterface $input, OutputInterface $output): int;
+
+vendor/jbzoo/composer-diff/src/Commands/DiffAction.php:40 PhanUndeclaredMethod Call to undeclared method \JBZoo\ComposerDiff\Commands\DiffAction::setName
+>         $this
+
+vendor/jbzoo/composer-diff/src/Commands/DiffAction.php:44 PhanUndeclaredClassConstant Reference to constant VALUE_REQUIRED from undeclared class \Symfony\Component\Console\Input\InputOption
+>             ->addOption('source', null, InputOption::VALUE_REQUIRED, 'The file, git ref, or git ref with filename ' .
+
+vendor/jbzoo/composer-diff/src/Commands/DiffAction.php:46 PhanUndeclaredClassConstant Reference to constant VALUE_REQUIRED from undeclared class \Symfony\Component\Console\Input\InputOption
+>             ->addOption('target', null, InputOption::VALUE_REQUIRED, 'The file, git ref, or git ref with filename ' .
+
+vendor/jbzoo/composer-diff/src/Commands/DiffAction.php:49 PhanUndeclaredClassConstant Reference to constant VALUE_REQUIRED from undeclared class \Symfony\Component\Console\Input\InputOption
+>             ->addOption('env', null, InputOption::VALUE_REQUIRED, "Show only selected environment. " .
+
+vendor/jbzoo/composer-diff/src/Commands/DiffAction.php:51 PhanUndeclaredClassConstant Reference to constant VALUE_REQUIRED from undeclared class \Symfony\Component\Console\Input\InputOption
+>             ->addOption('output', null, InputOption::VALUE_REQUIRED, "Output format. " .
+
+vendor/jbzoo/composer-diff/src/Commands/DiffAction.php:53 PhanUndeclaredClassConstant Reference to constant VALUE_NONE from undeclared class \Symfony\Component\Console\Input\InputOption
+>             ->addOption('no-links', null, InputOption::VALUE_NONE, 'Hide all links in tables')
+
+vendor/jbzoo/composer-diff/src/Commands/DiffAction.php:54 PhanUndeclaredClassConstant Reference to constant VALUE_NONE from undeclared class \Symfony\Component\Console\Input\InputOption
+>             ->addOption('strict', null, InputOption::VALUE_NONE, 'Return exit code if you have any difference');
+
+vendor/jbzoo/composer-diff/src/Commands/DiffAction.php:61 PhanUndeclaredTypeParameter Parameter $input has undeclared type \Symfony\Component\Console\Input\InputInterface
+>     protected function runCommand(InputInterface $input, OutputInterface $output): int
+
+vendor/jbzoo/composer-diff/src/Commands/DiffAction.php:61 PhanUndeclaredTypeParameter Parameter $output has undeclared type \Symfony\Component\Console\Output\OutputInterface
+>     protected function runCommand(InputInterface $input, OutputInterface $output): int
+
+vendor/jbzoo/composer-diff/src/Comparator.php:122 PhanUndeclaredClassMethod Call to method fromShellCommandline from undeclared class \Symfony\Component\Process\Process
+>         $process = Process::fromShellCommandline($command);
+
+vendor/jbzoo/composer-diff/src/Comparator.php:129 PhanUndeclaredClassMethod Call to method __construct from undeclared class \Symfony\Component\Process\Exception\ProcessFailedException
+>         throw new ProcessFailedException($process);
+
+vendor/jbzoo/composer-diff/src/Diff.php:141 PhanUndeclaredClassMethod Call to method greaterThan from undeclared class \Composer\Semver\Comparator (Did you mean class \JBZoo\ComposerDiff\Comparator)
+>         if (Comparator::greaterThan($sourceVersion, $targetVersion)) {
+
+vendor/jbzoo/composer-diff/src/Diff.php:145 PhanUndeclaredClassMethod Call to method lessThan from undeclared class \Composer\Semver\Comparator (Did you mean class \JBZoo\ComposerDiff\Comparator)
+>         if (Comparator::lessThan($sourceVersion, $targetVersion)) {
+
+vendor/jbzoo/composer-diff/src/Renders/AbstractRender.php:131 PhanUndeclaredTypeParameter Parameter $output has undeclared type \Symfony\Component\Console\Output\OutputInterface
+>     public function render(OutputInterface $output): bool
+
+vendor/jbzoo/composer-diff/src/Renders/AbstractRender.php:134 PhanUndeclaredClassMethod Call to method writeln from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>             $output->writeln("There is no difference ({$this->env})");
+
+vendor/jbzoo/composer-diff/src/Renders/AbstractRender.php:154 PhanUndeclaredTypeParameter Parameter $output has undeclared type \Symfony\Component\Console\Output\OutputInterface
+>     abstract protected function renderOneEnv(OutputInterface $output, array $changeLog, string $env): void;
+
+vendor/jbzoo/composer-diff/src/Renders/Console.php:35 PhanUndeclaredTypeParameter Parameter $output has undeclared type \Symfony\Component\Console\Output\OutputInterface
+>     protected function renderOneEnv(OutputInterface $output, array $changeLog, string $env): void
+
+vendor/jbzoo/composer-diff/src/Renders/Console.php:39 PhanUndeclaredClassMethod Call to method writeln from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>         $output->writeln("  <blue>{$this->getTitle($env)}</blue> ({$env})");
+
+vendor/jbzoo/composer-diff/src/Renders/Console.php:41 PhanUndeclaredClassMethod Call to method __construct from undeclared class \Symfony\Component\Console\Helper\Table
+>         $table = (new Table($output))
+
+vendor/jbzoo/composer-diff/src/Renders/Console.php:41 PhanUndeclaredClassMethod Call to method setColumnStyle from undeclared class \Symfony\Component\Console\Helper\Table
+>         $table = (new Table($output))
+
+vendor/jbzoo/composer-diff/src/Renders/Console.php:42 PhanUndeclaredClassMethod Call to method __construct from undeclared class \Symfony\Component\Console\Helper\TableStyle
+>             ->setColumnStyle(2, (new TableStyle())->setPadType(STR_PAD_LEFT))
+
+vendor/jbzoo/composer-diff/src/Renders/Console.php:42 PhanUndeclaredClassMethod Call to method setPadType from undeclared class \Symfony\Component\Console\Helper\TableStyle
+>             ->setColumnStyle(2, (new TableStyle())->setPadType(STR_PAD_LEFT))
+
+vendor/jbzoo/composer-diff/src/Renders/Console.php:43 PhanUndeclaredClassMethod Call to method __construct from undeclared class \Symfony\Component\Console\Helper\TableStyle
+>             ->setColumnStyle(3, (new TableStyle())->setPadType(STR_PAD_LEFT));
+
+vendor/jbzoo/composer-diff/src/Renders/Console.php:43 PhanUndeclaredClassMethod Call to method setPadType from undeclared class \Symfony\Component\Console\Helper\TableStyle
+>             ->setColumnStyle(3, (new TableStyle())->setPadType(STR_PAD_LEFT));
+
+vendor/jbzoo/composer-diff/src/Renders/Console.php:79 PhanUndeclaredClassMethod Call to method writeln from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>         $output->writeln(' ');
+
+vendor/jbzoo/composer-diff/src/Renders/JsonOutput.php:33 PhanUndeclaredTypeParameter Parameter $output has undeclared type \Symfony\Component\Console\Output\OutputInterface
+>     protected function renderOneEnv(OutputInterface $output, array $changeLog, string $env): void
+
+vendor/jbzoo/composer-diff/src/Renders/JsonOutput.php:42 PhanUndeclaredClassMethod Call to method writeln from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>         $output->writeln((string)json($dataForJson));
+
+vendor/jbzoo/composer-diff/src/Renders/Markdown.php:53 PhanUndeclaredTypeParameter Parameter $output has undeclared type \Symfony\Component\Console\Output\OutputInterface
+>     protected function renderOneEnv(OutputInterface $output, array $changeLog, string $env): void
+
+vendor/jbzoo/composer-diff/src/Renders/Markdown.php:86 PhanUndeclaredClassMethod Call to method writeln from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>         $output->writeln("## {$this->getTitle($env)} ({$env})");
+
+vendor/jbzoo/composer-diff/src/Renders/Markdown.php:87 PhanUndeclaredClassMethod Call to method writeln from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>         $output->writeln('');
+
+vendor/jbzoo/composer-diff/src/Renders/Markdown.php:88 PhanUndeclaredClassMethod Call to method write from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>         $output->write($this->renderHeaders($widths));
+
+vendor/jbzoo/composer-diff/src/Renders/Markdown.php:89 PhanUndeclaredClassMethod Call to method write from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>         $output->write($this->renderRows($widths));
+
+vendor/jbzoo/composer-diff/src/Renders/Markdown.php:90 PhanUndeclaredClassMethod Call to method writeln from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>         $output->writeln('');
+
+vendor/jbzoo/composer-graph/composer-graph.php:38 PhanUndeclaredClassMethod Call to method __construct from undeclared class \Symfony\Component\Console\Application
+> $application = new Application('JBZoo/Composer-Graph', '@git-version@');
+
+vendor/jbzoo/composer-graph/composer-graph.php:39 PhanUndeclaredClassMethod Call to method add from undeclared class \Symfony\Component\Console\Application
+> $application->add(new CommandBuild());
+
+vendor/jbzoo/composer-graph/composer-graph.php:40 PhanUndeclaredClassMethod Call to method setDefaultCommand from undeclared class \Symfony\Component\Console\Application
+> $application->setDefaultCommand('build');
+
+vendor/jbzoo/composer-graph/composer-graph.php:41 PhanUndeclaredClassMethod Call to method run from undeclared class \Symfony\Component\Console\Application
+> $application->run();
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:34 PhanUndeclaredExtendedClass Class extends undeclared class \Symfony\Component\Console\Command\Command
+> class CommandBuild extends Command
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:40 PhanUndeclaredTypeProperty Property \JBZoo\ComposerGraph\CommandBuild->input has undeclared type \Symfony\Component\Console\Input\InputInterface
+>     private $input;
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:46 PhanUndeclaredTypeProperty Property \JBZoo\ComposerGraph\CommandBuild->output has undeclared type \Symfony\Component\Console\Output\OutputInterface
+>     private $output;
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:53 PhanUndeclaredClassConstant Reference to constant VALUE_REQUIRED from undeclared class \Symfony\Component\Console\Input\InputOption
+>         $required = InputOption::VALUE_REQUIRED;
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:54 PhanUndeclaredClassConstant Reference to constant VALUE_NONE from undeclared class \Symfony\Component\Console\Input\InputOption
+>         $none = InputOption::VALUE_NONE;
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:60 PhanUndeclaredMethod Call to undeclared method \JBZoo\ComposerGraph\CommandBuild::setName
+>         $this
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:88 PhanUndeclaredTypeParameter Parameter $input has undeclared type \Symfony\Component\Console\Input\InputInterface
+>     protected function execute(InputInterface $input, OutputInterface $output)
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:88 PhanUndeclaredTypeParameter Parameter $output has undeclared type \Symfony\Component\Console\Output\OutputInterface
+>     protected function execute(InputInterface $input, OutputInterface $output)
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:95 PhanUndeclaredClassMethod Call to method getOption from undeclared class \Symfony\Component\Console\Input\InputInterface
+>         $format = $input->getOption('format');
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:103 PhanUndeclaredClassMethod Call to method getOption from undeclared class \Symfony\Component\Console\Input\InputInterface
+>                 'direction'    => $input->getOption('direction') ?: Graph::LEFT_RIGHT,
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:104 PhanUndeclaredClassMethod Call to method getOption from undeclared class \Symfony\Component\Console\Input\InputInterface
+>                 'php'          => $input->getOption('show-php'),
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:105 PhanUndeclaredClassMethod Call to method getOption from undeclared class \Symfony\Component\Console\Input\InputInterface
+>                 'ext'          => $input->getOption('show-ext'),
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:106 PhanUndeclaredClassMethod Call to method getOption from undeclared class \Symfony\Component\Console\Input\InputInterface
+>                 'dev'          => $input->getOption('show-dev'),
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:107 PhanUndeclaredClassMethod Call to method getOption from undeclared class \Symfony\Component\Console\Input\InputInterface
+>                 'suggest'      => $input->getOption('show-suggests'),
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:108 PhanUndeclaredClassMethod Call to method getOption from undeclared class \Symfony\Component\Console\Input\InputInterface
+>                 'link-version' => $input->getOption('show-link-versions'),
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:109 PhanUndeclaredClassMethod Call to method getOption from undeclared class \Symfony\Component\Console\Input\InputInterface
+>                 'lib-version'  => $input->getOption('show-package-versions'),
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:111 PhanUndeclaredClassMethod Call to method getOption from undeclared class \Symfony\Component\Console\Input\InputInterface
+>                 'output-path'  => $input->getOption('output'),
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:112 PhanUndeclaredClassMethod Call to method getOption from undeclared class \Symfony\Component\Console\Input\InputInterface
+>                 'abc-order'    => $input->getOption('abc-order'),
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:118 PhanUndeclaredClassMethod Call to method writeln from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>             $output->writeln("Report is ready: {$result}");
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:120 PhanUndeclaredClassMethod Call to method writeln from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>             $output->writeln($result);
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:126 PhanUndeclaredClassMethod Call to method isDebug from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>         if ($output->isDebug()) {
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:127 PhanUndeclaredClassMethod Call to method writeln from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>             $output->writeln("Time: {$totalTime} sec; Peak Memory: {$maxMemory};\n");
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:139 PhanUndeclaredClassMethod Call to method getOption from undeclared class \Symfony\Component\Console\Input\InputInterface
+>         $origRootPath = $this->input->getOption('root');
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:170 PhanUndeclaredClassMethod Call to method isDebug from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>         if ($this->output->isDebug()) {
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:171 PhanUndeclaredClassMethod Call to method writeln from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>             $this->output->writeln("Composer JSON file found: {$composerJsonPath}");
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:186 PhanUndeclaredClassMethod Call to method isDebug from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>         if ($this->output->isDebug()) {
+
+vendor/jbzoo/composer-graph/src/CommandBuild.php:187 PhanUndeclaredClassMethod Call to method writeln from undeclared class \Symfony\Component\Console\Output\OutputInterface
+>             $this->output->writeln("Composer JSON file found: {$composerLockPath}");
+
+vendor/jbzoo/data/src/Yml.php:37 PhanUndeclaredClassConstant Reference to constant DUMP_MULTI_LINE_LITERAL_BLOCK from undeclared class \Symfony\Component\Yaml\Yaml
+>         return Yaml::dump($data, 10, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK | Yaml::DUMP_NULL_AS_TILDE);
+
+vendor/jbzoo/data/src/Yml.php:37 PhanUndeclaredClassConstant Reference to constant DUMP_NULL_AS_TILDE from undeclared class \Symfony\Component\Yaml\Yaml
+>         return Yaml::dump($data, 10, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK | Yaml::DUMP_NULL_AS_TILDE);
+
+vendor/jbzoo/data/src/Yml.php:37 PhanUndeclaredClassMethod Call to method dump from undeclared class \Symfony\Component\Yaml\Yaml
+>         return Yaml::dump($data, 10, 2, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK | Yaml::DUMP_NULL_AS_TILDE);
+
+vendor/jbzoo/data/src/Yml.php:48 PhanUndeclaredClassMethod Call to method parse from undeclared class \Symfony\Component\Yaml\Yaml
+>         return Yaml::parse($string);
+
+vendor/jbzoo/jbdump/_template.php:12 PhanTypeMismatchArgumentInternal Argument 1 ($array) is $pages of type null but \sort() takes array
+> sort($pages);
+
+vendor/jbzoo/jbdump/_template.php:15 PhanUndeclaredGlobalVariable Global variable $defaut is undeclared
+>     $_GET['page'] = $defaut;
+
+vendor/jbzoo/jbdump/_template.php:31 PhanUndeclaredGlobalVariable Global variable $folder is undeclared
+>                                 <li><strong><a href="/<?php echo $folder;?>/index.php?page=<?php echo $page;?>"><?php echo $page;?></a></strong></li>
+
+vendor/jbzoo/jbdump/_template.php:33 PhanUndeclaredGlobalVariable Global variable $folder is undeclared
+>                                 <li><a href="/<?php echo $folder;?>/index.php?page=<?php echo $page;?>"><?php echo $page;?></a></li>
+
+vendor/jbzoo/jbdump/_template.php:49 PhanUndeclaredGlobalVariable Global variable $folder is undeclared
+>                     <iframe src="http://<?php echo $_SERVER['HTTP_HOST'];?>/<?php echo $folder;?>/_<?php echo $_GET['page'].'.php';?>"
+
+vendor/jbzoo/jbdump/class.jbdump.php:217 PhanTypeMagicVoidWithReturn Found a return statement with a value in the implementation of the magic method \JBDump::__construct, expected void return type
+>     protected function __construct(array $options = array())
+
+vendor/jbzoo/jbdump/class.jbdump.php:239 PhanTypeMismatchReturnProbablyReal Returning $this of type \JBDump but __construct() is declared to return void (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>         return $this;
+
+vendor/jbzoo/jbdump/class.jbdump.php:323 PhanTypeMismatchArgument Argument 1 ($memoryBytes) is $memoStdValue of type bool|float but \JBDump::_profilerFormatMemory() takes int defined at vendor/jbzoo/jbdump/class.jbdump.php:1719
+>                             . self::_profilerFormatMemory($memoStdValue, true) . ')</span>';
+
+vendor/jbzoo/jbdump/class.jbdump.php:454 PhanTypeComparisonToArray string to array comparison
+>                     $result = self::getClientIP() == self::$_config['personal']['ip'];
+
+vendor/jbzoo/jbdump/class.jbdump.php:464 PhanTypeMismatchDimFetch When fetching an array index from a value of type array<string,string>|array<string,string[]>, found an array index of type 0, but expected the index to be of type string
+>                     $_REQUEST[self::$_config['personal']['requestParam']] == self::$_config['personal']['requestValue']
+
+vendor/jbzoo/jbdump/class.jbdump.php:464 PhanTypeMismatchDimFetch When fetching an array index from a value of type non-empty-array<string,string>|non-empty-array<string,string[]>, found an array index of type 0, but expected the index to be of type string
+>                     $_REQUEST[self::$_config['personal']['requestParam']] == self::$_config['personal']['requestValue']
+
+vendor/jbzoo/jbdump/class.jbdump.php:494 PhanTypeMismatchArgumentInternal Argument 2 ($value) is $reportLevel of type non-zero-int but \ini_set() takes string
+>             ini_set('error_reporting', $reportLevel);
+
+vendor/jbzoo/jbdump/class.jbdump.php:495 PhanTypeMismatchArgumentInternal Argument 2 ($value) is 1 of type 1 but \ini_set() takes string
+>             ini_set('display_errors', 1);
+
+vendor/jbzoo/jbdump/class.jbdump.php:496 PhanTypeMismatchArgumentInternal Argument 2 ($value) is 1 of type 1 but \ini_set() takes string
+>             ini_set('display_startup_errors', 1);
+
+vendor/jbzoo/jbdump/class.jbdump.php:500 PhanTypeMismatchArgumentInternal Argument 2 ($value) is 0 of type 0 but \ini_set() takes string
+>             ini_set('error_reporting', 0);
+
+vendor/jbzoo/jbdump/class.jbdump.php:501 PhanTypeMismatchArgumentInternal Argument 2 ($value) is 0 of type 0 but \ini_set() takes string
+>             ini_set('display_errors', 0);
+
+vendor/jbzoo/jbdump/class.jbdump.php:502 PhanTypeMismatchArgumentInternal Argument 2 ($value) is 0 of type 0 but \ini_set() takes string
+>             ini_set('display_startup_errors', 0);
+
+vendor/jbzoo/jbdump/class.jbdump.php:516 PhanTypeMismatchReturnProbablyReal Returning false of type false but maxTime() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:519 PhanTypeMismatchArgumentInternal Argument 2 ($value) is $time of type int but \ini_set() takes string
+>         ini_set('max_execution_time', $time);
+
+vendor/jbzoo/jbdump/class.jbdump.php:611 PhanTypeMismatchReturnProbablyReal Returning false of type false but ip() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:634 PhanTypeMismatchReturnProbablyReal Returning false of type false but get() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:650 PhanTypeMismatchReturnProbablyReal Returning false of type false but log() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:683 PhanTypeMismatchArgument Argument 2 ($varName) is $markName of type 'dumpVar'|non-empty-string but \JBDump_array2php::toString() takes null defined at vendor/jbzoo/jbdump/class.jbdump.php:4738
+>             $entry    = array('jbdump_message' => JBDump_array2php::toString($entry, $markName));
+
+vendor/jbzoo/jbdump/class.jbdump.php:735 PhanUndeclaredVariableDim Variable $header was undeclared, but array fields are being added to it.
+>             $header[] = "#<?php die('Direct Access To Log Files Not Permitted'); ?>";
+
+vendor/jbzoo/jbdump/class.jbdump.php:762 PhanTypeMismatchReturnProbablyReal Returning false of type false but files() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:775 PhanTypeMismatchReturnProbablyReal Returning false of type false but memory() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:793 PhanTypeMismatchReturnProbablyReal Returning false of type false but interfaces() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:808 PhanTypeMismatchReturnProbablyReal Returning false of type false but url() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:814 PhanTypeInvalidDimOffset Invalid offset "query_parsed" of $parsed of array type array{query:string,scheme?:string,host?:string,port?:int,user?:string,pass?:string,path?:string,fragment?:string}
+>             parse_str($parsed['query'], $parsed['query_parsed']);
+
+vendor/jbzoo/jbdump/class.jbdump.php:827 PhanTypeMismatchReturnProbablyReal Returning false of type false but includes() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:841 PhanTypeMismatchReturnProbablyReal Returning false of type false but functions() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:883 PhanTypeMismatchReturnProbablyReal Returning false of type false but extensions() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:895 PhanTypeMismatchReturnProbablyReal Returning false of type false but headers() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:927 PhanTypeMismatchReturnProbablyReal Returning false of type false but phpini() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:932 PhanTypeMismatchReturnProbablyReal Returning false of type false but phpini() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:968 PhanTypeMismatchReturnProbablyReal Returning false of type false but path() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:1007 PhanTypeMismatchReturnProbablyReal Returning false of type false but post() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:1019 PhanTypeMismatchReturnProbablyReal Returning false of type false but server() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:1031 PhanTypeMismatchReturnProbablyReal Returning false of type false but cookie() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:1061 PhanTypeMismatchReturnProbablyReal Returning false of type false but env() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:1091 PhanTypeMismatchReturnProbablyReal Returning false of type false but globals() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:1131 PhanTypeMismatchArgumentInternalProbablyReal Argument 2 ($numeric_prefix) is null of type null but \http_build_query() takes string
+>         $queryData = http_build_query((array)$data, null, '&');
+
+vendor/jbzoo/jbdump/class.jbdump.php:1230 PhanTypeMismatchReturnProbablyReal Returning false of type false but locale() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:1253 PhanTypeMismatchReturnProbablyReal Returning false of type false but timezone() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:1284 PhanCommentParamWithoutRealParam Saw an @param annotation for $name, but it was not found in the param list of function phpArray(mixed $var, mixed|string $varname = 'varName', bool|false $isReturn = false) : mixed
+>      * @param string $name
+
+vendor/jbzoo/jbdump/class.jbdump.php:1300 PhanTypeMismatchArgumentProbablyReal Argument 3 ($params) is $params of type null but \JBDump::_dumpRenderHtml() takes array (no real type) defined at vendor/jbzoo/jbdump/class.jbdump.php:1986 (the inferred real argument type has nothing in common with the parameter's phpdoc type)
+>         $_this->_dumpRenderHtml($output, $varname, $params);
+
+vendor/jbzoo/jbdump/class.jbdump.php:1300 PhanUndeclaredVariable Variable $params is undeclared
+>         $_this->_dumpRenderHtml($output, $varname, $params);
+
+vendor/jbzoo/jbdump/class.jbdump.php:1344 PhanTypeMismatchReturnProbablyReal Returning false of type false but trace() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:1406 PhanTypeArraySuspicious Suspicious array access to $result of type \JBDump
+>             $data = $result['name'];
+
+vendor/jbzoo/jbdump/class.jbdump.php:1461 PhanTypeMismatchReturnProbablyReal Returning false of type false but microtime() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:1499 PhanCommentParamOutOfOrder Expected @param annotation for $name to be before the @param annotation for $outputMode
+>      * @param int    $outputMode
+
+vendor/jbzoo/jbdump/class.jbdump.php:1593 PhanTypeMismatchReturnProbablyReal Returning false of type false but markStop() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:1620 PhanTypeMismatchReturnProbablyReal Returning false of type false but mark() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:1653 PhanTypeMissingReturn Method \JBDump::profiler is declared to return \JBDump in phpdoc but has no return value
+>     public function profiler($mode = 1)
+
+vendor/jbzoo/jbdump/class.jbdump.php:1946 PhanTypeMismatchReturnProbablyReal Returning false of type false but dump() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:2143 PhanTypeMismatchArgumentInternal Argument 1 ($haystack) is $output[5] of type null but \strpos() takes string
+>                 return (int)substr($output[5], strpos($output[5], ':') + 1);
+
+vendor/jbzoo/jbdump/class.jbdump.php:2143 PhanTypeMismatchArgumentInternal Argument 1 ($string) is $output[5] of type null but \substr() takes string
+>                 return (int)substr($output[5], strpos($output[5], ':') + 1);
+
+vendor/jbzoo/jbdump/class.jbdump.php:2195 PhanParamTooMany Call with 3 arg(s) to \JBDump::_boolean(bool $data, string $name) which only takes 2 arg(s) defined at vendor/jbzoo/jbdump/class.jbdump.php:2312
+>             $this->_boolean($data, $name, $advType);
+
+vendor/jbzoo/jbdump/class.jbdump.php:2198 PhanParamTooMany Call with 3 arg(s) to \JBDump::_integer(int $data, string $name) which only takes 2 arg(s) defined at vendor/jbzoo/jbdump/class.jbdump.php:2324
+>             $this->_integer($data, $name, $advType);
+
+vendor/jbzoo/jbdump/class.jbdump.php:2201 PhanParamTooMany Call with 3 arg(s) to \JBDump::_float(float $data, string $name) which only takes 2 arg(s) defined at vendor/jbzoo/jbdump/class.jbdump.php:2335
+>             $this->_float($data, $name, $advType);
+
+vendor/jbzoo/jbdump/class.jbdump.php:2209 PhanParamTooMany Call with 3 arg(s) to \JBDump::_array(array $data, string $name) which only takes 2 arg(s) defined at vendor/jbzoo/jbdump/class.jbdump.php:2450
+>                 $this->_array($data, $name, $advType);
+
+vendor/jbzoo/jbdump/class.jbdump.php:2212 PhanParamTooMany Call with 3 arg(s) to \JBDump::_maxDepth($var, $name) which only takes 2 arg(s) defined at vendor/jbzoo/jbdump/class.jbdump.php:2539
+>                 $this->_maxDepth($data, $name, $advType);
+
+vendor/jbzoo/jbdump/class.jbdump.php:2220 PhanParamTooMany Call with 3 arg(s) to \JBDump::_closure(object $data, string $name) which only takes 2 arg(s) defined at vendor/jbzoo/jbdump/class.jbdump.php:2516
+>                     $this->_closure($data, $name, $advType);
+
+vendor/jbzoo/jbdump/class.jbdump.php:2222 PhanParamTooMany Call with 3 arg(s) to \JBDump::_object(object $data, string $name) which only takes 2 arg(s) defined at vendor/jbzoo/jbdump/class.jbdump.php:2479
+>                     $this->_object($data, $name, $advType);
+
+vendor/jbzoo/jbdump/class.jbdump.php:2231 PhanParamTooMany Call with 3 arg(s) to \JBDump::_resource(resource $data, string $name) which only takes 2 arg(s) defined at vendor/jbzoo/jbdump/class.jbdump.php:2346
+>             $this->_resource($data, $name, $advType);
+
+vendor/jbzoo/jbdump/class.jbdump.php:2234 PhanParamTooMany Call with 3 arg(s) to \JBDump::_undefined($var, string $name) which only takes 2 arg(s) defined at vendor/jbzoo/jbdump/class.jbdump.php:2551
+>             $this->_undefined($data, $name, $advType);
+
+vendor/jbzoo/jbdump/class.jbdump.php:2559 PhanCommentParamOutOfOrder Expected @param annotation for $name to be before the @param annotation for $data
+>      * @param   mixed  $data Variable
+
+vendor/jbzoo/jbdump/class.jbdump.php:2620 PhanTypeMismatchArgumentInternal Argument 3 ($subject) is self::$_config['root'] of type null but \str_replace() takes array|string
+>             $rootPath = str_replace(array('/', '\\'), '/', self::$_config['root']);
+
+vendor/jbzoo/jbdump/class.jbdump.php:2799 PhanTypePossiblyInvalidDimOffset Possibly invalid offset 'line' of $meta of array type array{file?:''|mixed,line?:''|mixed}
+>             $result['line'] = $meta['line'];
+
+vendor/jbzoo/jbdump/class.jbdump.php:2800 PhanTypePossiblyInvalidDimOffset Possibly invalid offset 'file' of $meta of array type array{file?:''|mixed,line?:''|mixed}
+>             $result['file'] = $meta['file'];
+
+vendor/jbzoo/jbdump/class.jbdump.php:2841 PhanTypeMismatchReturnProbablyReal Returning false of type false but _getClass() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:2845 PhanTypeMismatchReturnProbablyReal Returning false of type false but _getClass() is declared to return \JBDump (no real type) (the inferred real return type has nothing in common with the declared phpdoc return type)
+>             return false;
+
+vendor/jbzoo/jbdump/class.jbdump.php:2852 PhanUndeclaredVariableDim Variable $result was undeclared, but array fields are being added to it.
+>         $result['name'] = $class->name;
+
+vendor/jbzoo/jbdump/class.jbdump.php:3011 PhanTypeMismatchReturn Returning $result of type array{methods?:array<string,array<string,array{abstract:true}>>|array<string,array<string,array{comment:non-empty-string}>>|array<string,array<string,array{constructor:true}>>|array<string,array<string,array{declaringClass:string}>>|array<string,array<string,array{destructor:true}>>|array<string,array<string,array{final:true}>>|array<string,array<string,array{internal:true}>>|array<string,array<string,array{name:string}>>|array<string,array<string,array{parameters:non-empty-array<mixed,mixed>}>>|array<string,array<string,array{source\x3a\x3asource:string}>>|array<string,array<string,array{static:true}>>|null,properties?:array<string,array<string,array{class:string}>>|array<string,array<string,array{comment:false|string}>>|array<string,array<string,array{default:bool}>>|array<string,array<string,array{static:bool}>>|null,name:string,type:'class'|'interface',comment?:non-empty-string,path?:null|string,extension?:non-empty-string,abstract?:true,final?:true,parents?:array|array{}|non-empty-list<string>,interfaces?:non-empty-list<string>,constants?:array<string,mixed>,source\x3a\x3asource?:string,all_methods:list<string>}|non-empty-array<mixed,mixed>|non-empty-associative-array<mixed> but _getClass() is declared to return \JBDump
+>         return $result;
+
+vendor/jbzoo/jbdump/class.jbdump.php:3055 PhanUndeclaredTypeParameter Parameter $functionName has undeclared type \function
+>     protected static function _getFunction($functionName)
+
+vendor/jbzoo/jbdump/class.jbdump.php:3066 PhanTypeMismatchArgumentInternal Argument 1 ($function) is $functionName of type \function|non-empty-string but \ReflectionFunction::__construct() takes \Closure|callable-string
+>         $func = new ReflectionFunction($functionName);
+
+vendor/jbzoo/jbdump/class.jbdump.php:3119 PhanUndeclaredTypeParameter Parameter $extensionName has undeclared type \function
+>     protected static function _getExtension($extensionName)
+
+vendor/jbzoo/jbdump/class.jbdump.php:3318 PhanTypeSuspiciousStringExpression Suspicious type null of a variable or expression self::$_config['log']['path'] used to build a string. (Expected type to be able to cast to a string)
+>                 $logPath = self::$_config['log']['path']
+
+vendor/jbzoo/jbdump/class.jbdump.php:3367 PhanUndeclaredVariableDim Variable $result was undeclared, but array fields are being added to it.
+>         $result['message'] = $exception->getMessage();
+
+vendor/jbzoo/jbdump/class.jbdump.php:3550 PhanTypeArraySuspicious Suspicious array access to $classInfo of type \JBDump
+>                     $funcInfo = $classInfo['methods']['public'][$currentTrace['function']];
+
+vendor/jbzoo/jbdump/class.jbdump.php:3553 PhanTypeArraySuspicious Suspicious array access to $classInfo of type \JBDump
+>                     $funcInfo = $classInfo['methods']['private'][$currentTrace['function']];
+
+vendor/jbzoo/jbdump/class.jbdump.php:3556 PhanTypeArraySuspicious Suspicious array access to $classInfo of type \JBDump
+>                     $funcInfo = $classInfo['methods']['protected'][$currentTrace['function']];
+
+vendor/jbzoo/jbdump/class.jbdump.php:3589 PhanTypeMismatchReturn Returning $_this of type \JBDump but args() is declared to return bool
+>         return $_this;
+
+vendor/jbzoo/jbdump/class.jbdump.php:3603 PhanUndeclaredClassMethod Call to method __construct from undeclared class \JConfig
+>             $config = new JConfig();
+
+vendor/jbzoo/jbdump/class.jbdump.php:3604 PhanUndeclaredClassProperty Reference to instance property dbprefix from undeclared class \JConfig
+>             $prefix = $config->dbprefix;
+
+vendor/jbzoo/jbdump/class.jbdump.php:4079 PhanTypeMismatchArgumentProbablyReal Argument 2 ($previous) is $token of type null but \JBDump_SqlFormatter::getNextToken() takes array (no real type) defined at vendor/jbzoo/jbdump/class.jbdump.php:3886 (the inferred real argument type has nothing in common with the parameter's phpdoc type)
+>                 $token        = self::getNextToken($string, $token);
+
+vendor/jbzoo/jbdump/class.jbdump.php:4837 PhanTypeMismatchArgumentInternal Argument 1 ($object) is $var of type int|string but \get_class() takes object
+>                 return '"{ Object: ' . get_class($var) . ' }"';
+
+vendor/jbzoo/jbdump/class.jbdump.php:4852 PhanCommentParamOutOfOrder Expected @param annotation for $isDie to be before the @param annotation for $name
+>  * @param   string $name  Variable name
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:16 PhanUndeclaredFunction Call to undeclared function \jimport()
+> jimport('joomla.event.helper');
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:22 PhanUndeclaredExtendedClass Class extends undeclared class \JPlugin
+> class plgSystemJBDump extends JPlugin {
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:33 PhanUndeclaredClass Reference to undeclared class \JPlugin
+> 		parent::__construct($subject, $config);
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:48 PhanUndeclaredConstant Reference to undeclared constant \JPATH_ROOT. This will cause a thrown Error in php 8.0+. (Did you mean \PATH_ROOT)
+> 		$logPath = $this->params->get('logPath', JPATH_ROOT . '/logs');
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:48 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 		$logPath = $this->params->get('logPath', JPATH_ROOT . '/logs');
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:50 PhanUndeclaredConstant Reference to undeclared constant \JPATH_ROOT. This will cause a thrown Error in php 8.0+. (Did you mean \PATH_ROOT)
+> 			$logPath = JPATH_ROOT . '/logs';
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:53 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 		$logFile = $this->params->get('logFile', false);
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:60 PhanUndeclaredConstant Reference to undeclared constant \JPATH_SITE. This will cause a thrown Error in php 8.0+.
+> 			'root'			 => JPATH_SITE,
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:64 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 			'serialize'		 => $this->params->get('serialize', 'print_r'),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:67 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 			'autoProfile'	 => (int) $this->params->get('autoProfile', true),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:68 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 			'profileToFile'	 => (int) $this->params->get('profileToFile', false),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:71 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 				'array'		 => (int) $this->params->get('sort_array', false),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:72 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 				'object'	 => (int) $this->params->get('sort_object', true),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:73 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 				'methods'	 => (int) $this->params->get('sort_methods', true),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:77 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 				'error'		 => (int) $this->params->get('handler_error', true),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:78 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 				'exception'	 => (int) $this->params->get('handler_exception', true),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:79 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 				'context'	 => (int) $this->params->get('handler_context', false),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:82 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 			'ip'			 => $this->params->get('ip', false),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:83 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 			'requestParam'	 => $this->params->get('requestParam', false),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:84 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 			'requestValue'	 => $this->params->get('requestValue', false),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:86 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 			'lite_mode'		 => (int) $this->params->get('lite_mode', false),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:87 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 			'stringLength'	 => $this->params->get('stringLength', 50),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:88 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 			'maxDepth'		 => $this->params->get('maxDepth', 3),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:89 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 			'showMethods'	 => (int) $this->params->get('showMethods', true),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:90 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 			'allToLog'		 => (int) $this->params->get('allToLog', false),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:91 PhanUndeclaredProperty Reference to undeclared property \plgSystemJBDump->params
+> 			'showArgs'		 => (int) $this->params->get('showMethods', false),
+
+vendor/jbzoo/jbdump/joomla/jbdump.php:95 PhanParamTooMany Call with 2 arg(s) to \JBDump::i(array $options = []) which only takes 1 arg(s) defined at vendor/jbzoo/jbdump/class.jbdump.php:362
+> 		JBDump::i(array('jbdump'), $params);
+
+vendor/jbzoo/jbdump/test/_ajaxtest.php:21 PhanUndeclaredGlobalVariable Global variable $unknown_var is undeclared
+> echo $unknown_var;
+
+vendor/jbzoo/jbdump/test/_benchmark.php:21 PhanUndeclaredFunction Call to undeclared function \GetPHPFilesMark()
+> d(GetPHPFilesMark());
+
+vendor/jbzoo/jbdump/test/_chain.php:18 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_declared.php:18 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_declared.php:28 PhanTypeMismatchArgument Argument 1 ($showAll) is 1 of type 1 but \JBDump::defines() takes bool|false defined at vendor/jbzoo/jbdump/class.jbdump.php:861
+> JBDump::defines(1);
+
+vendor/jbzoo/jbdump/test/_declared.php:34 PhanTypeMismatchArgument Argument 1 ($showInternal) is 1 of type 1 but \JBDump::functions() takes bool|false defined at vendor/jbzoo/jbdump/class.jbdump.php:838
+> JBDump::functions(1);
+
+vendor/jbzoo/jbdump/test/_env.php:18 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_errors.php:18 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_errors.php:35 PhanUndeclaredGlobalVariable Global variable $_NOT_DEFINED_VAR is undeclared
+> echo $_NOT_DEFINED_VAR;
+
+vendor/jbzoo/jbdump/test/_filesystem.php:18 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_lite_ajax.php:18 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_log.php:17 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_log.php:25 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+> JBDump::log($var['null'], 'null');
+
+vendor/jbzoo/jbdump/test/_log.php:26 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+> JBDump::log($var['bool'], 'Boolean');
+
+vendor/jbzoo/jbdump/test/_log.php:27 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+> JBDump::log($var['integer'], 'Integer');
+
+vendor/jbzoo/jbdump/test/_log.php:28 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+> JBDump::log($var['float'], 'Float');
+
+vendor/jbzoo/jbdump/test/_log.php:29 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+> JBDump::log($var['string'], 'String');
+
+vendor/jbzoo/jbdump/test/_log.php:30 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+> JBDump::log($var['longString'], 'longString');
+
+vendor/jbzoo/jbdump/test/_log.php:31 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+> JBDump::log($var['stdClass'], 'stdClass');
+
+vendor/jbzoo/jbdump/test/_log.php:32 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+> JBDump::log($var['simpleObject'], 'simpleObject');
+
+vendor/jbzoo/jbdump/test/_log.php:33 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+> JBDump::log($var['var'], 'complex var');
+
+vendor/jbzoo/jbdump/test/_log.php:44 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+>     ->log($var['string'], 'message_name');
+
+vendor/jbzoo/jbdump/test/_mail.php:18 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_mail.php:23 PhanTypeMismatchArgumentProbablyReal Argument 2 ($subject) is null of type null but \JBDump::mail() takes string (no real type) defined at vendor/jbzoo/jbdump/class.jbdump.php:3468 (the inferred real argument type has nothing in common with the parameter's phpdoc type)
+> JBDump::mail('Test message', null, 'admin@site.com');
+
+vendor/jbzoo/jbdump/test/_mail.php:24 PhanTypeMismatchArgumentProbablyReal Argument 3 ($to) is null of type null but \JBDump::mail() takes string (no real type) defined at vendor/jbzoo/jbdump/class.jbdump.php:3468 (the inferred real argument type has nothing in common with the parameter's phpdoc type)
+> JBDump::mail('Test message', 'Test subject text', null);
+
+vendor/jbzoo/jbdump/test/_mini.php:18 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_mini.php:22 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+>     jbdump($var, 0);
+
+vendor/jbzoo/jbdump/test/_mini.php:22 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+>     jbdump($var, 0);
+
+vendor/jbzoo/jbdump/test/_mini.php:26 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+>     d($var, 0);
+
+vendor/jbzoo/jbdump/test/_on_off.php:18 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_on_off.php:22 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> jbdump(1, 0);
+
+vendor/jbzoo/jbdump/test/_on_off.php:26 PhanTypeMismatchArgument Argument 2 ($isDie) is 1 of type 1 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+>     JBDump('JBDump with die flag', 1, 'die');
+
+vendor/jbzoo/jbdump/test/_on_off.php:30 PhanTypeMismatchArgument Argument 2 ($isDie) is 1 of type 1 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> jbdump(2, 1);
+
+vendor/jbzoo/jbdump/test/_others.php:18 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_others.php:31 PhanUndeclaredGlobalVariable Global variable $jsonData is undeclared
+> JBDump::json($jsonData, 'JSON');
+
+vendor/jbzoo/jbdump/test/_others.php:37 PhanTypeMismatchArgumentProbablyReal Argument 3 ($params) is 'print_r' of type 'print_r' but \JBDump::print_r() takes array (no real type) defined at vendor/jbzoo/jbdump/class.jbdump.php:1267 (the inferred real argument type has nothing in common with the parameter's phpdoc type)
+> JBDump::print_r($var, 0, 'print_r');
+
+vendor/jbzoo/jbdump/test/_others.php:37 PhanTypeMismatchArgument Argument 2 ($varname) is 0 of type 0 but \JBDump::print_r() takes string defined at vendor/jbzoo/jbdump/class.jbdump.php:1267
+> JBDump::print_r($var, 0, 'print_r');
+
+vendor/jbzoo/jbdump/test/_others.php:37 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+> JBDump::print_r($var, 0, 'print_r');
+
+vendor/jbzoo/jbdump/test/_others.php:40 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+> JBDump::var_dump($var, 'var_dump');
+
+vendor/jbzoo/jbdump/test/_php.php:18 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_php.php:34 PhanTypeMismatchArgument Argument 1 ($zend) is 1 of type 1 but \JBDump::extensions() takes bool|false defined at vendor/jbzoo/jbdump/class.jbdump.php:880
+> JBDump::extensions(1);
+
+vendor/jbzoo/jbdump/test/_profiler.php:24 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_reflect.php:18 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_reflect.php:48 PhanTypeMismatchArgument Argument 1 ($functionName) is $simpleClosureFunction of type false but \JBDump::funcInfo() takes \Closure|string defined at vendor/jbzoo/jbdump/class.jbdump.php:1444
+> JBDump::funcInfo($simpleClosureFunction);
+
+vendor/jbzoo/jbdump/test/_request.php:18 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_request.php:26 PhanTypeMismatchArgument Argument 1 ($notReal) is 1 of type 1 but \JBDump::request() takes bool|false defined at vendor/jbzoo/jbdump/class.jbdump.php:984
+> JBDump::request(1);
+
+vendor/jbzoo/jbdump/test/_simple.php:18 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_simple.php:22 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump($var, 0);
+
+vendor/jbzoo/jbdump/test/_simple.php:22 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+> JBDump($var, 0);
+
+vendor/jbzoo/jbdump/test/_simple.php:25 PhanTypeMismatchArgument Argument 2 ($isDie) is 1 of type 1 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump($var, 1, 'myLoveVariable');
+
+vendor/jbzoo/jbdump/test/_simple.php:25 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+> JBDump($var, 1, 'myLoveVariable');
+
+vendor/jbzoo/jbdump/test/_trace.php:18 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+> JBDump(file_get_contents(__FILE__), 0, '-= Code =-::source');
+
+vendor/jbzoo/jbdump/test/_trace.php:25 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+> $var['simpleObject']->checkTrace('arg1', 2, simpleObject::SIMPLE_CONST);
+
+vendor/jbzoo/jbdump/test/_trace.php:29 PhanUndeclaredGlobalVariable Global variable $var is undeclared
+> $var['simpleObject']->testFuncArgs(1, 2);
+
+vendor/jbzoo/jbdump/test/included_closure.php:7 PhanTypeInvalidUnaryOperandIncOrDec Invalid operator: unary operand of ++(expr) is null (expected int or string or float)
+>     return ++$i;
+
+vendor/jbzoo/jbdump/test/included_file.php:17 PhanTypeMismatchArgument Argument 1 ($trace) is 1 of type 1 but \JBDump::trace() takes bool defined at vendor/jbzoo/jbdump/class.jbdump.php:1341
+>     JBDump::trace(1);
+
+vendor/jbzoo/jbdump/test/included_file.php:164 PhanTypeMismatchArgument Argument 1 ($trace) is 1 of type 1 but \JBDump::trace() takes bool defined at vendor/jbzoo/jbdump/class.jbdump.php:1341
+>         JBDump::trace(1);
+
+vendor/jbzoo/jbdump/test/included_file.php:185 PhanTypeObjectUnsetDeclaredProperty Suspicious attempt to unset class \simpleObject's property simpleVar declared at vendor/jbzoo/jbdump/test/included_file.php:105 (This can be done, but is more commonly done for dynamic properties and Phan does not expect this)
+>         unset($this->simpleVar);
+
+vendor/jbzoo/jbdump/tools/_base64_decode.php:20 PhanTypeMismatchArgument Argument 2 ($isDie) is 'base64_decode' of type 'base64_decode' but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+>             JBDump(base64_decode($_POST['value']), 'base64_decode');
+
+vendor/jbzoo/jbdump/tools/_base64_encode.php:21 PhanTypeMismatchArgument Argument 2 ($isDie) is 'base64_decode' of type 'base64_decode' but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+>             JBDump(base64_encode($_POST['value']), 'base64_decode');
+
+vendor/jbzoo/jbdump/tools/_dates.php:24 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+>         JBDump(time() - $_POST['value'] . ' sec', 0, 'time() - $value');
+
+vendor/jbzoo/jbdump/tools/_dates.php:32 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+>                 JBDump(date($const, $_POST['value']), 0, $key . '  ' . $const);
+
+vendor/jbzoo/jbdump/tools/_dates.php:39 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+>                 JBDump(date($const, $_POST['value']), 0, $key . '  ' . $const);
+
+vendor/jbzoo/jbdump/tools/_htmlspecialchars.php:21 PhanTypeMismatchArgument Argument 2 ($isDie) is 'htmlspecialchars' of type 'htmlspecialchars' but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+>             JBDump(htmlspecialchars($_POST['value']), 'htmlspecialchars');
+
+vendor/jbzoo/jbdump/tools/_htmlspecialchars_decode.php:21 PhanTypeMismatchArgument Argument 2 ($isDie) is 'htmlspecialchars' of type 'htmlspecialchars' but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+>             JBDump(htmlspecialchars_decode($_POST['value']), 'htmlspecialchars');
+
+vendor/jbzoo/jbdump/tools/_json_decode.php:21 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+>             JBDump(json_decode($_POST['value'], true), 0, 'JSON decode');
+
+vendor/jbzoo/jbdump/tools/_unserialize.php:20 PhanTypeMismatchArgument Argument 2 ($isDie) is 'unserialize' of type 'unserialize' but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+>             JBDump(unserialize($_POST['value']), 'unserialize');
+
+vendor/jbzoo/jbdump/tools/_url.php:24 PhanTypeMismatchArgument Argument 2 ($isDie) is 0 of type 0 but \jbdump() takes bool|true defined at vendor/jbzoo/jbdump/class.jbdump.php:4856
+>             JBDump($var, 0, 'Parsed url params');
+
+vendor/jbzoo/phpunit/src/AbstractCodestyleTest.php:40 PhanUndeclaredConstant Reference to undeclared constant \PROJECT_ROOT. This will cause a thrown Error in php 8.0+.
+>     protected $projectRoot = PROJECT_ROOT;
+
+vendor/jbzoo/phpunit/src/AbstractCodestyleTest.php:66 PhanUndeclaredStaticMethod Static call to undeclared method \JBZoo\PHPUnit\PHPUnit::setUp
+>         parent::setUp();
+
+vendor/jbzoo/phpunit/src/AbstractCodestyleTest.php:72 PhanUndeclaredClassReference Reference to undeclared class \Symfony\Component\Finder\Finder
+>         if (!class_exists(Finder::class)) {
+
+vendor/jbzoo/phpunit/src/AbstractCodestyleTest.php:81 PhanUndeclaredClassMethod Call to method __construct from undeclared class \Symfony\Component\Finder\Finder
+>         $finder = (new Finder())
+
+vendor/jbzoo/phpunit/src/AbstractCodestyleTest.php:81 PhanUndeclaredClassMethod Call to method in from undeclared class \Symfony\Component\Finder\Finder
+>         $finder = (new Finder())
+
+vendor/jbzoo/phpunit/src/AbstractCodestyleTest.php:85 PhanUndeclaredClassMethod Call to method __construct from undeclared class \hanneskod\classtools\Iterator\ClassIterator
+>         $classIterator = new ClassIterator($finder);
+
+vendor/jbzoo/phpunit/src/AbstractCodestyleTest.php:86 PhanUndeclaredClassMethod Call to method disableAutoloading from undeclared class \hanneskod\classtools\Iterator\ClassIterator
+>         $classIterator->disableAutoloading();
+
+vendor/jbzoo/phpunit/src/AbstractCodestyleTest.php:88 PhanUndeclaredClassMethod Call to method getClassMap from undeclared class \hanneskod\classtools\Iterator\ClassIterator
+>         foreach ($classIterator->getClassMap() as $className => $splFileInfo) {
+
+vendor/jbzoo/phpunit/src/AbstractCodestyleTest.php:201 PhanUndeclaredClassMethod Call to method __construct from undeclared class \Symfony\Component\Finder\Finder
+>         $finder = (new Finder())
+
+vendor/jbzoo/phpunit/src/AbstractCodestyleTest.php:201 PhanUndeclaredClassMethod Call to method files from undeclared class \Symfony\Component\Finder\Finder
+>         $finder = (new Finder())
+
+vendor/jbzoo/phpunit/src/AbstractCodestyleTest.php:247 PhanUndeclaredClassMethod Call to method __construct from undeclared class \Symfony\Component\Finder\Finder
+>         $finder = (new Finder())
+
+vendor/jbzoo/phpunit/src/AbstractCodestyleTest.php:247 PhanUndeclaredClassMethod Call to method files from undeclared class \Symfony\Component\Finder\Finder
+>         $finder = (new Finder())
+
+vendor/jbzoo/phpunit/src/AbstractCopyrightTest.php:51 PhanUndeclaredConstant Reference to undeclared constant \PROJECT_ROOT. This will cause a thrown Error in php 8.0+.
+>     protected $projectRoot = PROJECT_ROOT;
+
+vendor/jbzoo/phpunit/src/AbstractCopyrightTest.php:268 PhanUndeclaredStaticMethod Static call to undeclared method \JBZoo\PHPUnit\PHPUnit::setUp
+>         parent::setUp();
+
+vendor/jbzoo/phpunit/src/AbstractCopyrightTest.php:280 PhanUndeclaredClassReference Reference to undeclared class \Symfony\Component\Finder\Finder
+>         if (!class_exists(Finder::class)) {
+
+vendor/jbzoo/phpunit/src/AbstractCopyrightTest.php:374 PhanUndeclaredClassMethod Call to method name from undeclared class \Symfony\Component\Finder\Finder
+>         $finder->name('Makefile');
+
+vendor/jbzoo/phpunit/src/AbstractCopyrightTest.php:416 PhanUndeclaredTypeReturnType Return type of createFinder() is undeclared type \Symfony\Component\Finder\Finder
+>     protected function createFinder(array $inclusions = [], array $exclusions = []): Finder
+
+vendor/jbzoo/phpunit/src/AbstractCopyrightTest.php:418 PhanUndeclaredClassMethod Call to method __construct from undeclared class \Symfony\Component\Finder\Finder
+>         $finder = (new Finder())
+
+vendor/jbzoo/phpunit/src/AbstractCopyrightTest.php:418 PhanUndeclaredClassMethod Call to method files from undeclared class \Symfony\Component\Finder\Finder
+>         $finder = (new Finder())
+
+vendor/jbzoo/phpunit/src/AbstractCopyrightTest.php:477 PhanUndeclaredTypeParameter Parameter $finder has undeclared type \Symfony\Component\Finder\Finder
+>     protected static function checkHeaderInFiles(Finder $finder, string $validHeader): void
+
+vendor/jbzoo/phpunit/src/CovCatcher.php:48 PhanUndeclaredTypeProperty Property \JBZoo\PHPUnit\CovCatcher->coverage has undeclared type \SebastianBergmann\CodeCoverage\CodeCoverage
+>     protected $coverage;
+
+vendor/jbzoo/phpunit/src/CovCatcher.php:181 PhanUndeclaredClassMethod Call to method start from undeclared class \SebastianBergmann\CodeCoverage\CodeCoverage
+>                 $this->coverage->start($this->hash, true);
+
+vendor/jbzoo/phpunit/src/CovCatcher.php:194 PhanUndeclaredClassMethod Call to method stop from undeclared class \SebastianBergmann\CodeCoverage\CodeCoverage
+>                 $this->coverage->stop();
+
+vendor/jbzoo/phpunit/src/CovCatcher.php:208 PhanUndeclaredClassMethod Call to method __construct from undeclared class \SebastianBergmann\CodeCoverage\Report\Clover
+>             $report = new Clover();
+
+vendor/jbzoo/phpunit/src/CovCatcher.php:210 PhanUndeclaredClassMethod Call to method process from undeclared class \SebastianBergmann\CodeCoverage\Report\Clover
+>                 $report->process($this->coverage, $reportXmlDir . '/' . $this->hash . '.xml');
+
+vendor/jbzoo/phpunit/src/CovCatcher.php:218 PhanUndeclaredClassMethod Call to method __construct from undeclared class \SebastianBergmann\CodeCoverage\Report\PHP
+>             $report = new PHP();
+
+vendor/jbzoo/phpunit/src/CovCatcher.php:220 PhanUndeclaredClassMethod Call to method process from undeclared class \SebastianBergmann\CodeCoverage\Report\PHP
+>                 $report->process($this->coverage, $reportCovDir . '/' . $this->hash . '.cov');
+
+vendor/jbzoo/phpunit/src/CovCatcher.php:228 PhanUndeclaredClassMethod Call to method __construct from undeclared class \SebastianBergmann\CodeCoverage\Report\Html\Facade
+>             $report = new Facade();
+
+vendor/jbzoo/phpunit/src/CovCatcher.php:230 PhanUndeclaredClassMethod Call to method process from undeclared class \SebastianBergmann\CodeCoverage\Report\Html\Facade
+>                 $report->process($this->coverage, $reportHtmlDir . '/' . $this->hash);
+
+vendor/jbzoo/phpunit/src/PHPUnit.php:28 PhanUndeclaredExtendedClass Class extends undeclared class \PHPUnit\Framework\TestCase
+> abstract class PHPUnit extends TestCase
+
+vendor/jbzoo/phpunit/src/fake-index.php:70 PhanUndeclaredClassMethod Call to method __construct from undeclared class \GetOpt\GetOpt
+> $cliOptions = new Getopt([
+
+vendor/jbzoo/phpunit/src/fake-index.php:71 PhanUndeclaredClassConstant Reference to constant OPTIONAL_ARGUMENT from undeclared class \GetOpt\GetOpt
+>     [null, 'index', GetOpt::OPTIONAL_ARGUMENT],
+
+vendor/jbzoo/phpunit/src/fake-index.php:72 PhanUndeclaredClassConstant Reference to constant OPTIONAL_ARGUMENT from undeclared class \GetOpt\GetOpt
+>     [null, 'cov-src', GetOpt::OPTIONAL_ARGUMENT],
+
+vendor/jbzoo/phpunit/src/fake-index.php:73 PhanUndeclaredClassConstant Reference to constant OPTIONAL_ARGUMENT from undeclared class \GetOpt\GetOpt
+>     [null, 'cov-xml', GetOpt::OPTIONAL_ARGUMENT],
+
+vendor/jbzoo/phpunit/src/fake-index.php:74 PhanUndeclaredClassConstant Reference to constant OPTIONAL_ARGUMENT from undeclared class \GetOpt\GetOpt
+>     [null, 'cov-cov', GetOpt::OPTIONAL_ARGUMENT],
+
+vendor/jbzoo/phpunit/src/fake-index.php:75 PhanUndeclaredClassConstant Reference to constant OPTIONAL_ARGUMENT from undeclared class \GetOpt\GetOpt
+>     [null, 'cov-html', GetOpt::OPTIONAL_ARGUMENT],
+
+vendor/jbzoo/phpunit/src/fake-index.php:78 PhanUndeclaredClassMethod Call to method process from undeclared class \GetOpt\GetOpt
+> $cliOptions->process(Env::get('PHPUNINT_ARGUMENTS', '', Env::VAR_STRING));
+
+vendor/jbzoo/phpunit/src/fake-index.php:80 PhanUndeclaredClassMethod Call to method getOption from undeclared class \GetOpt\GetOpt
+> $realIndex = (string)($realIndex ?? realpath($cliOptions->getOption('index')));
+
+vendor/jbzoo/phpunit/src/fake-index.php:90 PhanUndeclaredClassMethod Call to method getOption from undeclared class \GetOpt\GetOpt
+>         'src'  => $cliOptions->getOption('cov-src'),
+
+vendor/jbzoo/phpunit/src/fake-index.php:91 PhanUndeclaredClassMethod Call to method getOption from undeclared class \GetOpt\GetOpt
+>         'xml'  => $cliOptions->getOption('cov-xml'),
+
+vendor/jbzoo/phpunit/src/fake-index.php:92 PhanUndeclaredClassMethod Call to method getOption from undeclared class \GetOpt\GetOpt
+>         'cov'  => $cliOptions->getOption('cov-cov'),
+
+vendor/jbzoo/phpunit/src/fake-index.php:93 PhanUndeclaredClassMethod Call to method getOption from undeclared class \GetOpt\GetOpt
+>         'html' => $cliOptions->getOption('cov-html'),
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:32 PhanUndeclaredClassMethod Call to method markTestSkipped from undeclared class \PHPUnit\Framework\Assert
+>     Assert::markTestSkipped($message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:42 PhanUndeclaredClassMethod Call to method markTestIncomplete from undeclared class \PHPUnit\Framework\Assert
+>     Assert::markTestIncomplete($message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:52 PhanUndeclaredClassMethod Call to method fail from undeclared class \PHPUnit\Framework\Assert
+>     Assert::fail($message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:76 PhanUndeclaredClassMethod Call to method assertEquals from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertEquals($expected, $actual, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:86 PhanUndeclaredClassMethod Call to method assertNotEquals from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertNotEquals($expected, $actual, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:97 PhanUndeclaredClassMethod Call to method assertEquals from undeclared class \PHPUnit\Framework\Assert
+>         Assert::assertEquals($testItem[0], $testItem[1], $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:108 PhanUndeclaredClassMethod Call to method assertTrue from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertTrue($value ? true : false, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:118 PhanUndeclaredClassMethod Call to method assertFalse from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertFalse($value ? true : false, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:134 PhanUndeclaredClassMethod Call to method assertInstanceOf from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertInstanceOf($expected, $className, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:144 PhanUndeclaredClassMethod Call to method assertCount from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertCount($expected, $actual, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:156 PhanUndeclaredClassReference Reference to undeclared class \PHPUnit\Framework\Assert
+>     if (method_exists(Assert::class, 'assertMatchesRegularExpression')) {
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:161 PhanUndeclaredClassMethod Call to method assertMatchesRegularExpression from undeclared class \PHPUnit\Framework\Assert
+>     Assert::$methodName($pattern, $value, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:172 PhanUndeclaredClassReference Reference to undeclared class \PHPUnit\Framework\Assert
+>     if (method_exists(Assert::class, 'assertDoesNotMatchRegularExpression')) {
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:177 PhanUndeclaredClassMethod Call to method assertDoesNotMatchRegularExpression from undeclared class \PHPUnit\Framework\Assert
+>     Assert::$methodName($pattern, $value, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:188 PhanUndeclaredClassMethod Call to method assertFileEquals from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertFileEquals($filepathExpecte, $filepathActual, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:198 PhanUndeclaredClassMethod Call to method assertSame from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertSame($expected, $actual, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:208 PhanUndeclaredClassMethod Call to method assertNotSame from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertNotSame($expected, $actual, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:216 PhanUndeclaredClassMethod Call to method assertNull from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertNull($expected);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:224 PhanUndeclaredClassMethod Call to method assertNotNull from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertNotNull($expected);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:233 PhanUndeclaredClassMethod Call to method assertEmpty from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertEmpty($expected, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:242 PhanUndeclaredClassMethod Call to method assertNotEmpty from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertNotEmpty($expected, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:252 PhanUndeclaredClassMethod Call to method assertArrayHasKey from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertArrayHasKey($key, $array, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:262 PhanUndeclaredClassMethod Call to method assertArrayNotHasKey from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertArrayNotHasKey($key, $array, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:274 PhanUndeclaredClassMethod Call to method assertNotNull from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertNotNull($object, 'object ' . get_class($object) . " is not empty. {$message}");
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:275 PhanUndeclaredClassMethod Call to method assertObjectHasAttribute from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertObjectHasAttribute($attrName, $object, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:287 PhanUndeclaredClassMethod Call to method assertNotNull from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertNotNull($object, 'object ' . get_class($object) . " is not empty. {$message}");
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:288 PhanUndeclaredClassMethod Call to method assertObjectNotHasAttribute from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertObjectNotHasAttribute($attrName, $object, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:297 PhanUndeclaredClassMethod Call to method assertFileExists from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertFileExists($directoryPath, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:298 PhanUndeclaredClassMethod Call to method assertDirectoryExists from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertDirectoryExists($directoryPath);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:320 PhanUndeclaredClassMethod Call to method assertFileExists from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertFileExists($filePath, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:331 PhanUndeclaredClassReference Reference to undeclared class \PHPUnit\Framework\Assert
+>         if (method_exists(Assert::class, 'assertFileDoesNotExist')) {
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:336 PhanUndeclaredClassMethod Call to method assertFileDoesNotExist from undeclared class \PHPUnit\Framework\Assert
+>         Assert::$methodName($notFilePath, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:351 PhanUndeclaredClassMethod Call to method assertStringContainsStringIgnoringCase from undeclared class \PHPUnit\Framework\Assert
+>         Assert::assertStringContainsStringIgnoringCase($expected, $haystack, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:353 PhanUndeclaredClassMethod Call to method assertStringContainsString from undeclared class \PHPUnit\Framework\Assert
+>         Assert::assertStringContainsString($expected, $haystack, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:366 PhanUndeclaredClassMethod Call to method assertStringNotContainsStringIgnoringCase from undeclared class \PHPUnit\Framework\Assert
+>         Assert::assertStringNotContainsStringIgnoringCase($expected, $haystack, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:368 PhanUndeclaredClassMethod Call to method assertStringNotContainsString from undeclared class \PHPUnit\Framework\Assert
+>         Assert::assertStringNotContainsString($expected, $haystack, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:402 PhanUndeclaredClassMethod Call to method assertEqualsWithDelta from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertEqualsWithDelta($nowDate->getTimestamp(), $checkDate->getTimestamp(), $timeDiff, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:415 PhanUndeclaredClassMethod Call to method assertEqualsWithDelta from undeclared class \PHPUnit\Framework\Assert
+>         Assert::assertEqualsWithDelta((float)$expected, (float)$actual, $allowableDiff, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:433 PhanUndeclaredClassMethod Call to method assertNotEqualsWithDelta from undeclared class \PHPUnit\Framework\Assert
+>         Assert::assertNotEqualsWithDelta((float)$expected, (float)$actual, $allowableDiff, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:463 PhanUndeclaredClassMethod Call to method assertEqualsWithDelta from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertEqualsWithDelta((float)$expected[0], (float)$actual[0], $allowableDiff, $message);
+
+vendor/jbzoo/phpunit/src/functions/aliases.php:488 PhanUndeclaredClassMethod Call to method assertNotEqualsWithDelta from undeclared class \PHPUnit\Framework\Assert
+>     Assert::assertNotEqualsWithDelta((float)$expected[0], (float)$actual[0], $allowableDiff, $message);
+
+vendor/jbzoo/phpunit/src/functions/defines.php:47 PhanUndeclaredGlobalVariable Global variable $path is undeclared
+>                 define('PROJECT_ROOT', dirname($path, 2));
+
+vendor/jbzoo/phpunit/src/functions/tools.php:97 PhanUndeclaredClassConstant Reference to constant GET from undeclared class \JBZoo\HttpClient\Request
+> function httpRequest(string $url, $args = null, string $method = Request::GET, array $options = []): Response
+
+vendor/jbzoo/phpunit/src/functions/tools.php:97 PhanUndeclaredTypeReturnType Return type of httpRequest() is undeclared type \JBZoo\HttpClient\Response
+> function httpRequest(string $url, $args = null, string $method = Request::GET, array $options = []): Response
+
+vendor/jbzoo/phpunit/src/functions/tools.php:97 PhanUndeclaredTypeThrowsType @throws type of httpRequest has undeclared type \JBZoo\HttpClient\Exception (Did you mean class \Exception or class \JBZoo\ComposerDiff\Exception or class \JBZoo\ComposerGraph\Exception or class \JBZoo\Data\Exception or class \JBZoo\MermaidPHP\Exception or class \JBZoo\PHPUnit\Exception or class \JBZoo\Utils\Exception)
+> function httpRequest(string $url, $args = null, string $method = Request::GET, array $options = []): Response
+
+vendor/jbzoo/phpunit/src/functions/tools.php:99 PhanUndeclaredClassReference Reference to undeclared class \JBZoo\HttpClient\HttpClient
+>     if (!class_exists(HttpClient::class)) {
+
+vendor/jbzoo/phpunit/src/functions/tools.php:107 PhanUndeclaredClassMethod Call to method __construct from undeclared class \JBZoo\HttpClient\HttpClient
+>     $client = new HttpClient($options);
+
+vendor/jbzoo/phpunit/src/functions/tools.php:108 PhanUndeclaredClassMethod Call to method request from undeclared class \JBZoo\HttpClient\HttpClient
+>     return $client->request($url, $args, $method, $options);
+
+vendor/jbzoo/toolbox-dev/src/var-dumper.php:22 PhanUndeclaredClassReference Reference to undeclared class \Symfony\Component\VarDumper\VarDumper
+> if (!class_exists(VarDumper::class)) {
+
+vendor/jbzoo/toolbox-dev/src/var-dumper.php:27 PhanUndeclaredClassMethod Call to method setHandler from undeclared class \Symfony\Component\VarDumper\VarDumper
+> VarDumper::setHandler(static function ($variable): void {
+
+vendor/jbzoo/toolbox-dev/src/var-dumper.php:30 PhanUndeclaredClassMethod Call to method __construct from undeclared class \Symfony\Component\VarDumper\Cloner\VarCloner
+>     $varCloner = new VarCloner();
+
+vendor/jbzoo/toolbox-dev/src/var-dumper.php:31 PhanUndeclaredClassMethod Call to method setMaxItems from undeclared class \Symfony\Component\VarDumper\Cloner\VarCloner
+>     $varCloner->setMaxItems(500);
+
+vendor/jbzoo/toolbox-dev/src/var-dumper.php:32 PhanUndeclaredClassMethod Call to method setMaxString from undeclared class \Symfony\Component\VarDumper\Cloner\VarCloner
+>     $varCloner->setMaxString($maxStringWidth);
+
+vendor/jbzoo/toolbox-dev/src/var-dumper.php:34 PhanUndeclaredClassConstant Reference to constant DUMP_COMMA_SEPARATOR from undeclared class \Symfony\Component\VarDumper\Dumper\CliDumper
+>     $cliDumper = new CliDumper(null, 'UTF-8', CliDumper::DUMP_COMMA_SEPARATOR);
+
+vendor/jbzoo/toolbox-dev/src/var-dumper.php:34 PhanUndeclaredClassMethod Call to method __construct from undeclared class \Symfony\Component\VarDumper\Dumper\CliDumper
+>     $cliDumper = new CliDumper(null, 'UTF-8', CliDumper::DUMP_COMMA_SEPARATOR);
+
+vendor/jbzoo/toolbox-dev/src/var-dumper.php:35 PhanUndeclaredClassMethod Call to method setMaxStringWidth from undeclared class \Symfony\Component\VarDumper\Dumper\CliDumper
+>     $cliDumper->setMaxStringWidth($maxStringWidth);
+
+vendor/jbzoo/toolbox-dev/src/var-dumper.php:36 PhanUndeclaredClassMethod Call to method setIndentPad from undeclared class \Symfony\Component\VarDumper\Dumper\CliDumper
+>     $cliDumper->setIndentPad('    ');
+
+vendor/jbzoo/toolbox-dev/src/var-dumper.php:37 PhanUndeclaredClassMethod Call to method setDisplayOptions from undeclared class \Symfony\Component\VarDumper\Dumper\CliDumper
+>     $cliDumper->setDisplayOptions(['fileLinkFormat' => false]);
+
+vendor/jbzoo/toolbox-dev/src/var-dumper.php:39 PhanUndeclaredClassMethod Call to method cloneVar from undeclared class \Symfony\Component\VarDumper\Cloner\VarCloner
+>     $varClone = $varCloner->cloneVar($variable);
+
+vendor/jbzoo/toolbox-dev/src/var-dumper.php:41 PhanUndeclaredClassMethod Call to method dump from undeclared class \Symfony\Component\VarDumper\Dumper\CliDumper
+>     $cliDumper->dump($varClone);
+
+vendor/jbzoo/utils/src/Cli.php:106 PhanUndeclaredClassReference Reference to undeclared class \Symfony\Component\Process\Process
+>         if (!class_exists(Process::class)) {
+
+vendor/jbzoo/utils/src/Cli.php:125 PhanUndeclaredClassReference Reference to undeclared class \Symfony\Component\Process\Process
+>             if (method_exists(Process::class, 'fromShellCommandline')) {
+
+vendor/jbzoo/utils/src/Cli.php:126 PhanUndeclaredClassMethod Call to method fromShellCommandline from undeclared class \Symfony\Component\Process\Process
+>                 $process = Process::fromShellCommandline($realCommand, $cwd, null, null, 3600);
+
+vendor/jbzoo/utils/src/Cli.php:128 PhanUndeclaredClassMethod Call to method __construct from undeclared class \Symfony\Component\Process\Process
+>                 $process = new Process([$realCommand], $cwd, null, null, 3600);
+
+vendor/jbzoo/utils/src/Cli.php:131 PhanUndeclaredClassMethod Call to method run from undeclared class \Symfony\Component\Process\Process
+>             $process->run();
+
+vendor/jbzoo/utils/src/Cli.php:137 PhanUndeclaredClassMethod Call to method isSuccessful from undeclared class \Symfony\Component\Process\Process
+>         if (!$process->isSuccessful()) {
+
+vendor/jbzoo/utils/src/Cli.php:138 PhanUndeclaredClassMethod Call to method __construct from undeclared class \Symfony\Component\Process\Exception\ProcessFailedException
+>             throw new ProcessFailedException($process);
+
+vendor/jbzoo/utils/src/Cli.php:141 PhanUndeclaredClassMethod Call to method getOutput from undeclared class \Symfony\Component\Process\Process
+>         return $process->getOutput();
+

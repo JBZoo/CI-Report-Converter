@@ -369,6 +369,17 @@ php ./vendor/bin/psalm --output-format=json | ./ci-report-converter.phar --input
 
 #### Phan (checkstyle)
 
+<details>
+  <summary>Screenshot</summary>
+
+  ![PHP Psalm in JetBrains PhpStorm](.github/assets/phpstorm-phan.png)
+  
+</details>
+
+```shell
+php ./vendor/bin/phan.phar --allow-polyfill-parser --directory=./src --output-mode=checkstyle |  ./ci-report-converter.phar
+```
+
 ### TeamCity
 #### As Failed Unit test
 #### As Code Inspections

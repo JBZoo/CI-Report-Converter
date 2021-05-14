@@ -128,4 +128,14 @@ class CheckStyleExamples extends TestCase
 
         Assert::assertTrue(true);
     }
+
+    public function testPhan(): void
+    {
+        echo shell_exec(
+            'php ./vendor/bin/phan.phar --allow-polyfill-parser --directory=./vendor/jbzoo/jbdump --output-mode=checkstyle' .
+            ' | ./ci-report-converter.phar'
+        );
+
+        Assert::assertTrue(true);
+    }
 }
