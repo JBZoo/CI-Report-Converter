@@ -9,8 +9,8 @@
 
 - [Why?](#why)
 - [Installing](#installing)
-- [Using as Github Action](#using-as-github-action)
-  - [Example Github Action workflow](#example-github-action-workflow)
+- [Using as GitHub Action](#using-as-github-action)
+  - [Example GitHub Action workflow](#example-github-action-workflow)
 - [Available Directions](#available-directions)
 - [Help description in terminal](#help-description-in-terminal)
   - [Converting](#converting)
@@ -67,7 +67,7 @@ docker run --rm jbzoo/ci-report-converter --help
 
 
 
-## Using as Github Action
+## Using as GitHub Action
 
 Action allows you to convert error reports to the [GitHub Annotations format](https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-a-warning-message)
  * See [demo of error output](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/gh-action.yml?query=is%3Asuccess)
@@ -99,9 +99,17 @@ Action allows you to convert error reports to the [GitHub Annotations format](ht
 
 ```
 
-### Example Github Action workflow
+### Example GitHub Action workflow
 ```yml
-  linter:
+name: Linters
+
+on:
+  pull_request:
+    branches:
+      - "*"
+
+jobs:
+  linters:
     name: PHPcs
     runs-on: ubuntu-latest
     steps:
@@ -115,6 +123,7 @@ Action allows you to convert error reports to the [GitHub Annotations format](ht
         uses: jbzoo/ci-report-converter@master
         with:
           input-file: build/phpcs-checkstyle.xml
+
 ```
 
 
@@ -185,7 +194,7 @@ Options:
 
 ### Custom Metrics in TeamCity
 
-To clarify the use of the method, take a look at the [examples and screenshots](#as-code-inspections), please.
+To clarify the use of the method, take a look at the [examples and screenshots](#parsing-custom-metrics) below, please.
 
 ```
 $ php ./vendor/bin/ci-report-converter teamcity:stats --help
@@ -218,25 +227,24 @@ Options:
 ### JetBrains IDE (IntelliJ IDEA, PhpStorm, WebStorm, etc)
 
 One of the unique features of the tool is converting reports to a unit test format compatible with JetBrains IDE and TeamCity.
-The following examples show how to use JetBrains IDE UI to display any kind of stylish issues.
+The following examples show how to use JetBrains IDE UI to display any kind of style issues.
 Yeah, I know that the integration is not the cleanest, and it's not super beautiful. However, this code/screenshots demonstrate the usability of the approach.
 
-**NOTE:** I believe that coding style issues have the same level of severity as any other sort of errors.
-Therefore, I prefer to use the same workflow to check the quality of the code as I have with regular PHPUnit tests.
-This is the smartest thing for navigating the project and gives the most detailed information about errors.
+![PHPcs in JetBrains PhpStorm](.github/assets/phpstorm-checkstyle.png)
 
-The general idea is pretty simple: 
+**NOTE:** I believe that coding style issues have the same level of severity as any other sort of errors.
+Therefore, I prefer to use the same workflow to check the quality of the code as I have with regular PHPUnit tests. It's like "just one click!"
+Also, you will have the awesome bonus - navigating the project and gives the most detailed information about errors.
+
+**The general idea is pretty simple:** 
  - We take almost any utility for testing. 
  - It saves report in the file or outputs error to StdOut as xml/json.
  - CI-Report-Converter changes the report format. It saves result somewhere or just outputs it in StdOut.
  - ???
  - Profit.
 
-In the next case, we will see how to integrate JetBrains UI with Code Sniffer deeply. I use PHPcs just as example. This is the most popular linter in PHP.
+In the next example we will see how to integrate JetBrains IDE UI with Code Sniffer deeply. I use PHPcs just as example. This is the most popular linter in PHP.
 However, the approach is independent of the programming language or unit testing framework.
-
-**NOTE:** Here's an example based on PHPUnit and PhpStorm, but you are not limited to PHP language. This is just an example to show the idea.
-So you can use any sort language to integrate style tests with JetBrains IDE.
 
 ```php
 <?php declare(strict_types=1);
@@ -244,6 +252,11 @@ So you can use any sort language to integrate style tests with JetBrains IDE.
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Here's an example based on PHPUnit and PhpStorm, but you are not limited to PHP language.
+ * This is just an example to show the idea.
+ * So you can use any sort language to integrate style tests with JetBrains IDE.
+ */
 class CheckStyleExamplesTest extends TestCase
 {
     /**
@@ -294,9 +307,10 @@ class CheckStyleExamplesTest extends TestCase
         Assert::assertTrue(true);
     }
 }
+
 ```
 
-See what happens under the hood.
+What happens under the hood. Also, see source file [as ready-to-use examples](tests/examples/CheckStyleExamples.php).
 
 ```shell
 cd  ~/your/project/root/directory
@@ -305,10 +319,6 @@ php ./vendor/bin/phpunit ./tests/examples/CheckStyleExamples.php --teamcity
 # or
 php ./vendor/bin/phpcs --report=checkstyle --standard=PSR12 -q ./src | ./ci-report-converter.phar
 ```
-
-In both cases you will have the same output in your PhpStorm.
-
-![PHPcs in JetBrains PhpStorm](.github/assets/phpstorm-checkstyle.png)
 
 
 
@@ -378,9 +388,7 @@ php ./vendor/bin/phpstan analyse --error-format=checkstyle --no-progress ./src |
 
 <details>
   <summary>Screenshot</summary>
-
   ![PHP Psalm in JetBrains PhpStorm](.github/assets/phpstorm-psalm.png)
-  
 </details>
 
 ```shell
@@ -394,7 +402,7 @@ php ./vendor/bin/psalm --output-format=json | ./ci-report-converter.phar --input
   <summary>Screenshot</summary>
 
   ![PHP Psalm in JetBrains PhpStorm](.github/assets/phpstorm-phan.png)
-  
+
 </details>
 
 ```shell
