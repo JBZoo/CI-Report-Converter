@@ -64,23 +64,3 @@
 
  [ERROR] Found 20 errors                                                                                                
 
-::error file=vendor/jbzoo/jbdump/class.jbdump.php,line=689,col=0::Result of function var_dump (void) is used.
-::error file=vendor/jbzoo/jbdump/class.jbdump.php,line=1300,col=0::Undefined variable: $params
-::error file=vendor/jbzoo/jbdump/class.jbdump.php,line=3603,col=0::Instantiated class JConfig not found.
-::error file=vendor/jbzoo/jbdump/joomla/jbdump.php,line=,col=0::Reflection error: JPlugin not found.
-::error file=vendor/jbzoo/jbdump/test/_ajaxtest.php,line=15,col=0::Class JBDump referenced with incorrect case: jbdump.
-::error file=vendor/jbzoo/jbdump/test/_ajaxtest.php,line=22,col=0::Class JBDump referenced with incorrect case: jbdump.
-::error file=vendor/jbzoo/jbdump/test/_ajaxtest.php,line=24,col=0::Class JBDump referenced with incorrect case: jbdump.
-::error file=vendor/jbzoo/jbdump/test/_benchmark.php,line=21,col=0::Function GetPHPFilesMark not found.
-::error file=vendor/jbzoo/jbdump/test/_chain.php,line=22,col=0::Class JBDump referenced with incorrect case: jbdump.
-::error file=vendor/jbzoo/jbdump/test/_chain.php,line=25,col=0::Class JBDump referenced with incorrect case: jbdump.
-::error file=vendor/jbzoo/jbdump/test/_chain.php,line=28,col=0::Class JBDump referenced with incorrect case: jbdump.
-::error file=vendor/jbzoo/jbdump/test/_chain.php,line=31,col=0::Class JBDump referenced with incorrect case: jbdump.
-::error file=vendor/jbzoo/jbdump/test/included_file.php,line=203,col=0::Class JBDump referenced with incorrect case: jbdump.
-::error file=vendor/jbzoo/jbdump/test/included_file.php,line=235,col=0::Class JBDump referenced with incorrect case: jbdump.
-::error file=vendor/jbzoo/jbdump/test/included_file.php,line=273,col=0::Class JBDump referenced with incorrect case: jbdump.
-::error file=vendor/jbzoo/phpunit/src/CovCatcher.php,line=106,col=0::No error to ignore is reported on line 106.
-::error file=vendor/jbzoo/phpunit/src/CovCatcher.php,line=112,col=0::No error to ignore is reported on line 112.
-::error file=vendor/jbzoo/phpunit/src/CovCatcher.php,line=124,col=0::No error to ignore is reported on line 124.
-::error file=vendor/jbzoo/phpunit/src/functions/tools.php,line=97,col=0::Access to constant GET on an unknown class JBZoo\HttpClient\Request.
-::error file=vendor/jbzoo/phpunit/src/functions/tools.php,line=97,col=0::Return typehint of function JBZoo\PHPUnit\httpRequest() has invalid type JBZoo\HttpClient\Response.

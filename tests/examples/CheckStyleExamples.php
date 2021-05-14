@@ -21,16 +21,8 @@ use PHPUnit\Framework\TestCase;
 /**
  * Class CheckStyleExamplesTest
  */
-class CheckStyleExamplesTest extends TestCase
+class CheckStyleExamples extends TestCase
 {
-    /**
-     * @inheritDoc
-     */
-    protected function setUp(): void
-    {
-        //Assert::markTestSkipped('Tests disabled in CI. Mark as comment the line to run it locally');
-    }
-
     /**
      * The short example which uses pipe as way to pass error report.
      */
@@ -109,6 +101,16 @@ class CheckStyleExamplesTest extends TestCase
             '  --input-file=./build/phpcpd-report.xml' .
             '  --input-format=pmd-cpd' .
             '  --suite-name="Copy&Paste Detector"'
+        );
+
+        Assert::assertTrue(true);
+    }
+
+    public function testPhpStan(): void
+    {
+        echo shell_exec(
+            'php ./vendor/bin/phpstan analyse --error-format=checkstyle --no-progress ./vendor/jbzoo' .
+            ' | ./ci-report-converter.phar --suite-name="PHPstan"'
         );
 
         Assert::assertTrue(true);

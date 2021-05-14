@@ -282,7 +282,7 @@ class CheckStyleExamplesTest extends TestCase
 ```shell
 # See what happens under the hood. 
 cd  ~/your/project/root/directory
-php ./vendor/bin/phpunit ./tests/examples/CheckStyleExamplesTest.php --teamcity
+php ./vendor/bin/phpunit ./tests/examples/CheckStyleExamples.php --teamcity
 ```
 
 In both cases you will have the same output in your PhpStorm.
@@ -344,8 +344,28 @@ php ./vendor/bin/phpcpd ./src --log-pmd=./build/phpcpd-report.xml
   --suite-name="Copy&Paste Detector"
 ```
 
+
+
 #### PHPStan (checkstyle)
+
+<details>
+  <summary>JetBrains IDE - Screenshot</summary>
+
+  ![PHPstan in JetBrains PhpStorm](.github/assets/phpstorm-phpstan.png)
+  
+</details>
+
+```shell
+php ./vendor/bin/phpstan analyse --error-format=checkstyle --no-progress ./src \
+  | ./ci-report-converter.phar --suite-name="PHPstan"
+```
+
+
+
 #### Psalm (psalm-json)
+
+
+
 #### Phan (checkstyle)
 
 ### TeamCity
