@@ -75,7 +75,7 @@ abstract class AbstractConverter
             $rootPath = realpath($rootPath);
         }
 
-        $this->rootPath = $rootPath;
+        $this->rootPath = (string)$rootPath ?: null;
         return $this;
     }
 

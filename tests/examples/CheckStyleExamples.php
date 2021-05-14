@@ -115,4 +115,17 @@ class CheckStyleExamples extends TestCase
 
         Assert::assertTrue(true);
     }
+
+    public function testPsalm(): void
+    {
+        echo shell_exec(
+            'php ./vendor/bin/psalm.phar' .
+            ' --config=./vendor/jbzoo/codestyle/psalm.xml' .
+            ' --output-format=json' .
+            ' ./vendor/jbzoo/jbdump/class.jbdump.php' .
+            ' | ./ci-report-converter.phar --input-format=psalm-json'
+        );
+
+        Assert::assertTrue(true);
+    }
 }

@@ -130,7 +130,7 @@ Also, you can follow [metrics around your code in TeamCity](https://www.jetbrain
  * [PHPMetrics.xml](tests/fixtures/origin/phpmetrics/phpmetrics.xml) => [Example in TeamCity](tests/fixtures/test-cases/ConverterTeamCityStatsTest/testPhpMetricsXml.txt)
 
 
-## Help description in a terminal
+## Help description in terminal
 
 ### Converting
 
@@ -294,15 +294,14 @@ In both cases you will have the same output in your PhpStorm.
 #### Mess Detector (phpmd-json)
 
 <details>
-  <summary>JetBrains IDE - Screenshot</summary>
+  <summary>Screenshot</summary>
 
   ![PHPmd in JetBrains PhpStorm](.github/assets/phpstorm-phpmd.png)
   
 </details>
 
 ```shell
-php ./vendor/bin/phpmd ./src json cleancode,codesize,controversial,design,naming,unusedcode \
-  | ./ci-report-converter.phar --input-format=phpmd-json
+php ./vendor/bin/phpmd ./src json cleancode,codesize,controversial,design,naming,unusedcode | ./ci-report-converter.phar -S phpmd-json
 ```
 
 
@@ -310,19 +309,15 @@ php ./vendor/bin/phpmd ./src json cleancode,codesize,controversial,design,naming
 #### Magic Number Detector (phpmnd)
 
 <details>
-  <summary>JetBrains IDE - Screenshot</summary>
+  <summary>Screenshot</summary>
 
   ![PHPmd in JetBrains PhpStorm](.github/assets/phpstorm-phpmnd.png)
   
 </details>
 
 ```shell
-php ./vendor/bin/phpmnd ./src --hint --xml-output=./build/phpmnd-report.xml --quiet
-./ci-report-converter.phar                 \
-  --input-file=./build/phpmnd-report.xml   \
-  --input-format=phpmnd                    \
-  --suite-name="Magic Number Detector"     \
-  --root-path=./src
+php ./vendor/bin/phpmnd ./src --hint --quiet --xml-output=./build/phpmnd-report.xml
+./ci-report-converter.phar --root-path=./src --input-file=./build/phpmnd-report.xml --input-format=phpmnd 
 ```
 
 
@@ -330,7 +325,7 @@ php ./vendor/bin/phpmnd ./src --hint --xml-output=./build/phpmnd-report.xml --qu
 #### Copy/Paste Detector (pmd-cpd)
 
 <details>
-  <summary>JetBrains IDE - Screenshot</summary>
+  <summary>Screenshot</summary>
 
   ![PHPcpd in JetBrains PhpStorm](.github/assets/phpstorm-phpcpd.png)
   
@@ -338,10 +333,7 @@ php ./vendor/bin/phpmnd ./src --hint --xml-output=./build/phpmnd-report.xml --qu
 
 ```shell
 php ./vendor/bin/phpcpd ./src --log-pmd=./build/phpcpd-report.xml
-./ci-report-converter.phar
-  --input-file=./build/phpcpd-report.xml
-  --input-format=pmd-cpd
-  --suite-name="Copy&Paste Detector"
+./ci-report-converter.phar --input-file=./build/phpcpd-report.xml --input-format=pmd-cpd
 ```
 
 
@@ -349,21 +341,30 @@ php ./vendor/bin/phpcpd ./src --log-pmd=./build/phpcpd-report.xml
 #### PHPStan (checkstyle)
 
 <details>
-  <summary>JetBrains IDE - Screenshot</summary>
+  <summary>Screenshot</summary>
 
   ![PHPstan in JetBrains PhpStorm](.github/assets/phpstorm-phpstan.png)
   
 </details>
 
 ```shell
-php ./vendor/bin/phpstan analyse --error-format=checkstyle --no-progress ./src \
-  | ./ci-report-converter.phar --suite-name="PHPstan"
+php ./vendor/bin/phpstan analyse --error-format=checkstyle --no-progress ./src | ./ci-report-converter.phar
 ```
 
 
 
 #### Psalm (psalm-json)
 
+<details>
+  <summary>Screenshot</summary>
+
+  ![PHP Psalm in JetBrains PhpStorm](.github/assets/phpstorm-psalm.png)
+  
+</details>
+
+```shell
+php ./vendor/bin/psalm --output-format=json | ./ci-report-converter.phar --input-format="psalm-json"
+```
 
 
 #### Phan (checkstyle)

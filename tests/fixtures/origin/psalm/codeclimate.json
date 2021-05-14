@@ -1,0 +1,2023 @@
+[
+    {
+        "type"        : "issue", "check_name" : "PossiblyNullPropertyAssignmentValue",
+        "description" : "$this->_logfile with non-nullable declared type 'resource|string' cannot be assigned nullable type 'null'",
+        "categories"  : ["PossiblyNullPropertyAssignmentValue"], "severity" : "critical",
+        "fingerprint" : "8d1684bad0d791e86965874fa2214555", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 169, "end" : 169}
+    }
+    }, {
+    "type"        : "issue", "check_name" : "PossiblyNullPropertyAssignmentValue",
+    "description" : "$this->_logPath with non-nullable declared type 'string' cannot be assigned nullable type 'null'",
+    "categories"  : ["PossiblyNullPropertyAssignmentValue"], "severity" : "critical",
+    "fingerprint" : "11377e48204e20d03dddecc56bb0ded5", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 175, "end" : 175}
+    }
+}, {
+    "type"        : "issue", "check_name" : "ArgumentTypeCoercion",
+    "description" : "Argument 1 of set_exception_handler expects callable(Throwable):void|null, parent type array{JBDump&static, \"_exceptionHandler\"} provided",
+    "categories"  : ["ArgumentTypeCoercion"], "severity" : "critical",
+    "fingerprint" : "d6811a05928750c6109780826370bd3c", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 226, "end" : 226}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingClosureParamType",
+    "description" : "Parameter $a has no provided type", "categories" : ["MissingClosureParamType"],
+    "severity"    : "critical", "fingerprint" : "ba27a141905e6c7e5db547bc612a1521", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 272, "end" : 272}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingClosureParamType",
+    "description" : "Parameter $b has no provided type", "categories" : ["MissingClosureParamType"],
+    "severity"    : "critical", "fingerprint" : "733a61d0e9a26c1a12f915dad3bd3eda", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 272, "end" : 272}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidOperand",
+    "description" : "Cannot perform a numeric operation with a non-numeric type bool",
+    "categories"  : ["PossiblyInvalidOperand"], "severity" : "critical",
+    "fingerprint" : "ee3616218e4cffe759c16ee02e210174", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 320, "end" : 320}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidOperand",
+    "description" : "Cannot perform a numeric operation with a non-numeric type bool",
+    "categories"  : ["PossiblyInvalidOperand"], "severity" : "critical",
+    "fingerprint" : "354611547da81d65c9ab9cf0c4992724", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 322, "end" : 322}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidScalarArgument",
+    "description" : "Argument 1 of JBDump::_profilerFormatMemory expects int, bool|float provided",
+    "categories"  : ["InvalidScalarArgument"], "severity" : "critical",
+    "fingerprint" : "5ccbd9612e0a6f119f6397cb8ec11652", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 323, "end" : 323}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyFalseOperand",
+    "description" : "Left operand cannot be falsable, got false|int", "categories" : ["PossiblyFalseOperand"],
+    "severity"    : "critical", "fingerprint" : "36bc304b9e1ce95e56a69068cff86839", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 332, "end" : 332}
+    }
+}, {
+    "type"        : "issue", "check_name" : "ArgumentTypeCoercion",
+    "description" : "Argument 1 of min expects non-empty-array<array-key, mixed>, parent type list<mixed> provided",
+    "categories"  : ["ArgumentTypeCoercion"], "severity" : "critical",
+    "fingerprint" : "e1556a51390198bad40e8f147928e6a9", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 332, "end" : 332}
+    }
+}, {
+    "type"        : "issue", "check_name" : "ArgumentTypeCoercion",
+    "description" : "Argument 1 of min expects non-empty-array<array-key, mixed>, parent type list<mixed> provided",
+    "categories"  : ["ArgumentTypeCoercion"], "severity" : "critical",
+    "fingerprint" : "425a4df434425b5f18832e28397a69e5", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 332, "end" : 332}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyFalseOperand",
+    "description" : "Left operand cannot be falsable, got false|int", "categories" : ["PossiblyFalseOperand"],
+    "severity"    : "critical", "fingerprint" : "057194c689fc0dc3bcb02f5113ab395e", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 333, "end" : 333}
+    }
+}, {
+    "type"        : "issue", "check_name" : "ArgumentTypeCoercion",
+    "description" : "Argument 1 of max expects non-empty-array<array-key, mixed>, parent type list<mixed> provided",
+    "categories"  : ["ArgumentTypeCoercion"], "severity" : "critical",
+    "fingerprint" : "cf8161a12b43e63306bc09a92016a730", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 333, "end" : 333}
+    }
+}, {
+    "type"        : "issue", "check_name" : "ArgumentTypeCoercion",
+    "description" : "Argument 1 of max expects non-empty-array<array-key, mixed>, parent type list<mixed> provided",
+    "categories"  : ["ArgumentTypeCoercion"], "severity" : "critical",
+    "fingerprint" : "69812a6bbb6c27d50eebdf4d47e4456b", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 333, "end" : 333}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidScalarArgument",
+    "description" : "Argument 1 of JBDump::_profilerFormatMemory expects int, float|int provided",
+    "categories"  : ["InvalidScalarArgument"], "severity" : "critical",
+    "fingerprint" : "f81d28f5a955282b36cc975c90288c07", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 336, "end" : 336}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidScalarArgument",
+    "description" : "Argument 1 of JBDump::_profilerFormatMemory expects int, float|int provided",
+    "categories"  : ["InvalidScalarArgument"], "severity" : "critical",
+    "fingerprint" : "6700e371b0f8afae5f26e632c5926e9c", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 337, "end" : 337}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyFalseOperand",
+    "description" : "Left operand cannot be falsable, got false|int", "categories" : ["PossiblyFalseOperand"],
+    "severity"    : "critical", "fingerprint" : "879acdcf855154ad880c18a5732c4dd8", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 338, "end" : 338}
+    }
+}, {
+    "type"        : "issue", "check_name" : "ArgumentTypeCoercion",
+    "description" : "Argument 1 of min expects non-empty-array<array-key, mixed>, parent type list<mixed> provided",
+    "categories"  : ["ArgumentTypeCoercion"], "severity" : "critical",
+    "fingerprint" : "0f49dc8ce60ebf26a60f924050890a06", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 338, "end" : 338}
+    }
+}, {
+    "type"        : "issue", "check_name" : "ArgumentTypeCoercion",
+    "description" : "Argument 1 of min expects non-empty-array<array-key, mixed>, parent type list<mixed> provided",
+    "categories"  : ["ArgumentTypeCoercion"], "severity" : "critical",
+    "fingerprint" : "3372c58911bf4e9a10860cfc4c8c4ee5", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 338, "end" : 338}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyFalseOperand",
+    "description" : "Left operand cannot be falsable, got false|int", "categories" : ["PossiblyFalseOperand"],
+    "severity"    : "critical", "fingerprint" : "ab4fb2048767c001678977e4c9eba1de", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 339, "end" : 339}
+    }
+}, {
+    "type"        : "issue", "check_name" : "ArgumentTypeCoercion",
+    "description" : "Argument 1 of max expects non-empty-array<array-key, mixed>, parent type list<mixed> provided",
+    "categories"  : ["ArgumentTypeCoercion"], "severity" : "critical",
+    "fingerprint" : "b454eee6a892a9a6d42b1191c9850bf5", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 339, "end" : 339}
+    }
+}, {
+    "type"        : "issue", "check_name" : "ArgumentTypeCoercion",
+    "description" : "Argument 1 of max expects non-empty-array<array-key, mixed>, parent type list<mixed> provided",
+    "categories"  : ["ArgumentTypeCoercion"], "severity" : "critical",
+    "fingerprint" : "c4cd4d64707919d891ddfc7302457dc7", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 339, "end" : 339}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingParamType",
+    "description" : "Parameter $reportLevel has no provided type", "categories" : ["MissingParamType"],
+    "severity"    : "critical", "fingerprint" : "02a1db9ff01d60780bd018bce0524952", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 482, "end" : 482}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidScalarArgument",
+    "description" : "Argument 2 of ini_set expects string, 1 provided", "categories" : ["InvalidScalarArgument"],
+    "severity"    : "critical", "fingerprint" : "2fb5497bc7ae4f80715918256d7550b9", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 495, "end" : 495}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidScalarArgument",
+    "description" : "Argument 2 of ini_set expects string, 1 provided", "categories" : ["InvalidScalarArgument"],
+    "severity"    : "critical", "fingerprint" : "ecb896b92430be8a067522841a4de5aa", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 496, "end" : 496}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidScalarArgument",
+    "description" : "Argument 2 of ini_set expects string, 0 provided", "categories" : ["InvalidScalarArgument"],
+    "severity"    : "critical", "fingerprint" : "0a73a71096216b0bad785e0b014b01e3", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 500, "end" : 500}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidScalarArgument",
+    "description" : "Argument 2 of ini_set expects string, 0 provided", "categories" : ["InvalidScalarArgument"],
+    "severity"    : "critical", "fingerprint" : "a767cbc488dd1786f4957098e3ad1c2a", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 501, "end" : 501}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidScalarArgument",
+    "description" : "Argument 2 of ini_set expects string, 0 provided", "categories" : ["InvalidScalarArgument"],
+    "severity"    : "critical", "fingerprint" : "9823d13b658b2929499c0357f1f30a32", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 502, "end" : 502}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::maxTime does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "8df26206f907a7957b0d7bf7da51b160", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 511, "end" : 511}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::maxTime does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "3082e930b1986773f667637b098c9944", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 516, "end" : 516}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidScalarArgument",
+    "description" : "Argument 2 of ini_set expects string, int provided", "categories" : ["InvalidScalarArgument"],
+    "severity"    : "critical", "fingerprint" : "9db7450aa672c27cd0415885d48566ad", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 519, "end" : 519}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::ip does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "487293033b3d766396aeda1d418b52dd", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 606, "end" : 606}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::ip does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "821b40804036a56981bb1d2c0190c9fd", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 611, "end" : 611}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::get does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "4274eacc4b00addfd40279ad29477efb", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 629, "end" : 629}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::get does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "606407cd32eb229d2ac0240eb98190cc", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 634, "end" : 634}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::log does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "686cc5fc2f575754fe25fa7c41f1e1bf", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 645, "end" : 645}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::log does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "5bef787920e6ebfa8903fe6b7f5dadda", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 650, "end" : 650}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidArgument",
+    "description" : "Argument 2 of JBDump_array2php::toString expects null, non-falsy-string provided",
+    "categories"  : ["InvalidArgument"], "severity" : "critical", "fingerprint" : "0fcc3833e71ad4134b70e3f68428a324",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 683, "end" : 683}
+    }
+}, {
+    "type"       : "issue", "check_name" : "ForbiddenCode", "description" : "Unsafe var_dump",
+    "categories" : ["ForbiddenCode"], "severity" : "critical", "fingerprint" : "3e0d20aa5e40043ffe1de8a2e6586c36",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 687, "end" : 687}
+    }
+}, {
+    "type"       : "issue", "check_name" : "ForbiddenCode", "description" : "Unsafe var_dump",
+    "categories" : ["ForbiddenCode"], "severity" : "critical", "fingerprint" : "554235da4e75e3b73f015b29f69251b9",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 689, "end" : 689}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArrayOffset",
+    "description" : "Cannot access value on variable $entry['name'] using offset value of name, expecting int",
+    "categories"  : ["PossiblyInvalidArrayOffset"], "severity" : "critical",
+    "fingerprint" : "3d820b5bd3b7f1d0cb3c0a3a5301eaa6", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 698, "end" : 698}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArrayOffset",
+    "description" : "Cannot access value on variable $entry['datetime'] using offset value of datetime, expecting int",
+    "categories"  : ["PossiblyInvalidArrayOffset"], "severity" : "critical",
+    "fingerprint" : "0fa2483d4eb572931337e1966b85ed3d", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 699, "end" : 699}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArrayOffset",
+    "description" : "Cannot access value on variable $entry['client_ip'] using offset value of client_ip, expecting int",
+    "categories"  : ["PossiblyInvalidArrayOffset"], "severity" : "critical",
+    "fingerprint" : "f9c347077b4a492686dc6e894758dd22", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 700, "end" : 700}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArrayOffset",
+    "description" : "Cannot access value on variable $entry['file'] using offset value of file, expecting int",
+    "categories"  : ["PossiblyInvalidArrayOffset"], "severity" : "critical",
+    "fingerprint" : "c934700a7aacc058f5675fc9f63289fe", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 701, "end" : 701}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArgument",
+    "description" : "Argument 3 of error_log expects string, possibly different type resource|string provided",
+    "categories"  : ["PossiblyInvalidArgument"], "severity" : "critical",
+    "fingerprint" : "1e9fc85aca96b96957a5b6235ddd16f1", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 716, "end" : 716}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArgument",
+    "description" : "Argument 1 of file_exists expects string, possibly different type resource|string provided",
+    "categories"  : ["PossiblyInvalidArgument"], "severity" : "critical",
+    "fingerprint" : "7edadfd8f2e3ae8470cc762f355cf160", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 729, "end" : 729}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyUndefinedVariable",
+    "description" : "Possibly undefined variable $header, first seen on line 735",
+    "categories"  : ["PossiblyUndefinedVariable"], "severity" : "critical",
+    "fingerprint" : "7ef71724a1428f93aab387ccd73d1dd8", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 735, "end" : 735}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArgument",
+    "description" : "Argument 3 of error_log expects string, possibly different type resource|string provided",
+    "categories"  : ["PossiblyInvalidArgument"], "severity" : "critical",
+    "fingerprint" : "6518e0588a2dc12c81a3fc62fd06b431", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 749, "end" : 749}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::files does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "2190a6c5e8d131b5d973d400b6d3df11", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 757, "end" : 757}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::files does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "d9ba22db6a09b5dd2d4431f0eb5d7b62", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 762, "end" : 762}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::memory does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "1308809b3e3ac5961166a33a114513ba", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 770, "end" : 770}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingParamType",
+    "description" : "Parameter $formated has no provided type", "categories" : ["MissingParamType"],
+    "severity"    : "critical", "fingerprint" : "77dc7f798c13b4ff3dd12b8a9b29724a", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 772, "end" : 772}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::memory does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "663be0f0415566de7f7163a4aea7fc15", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 775, "end" : 775}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::interfaces does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "2c75e914f88c7ba61144a7e4752d52e0", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 788, "end" : 788}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::interfaces does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "92f043bb8045fa6ca5d3eb82a2d6fd7d", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 793, "end" : 793}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::url does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "1b3ed7d2ea7edf12782c901c8d5a9a94", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 803, "end" : 803}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::url does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "6aae136de68975a0b29737e605a08a17", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 808, "end" : 808}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidArrayOffset",
+    "description" : "Cannot access value on variable $parsed using offset value of query_parsed, expecting 'scheme', 'user', 'pass', 'host', 'port', 'path', 'query' or 'fragment'",
+    "categories"  : ["InvalidArrayOffset"], "severity" : "critical", "fingerprint" : "2f5a40942cb47e9d73d3f714b4a8498c",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 814, "end" : 814}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::includes does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "6a2d62681fc75b92b934657742ba15c2", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 822, "end" : 822}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::includes does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "db987d43476858812148efbcd5aa09fe", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 827, "end" : 827}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::functions does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "e965927af091f2062d5d33b3e4a0bc49", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 836, "end" : 836}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::functions does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "8ece3e91258d372d45ad3193f066b1d7", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 841, "end" : 841}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::extensions does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "0240c553265c58fcc0ea6635443c4f0b", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 878, "end" : 878}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::extensions does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "54527ae78d199fbdbe95b0ea127f9419", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 883, "end" : 883}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::headers does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "63d32739e247670ef676751b462004f9", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 890, "end" : 890}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::headers does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "b9cc9c6e384443567a759a0d0306c643", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 895, "end" : 895}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::phpini does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "5c1968c042bbf357292b6b9252d704e5", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 922, "end" : 922}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::phpini does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "35086aeb3cd2a441d218fd652b562cbb", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 927, "end" : 927}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::phpini does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "9da1b8f360fcd3650a2b6085b81ace72", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 932, "end" : 932}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::path does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "14cded4c484c86c9ae954ea77244e73a", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 963, "end" : 963}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::path does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "6ea2bf0d4f08b82012770b70668592ff", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 968, "end" : 968}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::post does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "f4af933d539e10394790684ca1e14fbe", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1002, "end" : 1002}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::post does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "f910bed0dce78fa5080b8b6aae0d4b07", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1007, "end" : 1007}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::server does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "b10d852a03ea0abf283da5513dd3973a", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1014, "end" : 1014}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::server does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "938a18e9c86bc4167c33dbe3a75cf722", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1019, "end" : 1019}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::cookie does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "2332e883b08bc8d2254094cc3ac772f7", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1026, "end" : 1026}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::cookie does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "965d0cea2a937529d37fd0924e388d33", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1031, "end" : 1031}
+    }
+}, {
+    "type"       : "issue", "check_name" : "MissingParamType", "description" : "Parameter $json has no provided type",
+    "categories" : ["MissingParamType"], "severity" : "critical", "fingerprint" : "038b449218b9e5e419812d46a12948ad",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1042, "end" : 1042}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::env does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "ab6489759c366a947b2e36653ddbd9cb", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1056, "end" : 1056}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::env does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "41eb91b1695550ea31f0d99c366d7d48", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1061, "end" : 1061}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::globals does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "a0275aad3dc72edc56829ef279ef2088", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1086, "end" : 1086}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::globals does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "166244e4cfea7434f12ce0a4433fdaa5", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1091, "end" : 1091}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyNullArgument",
+    "description" : "Argument 2 of date cannot be null, possibly null value provided",
+    "categories"  : ["PossiblyNullArgument"], "severity" : "critical",
+    "fingerprint" : "03138ad42d391ebad80e2a14e360ba15", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1108, "end" : 1108}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyNullOperand",
+    "description" : "Cannot concatenate with a possibly null int|null", "categories" : ["PossiblyNullOperand"],
+    "severity"    : "critical", "fingerprint" : "c1e8e484b3eda588e223eee501a5bb77", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1109, "end" : 1109}
+    }
+}, {
+    "type"        : "issue", "check_name" : "RedundantCastGivenDocblockType",
+    "description" : "Redundant cast to array given docblock-provided type",
+    "categories"  : ["RedundantCastGivenDocblockType"], "severity" : "critical",
+    "fingerprint" : "a6d73cdc2961bc3722b7d9fdb1baa4eb", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1131, "end" : 1131}
+    }
+}, {
+    "type"        : "issue", "check_name" : "NullArgument",
+    "description" : "Argument 2 of http_build_query cannot be null, null value provided to parameter with type string",
+    "categories"  : ["NullArgument"], "severity" : "critical", "fingerprint" : "297358d7a0ebaaca79005cad240202a3",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1131, "end" : 1131}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidScalarArgument",
+    "description" : "Argument 2 of explode expects string, bool|string provided",
+    "categories"  : ["InvalidScalarArgument"], "severity" : "critical",
+    "fingerprint" : "d04ee5d5c57e2e8258a815f4f20685ce", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1184, "end" : 1184}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyFalseArgument",
+    "description" : "Argument 3 of substr cannot be false, possibly false value provided",
+    "categories"  : ["PossiblyFalseArgument"], "severity" : "critical",
+    "fingerprint" : "8e5d10b959fe0ba776f0cf92f4f7a2c6", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1195, "end" : 1195}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyFalseOperand",
+    "description" : "Left operand cannot be falsable, got false|int|positive-int",
+    "categories"  : ["PossiblyFalseOperand"], "severity" : "critical",
+    "fingerprint" : "4ce42866b7b78cdb3e2b5a563ed0e89c", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1196, "end" : 1196}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::locale does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "7270bf51926e7ddb926d2863077cf7fa", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1225, "end" : 1225}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::locale does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "ec658a2c974b5fb74b8ab883a877e215", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1230, "end" : 1230}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::timezone does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "0ce39e207ab6b3f84131d45466c2167c", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1248, "end" : 1248}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::timezone does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "1681efb1dd53fa65d4b9af8ae6536806", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1253, "end" : 1253}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidDocblockParamName",
+    "description" : "Incorrect param name $name in docblock for JBDump::phpArray",
+    "categories"  : ["InvalidDocblockParamName"], "severity" : "critical",
+    "fingerprint" : "d9ebaa40e0f95f5424aa638fdb6fb911", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1284, "end" : 1284}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingParamType",
+    "description" : "Parameter $varname has no provided type", "categories" : ["MissingParamType"],
+    "severity"    : "critical", "fingerprint" : "2bb2c6151584be47089e1685677ba9f5", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1288, "end" : 1288}
+    }
+}, {
+    "type"        : "issue", "check_name" : "UndefinedVariable",
+    "description" : "Cannot find referenced variable $params", "categories" : ["UndefinedVariable"],
+    "severity"    : "critical", "fingerprint" : "169c7d33cdd824dfccab13b061e391a3", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1300, "end" : 1300}
+    }
+}, {
+    "type"       : "issue", "check_name" : "ForbiddenCode", "description" : "Unsafe var_dump",
+    "categories" : ["ForbiddenCode"], "severity" : "critical", "fingerprint" : "a33079ef57572b6803d1058f61f6721c",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1320, "end" : 1320}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::trace does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "fa99025249f140876a6f318869ddeb28", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1339, "end" : 1339}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::trace does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "8f5425fd90702a1d7bebb706ad75f579", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1344, "end" : 1344}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArrayAccess",
+    "description" : "Cannot access array value on non-array variable $trace of type true",
+    "categories"  : ["PossiblyInvalidArrayAccess"], "severity" : "critical",
+    "fingerprint" : "e66eb33bd2d1b09ae4122c6e52004487", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1350, "end" : 1350}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArgument",
+    "description" : "Argument 1 of JBDump::convertTrace expects array<array-key, mixed>, possibly different type array<int, array<array-key, mixed>>|true provided",
+    "categories"  : ["PossiblyInvalidArgument"], "severity" : "critical",
+    "fingerprint" : "88757219dcce5470052f42698ea9250a", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1352, "end" : 1352}
+    }
+}, {
+    "type"        : "issue", "check_name" : "RedundantCastGivenDocblockType",
+    "description" : "Redundant cast to bool given docblock-provided type",
+    "categories"  : ["RedundantCastGivenDocblockType"], "severity" : "critical",
+    "fingerprint" : "52ca2b37409fcccf9870c0d887238bcd", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1369, "end" : 1369}
+    }
+}, {
+    "type"       : "issue", "check_name" : "MissingParamType", "description" : "Parameter $object has no provided type",
+    "categories" : ["MissingParamType"], "severity" : "critical", "fingerprint" : "d6e98fce3be7f54213b5380b0daa11f2",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1381, "end" : 1381}
+    }
+}, {
+    "type"        : "issue", "check_name" : "RedundantConditionGivenDocblockType",
+    "description" : "Docblock-defined type JBDump for $result is never falsy",
+    "categories"  : ["RedundantConditionGivenDocblockType"], "severity" : "critical",
+    "fingerprint" : "5d94399680bd83fc8f927e09ea1135e1", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1405, "end" : 1405}
+    }
+}, {
+    "type"       : "issue", "check_name" : "UndefinedMethod", "description" : "Method JBDump::offsetGet does not exist",
+    "categories" : ["UndefinedMethod"], "severity" : "critical", "fingerprint" : "34d819d644a37b29fd2487b878a1caa7",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1406, "end" : 1406}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArrayAccess",
+    "description" : "Cannot access array value on non-array variable $result of type true",
+    "categories"  : ["PossiblyInvalidArrayAccess"], "severity" : "critical",
+    "fingerprint" : "46d41be438f1eec9f18d471001bcf4f9", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1422, "end" : 1422}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArgument",
+    "description" : "Argument 1 of JBDump::_getFunction expects function|string, possibly different type Closure|string provided",
+    "categories"  : ["PossiblyInvalidArgument"], "severity" : "critical",
+    "fingerprint" : "a0b97ffbefca0d1fb25c6e9a316c914d", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1446, "end" : 1446}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArrayAccess",
+    "description" : "Cannot access array value on non-array variable $result of type true",
+    "categories"  : ["PossiblyInvalidArrayAccess"], "severity" : "critical",
+    "fingerprint" : "d011af90822e60a879593adad46c6d85", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1448, "end" : 1448}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::microtime does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "678623dca0eca3fbecb9b6bb1887c92e", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1455, "end" : 1455}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::microtime does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "e6d0b86d12e538ea2c56fd50e8325275", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1461, "end" : 1461}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidDocblock",
+    "description" : "Found duplicated @return or prefixed @return tag in docblock for JBDump::markStart",
+    "categories"  : ["InvalidDocblock"], "severity" : "critical", "fingerprint" : "11a63c2e6fe7bbf1d40fa88a2fff0801",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1474, "end" : 1474}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump::markStart does not have a return type, expecting JBDump|false",
+    "categories"  : ["MissingReturnType"], "severity" : "critical", "fingerprint" : "b8551ffeacda580a1971a92ea23b9729",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1474, "end" : 1474}
+    }
+}, {
+    "type"       : "issue", "check_name" : "MissingParamType", "description" : "Parameter $label has no provided type",
+    "categories" : ["MissingParamType"], "severity" : "critical", "fingerprint" : "65062551c398d689fd0ad8d71cacbf3c",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1474, "end" : 1474}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump::inc does not have a return type", "categories" : ["MissingReturnType"],
+    "severity"    : "critical", "fingerprint" : "276600f151030b493db3ea362fd1d10f", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1504, "end" : 1504}
+    }
+}, {
+    "type"        : "issue", "check_name" : "DocblockTypeContradiction",
+    "description" : "Docblock-defined type int for $outputMode is never string",
+    "categories"  : ["DocblockTypeContradiction"], "severity" : "critical",
+    "fingerprint" : "c9059ee3aeaf00a7bcfa9181c775eb8e", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1518, "end" : 1518}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidDocblock",
+    "description" : "Found duplicated @return or prefixed @return tag in docblock for JBDump::incTrace",
+    "categories"  : ["InvalidDocblock"], "severity" : "critical", "fingerprint" : "a4af6ff30b5f71339ecd6cdc130822ae",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1541, "end" : 1541}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump::incTrace does not have a return type", "categories" : ["MissingReturnType"],
+    "severity"    : "critical", "fingerprint" : "54a18f07ecc22de1d48482bf0eec28e0", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1541, "end" : 1541}
+    }
+}, {
+    "type"       : "issue", "check_name" : "MissingParamType", "description" : "Parameter $label has no provided type",
+    "categories" : ["MissingParamType"], "severity" : "critical", "fingerprint" : "e3d8b041f9e001674b27d1bbf2620087",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1541, "end" : 1541}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::markStop does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "cdd9d0fba5c632145f2e9500e7017772", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1584, "end" : 1584}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::markStop does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "bc8bcdfb59991326bd4f81bb914365e6", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1593, "end" : 1593}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::mark does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "616df6aa117093977d1ea8dc7ef83272", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1614, "end" : 1614}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::mark does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "84b54fade805a09b4598f007f68d98ed", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1620, "end" : 1620}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidReturnType",
+    "description" : "No return statements were found for method JBDump::profiler but return type 'JBDump' was expected",
+    "categories"  : ["InvalidReturnType"], "severity" : "critical", "fingerprint" : "03d5e1b4a6f4dd3b87dc33f78ec43167",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1651, "end" : 1651}
+    }
+}, {
+    "type"        : "issue", "check_name" : "RedundantCastGivenDocblockType",
+    "description" : "Redundant cast to int given docblock-provided type",
+    "categories"  : ["RedundantCastGivenDocblockType"], "severity" : "critical",
+    "fingerprint" : "0f8c58a0b3147848ad69745e856b2432", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1657, "end" : 1657}
+    }
+}, {
+    "type"        : "issue", "check_name" : "RedundantCastGivenDocblockType",
+    "description" : "Redundant cast to string given docblock-provided type",
+    "categories"  : ["RedundantCastGivenDocblockType"], "severity" : "critical",
+    "fingerprint" : "243f045df96b7827fc794d308d74d33e", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1707, "end" : 1707}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidReturnType",
+    "description" : "The declared return type 'float' for JBDump::_profilerFormatMemory is incorrect, got 'float|non-empty-string'",
+    "categories"  : ["InvalidReturnType"], "severity" : "critical", "fingerprint" : "7f217ec9c33d979884006a0a1651ca87",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1717, "end" : 1717}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidReturnStatement",
+    "description" : "The inferred type 'float|non-empty-string' does not match the declared return type 'float' for JBDump::_profilerFormatMemory",
+    "categories"  : ["InvalidReturnStatement"], "severity" : "critical",
+    "fingerprint" : "f0f10854d520865202f2640adf712093", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1727, "end" : 1727}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidReturnType",
+    "description" : "The declared return type 'float' for JBDump::_profilerFormatTime is incorrect, got 'float|non-empty-lowercase-string'",
+    "categories"  : ["InvalidReturnType"], "severity" : "critical", "fingerprint" : "fecbf523eec35c36c3dd2e664ca359b9",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1734, "end" : 1734}
+    }
+}, {
+    "type"       : "issue", "check_name" : "MissingParamType", "description" : "Parameter $time has no provided type",
+    "categories" : ["MissingParamType"], "severity" : "critical", "fingerprint" : "228f0d8b29c7157fa20ba9a9dd19e377",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1736, "end" : 1736}
+    }
+}, {
+    "type"       : "issue", "check_name" : "MissingParamType", "description" : "Parameter $round has no provided type",
+    "categories" : ["MissingParamType"], "severity" : "critical", "fingerprint" : "a6da236b207cfb4b56aa23e5d8be6976",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1736, "end" : 1736}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidReturnStatement",
+    "description" : "The inferred type 'float|non-empty-lowercase-string' does not match the declared return type 'float' for JBDump::_profilerFormatTime",
+    "categories"  : ["InvalidReturnStatement"], "severity" : "critical",
+    "fingerprint" : "861c55a412bb11650af9de3c6e2f11d0", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1744, "end" : 1744}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump::_profilerRenderTotal does not have a return type, expecting void",
+    "categories"  : ["MissingReturnType"], "severity" : "critical", "fingerprint" : "aa4a0e8cbd98a9d2d165311abd48a7e4",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1767, "end" : 1767}
+    }
+}, {
+    "type"        : "issue", "check_name" : "ArgumentTypeCoercion",
+    "description" : "Argument 1 of max expects non-empty-array<array-key, mixed>, parent type list<mixed> provided",
+    "categories"  : ["ArgumentTypeCoercion"], "severity" : "critical",
+    "fingerprint" : "7285017fd9c849173ab7edd79dafb339", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1783, "end" : 1783}
+    }
+}, {
+    "type"        : "issue", "check_name" : "ArgumentTypeCoercion",
+    "description" : "Argument 1 of min expects non-empty-array<array-key, mixed>, parent type list<mixed> provided",
+    "categories"  : ["ArgumentTypeCoercion"], "severity" : "critical",
+    "fingerprint" : "3f7b5ce866b80f3c20f6386497d492f6", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1784, "end" : 1784}
+    }
+}, {
+    "type"        : "issue", "check_name" : "ArgumentTypeCoercion",
+    "description" : "Argument 1 of max expects non-empty-array<array-key, mixed>, parent type list<mixed> provided",
+    "categories"  : ["ArgumentTypeCoercion"], "severity" : "critical",
+    "fingerprint" : "0d739194fa07d52b9171bdf8d4493870", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1788, "end" : 1788}
+    }
+}, {
+    "type"        : "issue", "check_name" : "ArgumentTypeCoercion",
+    "description" : "Argument 1 of min expects non-empty-array<array-key, mixed>, parent type list<mixed> provided",
+    "categories"  : ["ArgumentTypeCoercion"], "severity" : "critical",
+    "fingerprint" : "1171f6f28a0427ddbf11e187fce50422", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1789, "end" : 1789}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump::_profilerRenderFile does not have a return type, expecting void",
+    "categories"  : ["MissingReturnType"], "severity" : "critical", "fingerprint" : "fb533bacbbb3620ca325de62d63f76ad",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1805, "end" : 1805}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump::_profilerRenderEcho does not have a return type, expecting void",
+    "categories"  : ["MissingReturnType"], "severity" : "critical", "fingerprint" : "695d29c063144c4896016cf1f719395e",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1817, "end" : 1817}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump::_profilerRenderTable does not have a return type, expecting void",
+    "categories"  : ["MissingReturnType"], "severity" : "critical", "fingerprint" : "0efb84694051ea61aa8471af34dc94ad",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1829, "end" : 1829}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump::_profilerRenderChart does not have a return type, expecting void",
+    "categories"  : ["MissingReturnType"], "severity" : "critical", "fingerprint" : "ea20c95389d75d8d184ccbeca75038e9",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1880, "end" : 1880}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidFalsableReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::dump does not allow false, but 'JBDump|false' contains false",
+    "categories"  : ["InvalidFalsableReturnType"], "severity" : "critical",
+    "fingerprint" : "3fef060a78b6d9c7bb352e416348e50a", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1941, "end" : 1941}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::dump does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "883f2b762a1165d42ed0ac77b1f7700b", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1946, "end" : 1946}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump::_dumpRenderHtml does not have a return type, expecting void",
+    "categories"  : ["MissingReturnType"], "severity" : "critical", "fingerprint" : "076a229ac65eb960087db86adb7c898d",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 1986, "end" : 1986}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump::_dumpRenderLite does not have a return type, expecting void",
+    "categories"  : ["MissingReturnType"], "severity" : "critical", "fingerprint" : "b83561ae7695a273a116eea8d87b8b2a",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2022, "end" : 2022}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump::_dumpRenderLog does not have a return type, expecting void",
+    "categories"  : ["MissingReturnType"], "severity" : "critical", "fingerprint" : "f1301c6dcf3b0fcf770787d9ed0b91b4",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2071, "end" : 2071}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump::_dumpRenderMail does not have a return type, expecting void",
+    "categories"  : ["MissingReturnType"], "severity" : "critical", "fingerprint" : "88ad030c31ba4b380f55c18dee1ce304",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2082, "end" : 2082}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump::_dumpRenderPrintr does not have a return type, expecting void",
+    "categories"  : ["MissingReturnType"], "severity" : "critical", "fingerprint" : "50141524442ed18865b4e390bf39e9e1",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2096, "end" : 2096}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump::_dumpRenderVardump does not have a return type, expecting void",
+    "categories"  : ["MissingReturnType"], "severity" : "critical", "fingerprint" : "8ef19858069c0095b7321ba3b5b6e70e",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2107, "end" : 2107}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyNullArgument",
+    "description" : "Argument 1 of substr cannot be null, possibly null value provided",
+    "categories"  : ["PossiblyNullArgument"], "severity" : "critical",
+    "fingerprint" : "d53fdc102b22f3a325cab12e00256ef1", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2143, "end" : 2143}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyFalseOperand",
+    "description" : "Left operand cannot be falsable, got false|int|positive-int",
+    "categories"  : ["PossiblyFalseOperand"], "severity" : "critical",
+    "fingerprint" : "a7d47a0906a247ab40681b0cdf894ae2", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2143, "end" : 2143}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyNullArgument",
+    "description" : "Argument 1 of strpos cannot be null, possibly null value provided",
+    "categories"  : ["PossiblyNullArgument"], "severity" : "critical",
+    "fingerprint" : "f915d0f571ba8a48b456cbee1347050f", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2143, "end" : 2143}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump::_isExpandedLevel does not have a return type, expecting bool",
+    "categories"  : ["MissingReturnType"], "severity" : "critical", "fingerprint" : "2a1f5509c50fc79271ff3ca0b2f5b5bc",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2163, "end" : 2163}
+    }
+}, {
+    "type"        : "issue", "check_name" : "TooManyArguments",
+    "description" : "Too many arguments for method JBDump::_boolean - saw 3", "categories" : ["TooManyArguments"],
+    "severity"    : "critical", "fingerprint" : "898f45b4ded0b6bd77671873af731ee5", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2195, "end" : 2195}
+    }
+}, {
+    "type"        : "issue", "check_name" : "TooManyArguments",
+    "description" : "Too many arguments for method JBDump::_integer - saw 3", "categories" : ["TooManyArguments"],
+    "severity"    : "critical", "fingerprint" : "66d979fc89191a6579bcaafb504ab719", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2198, "end" : 2198}
+    }
+}, {
+    "type"        : "issue", "check_name" : "TooManyArguments",
+    "description" : "Too many arguments for method JBDump::_float - saw 3", "categories" : ["TooManyArguments"],
+    "severity"    : "critical", "fingerprint" : "49280f81cb3552c00d4f18ae214fe221", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2201, "end" : 2201}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyFalseArgument",
+    "description" : "Argument 3 of JBDump::_string cannot be false, possibly false value provided",
+    "categories"  : ["PossiblyFalseArgument"], "severity" : "critical",
+    "fingerprint" : "8cfb487f0ada7a1d5a718a35f2e5ee9a", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2204, "end" : 2204}
+    }
+}, {
+    "type"        : "issue", "check_name" : "TooManyArguments",
+    "description" : "Too many arguments for method JBDump::_array - saw 3", "categories" : ["TooManyArguments"],
+    "severity"    : "critical", "fingerprint" : "2cff3038d6179c9b53c79e392022bf12", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2209, "end" : 2209}
+    }
+}, {
+    "type"        : "issue", "check_name" : "TooManyArguments",
+    "description" : "Too many arguments for method JBDump::_maxdepth - saw 3", "categories" : ["TooManyArguments"],
+    "severity"    : "critical", "fingerprint" : "16145498de02d9c9d8c6d2f1b6bc5c9e", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2212, "end" : 2212}
+    }
+}, {
+    "type"        : "issue", "check_name" : "TypeDoesNotContainType",
+    "description" : "\"Closure\" cannot be identical to class-string", "categories" : ["TypeDoesNotContainType"],
+    "severity"    : "critical", "fingerprint" : "e31ec52ef29053a2deaf434b5b6e438b", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2219, "end" : 2219}
+    }
+}, {
+    "type"        : "issue", "check_name" : "TooManyArguments",
+    "description" : "Too many arguments for method JBDump::_closure - saw 3", "categories" : ["TooManyArguments"],
+    "severity"    : "critical", "fingerprint" : "1ba5350eced347682c6529b25027091a", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2220, "end" : 2220}
+    }
+}, {
+    "type"        : "issue", "check_name" : "TooManyArguments",
+    "description" : "Too many arguments for method JBDump::_object - saw 3", "categories" : ["TooManyArguments"],
+    "severity"    : "critical", "fingerprint" : "784e82dd23be1c50a7b25b5b27ccfa7e", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2222, "end" : 2222}
+    }
+}, {
+    "type"        : "issue", "check_name" : "TooManyArguments",
+    "description" : "Too many arguments for method JBDump::_resource - saw 3", "categories" : ["TooManyArguments"],
+    "severity"    : "critical", "fingerprint" : "1876c20025adb6b682a7b8cd419aed82", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2231, "end" : 2231}
+    }
+}, {
+    "type"        : "issue", "check_name" : "TooManyArguments",
+    "description" : "Too many arguments for method JBDump::_undefined - saw 3", "categories" : ["TooManyArguments"],
+    "severity"    : "critical", "fingerprint" : "30ab6c0c811bb86ed062179cf1b52861", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2234, "end" : 2234}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArgument",
+    "description" : "Argument 1 of get_object_vars expects object, possibly different type array<array-key, mixed>|object provided",
+    "categories"  : ["PossiblyInvalidArgument"], "severity" : "critical",
+    "fingerprint" : "f993566cd7080f8d05acd851e08778a2", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2254, "end" : 2254}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArgument",
+    "description" : "Argument 1 of array_keys expects array<array-key, mixed>, possibly different type array<array-key, mixed>|object provided",
+    "categories"  : ["PossiblyInvalidArgument"], "severity" : "critical",
+    "fingerprint" : "b3ca1b7c65e82254292e8b8b091510da", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2254, "end" : 2254}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArgument",
+    "description" : "Argument 1 of property_exists expects object|string, possibly different type array<array-key, mixed>|object provided",
+    "categories"  : ["PossiblyInvalidArgument"], "severity" : "critical",
+    "fingerprint" : "a9a993a76e4c6b1ace5f627b2f27bdd2", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2266, "end" : 2266}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArgument",
+    "description" : "Argument 1 of JBDump::_getMethods expects object, possibly different type array<array-key, mixed>|object provided",
+    "categories"  : ["PossiblyInvalidArgument"], "severity" : "critical",
+    "fingerprint" : "02171073699c30b011d893b6b57c0f9b", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2279, "end" : 2279}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArgument",
+    "description" : "Argument 1 of get_class expects object, possibly different type array<array-key, mixed>|object provided",
+    "categories"  : ["PossiblyInvalidArgument"], "severity" : "critical",
+    "fingerprint" : "7a125bb844d855820aecd34fe0b84de4", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2280, "end" : 2280}
+    }
+}, {
+    "type"        : "issue", "check_name" : "RedundantCastGivenDocblockType",
+    "description" : "Redundant cast to int given docblock-provided type",
+    "categories"  : ["RedundantCastGivenDocblockType"], "severity" : "critical",
+    "fingerprint" : "84f20fe01825ccbf804100cc20d75dfe", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2326, "end" : 2326}
+    }
+}, {
+    "type"        : "issue", "check_name" : "RedundantCastGivenDocblockType",
+    "description" : "Redundant cast to float given docblock-provided type",
+    "categories"  : ["RedundantCastGivenDocblockType"], "severity" : "critical",
+    "fingerprint" : "d20040bd3ac7a68ea8147ea94903e289", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2337, "end" : 2337}
+    }
+}, {
+    "type"       : "issue", "check_name" : "RedundantCast", "description" : "Redundant cast to array",
+    "categories" : ["RedundantCast"], "severity" : "critical", "fingerprint" : "313cc32c204b84ff9e148e9e63789f79",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2461, "end" : 2461}
+    }
+}, {
+    "type"       : "issue", "check_name" : "RedundantCast", "description" : "Redundant cast to array",
+    "categories" : ["RedundantCast"], "severity" : "critical", "fingerprint" : "27817d7def0e47f36f453a3f7925e29b",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2462, "end" : 2462}
+    }
+}, {
+    "type"       : "issue", "check_name" : "RedundantCast", "description" : "Redundant cast to array",
+    "categories" : ["RedundantCast"], "severity" : "critical", "fingerprint" : "dc5886979719248fc83f4834fce54a69",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2464, "end" : 2464}
+    }
+}, {
+    "type"       : "issue", "check_name" : "RedundantCast", "description" : "Redundant cast to array",
+    "categories" : ["RedundantCast"], "severity" : "critical", "fingerprint" : "519f6a1bf89b9b0ea65e92986dd0a4e1",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2466, "end" : 2466}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyInvalidArgument",
+    "description" : "Argument 1 of JBDump::_vars expects array<array-key, mixed>|object, possibly different type array<array-key, mixed>|bool provided",
+    "categories"  : ["PossiblyInvalidArgument"], "severity" : "critical",
+    "fingerprint" : "06461a1678cb68ee908bdcda5d941cfd", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2528, "end" : 2528}
+    }
+}, {
+    "type"        : "issue", "check_name" : "ArgumentTypeCoercion",
+    "description" : "Argument 1 of JBDump::_getFunction expects function|string, parent type object provided",
+    "categories"  : ["ArgumentTypeCoercion"], "severity" : "critical",
+    "fingerprint" : "7db3df61b83ce85550e829ce7389dbd0", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2528, "end" : 2528}
+    }
+}, {
+    "type"       : "issue", "check_name" : "MissingParamType", "description" : "Parameter $var has no provided type",
+    "categories" : ["MissingParamType"], "severity" : "critical", "fingerprint" : "f3c68173f8d2534c0862ebeecc3f0e1f",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2539, "end" : 2539}
+    }
+}, {
+    "type"       : "issue", "check_name" : "MissingParamType", "description" : "Parameter $name has no provided type",
+    "categories" : ["MissingParamType"], "severity" : "critical", "fingerprint" : "8520049b7ef9a22194e36467a5967d77",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2539, "end" : 2539}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidArrayOffset",
+    "description" : "Cannot access value on variable $symbol using a 0|float offset, expecting 0|1|2|3|4|5|6|7|8",
+    "categories"  : ["InvalidArrayOffset"], "severity" : "critical", "fingerprint" : "a90337dd065ca9ff95c338709793fba6",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2695, "end" : 2695}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyUndefinedArrayOffset",
+    "description" : "Possibly undefined array key $meta['line'] on array{file?: \"\"|mixed, line?: \"\"|mixed}",
+    "categories"  : ["PossiblyUndefinedArrayOffset"], "severity" : "critical",
+    "fingerprint" : "961b6d68a2cb0a8f463ac1c9506a07cf", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2799, "end" : 2799}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyUndefinedArrayOffset",
+    "description" : "Possibly undefined array key $meta['file'] on array{file?: \"\"|mixed, line?: \"\"|mixed}",
+    "categories"  : ["PossiblyUndefinedArrayOffset"], "severity" : "critical",
+    "fingerprint" : "2aedcb23bba6d2f19ee10706ce53ac51", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2800, "end" : 2800}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidNullableReturnType",
+    "description" : "The declared return type 'array<array-key, mixed>' for JBDump::_getMethods is not nullable, but 'list<mixed|string>|null' contains null",
+    "categories"  : ["InvalidNullableReturnType"], "severity" : "critical",
+    "fingerprint" : "3ed50449e39ca0848f80fae14eba890c", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2811, "end" : 2811}
+    }
+}, {
+    "type"        : "issue", "check_name" : "DocblockTypeContradiction",
+    "description" : "Docblock-defined type object for $object is never string",
+    "categories"  : ["DocblockTypeContradiction"], "severity" : "critical",
+    "fingerprint" : "29a94a65b33a95f8cb94740cbff6e8e2", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2815, "end" : 2815}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyNullArgument",
+    "description" : "Argument 1 of sort cannot be null, possibly null value provided",
+    "categories"  : ["PossiblyNullArgument"], "severity" : "critical",
+    "fingerprint" : "e6248bdf0a26668b51fbeb07e1ff0902", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2823, "end" : 2823}
+    }
+}, {
+    "type"        : "issue", "check_name" : "NullableReturnStatement",
+    "description" : "The declared return type 'array<array-key, mixed>' for JBDump::_getMethods is not nullable, but the function returns 'list<mixed|string>|null'",
+    "categories"  : ["NullableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "ddd4768b1fa99b55e84ec1b0405b15f4", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2825, "end" : 2825}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidReturnType",
+    "description" : "The declared return type 'JBDump' for JBDump::_getClass is incorrect, got 'array{all_methods: array<array-key, string>, name: string, type: \"class\"|\"interface\"}|false'",
+    "categories"  : ["InvalidReturnType"], "severity" : "critical", "fingerprint" : "b914ea054b8c432fbe5c59ee853bcf9f",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2831, "end" : 2831}
+    }
+}, {
+    "type"        : "issue", "check_name" : "RedundantConditionGivenDocblockType",
+    "description" : "Docblock-defined type string for $data is always string",
+    "categories"  : ["RedundantConditionGivenDocblockType"], "severity" : "critical",
+    "fingerprint" : "7a02e68791d92344dc7ea170151e57f8", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2838, "end" : 2838}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::_getClass does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "3cd44f29e13364b41f3b607c553d7677", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2841, "end" : 2841}
+    }
+}, {
+    "type"        : "issue", "check_name" : "FalsableReturnStatement",
+    "description" : "The declared return type 'JBDump' for JBDump::_getClass does not allow false, but the function returns 'false'",
+    "categories"  : ["FalsableReturnStatement"], "severity" : "critical",
+    "fingerprint" : "4add5e8a21399f1a5ccb434bcd951c3b", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2845, "end" : 2845}
+    }
+}, {
+    "type"        : "issue", "check_name" : "ArgumentTypeCoercion",
+    "description" : "Argument 1 of ReflectionClass::__construct expects class-string|object|trait-string, parent type object|string provided",
+    "categories"  : ["ArgumentTypeCoercion"], "severity" : "critical",
+    "fingerprint" : "64e06b8f127195ecd67e064a8c839bde", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2849, "end" : 2849}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyUndefinedVariable",
+    "description" : "Possibly undefined variable $result, first seen on line 2852",
+    "categories"  : ["PossiblyUndefinedVariable"], "severity" : "critical",
+    "fingerprint" : "ec95be763b57d14b9e89c086a61ba8ac", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2852, "end" : 2852}
+    }
+}, {
+    "type"        : "issue", "check_name" : "RedundantCondition",
+    "description" : "Type string for $parent->name is always isset", "categories" : ["RedundantCondition"],
+    "severity"    : "critical", "fingerprint" : "3ded36884043b7beabc6cdc06d71695a", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2874, "end" : 2874}
+    }
+}, {
+    "type"        : "issue", "check_name" : "RedundantCondition",
+    "description" : "Type array<class-string, ReflectionClass<object>> for $interfaces is always array",
+    "categories"  : ["RedundantCondition"], "severity" : "critical", "fingerprint" : "1d7af96d6d43b5bf8e1de5fc9e2f5246",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2885, "end" : 2885}
+    }
+}, {
+    "type"        : "issue", "check_name" : "RedundantCondition",
+    "description" : "Type array<string, mixed> for $constants is always array", "categories" : ["RedundantCondition"],
+    "severity"    : "critical", "fingerprint" : "92c858f08a983f44695ee0d0465680db", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2893, "end" : 2893}
+    }
+}, {
+    "type"        : "issue", "check_name" : "RedundantCondition",
+    "description" : "Type list<ReflectionProperty> for $properties is always array",
+    "categories"  : ["RedundantCondition"], "severity" : "critical", "fingerprint" : "55ff2d6476939dd75c14cba48e531cf9",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 2901, "end" : 2901}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidReturnStatement",
+    "description" : "The inferred type 'array{all_methods: array<array-key, string>, name: string, type: \"class\"|\"interface\"}' does not match the declared return type 'JBDump' for JBDump::_getClass",
+    "categories"  : ["InvalidReturnStatement"], "severity" : "critical",
+    "fingerprint" : "3ac3444e1c8cb9252720b04dc1faa5d1", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3011, "end" : 3011}
+    }
+}, {
+    "type"       : "issue", "check_name" : "MissingParamType", "description" : "Parameter $params has no provided type",
+    "categories" : ["MissingParamType"], "severity" : "critical", "fingerprint" : "6b35da51dc40eae086d6307d9e297283",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3020, "end" : 3020}
+    }
+}, {
+    "type"        : "issue", "check_name" : "UndefinedDocblockClass",
+    "description" : "Docblock-defined class or interface function does not exist",
+    "categories"  : ["UndefinedDocblockClass"], "severity" : "critical",
+    "fingerprint" : "e2086ff011c4e2f621171dff2e6cdc0a", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3052, "end" : 3052}
+    }
+}, {
+    "type"        : "issue", "check_name" : "UndefinedDocblockClass",
+    "description" : "Docblock-defined class or interface function does not exist",
+    "categories"  : ["UndefinedDocblockClass"], "severity" : "critical",
+    "fingerprint" : "72287adce114e2619bb9cac9992093ef", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3116, "end" : 3116}
+    }
+}, {
+    "type"        : "issue", "check_name" : "RedundantConditionGivenDocblockType",
+    "description" : "Docblock-defined type array<array-key, mixed> for $trace is always array",
+    "categories"  : ["RedundantConditionGivenDocblockType"], "severity" : "critical",
+    "fingerprint" : "872f81ae986644e6d36dd93314921f46", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3246, "end" : 3246}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidOperand",
+    "description" : "Cannot perform a numeric operation with a non-numeric type array-key",
+    "categories"  : ["InvalidOperand"], "severity" : "critical", "fingerprint" : "d8bac165ca1ed0604bcce4656a64b05f",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3255, "end" : 3255}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyUndefinedVariable",
+    "description" : "Possibly undefined variable $result, first seen on line 3367",
+    "categories"  : ["PossiblyUndefinedVariable"], "severity" : "critical",
+    "fingerprint" : "540dd4dd785b44f1a3e5f542f8f510d9", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3367, "end" : 3367}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidOperand",
+    "description" : "Cannot perform a numeric operation with a non-numeric type array-key",
+    "categories"  : ["InvalidOperand"], "severity" : "critical", "fingerprint" : "9da04a243e883d0755d38c6b66d70b93",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3398, "end" : 3398}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidReturnType",
+    "description" : "The declared return type 'bool' for JBDump::args is incorrect, got 'JBDump|false'",
+    "categories"  : ["InvalidReturnType"], "severity" : "critical", "fingerprint" : "cdaa5658e6313689b67550c431c8a65c",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3531, "end" : 3531}
+    }
+}, {
+    "type"       : "issue", "check_name" : "UndefinedMethod", "description" : "Method JBDump::offsetGet does not exist",
+    "categories" : ["UndefinedMethod"], "severity" : "critical", "fingerprint" : "f82ddf027fcc5b1f6b4f809bc6fdcecb",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3549, "end" : 3549}
+    }
+}, {
+    "type"       : "issue", "check_name" : "UndefinedMethod", "description" : "Method JBDump::offsetGet does not exist",
+    "categories" : ["UndefinedMethod"], "severity" : "critical", "fingerprint" : "c02d0a0c0fa74170ad5d00ff38edb22e",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3552, "end" : 3552}
+    }
+}, {
+    "type"       : "issue", "check_name" : "UndefinedMethod", "description" : "Method JBDump::offsetGet does not exist",
+    "categories" : ["UndefinedMethod"], "severity" : "critical", "fingerprint" : "7cbd461251bdbc5882140b9d878d4343",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3555, "end" : 3555}
+    }
+}, {
+    "type"        : "issue", "check_name" : "InvalidReturnStatement",
+    "description" : "The inferred type 'JBDump' does not match the declared return type 'bool' for JBDump::args",
+    "categories"  : ["InvalidReturnStatement"], "severity" : "critical",
+    "fingerprint" : "9fd4b8e964b8401ea930a7c0fbe35efe", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3589, "end" : 3589}
+    }
+}, {
+    "type"       : "issue", "check_name" : "MissingParamType", "description" : "Parameter $query has no provided type",
+    "categories" : ["MissingParamType"], "severity" : "critical", "fingerprint" : "e1db22a19868a77675dd51c4b09a5af9",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3599, "end" : 3599}
+    }
+}, {
+    "type"        : "issue", "check_name" : "UndefinedClass",
+    "description" : "Class or interface JConfig does not exist", "categories" : ["UndefinedClass"],
+    "severity"    : "critical", "fingerprint" : "386778584bf0441ca50c6aca138e9f38", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3603, "end" : 3603}
+    }
+}, {
+    "type"       : "issue", "check_name" : "RedundantCast", "description" : "Redundant cast to array",
+    "categories" : ["RedundantCast"], "severity" : "critical", "fingerprint" : "0c30e85f6825300ad9a93fda87e38456",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3656, "end" : 3656}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$reserved does not have a declared type - consider array<int, array-key>",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "391b9b19127634fc46060ff2fe362bbd", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3716, "end" : 3716}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$reserved_toplevel does not have a declared type - consider array{string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string}",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "d9a369c68d2c3bb15ce5a0be29dfde1a", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3746, "end" : 3746}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$reserved_newline does not have a declared type - consider array{string, string, string, string, string, string, string, string, string, string}",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "e48b58697d5548f79891a6dd9fc676a2", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3751, "end" : 3751}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$functions does not have a declared type - consider non-empty-array<int, string>",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "2e5f6024bed53cf20f9f22a4980d939e", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3755, "end" : 3755}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$boundaries does not have a declared type - consider array{string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string}",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "2fe77e3258d4c4e90d0e5086e35090a8", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3785, "end" : 3785}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$quote_attributes does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "1c02cea93847b8a9c527af3a2d0166d9", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3789, "end" : 3789}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$backtick_quote_attributes does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "b298a6da4d6b0f756c7e3318b3e9dbc3", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3790, "end" : 3790}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$reserved_attributes does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "c0311d55b252691da46536a1393a81d5", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3791, "end" : 3791}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$boundary_attributes does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "9fbb92baaa7859d81ed3534ff72e5978", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3792, "end" : 3792}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$number_attributes does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "40568ba33410c52057328a472a248063", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3793, "end" : 3793}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$word_attributes does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "a36797cd91d63e894e034de14ea37da1", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3794, "end" : 3794}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$error_attributes does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "6cdb65568b8bda5d82d2eed5483b3345", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3795, "end" : 3795}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$comment_attributes does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "4a9accfdb15bd97a57f12110e27153cb", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3796, "end" : 3796}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$variable_attributes does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "f1956db3d4d923bbd625ce5e72baeead", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3797, "end" : 3797}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$pre_attributes does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "27fbd52bc593e5c1a515c35d9140b68c", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3798, "end" : 3798}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$cli does not have a declared type",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "14ea341eb6d79e6a2d0d07aa8eec4764", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3803, "end" : 3803}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$cli_quote does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "2b2791c488fd07e638ab414852613134", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3806, "end" : 3806}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$cli_backtick_quote does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "720fd0b5a8372d17f44a6399695be8cd", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3807, "end" : 3807}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$cli_reserved does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "6299c92f0d38a8b53d8383e82296e2d4", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3808, "end" : 3808}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$cli_boundary does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "c650b121f050d525e84048c716faa3f0", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3809, "end" : 3809}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$cli_number does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "fcdd16a58cec3722b06365df4f1d4899", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3810, "end" : 3810}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$cli_word does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "141f8bea1355435578f5a43ae6578f55", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3811, "end" : 3811}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$cli_error does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "ccfac89f6847bf7d6d1450a2476e080f", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3812, "end" : 3812}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$cli_comment does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "16e491e0120e43c3eb36cb7f755b4ae6", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3813, "end" : 3813}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$cli_functions does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "2afe344ed9b24930fd6f3f479bc70e3d", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3814, "end" : 3814}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$cli_variable does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "41b129e3dd6866bf5ac0c144f082ab87", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3815, "end" : 3815}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$tab does not have a declared type - consider string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "5a515e3f1affc79adc2c98dd7b9e5fcb", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3818, "end" : 3818}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$use_pre does not have a declared type - consider true",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "a8440111890dace2f774aa278f7a5595", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3821, "end" : 3821}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$init does not have a declared type - consider null|true",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "f2154c69dcbbb9622526ec5596a228f6", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3824, "end" : 3824}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$regex_boundaries does not have a declared type - consider null|string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "a13a94c38517182bb44b3bec9108a5c3", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3827, "end" : 3827}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$regex_reserved does not have a declared type - consider null|string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "fcf3792995cc7b6aa32ea171118462ae", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3828, "end" : 3828}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$regex_reserved_newline does not have a declared type - consider null|string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "821a6272f49995d4b567ae682f9368a6", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3829, "end" : 3829}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$regex_reserved_toplevel does not have a declared type - consider null|string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "80e08fd620e78892a3f3d490dd3166ee", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3830, "end" : 3830}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$regex_function does not have a declared type - consider null|string",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "71a8f34b766096ac5a9911fd7c5c06db", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3831, "end" : 3831}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$max_cachekey_size does not have a declared type - consider int",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "c744e91e8a5e5cee63cf8eb592787be1", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3835, "end" : 3835}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$token_cache does not have a declared type - consider array<string, array>|mixed",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "580ced81b03be4fb14313047515e737e", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3836, "end" : 3836}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$cache_hits does not have a declared type - consider int|mixed",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "11a843082313bf4fb09a441e55b7035f", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3837, "end" : 3837}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingPropertyType",
+    "description" : "Property JBDump_SqlFormatter::$cache_misses does not have a declared type - consider int|mixed",
+    "categories"  : ["MissingPropertyType"], "severity" : "critical",
+    "fingerprint" : "f0e61090bbed80309c273bdb4db70fee", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3838, "end" : 3838}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump_SqlFormatter::init does not have a return type, expecting void",
+    "categories"  : ["MissingReturnType"], "severity" : "critical", "fingerprint" : "dcec744083e4e7a88d28522a3931fc61",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3857, "end" : 3857}
+    }
+}, {
+    "type"        : "issue", "check_name" : "PossiblyFalseOperand",
+    "description" : "Left operand cannot be falsable, got false|int|positive-int",
+    "categories"  : ["PossiblyFalseOperand"], "severity" : "critical",
+    "fingerprint" : "49b569aca19b6d7db17806930cd123b2", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 3903, "end" : 3903}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump_SqlFormatter::getQuotedString does not have a return type, expecting null|string",
+    "categories"  : ["MissingReturnType"], "severity" : "critical", "fingerprint" : "cebceb5d7241fa35ae92c51ac9840bc8",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 4013, "end" : 4013}
+    }
+}, {
+    "type"       : "issue", "check_name" : "MissingParamType", "description" : "Parameter $string has no provided type",
+    "categories" : ["MissingParamType"], "severity" : "critical", "fingerprint" : "95933e7a90781f5d4a05c3c18002e424",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 4013, "end" : 4013}
+    }
+}, {
+    "type"        : "issue", "check_name" : "MissingReturnType",
+    "description" : "Method JBDump_SqlFormatter::is_cli does not have a return type",
+    "categories"  : ["MissingReturnType"], "severity" : "critical", "fingerprint" : "fee95a00930cb38cffe6d32794a8d27f",
+    "location"    : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 4713, "end" : 4713}
+    }
+}, {
+    "type"       : "issue", "check_name" : "MissingParamType", "description" : "Parameter $array has no provided type",
+    "categories" : ["MissingParamType"], "severity" : "critical", "fingerprint" : "b8d5125a8e511ac31be60cb65596c416",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 4738, "end" : 4738}
+    }
+}, {
+    "type"       : "issue", "check_name" : "MissingParamType", "description" : "Parameter $shift has no provided type",
+    "categories" : ["MissingParamType"], "severity" : "critical", "fingerprint" : "a602cb33d733495f271a1f0609170e91",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 4738, "end" : 4738}
+    }
+}, {
+    "type"        : "issue", "check_name" : "DocblockTypeContradiction",
+    "description" : "Docblock-defined type null for $varName is always falsy",
+    "categories"  : ["DocblockTypeContradiction"], "severity" : "critical",
+    "fingerprint" : "b688bdb87b1eaafe209e3657991000b5", "location" : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 4754, "end" : 4754}
+    }
+}, {
+    "type"       : "issue", "check_name" : "MissingParamType", "description" : "Parameter $array has no provided type",
+    "categories" : ["MissingParamType"], "severity" : "critical", "fingerprint" : "6d1c189e2efb4fc0751444875902dc71",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 4766, "end" : 4766}
+    }
+}, {
+    "type"       : "issue", "check_name" : "MissingParamType", "description" : "Parameter $depth has no provided type",
+    "categories" : ["MissingParamType"], "severity" : "critical", "fingerprint" : "e7b4157288e31beff4695bb128f0e20c",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 4813, "end" : 4813}
+    }
+}, {
+    "type"       : "issue", "check_name" : "MissingParamType", "description" : "Parameter $var has no provided type",
+    "categories" : ["MissingParamType"], "severity" : "critical", "fingerprint" : "5a9df7726da5771d4e0d314e3199ce41",
+    "location"   : {
+        "path"  : "\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/vendor\/jbzoo\/jbdump\/class.jbdump.php",
+        "lines" : {"begin" : 4822, "end" : 4822}
+    }
+}
+]
