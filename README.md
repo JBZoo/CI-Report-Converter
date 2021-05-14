@@ -136,6 +136,8 @@ Also, you can follow [metrics around your code in TeamCity](https://www.jetbrain
 
 ### Converting
 
+**NOTE:** The action `convert` is marked as default, so `./ci-report-converter.phar convert --help` === `./ci-report-converter.phar --help`.
+
 ```
 $ php ./vendor/bin/ci-report-converter convert --help
 Description:
@@ -150,7 +152,7 @@ Options:
   -N, --suite-name=SUITE-NAME        Set custom name of root group/suite
   -I, --input-file[=INPUT-FILE]      File path with the original report format. If not set or empty, then the STDIN is used.
   -O, --output-file[=OUTPUT-FILE]    File path with the result report format. If not set or empty, then the STDOUT is used.
-  -R, --root-path[=ROOT-PATH]        If option is set, all absolute file paths will be converted to relative once.
+  -R, --root-path[=ROOT-PATH]        If option is set, all absolute file paths will be converted to relative once. [default: "."]
   -F, --tc-flow-id[=TC-FLOW-ID]      Custom flowId for TeamCity output
   -h, --help                         Display this help message
   -q, --quiet                        Do not output any message
@@ -166,6 +168,8 @@ Options:
 
 ### Custom Metrics in TeamCity
 
+[Take a look at the examples, please](#as-code-inspections)
+
 ```
 $ php ./vendor/bin/ci-report-converter teamcity:stats --help
 Description:
@@ -178,7 +182,7 @@ Options:
   -S, --input-format=INPUT-FORMAT  Source format. Available options: junit-xml, pdepend-xml, phploc-json, phpmetrics-xml, phpunit-clover-xml
   -I, --input-file[=INPUT-FILE]    File path with the original report format. If not set or empty, then the STDIN is used.
   -O, --output-file[=OUTPUT-FILE]  File path with the result report format. If not set or empty, then the STDOUT is used.
-  -R, --root-path[=ROOT-PATH]      If option is set, all absolute file paths will be converted to relative once.
+  -R, --root-path[=ROOT-PATH]      If option is set, all absolute file paths will be converted to relative once. [default: "."]
   -F, --tc-flow-id[=TC-FLOW-ID]    Custom flowId for TeamCity output
   -h, --help                       Display this help message
   -q, --quiet                      Do not output any message
@@ -290,14 +294,37 @@ In both cases you will have the same output in your PhpStorm.
 
 #### Mess Detector (phpmd-json)
 
+<details>
+  <summary>JetBrains IDE - Screenshot</summary>
+
+  ![PHPmd in JetBrains PhpStorm](.github/assets/phpstorm-phpmd.png)
+  
+</details>
+
 ```shell
 php ./vendor/bin/phpmd ./src json cleancode,codesize,controversial,design,naming,unusedcode \
   | ./ci-report-converter.phar --input-format=phpmd-json
 ```
 
-![PHPcs in JetBrains PhpStorm](.github/assets/phpstorm-phpmd.png)
 
 #### Magic Number Detector (phpmnd)
+
+```shell
+php ./vendor/bin/phpmnd ./src --hint --xml-output=./build/phpmnd-report.xml --quiet
+./ci-report-converter.phar                 \
+  --input-file=./build/phpmnd-report.xml   \
+  --input-format=phpmnd                    \
+  --suite-name="Magic Number Detector"     \
+  --root-path=./src
+```
+
+<details>
+  <summary>JetBrains IDE - Screenshot</summary>
+
+  ![PHPmd in JetBrains PhpStorm](.github/assets/phpstorm-phpmnd.png)
+  
+</details>
+
 #### Copy/Paste Detector (pmd-cpd)
 #### PHPStan (checkstyle)
 #### Psalm (psalm-json)

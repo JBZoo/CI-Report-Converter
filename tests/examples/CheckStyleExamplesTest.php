@@ -1,5 +1,18 @@
 <?php
 
+/**
+ * JBZoo Toolbox - CI-Report-Converter
+ *
+ * This file is part of the JBZoo Toolbox project.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @package    CI-Report-Converter
+ * @license    MIT
+ * @copyright  Copyright (C) JBZoo.com, All rights reserved.
+ * @link       https://github.com/JBZoo/CI-Report-Converter
+ */
+
 declare(strict_types=1);
 
 use PHPUnit\Framework\Assert;
@@ -11,6 +24,14 @@ use PHPUnit\Framework\TestCase;
 class CheckStyleExamplesTest extends TestCase
 {
     /**
+     * @inheritDoc
+     */
+    protected function setUp(): void
+    {
+        Assert::markTestSkipped('Tests disabled in CI. Mark as comment the line to run it locally');
+    }
+
+    /**
      * The short example which uses pipe as way to pass error report.
      */
     public function testPipelineWay(): void
@@ -20,7 +41,7 @@ class CheckStyleExamplesTest extends TestCase
             ' --report=checkstyle' .           # Output format of PHPcs. ci-report-converter expects it by default as `--input-format` option.
             ' --standard=PSR12 -q ./src' .     # The custom tool options. For phpcs `-q` is important!
             ' | ' .                            # The pipe operator, it passes the output of one command as input to another. See https://en.wikipedia.org/wiki/Pipeline_(Unix)
-            ' php ./ci-report-converter.phar'  # The converter does all the magic. Look at help description ( --help) to lean more about options and default values.
+            ' php ./ci-report-converter'       # The converter does all the magic. Look at help description ( --help) to lean more about options and default values.
         );
 
         # Usually PHPUnit expects at least one assert in a test.
@@ -44,7 +65,7 @@ class CheckStyleExamplesTest extends TestCase
         );
 
         echo shell_exec(
-            'php ./ci-report-converter.phar' .          # The path to bin file of CI-Report-Converter. It depends of your installation way.
+            'php ./ci-report-converter' .               # The path to bin file of CI-Report-Converter. It depends of your installation way.
             ' --input-format=checkstyle' .              # Source reporting format. Default value is "checkstyle". I put it here just to show the option,
             ' --input-file=./build/phpcs-report.xml' .  # Using prepared file on previous step as source.
             ' --output-format=tc-tests' .               # Target reporting format. Default value is "tc-tests". I put it here just to show the option,
@@ -62,7 +83,22 @@ class CheckStyleExamplesTest extends TestCase
             'php ./vendor/bin/phpmd ./src json' .
             ' cleancode,codesize,controversial,design,naming,unusedcode' .
             ' | ' .
-            ' ./ci-report-converter.phar --input-format=phpmd-json'
+            ' ./ci-report-converter --input-format=phpmd-json'
+        );
+
+        # The same reason like in testPipelineWay()
+        Assert::assertTrue(true);
+    }
+
+    public function testMagicNumberDetector(): void
+    {
+        shell_exec('php ./vendor/bin/phpmnd ./src --hint --xml-output=./build/phpmnd-report.xml --quiet');
+
+        echo shell_exec(
+            'php ./ci-report-converter' .
+            ' --input-file=./build/phpmnd-report.xml' .
+            ' --input-format=phpmnd' .
+            ' --suite-name="Magic Number Detector"'
         );
 
         # The same reason like in testPipelineWay()
