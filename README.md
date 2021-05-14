@@ -23,10 +23,9 @@
     - [PHPStan (checkstyle)](#phpstan-checkstyle)
     - [Psalm (psalm-json)](#psalm-psalm-json)
     - [Phan (checkstyle)](#phan-checkstyle)
-  - [TeamCity](#teamcity)
-    - [Style Issue As Failed Unit test](#style-issue-as-failed-unit-test)
-    - [Style Issue As Code Inspections](#style-issue-as-code-inspections)
-    - [Parsing Custom Metrics](#parsing-custom-metrics)
+  - [TeamCity - Style Issue As Failed Unit test](#teamcity---style-issue-as-failed-unit-test)
+  - [TeamCity - Style Issue As Code Inspections](#teamcity---style-issue-as-code-inspections)
+  - [TeamCity - Reported Statistic Values](#teamcity---reported-statistic-values)
   - [GitHub Actions](#github-actions)
   - [GitLab CI](#gitlab-ci)
 - [Contributing](#contributing)
@@ -269,7 +268,7 @@ class CheckStyleExamplesTest extends TestCase
             ' --report=checkstyle' .           # Output format of PHPcs. ci-report-converter expects it by default as `--input-format` option.
             ' --standard=PSR12 -q ./src' .     # The custom tool options. For phpcs `-q` is important!
             ' | ' .                            # The pipe operator, it passes the output of one command as input to another. See https://en.wikipedia.org/wiki/Pipeline_(Unix)
-            ' php ./ci-report-converter.phar'  # The converter does all the magic. Look at help description ( --help) to lean more about options and default values.
+            ' ./ci-report-converter.phar'      # The converter does all the magic. Look at help description ( --help) to lean more about options and default values.
         );
 
         # Usually PHPUnit expects at least one assert in a test.
@@ -295,7 +294,7 @@ class CheckStyleExamplesTest extends TestCase
         // I've shown all the options explicitly just to add transparency.
         // In fact, this example does the same thing as the code above in `testPipelineWay()`.
         echo shell_exec(
-            'php ./ci-report-converter.phar' .          # The path to bin file of CI-Report-Converter. It depends of your installation way. See above.
+            './ci-report-converter.phar' .              # The path to bin file of CI-Report-Converter. It depends of your installation way. See above.
             ' --input-format=checkstyle' .              # Source reporting format. Default value is "checkstyle".
             ' --input-file=./build/phpcs-report.xml' .  # Using prepared file on previous step as source.
             ' --output-format=tc-tests' .               # Target reporting format. Default value is "tc-tests".
@@ -332,7 +331,7 @@ php ./vendor/bin/phpcs --report=checkstyle --standard=PSR12 -q ./src | ./ci-repo
 </details>
 
 ```shell
-php ./vendor/bin/phpmd ./src json cleancode,codesize,controversial,design,naming,unusedcode | ./ci-report-converter.phar -S phpmd-json
+php ./vendor/bin/phpmd ./src json cleancode | ./ci-report-converter.phar -S phpmd-json
 ```
 
 
@@ -409,10 +408,64 @@ php ./vendor/bin/psalm --output-format=json | ./ci-report-converter.phar --input
 php ./vendor/bin/phan.phar --directory=./src --output-mode=checkstyle |  ./ci-report-converter.phar
 ```
 
-### TeamCity
-#### Style Issue As Failed Unit test
-#### Style Issue As Code Inspections
-#### Parsing Custom Metrics
+### TeamCity - Style Issue As Failed Unit test
+
+Use the option `--output-format=tc-tests` to convert any style report to unit test format in TeamCity
+
+![Style issues as failed tests in TeamCity](.github/assets/teamcity-as-failed-test.png)
+
+
+
+### TeamCity - Style Issue As Code Inspections
+
+Use the option `--output-format=tc-inspections` to convert any style report to unit test format in TeamCity
+
+![Style Issue As Code Inspections in TeamCity](.github/assets/teamcity-as-code-inspections.png)
+
+
+
+### TeamCity - Reported Statistic Values
+
+[PHPDepend.xml](tests/fixtures/origin/pdepend/pdepend-old.xml) => [Example in TeamCity](tests/fixtures/test-cases/ConverterTeamCityStatsTest/testPhpDependXml.txt)
+```shell
+./vendor/bin/pdepend.phar --summary-xml="./build/pdepend-summary.xml" --quiet ./src
+./ci-report-converter.phar teamcity:stats --input-format="pdepend-xml" --input-file="./build/pdepend-summary.xml"
+```
+
+
+[PHPloc.json](tests/fixtures/origin/phploc/json.json) => [Example in TeamCity](tests/fixtures/test-cases/ConverterTeamCityStatsTest/testPhpLocJson.txt)
+
+```shell
+./vendor/bin/phploc ./src --log-json="./build/phploc.json" --quiet
+./ci-report-converter.phar teamcity:stats --input-format="phploc-json" --input-file="./build/phploc.json"
+```
+
+
+[PHPUnitClover.xml](tests/fixtures/origin/phpunit/clover.xml) => [Example in TeamCity](tests/fixtures/test-cases/ConverterTeamCityStatsTest/testPhpUnitCloverXml.txt)
+
+```shell
+./vendor/bin/phpunit --coverage-clover ./build/phpunit-report.xml
+./ci-report-converter.phar teamcity:stats --input-format="phpunit-clover-xml" --input-file="./build/phpunit-report.xml"
+```
+
+
+[JUnit.xml](tests/fixtures/origin/phpunit/junit-nested.xml) => [Example in TeamCity](tests/fixtures/test-cases/ConverterTeamCityStatsTest/testJUnitXml.txt)
+
+```shell
+./vendor/bin/phpunit --coverage-xml ./build/phpunit-junit.xml
+./ci-report-converter.phar teamcity:stats --input-format="junit-xml" --input-file="./build/phpunit-junit.xml"
+``````
+
+
+[PHPMetrics.xml](tests/fixtures/origin/phpmetrics/phpmetrics.xml) => [Example in TeamCity](tests/fixtures/test-cases/ConverterTeamCityStatsTest/testPhpMetricsXml.txt)
+
+```shell
+./vendor/bin/phpmetrics  ./src --report-violations="./build/phpmetrics-report.xml"
+./ci-report-converter.phar teamcity:stats --input-format="phpmetrics-xml" --input-file="./build/phpmetrics-report.xml"
+``````
+
+![Style issues as failed tests in TeamCity](.github/assets/teamcity-reported-statistic-values.png)
+
 
 
 ### GitHub Actions
