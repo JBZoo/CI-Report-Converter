@@ -35,6 +35,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
+
 ## Why?
 
 I believe you are familiar with the huge zoo of various utilities for testing, checking code standards, linters etc. 
@@ -50,6 +51,7 @@ Therefore, I developed a converter that changes the report format for deep integ
 Well... It may seem to you it's a useless thing, and _your favorite super tool_ works fine in TeamCity/PhpStorm. Just take a look at [the examples below](#examples).
 
 
+
 ## Installing
 
 ```shell
@@ -63,6 +65,7 @@ php ./ci-report-converter.phar --help
 # OR just pull the Docker Image
 docker run --rm jbzoo/ci-report-converter --help 
 ```
+
 
 
 ## Using as GitHub Action
@@ -98,8 +101,8 @@ Action allows you to convert error reports to the [GitHub Annotations format](ht
 ```
 
 
-## Available Directions
 
+## Available Directions
 
 <p align="center"><!-- Auto-created image via JBZoo\PHPUnit\CiReportConverterReadmeTest__testBuildGraphManually -->
   <img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFI7XG4gICAgY2hlY2tzdHlsZV9zcmMoXCJDaGVja1N0eWxlLnhtbFwiKTtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyKChcIkNJLVJlcG9ydDxicj5Db252ZXJ0ZXJcIikpO1xuICAgIGdpdGh1Yi1jbGlfdGFyZ2V0KFwiR2l0SHViIEFjdGlvbnMgLSBDTElcIik7XG4gICAgZ2l0bGFiLWpzb25fdGFyZ2V0KFwiR2l0TGFiIC0gSlNPTlwiKTtcbiAgICBqdW5pdF9zcmMoXCJKVW5pdC54bWxcIik7XG4gICAganVuaXRfdGFyZ2V0KFwiSlVuaXQueG1sXCIpO1xuICAgIHBocG1kLWpzb25fc3JjKFwiUEhQbWQuanNvblwiKTtcbiAgICBwaHBtbmRfc3JjKFwiUEhQbW5kLnhtbFwiKTtcbiAgICBwbWQtY3BkX3NyYyhcIlBtZENwZC54bWxcIik7XG4gICAgcHNhbG0tanNvbl9zcmMoXCJQc2FsbS5qc29uXCIpO1xuICAgIHRjLWluc3BlY3Rpb25zX3RhcmdldChcIlRlYW1DaXR5IC0gSW5zcGVjdGlvbnNcIik7XG4gICAgdGMtdGVzdHNfdGFyZ2V0KFwiVGVhbUNpdHkgLSBUZXN0c1wiKTtcblxuICAgIGNoZWNrc3R5bGVfc3JjID09PiBjaS1yZXBvcnQtY29udmVydGVyO1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IGdpdGh1Yi1jbGlfdGFyZ2V0O1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IGdpdGxhYi1qc29uX3RhcmdldDtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyID09PiBqdW5pdF90YXJnZXQ7XG4gICAgY2ktcmVwb3J0LWNvbnZlcnRlciA9PT4gdGMtaW5zcGVjdGlvbnNfdGFyZ2V0O1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IHRjLXRlc3RzX3RhcmdldDtcbiAgICBqdW5pdF9zcmMgPT0+IGNpLXJlcG9ydC1jb252ZXJ0ZXI7XG4gICAgcGhwbWQtanNvbl9zcmMgPT0+IGNpLXJlcG9ydC1jb252ZXJ0ZXI7XG4gICAgcGhwbW5kX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwbWQtY3BkX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwc2FsbS1qc29uX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcblxubGlua1N0eWxlIGRlZmF1bHQgaW50ZXJwb2xhdGUgYmFzaXM7IiwibWVybWFpZCI6eyJ0aGVtZSI6ImZvcmVzdCJ9fQ==">
@@ -121,7 +124,7 @@ At the moment, conversion of reports works with
     * [tc-inspections](tests/fixtures/test-cases/ConverterTeamCityInspectionsTest) - [Reporting Inspections in TeamCity](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Inspections).
 
 
-Als, you can follow [metrics around your code in TeamCity](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Build+Statistics) via `teamcity:stats`
+Also, you can follow [metrics around your code in TeamCity](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Build+Statistics) via `teamcity:stats`
  * [JUnit.xml](tests/fixtures/origin/phpunit/junit-nested.xml) => [Example in TeamCity](tests/fixtures/test-cases/ConverterTeamCityStatsTest/testJUnitXml.txt)
  * [PHPUnitClover.xml](tests/fixtures/origin/phpunit/clover.xml) => [Example in TeamCity](tests/fixtures/test-cases/ConverterTeamCityStatsTest/testPhpUnitCloverXml.txt)
  * [PHPDepend.xml](tests/fixtures/origin/pdepend/pdepend-old.xml) => [Example in TeamCity](tests/fixtures/test-cases/ConverterTeamCityStatsTest/testPhpDependXml.txt)
@@ -158,6 +161,7 @@ Options:
   -v|vv|vvv, --verbose               Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 
 ```
+
 
 
 ### Custom Metrics in TeamCity
@@ -203,12 +207,15 @@ This is the smartest thing for navigating the project and gives the most detaile
 The general idea is pretty simple: 
  - We take almost any utility for testing. 
  - It saves report in the file or outputs error to StdOut as xml/json.
- - CI-Report-Converter changes the report type. It saves result somewhere or just outputs it in StdOut.
+ - CI-Report-Converter changes the report format. It saves result somewhere or just outputs it in StdOut.
  - ???
  - Profit.
 
 In the next case, we will see how to integrate JetBrains UI with Code Sniffer deeply. I use PHPcs just as example. This is the most popular linter in PHP.
 However, the approach is independent of the programming language or unit testing framework.
+
+**Note:** Here's an example based on PHPUnit and PhpStorm, but you are not limited to PHP language. This is just an example to show the idea.
+So you can use any sort language to integrate style tests with JetBrains IDE.
 
 ```php
 use PHPUnit\Framework\Assert;
@@ -266,6 +273,7 @@ class CheckStyleExamplesTest extends TestCase
 }
 ```
 
+In both cases you will have the same output in your PhpStorm.
 ![PHPcs in JetBrains PhpStorm](.github/assets/general-idea.png)
 
 

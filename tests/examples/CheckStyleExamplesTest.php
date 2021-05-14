@@ -38,7 +38,7 @@ class CheckStyleExamplesTest extends TestCase
             'php ./vendor/bin/phpcs' .                  # Path to bin of third-party tool (PHP Code Sniffer is just example).
             ' --report=checkstyle' .                    # Output format of PHPcs. ci-report-converter expects it by default as `--input-format` option.
             ' --report-file=./build/phpcs-report.xml' . # Save result of phpcs work in XML file in "checkstyle" format.
-            ' --stanard=PSR12 -q ./src' .              # The custom tool options. For phpcs `-q` is important!
+            ' --standard=PSR12 -q ./src' .              # The custom tool options. For phpcs `-q` is important!
             ' || true > /dev/null'                      # We don't expect any output of phpcs and ignore error exit codes.
                                                         # Lol, we are very self-confident. Actually, we need only XML file, that's it.
         );
