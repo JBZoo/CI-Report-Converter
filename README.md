@@ -60,7 +60,8 @@ php ./vendor/bin/ci-report-converter --help
 
 # OR use phar file
 wget https://github.com/JBZoo/CI-Report-Converter/releases/latest/download/ci-report-converter.phar
-php ./ci-report-converter.phar --help
+chmod +x ./ci-report-converter.phar
+./ci-report-converter.phar --help
 
 # OR just pull the Docker Image
 docker run --rm jbzoo/ci-report-converter --help 
@@ -214,7 +215,7 @@ The general idea is pretty simple:
 In the next case, we will see how to integrate JetBrains UI with Code Sniffer deeply. I use PHPcs just as example. This is the most popular linter in PHP.
 However, the approach is independent of the programming language or unit testing framework.
 
-**Note:** Here's an example based on PHPUnit and PhpStorm, but you are not limited to PHP language. This is just an example to show the idea.
+**NOTE:** Here's an example based on PHPUnit and PhpStorm, but you are not limited to PHP language. This is just an example to show the idea.
 So you can use any sort language to integrate style tests with JetBrains IDE.
 
 ```php
@@ -275,19 +276,28 @@ class CheckStyleExamplesTest extends TestCase
 }
 ```
 
-In both cases you will have the same output in your PhpStorm.
-
-![PHPcs in JetBrains PhpStorm](.github/assets/general-idea.png)
-
 
 ```shell
 # See what happens under the hood. 
 cd  ~/your/project/root/directory
-php ./vendor/bin/phpunit ./tests/CheckStyleExamplesTest.php
+php ./vendor/bin/phpunit ./tests/examples/CheckStyleExamplesTest.php --teamcity
 ```
+
+In both cases you will have the same output in your PhpStorm.
+
+![PHPcs in JetBrains PhpStorm](.github/assets/phpstorm-checkstyle.png)
+
 
 
 #### Mess Detector (phpmd-json)
+
+```shell
+php ./vendor/bin/phpmd ./src json cleancode,codesize,controversial,design,naming,unusedcode \
+  | ./ci-report-converter.phar --input-format=phpmd-json
+```
+
+![PHPcs in JetBrains PhpStorm](.github/assets/phpstorm-phpmd.png)
+
 #### Magic Number Detector (phpmnd)
 #### Copy/Paste Detector (pmd-cpd)
 #### PHPStan (checkstyle)

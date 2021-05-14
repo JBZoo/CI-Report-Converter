@@ -39,8 +39,8 @@ class CheckStyleExamplesTest extends TestCase
             ' --report=checkstyle' .                    # Output format of PHPcs. ci-report-converter expects it by default as `--input-format` option.
             ' --report-file=./build/phpcs-report.xml' . # Save result of phpcs work in XML file in "checkstyle" format.
             ' --standard=PSR12 -q ./src' .              # The custom tool options. For phpcs `-q` is important!
-            ' || true > /dev/null'                      # We don't expect any output of phpcs and ignore error exit codes.
-                                                        # Lol, we are very self-confident. Actually, we need only XML file, that's it.
+            ' || true' .                                # We don't expect any output of phpcs and ignore error exit codes.
+            ' > /dev/null'                              # Lol, we are very self-confident. Actually, we need only XML file, that's it.
         );
 
         echo shell_exec(
@@ -50,6 +50,19 @@ class CheckStyleExamplesTest extends TestCase
             ' --output-format=tc-tests' .               # Target reporting format. Default value is "tc-tests". I put it here just to show the option,
             ' --suite-name=PHPcs' .                     # Define the name of group. See screenshot below.
             ' --root-path=`pwd`'                        # Specify the root project path for pretty printing in UI. Default value is "." (dot, current dir).
+        );
+
+        # The same reason like in testPipelineWay()
+        Assert::assertTrue(true);
+    }
+
+    public function testPhpMd(): void
+    {
+        echo shell_exec(
+            'php ./vendor/bin/phpmd ./src json' .
+            ' cleancode,codesize,controversial,design,naming,unusedcode' .
+            ' | ' .
+            ' ./ci-report-converter.phar --input-format=phpmd-json'
         );
 
         # The same reason like in testPipelineWay()
