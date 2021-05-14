@@ -69,6 +69,7 @@ jobs:
 
       - name: Codecov Report
         uses: codecov/codecov-action@v1
+        if: ${{ matrix.build-way == 'update' && matrix.php-version == '7.4' }}
         continue-on-error: ${{ matrix.experimental }}
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
