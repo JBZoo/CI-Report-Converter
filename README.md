@@ -193,7 +193,7 @@ Options:
 
 ### Custom Metrics in TeamCity
 
-To clarify the use of the method, take a look at the [examples and screenshots](#parsing-custom-metrics) below, please.
+To clarify the use of the method, take a look at the [examples and screenshots](#teamcity---reported-statistic-values) below, please.
 
 ```
 $ php ./vendor/bin/ci-report-converter teamcity:stats --help
@@ -479,6 +479,10 @@ You can find a lot of [life examples here](https://github.com/JBZoo/CI-Report-Co
 
 
 ### GitLab CI
+
+Use the option `--output-format=gitlab-json` to convert the report to Gitlab JSON format.
+
+Als, see [how to implemente GitLab Custom Report](https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html#implementing-a-custom-tool)
 
 ![GitLab Code Quality Report](.github/assets/gitlab-code-quality-report.png)
 
