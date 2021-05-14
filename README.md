@@ -24,9 +24,9 @@
     - [Psalm (psalm-json)](#psalm-psalm-json)
     - [Phan (checkstyle)](#phan-checkstyle)
   - [TeamCity](#teamcity)
-    - [As Failed Unit test](#as-failed-unit-test)
-    - [As Code Inspections](#as-code-inspections)
-    - [As Custom Metrics](#as-custom-metrics)
+    - [Style Issue As Failed Unit test](#style-issue-as-failed-unit-test)
+    - [Style Issue As Code Inspections](#style-issue-as-code-inspections)
+    - [Parsing Custom Metrics](#parsing-custom-metrics)
   - [GitHub Actions](#github-actions)
   - [GitLab CI](#gitlab-ci)
 - [Contributing](#contributing)
@@ -402,9 +402,9 @@ php ./vendor/bin/phan.phar --directory=./src --output-mode=checkstyle |  ./ci-re
 ```
 
 ### TeamCity
-#### As Failed Unit test
-#### As Code Inspections
-#### As Custom Metrics
+#### Style Issue As Failed Unit test
+#### Style Issue As Code Inspections
+#### Parsing Custom Metrics
 
 
 ### GitHub Actions
