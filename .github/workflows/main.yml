@@ -141,13 +141,7 @@ jobs:
 
       - name: Trying to use the phar file
         continue-on-error: ${{ matrix.experimental }}
-        run: |
-          echo "::group::Try to run it"
-          ./build/ci-report-converter.phar
-          echo "::endgroup::"
-          echo "::group::Show help message"
-          ./build/ci-report-converter.phar --help
-          echo "::endgroup::"
+        run: ./build/ci-report-converter.phar --help
 
 
   docker:

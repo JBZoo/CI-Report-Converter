@@ -144,7 +144,7 @@ At the moment, converting of reports works with
   * Output Formats:
     * [gitlab-json](tests/fixtures/origin/phpstan/gitlab.json) - [GitLab Custom Report](https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html#implementing-a-custom-tool).
     * [junit](tests/fixtures/origin/phpunit/junit-simple.xml) - The most popular sort of reporting.
-    * [tc-tests](tests/fixtures/test-cases/ConverterTeamCityTest) - [Reporting Tests in TeamCity/PhpStorm/JetBrains](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Tests).
+    * [tc-tests](tests/fixtures/test-cases/ConverterTeamCityTest/testJUnit.txt) - [Reporting Tests in TeamCity/PhpStorm/JetBrains](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Tests).
     * [tc-inspections](tests/fixtures/test-cases/ConverterTeamCityInspectionsTest) - [Reporting Inspections in TeamCity](https://www.jetbrains.com/help/teamcity/service-messages.html#Reporting+Inspections).
 
 
@@ -487,7 +487,7 @@ You can find a lot of [life examples here](https://github.com/JBZoo/CI-Report-Co
 ## Contributing
 
 ```shell
-# Clone the repo and build project
+# Fork the repo and build project
 make build
 
 # Make your local changes
@@ -495,6 +495,10 @@ make build
 # Run all tests and check code style
 make test
 make codestyle
+
+# Push create your Pull Request and check all tests
+# ???
+
 ```
 
 
