@@ -9,7 +9,8 @@
 
 - [Why?](#why)
 - [Installing](#installing)
-- [Using as GitHub Action](#using-as-github-action)
+- [Using as Github Action](#using-as-github-action)
+  - [Example Github Action workflow](#example-github-action-workflow)
 - [Available Directions](#available-directions)
 - [Help description in terminal](#help-description-in-terminal)
   - [Converting](#converting)
@@ -66,7 +67,7 @@ docker run --rm jbzoo/ci-report-converter --help
 
 
 
-## Using as GitHub Action
+## Using as Github Action
 
 Action allows you to convert error reports to the [GitHub Annotations format](https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-a-warning-message)
  * See [demo of error output](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/gh-action.yml?query=is%3Asuccess)
@@ -98,6 +99,23 @@ Action allows you to convert error reports to the [GitHub Annotations format](ht
 
 ```
 
+### Example Github Action workflow
+```yml
+  linter:
+    name: PHPcs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        
+      - name: PHP Code Sniffer
+        run: ./vendor/bin/phpcs --report=checkstyle --standard=PSR12 -q ./src > ./build/phpcs-checkstyle.xml
+        
+      - name: Converting checkstyle.xml to Github Annotations
+        uses: jbzoo/ci-report-converter@master
+        with:
+          input-file: build/phpcs-checkstyle.xml
+```
 
 
 ## Available Directions
@@ -278,11 +296,14 @@ class CheckStyleExamplesTest extends TestCase
 }
 ```
 
+See what happens under the hood.
 
 ```shell
-# See what happens under the hood. 
 cd  ~/your/project/root/directory
 php ./vendor/bin/phpunit ./tests/examples/CheckStyleExamples.php --teamcity
+
+# or
+php ./vendor/bin/phpcs --report=checkstyle --standard=PSR12 -q ./src | ./ci-report-converter.phar
 ```
 
 In both cases you will have the same output in your PhpStorm.
@@ -377,7 +398,7 @@ php ./vendor/bin/psalm --output-format=json | ./ci-report-converter.phar --input
 </details>
 
 ```shell
-php ./vendor/bin/phan.phar --allow-polyfill-parser --directory=./src --output-mode=checkstyle |  ./ci-report-converter.phar
+php ./vendor/bin/phan.phar --directory=./src --output-mode=checkstyle |  ./ci-report-converter.phar
 ```
 
 ### TeamCity
