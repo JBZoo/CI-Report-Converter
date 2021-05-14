@@ -472,7 +472,9 @@ Use the option `--output-format=tc-inspections` to convert any style report to u
 
 You can find a lot of [life examples here](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/gh-action.yml?query=is%3Asuccess+branch%3Amaster) and see [real examples in YML file](.github/workflows/gh-action.yml)   
 
-![GitHub Actions](.github/assets/github-actions.png)
+![GitHub Actions 1](.github/assets/github-actions-1.png)
+
+![GitHub Actions 1](.github/assets/github-actions-2.png)
 
 
 
