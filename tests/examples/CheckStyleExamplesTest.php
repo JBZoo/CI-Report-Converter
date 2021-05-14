@@ -28,7 +28,7 @@ class CheckStyleExamplesTest extends TestCase
      */
     protected function setUp(): void
     {
-        Assert::markTestSkipped('Tests disabled in CI. Mark as comment the line to run it locally');
+        //Assert::markTestSkipped('Tests disabled in CI. Mark as comment the line to run it locally');
     }
 
     /**
@@ -73,7 +73,6 @@ class CheckStyleExamplesTest extends TestCase
             ' --root-path=`pwd`'                        # Specify the root project path for pretty printing in UI. Default value is "." (dot, current dir).
         );
 
-        # The same reason like in testPipelineWay()
         Assert::assertTrue(true);
     }
 
@@ -86,14 +85,12 @@ class CheckStyleExamplesTest extends TestCase
             ' ./ci-report-converter --input-format=phpmd-json'
         );
 
-        # The same reason like in testPipelineWay()
         Assert::assertTrue(true);
     }
 
     public function testMagicNumberDetector(): void
     {
         shell_exec('php ./vendor/bin/phpmnd ./src --hint --xml-output=./build/phpmnd-report.xml --quiet');
-
         echo shell_exec(
             'php ./ci-report-converter' .
             ' --input-file=./build/phpmnd-report.xml' .
@@ -101,7 +98,19 @@ class CheckStyleExamplesTest extends TestCase
             ' --suite-name="Magic Number Detector"'
         );
 
-        # The same reason like in testPipelineWay()
+        Assert::assertTrue(true);
+    }
+
+    public function testPmdCpd(): void
+    {
+        shell_exec('php ./vendor/bin/phpcpd.phar --min-tokens=20 ./src --log-pmd=./build/phpcpd-report.xml');
+        echo shell_exec(
+            'php ./ci-report-converter' .
+            '  --input-file=./build/phpcpd-report.xml' .
+            '  --input-format=pmd-cpd' .
+            '  --suite-name="Copy&Paste Detector"'
+        );
+
         Assert::assertTrue(true);
     }
 }

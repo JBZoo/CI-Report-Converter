@@ -33,8 +33,6 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-
-
 ## Why?
 
 I believe you are familiar with the huge zoo of various utilities for testing, checking code standards, linters etc. 
@@ -109,7 +107,7 @@ Action allows you to convert error reports to the [GitHub Annotations format](ht
 </p>
 
 
-At the moment, conversion of reports works with
+At the moment, converting of reports works with
   * Input Formats:
     * [checkstyle](tests/fixtures/origin/phpcs/codestyle.xml) - the most popular sort of error report. It works for [Phan](https://github.com/phan/phan), [PHPcs](https://github.com/squizlabs/PHP_CodeSniffer) and others.
     * [junit](tests/fixtures/origin/phpunit/junit-simple.xml) - also it's really popular sort of error report. Usually, the format is used to display unit test results.
@@ -132,11 +130,12 @@ Also, you can follow [metrics around your code in TeamCity](https://www.jetbrain
  * [PHPMetrics.xml](tests/fixtures/origin/phpmetrics/phpmetrics.xml) => [Example in TeamCity](tests/fixtures/test-cases/ConverterTeamCityStatsTest/testPhpMetricsXml.txt)
 
 
-## Help description in terminal
+## Help description in a terminal
 
 ### Converting
 
-**NOTE:** The action `convert` is marked as default, so `./ci-report-converter.phar convert --help` === `./ci-report-converter.phar --help`.
+**NOTE:** The action `convert` is marked as default.
+So `./ci-report-converter.phar convert` is absolutely the same as `./ci-report-converter.phar`.
 
 ```
 $ php ./vendor/bin/ci-report-converter convert --help
@@ -168,7 +167,7 @@ Options:
 
 ### Custom Metrics in TeamCity
 
-[Take a look at the examples, please](#as-code-inspections)
+To clarify the use of the method, take a look at the [examples and screenshots](#as-code-inspections), please.
 
 ```
 $ php ./vendor/bin/ci-report-converter teamcity:stats --help
@@ -307,7 +306,15 @@ php ./vendor/bin/phpmd ./src json cleancode,codesize,controversial,design,naming
 ```
 
 
+
 #### Magic Number Detector (phpmnd)
+
+<details>
+  <summary>JetBrains IDE - Screenshot</summary>
+
+  ![PHPmd in JetBrains PhpStorm](.github/assets/phpstorm-phpmnd.png)
+  
+</details>
 
 ```shell
 php ./vendor/bin/phpmnd ./src --hint --xml-output=./build/phpmnd-report.xml --quiet
@@ -318,14 +325,25 @@ php ./vendor/bin/phpmnd ./src --hint --xml-output=./build/phpmnd-report.xml --qu
   --root-path=./src
 ```
 
+
+
+#### Copy/Paste Detector (pmd-cpd)
+
 <details>
   <summary>JetBrains IDE - Screenshot</summary>
 
-  ![PHPmd in JetBrains PhpStorm](.github/assets/phpstorm-phpmnd.png)
+  ![PHPcpd in JetBrains PhpStorm](.github/assets/phpstorm-phpcpd.png)
   
 </details>
 
-#### Copy/Paste Detector (pmd-cpd)
+```shell
+php ./vendor/bin/phpcpd ./src --log-pmd=./build/phpcpd-report.xml
+./ci-report-converter.phar
+  --input-file=./build/phpcpd-report.xml
+  --input-format=pmd-cpd
+  --suite-name="Copy&Paste Detector"
+```
+
 #### PHPStan (checkstyle)
 #### Psalm (psalm-json)
 #### Phan (checkstyle)
