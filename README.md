@@ -200,7 +200,7 @@ One of the unique features of the tool is converting reports to a unit test form
 The following examples show how to use JetBrains IDE UI to display any kind of stylish issues.
 Yeah, I know that the integration is not the cleanest, and it's not super beautiful. However, this code/screenshots demonstrate the usability of the approach.
 
-NOTE: I believe that coding style issues have the same level of severity as any other sort of errors.
+**NOTE:** I believe that coding style issues have the same level of severity as any other sort of errors.
 Therefore, I prefer to use the same workflow to check the quality of the code as I have with regular PHPUnit tests.
 This is the smartest thing for navigating the project and gives the most detailed information about errors.
 
@@ -218,6 +218,8 @@ However, the approach is independent of the programming language or unit testing
 So you can use any sort language to integrate style tests with JetBrains IDE.
 
 ```php
+<?php declare(strict_types=1);
+
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\TestCase;
 
@@ -247,7 +249,7 @@ class CheckStyleExamplesTest extends TestCase
      */
     public function testXmlFileWay(): void
     {
-        echo shell_exec(                                # Execute command via shell and return the complete output as a string.
+        shell_exec(                                     # Execute command via shell and return the complete output as a string.
             'php ./vendor/bin/phpcs' .                  # Path to bin of third-party tool (PHP Code Sniffer is just example).
             ' --report=checkstyle' .                    # Output format of PHPcs. CI-Report-Converter expects it by default as `--input-format` option.
             ' --report-file=./build/phpcs-report.xml' . # Save result of phpcs work in XML file in "checkstyle" format.
@@ -274,11 +276,12 @@ class CheckStyleExamplesTest extends TestCase
 ```
 
 In both cases you will have the same output in your PhpStorm.
+
 ![PHPcs in JetBrains PhpStorm](.github/assets/general-idea.png)
 
 
-See what happens under hood (manual mode).
 ```shell
+# See what happens under the hood. 
 cd  ~/your/project/root/directory
 php ./vendor/bin/phpunit ./tests/CheckStyleExamplesTest.php
 ```

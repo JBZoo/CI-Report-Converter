@@ -34,7 +34,7 @@ class CheckStyleExamplesTest extends TestCase
      */
     public function testXmlFileWay(): void
     {
-        echo shell_exec(                                # Execute command via shell and return the complete output as a string.
+        shell_exec(                                     # Execute command via shell and return the complete output as a string.
             'php ./vendor/bin/phpcs' .                  # Path to bin of third-party tool (PHP Code Sniffer is just example).
             ' --report=checkstyle' .                    # Output format of PHPcs. ci-report-converter expects it by default as `--input-format` option.
             ' --report-file=./build/phpcs-report.xml' . # Save result of phpcs work in XML file in "checkstyle" format.
