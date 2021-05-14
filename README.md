@@ -480,6 +480,8 @@ You can find a lot of [life examples here](https://github.com/JBZoo/CI-Report-Co
 
 ### GitLab CI
 
+![GitLab Code Quality Report](.github/assets/gitlab-code-quality-report.png)
+
 
 
 ## Contributing
@@ -494,6 +496,7 @@ make build
 make test
 make codestyle
 ```
+
 
 
 ## License
