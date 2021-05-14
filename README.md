@@ -16,7 +16,6 @@
   - [Custom Metrics in TeamCity](#custom-metrics-in-teamcity)
 - [Examples](#examples)
   - [JetBrains IDE (IntelliJ IDEA, PhpStorm, WebStorm, etc)](#jetbrains-ide-intellij-idea-phpstorm-webstorm-etc)
-    - [General idea](#general-idea)
     - [Mess Detector (phpmd-json)](#mess-detector-phpmd-json)
     - [Magic Number Detector (phpmnd)](#magic-number-detector-phpmnd)
     - [Copy/Paste Detector (pmd-cpd)](#copypaste-detector-pmd-cpd)
