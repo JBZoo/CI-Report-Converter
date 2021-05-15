@@ -67,7 +67,6 @@ jobs:
 
       - name: 🧪 PHPUnit Tests
         continue-on-error: ${{ matrix.experimental }}
-        if: ${{ matrix.build-way == 'build' && matrix.php-version != 8.0 && matrix.php-version != 8.1 }}
         run: make test --no-print-directory
 
       - name: Codecov Report
@@ -136,7 +135,7 @@ jobs:
 
       - name: Trying to use the phar file
         continue-on-error: ${{ matrix.experimental }}
-        run: ./build/ci-report-converter.phar --help
+        run: ./build/ci-report-converter.phar convert --help
 
 
   docker:
@@ -152,7 +151,7 @@ jobs:
         run: make build-docker
 
       - name: Trying to use the Docker Image
-        run: docker run --rm jbzoo-ci-report-converter --help
+        run: docker run --rm jbzoo-ci-report-converter convert --help
 
 
   release:

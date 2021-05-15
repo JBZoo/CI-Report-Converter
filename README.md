@@ -160,9 +160,6 @@ Also, you can follow [metrics around your code in TeamCity](https://www.jetbrain
 
 ### Converting
 
-**NOTE:** The action `convert` is marked as default.
-So `./ci-report-converter.phar convert` is absolutely the same as `./ci-report-converter.phar`.
-
 ```
 $ php ./vendor/bin/ci-report-converter convert --help
 Description:
@@ -331,7 +328,7 @@ php ./vendor/bin/phpcs --report=checkstyle --standard=PSR12 -q ./src | ./ci-repo
 </details>
 
 ```shell
-php ./vendor/bin/phpmd ./src json cleancode | ./ci-report-converter.phar -S phpmd-json
+php ./vendor/bin/phpmd ./src json cleancode | ./ci-report-converter.phar -Sphpmd-json
 ```
 
 
@@ -387,7 +384,9 @@ php ./vendor/bin/phpstan analyse --error-format=checkstyle --no-progress ./src |
 
 <details>
   <summary>Screenshot</summary>
+  
   ![PHP Psalm in JetBrains PhpStorm](.github/assets/phpstorm-psalm.png)
+
 </details>
 
 ```shell
@@ -500,9 +499,7 @@ make build
 make test
 make codestyle
 
-# Push create your Pull Request and check all tests
-# ???
-
+# Create your pull request and check all tests in CI
 ```
 
 
