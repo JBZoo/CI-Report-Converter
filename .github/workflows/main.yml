@@ -65,7 +65,7 @@ jobs:
 
       - name: Codecov Report
         uses: codecov/codecov-action@v1
-        if: ${{ matrix.php-version == 7.4 && matrix.php-version == 8.0 }}
+        if: ${{ matrix.php-version == 7.4 || matrix.php-version == 8.0 }}
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: '*.xml'
@@ -108,8 +108,6 @@ jobs:
         build-way: ["build", "update"]
         include:
           - php-version: 8.0
-            experimental: true
-          - php-version: 8.1
             experimental: true
     steps:
       - name: Checkout code
