@@ -71,7 +71,7 @@ jobs:
 
       - name: Codecov Report
         uses: codecov/codecov-action@v1
-        if: contains([7.4, 8.0], matrix.php-version)
+        if: contains( [7.4, 8.0], matrix.php-version )
         continue-on-error: ${{ matrix.experimental }}
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
