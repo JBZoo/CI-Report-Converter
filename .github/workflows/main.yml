@@ -109,6 +109,7 @@ jobs:
         include:
           - php-version: 8.0
             experimental: true
+            build-way: update
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
