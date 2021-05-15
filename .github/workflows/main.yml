@@ -38,16 +38,11 @@ jobs:
     strategy:
       matrix:
         php-version: [ 7.2, 7.3, 7.4 ]
-        experimental: [ false ]
-        composer_flags: [ "--prefer-lowest", "" ]
         build-way: ["build", "update"]
+        composer_flags: [ "--prefer-lowest", "" ]
         include:
           - php-version: 8.0
             build-way: update
-            experimental: false
-          - php-version: 8.1
-            build-way: update
-            experimental: true
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -62,18 +57,15 @@ jobs:
           tools: composer
 
       - name: Build the Project
-        continue-on-error: ${{ matrix.experimental }}
         run: make ${{ matrix.build-way }} --no-print-directory
 
       - name: 🧪 PHPUnit Tests
-        continue-on-error: ${{ matrix.experimental }}
         if: ${{ !(matrix.build-way == 'build' && matrix.php-version == 8.0) }}
         run: make test --no-print-directory
 
       - name: Codecov Report
         uses: codecov/codecov-action@v1
         if: ${{ matrix.php-version == 7.4 && matrix.php-version == 8.0 }}
-        continue-on-error: ${{ matrix.experimental }}
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: '*.xml'
