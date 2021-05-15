@@ -44,9 +44,10 @@ jobs:
         include:
           - php-version: 8.0
             build-way: update
+            experimental: false
           - php-version: 8.1
-            experimental: true
             build-way: update
+            experimental: true
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -112,10 +113,11 @@ jobs:
       matrix:
         php-version: [ 7.2, 7.3, 7.4 ]
         experimental: [ false ]
+        build-way: ["build", "update"]
         include:
-          - php-version: "8.0"
+          - php-version: 8.0
             experimental: true
-          - php-version: "8.1"
+          - php-version: 8.1
             experimental: true
     steps:
       - name: Checkout code
@@ -131,7 +133,7 @@ jobs:
 
       - name: Building Phar binary file
         continue-on-error: ${{ matrix.experimental }}
-        run: make build --no-print-directory
+        run: make ${{ matrix.build-way }} --no-print-directory
 
       - name: Trying to use the phar file
         continue-on-error: ${{ matrix.experimental }}
