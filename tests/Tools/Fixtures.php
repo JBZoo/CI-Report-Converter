@@ -35,13 +35,13 @@ class Fixtures
     public const PHAN_CODECLIMATE = self::ROOT_ORIG . '/phan/codeclimate.json';
     public const PHAN_CSV         = self::ROOT_ORIG . '/phan/csv.csv';
     public const PHAN_JSON        = self::ROOT_ORIG . '/phan/json.json';
-    public const PHAN_PYLINT      = self::ROOT_ORIG . '/phan/pylint.txt';
+    public const PHAN_PYLINT      = self::ROOT_ORIG . '/phan/pylint.log';
 
     public const PHPCPD_XML = self::ROOT_ORIG . '/phpcpd/pmd-cpd.xml';
 
     public const PHPCS_CODESTYLE = self::ROOT_ORIG . '/phpcs/codestyle.xml';
     public const PHPCS_CSV       = self::ROOT_ORIG . '/phpcs/csv.csv';
-    public const PHPCS_EMACS     = self::ROOT_ORIG . '/phpcs/emacs.txt';
+    public const PHPCS_EMACS     = self::ROOT_ORIG . '/phpcs/emacs.log';
     public const PHPCS_JSON      = self::ROOT_ORIG . '/phpcs/json.json';
     public const PHPCS_JUNIT     = self::ROOT_ORIG . '/phpcs/junit.xml';
     public const PHPCS_XML       = self::ROOT_ORIG . '/phpcs/phpcs.xml';
@@ -56,22 +56,22 @@ class Fixtures
     public const PHPMND_XML = self::ROOT_ORIG . '/phpmnd/phpmnd.xml';
 
     public const PHPSTAN_CHECKSTYLE = self::ROOT_ORIG . '/phpstan/checkstyle.xml';
-    public const PHPSTAN_GITHUB     = self::ROOT_ORIG . '/phpstan/github.txt';
+    public const PHPSTAN_GITHUB     = self::ROOT_ORIG . '/phpstan/github.log';
     public const PHPSTAN_GITLAB     = self::ROOT_ORIG . '/phpstan/gitlab.json';
     public const PHPSTAN_JSON       = self::ROOT_ORIG . '/phpstan/json.json';
     public const PHPSTAN_JUNIT      = self::ROOT_ORIG . '/phpstan/junit.xml';
 
     public const PHPUNIT_JUNIT_NESTED = self::ROOT_ORIG . '/phpunit/junit-nested.xml';
     public const PHPUNIT_JUNIT_SIMPLE = self::ROOT_ORIG . '/phpunit/junit-simple.xml';
-    public const PHPUNIT_TEAMCITY     = self::ROOT_ORIG . '/phpunit/teamcity.txt';
+    public const PHPUNIT_TEAMCITY     = self::ROOT_ORIG . '/phpunit/teamcity.log';
     public const PHPUNIT_CLOVER       = self::ROOT_ORIG . '/phpunit/clover.xml';
 
     public const PSALM_CHECKSTYLE = self::ROOT_ORIG . '/psalm/checkstyle.xml';
-    public const PSALM_EMACS      = self::ROOT_ORIG . '/psalm/emacs.txt';
-    public const PSALM_GITHUB     = self::ROOT_ORIG . '/psalm/github.txt';
+    public const PSALM_EMACS      = self::ROOT_ORIG . '/psalm/emacs.log';
+    public const PSALM_GITHUB     = self::ROOT_ORIG . '/psalm/github.log';
     public const PSALM_JSON       = self::ROOT_ORIG . '/psalm/json.json';
     public const PSALM_JUNIT      = self::ROOT_ORIG . '/psalm/junit.xml';
-    public const PSALM_PYLINT     = self::ROOT_ORIG . '/psalm/pylint.txt';
+    public const PSALM_PYLINT     = self::ROOT_ORIG . '/psalm/pylint.log';
     public const PSALM_SONARQUBE  = self::ROOT_ORIG . '/psalm/sonarqube.json';
     public const PSALM_XML        = self::ROOT_ORIG . '/psalm/xml.xml';
 

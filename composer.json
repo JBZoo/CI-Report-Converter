@@ -41,6 +41,7 @@
         "php"             : ">=7.2",
         "ext-dom"         : "*",
         "ext-simplexml"   : "*",
+        "ext-hash"        : "*",
 
         "jbzoo/data"      : "^4.3.1",
         "jbzoo/utils"     : "^4.5.2",
@@ -72,11 +73,5 @@
 
     "config"       : {
         "optimize-autoloader" : true
-    },
-
-    "extra"        : {
-        "branch-alias" : {
-            "dev-master" : "2.x-dev"
-        }
     }
 }

@@ -51,7 +51,7 @@ abstract class AbstractCommand extends Command
             ->addOption('output-file', 'O', InputOption::VALUE_OPTIONAL, "File path with the result report format. " .
                 "If not set or empty, then the STDOUT is used.")
             ->addOption('root-path', 'R', InputOption::VALUE_OPTIONAL, 'If option is set, ' .
-                'all absolute file paths will be converted to relative once.')
+                'all absolute file paths will be converted to relative once.', '.')
             ->addOption('tc-flow-id', 'F', InputOption::VALUE_OPTIONAL, 'Custom flowId for TeamCity output');
     }
 

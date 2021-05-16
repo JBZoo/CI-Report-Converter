@@ -2,6 +2,7 @@
     {
         "description" : "Method JBZoo\\CiReportConverter\\JUnit\\TestCaseElement::setName() has no return typehint specified.",
         "fingerprint" : "aea772c778f246ed5a99ab9fd3a8517ff7e69309ffccd84939ecf646dea8ae23",
+        "severity": "major",
         "location"    : {
             "path"  : "src/JUnit/TestCaseElement.php",
             "lines" : {
@@ -12,6 +13,7 @@
     {
         "description" : "Method JBZoo\\CiReportConverter\\JUnit\\TestCaseElement::setClassname() has no return typehint specified.",
         "fingerprint" : "290dd7ea67a8e3dad2458bde3a4aabd02323caebd1b2a47317a292f3892ced4f",
+        "severity": "major",
         "location"    : {
             "path"  : "src/JUnit/TestCaseElement.php",
             "lines" : {
@@ -22,6 +24,7 @@
     {
         "description" : "Method JBZoo\\CiReportConverter\\JUnit\\TestCaseElement::setTime() has no return typehint specified.",
         "fingerprint" : "bca475e51d19a2a2d345d503f9a7ae48582f53f931229cbe7ba00c71e21a63ae",
+        "severity": "major",
         "location"    : {
             "path"  : "src/JUnit/TestCaseElement.php",
             "lines" : {
@@ -32,6 +35,7 @@
     {
         "description" : "Parameter #2 $value of method DOMElement::setAttribute() expects string, float given.",
         "fingerprint" : "4f955b38926f799c3cc81ffdf1436d282403f0af649cfd5e463380c44aeea50f",
+        "severity": "major",
         "location"    : {
             "path"  : "src/JUnit/TestCaseElement.php",
             "lines" : {
@@ -42,6 +46,7 @@
     {
         "description" : "Cannot call method createElement() on DOMDocument|null.",
         "fingerprint" : "66fe05f718683cf3a24105d5cd7bd42b4841a5fc960d9f4f1d45314aa5c33c81",
+        "severity": "blocker",
         "location"    : {
             "path"  : "src/JUnit/TestCaseElement.php",
             "lines" : {
@@ -52,6 +57,7 @@
     {
         "description" : "Cannot call method createElement() on DOMDocument|null.",
         "fingerprint" : "417b2efd0be700e8260c6a56fc6ec63e5e5e69e40a32a4fadfe7216a359b2c13",
+        "severity": "blocker",
         "location"    : {
             "path"  : "src/JUnit/TestCaseElement.php",
             "lines" : {
@@ -62,6 +68,7 @@
     {
         "description" : "Method JBZoo\\CiReportConverter\\JUnit\\TestCaseElement::incrementFailureCount() has no return typehint specified.",
         "fingerprint" : "39776773050bcbcc901b2212b8e435e32079deab8788ab90c15090bbd17e95da",
+        "severity": "blocker",
         "location"    : {
             "path"  : "src/JUnit/TestCaseElement.php",
             "lines" : {
@@ -72,6 +79,7 @@
     {
         "description" : "Parameter #2 $value of method DOMElement::setAttribute() expects string, int given.",
         "fingerprint" : "9d30bbbe66c33cd85942d404d7c77759137fabf9bca37cdc0b17ff73fe0ff3a9",
+        "severity": "blocker",
         "location"    : {
             "path"  : "src/JUnit/TestCaseElement.php",
             "lines" : {

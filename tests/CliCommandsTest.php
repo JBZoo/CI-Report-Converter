@@ -57,7 +57,7 @@ class CliCommandsTest extends PHPUnit
 
             isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
         } else {
-            skip('Old help text is different for different libs/php versions');
+            success('Old help text is different for different libs/php versions');
         }
     }
 
@@ -76,7 +76,7 @@ class CliCommandsTest extends PHPUnit
 
             isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
         } else {
-            skip('Old help text is different for different libs/php versions');
+            success('Old help text is different for different libs/php versions');
         }
     }
 

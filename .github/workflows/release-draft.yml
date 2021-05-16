@@ -11,10 +11,19 @@
 # @link       https://github.com/JBZoo/CI-Report-Converter
 #
 
-.idea
-.DS_Store
-build
-vendor
-phpunit.xml
-*.cache
-ci-report-converter.phar
+name: Draft Release
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+
+jobs:
+  draft-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Draft Release
+        uses: release-drafter/release-drafter@v5.15.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
