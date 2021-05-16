@@ -19,7 +19,8 @@ on:
       - "*"
   push:
     branches:
-      - 'master'
+      - develop
+      - master
     tags:
       - '*'
   schedule:

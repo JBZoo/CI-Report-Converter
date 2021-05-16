@@ -38,6 +38,6 @@ exclude-labels:
   - 'Skip Changelog'
 no-changes-template: 'This release contains minor changes and bugfixes.'
 template: |
-  ## Whats New?
+  ### Whats New?
 
   $CHANGES

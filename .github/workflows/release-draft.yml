@@ -16,6 +16,7 @@ name: Draft Release
 on:
   push:
     branches:
+      - master
       - develop
 
 jobs:
@@ -23,6 +24,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Draft Release
-        uses: toolmantim/release-drafter@v5.2.0
+        uses: release-drafter/release-drafter@v5.15.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
