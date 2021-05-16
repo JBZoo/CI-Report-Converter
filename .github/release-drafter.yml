@@ -33,6 +33,7 @@ change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 sort-by: title
 sort-direction: ascending
 branches:
+  - master
   - develop
 exclude-labels:
   - 'Skip Changelog'

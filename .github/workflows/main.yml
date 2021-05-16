@@ -19,8 +19,8 @@ on:
       - "*"
   push:
     branches:
-      - develop
       - master
+      - develop
     tags:
       - '*'
   schedule:
@@ -171,26 +171,3 @@ jobs:
           echo "::group::Show help message"
           docker run --rm jbzoo-ci-report-converter convert --help
           echo "::endgroup::"
-
-
-  release:
-    if: startsWith(github.ref, 'refs/tags/')
-    needs:
-     - phpunit
-     - linters
-     - phar
-     - docker
-    runs-on: ubuntu-latest
-    steps:
-      - name: Build Changelog
-        id: github_release
-        uses: mikepenz/release-changelog-builder-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Create Release
-        uses: softprops/action-gh-release@v1
-        with:
-          body: ${{steps.github_release.outputs.changelog}}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
