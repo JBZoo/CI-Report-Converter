@@ -1,0 +1,45 @@
+#
+# JBZoo Toolbox - CI-Report-Converter
+#
+# This file is part of the JBZoo Toolbox project.
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+#
+# @package    CI-Report-Converter
+# @license    MIT
+# @copyright  Copyright (C) JBZoo.com, All rights reserved.
+# @link       https://github.com/JBZoo/CI-Report-Converter
+#
+
+name-template: 'v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+categories:
+  - title: '🚀 Features'
+    labels:
+      - 'feature'
+      - 'enhancement'
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'fix'
+      - 'bugfix'
+      - 'bug'
+  - title: '🧰 Maintenance'
+    label:
+      - 'other'
+      - 'chore'
+      - 'documentation'
+      - 'docs'
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+sort-by: title
+sort-direction: ascending
+branches:
+  - master
+  - develop
+exclude-labels:
+  - 'Skip Changelog'
+no-changes-template: 'This release contains minor changes and bugfixes.'
+template: |
+  ## What’s Changed
+
+  $CHANGES
+
