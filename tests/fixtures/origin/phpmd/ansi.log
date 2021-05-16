@@ -1,0 +1,167 @@
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Commands/AbstractCommand.php
+-----------------------------------------------------------------------------------------------
+ 77  | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '79', column '13').
+ 104 | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '106', column '13').
+ 109 | [31mVIOLATION[0m | The method saveResult uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Commands/Convert.php
+---------------------------------------------------------------------------------------
+ 46  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Converters\Map' in method 'configure'.
+ 54  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Converters\Map' in method 'configure'.
+ 72  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Converters\Factory' in method 'executeAction'.
+ 91  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Converters\Map' in method 'getFormat'.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Commands/ConvertMap.php
+------------------------------------------------------------------------------------------
+ 43  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Converters\Map' in method 'executeAction'.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Commands/TeamCityStats.php
+---------------------------------------------------------------------------------------------
+ 37  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Converters\Map' in method 'configure'.
+ 54  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Converters\Factory' in method 'executeAction'.
+ 68  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Converters\Map' in method 'getFormat'.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/AbstractConverter.php
+---------------------------------------------------------------------------------------------------
+ 119 | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '125', column '13').
+ 119 | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '134', column '17').
+ 158 | [31mVIOLATION[0m | The method getFilePoint uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/AbstractStatsTcConverter.php
+----------------------------------------------------------------------------------------------------------
+ 68  | [31mVIOLATION[0m | The method buildMetrics uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php
+-----------------------------------------------------------------------------------------------------
+ 42  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternal'.
+ 43  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternal'.
+ 86  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Helper' in method 'getDetails'.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/Factory.php
+-----------------------------------------------------------------------------------------
+ 72  | [31mVIOLATION[0m | Avoid using static access to class 'JBZoo\CiReportConverter\Converters\Map' in method 'convertMetric'.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/GitLabJsonConverter.php
+-----------------------------------------------------------------------------------------------------
+ 79  | [31mVIOLATION[0m | The method renderTestCase uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/GithubCliConverter.php
+----------------------------------------------------------------------------------------------------
+ 44  | [31mVIOLATION[0m | The method fromInternal uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+ 84  | [31mVIOLATION[0m | The method renderTestCase uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/JUnitConverter.php
+------------------------------------------------------------------------------------------------
+ 42  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternal'.
+ 43  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternal'.
+ 68  | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '89', column '21').
+ 68  | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '93', column '21').
+ 68  | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '97', column '21').
+ 156 | [31mVIOLATION[0m | The method createSourceNodes uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+ 162 | [31mVIOLATION[0m | The method createSourceNodes uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpDependStatsTcConverter.php
+-----------------------------------------------------------------------------------------------------------
+ 40  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternalMetric'.
+ 40  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternalMetric'.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMdJsonConverter.php
+----------------------------------------------------------------------------------------------------
+ 99  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Helper' in method 'getDetails'.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMetricsStatsTcConverter.php
+------------------------------------------------------------------------------------------------------------
+ 40  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternalMetric'.
+ 40  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternalMetric'.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMndConverter.php
+-------------------------------------------------------------------------------------------------
+ 42  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternal'.
+ 43  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternal'.
+ 109 | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Helper' in method 'getDetails'.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpUnitCloverStatsTcConverter.php
+---------------------------------------------------------------------------------------------------------------
+ 41  | [31mVIOLATION[0m | Missing class import via use statement (line '41', column '26').
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PmdCpdConverter.php
+-------------------------------------------------------------------------------------------------
+ 42  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternal'.
+ 42  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternal'.
+ 132 | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '152', column '13').
+ 157 | [31mVIOLATION[0m | The method getDetails uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PsalmJsonConverter.php
+----------------------------------------------------------------------------------------------------
+ 69  | [31mVIOLATION[0m | The method toInternal uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+ 85  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Helper' in method 'getDetails'.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php
+--------------------------------------------------------------------------------------------------------
+ 106 | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '119', column '13').
+ 121 | [31mVIOLATION[0m | The method renderTestCase uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/AbstractNode.php
+-------------------------------------------------------------------------------------------
+ 64  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\Utils\Str' in method '__construct'.
+ 163 | [31mVIOLATION[0m | The method toArray uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/GithubActions/GithubCase.php
+-------------------------------------------------------------------------------------------------------
+ 77  | [31mVIOLATION[0m | Avoid using static access to class 'JBZoo\CiReportConverter\Formats\GithubActions\GithubActions' in method '__toString'.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/CaseOutput/AbstractOutput.php
+--------------------------------------------------------------------------------------------------------------
+ 90  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\Utils\Xml' in method 'toXML'.
+ 91  | [31mVIOLATION[0m | The method toXML uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/JUnit.php
+------------------------------------------------------------------------------------------
+ 49  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'getDom'.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/JUnitCase.php
+----------------------------------------------------------------------------------------------
+ 110 | [31mVIOLATION[0m | The method addSystemOut uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/JUnitSuite.php
+-----------------------------------------------------------------------------------------------
+ 59  | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '69', column '13').
+ 59  | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '73', column '13').
+ 59  | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '77', column '13').
+ 59  | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '81', column '13').
+ 59  | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '85', column '13').
+ 59  | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '89', column '13').
+ 59  | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '93', column '13').
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/Source/SourceCaseOutput.php
+------------------------------------------------------------------------------------------------------
+ 73  | [31mVIOLATION[0m | The method parseDescription uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+ 104 | [31mVIOLATION[0m | The method parseDescription uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/TeamCity/Helper.php
+----------------------------------------------------------------------------------------------
+ 81  | [31mVIOLATION[0m | The method printEvent uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+ 110 | [31mVIOLATION[0m | Missing class import via use statement (line '110', column '38').
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/TeamCity/TeamCity.php
+------------------------------------------------------------------------------------------------
+ 69  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\Utils\Sys' in method '__construct'.
+ 71  | [31mVIOLATION[0m | The method __construct uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+ 124 | [31mVIOLATION[0m | Avoid using static access to class 'JBZoo\CiReportConverter\Formats\TeamCity\Helper' in method 'write'.
+ 137 | [31mVIOLATION[0m | Avoid using static access to class 'JBZoo\CiReportConverter\Formats\TeamCity\Helper' in method 'write'.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/TeamCity/Writers/Stdout.php
+------------------------------------------------------------------------------------------------------
+ 34  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\Utils\Cli' in method 'write'.
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/Xml.php
+----------------------------------------------------------------------------------
+ 35  | [31mVIOLATION[0m | Missing class import via use statement (line '35', column '25').
+ 102 | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '121', column '44').
+
+FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper.php
+-----------------------------------------------------------------------------
+ 34  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\Utils\Str' in method 'descAsList'.
+
+Found 72 violations and 0 errors in 1526ms

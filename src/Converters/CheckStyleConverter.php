@@ -84,7 +84,7 @@ class CheckStyleConverter extends AbstractConverter
     private static function getDetails(Data $data): ?string
     {
         return Helper::descAsList([
-            ''          => htmlspecialchars_decode($data->get('message')),
+            ''          => htmlspecialchars_decode($data->getString('message')),
             'Rule'      => $data->get('source'),
             'File Path' => self::getFilePoint($data->get('full_path'), $data->get('line'), $data->get('column')),
             'Severity'  => $data->get('severity'),

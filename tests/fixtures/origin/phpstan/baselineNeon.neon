@@ -1,0 +1,47 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Instantiated class JConfig not found\\.$#"
+			count: 1
+			path: vendor/jbzoo/jbdump/class.jbdump.php
+
+		-
+			message: "#^Result of function var_dump \\(void\\) is used\\.$#"
+			count: 1
+			path: vendor/jbzoo/jbdump/class.jbdump.php
+
+		-
+			message: "#^Undefined variable\\: \\$params$#"
+			count: 1
+			path: vendor/jbzoo/jbdump/class.jbdump.php
+
+		-
+			message: "#^Class JBDump referenced with incorrect case\\: jbdump\\.$#"
+			count: 3
+			path: vendor/jbzoo/jbdump/test/_ajaxtest.php
+
+		-
+			message: "#^Function GetPHPFilesMark not found\\.$#"
+			count: 1
+			path: vendor/jbzoo/jbdump/test/_benchmark.php
+
+		-
+			message: "#^Class JBDump referenced with incorrect case\\: jbdump\\.$#"
+			count: 4
+			path: vendor/jbzoo/jbdump/test/_chain.php
+
+		-
+			message: "#^Class JBDump referenced with incorrect case\\: jbdump\\.$#"
+			count: 3
+			path: vendor/jbzoo/jbdump/test/included_file.php
+
+		-
+			message: "#^Access to constant GET on an unknown class JBZoo\\\\HttpClient\\\\Request\\.$#"
+			count: 1
+			path: vendor/jbzoo/phpunit/src/functions/tools.php
+
+		-
+			message: "#^Return typehint of function JBZoo\\\\PHPUnit\\\\httpRequest\\(\\) has invalid type JBZoo\\\\HttpClient\\\\Response\\.$#"
+			count: 1
+			path: vendor/jbzoo/phpunit/src/functions/tools.php
+

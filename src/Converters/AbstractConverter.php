@@ -71,7 +71,11 @@ abstract class AbstractConverter
      */
     public function setRootPath(?string $rootPath): self
     {
-        $this->rootPath = $rootPath;
+        if ($rootPath === '.') {
+            $rootPath = realpath($rootPath);
+        }
+
+        $this->rootPath = (string)$rootPath ?: null;
         return $this;
     }
 

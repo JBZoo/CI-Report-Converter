@@ -1,0 +1,1589 @@
+
+[0;31mERROR[0m: PossiblyNullPropertyAssignmentValue
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:169:27
+$this->_logfile with non-nullable declared type 'resource|string' cannot be assigned nullable type 'null' (see https://psalm.dev/148)
+    protected $_logfile = [97;41mnull[0m;
+
+
+[0;31mERROR[0m: PossiblyNullPropertyAssignmentValue
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:175:27
+$this->_logPath with non-nullable declared type 'string' cannot be assigned nullable type 'null' (see https://psalm.dev/148)
+    protected $_logPath = [97;41mnull[0m;
+
+
+[0;31mERROR[0m: ArgumentTypeCoercion
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:226:35
+Argument 1 of set_exception_handler expects callable(Throwable):void|null, parent type array{JBDump&static, "_exceptionHandler"} provided (see https://psalm.dev/193)
+            set_exception_handler([97;41marray($this, '_exceptionHandler')[0m);
+
+
+[0;31mERROR[0m: MissingClosureParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:272:57
+Parameter $a has no provided type (see https://psalm.dev/153)
+            uasort(self::$_counters['trace'], function ([97;41m$a[0m, $b) {
+
+
+[0;31mERROR[0m: MissingClosureParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:272:61
+Parameter $b has no provided type (see https://psalm.dev/153)
+            uasort(self::$_counters['trace'], function ($a, [97;41m$b[0m) {
+
+
+[0;31mERROR[0m: PossiblyInvalidOperand
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:320:62
+Cannot perform a numeric operation with a non-numeric type bool (see https://psalm.dev/163)
+                        $timeStd = ' <span title="' . round(([97;41m$timeStdValue[0m / $timeAvg) * 100) . '%">(&plusmn;'
+
+
+[0;31mERROR[0m: PossiblyInvalidOperand
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:322:62
+Cannot perform a numeric operation with a non-numeric type bool (see https://psalm.dev/163)
+                        $memoStd = ' <span title="' . round(([97;41m$memoStdValue[0m / $memoAvg) * 100) . '%">(&plusmn;'
+
+
+[0;31mERROR[0m: InvalidScalarArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:323:59
+Argument 1 of JBDump::_profilerFormatMemory expects int, bool|float provided (see https://psalm.dev/012)
+                            . self::_profilerFormatMemory([97;41m$memoStdValue[0m, true) . ')</span>';
+
+
+[0;31mERROR[0m: PossiblyFalseOperand
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:332:39
+Left operand cannot be falsable, got false|int (see https://psalm.dev/162)
+                            'min(' . ([97;41marray_search(min($timeDiffs), $timeDiffs)[0m + 1) . '):' . self::_profilerFormatTime(min($timeDiffs), true, 2),
+
+
+[0;31mERROR[0m: ArgumentTypeCoercion
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:332:56
+Argument 1 of min expects non-empty-array<array-key, mixed>, parent type list<mixed> provided (see https://psalm.dev/193)
+                            'min(' . (array_search(min([97;41m$timeDiffs[0m), $timeDiffs) + 1) . '):' . self::_profilerFormatTime(min($timeDiffs), true, 2),
+
+
+[0;31mERROR[0m: ArgumentTypeCoercion
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:332:125
+Argument 1 of min expects non-empty-array<array-key, mixed>, parent type list<mixed> provided (see https://psalm.dev/193)
+                            'min(' . (array_search(min($timeDiffs), $timeDiffs) + 1) . '):' . self::_profilerFormatTime(min([97;41m$timeDiffs[0m), true, 2),
+
+
+[0;31mERROR[0m: PossiblyFalseOperand
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:333:39
+Left operand cannot be falsable, got false|int (see https://psalm.dev/162)
+                            'max(' . ([97;41marray_search(max($timeDiffs), $timeDiffs)[0m + 1) . '): ' . self::_profilerFormatTime(max($timeDiffs), true, 2),
+
+
+[0;31mERROR[0m: ArgumentTypeCoercion
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:333:56
+Argument 1 of max expects non-empty-array<array-key, mixed>, parent type list<mixed> provided (see https://psalm.dev/193)
+                            'max(' . (array_search(max([97;41m$timeDiffs[0m), $timeDiffs) + 1) . '): ' . self::_profilerFormatTime(max($timeDiffs), true, 2),
+
+
+[0;31mERROR[0m: ArgumentTypeCoercion
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:333:126
+Argument 1 of max expects non-empty-array<array-key, mixed>, parent type list<mixed> provided (see https://psalm.dev/193)
+                            'max(' . (array_search(max($timeDiffs), $timeDiffs) + 1) . '): ' . self::_profilerFormatTime(max([97;41m$timeDiffs[0m), true, 2),
+
+
+[0;31mERROR[0m: InvalidScalarArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:336:67
+Argument 1 of JBDump::_profilerFormatMemory expects int, float|int provided (see https://psalm.dev/012)
+                            'ave: ' . self::_profilerFormatMemory([97;41m$memoAvg[0m, true) . $memoStd,
+
+
+[0;31mERROR[0m: InvalidScalarArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:337:67
+Argument 1 of JBDump::_profilerFormatMemory expects int, float|int provided (see https://psalm.dev/012)
+                            'sum: ' . self::_profilerFormatMemory([97;41marray_sum($memDiffs)[0m, true),
+
+
+[0;31mERROR[0m: PossiblyFalseOperand
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:338:39
+Left operand cannot be falsable, got false|int (see https://psalm.dev/162)
+                            'min(' . ([97;41marray_search(min($memDiffs), $memDiffs)[0m + 1) . '): ' . self::_profilerFormatMemory(min($memDiffs), true),
+
+
+[0;31mERROR[0m: ArgumentTypeCoercion
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:338:56
+Argument 1 of min expects non-empty-array<array-key, mixed>, parent type list<mixed> provided (see https://psalm.dev/193)
+                            'min(' . (array_search(min([97;41m$memDiffs[0m), $memDiffs) + 1) . '): ' . self::_profilerFormatMemory(min($memDiffs), true),
+
+
+[0;31mERROR[0m: ArgumentTypeCoercion
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:338:126
+Argument 1 of min expects non-empty-array<array-key, mixed>, parent type list<mixed> provided (see https://psalm.dev/193)
+                            'min(' . (array_search(min($memDiffs), $memDiffs) + 1) . '): ' . self::_profilerFormatMemory(min([97;41m$memDiffs[0m), true),
+
+
+[0;31mERROR[0m: PossiblyFalseOperand
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:339:39
+Left operand cannot be falsable, got false|int (see https://psalm.dev/162)
+                            'max(' . ([97;41marray_search(max($memDiffs), $memDiffs)[0m + 1) . '): ' . self::_profilerFormatMemory(max($memDiffs), true),
+
+
+[0;31mERROR[0m: ArgumentTypeCoercion
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:339:56
+Argument 1 of max expects non-empty-array<array-key, mixed>, parent type list<mixed> provided (see https://psalm.dev/193)
+                            'max(' . (array_search(max([97;41m$memDiffs[0m), $memDiffs) + 1) . '): ' . self::_profilerFormatMemory(max($memDiffs), true),
+
+
+[0;31mERROR[0m: ArgumentTypeCoercion
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:339:126
+Argument 1 of max expects non-empty-array<array-key, mixed>, parent type list<mixed> provided (see https://psalm.dev/193)
+                            'max(' . (array_search(max($memDiffs), $memDiffs) + 1) . '): ' . self::_profilerFormatMemory(max([97;41m$memDiffs[0m), true),
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:482:39
+Parameter $reportLevel has no provided type (see https://psalm.dev/154)
+    public static function showErrors([97;41m$reportLevel[0m = -1)
+
+
+[0;31mERROR[0m: InvalidScalarArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:495:39
+Argument 2 of ini_set expects string, 1 provided (see https://psalm.dev/012)
+            ini_set('display_errors', [97;41m1[0m);
+
+
+[0;31mERROR[0m: InvalidScalarArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:496:47
+Argument 2 of ini_set expects string, 1 provided (see https://psalm.dev/012)
+            ini_set('display_startup_errors', [97;41m1[0m);
+
+
+[0;31mERROR[0m: InvalidScalarArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:500:40
+Argument 2 of ini_set expects string, 0 provided (see https://psalm.dev/012)
+            ini_set('error_reporting', [97;41m0[0m);
+
+
+[0;31mERROR[0m: InvalidScalarArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:501:39
+Argument 2 of ini_set expects string, 0 provided (see https://psalm.dev/012)
+            ini_set('display_errors', [97;41m0[0m);
+
+
+[0;31mERROR[0m: InvalidScalarArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:502:47
+Argument 2 of ini_set expects string, 0 provided (see https://psalm.dev/012)
+            ini_set('display_startup_errors', [97;41m0[0m);
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:511:17
+The declared return type 'JBDump' for JBDump::maxTime does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:516:20
+The declared return type 'JBDump' for JBDump::maxTime does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidScalarArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:519:39
+Argument 2 of ini_set expects string, int provided (see https://psalm.dev/012)
+        ini_set('max_execution_time', [97;41m$time[0m);
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:606:17
+The declared return type 'JBDump' for JBDump::ip does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:611:20
+The declared return type 'JBDump' for JBDump::ip does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:629:17
+The declared return type 'JBDump' for JBDump::get does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:634:20
+The declared return type 'JBDump' for JBDump::get does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:645:17
+The declared return type 'JBDump' for JBDump::log does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:650:20
+The declared return type 'JBDump' for JBDump::log does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:683:86
+Argument 2 of JBDump_array2php::toString expects null, non-falsy-string provided (see https://psalm.dev/004)
+            $entry    = array('jbdump_message' => JBDump_array2php::toString($entry, [97;41m$markName[0m));
+
+
+[0;31mERROR[0m: ForbiddenCode
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:687:13
+Unsafe var_dump (see https://psalm.dev/002)
+            [97;41mvar_dump($entry)[0m;
+
+
+[0;31mERROR[0m: ForbiddenCode
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:689:48
+Unsafe var_dump (see https://psalm.dev/002)
+            $entry = array('jbdump_message' => [97;41mvar_dump($entry, true)[0m);
+
+
+[0;31mERROR[0m: PossiblyInvalidArrayOffset
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:698:9
+Cannot access value on variable $entry['name'] using offset value of name, expecting int (see https://psalm.dev/116)
+        [97;41m$entry['name'][0m      = $markName;
+
+
+[0;31mERROR[0m: PossiblyInvalidArrayOffset
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:699:9
+Cannot access value on variable $entry['datetime'] using offset value of datetime, expecting int (see https://psalm.dev/116)
+        [97;41m$entry['datetime'][0m  = date(self::DATE_FORMAT);
+
+
+[0;31mERROR[0m: PossiblyInvalidArrayOffset
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:700:9
+Cannot access value on variable $entry['client_ip'] using offset value of client_ip, expecting int (see https://psalm.dev/116)
+        [97;41m$entry['client_ip'][0m = self::getClientIP();
+
+
+[0;31mERROR[0m: PossiblyInvalidArrayOffset
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:701:9
+Cannot access value on variable $entry['file'] using offset value of file, expecting int (see https://psalm.dev/116)
+        [97;41m$entry['file'][0m      = $_this->_getSourcePath($_this->_trace, true);
+
+
+[0;31mERROR[0m: PossiblyInvalidArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:716:43
+Argument 3 of error_log expects string, possibly different type resource|string provided (see https://psalm.dev/092)
+            error_log($line . PHP_EOL, 3, [97;41m$_this->_logfile[0m);
+
+
+[0;31mERROR[0m: PossiblyInvalidArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:729:27
+Argument 1 of file_exists expects string, possibly different type resource|string provided (see https://psalm.dev/092)
+        if (!@file_exists([97;41m$this->_logfile[0m)) {
+
+
+[0;31mERROR[0m: PossiblyUndefinedVariable
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:735:13
+Possibly undefined variable $header, first seen on line 735 (see https://psalm.dev/018)
+            [97;41m$header[0m[] = "#<?php die('Direct Access To Log Files Not Permitted'); ?>";
+
+
+[0;31mERROR[0m: PossiblyInvalidArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:749:43
+Argument 3 of error_log expects string, possibly different type resource|string provided (see https://psalm.dev/092)
+            error_log($head . PHP_EOL, 3, [97;41m$this->_logfile[0m);
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:757:17
+The declared return type 'JBDump' for JBDump::files does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:762:20
+The declared return type 'JBDump' for JBDump::files does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:770:17
+The declared return type 'JBDump' for JBDump::memory does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:772:35
+Parameter $formated has no provided type (see https://psalm.dev/154)
+    public static function memory([97;41m$formated[0m = true)
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:775:20
+The declared return type 'JBDump' for JBDump::memory does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:788:17
+The declared return type 'JBDump' for JBDump::interfaces does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:793:20
+The declared return type 'JBDump' for JBDump::interfaces does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:803:17
+The declared return type 'JBDump' for JBDump::url does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:808:20
+The declared return type 'JBDump' for JBDump::url does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidArrayOffset
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:814:41
+Cannot access value on variable $parsed using offset value of query_parsed, expecting 'scheme', 'user', 'pass', 'host', 'port', 'path', 'query' or 'fragment' (see https://psalm.dev/115)
+            parse_str($parsed['query'], [97;41m$parsed['query_parsed'][0m);
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:822:17
+The declared return type 'JBDump' for JBDump::includes does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:827:20
+The declared return type 'JBDump' for JBDump::includes does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:836:17
+The declared return type 'JBDump' for JBDump::functions does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:841:20
+The declared return type 'JBDump' for JBDump::functions does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:878:17
+The declared return type 'JBDump' for JBDump::extensions does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:883:20
+The declared return type 'JBDump' for JBDump::extensions does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:890:17
+The declared return type 'JBDump' for JBDump::headers does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:895:20
+The declared return type 'JBDump' for JBDump::headers does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:922:17
+The declared return type 'JBDump' for JBDump::phpini does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:927:20
+The declared return type 'JBDump' for JBDump::phpini does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:932:20
+The declared return type 'JBDump' for JBDump::phpini does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:963:17
+The declared return type 'JBDump' for JBDump::path does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:968:20
+The declared return type 'JBDump' for JBDump::path does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1002:17
+The declared return type 'JBDump' for JBDump::post does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1007:20
+The declared return type 'JBDump' for JBDump::post does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1014:17
+The declared return type 'JBDump' for JBDump::server does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1019:20
+The declared return type 'JBDump' for JBDump::server does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1026:17
+The declared return type 'JBDump' for JBDump::cookie does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1031:20
+The declared return type 'JBDump' for JBDump::cookie does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1042:33
+Parameter $json has no provided type (see https://psalm.dev/154)
+    public static function json([97;41m$json[0m, $name = '...')
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1056:17
+The declared return type 'JBDump' for JBDump::env does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1061:20
+The declared return type 'JBDump' for JBDump::env does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1086:17
+The declared return type 'JBDump' for JBDump::globals does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1091:20
+The declared return type 'JBDump' for JBDump::globals does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: PossiblyNullArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1108:35
+Argument 2 of date cannot be null, possibly null value provided (see https://psalm.dev/078)
+        $date = date(DATE_RFC822, [97;41m$timestamp[0m);
+
+
+[0;31mERROR[0m: PossiblyNullOperand
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1109:39
+Cannot concatenate with a possibly null int|null (see https://psalm.dev/080)
+        return self::i()->dump($date, [97;41m$timestamp[0m . ' sec = ');
+
+
+[0;31mERROR[0m: RedundantCastGivenDocblockType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1131:39
+Redundant cast to array given docblock-provided type (see https://psalm.dev/263)
+        $queryData = http_build_query([97;41m(array)$data[0m, null, '&');
+
+
+[0;31mERROR[0m: NullArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1131:53
+Argument 2 of http_build_query cannot be null, null value provided to parameter with type string (see https://psalm.dev/057)
+        $queryData = http_build_query((array)$data, [97;41mnull[0m, '&');
+
+
+[0;31mERROR[0m: InvalidScalarArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1184:51
+Argument 2 of explode expects string, bool|string provided (see https://psalm.dev/012)
+            $response       = explode("\r\n\r\n", [97;41m$result['full'][0m, 2 + $redirects);
+
+
+[0;31mERROR[0m: PossiblyFalseArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1195:50
+Argument 3 of substr cannot be false, possibly false value provided (see https://psalm.dev/104)
+                $name  = trim(substr($header, 0, [97;41m$pos[0m));
+
+
+[0;31mERROR[0m: PossiblyFalseOperand
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1196:48
+Left operand cannot be falsable, got false|int|positive-int (see https://psalm.dev/162)
+                $value = trim(substr($header, ([97;41m$pos[0m + 1)));
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1225:17
+The declared return type 'JBDump' for JBDump::locale does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1230:20
+The declared return type 'JBDump' for JBDump::locale does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1248:17
+The declared return type 'JBDump' for JBDump::timezone does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1253:20
+The declared return type 'JBDump' for JBDump::timezone does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidDocblockParamName
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1284:22
+Incorrect param name $name in docblock for JBDump::phpArray (see https://psalm.dev/187)
+    /**
+     * Render variable as phpArray
+     * @param mixed  $var
+     * @param string [97;41m$name[0m
+     * @param bool   $isReturn
+     * @return mixed
+     */
+    public static function phpArray($var, $varname = 'varName', $isReturn = false)
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1288:43
+Parameter $varname has no provided type (see https://psalm.dev/154)
+    public static function phpArray($var, [97;41m$varname[0m = 'varName', $isReturn = false)
+
+
+[0;31mERROR[0m: UndefinedVariable
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1300:52
+Cannot find referenced variable $params (see https://psalm.dev/024)
+        $_this->_dumpRenderHtml($output, $varname, [97;41m$params[0m);
+
+
+[0;31mERROR[0m: ForbiddenCode
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1320:9
+Unsafe var_dump (see https://psalm.dev/002)
+        [97;41mvar_dump($var)[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1339:17
+The declared return type 'JBDump' for JBDump::trace does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1344:20
+The declared return type 'JBDump' for JBDump::trace does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: PossiblyInvalidArrayAccess
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1350:15
+Cannot access array value on non-array variable $trace of type true (see https://psalm.dev/109)
+        unset([97;41m$trace[0][0m);
+
+
+[0;31mERROR[0m: PossiblyInvalidArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1352:40
+Argument 1 of JBDump::convertTrace expects array<array-key, mixed>, possibly different type array<int, array<array-key, mixed>>|true provided (see https://psalm.dev/092)
+        $result = $_this->convertTrace([97;41m$trace[0m, $addObject);
+
+
+[0;31mERROR[0m: RedundantCastGivenDocblockType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1369:13
+Redundant cast to bool given docblock-provided type (see https://psalm.dev/263)
+        if ([97;41m(bool)$sort[0m) {
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1381:36
+Parameter $object has no provided type (see https://psalm.dev/154)
+    public static function methods([97;41m$object[0m)
+
+
+[0;31mERROR[0m: RedundantConditionGivenDocblockType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1405:13
+Docblock-defined type JBDump for $result is never falsy (see https://psalm.dev/156)
+        if ([97;41m$result[0m) {
+
+
+[0;31mERROR[0m: UndefinedMethod
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1406:21
+Method JBDump::offsetGet does not exist (see https://psalm.dev/022)
+            $data = [97;41m$result[0m['name'];
+
+
+[0;31mERROR[0m: PossiblyInvalidArrayAccess
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1422:30
+Cannot access array value on non-array variable $result of type true (see https://psalm.dev/109)
+            $extensionName = [97;41m$result['name'][0m;
+
+
+[0;31mERROR[0m: PossiblyInvalidArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1446:38
+Argument 1 of JBDump::_getFunction expects function|string, possibly different type Closure|string provided (see https://psalm.dev/092)
+        $result = self::_getFunction([97;41m$functionName[0m);
+
+
+[0;31mERROR[0m: PossiblyInvalidArrayAccess
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1448:29
+Cannot access array value on non-array variable $result of type true (see https://psalm.dev/109)
+            $functionName = [97;41m$result['name'][0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1455:17
+The declared return type 'JBDump' for JBDump::microtime does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1461:20
+The declared return type 'JBDump' for JBDump::microtime does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidDocblock
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1474:5
+Found duplicated @return or prefixed @return tag in docblock for JBDump::markStart (see https://psalm.dev/008)
+    /**
+     * @param string $label
+     * @return bool
+     * @return  JBDump
+     */
+    [97;41mpublic static function markStart($label = 'default')[0m
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1474:28
+Method JBDump::markStart does not have a return type, expecting JBDump|false (see https://psalm.dev/050)
+    public static function [97;41mmarkStart[0m($label = 'default')
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1474:38
+Parameter $label has no provided type (see https://psalm.dev/154)
+    public static function markStart([97;41m$label[0m = 'default')
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1504:28
+Method JBDump::inc does not have a return type (see https://psalm.dev/050)
+    public static function [97;41minc[0m($name = null, $outputMode = 0)
+
+
+[0;31mERROR[0m: DocblockTypeContradiction
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1518:13
+Docblock-defined type int for $outputMode is never string (see https://psalm.dev/155)
+        if ([97;41mis_string($outputMode)[0m) {
+
+
+[0;31mERROR[0m: InvalidDocblock
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1541:5
+Found duplicated @return or prefixed @return tag in docblock for JBDump::incTrace (see https://psalm.dev/008)
+    /**
+     * @param string $label
+     * @return bool
+     * @return  int
+     */
+    [97;41mpublic static function incTrace($label = null)[0m
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1541:28
+Method JBDump::incTrace does not have a return type (see https://psalm.dev/050)
+    public static function [97;41mincTrace[0m($label = null)
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1541:37
+Parameter $label has no provided type (see https://psalm.dev/154)
+    public static function incTrace([97;41m$label[0m = null)
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1584:17
+The declared return type 'JBDump' for JBDump::markStop does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1593:20
+The declared return type 'JBDump' for JBDump::markStop does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1614:17
+The declared return type 'JBDump' for JBDump::mark does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1620:20
+The declared return type 'JBDump' for JBDump::mark does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: InvalidReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1651:17
+No return statements were found for method JBDump::profiler but return type 'JBDump' was expected (see https://psalm.dev/011)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: RedundantCastGivenDocblockType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1657:21
+Redundant cast to int given docblock-provided type (see https://psalm.dev/263)
+            $mode = [97;41m(int)$mode[0m;
+
+
+[0;31mERROR[0m: RedundantCastGivenDocblockType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1707:17
+Redundant cast to string given docblock-provided type (see https://psalm.dev/263)
+        $data = [97;41m(string)$data[0m;
+
+
+[0;31mERROR[0m: InvalidReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1717:16
+The declared return type 'float' for JBDump::_profilerFormatMemory is incorrect, got 'float|non-empty-string' (see https://psalm.dev/011)
+     * @return [97;41mfloat[0m
+
+
+[0;31mERROR[0m: InvalidReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1727:16
+The inferred type 'float|non-empty-string' does not match the declared return type 'float' for JBDump::_profilerFormatMemory (see https://psalm.dev/128)
+        return [97;41m$bytes[0m;
+
+
+[0;31mERROR[0m: InvalidReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1734:16
+The declared return type 'float' for JBDump::_profilerFormatTime is incorrect, got 'float|non-empty-lowercase-string' (see https://psalm.dev/011)
+     * @return [97;41mfloat[0m
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1736:51
+Parameter $time has no provided type (see https://psalm.dev/154)
+    protected static function _profilerFormatTime([97;41m$time[0m, $addMeasure = false, $round = 0)
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1736:79
+Parameter $round has no provided type (see https://psalm.dev/154)
+    protected static function _profilerFormatTime($time, $addMeasure = false, [97;41m$round[0m = 0)
+
+
+[0;31mERROR[0m: InvalidReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1744:16
+The inferred type 'float|non-empty-lowercase-string' does not match the declared return type 'float' for JBDump::_profilerFormatTime (see https://psalm.dev/128)
+        return [97;41m$time[0m;
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1767:24
+Method JBDump::_profilerRenderTotal does not have a return type, expecting void (see https://psalm.dev/050)
+    protected function [97;41m_profilerRenderTotal[0m()
+
+
+[0;31mERROR[0m: ArgumentTypeCoercion
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1783:78
+Argument 1 of max expects non-empty-array<array-key, mixed>, parent type list<mixed> provided (see https://psalm.dev/193)
+        $totalInfo[] = '- Max delta, msec: ' . self::_profilerFormatTime(max([97;41m$timeDeltas[0m));
+
+
+[0;31mERROR[0m: ArgumentTypeCoercion
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1784:78
+Argument 1 of min expects non-empty-array<array-key, mixed>, parent type list<mixed> provided (see https://psalm.dev/193)
+        $totalInfo[] = '- Min delta, msec: ' . self::_profilerFormatTime(min([97;41m$timeDeltas[0m));
+
+
+[0;31mERROR[0m: ArgumentTypeCoercion
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1788:74
+Argument 1 of max expects non-empty-array<array-key, mixed>, parent type list<mixed> provided (see https://psalm.dev/193)
+        $totalInfo[] = '- Max delta: ' . self::_profilerFormatMemory(max([97;41m$memoryDeltas[0m));
+
+
+[0;31mERROR[0m: ArgumentTypeCoercion
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1789:74
+Argument 1 of min expects non-empty-array<array-key, mixed>, parent type list<mixed> provided (see https://psalm.dev/193)
+        $totalInfo[] = '- Min delta: ' . self::_profilerFormatMemory(min([97;41m$memoryDeltas[0m));
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1805:24
+Method JBDump::_profilerRenderFile does not have a return type, expecting void (see https://psalm.dev/050)
+    protected function [97;41m_profilerRenderFile[0m()
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1817:24
+Method JBDump::_profilerRenderEcho does not have a return type, expecting void (see https://psalm.dev/050)
+    protected function [97;41m_profilerRenderEcho[0m()
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1829:24
+Method JBDump::_profilerRenderTable does not have a return type, expecting void (see https://psalm.dev/050)
+    protected function [97;41m_profilerRenderTable[0m()
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1880:24
+Method JBDump::_profilerRenderChart does not have a return type, expecting void (see https://psalm.dev/050)
+    protected function [97;41m_profilerRenderChart[0m()
+
+
+[0;31mERROR[0m: InvalidFalsableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1941:17
+The declared return type 'JBDump' for JBDump::dump does not allow false, but 'JBDump|false' contains false (see https://psalm.dev/143)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1946:20
+The declared return type 'JBDump' for JBDump::dump does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1986:24
+Method JBDump::_dumpRenderHtml does not have a return type, expecting void (see https://psalm.dev/050)
+    protected function [97;41m_dumpRenderHtml[0m($data, $varname = '...', $params = array())
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2022:24
+Method JBDump::_dumpRenderLite does not have a return type, expecting void (see https://psalm.dev/050)
+    protected function [97;41m_dumpRenderLite[0m($data, $varname = '...', $params = array())
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2071:24
+Method JBDump::_dumpRenderLog does not have a return type, expecting void (see https://psalm.dev/050)
+    protected function [97;41m_dumpRenderLog[0m($data, $varname = '...', $params = array())
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2082:24
+Method JBDump::_dumpRenderMail does not have a return type, expecting void (see https://psalm.dev/050)
+    protected function [97;41m_dumpRenderMail[0m($data, $varname = '...', $params = array())
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2096:24
+Method JBDump::_dumpRenderPrintr does not have a return type, expecting void (see https://psalm.dev/050)
+    protected function [97;41m_dumpRenderPrintr[0m($data, $varname = '...', $params = array())
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2107:24
+Method JBDump::_dumpRenderVardump does not have a return type, expecting void (see https://psalm.dev/050)
+    protected function [97;41m_dumpRenderVardump[0m($data, $varname = '...', $params = array())
+
+
+[0;31mERROR[0m: PossiblyNullArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2143:36
+Argument 1 of substr cannot be null, possibly null value provided (see https://psalm.dev/078)
+                return (int)substr([97;41m$output[5][0m, strpos($output[5], ':') + 1);
+
+
+[0;31mERROR[0m: PossiblyFalseOperand
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2143:48
+Left operand cannot be falsable, got false|int|positive-int (see https://psalm.dev/162)
+                return (int)substr($output[5], [97;41mstrpos($output[5], ':')[0m + 1);
+
+
+[0;31mERROR[0m: PossiblyNullArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2143:55
+Argument 1 of strpos cannot be null, possibly null value provided (see https://psalm.dev/078)
+                return (int)substr($output[5], strpos([97;41m$output[5][0m, ':') + 1);
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2163:24
+Method JBDump::_isExpandedLevel does not have a return type, expecting bool (see https://psalm.dev/050)
+    protected function [97;41m_isExpandedLevel[0m()
+
+
+[0;31mERROR[0m: TooManyArguments
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2195:20
+Too many arguments for method JBDump::_boolean - saw 3 (see https://psalm.dev/026)
+            $this->[97;41m_boolean[0m($data, $name, $advType);
+
+
+[0;31mERROR[0m: TooManyArguments
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2198:20
+Too many arguments for method JBDump::_integer - saw 3 (see https://psalm.dev/026)
+            $this->[97;41m_integer[0m($data, $name, $advType);
+
+
+[0;31mERROR[0m: TooManyArguments
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2201:20
+Too many arguments for method JBDump::_float - saw 3 (see https://psalm.dev/026)
+            $this->[97;41m_float[0m($data, $name, $advType);
+
+
+[0;31mERROR[0m: PossiblyFalseArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2204:42
+Argument 3 of JBDump::_string cannot be false, possibly false value provided (see https://psalm.dev/104)
+            $this->_string($data, $name, [97;41m$advType[0m);
+
+
+[0;31mERROR[0m: TooManyArguments
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2209:24
+Too many arguments for method JBDump::_array - saw 3 (see https://psalm.dev/026)
+                $this->[97;41m_array[0m($data, $name, $advType);
+
+
+[0;31mERROR[0m: TooManyArguments
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2212:24
+Too many arguments for method JBDump::_maxdepth - saw 3 (see https://psalm.dev/026)
+                $this->[97;41m_maxDepth[0m($data, $name, $advType);
+
+
+[0;31mERROR[0m: TypeDoesNotContainType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2219:21
+"Closure" cannot be identical to class-string (see https://psalm.dev/056)
+                if ([97;41mget_class($data) == 'Closure'[0m) {
+
+
+[0;31mERROR[0m: TooManyArguments
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2220:28
+Too many arguments for method JBDump::_closure - saw 3 (see https://psalm.dev/026)
+                    $this->[97;41m_closure[0m($data, $name, $advType);
+
+
+[0;31mERROR[0m: TooManyArguments
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2222:28
+Too many arguments for method JBDump::_object - saw 3 (see https://psalm.dev/026)
+                    $this->[97;41m_object[0m($data, $name, $advType);
+
+
+[0;31mERROR[0m: TooManyArguments
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2231:20
+Too many arguments for method JBDump::_resource - saw 3 (see https://psalm.dev/026)
+            $this->[97;41m_resource[0m($data, $name, $advType);
+
+
+[0;31mERROR[0m: TooManyArguments
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2234:20
+Too many arguments for method JBDump::_undefined - saw 3 (see https://psalm.dev/026)
+            $this->[97;41m_undefined[0m($data, $name, $advType);
+
+
+[0;31mERROR[0m: PossiblyInvalidArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2254:69
+Argument 1 of get_object_vars expects object, possibly different type array<array-key, mixed>|object provided (see https://psalm.dev/092)
+                $keys = ($_is_object) ? array_keys(@get_object_vars([97;41m$data[0m)) : array_keys($data);
+
+
+[0;31mERROR[0m: PossiblyInvalidArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2254:90
+Argument 1 of array_keys expects array<array-key, mixed>, possibly different type array<array-key, mixed>|object provided (see https://psalm.dev/092)
+                $keys = ($_is_object) ? array_keys(@get_object_vars($data)) : array_keys([97;41m$data[0m);
+
+
+[0;31mERROR[0m: PossiblyInvalidArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2266:56
+Argument 1 of property_exists expects object|string, possibly different type array<array-key, mixed>|object provided (see https://psalm.dev/092)
+                    if ($_is_object && property_exists([97;41m$data[0m, $key)) {
+
+
+[0;31mERROR[0m: PossiblyInvalidArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2279:55
+Argument 1 of JBDump::_getMethods expects object, possibly different type array<array-key, mixed>|object provided (see https://psalm.dev/092)
+                    if ($methods = $this->_getMethods([97;41m$data[0m)) {
+
+
+[0;31mERROR[0m: PossiblyInvalidArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2280:81
+Argument 1 of get_class expects object, possibly different type array<array-key, mixed>|object provided (see https://psalm.dev/092)
+                        $this->_dump($methods, '&lt;! methods of "' . get_class([97;41m$data[0m) . '" !&gt;');
+
+
+[0;31mERROR[0m: RedundantCastGivenDocblockType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2326:46
+Redundant cast to int given docblock-provided type (see https://psalm.dev/263)
+        $this->_renderNode('Integer', $name, [97;41m(int)$data[0m);
+
+
+[0;31mERROR[0m: RedundantCastGivenDocblockType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2337:44
+Redundant cast to float given docblock-provided type (see https://psalm.dev/263)
+        $this->_renderNode('Float', $name, [97;41m(float)$data[0m);
+
+
+[0;31mERROR[0m: RedundantCast
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2461:50
+Redundant cast to array (see https://psalm.dev/262)
+                class="jbelement<?php echo count([97;41m(array)$data[0m) > 0 ? ' jbexpand' : ''; ?> <?= $isExpanded ? 'jbopened' : ''; ?>"
+
+
+[0;31mERROR[0m: RedundantCast
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2462:33
+Redundant cast to array (see https://psalm.dev/262)
+                <?php if (count([97;41m(array)$data[0m) > 0) { ?> onClick="jbdump.toggle(this);"<?php } ?>>
+
+
+[0;31mERROR[0m: RedundantCast
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2464:80
+Redundant cast to array (see https://psalm.dev/262)
+                    class="jbtype jbtype-array">Array</span>, <?php echo count([97;41m(array)$data[0m); ?>)
+
+
+[0;31mERROR[0m: RedundantCast
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2466:29
+Redundant cast to array (see https://psalm.dev/262)
+            <?php if (count([97;41m(array)$data[0m)) {
+
+
+[0;31mERROR[0m: PossiblyInvalidArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2528:32
+Argument 1 of JBDump::_vars expects array<array-key, mixed>|object, possibly different type array<array-key, mixed>|bool provided (see https://psalm.dev/092)
+            <?php $this->_vars([97;41m$this->_getFunction($data)[0m, $isExpanded); ?>
+
+
+[0;31mERROR[0m: ArgumentTypeCoercion
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2528:52
+Argument 1 of JBDump::_getFunction expects function|string, parent type object provided (see https://psalm.dev/193)
+            <?php $this->_vars($this->_getFunction([97;41m$data[0m), $isExpanded); ?>
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2539:34
+Parameter $var has no provided type (see https://psalm.dev/154)
+    protected function _maxDepth([97;41m$var[0m, $name)
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2539:40
+Parameter $name has no provided type (see https://psalm.dev/154)
+    protected function _maxDepth($var, [97;41m$name[0m)
+
+
+[0;31mERROR[0m: InvalidArrayOffset
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2695:34
+Cannot access value on variable $symbol using a 0|float offset, expecting 0|1|2|3|4|5|6|7|8 (see https://psalm.dev/115)
+        return sprintf('%.2f ' . [97;41m$symbol[$exp][0m, $value);
+
+
+[0;31mERROR[0m: PossiblyUndefinedArrayOffset
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2799:31
+Possibly undefined array key $meta['line'] on array{file?: ""|mixed, line?: ""|mixed} (see https://psalm.dev/167)
+            $result['line'] = [97;41m$meta['line'][0m;
+
+
+[0;31mERROR[0m: PossiblyUndefinedArrayOffset
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2800:31
+Possibly undefined array key $meta['file'] on array{file?: ""|mixed, line?: ""|mixed} (see https://psalm.dev/167)
+            $result['file'] = [97;41m$meta['file'][0m;
+
+
+[0;31mERROR[0m: InvalidNullableReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2811:17
+The declared return type 'array<array-key, mixed>' for JBDump::_getMethods is not nullable, but 'list<mixed|string>|null' contains null (see https://psalm.dev/144)
+     * @return  [97;41marray[0m
+
+
+[0;31mERROR[0m: DocblockTypeContradiction
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2815:13
+Docblock-defined type object for $object is never string (see https://psalm.dev/155)
+        if ([97;41mis_string($object)[0m) {
+
+
+[0;31mERROR[0m: PossiblyNullArgument
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2823:18
+Argument 1 of sort cannot be null, possibly null value provided (see https://psalm.dev/078)
+            sort([97;41m$methods[0m);
+
+
+[0;31mERROR[0m: NullableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2825:16
+The declared return type 'array<array-key, mixed>' for JBDump::_getMethods is not nullable, but the function returns 'list<mixed|string>|null' (see https://psalm.dev/139)
+        return [97;41m$methods[0m;
+
+
+[0;31mERROR[0m: InvalidReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2831:17
+The declared return type 'JBDump' for JBDump::_getClass is incorrect, got 'array{all_methods: array<array-key, string>, name: string, type: "class"|"interface"}|false' (see https://psalm.dev/011)
+     * @return  [97;41mJBDump[0m
+
+
+[0;31mERROR[0m: RedundantConditionGivenDocblockType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2838:19
+Docblock-defined type string for $data is always string (see https://psalm.dev/156)
+        } elseif ([97;41mis_string($data)[0m) {
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2841:20
+The declared return type 'JBDump' for JBDump::_getClass does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: FalsableReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2845:20
+The declared return type 'JBDump' for JBDump::_getClass does not allow false, but the function returns 'false' (see https://psalm.dev/137)
+            return [97;41mfalse[0m;
+
+
+[0;31mERROR[0m: ArgumentTypeCoercion
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2849:38
+Argument 1 of ReflectionClass::__construct expects class-string|object|trait-string, parent type object|string provided (see https://psalm.dev/193)
+        $class = new ReflectionClass([97;41m$data[0m);
+
+
+[0;31mERROR[0m: PossiblyUndefinedVariable
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2852:9
+Possibly undefined variable $result, first seen on line 2852 (see https://psalm.dev/018)
+        [97;41m$result[0m['name'] = $class->name;
+
+
+[0;31mERROR[0m: RedundantCondition
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2874:17
+Type string for $parent->name is always isset (see https://psalm.dev/122)
+            if ([97;41misset($parent->name)[0m) {
+
+
+[0;31mERROR[0m: RedundantCondition
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2885:13
+Type array<class-string, ReflectionClass<object>> for $interfaces is always array (see https://psalm.dev/122)
+        if ([97;41mis_array($interfaces)[0m) {
+
+
+[0;31mERROR[0m: RedundantCondition
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2893:13
+Type array<string, mixed> for $constants is always array (see https://psalm.dev/122)
+        if ([97;41mis_array($constants)[0m) {
+
+
+[0;31mERROR[0m: RedundantCondition
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:2901:13
+Type list<ReflectionProperty> for $properties is always array (see https://psalm.dev/122)
+        if ([97;41mis_array($properties)[0m) {
+
+
+[0;31mERROR[0m: InvalidReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3011:16
+The inferred type 'array{all_methods: array<array-key, string>, name: string, type: "class"|"interface"}' does not match the declared return type 'JBDump' for JBDump::_getClass (see https://psalm.dev/128)
+        return [97;41m$result[0m;
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3020:42
+Parameter $params has no provided type (see https://psalm.dev/154)
+    protected static function _getParams([97;41m$params[0m, $isInternal = true)
+
+
+[0;31mERROR[0m: UndefinedDocblockClass
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3052:17
+Docblock-defined class or interface function does not exist (see https://psalm.dev/200)
+     * @param   [97;41mstring|function[0m $functionName Function or function name
+
+
+[0;31mERROR[0m: UndefinedDocblockClass
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3116:15
+Docblock-defined class or interface function does not exist (see https://psalm.dev/200)
+     * @param [97;41mstring|function[0m $extensionName Function or function name
+
+
+[0;31mERROR[0m: RedundantConditionGivenDocblockType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3246:13
+Docblock-defined type array<array-key, mixed> for $trace is always array (see https://psalm.dev/156)
+        if ([97;41mis_array($trace)[0m) {
+
+
+[0;31mERROR[0m: InvalidOperand
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3255:32
+Cannot perform a numeric operation with a non-numeric type array-key (see https://psalm.dev/058)
+                $result['#' . ([97;41m$key[0m - 1) . ' ' . $oneTrace['func']] = $file;
+
+
+[0;31mERROR[0m: PossiblyUndefinedVariable
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3367:9
+Possibly undefined variable $result, first seen on line 3367 (see https://psalm.dev/018)
+        [97;41m$result[0m['message'] = $exception->getMessage();
+
+
+[0;31mERROR[0m: InvalidOperand
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3398:46
+Cannot perform a numeric operation with a non-numeric type array-key (see https://psalm.dev/058)
+            if ($result['error_reporting'] & [97;41m$errTypeKey[0m) {
+
+
+[0;31mERROR[0m: InvalidReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3531:16
+The declared return type 'bool' for JBDump::args is incorrect, got 'JBDump|false' (see https://psalm.dev/011)
+     * @return [97;41mbool[0m
+
+
+[0;31mERROR[0m: UndefinedMethod
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3549:27
+Method JBDump::offsetGet does not exist (see https://psalm.dev/022)
+                if (isset([97;41m$classInfo[0m['methods']['public'][$currentTrace['function']])) {
+
+
+[0;31mERROR[0m: UndefinedMethod
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3552:33
+Method JBDump::offsetGet does not exist (see https://psalm.dev/022)
+                } elseif (isset([97;41m$classInfo[0m['methods']['private'][$currentTrace['function']])) {
+
+
+[0;31mERROR[0m: UndefinedMethod
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3555:33
+Method JBDump::offsetGet does not exist (see https://psalm.dev/022)
+                } elseif (isset([97;41m$classInfo[0m['methods']['protected'][$currentTrace['function']])) {
+
+
+[0;31mERROR[0m: InvalidReturnStatement
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3589:16
+The inferred type 'JBDump' does not match the declared return type 'bool' for JBDump::args (see https://psalm.dev/128)
+        return [97;41m$_this[0m;
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3599:32
+Parameter $query has no provided type (see https://psalm.dev/154)
+    public static function sql([97;41m$query[0m, $sqlName = 'SQL Query', $nl2br = false)
+
+
+[0;31mERROR[0m: UndefinedClass
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3603:27
+Class or interface JConfig does not exist (see https://psalm.dev/019)
+            $config = new [97;41mJConfig[0m();
+
+
+[0;31mERROR[0m: RedundantCast
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3656:20
+Redundant cast to array (see https://psalm.dev/262)
+        $n = count([97;41m(array)$data[0m);
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3716:22
+Property JBDump_SqlFormatter::$reserved does not have a declared type - consider array<int, array-key> (see https://psalm.dev/045)
+    protected static [97;41m$reserved[0m = array(
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3746:22
+Property JBDump_SqlFormatter::$reserved_toplevel does not have a declared type - consider array{string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string} (see https://psalm.dev/045)
+    protected static [97;41m$reserved_toplevel[0m = array(
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3751:22
+Property JBDump_SqlFormatter::$reserved_newline does not have a declared type - consider array{string, string, string, string, string, string, string, string, string, string} (see https://psalm.dev/045)
+    protected static [97;41m$reserved_newline[0m = array(
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3755:22
+Property JBDump_SqlFormatter::$functions does not have a declared type - consider non-empty-array<int, string> (see https://psalm.dev/045)
+    protected static [97;41m$functions[0m = array(
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3785:22
+Property JBDump_SqlFormatter::$boundaries does not have a declared type - consider array{string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string} (see https://psalm.dev/045)
+    protected static [97;41m$boundaries[0m = array(',', ';', ':', ')', '(', '.', '=', '<', '>', '+', '-', '*', '/', '!', '^', '%', '|', '&', '#');
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3789:19
+Property JBDump_SqlFormatter::$quote_attributes does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$quote_attributes[0m = 'style="color:#F700DA;font-weight:bold;"';
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3790:19
+Property JBDump_SqlFormatter::$backtick_quote_attributes does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$backtick_quote_attributes[0m = 'style="color: purple;"';
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3791:19
+Property JBDump_SqlFormatter::$reserved_attributes does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$reserved_attributes[0m = 'style="font-weight:bold;color:#00f;"';
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3792:19
+Property JBDump_SqlFormatter::$boundary_attributes does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$boundary_attributes[0m = 'style="color:#000;"';
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3793:19
+Property JBDump_SqlFormatter::$number_attributes does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$number_attributes[0m = 'style="color:#0a0;font-weight:bold;"';
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3794:19
+Property JBDump_SqlFormatter::$word_attributes does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$word_attributes[0m = 'style="color: #333;"';
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3795:19
+Property JBDump_SqlFormatter::$error_attributes does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$error_attributes[0m = 'style="background-color: red;"';
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3796:19
+Property JBDump_SqlFormatter::$comment_attributes does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$comment_attributes[0m = 'style="color: #aaa;"';
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3797:19
+Property JBDump_SqlFormatter::$variable_attributes does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$variable_attributes[0m = 'style="color: orange;"';
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3798:19
+Property JBDump_SqlFormatter::$pre_attributes does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$pre_attributes[0m = '';
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3803:19
+Property JBDump_SqlFormatter::$cli does not have a declared type (see https://psalm.dev/045)
+    public static [97;41m$cli[0m;
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3806:19
+Property JBDump_SqlFormatter::$cli_quote does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$cli_quote[0m = "\x1b[34;1m";
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3807:19
+Property JBDump_SqlFormatter::$cli_backtick_quote does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$cli_backtick_quote[0m = "\x1b[35;1m";
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3808:19
+Property JBDump_SqlFormatter::$cli_reserved does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$cli_reserved[0m = "\x1b[37m";
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3809:19
+Property JBDump_SqlFormatter::$cli_boundary does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$cli_boundary[0m = "";
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3810:19
+Property JBDump_SqlFormatter::$cli_number does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$cli_number[0m = "\x1b[32;1m";
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3811:19
+Property JBDump_SqlFormatter::$cli_word does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$cli_word[0m = "";
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3812:19
+Property JBDump_SqlFormatter::$cli_error does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$cli_error[0m = "\x1b[31;1;7m";
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3813:19
+Property JBDump_SqlFormatter::$cli_comment does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$cli_comment[0m = "\x1b[30;1m";
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3814:19
+Property JBDump_SqlFormatter::$cli_functions does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$cli_functions[0m = "\x1b[37m";
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3815:19
+Property JBDump_SqlFormatter::$cli_variable does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$cli_variable[0m = "\x1b[36;1m";
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3818:19
+Property JBDump_SqlFormatter::$tab does not have a declared type - consider string (see https://psalm.dev/045)
+    public static [97;41m$tab[0m = '    ';
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3821:19
+Property JBDump_SqlFormatter::$use_pre does not have a declared type - consider true (see https://psalm.dev/045)
+    public static [97;41m$use_pre[0m = true;
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3824:22
+Property JBDump_SqlFormatter::$init does not have a declared type - consider null|true (see https://psalm.dev/045)
+    protected static [97;41m$init[0m;
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3827:22
+Property JBDump_SqlFormatter::$regex_boundaries does not have a declared type - consider null|string (see https://psalm.dev/045)
+    protected static [97;41m$regex_boundaries[0m;
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3828:22
+Property JBDump_SqlFormatter::$regex_reserved does not have a declared type - consider null|string (see https://psalm.dev/045)
+    protected static [97;41m$regex_reserved[0m;
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3829:22
+Property JBDump_SqlFormatter::$regex_reserved_newline does not have a declared type - consider null|string (see https://psalm.dev/045)
+    protected static [97;41m$regex_reserved_newline[0m;
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3830:22
+Property JBDump_SqlFormatter::$regex_reserved_toplevel does not have a declared type - consider null|string (see https://psalm.dev/045)
+    protected static [97;41m$regex_reserved_toplevel[0m;
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3831:22
+Property JBDump_SqlFormatter::$regex_function does not have a declared type - consider null|string (see https://psalm.dev/045)
+    protected static [97;41m$regex_function[0m;
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3835:19
+Property JBDump_SqlFormatter::$max_cachekey_size does not have a declared type - consider int (see https://psalm.dev/045)
+    public static [97;41m$max_cachekey_size[0m = 15;
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3836:22
+Property JBDump_SqlFormatter::$token_cache does not have a declared type - consider array<string, array>|mixed (see https://psalm.dev/045)
+    protected static [97;41m$token_cache[0m = array();
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3837:22
+Property JBDump_SqlFormatter::$cache_hits does not have a declared type - consider int|mixed (see https://psalm.dev/045)
+    protected static [97;41m$cache_hits[0m = 0;
+
+
+[0;31mERROR[0m: MissingPropertyType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3838:22
+Property JBDump_SqlFormatter::$cache_misses does not have a declared type - consider int|mixed (see https://psalm.dev/045)
+    protected static [97;41m$cache_misses[0m = 0;
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3857:31
+Method JBDump_SqlFormatter::init does not have a return type, expecting void (see https://psalm.dev/050)
+    protected static function [97;41minit[0m()
+
+
+[0;31mERROR[0m: PossiblyFalseOperand
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3903:25
+Left operand cannot be falsable, got false|int|positive-int (see https://psalm.dev/162)
+                $last = [97;41mstrpos($string, "*/", 2)[0m + 2;
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:4013:31
+Method JBDump_SqlFormatter::getQuotedString does not have a return type, expecting null|string (see https://psalm.dev/050)
+    protected static function [97;41mgetQuotedString[0m($string)
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:4013:47
+Parameter $string has no provided type (see https://psalm.dev/154)
+    protected static function getQuotedString([97;41m$string[0m)
+
+
+[0;31mERROR[0m: MissingReturnType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:4713:29
+Method JBDump_SqlFormatter::is_cli does not have a return type (see https://psalm.dev/050)
+    private static function [97;41mis_cli[0m()
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:4738:37
+Parameter $array has no provided type (see https://psalm.dev/154)
+    public static function toString([97;41m$array[0m, $varName = null, $shift = 0)
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:4738:62
+Parameter $shift has no provided type (see https://psalm.dev/154)
+    public static function toString($array, $varName = null, [97;41m$shift[0m = 0)
+
+
+[0;31mERROR[0m: DocblockTypeContradiction
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:4754:13
+Docblock-defined type null for $varName is always falsy (see https://psalm.dev/155)
+        if ([97;41m$varName[0m) {
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:4766:32
+Parameter $array has no provided type (see https://psalm.dev/154)
+    protected function _render([97;41m$array[0m, $depth = 0)
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:4813:35
+Parameter $depth has no provided type (see https://psalm.dev/154)
+    protected function _getIndent([97;41m$depth[0m)
+
+
+[0;31mERROR[0m: MissingParamType
+at /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:4822:35
+Parameter $var has no provided type (see https://psalm.dev/154)
+    protected function _quoteWrap([97;41m$var[0m)
+
+
+------------------------------
+[0;31m260 errors[0m found
+------------------------------
+Psalm can automatically fix 47 of these issues.
+Run Psalm again with 
+[30;48;5;195m--alter --issues=InvalidFalsableReturnType,MissingReturnType,InvalidReturnType,InvalidNullableReturnType --dry-run[0m
+to see what it can fix.
+------------------------------
+
+Checks took 2.85 seconds and used 206.558MB of memory
+Psalm was unable to infer types in the codebase

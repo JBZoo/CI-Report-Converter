@@ -1,0 +1,1966 @@
+{
+    "version": "2.1.0",
+    "$schema": "https:\/\/raw.githubusercontent.com\/oasis-tcs\/sarif-spec\/master\/Schemata\/sarif-schema-2.1.0.json",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "PHPMD",
+                    "informationUri": "https:\/\/phpmd.org",
+                    "version": "@package_version@",
+                    "rules": [
+                        {
+                            "id": "CleanCodeRules\/IfStatementAssignment",
+                            "name": "IfStatementAssignment",
+                            "shortDescription": {
+                                "text": "Clean Code Rules: IfStatementAssignment"
+                            },
+                            "messageStrings": {
+                                "default": {
+                                    "text": "Avoid assigning values to variables in if clauses and the like (line \u0027{0}\u0027, column \u0027{1}\u0027)."
+                                }
+                            },
+                            "help": {
+                                "text": "Assignments in if clauses and the like are considered a code smell. Assignments in PHP return the right operand as their result. In many cases, this is an expected behavior, but can lead to many difficult to spot bugs, especially when the right operand could result in zero, null or an empty string and the like.",
+                                "markdown": "Assignments in if clauses and the like are considered a code smell. Assignments in PHP return the right operand as their result. In many cases, this is an expected behavior, but can lead to many difficult to spot bugs, especially when the right operand could result in zero, null or an empty string and the like.\n\n### Example\n\n```php\nclass Foo\n{\n    public function bar($flag)\n    {\n        if ($foo = \u0027bar\u0027) { \/\/ possible typo\n            \/\/ ...\n        }\n        if ($baz = 0) { \/\/ always false\n            \/\/ ...\n        }\n    }\n}\n```"
+                            },
+                            "helpUri": "http:\/\/phpmd.org\/rules\/cleancode.html#ifstatementassignment",
+                            "properties": {
+                                "ruleSet": "Clean Code Rules",
+                                "priority": 1,
+                                "since": "PHPMD 2.7.0"
+                            }
+                        },
+                        {
+                            "id": "CleanCodeRules\/ElseExpression",
+                            "name": "ElseExpression",
+                            "shortDescription": {
+                                "text": "Clean Code Rules: ElseExpression"
+                            },
+                            "messageStrings": {
+                                "default": {
+                                    "text": "The method {0} uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                                }
+                            },
+                            "help": {
+                                "text": "An if expression with an else branch is basically not necessary. You can rewrite the conditions in a way that the else clause is not necessary and the code becomes simpler to read.  To achieve this, use early return statements, though you may need to split the code it several smaller methods. For very simple assignments you could also use the ternary operations.",
+                                "markdown": "An if expression with an else branch is basically not necessary. You can rewrite the conditions in a way that the else clause is not necessary and the code becomes simpler to read.  To achieve this, use early return statements, though you may need to split the code it several smaller methods. For very simple assignments you could also use the ternary operations.\n\n### Example\n\n```php\nclass Foo\n{\n    public function bar($flag)\n    {\n        if ($flag) {\n            \/\/ one branch\n        } else {\n            \/\/ another branch\n        }\n    }\n}\n```"
+                            },
+                            "helpUri": "https:\/\/phpmd.org\/rules\/cleancode.html#elseexpression",
+                            "properties": {
+                                "ruleSet": "Clean Code Rules",
+                                "priority": 1,
+                                "since": "PHPMD 1.4.0"
+                            }
+                        },
+                        {
+                            "id": "CleanCodeRules\/StaticAccess",
+                            "name": "StaticAccess",
+                            "shortDescription": {
+                                "text": "Clean Code Rules: StaticAccess"
+                            },
+                            "messageStrings": {
+                                "default": {
+                                    "text": "Avoid using static access to class \u0027{0}\u0027 in method \u0027{1}\u0027."
+                                }
+                            },
+                            "help": {
+                                "text": "Static access causes unexchangeable dependencies to other classes and leads to hard to test code. Avoid using static access at all costs and instead inject dependencies through the constructor. The only case when static access is acceptable is when used for factory methods.",
+                                "markdown": "Static access causes unexchangeable dependencies to other classes and leads to hard to test code. Avoid using static access at all costs and instead inject dependencies through the constructor. The only case when static access is acceptable is when used for factory methods.\n\n### Example\n\n```php\nclass Foo\n{\n    public function bar()\n    {\n        Bar::baz();\n    }\n}\n```"
+                            },
+                            "helpUri": "https:\/\/phpmd.org\/rules\/cleancode.html#staticaccess",
+                            "properties": {
+                                "ruleSet": "Clean Code Rules",
+                                "priority": 1,
+                                "since": "PHPMD 1.4.0"
+                            }
+                        },
+                        {
+                            "id": "CleanCodeRules\/MissingImport",
+                            "name": "MissingImport",
+                            "shortDescription": {
+                                "text": "Clean Code Rules: MissingImport"
+                            },
+                            "messageStrings": {
+                                "default": {
+                                    "text": "Missing class import via use statement (line \u0027{0}\u0027, column \u0027{1}\u0027)."
+                                }
+                            },
+                            "help": {
+                                "text": "Importing all external classes in a file through use statements makes them clearly visible.",
+                                "markdown": "Importing all external classes in a file through use statements makes them clearly visible.\n\n### Example\n\n```php\nfunction make() {\n    return new \\stdClass();\n}\n```"
+                            },
+                            "helpUri": "http:\/\/phpmd.org\/rules\/cleancode.html#MissingImport",
+                            "properties": {
+                                "ruleSet": "Clean Code Rules",
+                                "priority": 1,
+                                "since": "PHPMD 2.7.0"
+                            }
+                        }
+                    ]
+                }
+            },
+            "originalUriBaseIds": {
+                "WORKINGDIR": {
+                    "uri": "file:\/\/\/Users\/smetdenis\/Work\/projects\/jbzoo-ci-report-converter\/"
+                }
+            },
+            "results": [
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "79",
+                            "13"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u002779\u0027, column \u002713\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Commands\/AbstractCommand.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 77,
+                                    "endLine": 99
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "106",
+                            "13"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u0027106\u0027, column \u002713\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Commands\/AbstractCommand.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 104,
+                                    "endLine": 112
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "saveResult"
+                        ],
+                        "text": "The method saveResult uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Commands\/AbstractCommand.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 109,
+                                    "endLine": 111
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Converters\\Map",
+                            "configure"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Converters\\Map\u0027 in method \u0027configure\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Commands\/Convert.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 46,
+                                    "endLine": 46
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Converters\\Map",
+                            "configure"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Converters\\Map\u0027 in method \u0027configure\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Commands\/Convert.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 54,
+                                    "endLine": 54
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Converters\\Factory",
+                            "executeAction"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Converters\\Factory\u0027 in method \u0027executeAction\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Commands\/Convert.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 72,
+                                    "endLine": 76
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Converters\\Map",
+                            "getFormat"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Converters\\Map\u0027 in method \u0027getFormat\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Commands\/Convert.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 91,
+                                    "endLine": 91
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Converters\\Map",
+                            "executeAction"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Converters\\Map\u0027 in method \u0027executeAction\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Commands\/ConvertMap.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 43,
+                                    "endLine": 43
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Converters\\Map",
+                            "configure"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Converters\\Map\u0027 in method \u0027configure\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Commands\/TeamCityStats.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 37,
+                                    "endLine": 37
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Converters\\Factory",
+                            "executeAction"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Converters\\Factory\u0027 in method \u0027executeAction\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Commands\/TeamCityStats.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 54,
+                                    "endLine": 54
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Converters\\Map",
+                            "getFormat"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Converters\\Map\u0027 in method \u0027getFormat\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Commands\/TeamCityStats.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 68,
+                                    "endLine": 68
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "125",
+                            "13"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u0027125\u0027, column \u002713\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/AbstractConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 119,
+                                    "endLine": 140
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "134",
+                            "17"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u0027134\u0027, column \u002717\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/AbstractConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 119,
+                                    "endLine": 140
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "getFilePoint"
+                        ],
+                        "text": "The method getFilePoint uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/AbstractConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 158,
+                                    "endLine": 160
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "buildMetrics"
+                        ],
+                        "text": "The method buildMetrics uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/AbstractStatsTcConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 68,
+                                    "endLine": 70
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "toInternal"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/CheckStyleConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 42,
+                                    "endLine": 42
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "toInternal"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/CheckStyleConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 43,
+                                    "endLine": 43
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Helper",
+                            "getDetails"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Helper\u0027 in method \u0027getDetails\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/CheckStyleConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 86,
+                                    "endLine": 91
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "JBZoo\\CiReportConverter\\Converters\\Map",
+                            "convertMetric"
+                        ],
+                        "text": "Avoid using static access to class \u0027JBZoo\\CiReportConverter\\Converters\\Map\u0027 in method \u0027convertMetric\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/Factory.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 72,
+                                    "endLine": 72
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "renderTestCase"
+                        ],
+                        "text": "The method renderTestCase uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/GitLabJsonConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 79,
+                                    "endLine": 81
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "fromInternal"
+                        ],
+                        "text": "The method fromInternal uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/GithubCliConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 44,
+                                    "endLine": 46
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "renderTestCase"
+                        ],
+                        "text": "The method renderTestCase uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/GithubCliConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 84,
+                                    "endLine": 86
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "toInternal"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/JUnitConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 42,
+                                    "endLine": 42
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "toInternal"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/JUnitConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 43,
+                                    "endLine": 43
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "89",
+                            "21"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u002789\u0027, column \u002721\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/JUnitConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 68,
+                                    "endLine": 116
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "93",
+                            "21"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u002793\u0027, column \u002721\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/JUnitConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 68,
+                                    "endLine": 116
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "97",
+                            "21"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u002797\u0027, column \u002721\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/JUnitConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 68,
+                                    "endLine": 116
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "createSourceNodes"
+                        ],
+                        "text": "The method createSourceNodes uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/JUnitConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 156,
+                                    "endLine": 168
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "createSourceNodes"
+                        ],
+                        "text": "The method createSourceNodes uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/JUnitConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 162,
+                                    "endLine": 166
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "toInternalMetric"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternalMetric\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/PhpDependStatsTcConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 40,
+                                    "endLine": 40
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "toInternalMetric"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternalMetric\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/PhpDependStatsTcConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 40,
+                                    "endLine": 40
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Helper",
+                            "getDetails"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Helper\u0027 in method \u0027getDetails\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/PhpMdJsonConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 99,
+                                    "endLine": 106
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "toInternalMetric"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternalMetric\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/PhpMetricsStatsTcConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 40,
+                                    "endLine": 40
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "toInternalMetric"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternalMetric\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/PhpMetricsStatsTcConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 40,
+                                    "endLine": 40
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "toInternal"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/PhpMndConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 42,
+                                    "endLine": 42
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "toInternal"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/PhpMndConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 43,
+                                    "endLine": 43
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Helper",
+                            "getDetails"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Helper\u0027 in method \u0027getDetails\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/PhpMndConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 109,
+                                    "endLine": 113
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/MissingImport",
+                    "ruleIndex": 3,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "41",
+                            "26"
+                        ],
+                        "text": "Missing class import via use statement (line \u002741\u0027, column \u002726\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/PhpUnitCloverStatsTcConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 41,
+                                    "endLine": 41
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "toInternal"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/PmdCpdConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 42,
+                                    "endLine": 42
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "toInternal"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/PmdCpdConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 42,
+                                    "endLine": 42
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "152",
+                            "13"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u0027152\u0027, column \u002713\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/PmdCpdConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 132,
+                                    "endLine": 162
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "getDetails"
+                        ],
+                        "text": "The method getDetails uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/PmdCpdConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 157,
+                                    "endLine": 159
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "toInternal"
+                        ],
+                        "text": "The method toInternal uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/PsalmJsonConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 69,
+                                    "endLine": 71
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Helper",
+                            "getDetails"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Helper\u0027 in method \u0027getDetails\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/PsalmJsonConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 85,
+                                    "endLine": 94
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "119",
+                            "13"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u0027119\u0027, column \u002713\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/TeamCityTestsConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 106,
+                                    "endLine": 148
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "renderTestCase"
+                        ],
+                        "text": "The method renderTestCase uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Converters\/TeamCityTestsConverter.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 121,
+                                    "endLine": 137
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\Utils\\Str",
+                            "__construct"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\Utils\\Str\u0027 in method \u0027__construct\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/AbstractNode.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 64,
+                                    "endLine": 64
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "toArray"
+                        ],
+                        "text": "The method toArray uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/AbstractNode.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 163,
+                                    "endLine": 165
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "JBZoo\\CiReportConverter\\Formats\\GithubActions\\GithubActions",
+                            "__toString"
+                        ],
+                        "text": "Avoid using static access to class \u0027JBZoo\\CiReportConverter\\Formats\\GithubActions\\GithubActions\u0027 in method \u0027__toString\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/GithubActions\/GithubCase.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 77,
+                                    "endLine": 77
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\Utils\\Xml",
+                            "toXML"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\Utils\\Xml\u0027 in method \u0027toXML\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/JUnit\/CaseOutput\/AbstractOutput.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 90,
+                                    "endLine": 90
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "toXML"
+                        ],
+                        "text": "The method toXML uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/JUnit\/CaseOutput\/AbstractOutput.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 91,
+                                    "endLine": 93
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "getDom"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027getDom\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/JUnit\/JUnit.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 49,
+                                    "endLine": 49
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "addSystemOut"
+                        ],
+                        "text": "The method addSystemOut uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/JUnit\/JUnitCase.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 110,
+                                    "endLine": 112
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "69",
+                            "13"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u002769\u0027, column \u002713\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/JUnit\/JUnitSuite.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 59,
+                                    "endLine": 106
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "73",
+                            "13"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u002773\u0027, column \u002713\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/JUnit\/JUnitSuite.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 59,
+                                    "endLine": 106
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "77",
+                            "13"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u002777\u0027, column \u002713\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/JUnit\/JUnitSuite.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 59,
+                                    "endLine": 106
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "81",
+                            "13"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u002781\u0027, column \u002713\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/JUnit\/JUnitSuite.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 59,
+                                    "endLine": 106
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "85",
+                            "13"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u002785\u0027, column \u002713\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/JUnit\/JUnitSuite.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 59,
+                                    "endLine": 106
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "89",
+                            "13"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u002789\u0027, column \u002713\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/JUnit\/JUnitSuite.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 59,
+                                    "endLine": 106
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "93",
+                            "13"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u002793\u0027, column \u002713\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/JUnit\/JUnitSuite.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 59,
+                                    "endLine": 106
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "parseDescription"
+                        ],
+                        "text": "The method parseDescription uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/Source\/SourceCaseOutput.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 73,
+                                    "endLine": 76
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "parseDescription"
+                        ],
+                        "text": "The method parseDescription uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/Source\/SourceCaseOutput.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 104,
+                                    "endLine": 106
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "printEvent"
+                        ],
+                        "text": "The method printEvent uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/TeamCity\/Helper.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 81,
+                                    "endLine": 84
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/MissingImport",
+                    "ruleIndex": 3,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "110",
+                            "38"
+                        ],
+                        "text": "Missing class import via use statement (line \u0027110\u0027, column \u002738\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/TeamCity\/Helper.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 110,
+                                    "endLine": 110
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\Utils\\Sys",
+                            "__construct"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\Utils\\Sys\u0027 in method \u0027__construct\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/TeamCity\/TeamCity.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 69,
+                                    "endLine": 69
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/ElseExpression",
+                    "ruleIndex": 1,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "__construct"
+                        ],
+                        "text": "The method __construct uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/TeamCity\/TeamCity.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 71,
+                                    "endLine": 73
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Helper",
+                            "write"
+                        ],
+                        "text": "Avoid using static access to class \u0027JBZoo\\CiReportConverter\\Formats\\TeamCity\\Helper\u0027 in method \u0027write\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/TeamCity\/TeamCity.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 124,
+                                    "endLine": 124
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Helper",
+                            "write"
+                        ],
+                        "text": "Avoid using static access to class \u0027JBZoo\\CiReportConverter\\Formats\\TeamCity\\Helper\u0027 in method \u0027write\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/TeamCity\/TeamCity.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 137,
+                                    "endLine": 137
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\Utils\\Cli",
+                            "write"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\Utils\\Cli\u0027 in method \u0027write\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/TeamCity\/Writers\/Stdout.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 34,
+                                    "endLine": 34
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/MissingImport",
+                    "ruleIndex": 3,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "35",
+                            "25"
+                        ],
+                        "text": "Missing class import via use statement (line \u002735\u0027, column \u002725\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/Xml.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 35,
+                                    "endLine": 35
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/IfStatementAssignment",
+                    "ruleIndex": 0,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "121",
+                            "44"
+                        ],
+                        "text": "Avoid assigning values to variables in if clauses and the like (line \u0027121\u0027, column \u002744\u0027)."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Formats\/Xml.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 102,
+                                    "endLine": 139
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "CleanCodeRules\/StaticAccess",
+                    "ruleIndex": 2,
+                    "message": {
+                        "id": "default",
+                        "arguments": [
+                            "\\JBZoo\\Utils\\Str",
+                            "descAsList"
+                        ],
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\Utils\\Str\u0027 in method \u0027descAsList\u0027."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\/Helper.php",
+                                    "uriBaseId": "WORKINGDIR"
+                                },
+                                "region": {
+                                    "startLine": 34,
+                                    "endLine": 34
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

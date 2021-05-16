@@ -1,0 +1,20 @@
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:689:Result of function var_dump (void) is used.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:1300:Undefined variable: $params
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/class.jbdump.php:3603:Instantiated class JConfig not found.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/joomla/jbdump.php:0:Reflection error: JPlugin not found.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/test/_ajaxtest.php:15:Class JBDump referenced with incorrect case: jbdump.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/test/_ajaxtest.php:22:Class JBDump referenced with incorrect case: jbdump.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/test/_ajaxtest.php:24:Class JBDump referenced with incorrect case: jbdump.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/test/_benchmark.php:21:Function GetPHPFilesMark not found.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/test/_chain.php:22:Class JBDump referenced with incorrect case: jbdump.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/test/_chain.php:25:Class JBDump referenced with incorrect case: jbdump.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/test/_chain.php:28:Class JBDump referenced with incorrect case: jbdump.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/test/_chain.php:31:Class JBDump referenced with incorrect case: jbdump.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/test/included_file.php:203:Class JBDump referenced with incorrect case: jbdump.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/test/included_file.php:235:Class JBDump referenced with incorrect case: jbdump.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/jbdump/test/included_file.php:273:Class JBDump referenced with incorrect case: jbdump.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/phpunit/src/CovCatcher.php:106:No error to ignore is reported on line 106.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/phpunit/src/CovCatcher.php:112:No error to ignore is reported on line 112.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/phpunit/src/CovCatcher.php:124:No error to ignore is reported on line 124.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/phpunit/src/functions/tools.php:97:Access to constant GET on an unknown class JBZoo\HttpClient\Request.
+/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/vendor/jbzoo/phpunit/src/functions/tools.php:97:Return typehint of function JBZoo\PHPUnit\httpRequest() has invalid type JBZoo\HttpClient\Response.
