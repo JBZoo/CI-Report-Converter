@@ -11,8 +11,8 @@
 # @link       https://github.com/JBZoo/CI-Report-Converter
 #
 
-name-template: 'v$RESOLVED_VERSION'
-tag-template: 'v$RESOLVED_VERSION'
+name-template: '$RESOLVED_VERSION'
+tag-template: '$RESOLVED_VERSION'
 categories:
   - title: '🚀 Features'
     labels:
@@ -34,12 +34,7 @@ sort-by: title
 sort-direction: ascending
 branches:
   - master
-  - develop
 exclude-labels:
   - 'Skip Changelog'
 no-changes-template: 'This release contains minor changes and bugfixes.'
-template: |
-  ## What’s Changed
-
-  $CHANGES
-
+template: $CHANGES
