@@ -84,6 +84,10 @@ Action allows you to convert error reports to the [GitHub Annotations format](ht
     # Required: true
     input-format: checkstyle
 
+    # Will exit with the code=1, if any violations are found.
+    # Default value: no
+    non-zero-code: yes
+
     # File path with the result report format. If not set or empty, then the STDOUT is used.
     output-file: ./build/junit.xml
 
@@ -92,7 +96,7 @@ Action allows you to convert error reports to the [GitHub Annotations format](ht
     # Required: true
     output-format: junit
 
-    # Set custom name of root group/suite
+    # Set custom name of root group/suite (if it's possible).
     # Required: true
     suite-name: My Tests
 
@@ -169,20 +173,21 @@ Usage:
   convert [options]
 
 Options:
-  -S, --input-format=INPUT-FORMAT    Source format. Available options: checkstyle, junit, phpmd-json, phpmnd, pmd-cpd, psalm-json [default: "checkstyle"]
-  -T, --output-format=OUTPUT-FORMAT  Target format. Available options: gitlab-json, github-cli, junit, tc-inspections, tc-tests [default: "tc-tests"]
-  -N, --suite-name=SUITE-NAME        Set custom name of root group/suite
-  -I, --input-file[=INPUT-FILE]      File path with the original report format. If not set or empty, then the STDIN is used.
-  -O, --output-file[=OUTPUT-FILE]    File path with the result report format. If not set or empty, then the STDOUT is used.
-  -R, --root-path[=ROOT-PATH]        If option is set, all absolute file paths will be converted to relative once. [default: "."]
-  -F, --tc-flow-id[=TC-FLOW-ID]      Custom flowId for TeamCity output
-  -h, --help                         Display this help message
-  -q, --quiet                        Do not output any message
-  -V, --version                      Display this application version
-      --ansi                         Force ANSI output
-      --no-ansi                      Disable ANSI output
-  -n, --no-interaction               Do not ask any interactive question
-  -v|vv|vvv, --verbose               Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+  -S, --input-format=INPUT-FORMAT      Source format. Available options: checkstyle, junit, phpmd-json, phpmnd, pmd-cpd, psalm-json [default: "checkstyle"]
+  -I, --input-file[=INPUT-FILE]        File path with the original report format. If not set or empty, then the STDIN is used.
+  -T, --output-format=OUTPUT-FORMAT    Target format. Available options: gitlab-json, github-cli, junit, tc-inspections, tc-tests [default: "tc-tests"]
+  -O, --output-file[=OUTPUT-FILE]      File path with the result report format. If not set or empty, then the STDOUT is used.
+  -R, --root-path[=ROOT-PATH]          If option is set, all absolute file paths will be converted to relative once. [default: "."]
+  -N, --suite-name=SUITE-NAME          Set custom name of root group/suite (if it's possible).
+  -F, --tc-flow-id[=TC-FLOW-ID]        Custom flowId in TeamCity output. Default value is PID of the tool.
+  -Q, --non-zero-code[=NON-ZERO-CODE]  Will exit with the code=1, if any violations are found. [default: "no"]
+  -h, --help                           Display this help message
+  -q, --quiet                          Do not output any message
+  -V, --version                        Display this application version
+      --ansi                           Force ANSI output
+      --no-ansi                        Disable ANSI output
+  -n, --no-interaction                 Do not ask any interactive question
+  -v|vv|vvv, --verbose                 Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 
 ```
 

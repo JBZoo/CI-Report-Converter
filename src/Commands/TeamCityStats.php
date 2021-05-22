@@ -39,9 +39,14 @@ class TeamCityStats extends AbstractCommand
         $this
             ->setName('teamcity:stats')
             ->setDescription('Push code metrics to TeamCity Stats')
-            ->addOption('input-format', 'S', InputOption::VALUE_REQUIRED, "Source format. {$formats}");
-
-        parent::configure();
+            ->addOption('input-format', 'S', InputOption::VALUE_REQUIRED, "Source format. {$formats}")
+            ->addOption('input-file', 'I', InputOption::VALUE_OPTIONAL, "File path with the original report format. " .
+                "If not set or empty, then the STDIN is used.")
+            ->addOption('output-file', 'O', InputOption::VALUE_OPTIONAL, "File path with the result report format. " .
+                "If not set or empty, then the STDOUT is used.")
+            ->addOption('root-path', 'R', InputOption::VALUE_OPTIONAL, 'If option is set, ' .
+                'all absolute file paths will be converted to relative once.', '.')
+            ->addOption('tc-flow-id', 'F', InputOption::VALUE_OPTIONAL, 'Custom flowId for TeamCity output');
     }
 
     /**

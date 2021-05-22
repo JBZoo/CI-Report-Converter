@@ -83,7 +83,7 @@ class CliCommandsTest extends PHPUnit
     public function testGitHubActionsYml()
     {
         $helpJson = json($this->taskReal('convert', ['help' => null, 'format' => 'json']));
-        $actionYml = yml(__DIR__ . '/../action.yml');
+        $actionYml = yml(PROJECT_ROOT . '/action.yml');
 
         $excludedOptions = [
             'help',
@@ -124,18 +124,18 @@ class CliCommandsTest extends PHPUnit
         $errorMessage = implode("\n", [
             "See: " . PROJECT_ROOT . "/action.yml",
             'Expected',
-            '``',
+            '```',
             yml(['inputs' => $expectedInputs]),
-            '``',
+            '```',
         ]);
         isSame($expectedInputs, $actionYml->getArray('inputs'), $errorMessage);
 
         $errorMessage = implode("\n", [
             "See: " . PROJECT_ROOT . "/action.yml",
             'Expected',
-            '``',
+            '```',
             str_replace(["'\${{", "}}'"], ["\${{", "}}"], (string)yml($expectedRunsArgs)),
-            '``',
+            '```',
         ]);
         isSame($expectedRunsArgs, $actionYml->findArray('runs.args'), $errorMessage);
     }
@@ -145,13 +145,14 @@ class CliCommandsTest extends PHPUnit
      */
     public function testGitHubActionsReadMe()
     {
-        $inputs = yml(__DIR__ . '/../action.yml')->findArray('inputs');
+        $inputs = yml(PROJECT_ROOT . '/action.yml')->findArray('inputs');
         $examples = [
             'input-file'    => './build/checkstyle.xml',
             'input-format'  => 'checkstyle',
             'output-file'   => './build/junit.xml',
             'output-format' => 'junit',
             'suite-name'    => 'My Tests',
+            'non-zero-code' => 'yes',
         ];
 
         $expectedMessage = [
@@ -245,6 +246,29 @@ class CliCommandsTest extends PHPUnit
             "description='Issues found while checking coding standards'", $output);
     }
 
+    /**
+     * @depends testConvertToTcInspections
+     */
+    public function testNonZeroCode()
+    {
+        $output = null;
+        try {
+            $this->task('convert', [
+                'input-format'  => PhpMdJsonConverter::TYPE,
+                'output-format' => TeamCityInspectionsConverter::TYPE,
+                'input-file'    => Fixtures::PHPMD_JSON,
+                'non-zero-code' => 'yes'
+            ]);
+        } catch (\Exception $exception) {
+            $output = $exception->getMessage();
+        }
+
+        isContain("##teamcity[inspectionType id='PHPmd:UnusedFormalParameter' " .
+            "name='UnusedFormalParameter' " .
+            "category='PHPmd' " .
+            "description='Issues found while checking coding standards'", $output);
+    }
+
     public function testConvertUndefinedFile()
     {
         $output = $this->task('convert', [
@@ -253,6 +277,7 @@ class CliCommandsTest extends PHPUnit
             'input-file'    => '/undefined/file.xml',
             'suite-name'    => "Test Suite",
             'root-path'     => "src",
+            'non-zero-code' => 'yes'
         ]);
 
         isSame("Warning: File \"/undefined/file.xml\" not found\n", $output);
@@ -331,7 +356,11 @@ class CliCommandsTest extends PHPUnit
 
         $buffer = new BufferedOutput();
         $args = new StringInput(Cli::build('', $params));
-        $command->run($args, $buffer);
+        $exitCode = $command->run($args, $buffer);
+
+        if ($exitCode) {
+            throw new Exception($buffer->fetch());
+        }
 
         return $buffer->fetch();
     }
