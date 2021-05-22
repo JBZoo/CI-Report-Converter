@@ -210,7 +210,7 @@ Options:
   -I, --input-file[=INPUT-FILE]    File path with the original report format. If not set or empty, then the STDIN is used.
   -O, --output-file[=OUTPUT-FILE]  File path with the result report format. If not set or empty, then the STDOUT is used.
   -R, --root-path[=ROOT-PATH]      If option is set, all absolute file paths will be converted to relative once. [default: "."]
-  -F, --tc-flow-id[=TC-FLOW-ID]    Custom flowId for TeamCity output
+  -F, --tc-flow-id[=TC-FLOW-ID]    Custom flowId in TeamCity output. Default value is PID of the tool.
   -h, --help                       Display this help message
   -q, --quiet                      Do not output any message
   -V, --version                    Display this application version
