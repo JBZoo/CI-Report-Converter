@@ -156,7 +156,7 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
             $graph->addLink(new Link($toolbox, $node, '', Link::THICK));
         }
 
-        file_put_contents(__DIR__ . '/../build/directions.html', $graph->renderHtml(['version' => '8.9.2']));
+        file_put_contents(PROJECT_ROOT . '/build/directions.html', $graph->renderHtml(['version' => '8.9.2']));
 
         $url = str_replace(
             "https://mermaid-js.github.io/mermaid-live-editor/#/edit/",

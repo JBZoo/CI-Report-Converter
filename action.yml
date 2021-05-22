@@ -27,6 +27,9 @@ inputs:
     description: 'Source format. Available options: checkstyle, junit, phpmd-json, phpmnd, pmd-cpd, psalm-json'
     default: checkstyle
     required: true
+  non-zero-code:
+    description: 'Will exit with the code=1, if any violations are found.'
+    default: 'no'
   output-file:
     description: 'File path with the result report format. If not set or empty, then the STDOUT is used.'
   output-format:
@@ -34,22 +37,24 @@ inputs:
     default: github-cli
     required: true
   suite-name:
-    description: 'Set custom name of root group/suite'
+    description: 'Set custom name of root group/suite (if it''s possible).'
     required: true
 
 runs:
   using: 'docker'
   image: 'docker://jbzoo/ci-report-converter'
   args:
-    - 'convert'
+    - convert
     - '--input-format'
     - ${{ inputs.input-format }}
-    - '--output-format'
-    - ${{ inputs.output-format }}
-    - '--suite-name'
-    - ${{ inputs.suite-name }}
     - '--input-file'
     - ${{ inputs.input-file }}
+    - '--output-format'
+    - ${{ inputs.output-format }}
     - '--output-file'
     - ${{ inputs.output-file }}
+    - '--suite-name'
+    - ${{ inputs.suite-name }}
+    - '--non-zero-code'
+    - ${{ inputs.non-zero-code }}
     - '-vvv'
