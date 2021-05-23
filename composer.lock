@@ -1458,29 +1458,29 @@
         },
         {
             "name": "jbzoo/codestyle",
-            "version": "2.16.1",
+            "version": "2.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JBZoo/Codestyle.git",
-                "reference": "36d6722e6da5674dce13fce0337b0a71af82420a"
+                "reference": "85e7c167a7154150728edbb10673d9f2f6761a49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBZoo/Codestyle/zipball/36d6722e6da5674dce13fce0337b0a71af82420a",
-                "reference": "36d6722e6da5674dce13fce0337b0a71af82420a",
+                "url": "https://api.github.com/repos/JBZoo/Codestyle/zipball/85e7c167a7154150728edbb10673d9f2f6761a49",
+                "reference": "85e7c167a7154150728edbb10673d9f2f6761a49",
                 "shasum": ""
             },
             "require": {
-                "jbzoo/ci-report-converter": "^2.2.0",
-                "jbzoo/composer-diff": "^1.4.0",
-                "jbzoo/composer-graph": "^1.2.1",
+                "jbzoo/ci-report-converter": "^2.5.2",
+                "jbzoo/composer-diff": "^1.5.1",
+                "jbzoo/composer-graph": "^1.3.1",
                 "mheap/phpunit-github-actions-printer": "^1.5.1",
-                "nikic/php-parser": ">=4.10.4",
+                "nikic/php-parser": ">=4.10.5",
                 "php": ">=7.2",
                 "phpcompatibility/php-compatibility": ">=9.3.5",
-                "phpmd/phpmd": ">=2.10.0",
+                "phpmd/phpmd": ">=2.10.1",
                 "phpmetrics/phpmetrics": ">=2.7.4",
-                "phpstan/phpstan": ">=0.12.85",
+                "phpstan/phpstan": ">=0.12.88",
                 "phpstan/phpstan-strict-rules": ">=0.12.9",
                 "povils/phpmnd": ">=2.4.0",
                 "psalm/phar": ">=4.7.1",
@@ -1489,8 +1489,8 @@
                 "symfony/yaml": ">=4.4.16"
             },
             "require-dev": {
-                "jbzoo/phpunit": "^4.9.0",
-                "jbzoo/utils": "^4.4.0"
+                "jbzoo/phpunit": "^4.10.0",
+                "jbzoo/utils": "^4.5.2"
             },
             "type": "library",
             "extra": {
@@ -1525,9 +1525,9 @@
             ],
             "support": {
                 "issues": "https://github.com/JBZoo/Codestyle/issues",
-                "source": "https://github.com/JBZoo/Codestyle/tree/2.16.1"
+                "source": "https://github.com/JBZoo/Codestyle/tree/2.18.0"
             },
-            "time": "2021-04-28T12:04:05+00:00"
+            "time": "2021-05-23T22:43:10+00:00"
         },
         {
             "name": "jbzoo/composer-diff",
