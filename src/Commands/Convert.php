@@ -74,7 +74,10 @@ class Convert extends AbstractCommand
                 ->setRootSuiteName($suiteName)
                 ->toInternal($sourceReport);
 
-            $casesAreFound = $internalReport->getCasesCount() > 0;
+            $casesAreFound =
+                $internalReport->getErrorsCount() > 0 ||
+                $internalReport->getWarningCount() > 0 ||
+                $internalReport->getFailureCount() > 0;
 
             $targetReport = Map::getConverter($this->getFormat('output-format'), Map::OUTPUT)
                 ->setRootPath($rootPath)
