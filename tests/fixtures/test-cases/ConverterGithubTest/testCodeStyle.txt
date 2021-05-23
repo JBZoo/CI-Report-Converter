@@ -1,5 +1,10 @@
+
 ::group::Tests
 ::error file=src/JUnit/JUnitXml.php,line=24,col=5::Visibility must be declared on all constants if your project supports PHP 7.1 or later%0ARule     : PSR12.Properties.ConstantVisibility.NotFound%0AFile Path: src/JUnit/JUnitXml.php:24:5%0ASeverity : warning
+
 ::error file=src/JUnit/JUnitXml.php,line=44,col=35::Opening brace should be on a new line%0ARule     : Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine%0AFile Path: src/JUnit/JUnitXml.php:44:35%0ASeverity : error
+
 ::error file=src/JUnit/JUnitXml.php,line=50,col=1::Expected 1 newline at end of file; 0 found%0ARule     : PSR2.Files.EndFileNewline.NoneFound%0AFile Path: src/JUnit/JUnitXml.php:50%0ASeverity : error
+
 ::endgroup::
+

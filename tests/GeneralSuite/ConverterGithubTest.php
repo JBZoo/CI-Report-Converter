@@ -109,19 +109,6 @@ class ConverterGithubTest extends PHPUnit
 
         $suite2->addCase();
 
-        isSame(implode("\n", [
-            '::error file=src/Root.php,line=789::Something went wrong #0',
-
-            '::group::src/File.php',
-            '::error file=src/Class.php,line=123,col=4::Something went wrong #1',
-            '::endgroup::',
-
-            '::group::Undefined Suite Name',
-            '::warning file=src/AnotherFile.php,line=456::Something%0Awent%0Awrong%0A%0A#2',
-            "::debug file=src/SomeFiles.php::Failed asserting that two arrays are identical.%0A--- "
-            . "Expected%0A+++ Actual%0A@@ @@%0A Array &0 (%0A-    0 => 'asd'%0A+    0 => 123%0A+    1 => 123123%0A )",
-            '::error::Undefined Error Message',
-            '::endgroup::'
-        ]), (string)$ghActions);
+        isSame(Fixtures::getExpectedFileContent('txt'), (string)$ghActions);
     }
 }

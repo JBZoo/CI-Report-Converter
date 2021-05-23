@@ -69,9 +69,10 @@ class GithubActions
         }
 
         foreach ($this->testSuites as $testSuite) {
+            $result[] = '';
             $result[] = '::group::' . self::escape($testSuite->name ?: self::DEFAULT_NAME);
             $result[] = (string)$testSuite;
-            $result[] = '::endgroup::';
+            $result[] = "::endgroup::\n\n";
         }
 
         return implode("\n", $result);

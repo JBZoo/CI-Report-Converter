@@ -1,11 +1,21 @@
 ::error file=tests/ExampleTest.php,line=38::JBZoo\PHPUnit\ExampleTest::testInValid%0AFailed asserting that false is true.%0A%0Avendor/jbzoo/phpunit/src/functions/aliases.php:107%0Atests/ExampleTest.php:40
+
 ::debug file=tests/ExampleTest.php,line=43::Skipped
+
 ::debug file=tests/ExampleTest.php,line=48::Skipped
+
 ::error file=tests/ExampleTest.php,line=53::JBZoo\PHPUnit\ExampleTest::testFail%0ASome reason to fail%0A%0Avendor/jbzoo/phpunit/src/functions/aliases.php:51%0Atests/ExampleTest.php:55
+
 ::error file=tests/ExampleTest.php,line=58::testEcho%0ASome echo output
+
 ::error file=tests/ExampleTest.php,line=76::Risky Test
+
 ::error file=tests/ExampleTest.php,line=80::JBZoo\PHPUnit\ExampleTest::testNotice%0AUndefined variable: aaa%0A%0Atests/ExampleTest.php:82
+
 ::warning file=tests/ExampleTest.php,line=85::JBZoo\PHPUnit\ExampleTest::testWarning%0ASome warning%0A%0Atests/ExampleTest.php:87
+
 ::error file=tests/ExampleTest.php,line=90::testException%0ASome echo output
+
 ::error file=tests/ExampleTest.php,line=96::JBZoo\PHPUnit\ExampleTest::testCompareArrays%0AFailed asserting that two arrays are identical.%0A--- Expected%0A+++ Actual%0A@@ @@%0A-Array &0 ()%0A+Array &0 (%0A+    0 => 1%0A+)%0A%0Avendor/jbzoo/phpunit/src/functions/aliases.php:197%0Atests/ExampleTest.php:98
+
 ::error file=tests/ExampleTest.php,line=101::JBZoo\PHPUnit\ExampleTest::testCompareString%0AFailed asserting that two strings are identical.%0A--- Expected%0A+++ Actual%0A@@ @@%0A-'132'%0A+'123'%0A%0Avendor/jbzoo/phpunit/src/functions/aliases.php:197%0Atests/ExampleTest.php:103

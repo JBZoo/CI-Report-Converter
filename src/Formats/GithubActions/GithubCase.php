@@ -76,6 +76,6 @@ class GithubCase extends AbstractNode
         $paramsAsString = $paramsAsString ? " {$paramsAsString}" : '';
         $message = GithubActions::escape($this->message);
 
-        return "::{$this->level}{$paramsAsString}::{$message}";
+        return "::{$this->level}{$paramsAsString}::{$message}\n";
     }
 }

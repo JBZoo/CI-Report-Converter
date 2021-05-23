@@ -1,9 +1,17 @@
 ::error file=tests/ExampleTest.php,line=33::JBZoo\PHPUnit\ExampleTest::testInValid%0AFailed asserting that false is true.%0A%0Avendor/jbzoo/phpunit/src/functions/aliases.php:107%0Atests/ExampleTest.php:35
+
 ::debug file=tests/ExampleTest.php,line=38::Skipped
+
 ::debug file=tests/ExampleTest.php,line=43::Skipped
+
 ::error file=tests/ExampleTest.php,line=48::JBZoo\PHPUnit\ExampleTest::testFail%0ASome reason to fail%0A%0Avendor/jbzoo/phpunit/src/functions/aliases.php:51%0Atests/ExampleTest.php:50
+
 ::error file=tests/ExampleTest.php,line=53::testEcho%0ASome echo output
+
 ::error file=tests/ExampleTest.php,line=71::Risky Test
+
 ::error file=tests/ExampleTest.php,line=75::JBZoo\PHPUnit\ExampleTest::testNotice%0AUndefined variable: aaa%0A%0Atests/ExampleTest.php:77
+
 ::warning file=tests/ExampleTest.php,line=80::JBZoo\PHPUnit\ExampleTest::testWarning%0ASome warning%0A%0Atests/ExampleTest.php:82
+
 ::error file=tests/ExampleTest.php,line=85::testException%0ASome echo output
