@@ -28,8 +28,12 @@
   - [TeamCity - Reported Statistic Values](#teamcity---reported-statistic-values)
   - [GitHub Actions](#github-actions)
   - [GitLab CI](#gitlab-ci)
+  - [Use tool as SDK to generate reports](#use-tool-as-sdk-to-generate-reports)
+    - [JUnit.xml (API)](#junitxml-api)
+    - [GitHub Actions (API)](#github-actions-api)
 - [Contributing](#contributing)
 - [License](#license)
+- [See Also](#see-also)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -492,6 +496,91 @@ Als, see [how to implemente GitLab Custom Report](https://docs.gitlab.com/ee/use
 
 
 
+### Use tool as SDK to generate reports
+
+Also, you can use source of tool as SDK for reports in your tools/project.
+
+PS: More examples are coming soon.
+
+
+#### JUnit.xml (API)
+
+```php
+use JBZoo\CiReportConverter\Converters\JUnitConverter;
+use JBZoo\CiReportConverter\Formats\Source\SourceCaseOutput;
+use JBZoo\CiReportConverter\Formats\Source\SourceSuite;
+
+$class = \JBZoo\PHPUnit\ExampleTest::class;
+$className = str_replace('\\', '.', $class);
+$filename = './tests/ExampleTest.php';
+$line = 28;
+
+$suite = new SourceSuite('Suite');
+$case = $suite->addTestCase('Test Name');
+$case->time = 0.001824;
+$case->file = $filename;
+$case->line = $line;
+$case->class = $class;
+$case->classname = $className;
+$case->assertions = 5;
+$case->stdOut = 'Some std output';
+$case->errOut = 'Some err output';
+$case->failure = new SourceCaseOutput('Failure', 'Failure Message', 'Failure Details');
+$case->error = new SourceCaseOutput('Error', 'Error Message', 'Error Details');
+$case->warning = new SourceCaseOutput('Warning', 'Warning Message', 'Warning Details');
+$case->skipped = new SourceCaseOutput('Skipped', 'Skipped Message', 'Skipped Details');
+
+echo (new JUnitConverter())->fromInternal($suite);
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Suite" tests="1" assertions="5" errors="1" warnings="1" failures="1" skipped="1" time="0.001824">
+    <testcase name="Test Name" class="JBZoo\PHPUnit\ExampleTest" classname="JBZoo.PHPUnit.ExampleTest" file="./tests/ExampleTest.php" line="28" assertions="5" time="0.001824">
+      <failure type="Failure" message="Failure Message">Failure Details</failure>
+      <warning type="Warning" message="Warning Message">Warning Details</warning>
+      <error type="Error" message="Error Message">Error Details</error>
+      <system-out>Some std output
+Some err output</system-out>
+      <skipped/>
+    </testcase>
+  </testsuite>
+</testsuites>
+```
+
+
+
+#### GitHub Actions (API)
+
+```php
+use JBZoo\CiReportConverter\Formats\GithubActions\GithubActions;
+
+$ghActions = new GithubActions();
+$case0 = $ghActions->addCase('src/Root.php');
+$case0->line = 789;
+$case0->column = null;
+$case0->message = 'Something went wrong #0';
+
+$suite1 = $ghActions->addSuite('src/File.php');
+$case1 = $suite1->addCase('src/Class.php');
+$case1->line = 123;
+$case1->column = 4;
+$case1->message = 'Something went wrong #1';
+
+echo $ghActions->__toString();
+```
+
+```
+::error file=src/Root.php,line=789::Something went wrong #0
+
+::group::src/File.php
+::error file=src/Class.php,line=123,col=4::Something went wrong #1
+::endgroup::
+```
+
+
+
 ## Contributing
 
 ```shell
@@ -512,3 +601,16 @@ make codestyle
 ## License
 
 MIT
+
+
+
+## See Also
+
+- [Composer-Diff](https://github.com/JBZoo/Composer-Diff) - See what packages have changed after `composer update`.
+- [Composer-Graph](https://github.com/JBZoo/Composer-Graph) - Dependency graph visualization for composer.json (PHP + Composer) based on mermaid-js.
+- [Mermaid-PHP](https://github.com/JBZoo/Mermaid-PHP) - Generate diagrams and flowcharts with the help of the mermaid script language.
+- [Image](https://github.com/JBZoo/Image) - Package provides object-oriented way to manipulate with images as simple as possible.
+- [Utils](https://github.com/JBZoo/Utils) - Collection of useful PHP functions, mini-classes, and snippets for every day.
+- [Data](https://github.com/JBZoo/Data) - Extended implementation of ArrayObject. Use files as config/array. 
+- [Retry](https://github.com/JBZoo/Retry) - Tiny PHP library providing retry/backoff functionality with multiple backoff strategies and jitter support.
+- [SimpleTypes](https://github.com/JBZoo/SimpleTypes) - Converting any values and measures - money, weight, exchange rates, length, ...
