@@ -45,7 +45,7 @@ I guess you are lucky if the utility saves the error report in the `junit.xml` f
 
 But... My experience tells me it's the exception rather than the rule.
 For example, I really like the good old [phpmd](https://github.com/phpmd/phpmd) utility (perhaps you have another _right_ opinion about the benefits. At least, it's just an example).
-It doesn't integrate well with TeamCity/PhpStorm/GitHub. Everytime I spend a lot of time looking for results in the logs. But I really want to see error reporting instantly and pretty printed.
+It doesn't integrate well with TeamCity/PhpStorm/GitHub. Everytime I spend a lot of time looking for results in the logs. Though I really want to see instant and well-printed error report.
 
 Therefore, I developed a converter that changes the report format for deep integration with CI systems and JetBrain IDEs.
 
@@ -238,7 +238,7 @@ Yeah, I know that the integration is not the cleanest, and it's not super beauti
 ![PHPcs in JetBrains PhpStorm](.github/assets/phpstorm-checkstyle.png)
 
 **NOTE:** I believe that coding style issues have the same level of severity as any other sort of errors.
-Therefore, I prefer to use the same workflow to check the quality of the code as I have with regular PHPUnit tests. It's like "just one click!"
+Therefore, I prefer to use the same workflow to check the quality of the code as I do with regular PHPUnit tests. It's like "just one click!"
 Also, you will have the awesome bonus - navigating the project and gives the most detailed information about errors.
 
 **The general idea is pretty simple:** 
