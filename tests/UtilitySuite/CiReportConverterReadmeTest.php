@@ -91,7 +91,7 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
         return $this->getPreparedBadge($this->getBadge(
             'CI',
             'https://github.com/__VENDOR_ORIG__/__PACKAGE_ORIG__/actions/workflows/main.yml/badge.svg?branch=master',
-            'https://github.com/__VENDOR_ORIG__/__PACKAGE_ORIG__/actions/workflows/main.yml'
+            'https://github.com/__VENDOR_ORIG__/__PACKAGE_ORIG__/actions/workflows/main.yml?query=branch%3Amaster'
         ));
     }
 
