@@ -63,6 +63,11 @@ jobs:
         if: ${{ !(matrix.build-way == 'build' && matrix.php-version == 8.0) }}
         run: make test --no-print-directory
 
+      - name: Uploading coverage to coveralls
+        env:
+            COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: make report-coveralls --no-print-directory
+
       - name: Codecov Report
         uses: codecov/codecov-action@v1
         continue-on-error: true
