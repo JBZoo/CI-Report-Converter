@@ -98,7 +98,7 @@ class SourceCase extends AbstractNode
      */
     public function getTime(int $round = 6): ?string
     {
-        return $this->time === null ? null : (string)round($this->time, $round);
+        return $this->time === null ? null : (string)\round($this->time, $round);
     }
 
     /**
@@ -171,11 +171,11 @@ class SourceCase extends AbstractNode
      */
     private static function buildMessage(array $parts): string
     {
-        $parts = array_map('\trim', $parts);
-        $parts = array_filter($parts);
-        $parts = array_unique($parts);
-        $message = implode("\n", $parts);
+        $parts = \array_map('\trim', $parts);
+        $parts = \array_filter($parts);
+        $parts = \array_unique($parts);
+        $message = \implode("\n", $parts);
 
-        return trim($message);
+        return \trim($message);
     }
 }

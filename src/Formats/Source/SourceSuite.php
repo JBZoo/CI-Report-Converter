@@ -55,7 +55,7 @@ class SourceSuite extends AbstractNode
      */
     public function hasSubSuites(): bool
     {
-        return count($this->suites) > 0;
+        return \count($this->suites) > 0;
     }
 
     /**
@@ -88,7 +88,7 @@ class SourceSuite extends AbstractNode
      */
     public function addSuite(string $testSuiteName): self
     {
-        if (!array_key_exists($testSuiteName, $this->suites)) {
+        if (!\array_key_exists($testSuiteName, $this->suites)) {
             $testSuite = new self($testSuiteName);
             $this->suites[$testSuiteName] = $testSuite;
         }
@@ -112,7 +112,7 @@ class SourceSuite extends AbstractNode
      */
     public function toArray(): array
     {
-        $data = array_filter(array_merge(parent::toArray(), [
+        $data = \array_filter(\array_merge(parent::toArray(), [
             'time'       => $this->getTime(),
             'tests'      => $this->getCasesCount(),
             'assertions' => $this->getAssertionsCount(),
@@ -157,7 +157,7 @@ class SourceSuite extends AbstractNode
             $result += (float)$case->getTime();
         }
 
-        return $result === 0.0 ? null : round($result, $round);
+        return $result === 0.0 ? null : \round($result, $round);
     }
 
     /**
@@ -171,7 +171,7 @@ class SourceSuite extends AbstractNode
             $subResult += (int)$suite->getCasesCount();
         }
 
-        $result = count($this->cases) + $subResult;
+        $result = \count($this->cases) + $subResult;
 
         return $result === 0 ? null : $result;
     }

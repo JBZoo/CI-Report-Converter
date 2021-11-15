@@ -65,19 +65,19 @@ class SourceCaseOutput
         $text = (string)$this->details;
         $result['description'] = $text;
 
-        $lines = explode("\n", $text);
-        if (array_key_exists(1, $lines)) {
+        $lines = \explode("\n", $text);
+        if (\array_key_exists(1, $lines)) {
             $result['message'] = $lines[1];
             unset($lines[0], $lines[1]);
-            $result['description'] = ' ' . ltrim(implode("\n ", $lines));
+            $result['description'] = ' ' . \ltrim(\implode("\n ", $lines));
         } else {
             $result['message'] = $lines[0];
             $result['description'] = null;
         }
 
-        if (strpos($text, '@@ @@') > 0) {
-            $diff = trim(explode('@@ @@', $text)[1]);
-            $diffLines = explode("\n", $diff);
+        if (\strpos($text, '@@ @@') > 0) {
+            $diff = \trim(\explode('@@ @@', $text)[1]);
+            $diffLines = \explode("\n", $diff);
 
             $actual = [];
             $expected = [];
@@ -85,7 +85,7 @@ class SourceCaseOutput
             $isDiffPart = true;
 
             foreach ($diffLines as $diffLine) {
-                $diffLine = trim($diffLine);
+                $diffLine = \trim($diffLine);
 
                 if (!$diffLine) {
                     $isDiffPart = false;
@@ -93,7 +93,7 @@ class SourceCaseOutput
                 }
 
                 if ($isDiffPart) {
-                    $message = preg_replace('#^[\-\+]#', '', $diffLine);
+                    $message = \preg_replace('#^[\-\+]#', '', $diffLine);
                     if ($diffLine[0] === '-') {
                         $expected[] = $message;
                     }
@@ -106,9 +106,9 @@ class SourceCaseOutput
                 }
             }
 
-            $result['actual'] = implode("\n", $actual);
-            $result['expected'] = implode("\n", $expected);
-            $result['description'] = ' ' . ltrim(implode("\n ", $description)) . "\n ";
+            $result['actual'] = \implode("\n", $actual);
+            $result['expected'] = \implode("\n", $expected);
+            $result['description'] = ' ' . \ltrim(\implode("\n ", $description)) . "\n ";
         }
 
         return data($result);

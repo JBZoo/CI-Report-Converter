@@ -62,12 +62,12 @@ class TeamCityInspectionsConverter extends AbstractConverter
             $this->tcLogger->setFlowId($this->flowId);
         }
 
-        $this->globalPrefix = trim($sourceSuite->name) ?: TeamCity::DEFAULT_INSPECTION_ID;
+        $this->globalPrefix = \trim($sourceSuite->name) ?: TeamCity::DEFAULT_INSPECTION_ID;
         $this->renderSuite($sourceSuite);
 
         $buffer = $this->tcLogger->getWriter();
         if ($buffer instanceof Buffer) {
-            return implode('', $buffer->getBuffer());
+            return \implode('', $buffer->getBuffer());
         }
 
         return '';
@@ -121,11 +121,11 @@ class TeamCityInspectionsConverter extends AbstractConverter
         $message = $messageData->get('message') ?? $failureObject->message ?: '';
         $details = $messageData->get('description') ?? $failureObject->details ?: '';
 
-        if ($details && $message && strpos($details, $message) !== false) {
+        if ($details && $message && \strpos($details, $message) !== false) {
             $message = null;
         }
 
-        if (strpos($case->name, $suiteName) !== false) {
+        if (\strpos($case->name, $suiteName) !== false) {
             $title = $case->name;
         }
 
@@ -137,8 +137,8 @@ class TeamCityInspectionsConverter extends AbstractConverter
             $inspectionId,
             $this->cleanFilepath((string)$case->file),
             $case->line,
-            trim(implode("\n", array_unique(array_filter([
-                str_repeat('-', 120),
+            \trim(\implode("\n", \array_unique(\array_filter([
+                \str_repeat('-', 120),
                 $title,
                 $message,
                 $details

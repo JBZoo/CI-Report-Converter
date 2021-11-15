@@ -20,7 +20,7 @@ use JBZoo\CiReportConverter\Commands\ConvertMap;
 use JBZoo\CiReportConverter\Commands\TeamCityStats;
 use Symfony\Component\Console\Application;
 
-define('PATH_ROOT', __DIR__);
+\define('PATH_ROOT', __DIR__);
 
 $vendorPaths = [
     __DIR__ . '/../../autoload.php',
@@ -29,8 +29,8 @@ $vendorPaths = [
 ];
 
 foreach ($vendorPaths as $file) {
-    if (file_exists($file)) {
-        define('JBZOO_AUTOLOAD_FILE', $file);
+    if (\file_exists($file)) {
+        \define('JBZOO_AUTOLOAD_FILE', $file);
         break;
     }
 }

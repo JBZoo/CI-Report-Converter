@@ -66,7 +66,7 @@ class TeamCityTestsConverter extends AbstractConverter
 
         $buffer = $this->tcLogger->getWriter();
         if ($buffer instanceof Buffer) {
-            return implode('', $buffer->getBuffer());
+            return \implode('', $buffer->getBuffer());
         }
 
         return '';

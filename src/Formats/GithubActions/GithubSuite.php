@@ -52,6 +52,6 @@ class GithubSuite extends AbstractNode
             $result[] = (string)$testCase;
         }
 
-        return implode("\n", $result);
+        return \implode("\n", $result);
     }
 }

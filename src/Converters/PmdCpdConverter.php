@@ -85,7 +85,7 @@ class PmdCpdConverter extends AbstractConverter
 
         foreach ($duplication->getArray('_children') as $index => $child) {
             if (isset($child['_node']) && $child['_node'] === 'file') {
-                $list[] = $this->getFileByIndex($duplication, $index);
+                $list[] = $this->getFileByIndex($duplication, (int)$index);
             }
         }
 
@@ -135,7 +135,7 @@ class PmdCpdConverter extends AbstractConverter
 
         $lines = self::getLinesNumber($duplication);
         $tokens = self::getTokens($duplication);
-        $fileNumber = count($fileList);
+        $fileNumber = \count($fileList);
 
         $filesAsString = '';
         foreach ($fileList as $fileRef) {
@@ -158,7 +158,7 @@ class PmdCpdConverter extends AbstractConverter
             $result[] = "Code Fragment: Not Found";
         }
 
-        return implode("\n", $result);
+        return \implode("\n", $result);
     }
 
     /**

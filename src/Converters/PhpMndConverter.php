@@ -88,11 +88,11 @@ class PhpMndConverter extends AbstractConverter
 
         foreach ($data->findArray('_children') as $child) {
             if ('snippet' === $child['_node']) {
-                $snippet = "`" . trim($data->find('_children.0._cdata')) . "`";
+                $snippet = "`" . \trim($data->find('_children.0._cdata')) . "`";
             }
 
             if ('suggestions' === $child['_node']) {
-                $suggestions = array_reduce(
+                $suggestions = \array_reduce(
                     $data->findArray('_children.1._children'),
                     static function (array $acc, array $item): array {
                         if ($item['_text']) {
@@ -109,7 +109,7 @@ class PhpMndConverter extends AbstractConverter
         return Helper::descAsList([
             'File Path'   => $data->get('full_path'),
             'Snippet'     => $snippet,
-            'Suggestions' => implode("; ", $suggestions),
+            'Suggestions' => \implode("; ", $suggestions),
         ]);
     }
 }

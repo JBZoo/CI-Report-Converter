@@ -61,19 +61,19 @@ abstract class AbstractCommand extends Command
     protected function getSourceCode(): string
     {
         if ($filename = (string)$this->getOption('input-file')) {
-            if (!realpath($filename) && !file_exists($filename)) {
+            if (!\realpath($filename) && !\file_exists($filename)) {
                 $this->output->writeln("Warning: File \"{$filename}\" not found");
                 return '';
             }
 
-            return (string)file_get_contents($filename);
+            return (string)\file_get_contents($filename);
         }
 
-        if (0 === ftell(STDIN)) {
+        if (0 === \ftell(\STDIN)) {
             $contents = '';
 
-            while (!feof(STDIN)) {
-                $contents .= fread(STDIN, 1024);
+            while (!\feof(\STDIN)) {
+                $contents .= \fread(\STDIN, 1024);
             }
 
             return $contents;
@@ -88,7 +88,7 @@ abstract class AbstractCommand extends Command
     protected function saveResult(string $result): void
     {
         if ($filename = (string)$this->getOption('output-file')) {
-            file_put_contents($filename, $result);
+            \file_put_contents($filename, $result);
             $this->output->writeln("Result is saved: {$filename}");
         } else {
             $this->output->write($result);
@@ -102,7 +102,7 @@ abstract class AbstractCommand extends Command
     protected function getOption(string $optionName)
     {
         $optionValue = $this->input->getOption($optionName);
-        if (is_array($optionValue)) {
+        if (\is_array($optionValue)) {
             return $optionValue[0];
         }
 

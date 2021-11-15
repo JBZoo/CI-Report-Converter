@@ -71,7 +71,7 @@ class AbstractNode
      */
     public function __set(string $name, $value): void
     {
-        if (!array_key_exists($name, $this->meta)) {
+        if (!\array_key_exists($name, $this->meta)) {
             throw new Exception("Undefined property \"{$name}\"");
         }
 
@@ -83,7 +83,7 @@ class AbstractNode
         if ($value !== null) {
             $varType = $this->meta[$name][0] ?? 'string';
             if ($varType === 'string') {
-                $value = trim((string)$value);
+                $value = \trim((string)$value);
             } elseif ($varType === 'float') {
                 $value = float($value);
             } elseif ($varType === 'int') {
@@ -123,11 +123,11 @@ class AbstractNode
      */
     public function __call(string $name, array $arguments)
     {
-        if (strpos($name, 'set') === 0) {
-            $name = strtolower((string)preg_replace("#^set#", '', $name));
+        if (\strpos($name, 'set') === 0) {
+            $name = \strtolower((string)\preg_replace("#^set#", '', $name));
             $newValue = $arguments[0] ?? null;
 
-            if (array_key_exists($name, $this->meta)) {
+            if (\array_key_exists($name, $this->meta)) {
                 if (null !== $newValue) {
                     $this->{$name} = $newValue;
                 }
@@ -136,9 +136,9 @@ class AbstractNode
             }
         }
 
-        if (strpos($name, 'get') === 0) {
-            $name = (string)preg_replace("#^get#", '', $name);
-            if (array_key_exists($name, $this->meta)) {
+        if (\strpos($name, 'get') === 0) {
+            $name = (string)\preg_replace("#^get#", '', $name);
+            if (\array_key_exists($name, $this->meta)) {
                 return $this->{$name};
             }
         }
@@ -156,8 +156,8 @@ class AbstractNode
 
         $result = ['_node' => $this->nodeName];
 
-        foreach (array_keys($this->meta) as $propName) {
-            if (array_key_exists($propName, $values) && $values[$propName] !== null) {
+        foreach (\array_keys($this->meta) as $propName) {
+            if (\array_key_exists($propName, $values) && $values[$propName] !== null) {
                 if ($values[$propName] instanceof SourceCaseOutput) {
                     $result[$propName] = $values[$propName]->toArray();
                 } else {

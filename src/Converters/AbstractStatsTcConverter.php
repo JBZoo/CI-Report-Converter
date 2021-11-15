@@ -63,10 +63,10 @@ abstract class AbstractStatsTcConverter extends AbstractConverter
                 continue;
             }
 
-            if (is_float($value) || strpos((string)$value, '.') !== false) {
-                $metrics->add($key, float($value, 6));
+            if (\is_float($value) || \strpos((string)$value, '.') !== false) {
+                $metrics->add((string)$key, float($value, 6));
             } else {
-                $metrics->add($key, int($value));
+                $metrics->add((string)$key, int($value));
             }
         }
 
@@ -99,7 +99,7 @@ abstract class AbstractStatsTcConverter extends AbstractConverter
 
         $buffer = $this->tcLogger->getWriter();
         if ($buffer instanceof Buffer) {
-            return implode('', $buffer->getBuffer());
+            return \implode('', $buffer->getBuffer());
         }
 
         return '';

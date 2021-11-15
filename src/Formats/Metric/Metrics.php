@@ -43,12 +43,12 @@ class Metrics extends AbstractNode
      */
     public function add(string $key, $value = null): self
     {
-        $key = trim($key);
+        $key = \trim($key);
         if ($key === '') {
             return $this;
         }
 
-        if (!array_key_exists($key, $this->metrics)) {
+        if (!\array_key_exists($key, $this->metrics)) {
             $this->metrics[$key] = $value;
         }
 
@@ -105,15 +105,15 @@ class Metrics extends AbstractNode
             $metric = new Metric();
             $metric->key = $key;
             $metric->value = $value;
-            $metric->name = array_key_exists($key, $columnMap)
+            $metric->name = \array_key_exists($key, $columnMap)
                 ? "{$columnMap[$key]} ({$toolName}{$key})"
                 : "{$toolName}{$key}";
 
             $result[$key] = $metric;
         }
 
-        uasort($result, static function (Metric $metric1, Metric $metric2): int {
-            return strcmp((string)$metric1->name, (string)$metric2->name);
+        \uasort($result, static function (Metric $metric1, Metric $metric2): int {
+            return \strcmp((string)$metric1->name, (string)$metric2->name);
         });
 
         return $result;

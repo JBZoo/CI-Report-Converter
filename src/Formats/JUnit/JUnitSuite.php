@@ -91,7 +91,7 @@ class JUnitSuite extends AbstractNode
         }
 
         if ($value = $this->getTime()) {
-            $node->setAttribute('time', sprintf('%F', round($value, 6)));
+            $node->setAttribute('time', \sprintf('%F', \round($value, 6)));
         }
 
         foreach ($this->testSuites as $testSuite) {
@@ -138,7 +138,7 @@ class JUnitSuite extends AbstractNode
             $result += $testSuite->getAssertionsCount();
         }
 
-        $result += (int)array_reduce($this->testCases, static function (int $acc, JUnitCase $testCase) {
+        $result += (int)\array_reduce($this->testCases, static function (int $acc, JUnitCase $testCase) {
             return $acc + $testCase->getAssertionsCount();
         }, 0);
 
@@ -156,7 +156,7 @@ class JUnitSuite extends AbstractNode
             $result += $testSuite->getErrorsCount();
         }
 
-        $result += (int)array_reduce($this->testCases, static function (int $acc, JUnitCase $testCase) {
+        $result += (int)\array_reduce($this->testCases, static function (int $acc, JUnitCase $testCase) {
             return $acc + $testCase->getErrorsCount();
         }, 0);
 
@@ -174,7 +174,7 @@ class JUnitSuite extends AbstractNode
             $result += $testSuite->getWarningsCount();
         }
 
-        $result += (int)array_reduce($this->testCases, static function (int $acc, JUnitCase $testCase) {
+        $result += (int)\array_reduce($this->testCases, static function (int $acc, JUnitCase $testCase) {
             return $acc + $testCase->getWarningsCount();
         }, 0);
 
@@ -192,7 +192,7 @@ class JUnitSuite extends AbstractNode
             $result += $testSuite->getFailuresCount();
         }
 
-        $result += (int)array_reduce($this->testCases, static function (int $acc, JUnitCase $testCase) {
+        $result += (int)\array_reduce($this->testCases, static function (int $acc, JUnitCase $testCase) {
             return $acc + $testCase->getFailuresCount();
         }, 0);
 
@@ -210,7 +210,7 @@ class JUnitSuite extends AbstractNode
             $result += $testSuite->getSkippedCount();
         }
 
-        $result += (int)array_reduce($this->testCases, static function (int $acc, JUnitCase $testCase) {
+        $result += (int)\array_reduce($this->testCases, static function (int $acc, JUnitCase $testCase) {
             return $acc + $testCase->getSkippedCount();
         }, 0);
 
@@ -228,7 +228,7 @@ class JUnitSuite extends AbstractNode
             $result += $testSuite->getTime();
         }
 
-        $result += array_reduce($this->testCases, static function (float $acc, JUnitCase $testCase) {
+        $result += \array_reduce($this->testCases, static function (float $acc, JUnitCase $testCase) {
             return $acc + (float)$testCase->getTime();
         }, 0.0);
 
@@ -246,6 +246,6 @@ class JUnitSuite extends AbstractNode
             $result += $testSuite->getTestsCount();
         }
 
-        return $result + count($this->testCases);
+        return $result + \count($this->testCases);
     }
 }

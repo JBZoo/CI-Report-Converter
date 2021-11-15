@@ -76,7 +76,7 @@ class Helper
         $result = "\n##teamcity[{$eventName}";
         foreach ($params as $propertyName => $propertyValue) {
             $escapedValue = self::escapeValue((string)$propertyValue);
-            if (is_int($propertyName)) {
+            if (\is_int($propertyName)) {
                 $result .= " '{$escapedValue}'"; // Value without name; skip the key and dump just the value
             } else {
                 self::ensureValidJavaId($propertyName);
@@ -96,7 +96,7 @@ class Helper
      */
     public static function ensureValidJavaId(string $value): void
     {
-        if (!preg_match('/^[a-z][-a-z0-9]+$/i', $value)) {
+        if (!\preg_match('/^[a-z][-a-z0-9]+$/i', $value)) {
             throw new Exception("Value \"{$value}\" is not valid Java ID.");
         }
     }
@@ -113,7 +113,7 @@ class Helper
         // We need to pass only 3 microsecond digits.
         // 2000-01-01T12:34:56.123450+0100 <- before
         // 2000-01-01T12:34:56.123+0100 <- after
-        return substr($formatted, 0, 23) . substr($formatted, 26);
+        return \substr($formatted, 0, 23) . \substr($formatted, 26);
     }
 
     /**
@@ -135,7 +135,7 @@ class Helper
             ']'  => '|]',
         ];
 
-        return preg_replace_callback(
+        return \preg_replace_callback(
             '/([\'\n\r|[\]])|\\\\u(\d{4})/',
             static function (array $matches) use ($escapeCharacterMap) {
                 if ($matches[1]) {

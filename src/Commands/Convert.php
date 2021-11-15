@@ -42,11 +42,11 @@ class Convert extends AbstractCommand
             ->setName('convert')
             ->setDescription('Convert one report format to another one')
             ->addOption('input-format', 'S', $req, 'Source format. Available options: <info>'
-                . implode(', ', Map::getAvailableFormats(Map::INPUT)) . '</info>', CheckStyleConverter::TYPE)
+                . \implode(', ', Map::getAvailableFormats(Map::INPUT)) . '</info>', CheckStyleConverter::TYPE)
             ->addOption('input-file', 'I', $opt, "File path with the original report format. " .
                 "If not set or empty, then the STDIN is used.")
             ->addOption('output-format', 'T', $req, 'Target format. Available options: <info>'
-                . implode(', ', Map::getAvailableFormats(Map::OUTPUT)) . '</info>', TeamCityTestsConverter::TYPE)
+                . \implode(', ', Map::getAvailableFormats(Map::OUTPUT)) . '</info>', TeamCityTestsConverter::TYPE)
             ->addOption('output-file', 'O', $opt, "File path with the result report format. " .
                 "If not set or empty, then the STDOUT is used.")
             ->addOption('root-path', 'R', $opt, 'If option is set, ' .
@@ -97,14 +97,14 @@ class Convert extends AbstractCommand
      */
     private function getFormat(string $optionName): string
     {
-        $format = strtolower(trim((string)$this->getOption($optionName)));
+        $format = \strtolower(\trim((string)$this->getOption($optionName)));
 
         $validFormats = Map::getAvailableFormats();
 
-        if (!in_array($format, $validFormats, true)) {
+        if (!\in_array($format, $validFormats, true)) {
             throw new Exception(
                 "Format \"{$format}\" not found. See the option \"--{$optionName}\".\n" .
-                "Available options: " . implode(',', $validFormats)
+                "Available options: " . \implode(',', $validFormats)
             );
         }
 

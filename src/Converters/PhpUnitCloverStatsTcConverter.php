@@ -82,13 +82,12 @@ class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
             }
         }
 
-        $crapValuesCount = count($crapValues) ?: 1;
-        $crapSummary = array_sum($crapValues) ?: 0;
+        $crapValuesCount = \count($crapValues) ?: 1;
+        $crapSummary = \array_sum($crapValues) ?: 0;
 
         $data['CRAPTotal'] = $crapSummary;
         $data['CRAPAmount'] = $crapAmount;
-        /** @phan-suppress-next-line PhanPartialTypeMismatchArgumentInternal */
-        $data['CRAPMaximum'] = count($crapValues) > 0 ? max($crapValues) : 0.0;
+        $data['CRAPMaximum'] = \count($crapValues) > 0 ? \max($crapValues) : 0.0;
         $data['CRAPAverage'] = self::percent($crapSummary, $crapValuesCount) / 100;
         $data['CRAPPercent'] = self::percent($crapAmount, $crapValuesCount);
 

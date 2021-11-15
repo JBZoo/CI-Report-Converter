@@ -66,7 +66,7 @@ class PhpMdJsonConverter extends AbstractConverter
                 $package = $violation['package'] ?? null;
                 if (null !== $package) {
                     $case->class = $package;
-                    $case->classname = str_replace('\\', '.', $package);
+                    $case->classname = \str_replace('\\', '.', $package);
                 }
             }
         }
@@ -97,7 +97,7 @@ class PhpMdJsonConverter extends AbstractConverter
         $line = $line > 0 ? ":{$line}" : '';
 
         return Helper::descAsList([
-            ''          => htmlspecialchars_decode($data->get('description')),
+            ''          => \htmlspecialchars_decode($data->get('description')),
             'Rule'      => "{$data->get('ruleSet')} / {$data->get('rule')} / Priority: {$data->get('priority')}",
             'PHP Mute'  => "@SuppressWarnings(PHPMD.{$data->get('rule')})",
             'Func'      => $functionName ?? $data['function'],

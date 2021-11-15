@@ -56,8 +56,8 @@ class Map
     {
         $result = [];
 
-        $drivers = array_keys(self::MAP_TESTS);
-        sort($drivers);
+        $drivers = \array_keys(self::MAP_TESTS);
+        \sort($drivers);
 
         foreach ($drivers as $source) {
             foreach ($drivers as $target) {
@@ -76,11 +76,11 @@ class Map
      */
     public static function getAvailableFormats(?string $direction = null): array
     {
-        $drivers = array_keys(self::MAP_TESTS);
-        sort($drivers);
+        $drivers = \array_keys(self::MAP_TESTS);
+        \sort($drivers);
 
         if (null !== $direction) {
-            return array_filter(array_map(static function (string $converterClass) use ($direction): ?string {
+            return \array_filter(\array_map(static function (string $converterClass) use ($direction): ?string {
                 if (self::MAP_TESTS[$converterClass][$direction]) {
                     return $converterClass::TYPE;
                 }
@@ -88,7 +88,7 @@ class Map
             }, $drivers));
         }
 
-        return array_map(static function (string $converterClass): string {
+        return \array_map(static function (string $converterClass): string {
             return $converterClass::TYPE;
         }, $drivers);
     }
@@ -103,7 +103,7 @@ class Map
             $result[] = $driver::TYPE;
         }
 
-        sort($result);
+        \sort($result);
 
         return $result;
     }
@@ -124,7 +124,7 @@ class Map
     public static function getMarkdownTable(): string
     {
         $tableData = self::getTable();
-        $header = array_keys($tableData);
+        $header = \array_keys($tableData);
 
 
         $table = new Markdown();
@@ -132,14 +132,14 @@ class Map
 
         $rows = [];
         foreach ($tableData as $key => $info) {
-            $rows[$key] = array_values(array_map(static function (bool $value) {
+            $rows[$key] = \array_values(\array_map(static function (bool $value) {
                 return $value ? 'Yes' : '-';
             }, $info));
 
-            array_unshift($rows[$key], $key);
+            \array_unshift($rows[$key], $key);
         }
 
-        array_unshift($header, 'Source/Target');
+        \array_unshift($header, 'Source/Target');
 
         return $table->render($header, $rows);
     }

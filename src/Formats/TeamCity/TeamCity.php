@@ -73,7 +73,7 @@ class TeamCity
         }
 
         $this->writer = $writer;
-        $this->params = array_merge($this->params, $params);
+        $this->params = \array_merge($this->params, $params);
     }
 
     /**
@@ -102,7 +102,7 @@ class TeamCity
      */
     public function testSuiteStarted(string $name, array $params = []): void
     {
-        $this->write('testSuiteStarted', array_merge(['name' => $name], $params));
+        $this->write('testSuiteStarted', \array_merge(['name' => $name], $params));
     }
 
     /**
@@ -111,7 +111,7 @@ class TeamCity
      */
     public function testSuiteFinished(string $name, array $params = []): void
     {
-        $this->write('testSuiteFinished', array_merge(['name' => $name], $params));
+        $this->write('testSuiteFinished', \array_merge(['name' => $name], $params));
     }
 
     /**
@@ -120,7 +120,7 @@ class TeamCity
      */
     public function write(string $messageName, array $parameters): void
     {
-        $parameters = array_merge($parameters, [
+        $parameters = \array_merge($parameters, [
             'timestamp' => Helper::formatTimestamp(),
             'flowId'    => $this->flowId,
         ]);
@@ -130,7 +130,7 @@ class TeamCity
         }
 
         // Filter out optional parameters.
-        $parameters = array_filter($parameters, static function ($value) {
+        $parameters = \array_filter($parameters, static function ($value) {
             return $value !== null && $value !== '' && $value !== ' ';
         });
 
@@ -143,7 +143,7 @@ class TeamCity
      */
     public function testStarted(string $name, array $params = []): void
     {
-        $this->write('testStarted', array_merge(['name' => $name], $params));
+        $this->write('testStarted', \array_merge(['name' => $name], $params));
     }
 
     /**
@@ -154,7 +154,7 @@ class TeamCity
     {
         $this->write('testFinished', [
             'name'     => $name,
-            'duration' => $duration > 0 ? round($duration * 1000) : null,
+            'duration' => $duration > 0 ? \round($duration * 1000) : null,
         ]);
     }
 
@@ -168,7 +168,7 @@ class TeamCity
             'name'     => $name,
             'message'  => $params['message'] ?? null,
             'details'  => $params['details'] ?? null,
-            'duration' => $params['duration'] > 0 ? round($params['duration'] * 1000) : null,
+            'duration' => $params['duration'] > 0 ? \round($params['duration'] * 1000) : null,
             'type'     => null,
             'actual'   => $params['actual'] ?? null,
             'expected' => $params['expected'] ?? null,
@@ -198,7 +198,7 @@ class TeamCity
             'name'     => $name,
             'message'  => $message,
             'details'  => $details,
-            'duration' => $duration > 0 ? round($duration * 1000) : null,
+            'duration' => $duration > 0 ? \round($duration * 1000) : null,
         ]);
     }
 
@@ -214,12 +214,12 @@ class TeamCity
         ?string $category = null,
         ?string $description = null
     ): void {
-        $cleanInspectionId = trim($inspectionId);
+        $cleanInspectionId = \trim($inspectionId);
         if (!$cleanInspectionId) {
             throw new Exception("Inspection Id can't be empty");
         }
 
-        if (!in_array($inspectionId, $this->inspectionTypes, true)) {
+        if (!\in_array($inspectionId, $this->inspectionTypes, true)) {
             $this->write('inspectionType', [
                 'id'          => $cleanInspectionId,
                 'name'        => $name ?: self::DEFAULT_INSPECTION_NAME,

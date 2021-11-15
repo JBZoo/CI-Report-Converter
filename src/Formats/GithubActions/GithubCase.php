@@ -67,7 +67,7 @@ class GithubCase extends AbstractNode
      */
     public function __toString(): string
     {
-        $paramsAsString = implode(',', array_filter([
+        $paramsAsString = \implode(',', \array_filter([
             $this->name ? "file={$this->name}" : null,
             $this->line ? "line={$this->line}" : null,
             $this->column ? "col={$this->column}" : null,

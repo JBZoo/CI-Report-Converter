@@ -119,12 +119,12 @@ class Xml
             $children = $element->childNodes;
 
             if ($children->length === 1 && $child = $children->item(0)) {
-                if ($child->nodeType === XML_TEXT_NODE) {
+                if ($child->nodeType === \XML_TEXT_NODE) {
                     $result['_text'] = $child->nodeValue;
                     return $result;
                 }
 
-                if ($child->nodeType === XML_CDATA_SECTION_NODE) {
+                if ($child->nodeType === \XML_CDATA_SECTION_NODE) {
                     $result['_cdata'] = $child->nodeValue;
                     return $result;
                 }

@@ -80,10 +80,10 @@ class PsalmJsonConverter extends AbstractConverter
      */
     private static function getDetails(Data $data): ?string
     {
-        $snippet = trim((string)$data->get('snippet'));
+        $snippet = \trim((string)$data->get('snippet'));
 
         return Helper::descAsList([
-            ''            => htmlspecialchars_decode((string)$data->get('message')),
+            ''            => \htmlspecialchars_decode((string)$data->get('message')),
             'Rule'        => $data->get('type'),
             'File Path'   => self::getFilePoint($data->get('file_path'), $data->get('line_from')),
             'Snippet'     => $snippet ? "`{$snippet}`" : null,

@@ -36,7 +36,7 @@ class TeamCityStats extends AbstractCommand
         $req = InputOption::VALUE_REQUIRED;
         $opt = InputOption::VALUE_OPTIONAL;
 
-        $formats = 'Available options: <comment>' . implode(', ', Map::getAvailableMetrics()) . '</comment>';
+        $formats = 'Available options: <comment>' . \implode(', ', Map::getAvailableMetrics()) . '</comment>';
 
         $this
             ->setName('teamcity:stats')
@@ -70,14 +70,14 @@ class TeamCityStats extends AbstractCommand
      */
     private function getFormat(): string
     {
-        $format = strtolower(trim((string)$this->getOption('input-format')));
+        $format = \strtolower(\trim((string)$this->getOption('input-format')));
 
         $validFormats = Map::getAvailableMetrics();
 
-        if (!in_array($format, $validFormats, true)) {
+        if (!\in_array($format, $validFormats, true)) {
             throw new Exception(
                 "Format \"{$format}\" not found. See the option \"--input-format\".\n" .
-                "Available options: " . implode(',', $validFormats)
+                "Available options: " . \implode(',', $validFormats)
             );
         }
 
@@ -92,7 +92,7 @@ class TeamCityStats extends AbstractCommand
      */
     private static function convertMetric(string $sourceCode, string $sourceFormat, ?int $flowId = null): string
     {
-        $sourceCode = trim($sourceCode);
+        $sourceCode = \trim($sourceCode);
         if ('' === $sourceCode) {
             return '';
         }

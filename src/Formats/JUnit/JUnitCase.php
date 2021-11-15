@@ -158,7 +158,7 @@ class JUnitCase extends AbstractNode
         }
 
         if (null !== $this->time) {
-            $node->setAttribute('time', sprintf('%F', round($this->time, 6)));
+            $node->setAttribute('time', \sprintf('%F', \round($this->time, 6)));
         }
 
         foreach ($this->outputs as $caseOutput) {
@@ -189,7 +189,7 @@ class JUnitCase extends AbstractNode
      */
     public function getErrorsCount(): int
     {
-        return count(array_filter($this->outputs, static function (AbstractOutput $output) {
+        return \count(\array_filter($this->outputs, static function (AbstractOutput $output) {
             return $output instanceof Error;
         }));
     }
@@ -199,7 +199,7 @@ class JUnitCase extends AbstractNode
      */
     public function getWarningsCount(): int
     {
-        return count(array_filter($this->outputs, static function (AbstractOutput $output) {
+        return \count(\array_filter($this->outputs, static function (AbstractOutput $output) {
             return $output instanceof Warning;
         }));
     }
@@ -209,7 +209,7 @@ class JUnitCase extends AbstractNode
      */
     public function getFailuresCount(): int
     {
-        return count(array_filter($this->outputs, static function (AbstractOutput $output) {
+        return \count(\array_filter($this->outputs, static function (AbstractOutput $output) {
             return $output instanceof Failure;
         }));
     }
@@ -219,7 +219,7 @@ class JUnitCase extends AbstractNode
      */
     public function getSkippedCount(): int
     {
-        return count(array_filter($this->outputs, static function (AbstractOutput $output) {
+        return \count(\array_filter($this->outputs, static function (AbstractOutput $output) {
             return $output instanceof Skipped;
         }));
     }

@@ -72,7 +72,7 @@ abstract class AbstractConverter
     public function setRootPath(?string $rootPath): self
     {
         if ($rootPath === '.') {
-            $rootPath = realpath($rootPath);
+            $rootPath = \realpath($rootPath);
         }
 
         $this->rootPath = (string)$rootPath ?: null;
@@ -106,7 +106,7 @@ abstract class AbstractConverter
     protected function cleanFilepath(string $origPath): string
     {
         if ($this->rootPath && $origPath) {
-            return str_replace(rtrim($this->rootPath, '/') . '/', '', $origPath);
+            return \str_replace(\rtrim($this->rootPath, '/') . '/', '', $origPath);
         }
 
         return $origPath;
@@ -122,16 +122,16 @@ abstract class AbstractConverter
             return null;
         }
 
-        if ($absFilename = realpath($relFilename)) {
+        if ($absFilename = \realpath($relFilename)) {
             return $absFilename;
         }
 
         if ($this->rootPath) {
-            $rootPath = rtrim($this->rootPath, '/');
-            $relFilename = ltrim($relFilename, '.');
-            $relFilename = ltrim($relFilename, '/');
+            $rootPath = \rtrim($this->rootPath, '/');
+            $relFilename = \ltrim($relFilename, '.');
+            $relFilename = \ltrim($relFilename, '/');
 
-            if ($absFilename = realpath($rootPath . '/' . $relFilename)) {
+            if ($absFilename = \realpath($rootPath . '/' . $relFilename)) {
                 return $absFilename;
             }
         }

@@ -75,7 +75,7 @@ class GithubActions
             $result[] = "::endgroup::\n\n";
         }
 
-        return implode("\n", $result);
+        return \implode("\n", $result);
     }
 
     /**
@@ -88,10 +88,10 @@ class GithubActions
             return '';
         }
 
-        return str_replace(
+        return \str_replace(
             ["\n", "\r"],
             ['%0A', ''],
-            trim($message)
+            \trim($message)
         );
     }
 }

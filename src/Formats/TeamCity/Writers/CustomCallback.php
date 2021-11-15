@@ -36,7 +36,7 @@ class CustomCallback implements AbstractWriter
         if (null === $this->callback) {
             throw new Exception('Callback function is not set');
         }
-        call_user_func($this->callback, $message);
+        \call_user_func($this->callback, $message);
     }
 
     /**
