@@ -23,5 +23,4 @@ namespace JBZoo\CiReportConverter\Converters;
  */
 class Exception extends \JBZoo\CiReportConverter\Exception
 {
-
 }

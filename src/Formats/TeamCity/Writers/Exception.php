@@ -23,5 +23,4 @@ namespace JBZoo\CiReportConverter\Formats\TeamCity\Writers;
  */
 class Exception extends \JBZoo\CiReportConverter\Formats\TeamCity\Exception
 {
-
 }
