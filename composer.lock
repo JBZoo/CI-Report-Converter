@@ -1958,16 +1958,16 @@
         },
         {
             "name": "jbzoo/codestyle",
-            "version": "3.2.1",
+            "version": "3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JBZoo/Codestyle.git",
-                "reference": "d197f6fe728dd7cc4351c6271c58755496cf197d"
+                "reference": "0475658ed328871cb9e976fa7c83db5e40490d14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBZoo/Codestyle/zipball/d197f6fe728dd7cc4351c6271c58755496cf197d",
-                "reference": "d197f6fe728dd7cc4351c6271c58755496cf197d",
+                "url": "https://api.github.com/repos/JBZoo/Codestyle/zipball/0475658ed328871cb9e976fa7c83db5e40490d14",
+                "reference": "0475658ed328871cb9e976fa7c83db5e40490d14",
                 "shasum": ""
             },
             "require": {
@@ -2025,9 +2025,9 @@
             ],
             "support": {
                 "issues": "https://github.com/JBZoo/Codestyle/issues",
-                "source": "https://github.com/JBZoo/Codestyle/tree/3.2.1"
+                "source": "https://github.com/JBZoo/Codestyle/tree/3.2.2"
             },
-            "time": "2021-12-24T10:39:38+00:00"
+            "time": "2022-01-08T17:31:54+00:00"
         },
         {
             "name": "jbzoo/composer-diff",
