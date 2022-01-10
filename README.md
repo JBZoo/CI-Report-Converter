@@ -185,11 +185,10 @@ Options:
   -N, --suite-name=SUITE-NAME          Set custom name of root group/suite (if it's possible).
   -F, --tc-flow-id[=TC-FLOW-ID]        Custom flowId in TeamCity output. Default value is PID of the tool.
   -Q, --non-zero-code[=NON-ZERO-CODE]  Will exit with the code=1, if any violations are found. [default: "no"]
-  -h, --help                           Display this help message
+  -h, --help                           Display help for the given command. When no command is given display help for the list command
   -q, --quiet                          Do not output any message
   -V, --version                        Display this application version
-      --ansi                           Force ANSI output
-      --no-ansi                        Disable ANSI output
+      --ansi|--no-ansi                 Force (or disable --no-ansi) ANSI output
   -n, --no-interaction                 Do not ask any interactive question
   -v|vv|vvv, --verbose                 Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 
@@ -215,11 +214,10 @@ Options:
   -O, --output-file[=OUTPUT-FILE]  File path with the result report format. If not set or empty, then the STDOUT is used.
   -R, --root-path[=ROOT-PATH]      If option is set, all absolute file paths will be converted to relative once. [default: "."]
   -F, --tc-flow-id[=TC-FLOW-ID]    Custom flowId in TeamCity output. Default value is PID of the tool.
-  -h, --help                       Display this help message
+  -h, --help                       Display help for the given command. When no command is given display help for the list command
   -q, --quiet                      Do not output any message
   -V, --version                    Display this application version
-      --ansi                       Force ANSI output
-      --no-ansi                    Disable ANSI output
+      --ansi|--no-ansi             Force (or disable --no-ansi) ANSI output
   -n, --no-interaction             Do not ask any interactive question
   -v|vv|vvv, --verbose             Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 

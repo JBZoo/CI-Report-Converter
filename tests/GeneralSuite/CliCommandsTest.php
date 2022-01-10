@@ -44,40 +44,32 @@ class CliCommandsTest extends PHPUnit
 {
     public function testConvertCommandReadMe()
     {
-        if (version_compare(PHP_VERSION, '7.3.0') < 0) {
-            $helpMessage = $this->taskReal('convert', ['help' => null]);
-            $helpMessage = implode("\n", [
-                '',
-                '```',
-                '$ php ./vendor/bin/ci-report-converter convert --help',
-                $helpMessage,
-                '```',
-                '',
-            ]);
+        $helpMessage = $this->taskReal('convert', ['help' => null]);
+        $helpMessage = implode("\n", [
+            '',
+            '```',
+            '$ php ./vendor/bin/ci-report-converter convert --help',
+            $helpMessage,
+            '```',
+            '',
+        ]);
 
-            isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
-        } else {
-            success('Old help text is different for different libs/php versions');
-        }
+        isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
     }
 
     public function testTcStatsCommandReadMe()
     {
-        if (version_compare(PHP_VERSION, '7.3.0') < 0) {
-            $helpMessage = $this->taskReal('teamcity:stats', ['help' => null]);
-            $helpMessage = implode("\n", [
-                '',
-                '```',
-                '$ php ./vendor/bin/ci-report-converter teamcity:stats --help',
-                $helpMessage,
-                '```',
-                '',
-            ]);
+        $helpMessage = $this->taskReal('teamcity:stats', ['help' => null]);
+        $helpMessage = implode("\n", [
+            '',
+            '```',
+            '$ php ./vendor/bin/ci-report-converter teamcity:stats --help',
+            $helpMessage,
+            '```',
+            '',
+        ]);
 
-            isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
-        } else {
-            success('Old help text is different for different libs/php versions');
-        }
+        isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
     }
 
     public function testGitHubActionsYml()
