@@ -38,7 +38,7 @@ jobs:
     strategy:
       matrix:
         php-version: [ 7.2, 7.3, 7.4 ]
-        build-way: ["build", "update"]
+        build-way: ["update"]
         composer_flags: [ "--prefer-lowest", "" ]
         include:
           - php-version: 8.0
