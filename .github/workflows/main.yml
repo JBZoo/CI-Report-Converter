@@ -38,7 +38,7 @@ jobs:
     strategy:
       matrix:
         php-version: [ 7.2, 7.3, 7.4 ]
-        build-way: ["build", "update"]
+        build-way: ["update"]
         composer_flags: [ "--prefer-lowest", "" ]
         include:
           - php-version: 8.0
@@ -57,7 +57,7 @@ jobs:
           tools: composer
 
       - name: Build the Project
-        run: make ${{ matrix.build-way }} --no-print-directory
+        run: make build ${{ matrix.build-way }} --no-print-directory
 
       - name: 🧪 PHPUnit Tests
         if: ${{ !(matrix.build-way == 'build' && matrix.php-version == 8.0) }}
@@ -111,7 +111,7 @@ jobs:
       matrix:
         php-version: [ 7.2, 7.3, 7.4 ]
         experimental: [ false ]
-        build-way: ["build", "update"]
+        build-way: ["build", "update build"]
         include:
           - php-version: 8.0
             experimental: true

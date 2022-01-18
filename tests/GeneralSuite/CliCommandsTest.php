@@ -44,32 +44,40 @@ class CliCommandsTest extends PHPUnit
 {
     public function testConvertCommandReadMe()
     {
-        $helpMessage = $this->taskReal('convert', ['help' => null]);
-        $helpMessage = implode("\n", [
-            '',
-            '```',
-            '$ php ./vendor/bin/ci-report-converter convert --help',
-            $helpMessage,
-            '```',
-            '',
-        ]);
+        if (version_compare(PHP_VERSION, '8.0') > 0) {
+            $helpMessage = $this->taskReal('convert', ['help' => null]);
+            $helpMessage = implode("\n", [
+                '',
+                '```',
+                '$ php ./vendor/bin/ci-report-converter convert --help',
+                $helpMessage,
+                '```',
+                '',
+            ]);
 
-        isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
+            isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
+        } else {
+            skip('Old help text is different for different libs/php versions');
+        }
     }
 
     public function testTcStatsCommandReadMe()
     {
-        $helpMessage = $this->taskReal('teamcity:stats', ['help' => null]);
-        $helpMessage = implode("\n", [
-            '',
-            '```',
-            '$ php ./vendor/bin/ci-report-converter teamcity:stats --help',
-            $helpMessage,
-            '```',
-            '',
-        ]);
+        if (version_compare(PHP_VERSION, '8.0') > 0) {
+            $helpMessage = $this->taskReal('teamcity:stats', ['help' => null]);
+            $helpMessage = implode("\n", [
+                '',
+                '```',
+                '$ php ./vendor/bin/ci-report-converter teamcity:stats --help',
+                $helpMessage,
+                '```',
+                '',
+            ]);
 
-        isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
+            isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
+        } else {
+            skip('Old help text is different for different libs/php versions');
+        }
     }
 
     public function testGitHubActionsYml()

@@ -34,7 +34,6 @@ update: ##@Project Install/Update all 3rd party dependencies
 	@composer update --with-all-dependencies --optimize-autoloader --no-progress $(JBZOO_COMPOSER_UPDATE_FLAGS)
 	@$(PHP_BIN) `pwd`/vendor/bin/composer-diff
 	@make create-symlink
-	@make build-phar
 
 
 test-all: ##@Project Run all project tests at once
