@@ -57,7 +57,7 @@ jobs:
           tools: composer
 
       - name: Build the Project
-        run: make ${{ matrix.build-way }} --no-print-directory
+        run: make build ${{ matrix.build-way }} --no-print-directory
 
       - name: 🧪 PHPUnit Tests
         if: ${{ !(matrix.build-way == 'build' && matrix.php-version == 8.0) }}
