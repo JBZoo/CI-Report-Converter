@@ -80,7 +80,7 @@ class Markdown
 
         // all columns must be at least 3 wide for the markdown to work
         return \array_map(static function (int $width) {
-            return $width >= self::CELL_MIN_LENGTH ? $width : self::CELL_MIN_LENGTH;
+            return max($width, self::CELL_MIN_LENGTH);
         }, $widths);
     }
 
