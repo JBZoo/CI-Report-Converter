@@ -45,6 +45,7 @@
 
         "jbzoo/data"      : "^4.3.3",
         "jbzoo/utils"     : "^4.5.4",
+        "jbzoo/cli"       : "1.x-dev",
         "symfony/console" : "^4.4|^5.0"
     },
 
@@ -73,8 +74,8 @@
 
     "config"       : {
         "optimize-autoloader" : true,
-        "allow-plugins": {
-            "composer/package-versions-deprecated": true
+        "allow-plugins"       : {
+            "composer/package-versions-deprecated" : true
         }
     },
 
