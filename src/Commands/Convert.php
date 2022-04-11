@@ -91,15 +91,15 @@ class Convert extends AbstractCommand
 
             if ($this->saveResult($targetReport)) {
                 if ($errorsCount > 0) {
-                    $this->_("Found errors: {$errorsCount}", Helper::VERB_ERROR);
+                    $this->_("Found errors: {$errorsCount}", Helper::VERB_E);
                 }
 
                 if ($warningCount > 0) {
-                    $this->_("Found warnings: {$warningCount}", Helper::VERB_ERROR);
+                    $this->_("Found warnings: {$warningCount}", Helper::VERB_E);
                 }
 
                 if ($failureCount > 0) {
-                    $this->_("Found failures: {$failureCount}", Helper::VERB_ERROR);
+                    $this->_("Found failures: {$failureCount}", Helper::VERB_E);
                 }
             }
         }

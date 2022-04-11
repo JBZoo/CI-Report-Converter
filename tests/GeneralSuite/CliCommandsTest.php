@@ -362,7 +362,7 @@ class CliCommandsTest extends PHPUnit
         ]);
 
         isContain('/build/testConvertCommandSaveToFile.xml', $output);
-        isContain('Error: Found failures: 5', $output);
+        isContain('Found failures: 5', $output);
     }
 
     /**
