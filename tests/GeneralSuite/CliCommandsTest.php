@@ -300,7 +300,7 @@ class CliCommandsTest extends PHPUnit
             'root-path'     => "src",
         ]);
 
-        isSame(implode("\n", [
+        $expectedFileContent = implode("\n", [
             '<?xml version="1.0" encoding="UTF-8"?>',
             '<testsuites>',
             '  <testsuite name="Test Suite" tests="5" failures="5">',
@@ -345,7 +345,9 @@ class CliCommandsTest extends PHPUnit
             '</testsuites>',
             '',
             '',
-        ]), $output);
+        ]);
+
+        isSame($expectedFileContent, $output);
     }
 
     /**

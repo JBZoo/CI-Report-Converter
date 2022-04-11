@@ -20,6 +20,7 @@ namespace JBZoo\CiReportConverter\Commands;
 use JBZoo\CiReportConverter\Converters\CheckStyleConverter;
 use JBZoo\CiReportConverter\Converters\Map;
 use JBZoo\CiReportConverter\Converters\TeamCityTestsConverter;
+use JBZoo\Cli\Helper;
 use Symfony\Component\Console\Input\InputOption;
 
 use function JBZoo\Utils\bool;
@@ -76,10 +77,11 @@ class Convert extends AbstractCommand
                 ->setRootSuiteName($suiteName)
                 ->toInternal($sourceReport);
 
-            $casesAreFound =
-                $internalReport->getErrorsCount() > 0 ||
-                $internalReport->getWarningCount() > 0 ||
-                $internalReport->getFailureCount() > 0;
+            $errorsCount = $internalReport->getErrorsCount();
+            $warningCount = $internalReport->getWarningCount();
+            $failureCount = $internalReport->getFailureCount();
+
+            $casesAreFound = $errorsCount || $warningCount || $failureCount;
 
             $targetReport = Map::getConverter($this->getFormat('output-format'), Map::OUTPUT)
                 ->setRootPath($rootPath)
@@ -87,7 +89,19 @@ class Convert extends AbstractCommand
                 ->setFlowId($this->getOptInt('tc-flow-id'))
                 ->fromInternal($internalReport);
 
-            $this->saveResult($targetReport);
+            if ($this->saveResult($targetReport)) {
+                if ($errorsCount > 0) {
+                    $this->_("Found errors: {$errorsCount}", Helper::VERB_ERROR);
+                }
+
+                if ($warningCount > 0) {
+                    $this->_("Found warnings: {$warningCount}", Helper::VERB_ERROR);
+                }
+
+                if ($failureCount > 0) {
+                    $this->_("Found failures: {$failureCount}", Helper::VERB_ERROR);
+                }
+            }
         }
 
         return $nonZeroCode && $casesAreFound ? 1 : 0;

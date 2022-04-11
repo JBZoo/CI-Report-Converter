@@ -23,7 +23,6 @@ use JBZoo\Cli\Helper;
 /**
  * Class AbstractCommand
  * @package JBZoo\CiReportConverter\Commands
- * @psalm-suppress PropertyNotSetInConstructor
  */
 abstract class AbstractCommand extends CliCommand
 {
@@ -41,29 +40,27 @@ abstract class AbstractCommand extends CliCommand
             return (string)\file_get_contents($filename);
         }
 
-        if (0 === \ftell(\STDIN)) {
-            $contents = '';
-
-            while (!\feof(\STDIN)) {
-                $contents .= \fread(\STDIN, 1024);
-            }
-
-            return $contents;
+        $contents = (string)self::getStdIn();
+        if (\trim($contents) === '') {
+            throw new Exception("Please provide input-file or use STDIN as input (CLI pipeline).");
         }
 
-        throw new Exception("Please provide input-file or use STDIN as input (CLI pipeline).");
+        return $contents;
     }
 
     /**
      * @param string $result
+     * @return bool
      */
-    protected function saveResult(string $result): void
+    protected function saveResult(string $result): bool
     {
         if ($filename = $this->getOptString('output-file')) {
             \file_put_contents($filename, $result);
             $this->_("Result is saved: {$filename}");
-        } else {
-            $this->_($result);
+            return false;
         }
+
+        $this->_($result);
+        return true;
     }
 }
