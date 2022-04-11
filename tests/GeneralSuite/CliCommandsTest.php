@@ -350,6 +350,21 @@ class CliCommandsTest extends PHPUnit
         isSame($expectedFileContent, $output);
     }
 
+    public function testConvertCommandSaveToFile()
+    {
+        $output = $this->task('convert', [
+            'input-format'  => CheckStyleConverter::TYPE,
+            'output-format' => JUnitConverter::TYPE,
+            'input-file'    => Fixtures::PSALM_CHECKSTYLE,
+            'output-file'   => PROJECT_BUILD . '/testConvertCommandSaveToFile.xml',
+            'suite-name'    => "Test Suite",
+            'root-path'     => "src",
+        ]);
+
+        isContain('/build/testConvertCommandSaveToFile.xml', $output);
+        isContain('Error: Found failures: 5', $output);
+    }
+
     /**
      * @param string $action
      * @param array  $params

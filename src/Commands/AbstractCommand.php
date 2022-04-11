@@ -57,10 +57,10 @@ abstract class AbstractCommand extends CliCommand
         if ($filename = $this->getOptString('output-file')) {
             \file_put_contents($filename, $result);
             $this->_("Result is saved: {$filename}");
-            return false;
+            return true;
         }
 
         $this->_($result);
-        return true;
+        return false;
     }
 }
