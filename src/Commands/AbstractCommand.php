@@ -17,52 +17,24 @@ declare(strict_types=1);
 
 namespace JBZoo\CiReportConverter\Commands;
 
-use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Output\OutputInterface;
+use JBZoo\Cli\CliCommand;
+use JBZoo\Cli\Helper;
 
 /**
  * Class AbstractCommand
  * @package JBZoo\CiReportConverter\Commands
+ * @psalm-suppress PropertyNotSetInConstructor
  */
-abstract class AbstractCommand extends Command
+abstract class AbstractCommand extends CliCommand
 {
-    /**
-     * @var InputInterface
-     * @psalm-suppress PropertyNotSetInConstructor
-     */
-    protected $input;
-
-    /**
-     * @var OutputInterface
-     * @psalm-suppress PropertyNotSetInConstructor
-     */
-    protected $output;
-
-    /**
-     * @inheritDoc
-     */
-    protected function execute(InputInterface $input, OutputInterface $output): int
-    {
-        $this->input = $input;
-        $this->output = $output;
-
-        return $this->executeAction();
-    }
-
-    /**
-     * @return int
-     */
-    abstract protected function executeAction(): int;
-
     /**
      * @return string
      */
     protected function getSourceCode(): string
     {
-        if ($filename = (string)$this->getOption('input-file')) {
+        if ($filename = $this->getOptString('input-file')) {
             if (!\realpath($filename) && !\file_exists($filename)) {
-                $this->output->writeln("Warning: File \"{$filename}\" not found");
+                $this->_("File \"{$filename}\" not found", Helper::VERB_ERROR);
                 return '';
             }
 
@@ -87,25 +59,11 @@ abstract class AbstractCommand extends Command
      */
     protected function saveResult(string $result): void
     {
-        if ($filename = (string)$this->getOption('output-file')) {
+        if ($filename = $this->getOptString('output-file')) {
             \file_put_contents($filename, $result);
-            $this->output->writeln("Result is saved: {$filename}");
+            $this->_("Result is saved: {$filename}");
         } else {
-            $this->output->write($result);
+            $this->_($result);
         }
-    }
-
-    /**
-     * @param string $optionName
-     * @return bool|string|null
-     */
-    protected function getOption(string $optionName)
-    {
-        $optionValue = $this->input->getOption($optionName);
-        if (\is_array($optionValue)) {
-            return $optionValue[0];
-        }
-
-        return $optionValue;
     }
 }

@@ -33,6 +33,8 @@ class ConvertMap extends AbstractCommand
         $this
             ->setName('convert:map')
             ->setDescription('Show current map of report converting');
+
+        parent::configure();
     }
 
     /**
@@ -40,7 +42,7 @@ class ConvertMap extends AbstractCommand
      */
     protected function executeAction(): int
     {
-        $this->output->writeln(Map::getMarkdownTable());
+        $this->_(Map::getMarkdownTable());
         return 0;
     }
 }

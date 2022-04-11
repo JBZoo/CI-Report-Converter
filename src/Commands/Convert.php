@@ -54,6 +54,8 @@ class Convert extends AbstractCommand
             ->addOption('suite-name', 'N', $req, "Set custom name of root group/suite (if it's possible).")
             ->addOption('tc-flow-id', 'F', $opt, 'Custom flowId in TeamCity output. Default value is PID of the tool.')
             ->addOption('non-zero-code', 'Q', $opt, 'Will exit with the code=1, if any violations are found.', 'no');
+
+        parent::configure();
     }
 
     /**
@@ -62,9 +64,9 @@ class Convert extends AbstractCommand
     protected function executeAction(): int
     {
         $sourceReport = $this->getSourceCode();
-        $rootPath = (string)$this->getOption('root-path') ?: null;
-        $suiteName = (string)$this->getOption('suite-name') ?: null;
-        $nonZeroCode = bool($this->getOption('non-zero-code'));
+        $rootPath = $this->getOptString('root-path') ?: null;
+        $suiteName = $this->getOptString('suite-name') ?: null;
+        $nonZeroCode = bool($this->getOptBool('non-zero-code'));
 
         $casesAreFound = false;
 
@@ -82,7 +84,7 @@ class Convert extends AbstractCommand
             $targetReport = Map::getConverter($this->getFormat('output-format'), Map::OUTPUT)
                 ->setRootPath($rootPath)
                 ->setRootSuiteName($suiteName)
-                ->setFlowId((int)$this->getOption('tc-flow-id'))
+                ->setFlowId($this->getOptInt('tc-flow-id'))
                 ->fromInternal($internalReport);
 
             $this->saveResult($targetReport);
@@ -97,7 +99,7 @@ class Convert extends AbstractCommand
      */
     private function getFormat(string $optionName): string
     {
-        $format = \strtolower(\trim((string)$this->getOption($optionName)));
+        $format = \strtolower($this->getOptString($optionName));
 
         $validFormats = Map::getAvailableFormats();
 

@@ -95,7 +95,14 @@ class CliCommandsTest extends PHPUnit
             'no-interaction',
             //
             'tc-flow-id',
-            'root-path'
+            'root-path',
+            //
+            'mute-errors',
+            'no-progress',
+            'profile',
+            'stdout-only',
+            'strict',
+            'timestamp',
         ];
 
         $expectedInputs = [];
@@ -194,7 +201,7 @@ class CliCommandsTest extends PHPUnit
             'input-format' => 'pdepend-xml'
         ]);
 
-        isSame("Warning: File \"/undefined/file.xml\" not found\n", $output);
+        isSame("Error: File \"/undefined/file.xml\" not found", trim($output));
     }
 
     public function testConvertStatsCustomFlowId()
@@ -280,7 +287,7 @@ class CliCommandsTest extends PHPUnit
             'non-zero-code' => 'yes'
         ]);
 
-        isSame("Warning: File \"/undefined/file.xml\" not found\n", $output);
+        isSame("Error: File \"/undefined/file.xml\" not found", trim($output));
     }
 
     public function testConvertCommand()
@@ -336,7 +343,7 @@ class CliCommandsTest extends PHPUnit
             '    </testsuite>',
             '  </testsuite>',
             '</testsuites>',
-            ''
+            '',
         ]), $output);
     }
 
@@ -353,7 +360,7 @@ class CliCommandsTest extends PHPUnit
         $application->add(new ConvertMap());
         $application->add(new TeamCityStats());
         $command = $application->find($action);
-
+        
         $buffer = new BufferedOutput();
         $args = new StringInput(Cli::build('', $params));
         $exitCode = $command->run($args, $buffer);

@@ -20,8 +20,6 @@ namespace JBZoo\CiReportConverter\Commands;
 use JBZoo\CiReportConverter\Converters\Map;
 use Symfony\Component\Console\Input\InputOption;
 
-use function JBZoo\Utils\int;
-
 /**
  * Class TeamCityStats
  * @package JBZoo\CiReportConverter\Commands
@@ -49,6 +47,8 @@ class TeamCityStats extends AbstractCommand
             ->addOption('root-path', 'R', $opt, 'If option is set, ' .
                 'all absolute file paths will be converted to relative once.', '.')
             ->addOption('tc-flow-id', 'F', $opt, 'Custom flowId in TeamCity output. Default value is PID of the tool.');
+
+        parent::configure();
     }
 
     /**
@@ -58,7 +58,7 @@ class TeamCityStats extends AbstractCommand
     {
         $inputFormat = $this->getFormat();
 
-        $output = self::convertMetric($this->getSourceCode(), $inputFormat, int($this->getOption('tc-flow-id')));
+        $output = self::convertMetric($this->getSourceCode(), $inputFormat, $this->getOptInt('tc-flow-id'));
 
         $this->saveResult($output);
 
@@ -70,7 +70,7 @@ class TeamCityStats extends AbstractCommand
      */
     private function getFormat(): string
     {
-        $format = \strtolower(\trim((string)$this->getOption('input-format')));
+        $format = \strtolower($this->getOptString('input-format'));
 
         $validFormats = Map::getAvailableMetrics();
 

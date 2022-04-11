@@ -15,12 +15,11 @@
 
 declare(strict_types=1);
 
-use JBZoo\CiReportConverter\Commands\Convert;
-use JBZoo\CiReportConverter\Commands\ConvertMap;
-use JBZoo\CiReportConverter\Commands\TeamCityStats;
-use Symfony\Component\Console\Application;
+namespace JBZoo\CiReportConverter;
 
-\define('PATH_ROOT', __DIR__);
+use JBZoo\Cli\CliApplication;
+
+const PATH_ROOT = __DIR__;
 
 $vendorPaths = [
     __DIR__ . '/../../autoload.php',
@@ -35,11 +34,10 @@ foreach ($vendorPaths as $file) {
     }
 }
 
-require JBZOO_AUTOLOAD_FILE;
+require_once JBZOO_AUTOLOAD_FILE;
 
-$application = new Application('JBZoo/CI-Report-Converter', '@git-version@');
-$application->add(new Convert());
-$application->add(new ConvertMap());
-$application->add(new TeamCityStats());
+$application = new CliApplication('JBZoo/CI-Report-Converter', '@git-version@');
+$application->registerCommandsByPath(__DIR__ . '/src/Commands', __NAMESPACE__);
 $application->setDefaultCommand('list');
+
 $application->run();
