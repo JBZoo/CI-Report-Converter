@@ -24,6 +24,7 @@ return array_merge($default, [
         'vendor/jbzoo/data/src',
         'vendor/jbzoo/utils/src',
         'vendor/jbzoo/cli/src',
+        'vendor/jbzoo/markdown/src',
         'vendor/symfony/console',
     ]
 ]);
