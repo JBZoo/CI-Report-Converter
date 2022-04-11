@@ -20,6 +20,7 @@ namespace JBZoo\CiReportConverter\Commands;
 use JBZoo\CiReportConverter\Converters\CheckStyleConverter;
 use JBZoo\CiReportConverter\Converters\Map;
 use JBZoo\CiReportConverter\Converters\TeamCityTestsConverter;
+use JBZoo\Cli\Codes;
 use JBZoo\Cli\Helper;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -104,7 +105,7 @@ class Convert extends AbstractCommand
             }
         }
 
-        return $nonZeroCode && $casesAreFound ? 1 : 0;
+        return $nonZeroCode && $casesAreFound ? Codes::GENERAL_ERROR : Codes::OK;
     }
 
     /**

@@ -18,6 +18,7 @@ declare(strict_types=1);
 namespace JBZoo\CiReportConverter\Commands;
 
 use JBZoo\CiReportConverter\Converters\Map;
+use JBZoo\Cli\Codes;
 use Symfony\Component\Console\Input\InputOption;
 
 /**
@@ -62,7 +63,7 @@ class TeamCityStats extends AbstractCommand
 
         $this->saveResult($output);
 
-        return 0;
+        return Codes::OK;
     }
 
     /**
