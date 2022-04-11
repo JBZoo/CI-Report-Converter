@@ -344,6 +344,7 @@ class CliCommandsTest extends PHPUnit
             '  </testsuite>',
             '</testsuites>',
             '',
+            '',
         ]), $output);
     }
 
@@ -360,7 +361,7 @@ class CliCommandsTest extends PHPUnit
         $application->add(new ConvertMap());
         $application->add(new TeamCityStats());
         $command = $application->find($action);
-        
+
         $buffer = new BufferedOutput();
         $args = new StringInput(Cli::build('', $params));
         $exitCode = $command->run($args, $buffer);
@@ -386,6 +387,7 @@ class CliCommandsTest extends PHPUnit
                 Sys::getBinary(),
                 "{$rootDir}/ci-report-converter.php --no-ansi",
                 $action,
+                '2>&1'
             ]),
             $params,
             $rootDir,
