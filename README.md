@@ -207,7 +207,7 @@ Usage:
 Options:
   -S, --input-format=INPUT-FORMAT      Source format. Available options: checkstyle, junit, phpmd-json, phpmnd, pmd-cpd, psalm-json [default: "checkstyle"]
   -I, --input-file[=INPUT-FILE]        File path with the original report format. If not set or empty, then the STDIN is used.
-  -T, --output-format=OUTPUT-FORMAT    Target format. Available options: gitlab-json, github-cli, junit, tc-inspections, tc-tests [default: "tc-tests"]
+  -T, --output-format=OUTPUT-FORMAT    Target format. Available options: gitlab-json, github-cli, junit, plain, tc-inspections, tc-tests [default: "tc-tests"]
   -O, --output-file[=OUTPUT-FILE]      File path with the result report format. If not set or empty, then the STDOUT is used.
   -R, --root-path[=ROOT-PATH]          If option is set, all absolute file paths will be converted to relative once. [default: "."]
   -N, --suite-name=SUITE-NAME          Set custom name of root group/suite (if it's possible).
