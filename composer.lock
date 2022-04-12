@@ -2902,22 +2902,23 @@
         },
         {
             "name": "jbzoo/composer-diff",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JBZoo/Composer-Diff.git",
-                "reference": "e7057b08720db5ca4005dca6c999161c5711f830"
+                "reference": "c3f51933f6671f6a3e7880f8a31cf8f54fd0e8a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBZoo/Composer-Diff/zipball/e7057b08720db5ca4005dca6c999161c5711f830",
-                "reference": "e7057b08720db5ca4005dca6c999161c5711f830",
+                "url": "https://api.github.com/repos/JBZoo/Composer-Diff/zipball/c3f51933f6671f6a3e7880f8a31cf8f54fd0e8a9",
+                "reference": "c3f51933f6671f6a3e7880f8a31cf8f54fd0e8a9",
                 "shasum": ""
             },
             "require": {
                 "composer/semver": ">=1.0",
                 "ext-filter": "*",
                 "ext-json": "*",
+                "jbzoo/cli": "^1.0.0",
                 "jbzoo/data": "^4.3.0",
                 "jbzoo/markdown": "^1.1.0",
                 "php": ">=7.2",
@@ -2925,6 +2926,7 @@
                 "symfony/process": ">=4.4"
             },
             "require-dev": {
+                "composer/composer": "^1.1 || ^2.0",
                 "jbzoo/toolbox-dev": "^3.2.0",
                 "roave/security-advisories": "dev-master"
             },
@@ -2970,25 +2972,26 @@
             ],
             "support": {
                 "issues": "https://github.com/JBZoo/Composer-Diff/issues",
-                "source": "https://github.com/JBZoo/Composer-Diff/tree/1.6.0"
+                "source": "https://github.com/JBZoo/Composer-Diff/tree/1.7.0"
             },
-            "time": "2022-01-18T13:21:58+00:00"
+            "time": "2022-04-12T18:16:41+00:00"
         },
         {
             "name": "jbzoo/composer-graph",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JBZoo/Composer-Graph.git",
-                "reference": "2f3ae993c566ecaf701ee5ebbdcd080662038199"
+                "reference": "460515d6eb6ae3e04a54cdd143e8663850969c76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBZoo/Composer-Graph/zipball/2f3ae993c566ecaf701ee5ebbdcd080662038199",
-                "reference": "2f3ae993c566ecaf701ee5ebbdcd080662038199",
+                "url": "https://api.github.com/repos/JBZoo/Composer-Graph/zipball/460515d6eb6ae3e04a54cdd143e8663850969c76",
+                "reference": "460515d6eb6ae3e04a54cdd143e8663850969c76",
                 "shasum": ""
             },
             "require": {
+                "jbzoo/cli": "^1.0.0",
                 "jbzoo/data": "^4.3.0",
                 "jbzoo/mermaid-php": "^2.3.0",
                 "jbzoo/utils": "^4.5.1",
@@ -3038,9 +3041,9 @@
             ],
             "support": {
                 "issues": "https://github.com/JBZoo/Composer-Graph/issues",
-                "source": "https://github.com/JBZoo/Composer-Graph/tree/1.4.0"
+                "source": "https://github.com/JBZoo/Composer-Graph/tree/1.5.0"
             },
-            "time": "2022-01-18T14:16:15+00:00"
+            "time": "2022-04-12T18:25:27+00:00"
         },
         {
             "name": "jbzoo/jbdump",
