@@ -45,7 +45,7 @@
 
         "jbzoo/data"      : "^4.3.3",
         "jbzoo/utils"     : "^4.5.4",
-        "jbzoo/cli"       : "1.x-dev",
+        "jbzoo/cli"       : "^1.0.0",
         "jbzoo/markdown"  : "^1.1.1",
 
         "symfony/console" : "^4.4|^5.0"

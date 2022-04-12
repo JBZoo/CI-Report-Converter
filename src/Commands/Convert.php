@@ -20,8 +20,8 @@ namespace JBZoo\CiReportConverter\Commands;
 use JBZoo\CiReportConverter\Converters\CheckStyleConverter;
 use JBZoo\CiReportConverter\Converters\Map;
 use JBZoo\CiReportConverter\Converters\TeamCityTestsConverter;
-use JBZoo\Cli\Cli;
 use JBZoo\Cli\Codes;
+use JBZoo\Cli\OutLvl;
 use Symfony\Component\Console\Input\InputOption;
 
 use function JBZoo\Utils\bool;
@@ -92,15 +92,15 @@ class Convert extends AbstractCommand
 
             if ($this->saveResult($targetReport)) {
                 if ($errorsCount > 0) {
-                    $this->_("Found errors: {$errorsCount}", Cli::E);
+                    $this->_("Found errors: {$errorsCount}", OutLvl::E);
                 }
 
                 if ($warningCount > 0) {
-                    $this->_("Found warnings: {$warningCount}", Cli::E);
+                    $this->_("Found warnings: {$warningCount}", OutLvl::E);
                 }
 
                 if ($failureCount > 0) {
-                    $this->_("Found failures: {$failureCount}", Cli::E);
+                    $this->_("Found failures: {$failureCount}", OutLvl::E);
                 }
             }
         }
