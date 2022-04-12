@@ -95,7 +95,7 @@ Action allows you to convert error reports to the [GitHub Annotations format](ht
     # File path with the result report format. If not set or empty, then the STDOUT is used.
     output-file: ./build/junit.xml
 
-    # Target format. Available options: gitlab-json, github-cli, junit, tc-inspections, tc-tests
+    # Target format. Available options: gitlab-json, github-cli, junit, plain, tc-inspections, tc-tests
     # Default value: github-cli
     # Required: true
     output-format: junit
@@ -136,9 +136,37 @@ jobs:
 
 ## Available Directions
 
-<p align="center"><!-- Auto-created image via JBZoo\PHPUnit\CiReportConverterReadmeTest__testBuildGraphManually -->
-  <img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFI7XG4gICAgY2hlY2tzdHlsZV9zcmMoXCJDaGVja1N0eWxlLnhtbFwiKTtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyKChcIkNJLVJlcG9ydDxicj5Db252ZXJ0ZXJcIikpO1xuICAgIGdpdGh1Yi1jbGlfdGFyZ2V0KFwiR2l0SHViIEFjdGlvbnMgLSBDTElcIik7XG4gICAgZ2l0bGFiLWpzb25fdGFyZ2V0KFwiR2l0TGFiIC0gSlNPTlwiKTtcbiAgICBqdW5pdF9zcmMoXCJKVW5pdC54bWxcIik7XG4gICAganVuaXRfdGFyZ2V0KFwiSlVuaXQueG1sXCIpO1xuICAgIHBocG1kLWpzb25fc3JjKFwiUEhQbWQuanNvblwiKTtcbiAgICBwaHBtbmRfc3JjKFwiUEhQbW5kLnhtbFwiKTtcbiAgICBwbWQtY3BkX3NyYyhcIlBtZENwZC54bWxcIik7XG4gICAgcHNhbG0tanNvbl9zcmMoXCJQc2FsbS5qc29uXCIpO1xuICAgIHRjLWluc3BlY3Rpb25zX3RhcmdldChcIlRlYW1DaXR5IC0gSW5zcGVjdGlvbnNcIik7XG4gICAgdGMtdGVzdHNfdGFyZ2V0KFwiVGVhbUNpdHkgLSBUZXN0c1wiKTtcblxuICAgIGNoZWNrc3R5bGVfc3JjID09PiBjaS1yZXBvcnQtY29udmVydGVyO1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IGdpdGh1Yi1jbGlfdGFyZ2V0O1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IGdpdGxhYi1qc29uX3RhcmdldDtcbiAgICBjaS1yZXBvcnQtY29udmVydGVyID09PiBqdW5pdF90YXJnZXQ7XG4gICAgY2ktcmVwb3J0LWNvbnZlcnRlciA9PT4gdGMtaW5zcGVjdGlvbnNfdGFyZ2V0O1xuICAgIGNpLXJlcG9ydC1jb252ZXJ0ZXIgPT0+IHRjLXRlc3RzX3RhcmdldDtcbiAgICBqdW5pdF9zcmMgPT0+IGNpLXJlcG9ydC1jb252ZXJ0ZXI7XG4gICAgcGhwbWQtanNvbl9zcmMgPT0+IGNpLXJlcG9ydC1jb252ZXJ0ZXI7XG4gICAgcGhwbW5kX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwbWQtY3BkX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcbiAgICBwc2FsbS1qc29uX3NyYyA9PT4gY2ktcmVwb3J0LWNvbnZlcnRlcjtcblxubGlua1N0eWxlIGRlZmF1bHQgaW50ZXJwb2xhdGUgYmFzaXM7IiwibWVybWFpZCI6eyJ0aGVtZSI6ImZvcmVzdCJ9fQ==">
-</p>
+```mermaid
+graph LR;
+    checkstyle_src("CheckStyle.xml");
+    ci-report-converter(("CI-Report<br>Converter"));
+    github-cli_target("GitHub Actions - CLI");
+    gitlab-json_target("GitLab - JSON");
+    junit_src("JUnit.xml");
+    junit_target("JUnit.xml");
+    phpmd-json_src("PHPmd.json");
+    phpmnd_src("PHPmnd.xml");
+    plain_target("Plain Text");
+    pmd-cpd_src("PmdCpd.xml");
+    psalm-json_src("Psalm.json");
+    tc-inspections_target("TeamCity - Inspections");
+    tc-tests_target("TeamCity - Tests");
+
+    checkstyle_src ==> ci-report-converter;
+    ci-report-converter ==> github-cli_target;
+    ci-report-converter ==> gitlab-json_target;
+    ci-report-converter ==> junit_target;
+    ci-report-converter ==> plain_target;
+    ci-report-converter ==> tc-inspections_target;
+    ci-report-converter ==> tc-tests_target;
+    junit_src ==> ci-report-converter;
+    phpmd-json_src ==> ci-report-converter;
+    phpmnd_src ==> ci-report-converter;
+    pmd-cpd_src ==> ci-report-converter;
+    psalm-json_src ==> ci-report-converter;
+
+linkStyle default interpolate basis;
+```
 
 
 At the moment, converting of reports works with

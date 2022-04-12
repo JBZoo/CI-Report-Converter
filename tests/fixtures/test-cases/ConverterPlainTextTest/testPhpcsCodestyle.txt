@@ -1,0 +1,20 @@
+## Test Case: src/JUnit/JUnitXml.php
+
++-------------+----------+------------------- src/JUnit/JUnitXml.php ---------------------------------------------+
+| Line:Column | Severity | Message                                                                                |
++-------------+----------+----------------------------------------------------------------------------------------+
+| 24:5        | Error    | Visibility must be declared on all constants if your project supports PHP 7.1 or later |
+|             |          | Rule     : PSR12.Properties.ConstantVisibility.NotFound                                |
+|             |          | File Path: src/JUnit/JUnitXml.php:24:5                                                 |
+|             |          | Severity : warning                                                                     |
++-------------+----------+----------------------------------------------------------------------------------------+
+| 44:35       | Error    | Opening brace should be on a new line                                                  |
+|             |          | Rule     : Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine                |
+|             |          | File Path: src/JUnit/JUnitXml.php:44:35                                                |
+|             |          | Severity : error                                                                       |
++-------------+----------+----------------------------------------------------------------------------------------+
+| 50:1        | Error    | Expected 1 newline at end of file; 0 found                                             |
+|             |          | Rule     : PSR2.Files.EndFileNewline.NoneFound                                         |
+|             |          | File Path: src/JUnit/JUnitXml.php:50                                                   |
+|             |          | Severity : error                                                                       |
++-------------+----------+------------------- src/JUnit/JUnitXml.php ---------------------------------------------+
