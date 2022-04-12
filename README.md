@@ -185,11 +185,11 @@ Options:
   -N, --suite-name=SUITE-NAME          Set custom name of root group/suite (if it's possible).
   -F, --tc-flow-id[=TC-FLOW-ID]        Custom flowId in TeamCity output. Default value is PID of the tool.
   -Q, --non-zero-code[=NON-ZERO-CODE]  Will exit with the code=1, if any violations are found. [default: "no"]
-  -p, --no-progress                    Disable progress bar rendering
+      --no-progress                    Disable progress bar animation for logs
       --mute-errors                    Mute any sort of errors. So exit code will be always "0" (if it's possible).
-                                       It has major priority then --strict. It's on your own risk!
-      --stdout-only                    For any errors messages application will use StdOut instead of ErrOut. It's on your own risk!
-      --strict                         None-zero exit code on any StdErr message
+                                       It has major priority then --non-zero-on-error. It's on your own risk!
+      --stdout-only                    For any errors messages application will use StdOut instead of StdErr. It's on your own risk!
+      --non-zero-on-error              None-zero exit code on any StdErr message
       --timestamp                      Show timestamp at the beginning of each message
       --profile                        Display timing and memory usage information
   -h, --help                           Display help for the given command. When no command is given display help for the list command
@@ -221,11 +221,11 @@ Options:
   -O, --output-file[=OUTPUT-FILE]  File path with the result report format. If not set or empty, then the STDOUT is used.
   -R, --root-path[=ROOT-PATH]      If option is set, all absolute file paths will be converted to relative once. [default: "."]
   -F, --tc-flow-id[=TC-FLOW-ID]    Custom flowId in TeamCity output. Default value is PID of the tool.
-  -p, --no-progress                Disable progress bar rendering
+      --no-progress                Disable progress bar animation for logs
       --mute-errors                Mute any sort of errors. So exit code will be always "0" (if it's possible).
-                                   It has major priority then --strict. It's on your own risk!
-      --stdout-only                For any errors messages application will use StdOut instead of ErrOut. It's on your own risk!
-      --strict                     None-zero exit code on any StdErr message
+                                   It has major priority then --non-zero-on-error. It's on your own risk!
+      --stdout-only                For any errors messages application will use StdOut instead of StdErr. It's on your own risk!
+      --non-zero-on-error          None-zero exit code on any StdErr message
       --timestamp                  Show timestamp at the beginning of each message
       --profile                    Display timing and memory usage information
   -h, --help                       Display help for the given command. When no command is given display help for the list command
