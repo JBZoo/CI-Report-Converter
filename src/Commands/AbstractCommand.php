@@ -17,95 +17,50 @@ declare(strict_types=1);
 
 namespace JBZoo\CiReportConverter\Commands;
 
-use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Output\OutputInterface;
+use JBZoo\Cli\CliCommand;
+use JBZoo\Cli\OutLvl;
 
 /**
  * Class AbstractCommand
  * @package JBZoo\CiReportConverter\Commands
  */
-abstract class AbstractCommand extends Command
+abstract class AbstractCommand extends CliCommand
 {
-    /**
-     * @var InputInterface
-     * @psalm-suppress PropertyNotSetInConstructor
-     */
-    protected $input;
-
-    /**
-     * @var OutputInterface
-     * @psalm-suppress PropertyNotSetInConstructor
-     */
-    protected $output;
-
-    /**
-     * @inheritDoc
-     */
-    protected function execute(InputInterface $input, OutputInterface $output): int
-    {
-        $this->input = $input;
-        $this->output = $output;
-
-        return $this->executeAction();
-    }
-
-    /**
-     * @return int
-     */
-    abstract protected function executeAction(): int;
-
     /**
      * @return string
      */
     protected function getSourceCode(): string
     {
-        if ($filename = (string)$this->getOption('input-file')) {
+        if ($filename = $this->getOptString('input-file')) {
             if (!\realpath($filename) && !\file_exists($filename)) {
-                $this->output->writeln("Warning: File \"{$filename}\" not found");
+                $this->_("File \"{$filename}\" not found", OutLvl::ERROR);
                 return '';
             }
 
             return (string)\file_get_contents($filename);
         }
 
-        if (0 === \ftell(\STDIN)) {
-            $contents = '';
-
-            while (!\feof(\STDIN)) {
-                $contents .= \fread(\STDIN, 1024);
-            }
-
-            return $contents;
+        $contents = (string)self::getStdIn();
+        if (\trim($contents) === '') {
+            throw new Exception("Please provide input-file or use STDIN as input (CLI pipeline).");
         }
 
-        throw new Exception("Please provide input-file or use STDIN as input (CLI pipeline).");
+        return $contents;
     }
 
     /**
      * @param string $result
+     * @return bool
      */
-    protected function saveResult(string $result): void
+    protected function saveResult(string $result): bool
     {
-        if ($filename = (string)$this->getOption('output-file')) {
+        if ($filename = $this->getOptString('output-file')) {
             \file_put_contents($filename, $result);
-            $this->output->writeln("Result is saved: {$filename}");
-        } else {
-            $this->output->write($result);
-        }
-    }
-
-    /**
-     * @param string $optionName
-     * @return bool|string|null
-     */
-    protected function getOption(string $optionName)
-    {
-        $optionValue = $this->input->getOption($optionName);
-        if (\is_array($optionValue)) {
-            return $optionValue[0];
+            $this->_("Result is saved: {$filename}");
+            return true;
         }
 
-        return $optionValue;
+        $this->_($result);
+        return false;
     }
 }

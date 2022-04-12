@@ -45,12 +45,16 @@ class CliCommandsPharTest extends CliCommandsTest
     public function taskReal(string $action, array $params = []): string
     {
         $rootDir = PROJECT_ROOT;
+        
+        $params['-v'] = null;
+        $params['--no-ansi'] = null;
 
         return Cli::exec(
             implode(' ', [
                 Sys::getBinary(),
-                "{$rootDir}/build/ci-report-converter.phar --no-ansi",
+                "{$rootDir}/build/ci-report-converter.phar",
                 $action,
+                '2>&1'
             ]),
             $params,
             $rootDir,

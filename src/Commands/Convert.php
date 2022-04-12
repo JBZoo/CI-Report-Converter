@@ -20,6 +20,8 @@ namespace JBZoo\CiReportConverter\Commands;
 use JBZoo\CiReportConverter\Converters\CheckStyleConverter;
 use JBZoo\CiReportConverter\Converters\Map;
 use JBZoo\CiReportConverter\Converters\TeamCityTestsConverter;
+use JBZoo\Cli\Codes;
+use JBZoo\Cli\OutLvl;
 use Symfony\Component\Console\Input\InputOption;
 
 use function JBZoo\Utils\bool;
@@ -54,6 +56,8 @@ class Convert extends AbstractCommand
             ->addOption('suite-name', 'N', $req, "Set custom name of root group/suite (if it's possible).")
             ->addOption('tc-flow-id', 'F', $opt, 'Custom flowId in TeamCity output. Default value is PID of the tool.')
             ->addOption('non-zero-code', 'Q', $opt, 'Will exit with the code=1, if any violations are found.', 'no');
+
+        parent::configure();
     }
 
     /**
@@ -62,9 +66,9 @@ class Convert extends AbstractCommand
     protected function executeAction(): int
     {
         $sourceReport = $this->getSourceCode();
-        $rootPath = (string)$this->getOption('root-path') ?: null;
-        $suiteName = (string)$this->getOption('suite-name') ?: null;
-        $nonZeroCode = bool($this->getOption('non-zero-code'));
+        $rootPath = $this->getOptString('root-path') ?: null;
+        $suiteName = $this->getOptString('suite-name') ?: null;
+        $nonZeroCode = bool($this->getOptBool('non-zero-code'));
 
         $casesAreFound = false;
 
@@ -74,21 +78,34 @@ class Convert extends AbstractCommand
                 ->setRootSuiteName($suiteName)
                 ->toInternal($sourceReport);
 
-            $casesAreFound =
-                $internalReport->getErrorsCount() > 0 ||
-                $internalReport->getWarningCount() > 0 ||
-                $internalReport->getFailureCount() > 0;
+            $errorsCount = $internalReport->getErrorsCount();
+            $warningCount = $internalReport->getWarningCount();
+            $failureCount = $internalReport->getFailureCount();
+
+            $casesAreFound = $errorsCount || $warningCount || $failureCount;
 
             $targetReport = Map::getConverter($this->getFormat('output-format'), Map::OUTPUT)
                 ->setRootPath($rootPath)
                 ->setRootSuiteName($suiteName)
-                ->setFlowId((int)$this->getOption('tc-flow-id'))
+                ->setFlowId($this->getOptInt('tc-flow-id'))
                 ->fromInternal($internalReport);
 
-            $this->saveResult($targetReport);
+            if ($this->saveResult($targetReport)) {
+                if ($errorsCount > 0) {
+                    $this->_("Found errors: {$errorsCount}", OutLvl::E);
+                }
+
+                if ($warningCount > 0) {
+                    $this->_("Found warnings: {$warningCount}", OutLvl::E);
+                }
+
+                if ($failureCount > 0) {
+                    $this->_("Found failures: {$failureCount}", OutLvl::E);
+                }
+            }
         }
 
-        return $nonZeroCode && $casesAreFound ? 1 : 0;
+        return $nonZeroCode && $casesAreFound ? Codes::GENERAL_ERROR : Codes::OK;
     }
 
     /**
@@ -97,7 +114,7 @@ class Convert extends AbstractCommand
      */
     private function getFormat(string $optionName): string
     {
-        $format = \strtolower(\trim((string)$this->getOption($optionName)));
+        $format = \strtolower($this->getOptString($optionName));
 
         $validFormats = Map::getAvailableFormats();
 

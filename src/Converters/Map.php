@@ -17,7 +17,7 @@ declare(strict_types=1);
 
 namespace JBZoo\CiReportConverter\Converters;
 
-use JBZoo\CiReportConverter\Markdown;
+use JBZoo\Markdown\Table;
 
 /**
  * Class Map
@@ -126,10 +126,6 @@ class Map
         $tableData = self::getTable();
         $header = \array_keys($tableData);
 
-
-        $table = new Markdown();
-        $table->alignments = [Markdown::A_LEFT];
-
         $rows = [];
         foreach ($tableData as $key => $info) {
             $rows[$key] = \array_values(\array_map(static function (bool $value) {
@@ -141,7 +137,10 @@ class Map
 
         \array_unshift($header, 'Source/Target');
 
-        return $table->render($header, $rows);
+        return (new Table())
+            ->setHeaders($header)
+            ->appendRows($rows)
+            ->render();
     }
 
     /**

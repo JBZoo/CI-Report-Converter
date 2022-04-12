@@ -18,6 +18,7 @@ declare(strict_types=1);
 namespace JBZoo\CiReportConverter\Commands;
 
 use JBZoo\CiReportConverter\Converters\Map;
+use JBZoo\Cli\Codes;
 
 /**
  * Class ConvertMap
@@ -33,6 +34,8 @@ class ConvertMap extends AbstractCommand
         $this
             ->setName('convert:map')
             ->setDescription('Show current map of report converting');
+
+        parent::configure();
     }
 
     /**
@@ -40,7 +43,7 @@ class ConvertMap extends AbstractCommand
      */
     protected function executeAction(): int
     {
-        $this->output->writeln(Map::getMarkdownTable());
-        return 0;
+        $this->_(Map::getMarkdownTable());
+        return Codes::OK;
     }
 }

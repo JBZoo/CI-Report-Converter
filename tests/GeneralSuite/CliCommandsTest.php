@@ -95,7 +95,15 @@ class CliCommandsTest extends PHPUnit
             'no-interaction',
             //
             'tc-flow-id',
-            'root-path'
+            'root-path',
+            //
+            'mute-errors',
+            'no-progress',
+            'profile',
+            'strict',
+            'stdout-only',
+            'non-zero-on-error',
+            'timestamp',
         ];
 
         $expectedInputs = [];
@@ -194,7 +202,7 @@ class CliCommandsTest extends PHPUnit
             'input-format' => 'pdepend-xml'
         ]);
 
-        isSame("Warning: File \"/undefined/file.xml\" not found\n", $output);
+        isSame("Error: File \"/undefined/file.xml\" not found", trim($output));
     }
 
     public function testConvertStatsCustomFlowId()
@@ -280,7 +288,7 @@ class CliCommandsTest extends PHPUnit
             'non-zero-code' => 'yes'
         ]);
 
-        isSame("Warning: File \"/undefined/file.xml\" not found\n", $output);
+        isSame("Error: File \"/undefined/file.xml\" not found", trim($output));
     }
 
     public function testConvertCommand()
@@ -293,7 +301,7 @@ class CliCommandsTest extends PHPUnit
             'root-path'     => "src",
         ]);
 
-        isSame(implode("\n", [
+        $expectedFileContent = implode("\n", [
             '<?xml version="1.0" encoding="UTF-8"?>',
             '<testsuites>',
             '  <testsuite name="Test Suite" tests="5" failures="5">',
@@ -336,8 +344,26 @@ class CliCommandsTest extends PHPUnit
             '    </testsuite>',
             '  </testsuite>',
             '</testsuites>',
-            ''
-        ]), $output);
+            '',
+            '',
+        ]);
+
+        isSame($expectedFileContent, $output);
+    }
+
+    public function testConvertCommandSaveToFile()
+    {
+        $output = $this->task('convert', [
+            'input-format'  => CheckStyleConverter::TYPE,
+            'output-format' => JUnitConverter::TYPE,
+            'input-file'    => Fixtures::PSALM_CHECKSTYLE,
+            'output-file'   => PROJECT_BUILD . '/testConvertCommandSaveToFile.xml',
+            'suite-name'    => "Test Suite",
+            'root-path'     => "src",
+        ]);
+
+        isContain('/build/testConvertCommandSaveToFile.xml', $output);
+        isContain('Found failures: 5', $output);
     }
 
     /**
@@ -379,6 +405,7 @@ class CliCommandsTest extends PHPUnit
                 Sys::getBinary(),
                 "{$rootDir}/ci-report-converter.php --no-ansi",
                 $action,
+                '2>&1'
             ]),
             $params,
             $rootDir,
