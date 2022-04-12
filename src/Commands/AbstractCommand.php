@@ -17,8 +17,8 @@ declare(strict_types=1);
 
 namespace JBZoo\CiReportConverter\Commands;
 
+use JBZoo\Cli\Cli;
 use JBZoo\Cli\CliCommand;
-use JBZoo\Cli\Helper;
 
 /**
  * Class AbstractCommand
@@ -33,7 +33,7 @@ abstract class AbstractCommand extends CliCommand
     {
         if ($filename = $this->getOptString('input-file')) {
             if (!\realpath($filename) && !\file_exists($filename)) {
-                $this->_("File \"{$filename}\" not found", Helper::VERB_ERROR);
+                $this->_("File \"{$filename}\" not found", Cli::ERROR);
                 return '';
             }
 

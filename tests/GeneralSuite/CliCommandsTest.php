@@ -100,8 +100,9 @@ class CliCommandsTest extends PHPUnit
             'mute-errors',
             'no-progress',
             'profile',
-            'stdout-only',
             'strict',
+            'stdout-only',
+            'non-zero-on-error',
             'timestamp',
         ];
 
