@@ -1,0 +1,39 @@
+## Test Case: tests/ExampleTest.php
+
++-------------+----------+------- tests/ExampleTest.php --------------------------------+
+| Line:Column | Severity | Message                                                      |
++-------------+----------+--------------------------------------------------------------+
+| 33          | Error    | JBZoo\PHPUnit\ExampleTest::testInValid                       |
+|             |          | Failed asserting that false is true.                         |
+|             |          |                                                              |
+|             |          | vendor/jbzoo/phpunit/src/functions/aliases.php:107           |
+|             |          | tests/ExampleTest.php:35                                     |
++-------------+----------+--------------------------------------------------------------+
+| 38          | Debug    | Skipped                                                      |
++-------------+----------+--------------------------------------------------------------+
+| 43          | Debug    | Skipped                                                      |
++-------------+----------+--------------------------------------------------------------+
+| 48          | Error    | JBZoo\PHPUnit\ExampleTest::testFail                          |
+|             |          | Some reason to fail                                          |
+|             |          |                                                              |
+|             |          | vendor/jbzoo/phpunit/src/functions/aliases.php:51            |
+|             |          | tests/ExampleTest.php:50                                     |
++-------------+----------+--------------------------------------------------------------+
+| 53          | Error    | testEcho                                                     |
+|             |          | Some echo output                                             |
++-------------+----------+--------------------------------------------------------------+
+| 71          | Error    | Risky Test                                                   |
++-------------+----------+--------------------------------------------------------------+
+| 75          | Error    | JBZoo\PHPUnit\ExampleTest::testNotice                        |
+|             |          | Undefined variable: aaa                                      |
+|             |          |                                                              |
+|             |          | tests/ExampleTest.php:77                                     |
++-------------+----------+--------------------------------------------------------------+
+| 80          | Warning  | JBZoo\PHPUnit\ExampleTest::testWarning                       |
+|             |          | Some warning                                                 |
+|             |          |                                                              |
+|             |          | tests/ExampleTest.php:82                                     |
++-------------+----------+--------------------------------------------------------------+
+| 85          | Error    | testException                                                |
+|             |          | Some echo output                                             |
++-------------+----------+------- tests/ExampleTest.php --------------------------------+

@@ -19,7 +19,6 @@ namespace JBZoo\PHPUnit;
 
 use JBZoo\CiReportConverter\Converters\Map;
 use JBZoo\MermaidPHP\Graph;
-use JBZoo\MermaidPHP\Helper;
 use JBZoo\MermaidPHP\Link;
 use JBZoo\MermaidPHP\Node;
 
@@ -147,16 +146,10 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
 
         file_put_contents(PROJECT_ROOT . '/build/directions.html', $graph->renderHtml(['version' => '8.9.2']));
 
-        $url = str_replace(
-            "https://mermaid-js.github.io/mermaid-live-editor/#/edit/",
-            "https://mermaid.ink/img/",
-            Helper::getLiveEditorUrl($graph)
-        );
-
         $tmpl = implode("\n", [
-            '<p align="center"><!-- Auto-created image via ' . getTestName(true) . ' -->',
-            "  <img src=\"{$url}\">",
-            '</p>',
+            '```mermaid',
+            $graph->render(),
+            '```',
         ]);
 
         isFileContains($tmpl, PROJECT_ROOT . '/README.md');

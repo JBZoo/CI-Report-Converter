@@ -39,6 +39,7 @@ class Map
         GithubCliConverter::class           => [self::INPUT => false, self::OUTPUT => true],
         PmdCpdConverter::class              => [self::INPUT => true, self::OUTPUT => false],
         GitLabJsonConverter::class          => [self::INPUT => false, self::OUTPUT => true],
+        PlainTextConverter::class           => [self::INPUT => false, self::OUTPUT => true],
     ];
 
     public const MAP_METRICS = [
