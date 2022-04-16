@@ -1,57 +1,56 @@
 ## Test Case: src/JUnit/JUnitXml.php
-
-+-------------+----------+---------------------------------------------- src/JUnit/JUnitXml.php ------------------------------------------------------------------------+
-| Line:Column | Severity | Message                                                                                                                                      |
-+-------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-| 37          | Error    | Assigning $this->rootElement of type \DOMElement|false to property but \JBZoo\CiReportConverter\JUnit\JUnitXml->rootElement is \DOMElement ( |
-|             |          | false is incompatible)                                                                                                                       |
-|             |          | Rule     : PhanPossiblyFalseTypeMismatchProperty                                                                                             |
-|             |          | File Path: src/JUnit/JUnitXml.php:37                                                                                                         |
-|             |          | Severity : warning                                                                                                                           |
-+-------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-| 44          | Error    | Can use \JBZoo\CiReportConverter\JUnit\TestSuiteElement as a return type of addTestSuite                                                     |
-|             |          | Rule     : PhanPluginCanUseReturnType                                                                                                        |
-|             |          | File Path: src/JUnit/JUnitXml.php:44                                                                                                         |
-|             |          | Severity : warning                                                                                                                           |
-+-------------+----------+---------------------------------------------- src/JUnit/JUnitXml.php ------------------------------------------------------------------------+
-
++-------------+----------+---------------- src/JUnit/JUnitXml.php ------------------------------------------+
+| Line:Column | Severity | Message                                                                          |
++-------------+----------+----------------------------------------------------------------------------------+
+| 37          | Error    | Assigning $this->rootElement of type \DOMElement|false to property but \JBZoo\Ci |
+|             |          | ReportConverter\JUnit\JUnitXml->rootElement is \DOMElement (false is incompatibl |
+|             |          | e)                                                                               |
+|             |          | Rule     : PhanPossiblyFalseTypeMismatchProperty                                 |
+|             |          | File Path: src/JUnit/JUnitXml.php:37                                             |
+|             |          | Severity : warning                                                               |
++-------------+----------+----------------------------------------------------------------------------------+
+| 44          | Error    | Can use \JBZoo\CiReportConverter\JUnit\TestSuiteElement as a return type of addT |
+|             |          | estSuite                                                                         |
+|             |          | Rule     : PhanPluginCanUseReturnType                                            |
+|             |          | File Path: src/JUnit/JUnitXml.php:44                                             |
+|             |          | Severity : warning                                                               |
++-------------+----------+---------------- src/JUnit/JUnitXml.php ------------------------------------------+
 
 ## Test Case: src/JUnit/TestCaseElement.php
-
-+-------------+----------+------------------------------------------- src/JUnit/TestCaseElement.php --------------------------------------------------------------------+
-| Line:Column | Severity | Message                                                                                                                                      |
-+-------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-| 34          | Error    | Can use string as the type of parameter $name of setName                                                                                     |
-|             |          | Rule     : PhanPluginCanUseParamType                                                                                                         |
-|             |          | File Path: src/JUnit/TestCaseElement.php:34                                                                                                  |
-|             |          | Severity : warning                                                                                                                           |
-+-------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-| 36          | Error    | Suspicious order for argument name - This is getting passed to parameter #1 (string $name) of \JBZoo\CiReportConverter\JUnit\TestCaseElement |
-|             |          | ::setAttribute(string $name, string $value)                                                                                                  |
-|             |          | Rule     : PhanPluginSuspiciousParamPositionInternal                                                                                         |
-|             |          | File Path: src/JUnit/TestCaseElement.php:36                                                                                                  |
-|             |          | Severity : warning                                                                                                                           |
-+-------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-| 42          | Error    | Can use string as the type of parameter $classname of setClassname                                                                           |
-|             |          | Rule     : PhanPluginCanUseParamType                                                                                                         |
-|             |          | File Path: src/JUnit/TestCaseElement.php:42                                                                                                  |
-|             |          | Severity : warning                                                                                                                           |
-+-------------+----------+------------------------------------------- src/JUnit/TestCaseElement.php --------------------------------------------------------------------+
-
++-------------+----------+------------- src/JUnit/TestCaseElement.php --------------------------------------+
+| Line:Column | Severity | Message                                                                          |
++-------------+----------+----------------------------------------------------------------------------------+
+| 34          | Error    | Can use string as the type of parameter $name of setName                         |
+|             |          | Rule     : PhanPluginCanUseParamType                                             |
+|             |          | File Path: src/JUnit/TestCaseElement.php:34                                      |
+|             |          | Severity : warning                                                               |
++-------------+----------+----------------------------------------------------------------------------------+
+| 36          | Error    | Suspicious order for argument name - This is getting passed to parameter #1 (str |
+|             |          | ing $name) of \JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute(strin |
+|             |          | g $name, string $value)                                                          |
+|             |          | Rule     : PhanPluginSuspiciousParamPositionInternal                             |
+|             |          | File Path: src/JUnit/TestCaseElement.php:36                                      |
+|             |          | Severity : warning                                                               |
++-------------+----------+----------------------------------------------------------------------------------+
+| 42          | Error    | Can use string as the type of parameter $classname of setClassname               |
+|             |          | Rule     : PhanPluginCanUseParamType                                             |
+|             |          | File Path: src/JUnit/TestCaseElement.php:42                                      |
+|             |          | Severity : warning                                                               |
++-------------+----------+------------- src/JUnit/TestCaseElement.php --------------------------------------+
 
 ## Test Case: src/JUnit/TestSuiteElement.php
-
-+-------------+----------+------------------------------------------ src/JUnit/TestSuiteElement.php --------------------------------------------------------------------+
-| Line:Column | Severity | Message                                                                                                                                      |
-+-------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-| 35          | Error    | Can use string as the type of parameter $name of setName                                                                                     |
-|             |          | Rule     : PhanPluginCanUseParamType                                                                                                         |
-|             |          | File Path: src/JUnit/TestSuiteElement.php:35                                                                                                 |
-|             |          | Severity : warning                                                                                                                           |
-+-------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-| 37          | Error    | Suspicious order for argument name - This is getting passed to parameter #1 (string $name) of \JBZoo\CiReportConverter\JUnit\TestSuiteElemen |
-|             |          | t::setAttribute(string $name, string $value)                                                                                                 |
-|             |          | Rule     : PhanPluginSuspiciousParamPositionInternal                                                                                         |
-|             |          | File Path: src/JUnit/TestSuiteElement.php:37                                                                                                 |
-|             |          | Severity : warning                                                                                                                           |
-+-------------+----------+------------------------------------------ src/JUnit/TestSuiteElement.php --------------------------------------------------------------------+
++-------------+----------+------------ src/JUnit/TestSuiteElement.php --------------------------------------+
+| Line:Column | Severity | Message                                                                          |
++-------------+----------+----------------------------------------------------------------------------------+
+| 35          | Error    | Can use string as the type of parameter $name of setName                         |
+|             |          | Rule     : PhanPluginCanUseParamType                                             |
+|             |          | File Path: src/JUnit/TestSuiteElement.php:35                                     |
+|             |          | Severity : warning                                                               |
++-------------+----------+----------------------------------------------------------------------------------+
+| 37          | Error    | Suspicious order for argument name - This is getting passed to parameter #1 (str |
+|             |          | ing $name) of \JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute(stri |
+|             |          | ng $name, string $value)                                                         |
+|             |          | Rule     : PhanPluginSuspiciousParamPositionInternal                             |
+|             |          | File Path: src/JUnit/TestSuiteElement.php:37                                     |
+|             |          | Severity : warning                                                               |
++-------------+----------+------------ src/JUnit/TestSuiteElement.php --------------------------------------+

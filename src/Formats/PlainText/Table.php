@@ -57,8 +57,8 @@ class Table
 
         $this->table = new SymfonyTable($this->buffer);
         $this->table->setHeaders(['Line:Column', 'Severity', 'Message']);
-        $this->table->setColumnWidth(2, 60);
-        $this->table->setColumnMaxWidth(2, 140);
+        $this->table->setColumnWidth(2, 80);
+        $this->table->setColumnMaxWidth(2, 80);
 
         if ('' !== $testCaseName) {
             $this->testCaseName = $testCaseName;
@@ -103,9 +103,7 @@ class Table
                 ->setHeaderTitle($this->testCaseName)
                 ->setFooterTitle($this->testCaseName);
 
-            $this->buffer->writeln('');
             $this->buffer->writeln("## Test Case: {$this->testCaseName}");
-            $this->buffer->writeln('');
         }
 
         $this->table->render();
