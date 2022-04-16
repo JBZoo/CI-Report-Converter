@@ -98,7 +98,8 @@ class ConverterPlainTextTest extends PHPUnit
         $case1 = $suite1->addCase('src/Class.php');
         $case1->line = 123;
         $case1->column = 4;
-        $case1->message = 'Something went wrong #1';
+        $case1->message = "Something went wrong once again. It's a really really really long-long-long-long message.\n"
+            . "Another line.\n";
 
         $suite2 = $plainText->addSuite();
         $case2 = $suite2->addCase('src/AnotherFile.php');

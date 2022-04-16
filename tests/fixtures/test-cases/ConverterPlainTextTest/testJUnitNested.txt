@@ -1,63 +1,62 @@
 ## Test Case: tests/ExampleTest.php
-
-+-------------+----------+------- tests/ExampleTest.php --------------------------------+
-| Line:Column | Severity | Message                                                      |
-+-------------+----------+--------------------------------------------------------------+
-| 38          | Error    | JBZoo\PHPUnit\ExampleTest::testInValid                       |
-|             |          | Failed asserting that false is true.                         |
-|             |          |                                                              |
-|             |          | vendor/jbzoo/phpunit/src/functions/aliases.php:107           |
-|             |          | tests/ExampleTest.php:40                                     |
-+-------------+----------+--------------------------------------------------------------+
-| 43          | Debug    | Skipped                                                      |
-+-------------+----------+--------------------------------------------------------------+
-| 48          | Debug    | Skipped                                                      |
-+-------------+----------+--------------------------------------------------------------+
-| 53          | Error    | JBZoo\PHPUnit\ExampleTest::testFail                          |
-|             |          | Some reason to fail                                          |
-|             |          |                                                              |
-|             |          | vendor/jbzoo/phpunit/src/functions/aliases.php:51            |
-|             |          | tests/ExampleTest.php:55                                     |
-+-------------+----------+--------------------------------------------------------------+
-| 58          | Error    | testEcho                                                     |
-|             |          | Some echo output                                             |
-+-------------+----------+--------------------------------------------------------------+
-| 76          | Error    | Risky Test                                                   |
-+-------------+----------+--------------------------------------------------------------+
-| 80          | Error    | JBZoo\PHPUnit\ExampleTest::testNotice                        |
-|             |          | Undefined variable: aaa                                      |
-|             |          |                                                              |
-|             |          | tests/ExampleTest.php:82                                     |
-+-------------+----------+--------------------------------------------------------------+
-| 85          | Warning  | JBZoo\PHPUnit\ExampleTest::testWarning                       |
-|             |          | Some warning                                                 |
-|             |          |                                                              |
-|             |          | tests/ExampleTest.php:87                                     |
-+-------------+----------+--------------------------------------------------------------+
-| 90          | Error    | testException                                                |
-|             |          | Some echo output                                             |
-+-------------+----------+--------------------------------------------------------------+
-| 96          | Error    | JBZoo\PHPUnit\ExampleTest::testCompareArrays                 |
-|             |          | Failed asserting that two arrays are identical.              |
-|             |          | --- Expected                                                 |
-|             |          | +++ Actual                                                   |
-|             |          | @@ @@                                                        |
-|             |          | -Array &0 ()                                                 |
-|             |          | +Array &0 (                                                  |
-|             |          | +    0 => 1                                                  |
-|             |          | +)                                                           |
-|             |          |                                                              |
-|             |          | vendor/jbzoo/phpunit/src/functions/aliases.php:197           |
-|             |          | tests/ExampleTest.php:98                                     |
-+-------------+----------+--------------------------------------------------------------+
-| 101         | Error    | JBZoo\PHPUnit\ExampleTest::testCompareString                 |
-|             |          | Failed asserting that two strings are identical.             |
-|             |          | --- Expected                                                 |
-|             |          | +++ Actual                                                   |
-|             |          | @@ @@                                                        |
-|             |          | -'132'                                                       |
-|             |          | +'123'                                                       |
-|             |          |                                                              |
-|             |          | vendor/jbzoo/phpunit/src/functions/aliases.php:197           |
-|             |          | tests/ExampleTest.php:103                                    |
-+-------------+----------+------- tests/ExampleTest.php --------------------------------+
++-------------+----------+----------------- tests/ExampleTest.php ------------------------------------------+
+| Line:Column | Severity | Message                                                                          |
++-------------+----------+----------------------------------------------------------------------------------+
+| 38          | Error    | JBZoo\PHPUnit\ExampleTest::testInValid                                           |
+|             |          | Failed asserting that false is true.                                             |
+|             |          |                                                                                  |
+|             |          | vendor/jbzoo/phpunit/src/functions/aliases.php:107                               |
+|             |          | tests/ExampleTest.php:40                                                         |
++-------------+----------+----------------------------------------------------------------------------------+
+| 43          | Debug    | Skipped                                                                          |
++-------------+----------+----------------------------------------------------------------------------------+
+| 48          | Debug    | Skipped                                                                          |
++-------------+----------+----------------------------------------------------------------------------------+
+| 53          | Error    | JBZoo\PHPUnit\ExampleTest::testFail                                              |
+|             |          | Some reason to fail                                                              |
+|             |          |                                                                                  |
+|             |          | vendor/jbzoo/phpunit/src/functions/aliases.php:51                                |
+|             |          | tests/ExampleTest.php:55                                                         |
++-------------+----------+----------------------------------------------------------------------------------+
+| 58          | Error    | testEcho                                                                         |
+|             |          | Some echo output                                                                 |
++-------------+----------+----------------------------------------------------------------------------------+
+| 76          | Error    | Risky Test                                                                       |
++-------------+----------+----------------------------------------------------------------------------------+
+| 80          | Error    | JBZoo\PHPUnit\ExampleTest::testNotice                                            |
+|             |          | Undefined variable: aaa                                                          |
+|             |          |                                                                                  |
+|             |          | tests/ExampleTest.php:82                                                         |
++-------------+----------+----------------------------------------------------------------------------------+
+| 85          | Warning  | JBZoo\PHPUnit\ExampleTest::testWarning                                           |
+|             |          | Some warning                                                                     |
+|             |          |                                                                                  |
+|             |          | tests/ExampleTest.php:87                                                         |
++-------------+----------+----------------------------------------------------------------------------------+
+| 90          | Error    | testException                                                                    |
+|             |          | Some echo output                                                                 |
++-------------+----------+----------------------------------------------------------------------------------+
+| 96          | Error    | JBZoo\PHPUnit\ExampleTest::testCompareArrays                                     |
+|             |          | Failed asserting that two arrays are identical.                                  |
+|             |          | --- Expected                                                                     |
+|             |          | +++ Actual                                                                       |
+|             |          | @@ @@                                                                            |
+|             |          | -Array &0 ()                                                                     |
+|             |          | +Array &0 (                                                                      |
+|             |          | +    0 => 1                                                                      |
+|             |          | +)                                                                               |
+|             |          |                                                                                  |
+|             |          | vendor/jbzoo/phpunit/src/functions/aliases.php:197                               |
+|             |          | tests/ExampleTest.php:98                                                         |
++-------------+----------+----------------------------------------------------------------------------------+
+| 101         | Error    | JBZoo\PHPUnit\ExampleTest::testCompareString                                     |
+|             |          | Failed asserting that two strings are identical.                                 |
+|             |          | --- Expected                                                                     |
+|             |          | +++ Actual                                                                       |
+|             |          | @@ @@                                                                            |
+|             |          | -'132'                                                                           |
+|             |          | +'123'                                                                           |
+|             |          |                                                                                  |
+|             |          | vendor/jbzoo/phpunit/src/functions/aliases.php:197                               |
+|             |          | tests/ExampleTest.php:103                                                        |
++-------------+----------+----------------- tests/ExampleTest.php ------------------------------------------+
