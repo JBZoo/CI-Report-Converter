@@ -63,7 +63,7 @@ class CliCommandsTest extends PHPUnit
 
     public function testTcStatsCommandReadMe()
     {
-        if (version_compare(PHP_VERSION, '8.0') > 0) {
+        if (version_compare(PHP_VERSION, '7.4.99') < 0) {
             $helpMessage = $this->taskReal('teamcity:stats', ['help' => null]);
             $helpMessage = implode("\n", [
                 '',
