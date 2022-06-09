@@ -85,7 +85,7 @@ class ToolsTest extends PHPUnit
                 continue;
             }
 
-            isTrue(realpath($path), "{$name} => {$path}");
+            isTrue((bool)realpath($path), "{$name} => {$path}");
             isFile($path, $name);
         }
     }
