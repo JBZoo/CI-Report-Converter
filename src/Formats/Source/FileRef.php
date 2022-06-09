@@ -33,7 +33,7 @@ class FileRef extends AbstractNode
     /**
      * @var array
      */
-    protected $meta = [
+    protected array $meta = [
         'name'     => ['string'], // It's relative path to file
         'fullpath' => ['string'],
         'line'     => ['int'],

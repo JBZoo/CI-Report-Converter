@@ -34,7 +34,7 @@ class Metric extends AbstractNode
     /**
      * @var array
      */
-    protected $meta = [
+    protected array $meta = [
         'key'         => ['string'],
         'name'        => ['string'],
         'description' => ['string'],

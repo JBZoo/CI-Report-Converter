@@ -39,12 +39,12 @@ class TeamCity
     /**
      * @var int|null
      */
-    private $flowId;
+    private ?int $flowId = null;
 
     /**
      * @var AbstractWriter
      */
-    private $writer;
+    private AbstractWriter $writer;
 
     /**
      * @var array
@@ -56,7 +56,7 @@ class TeamCity
     /**
      * @var array
      */
-    private $inspectionTypes = [];
+    private array $inspectionTypes = [];
 
     /**
      * @param AbstractWriter $writer The writer used to write messages.

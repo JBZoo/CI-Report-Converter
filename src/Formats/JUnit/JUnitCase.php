@@ -48,7 +48,7 @@ class JUnitCase extends AbstractNode
     /**
      * @var array
      */
-    protected $meta = [
+    protected array $meta = [
         'name'       => ['string'],
         'class'      => ['string'],
         'classname'  => ['string'],
@@ -61,7 +61,7 @@ class JUnitCase extends AbstractNode
     /**
      * @var AbstractOutput[]
      */
-    public $outputs = [];
+    public array $outputs = [];
 
     /**
      * @param string|null $type

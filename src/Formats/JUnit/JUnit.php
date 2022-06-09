@@ -28,7 +28,7 @@ class JUnit
     /**
      * @var JUnitSuite[]
      */
-    private $testSuites = [];
+    private array $testSuites = [];
 
     /**
      * @param string|null $name
@@ -48,13 +48,11 @@ class JUnit
     {
         $document = Xml::createDomDocument();
 
-        $testSuites = $document->createElement('testsuites');
-        if ($testSuites !== false) {
-            $document->appendChild($testSuites);
+        $testSuites = new \DOMElement('testsuites');
+        $document->appendChild($testSuites);
 
-            foreach ($this->testSuites as $testSuite) {
-                $testSuites->appendChild($testSuite->toXML($document));
-            }
+        foreach ($this->testSuites as $testSuite) {
+            $testSuites->appendChild($testSuite->toXML($document));
         }
 
         return $document;

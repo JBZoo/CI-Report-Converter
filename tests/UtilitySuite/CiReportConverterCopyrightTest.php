@@ -24,9 +24,6 @@ namespace JBZoo\PHPUnit;
  */
 class CiReportConverterCopyrightTest extends AbstractCopyrightTest
 {
-    /**
-     * @var string
-     */
     protected $packageName     = 'CI-Report-Converter';
     protected $isPhpStrictType = true;
 }

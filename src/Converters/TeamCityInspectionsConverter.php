@@ -35,12 +35,12 @@ class TeamCityInspectionsConverter extends AbstractConverter
     /**
      * @var TeamCity
      */
-    private $tcLogger;
+    private TeamCity $tcLogger;
 
     /**
      * @var string
      */
-    private $globalPrefix = '';
+    private string $globalPrefix = '';
 
     /**
      * TeamCityTestsConverter constructor.

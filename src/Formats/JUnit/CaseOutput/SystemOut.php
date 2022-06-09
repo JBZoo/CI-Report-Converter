@@ -26,5 +26,5 @@ class SystemOut extends AbstractOutput
     /**
      * @var string
      */
-    protected $elementName = 'system-out';
+    protected string $elementName = 'system-out';
 }

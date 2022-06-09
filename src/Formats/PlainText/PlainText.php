@@ -28,12 +28,12 @@ class PlainText
     /**
      * @var PlainTextCase[]
      */
-    private $testCases = [];
+    private array $testCases = [];
 
     /**
      * @var PlainTextSuite[]
      */
-    private $testSuites = [];
+    private array $testSuites = [];
 
     /**
      * @param string|null $name

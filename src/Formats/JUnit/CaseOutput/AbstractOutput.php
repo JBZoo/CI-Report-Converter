@@ -28,22 +28,22 @@ abstract class AbstractOutput
     /**
      * @var string
      */
-    protected $elementName = '';
+    protected string $elementName = '';
 
     /**
      * @var string|null
      */
-    private $type;
+    private ?string $type;
 
     /**
      * @var string|null
      */
-    private $message;
+    private ?string $message;
 
     /**
      * @var string|null
      */
-    private $description;
+    private ?string $description;
 
     /**
      * AbstractError constructor.

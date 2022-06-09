@@ -27,7 +27,7 @@ class PhpMetrics extends AbstractMetricMap
     /**
      * @var string
      */
-    protected $name = 'PHPMetrics';
+    protected string $name = 'PHPMetrics';
 
     // @see http://www.phpmetrics.org/documentation/index.html
     // @see http://en.wikipedia.org/wiki/Halstead_complexity_measures
@@ -37,7 +37,7 @@ class PhpMetrics extends AbstractMetricMap
     /**
      * @var string[]
      */
-    protected $map = [
+    protected array $map = [
         'distance' => 'Myers / Distance',
         'interval' => 'Myers / Interval',
 

@@ -28,12 +28,12 @@ class GithubActions
     /**
      * @var GithubCase[]
      */
-    private $testCases = [];
+    private array $testCases = [];
 
     /**
      * @var GithubSuite[]
      */
-    private $testSuites = [];
+    private array $testSuites = [];
 
     /**
      * @param string|null $name

@@ -29,7 +29,7 @@ class GithubSuite extends AbstractNode
     /**
      * @var GithubCase[]
      */
-    private $testCases = [];
+    private array $testCases = [];
 
     /**
      * @param string|null $name

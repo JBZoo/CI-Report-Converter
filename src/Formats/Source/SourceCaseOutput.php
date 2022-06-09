@@ -30,17 +30,17 @@ class SourceCaseOutput
     /**
      * @var string|null
      */
-    public $type;
+    public ?string $type = null;
 
     /**
      * @var string|null
      */
-    public $message;
+    public ?string $message = null;
 
     /**
      * @var string|null
      */
-    public $details;
+    public ?string $details = null;
 
     /**
      * SourceCaseOutput constructor.

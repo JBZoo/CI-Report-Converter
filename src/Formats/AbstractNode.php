@@ -39,17 +39,17 @@ class AbstractNode
     /**
      * @var string
      */
-    protected $nodeName;
+    protected string $nodeName;
 
     /**
      * @var Data
      */
-    protected $data;
+    protected Data $data;
 
     /**
      * @var array
      */
-    protected $meta = [
+    protected array $meta = [
         'name' => ['string']
     ];
 

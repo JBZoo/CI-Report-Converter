@@ -32,12 +32,12 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
     /**
      * @var string
      */
-    protected $packageName = 'CI-Report-Converter';
+    protected string $packageName = 'CI-Report-Converter';
 
     /**
      * @var string[]
      */
-    protected $badgesTemplate = [
+    protected array $badgesTemplate = [
         'travis',
         'github_actions',
         'docker_build',
@@ -53,23 +53,6 @@ class CiReportConverterReadmeTest extends AbstractReadmeTest
         'github_issues',
         'github_license',
     ];
-
-    /**
-     * @inheritDoc
-     */
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->params['strict_types'] = true;
-        $this->params['docker_build'] = true;
-        $this->params['docker_pulls'] = true;
-        $this->params['github_actions'] = true;
-        $this->params['scrutinizer'] = true;
-        $this->params['php_version'] = true;
-        $this->params['codecov'] = true;
-        $this->params['travis'] = false;
-    }
 
     /**
      * @return string|null

@@ -26,12 +26,12 @@ abstract class AbstractMetricMap
     /**
      * @var string
      */
-    protected $name = '';
+    protected string $name = '';
 
     /**
      * @var string[]
      */
-    protected $map = [];
+    protected array $map = [];
 
     /**
      * @return string[]

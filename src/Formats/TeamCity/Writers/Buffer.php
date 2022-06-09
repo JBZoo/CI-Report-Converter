@@ -26,7 +26,7 @@ class Buffer implements AbstractWriter
     /**
      * @var array
      */
-    private $buffer = [];
+    private array $buffer = [];
 
     /**
      * @inheritDoc

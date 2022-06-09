@@ -44,7 +44,7 @@ class GitLabJsonCase extends AbstractNode
     /**
      * @var array
      */
-    protected $meta = [
+    protected array $meta = [
         'description' => ['string'],
         'severity'    => ['string'],  // See self::SEVERITY_*
         'name'        => ['string'],  // It's relative path to file

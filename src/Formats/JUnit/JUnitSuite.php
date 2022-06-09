@@ -32,7 +32,7 @@ class JUnitSuite extends AbstractNode
     /**
      * @var array
      */
-    protected $meta = [
+    protected array $meta = [
         'name' => ['string', 'required'],
         'file' => ['string'],
     ];
@@ -40,12 +40,12 @@ class JUnitSuite extends AbstractNode
     /**
      * @var JUnitCase[]
      */
-    private $testCases = [];
+    private array $testCases = [];
 
     /**
      * @var JUnitSuite[]
      */
-    private $testSuites = [];
+    private array $testSuites = [];
 
     /**
      * @param \DOMDocument $document

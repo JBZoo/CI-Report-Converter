@@ -63,7 +63,6 @@ class Helper
         'TimeSpentInQueue',
     ];
 
-
     /**
      * @param string $eventName
      * @param array  $params
@@ -107,7 +106,7 @@ class Helper
      */
     public static function formatTimestamp(?\DateTime $datetime = null): string
     {
-        $datetime = $datetime ?? new \DateTime();
+        $datetime ??= new \DateTime();
         $formatted = $datetime->format(self::TIMESTAMP_FORMAT);
 
         // We need to pass only 3 microsecond digits.

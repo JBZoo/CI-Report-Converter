@@ -45,7 +45,7 @@ class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
         $coveredClasses = 0;
 
         $nodeClasses = $cloverXml->xpath('//class');
-        if (false !== $nodeClasses) {
+        if ($nodeClasses) {
             foreach ($nodeClasses as $class) {
                 if ((int)$class->metrics['coveredmethods'] === (int)$class->metrics['methods']) {
                     $coveredClasses++;
@@ -75,7 +75,7 @@ class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
         $crapAmount = 0;
 
         $allCrapAttrs = $cloverXml->xpath('//@crap');
-        if (false !== $allCrapAttrs) {
+        if ($allCrapAttrs) {
             foreach ($allCrapAttrs as $crap) {
                 $crapValues[] = float($crap);
                 $crapAmount++;
