@@ -44,7 +44,7 @@ class CliCommandsTest extends PHPUnit
 {
     public function testConvertCommandReadMe()
     {
-        if (version_compare(PHP_VERSION, '8.0') > 0) {
+        if (version_compare(PHP_VERSION, '7.4.99') < 0) {
             $helpMessage = $this->taskReal('convert', ['help' => null]);
             $helpMessage = implode("\n", [
                 '',
