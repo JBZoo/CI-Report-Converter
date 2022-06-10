@@ -30,22 +30,22 @@ class Table
     /**
      * @var BufferedOutput
      */
-    private $buffer;
+    private BufferedOutput $buffer;
 
     /**
      * @var SymfonyTable
      */
-    private $table;
+    private SymfonyTable $table;
 
     /**
      * @var array[]
      */
-    private $rows = [];
+    private array $rows = [];
 
     /**
      * @var string
      */
-    private $testCaseName = '';
+    private string $testCaseName = '';
 
     /**
      * @param string $testCaseName

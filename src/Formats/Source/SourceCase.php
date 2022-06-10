@@ -65,7 +65,7 @@ class SourceCase extends AbstractNode
     /**
      * @var array
      */
-    protected $meta = [
+    protected array $meta = [
         'name'       => ['string'],
 
         // Location

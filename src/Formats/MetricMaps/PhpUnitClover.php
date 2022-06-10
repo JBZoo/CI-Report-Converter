@@ -26,12 +26,12 @@ class PhpUnitClover extends AbstractMetricMap
     /**
      * @var string
      */
-    protected $name = 'PHPUnit';
+    protected string $name = 'PHPUnit';
 
     /**
      * @var string[]
      */
-    protected $map = [
+    protected array $map = [
         'CodeCoverageL'           => 'Coverage / Line-level, %',
         'CodeCoverageAbsLTotal'   => 'Coverage / Found LOC',
         'CodeCoverageAbsLCovered' => 'Coverage / Covered LOC',

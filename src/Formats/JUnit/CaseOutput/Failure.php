@@ -26,5 +26,5 @@ class Failure extends AbstractOutput
     /**
      * @var string
      */
-    protected $elementName = 'failure';
+    protected string $elementName = 'failure';
 }

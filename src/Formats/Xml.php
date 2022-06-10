@@ -61,13 +61,10 @@ class Xml
             $document = self::createDomDocument();
         }
 
-        $domElement = $domElement ?? $document;
+        $domElement ??= $document;
 
         if ($xmlAsArray['_text'] !== null) {
-            $newNode = $document->createTextNode($xmlAsArray['_text']);
-            if ($newNode !== false) {
-                $domElement->appendChild($newNode);
-            }
+            $domElement->appendChild(new \DOMText($xmlAsArray['_text']));
         }
 
         if ($xmlAsArray['_cdata'] !== null) {

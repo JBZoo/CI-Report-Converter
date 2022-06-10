@@ -26,12 +26,12 @@ class JUnit extends AbstractMetricMap
     /**
      * @var string
      */
-    protected $name = 'JUnit';
+    protected string $name = 'JUnit';
 
     /**
      * @var string[]
      */
-    protected $map = [
+    protected array $map = [
         'time'       => 'Tests / Time',
         'tests'      => 'Tests / Count',
         'assertions' => 'Tests / Assertions',

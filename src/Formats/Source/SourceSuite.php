@@ -34,7 +34,7 @@ class SourceSuite extends AbstractNode
     /**
      * @var array
      */
-    protected $meta = [
+    protected array $meta = [
         'name'  => ['string'],
         'file'  => ['string'],
         'class' => ['string'],
@@ -43,12 +43,12 @@ class SourceSuite extends AbstractNode
     /**
      * @var SourceCase[]
      */
-    private $cases = [];
+    private array $cases = [];
 
     /**
      * @var SourceSuite[]
      */
-    private $suites = [];
+    private array $suites = [];
 
     /**
      * @return bool

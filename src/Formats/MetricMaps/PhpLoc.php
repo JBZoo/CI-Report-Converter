@@ -26,12 +26,12 @@ class PhpLoc extends AbstractMetricMap
     /**
      * @var string
      */
-    protected $name = 'PHPloc';
+    protected string $name = 'PHPloc';
 
     /**
      * @var string[]
      */
-    protected $map = [
+    protected array $map = [
         'files'       => 'FileSystem / Files',
         'directories' => 'FileSystem / Directories',
 

@@ -26,5 +26,5 @@ class Warning extends AbstractOutput
     /**
      * @var string
      */
-    protected $elementName = 'warning';
+    protected string $elementName = 'warning';
 }

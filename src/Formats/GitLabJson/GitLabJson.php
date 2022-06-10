@@ -28,7 +28,7 @@ class GitLabJson
     /**
      * @var GitLabJsonCase[]
      */
-    private $testCases = [];
+    private array $testCases = [];
 
     /**
      * @param string|null $name

@@ -29,12 +29,12 @@ class Metrics extends AbstractNode
     /**
      * @var float[]|int[]|null[]
      */
-    private $metrics = [];
+    private array $metrics = [];
 
     /**
      * @var AbstractMetricMap|null
      */
-    private $map;
+    private ?AbstractMetricMap $map = null;
 
     /**
      * @param string         $key

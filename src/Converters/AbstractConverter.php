@@ -31,17 +31,17 @@ abstract class AbstractConverter
     /**
      * @var string|null
      */
-    protected $rootPath;
+    protected ?string $rootPath = null;
 
     /**
      * @var string|null
      */
-    protected $rootSuiteName;
+    protected ?string $rootSuiteName = null;
 
     /**
      * @var int|null
      */
-    protected $flowId;
+    protected ?int $flowId = null;
 
     /**
      * @param string $source

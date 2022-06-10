@@ -29,7 +29,7 @@ class PlainTextSuite extends AbstractNode
     /**
      * @var PlainTextCase[]
      */
-    private $testCases = [];
+    private array $testCases = [];
 
     /**
      * @param string|null $name

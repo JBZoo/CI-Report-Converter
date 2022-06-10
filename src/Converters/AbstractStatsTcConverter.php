@@ -35,7 +35,7 @@ abstract class AbstractStatsTcConverter extends AbstractConverter
     /**
      * @var TeamCity
      */
-    private $tcLogger;
+    private TeamCity $tcLogger;
 
     /**
      * TeamCityTestsConverter constructor.

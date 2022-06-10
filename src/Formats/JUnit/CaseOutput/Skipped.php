@@ -26,5 +26,5 @@ class Skipped extends AbstractOutput
     /**
      * @var string
      */
-    protected $elementName = 'skipped';
+    protected string $elementName = 'skipped';
 }

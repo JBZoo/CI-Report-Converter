@@ -28,7 +28,7 @@ class SymfonyConsole implements AbstractWriter
     /**
      * @var OutputInterface|null
      */
-    private $output;
+    private ?OutputInterface $output = null;
 
     /**
      * @inheritDoc

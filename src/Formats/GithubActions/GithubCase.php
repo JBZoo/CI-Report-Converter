@@ -41,7 +41,7 @@ class GithubCase extends AbstractNode
     /**
      * @var array
      */
-    protected $meta = [
+    protected array $meta = [
         'name'    => ['string'], // It's relative path to file
         'level'   => ['string'], // See self::LEVEL_*
         'line'    => ['int'],

@@ -26,12 +26,12 @@ class PhpDepend extends AbstractMetricMap
     /**
      * @var string
      */
-    protected $name = 'PHPDepend';
+    protected string $name = 'PHPDepend';
 
     /**
      * @var string[]
      */
-    protected $map = [
+    protected array $map = [
         // Size
         'loc'   => 'Lines',
         'lloc'  => 'Lines / Logical',

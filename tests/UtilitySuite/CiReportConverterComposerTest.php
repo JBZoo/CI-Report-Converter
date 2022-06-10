@@ -24,5 +24,4 @@ namespace JBZoo\PHPUnit;
  */
 class CiReportConverterComposerTest extends AbstractComposerTest
 {
-
 }
