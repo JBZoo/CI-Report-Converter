@@ -38,6 +38,7 @@ jobs:
     strategy:
       matrix:
         php-version: [ 7.4, 8.0, 8.1 ]
+        build-way: [ "update" ]
         composer_flags: [ "--prefer-lowest", "" ]
     steps:
       - name: Checkout code
@@ -53,7 +54,7 @@ jobs:
           tools: composer
 
       - name: Build the Project
-        run: make update build --no-print-directory
+        run: make build ${{ matrix.build-way }} --no-print-directory
 
       - name: 🧪 PHPUnit Tests
         run: make test --no-print-directory
