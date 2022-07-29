@@ -14,17 +14,8 @@
 name: Publish Docker Image
 
 on:
-  pull_request:
-    branches:
-      - "*"
-  push:
-    branches:
-      - master
-    tags:
-      - '*'
-
-#  release:
-#    types: [ published ]
+  release:
+    types: [ published ]
 
 jobs:
   docker:
@@ -40,4 +31,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: jbzoo/ci-report-converter:test
+          tags: jbzoo/ci-report-converter:latest
