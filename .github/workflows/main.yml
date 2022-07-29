@@ -53,7 +53,7 @@ jobs:
           tools: composer
 
       - name: Build the Project
-        run: make update --no-print-directory
+        run: make update build --no-print-directory
 
       - name: 🧪 PHPUnit Tests
         run: make test --no-print-directory
