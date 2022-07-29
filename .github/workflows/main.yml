@@ -40,9 +40,6 @@ jobs:
         php-version: [ 7.4, 8.0, 8.1 ]
         build-way: [ "update" ]
         composer_flags: [ "--prefer-lowest", "" ]
-        include:
-          - php-version: 8.0
-            build-way: update
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
