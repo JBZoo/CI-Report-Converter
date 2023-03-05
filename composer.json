@@ -43,10 +43,10 @@
         "ext-simplexml"   : "*",
         "ext-hash"        : "*",
 
-        "jbzoo/data"      : "^5.0",
-        "jbzoo/utils"     : "^5.0",
-        "jbzoo/cli"       : "^2.0",
-        "jbzoo/markdown"  : "^1.2",
+        "jbzoo/data"      : "^5.0|dev-master|7.x-dev",
+        "jbzoo/utils"     : "^5.0|dev-master|7.x-dev",
+        "jbzoo/cli"       : "^2.0|dev-master|7.x-dev",
+        "jbzoo/markdown"  : "^1.2|dev-master|7.x-dev",
 
         "symfony/console" : ">=4.4"
     },
@@ -67,10 +67,14 @@
     },
 
     "autoload-dev" : {
-        "classmap" : ["tests"]
+        "classmap" : [
+            "tests"
+        ]
     },
 
-    "bin"          : ["ci-report-converter"],
+    "bin"          : [
+        "ci-report-converter"
+    ],
 
     "config"       : {
         "optimize-autoloader" : true,
@@ -81,7 +85,7 @@
 
     "extra"        : {
         "branch-alias" : {
-            "dev-master" : "2.x-dev"
+            "dev-master" : "7.x-dev"
         }
     }
 }
