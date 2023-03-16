@@ -16,20 +16,11 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\MetricMaps;
 
-/**
- * Class PhpDepend
- * @package JBZoo\CIReportConverter\Formats\MetricMaps
- */
 class PhpDepend extends AbstractMetricMap
 {
-    /**
-     * @var string
-     */
     protected string $name = 'PHPDepend';
 
-    /**
-     * @var string[]
-     */
+    /** @var string[] */
     protected array $map = [
         // Size
         'loc'   => 'Lines',

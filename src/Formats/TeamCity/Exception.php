@@ -16,10 +16,6 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\TeamCity;
 
-/**
- * Class Exception
- * @package JBZoo\CIReportConverter\Formats\TeamCity
- */
 class Exception extends \JBZoo\CIReportConverter\Formats\Exception
 {
 }

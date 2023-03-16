@@ -22,17 +22,13 @@ use JBZoo\CIReportConverter\Formats\PlainText\PlainTextSuite;
 use JBZoo\CIReportConverter\Formats\Source\SourceCase;
 use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 
-/**
- * Class PlainTextConverter
- * @package JBZoo\CIReportConverter\Converters
- */
 class PlainTextConverter extends AbstractConverter
 {
     public const TYPE = 'plain';
     public const NAME = 'Plain Text';
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function fromInternal(SourceSuite $sourceSuite): string
     {
@@ -48,7 +44,6 @@ class PlainTextConverter extends AbstractConverter
     }
 
     /**
-     * @param SourceSuite              $sourceSuite
      * @param PlainText|PlainTextSuite $plainTextSuite
      */
     private function renderSuite(SourceSuite $sourceSuite, $plainTextSuite): void
@@ -63,22 +58,21 @@ class PlainTextConverter extends AbstractConverter
     }
 
     /**
-     * @param SourceCase               $sourceCase
      * @param PlainText|PlainTextSuite $plainTextSuite
      */
     private function renderTestCase(SourceCase $sourceCase, $plainTextSuite): void
     {
-        if (null !== $sourceCase->stdOut) {
+        if ($sourceCase->stdOut !== null) {
             $level = PlainTextCase::LEVEL_ERROR;
-        } elseif (null !== $sourceCase->errOut) {
+        } elseif ($sourceCase->errOut !== null) {
             $level = PlainTextCase::LEVEL_ERROR;
-        } elseif (null !== $sourceCase->failure) {
+        } elseif ($sourceCase->failure !== null) {
             $level = PlainTextCase::LEVEL_ERROR;
-        } elseif (null !== $sourceCase->error) {
+        } elseif ($sourceCase->error !== null) {
             $level = PlainTextCase::LEVEL_ERROR;
-        } elseif (null !== $sourceCase->warning) {
+        } elseif ($sourceCase->warning !== null) {
             $level = PlainTextCase::LEVEL_WARNING;
-        } elseif (null !== $sourceCase->skipped) {
+        } elseif ($sourceCase->skipped !== null) {
             $level = PlainTextCase::LEVEL_DEBUG;
         } else {
             $level = PlainTextCase::LEVEL_ERROR;
@@ -86,10 +80,10 @@ class PlainTextConverter extends AbstractConverter
 
         $message = $sourceCase->getMessage();
         if ($message) {
-            $case = $plainTextSuite->addCase($this->cleanFilepath($sourceCase->file ?: ''));
-            $case->line = $sourceCase->line;
-            $case->column = $sourceCase->column;
-            $case->level = $level;
+            $case          = $plainTextSuite->addCase($this->cleanFilepath($sourceCase->file ?: ''));
+            $case->line    = $sourceCase->line;
+            $case->column  = $sourceCase->column;
+            $case->level   = $level;
             $case->message = $this->cleanFilepath($message);
         }
     }

@@ -16,11 +16,6 @@ declare(strict_types=1);
 
 namespace JBZoo\PHPUnit;
 
-/**
- * Class Fixtures
- *
- * @package JBZoo\PHPUnit
- */
 class Fixtures
 {
     public const ROOT      = __DIR__ . '/fixtures';
@@ -83,16 +78,12 @@ class Fixtures
     public const PHP_METRICS_JSON    = self::ROOT_ORIG . '/phpmetrics/phpmetrics.json';
     public const PHP_METRICS_PMD_XML = self::ROOT_ORIG . '/phpmetrics/pmd.xml';
 
-    /**
-     * @param string $fileExt
-     * @return string
-     */
     public static function getExpectedFileContent(string $fileExt = 'xml'): string
     {
-        $filename = str_replace('__', '/', getTestName()) . '.' . $fileExt;
+        $filename = \str_replace('__', '/', getTestName()) . '.' . $fileExt;
         $filepath = self::ROOT . "/test-cases/{$filename}";
         isFile($filepath);
 
-        return file_get_contents($filepath);
+        return \file_get_contents($filepath);
     }
 }

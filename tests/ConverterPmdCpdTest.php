@@ -20,18 +20,13 @@ use JBZoo\CIReportConverter\Converters\JUnitConverter;
 use JBZoo\CIReportConverter\Converters\PmdCpdConverter;
 use JBZoo\CIReportConverter\Converters\TeamCityTestsConverter;
 
-/**
- * Class ConverterPmdCpdTest
- *
- * @package JBZoo\PHPUnit
- */
 class ConverterPmdCpdTest extends PHPUnit
 {
-    public function testToJUnit()
+    public function testToJUnit(): void
     {
         $source = (new PmdCpdConverter())
             ->setRootPath('/Users/smetdenis/Work/projects/jbzoo-ci-report-converter')
-            ->toInternal(file_get_contents(Fixtures::PHPCPD_XML));
+            ->toInternal(\file_get_contents(Fixtures::PHPCPD_XML));
 
         $actual = (new JUnitConverter())->fromInternal($source);
 
@@ -39,11 +34,11 @@ class ConverterPmdCpdTest extends PHPUnit
         isSame(Fixtures::getExpectedFileContent(), $actual);
     }
 
-    public function testToTeamCity()
+    public function testToTeamCity(): void
     {
         $source = (new PmdCpdConverter())
             ->setRootPath('/Users/smetdenis/Work/projects/jbzoo-ci-report-converter')
-            ->toInternal(file_get_contents(Fixtures::PHPCPD_XML));
+            ->toInternal(\file_get_contents(Fixtures::PHPCPD_XML));
 
         $actual = (new TeamCityTestsConverter(['show-datetime' => false], 42))
             ->fromInternal($source);

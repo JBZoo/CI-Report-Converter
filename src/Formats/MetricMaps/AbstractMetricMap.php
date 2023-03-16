@@ -16,20 +16,11 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\MetricMaps;
 
-/**
- * Class AbstractMetricMap
- * @package JBZoo\CIReportConverter\Formats\MetricMaps
- */
 abstract class AbstractMetricMap
 {
-    /**
-     * @var string
-     */
     protected string $name = '';
 
-    /**
-     * @var string[]
-     */
+    /** @var string[] */
     protected array $map = [];
 
     /**
@@ -40,9 +31,6 @@ abstract class AbstractMetricMap
         return $this->map;
     }
 
-    /**
-     * @return string
-     */
     public function getName(): string
     {
         return $this->name;

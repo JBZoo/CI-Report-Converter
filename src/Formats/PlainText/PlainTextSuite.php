@@ -18,32 +18,11 @@ namespace JBZoo\CIReportConverter\Formats\PlainText;
 
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
-/**
- * Class PlainTextSuite
- *
- * @package JBZoo\CIReportConverter\Formats\PlainText
- */
 class PlainTextSuite extends AbstractNode
 {
-    /**
-     * @var PlainTextCase[]
-     */
+    /** @var PlainTextCase[] */
     private array $testCases = [];
 
-    /**
-     * @param string|null $name
-     * @return PlainTextCase
-     */
-    public function addCase(?string $name = null): PlainTextCase
-    {
-        $testSuite = new PlainTextCase($name);
-        $this->testCases[] = $testSuite;
-        return $testSuite;
-    }
-
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         $tables = [];
@@ -56,15 +35,24 @@ class PlainTextSuite extends AbstractNode
             $tables[$testCase->name]->appendRow([
                 ($testCase->line ?: 1) . ($testCase->column ? ":{$testCase->column}" : ''),
                 $testCase->level,
-                $testCase->message
+                $testCase->message,
             ]);
         }
 
         $list = \array_reduce($tables, static function (array $acc, Table $table): array {
             $acc[] = $table->render();
+
             return $acc;
         }, []);
 
         return \trim(\implode("\n", $list)) . "\n";
+    }
+
+    public function addCase(?string $name = null): PlainTextCase
+    {
+        $testSuite         = new PlainTextCase($name);
+        $this->testCases[] = $testSuite;
+
+        return $testSuite;
     }
 }

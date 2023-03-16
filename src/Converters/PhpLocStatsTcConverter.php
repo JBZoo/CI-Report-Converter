@@ -21,21 +21,18 @@ use JBZoo\CIReportConverter\Formats\MetricMaps\PhpLoc;
 
 use function JBZoo\Data\json;
 
-/**
- * Class PhpLocStatsTcConverter
- * @package JBZoo\CIReportConverter\Converters
- */
 class PhpLocStatsTcConverter extends AbstractStatsTcConverter
 {
     public const TYPE = 'phploc-json';
     public const NAME = 'PHPloc (json)';
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function toInternalMetric(string $sourceCode): Metrics
     {
         $data = json($sourceCode)->getArrayCopy();
+
         return self::buildMetrics($data, new PhpLoc());
     }
 }

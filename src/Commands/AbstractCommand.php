@@ -19,20 +19,14 @@ namespace JBZoo\CIReportConverter\Commands;
 use JBZoo\Cli\CliCommand;
 use JBZoo\Cli\OutLvl;
 
-/**
- * Class AbstractCommand
- * @package JBZoo\CIReportConverter\Commands
- */
 abstract class AbstractCommand extends CliCommand
 {
-    /**
-     * @return string
-     */
     protected function getSourceCode(): string
     {
         if ($filename = $this->getOptString('input-file')) {
             if (!\realpath($filename) && !\file_exists($filename)) {
                 $this->_("File \"{$filename}\" not found", OutLvl::ERROR);
+
                 return '';
             }
 
@@ -41,25 +35,23 @@ abstract class AbstractCommand extends CliCommand
 
         $contents = (string)self::getStdIn();
         if (\trim($contents) === '') {
-            throw new Exception("Please provide input-file or use STDIN as input (CLI pipeline).");
+            throw new Exception('Please provide input-file or use STDIN as input (CLI pipeline).');
         }
 
         return $contents;
     }
 
-    /**
-     * @param string $result
-     * @return bool
-     */
     protected function saveResult(string $result): bool
     {
         if ($filename = $this->getOptString('output-file')) {
             \file_put_contents($filename, $result);
             $this->_("Result is saved: {$filename}");
+
             return true;
         }
 
         $this->_($result);
+
         return false;
     }
 }

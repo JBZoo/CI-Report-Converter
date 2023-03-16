@@ -18,84 +18,54 @@ namespace JBZoo\CIReportConverter\Formats\JUnit\CaseOutput;
 
 use JBZoo\Utils\Xml;
 
-/**
- * Class AbstractOutput
- * @package JBZoo\CIReportConverter\Formats\JUnit\CaseOutput
- */
 abstract class AbstractOutput
 {
-    /**
-     * @var string
-     */
     protected string $elementName = '';
 
-    /**
-     * @var string|null
-     */
     private ?string $type;
 
-    /**
-     * @var string|null
-     */
     private ?string $message;
 
-    /**
-     * @var string|null
-     */
     private ?string $description;
 
-    /**
-     * AbstractError constructor.
-     * @param string|null $type
-     * @param string|null $message
-     * @param string|null $description
-     */
     public function __construct(?string $type = null, ?string $message = null, ?string $description = null)
     {
-        $this->type = $type;
-        $this->message = $message;
+        $this->type        = $type;
+        $this->message     = $message;
         $this->description = $description;
     }
 
-    /**
-     * @param string $message
-     * @return $this
-     */
     public function setMessage(string $message): self
     {
         $this->message = $message;
+
         return $this;
     }
 
-    /**
-     * @param string $description
-     * @return $this
-     */
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
         return $this;
     }
 
     /**
-     * @param \DOMDocument $document
-     * @return \DOMNode
      * @phan-suppress PhanPossiblyNonClassMethodCall
      * @phan-suppress PhanPossiblyFalseTypeReturn
      */
     public function toXML(\DOMDocument $document): \DOMNode
     {
-        if (null !== $this->description) {
+        if ($this->description !== null) {
             $node = $document->createElement($this->elementName, Xml::escape($this->description));
         } else {
             $node = $document->createElement($this->elementName);
         }
 
-        if (null !== $this->type) {
+        if ($this->type !== null) {
             $node->setAttribute('type', $this->type);
         }
 
-        if (null !== $this->message) {
+        if ($this->message !== null) {
             $node->setAttribute('message', $this->message);
         }
 

@@ -16,49 +16,16 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\PlainText;
 
-/**
- * Class PlainText
- * @package JBZoo\CIReportConverter\Formats\PlainText
- */
 class PlainText
 {
     public const DEFAULT_NAME = 'Undefined Suite Name';
 
-    /**
-     * @var PlainTextCase[]
-     */
+    /** @var PlainTextCase[] */
     private array $testCases = [];
 
-    /**
-     * @var PlainTextSuite[]
-     */
+    /** @var PlainTextSuite[] */
     private array $testSuites = [];
 
-    /**
-     * @param string|null $name
-     * @return PlainTextCase
-     */
-    public function addCase(?string $name = null): PlainTextCase
-    {
-        $testSuite = new PlainTextCase($name);
-        $this->testCases[] = $testSuite;
-        return $testSuite;
-    }
-
-    /**
-     * @param string|null $name
-     * @return PlainTextSuite
-     */
-    public function addSuite(?string $name = null): PlainTextSuite
-    {
-        $testSuite = new PlainTextSuite($name ?: self::DEFAULT_NAME);
-        $this->testSuites[] = $testSuite;
-        return $testSuite;
-    }
-
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         $tables = [];
@@ -71,12 +38,13 @@ class PlainText
             $tables[$testCase->name]->appendRow([
                 ($testCase->line ?: 1) . ($testCase->column ? ":{$testCase->column}" : ''),
                 $testCase->level,
-                $testCase->message
+                $testCase->message,
             ]);
         }
 
         $result = \array_reduce($tables, static function (array $acc, Table $table): array {
             $acc[] = $table->render();
+
             return $acc;
         }, []);
 
@@ -85,5 +53,21 @@ class PlainText
         }
 
         return \trim(\implode("\n", $result)) . "\n";
+    }
+
+    public function addCase(?string $name = null): PlainTextCase
+    {
+        $testSuite         = new PlainTextCase($name);
+        $this->testCases[] = $testSuite;
+
+        return $testSuite;
+    }
+
+    public function addSuite(?string $name = null): PlainTextSuite
+    {
+        $testSuite          = new PlainTextSuite($name ?: self::DEFAULT_NAME);
+        $this->testSuites[] = $testSuite;
+
+        return $testSuite;
     }
 }

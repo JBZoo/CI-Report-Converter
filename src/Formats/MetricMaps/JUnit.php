@@ -16,20 +16,11 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\MetricMaps;
 
-/**
- * Class JUnit
- * @package JBZoo\CIReportConverter\Formats\MetricMaps
- */
 class JUnit extends AbstractMetricMap
 {
-    /**
-     * @var string
-     */
     protected string $name = 'JUnit';
 
-    /**
-     * @var string[]
-     */
+    /** @var string[] */
     protected array $map = [
         'time'       => 'Tests / Time',
         'tests'      => 'Tests / Count',

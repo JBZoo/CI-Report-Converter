@@ -19,36 +19,24 @@ namespace JBZoo\CIReportConverter\Formats\JUnit;
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
 /**
- * Class JUnitSuite
- * @package JBZoo\CIReportConverter\Formats\JUnit
- *
- * @property string|null $file
+ * @property null|string $file
  *
  * @method self setFile(?string $file)
  */
 class JUnitSuite extends AbstractNode
 {
-    /**
-     * @var array
-     */
     protected array $meta = [
         'name' => ['string', 'required'],
         'file' => ['string'],
     ];
 
-    /**
-     * @var JUnitCase[]
-     */
+    /** @var JUnitCase[] */
     private array $testCases = [];
 
-    /**
-     * @var JUnitSuite[]
-     */
+    /** @var JUnitSuite[] */
     private array $testSuites = [];
 
     /**
-     * @param \DOMDocument $document
-     * @return \DOMNode
      * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      * @SuppressWarnings(PHPMD.NPathComplexity)
      * @phan-suppress PhanPossiblyNonClassMethodCall
@@ -61,7 +49,7 @@ class JUnitSuite extends AbstractNode
 
         $node->setAttribute('name', $this->name);
 
-        if (null !== $this->file) {
+        if ($this->file !== null) {
             $node->setAttribute('file', $this->file);
         }
 
@@ -104,31 +92,22 @@ class JUnitSuite extends AbstractNode
         return $node;
     }
 
-    /**
-     * @param string $name
-     * @return JUnitSuite
-     */
     public function addSuite(string $name): self
     {
-        $testSuite = new self($name);
+        $testSuite          = new self($name);
         $this->testSuites[] = $testSuite;
+
         return $testSuite;
     }
 
-    /**
-     * @param string $name
-     * @return JUnitCase
-     */
     public function addCase(string $name): JUnitCase
     {
-        $testCase = new JUnitCase($name);
+        $testCase          = new JUnitCase($name);
         $this->testCases[] = $testCase;
+
         return $testCase;
     }
 
-    /**
-     * @return int
-     */
     private function getAssertionsCount(): int
     {
         $result = 0;
@@ -137,16 +116,15 @@ class JUnitSuite extends AbstractNode
             $result += $testSuite->getAssertionsCount();
         }
 
-        $result += (int)\array_reduce($this->testCases, static function (int $acc, JUnitCase $testCase) {
-            return $acc + $testCase->getAssertionsCount();
-        }, 0);
+        $result += (int)\array_reduce(
+            $this->testCases,
+            static fn (int $acc, JUnitCase $testCase) => $acc + $testCase->getAssertionsCount(),
+            0,
+        );
 
         return $result;
     }
 
-    /**
-     * @return int
-     */
     private function getErrorsCount(): int
     {
         $result = 0;
@@ -155,16 +133,15 @@ class JUnitSuite extends AbstractNode
             $result += $testSuite->getErrorsCount();
         }
 
-        $result += (int)\array_reduce($this->testCases, static function (int $acc, JUnitCase $testCase) {
-            return $acc + $testCase->getErrorsCount();
-        }, 0);
+        $result += (int)\array_reduce(
+            $this->testCases,
+            static fn (int $acc, JUnitCase $testCase) => $acc + $testCase->getErrorsCount(),
+            0,
+        );
 
         return $result;
     }
 
-    /**
-     * @return int
-     */
     private function getWarningsCount(): int
     {
         $result = 0;
@@ -173,16 +150,15 @@ class JUnitSuite extends AbstractNode
             $result += $testSuite->getWarningsCount();
         }
 
-        $result += (int)\array_reduce($this->testCases, static function (int $acc, JUnitCase $testCase) {
-            return $acc + $testCase->getWarningsCount();
-        }, 0);
+        $result += (int)\array_reduce(
+            $this->testCases,
+            static fn (int $acc, JUnitCase $testCase) => $acc + $testCase->getWarningsCount(),
+            0,
+        );
 
         return $result;
     }
 
-    /**
-     * @return int
-     */
     private function getFailuresCount(): int
     {
         $result = 0;
@@ -191,16 +167,15 @@ class JUnitSuite extends AbstractNode
             $result += $testSuite->getFailuresCount();
         }
 
-        $result += (int)\array_reduce($this->testCases, static function (int $acc, JUnitCase $testCase) {
-            return $acc + $testCase->getFailuresCount();
-        }, 0);
+        $result += (int)\array_reduce(
+            $this->testCases,
+            static fn (int $acc, JUnitCase $testCase) => $acc + $testCase->getFailuresCount(),
+            0,
+        );
 
         return $result;
     }
 
-    /**
-     * @return int
-     */
     private function getSkippedCount(): int
     {
         $result = 0;
@@ -209,16 +184,15 @@ class JUnitSuite extends AbstractNode
             $result += $testSuite->getSkippedCount();
         }
 
-        $result += (int)\array_reduce($this->testCases, static function (int $acc, JUnitCase $testCase) {
-            return $acc + $testCase->getSkippedCount();
-        }, 0);
+        $result += (int)\array_reduce(
+            $this->testCases,
+            static fn (int $acc, JUnitCase $testCase) => $acc + $testCase->getSkippedCount(),
+            0,
+        );
 
         return $result;
     }
 
-    /**
-     * @return float
-     */
     private function getTime(): float
     {
         $result = 0.0;
@@ -227,16 +201,15 @@ class JUnitSuite extends AbstractNode
             $result += $testSuite->getTime();
         }
 
-        $result += \array_reduce($this->testCases, static function (float $acc, JUnitCase $testCase) {
-            return $acc + (float)$testCase->getTime();
-        }, 0.0);
+        $result += \array_reduce(
+            $this->testCases,
+            static fn (float $acc, JUnitCase $testCase) => $acc + (float)$testCase->getTime(),
+            0.0,
+        );
 
         return $result;
     }
 
-    /**
-     * @return int
-     */
     private function getTestsCount(): int
     {
         $result = 0;

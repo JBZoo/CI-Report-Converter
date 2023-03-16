@@ -18,31 +18,24 @@ namespace JBZoo\CIReportConverter\Formats\JUnit;
 
 use JBZoo\CIReportConverter\Formats\Xml;
 
-/**
- * Class JUnit
- * @package JBZoo\CIReportConverter\Formats\JUnit
- */
 class JUnit
 {
-    /**
-     * @var JUnitSuite[]
-     */
+    /** @var JUnitSuite[] */
     private array $testSuites = [];
 
-    /**
-     * @param string|null $name
-     * @return JUnitSuite
-     */
+    public function __toString(): string
+    {
+        return (string)$this->getDom()->saveXML();
+    }
+
     public function addSuite(?string $name = null): JUnitSuite
     {
-        $testSuite = new JUnitSuite($name);
+        $testSuite          = new JUnitSuite($name);
         $this->testSuites[] = $testSuite;
+
         return $testSuite;
     }
 
-    /**
-     * @return \DOMDocument
-     */
     public function getDom(): \DOMDocument
     {
         $document = Xml::createDomDocument();
@@ -55,13 +48,5 @@ class JUnit
         }
 
         return $document;
-    }
-
-    /**
-     * @return string
-     */
-    public function __toString(): string
-    {
-        return (string)$this->getDom()->saveXML();
     }
 }

@@ -18,18 +18,14 @@ namespace JBZoo\CIReportConverter\Formats\TeamCity\Writers;
 
 use JBZoo\Utils\Cli;
 
-/**
- * Class Stdout
- * @package JBZoo\CIReportConverter\Formats\TeamCity\Writers
- */
 class Stdout implements AbstractWriter
 {
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function write(?string $message): void
     {
-        if (null !== $message) {
+        if ($message !== null) {
             Cli::out($message);
         }
     }

@@ -19,19 +19,14 @@ namespace JBZoo\PHPUnit;
 use JBZoo\CIReportConverter\Converters\CheckStyleConverter;
 use JBZoo\CIReportConverter\Converters\JUnitConverter;
 
-/**
- * Class ConverterCheckStyleTest
- *
- * @package JBZoo\PHPUnit
- */
 class ConverterCheckStyleTest extends PHPUnit
 {
-    public function testToInternalPhan()
+    public function testToInternalPhan(): void
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
-        $source = (new CheckStyleConverter())
+        $source     = (new CheckStyleConverter())
             ->setRootPath($pathPrefix)
-            ->toInternal(file_get_contents(Fixtures::PHAN_CHECKSTYLE));
+            ->toInternal(\file_get_contents(Fixtures::PHAN_CHECKSTYLE));
 
         $actual = (new JUnitConverter())->fromInternal($source);
         Aliases::isValidXml($actual);
@@ -46,7 +41,7 @@ class ConverterCheckStyleTest extends PHPUnit
             'failure'   => [
                 'type'    => 'PhanPossiblyFalseTypeMismatchProperty',
                 'message' => 'Assigning $this-&gt;rootElement of type \\DOMElement|false to property but \\JBZoo\\CIReportConverter\\JUnit\\JUnitXml-&gt;rootElement is \\DOMElement (false is incompatible)',
-                'details' => implode("\n", [
+                'details' => \implode("\n", [
                     '',
                     'Assigning $this->rootElement of type \DOMElement|false to property but \JBZoo\CIReportConverter\JUnit\JUnitXml->rootElement is \DOMElement (false is incompatible)',
                     'Rule     : PhanPossiblyFalseTypeMismatchProperty',
@@ -54,17 +49,17 @@ class ConverterCheckStyleTest extends PHPUnit
                     'Severity : warning',
                     '',
                 ]),
-            ]
+            ],
         ], $source->toArray()['suites'][0]['cases'][0]);
 
         isSame([
-            "_node"   => "SourceSuite",
-            "name"    => "CheckStyle",
-            "tests"   => 7,
-            "failure" => 7
+            '_node'   => 'SourceSuite',
+            'name'    => 'CheckStyle',
+            'tests'   => 7,
+            'failure' => 7,
         ], $source->toArray()['data']);
 
-        isSame(implode("\n", [
+        isSame(\implode("\n", [
             '<?xml version="1.0" encoding="UTF-8"?>',
             '<testsuites>',
             '  <testsuite name="CheckStyle" tests="7" failures="7">',
@@ -132,21 +127,21 @@ class ConverterCheckStyleTest extends PHPUnit
             '    </testsuite>',
             '  </testsuite>',
             '</testsuites>',
-            ''
+            '',
         ]), $actual);
     }
 
-    public function testToInternalPHPcs()
+    public function testToInternalPHPcs(): void
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
-        $source = (new CheckStyleConverter())
+        $source     = (new CheckStyleConverter())
             ->setRootPath($pathPrefix)
-            ->toInternal(file_get_contents(Fixtures::PHPCS_CODESTYLE));
+            ->toInternal(\file_get_contents(Fixtures::PHPCS_CODESTYLE));
 
         $actual = (new JUnitConverter())->fromInternal($source);
         Aliases::isValidXml($actual);
 
-        isSame(implode("\n", [
+        isSame(\implode("\n", [
             '<?xml version="1.0" encoding="UTF-8"?>',
             '<testsuites>',
             '  <testsuite name="CheckStyle" tests="3" failures="3">',
@@ -182,18 +177,18 @@ class ConverterCheckStyleTest extends PHPUnit
         ]), $actual);
     }
 
-    public function testToInternalPhpStan()
+    public function testToInternalPhpStan(): void
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
-        $source = (new CheckStyleConverter())
+        $source     = (new CheckStyleConverter())
             ->setRootPath($pathPrefix)
-            ->toInternal(file_get_contents(Fixtures::PHPSTAN_CHECKSTYLE));
+            ->toInternal(\file_get_contents(Fixtures::PHPSTAN_CHECKSTYLE));
 
         $actual = (new JUnitConverter())->fromInternal($source);
 
         Aliases::isValidXml($actual);
 
-        isSame(implode("\n", [
+        isSame(\implode("\n", [
             '<?xml version="1.0" encoding="UTF-8"?>',
             '<testsuites>',
             '  <testsuite name="CheckStyle" tests="5" failures="5">',
@@ -242,18 +237,18 @@ class ConverterCheckStyleTest extends PHPUnit
         ]), $actual);
     }
 
-    public function testToInternalPsalm()
+    public function testToInternalPsalm(): void
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
-        $source = (new CheckStyleConverter())
+        $source     = (new CheckStyleConverter())
             ->setRootPath($pathPrefix)
-            ->toInternal(file_get_contents(Fixtures::PSALM_CHECKSTYLE));
+            ->toInternal(\file_get_contents(Fixtures::PSALM_CHECKSTYLE));
 
         $actual = (new JUnitConverter())->fromInternal($source);
 
         Aliases::isValidXml($actual);
 
-        isSame(implode("\n", [
+        isSame(\implode("\n", [
             '<?xml version="1.0" encoding="UTF-8"?>',
             '<testsuites>',
             '  <testsuite name="CheckStyle" tests="5" failures="5">',

@@ -16,26 +16,18 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\MetricMaps;
 
-/**
- * Class PhpMetrics
- * @package JBZoo\CIReportConverter\Formats\MetricMaps
- *
- */
 class PhpMetrics extends AbstractMetricMap
 {
-    /**
-     * @var string
-     */
     protected string $name = 'PHPMetrics';
 
-    // @see http://www.phpmetrics.org/documentation/index.html
-    // @see http://en.wikipedia.org/wiki/Halstead_complexity_measures
-    // @see http://en.wikipedia.org/wiki/Maintainability
-    // @see http://en.wikipedia.org/wiki/Cyclomatic_complexity
-
     /**
-     * @var string[]
+     * @see http://www.phpmetrics.org/documentation/index.html
+     * @see http://en.wikipedia.org/wiki/Halstead_complexity_measures
+     * @see http://en.wikipedia.org/wiki/Maintainability
+     * @see http://en.wikipedia.org/wiki/Cyclomatic_complexity
      */
+
+    /** @var string[] */
     protected array $map = [
         'distance' => 'Myers / Distance',
         'interval' => 'Myers / Interval',

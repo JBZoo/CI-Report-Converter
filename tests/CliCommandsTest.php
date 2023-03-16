@@ -35,19 +35,15 @@ use Symfony\Component\Console\Output\BufferedOutput;
 use function JBZoo\Data\json;
 use function JBZoo\Data\yml;
 
-/**
- * Class CliCommandsTest
- * @package JBZoo\PHPUnit
- */
 class CliCommandsTest extends PHPUnit
 {
-    public function testConvertCommandReadMe()
+    public function testConvertCommandReadMe(): void
     {
         skip('Fix me');
 
-        if (version_compare(PHP_VERSION, '7.4.99') < 0) {
+        if (\version_compare(\PHP_VERSION, '7.4.99') < 0) {
             $helpMessage = $this->taskReal('convert', ['help' => null]);
-            $helpMessage = implode("\n", [
+            $helpMessage = \implode("\n", [
                 '',
                 '```',
                 '$ php ./vendor/bin/ci-report-converter convert --help',
@@ -60,13 +56,13 @@ class CliCommandsTest extends PHPUnit
         }
     }
 
-    public function testTcStatsCommandReadMe()
+    public function testTcStatsCommandReadMe(): void
     {
         skip('Fix me');
 
-        if (version_compare(PHP_VERSION, '7.4.99') < 0) {
+        if (\version_compare(\PHP_VERSION, '7.4.99') < 0) {
             $helpMessage = $this->taskReal('teamcity:stats', ['help' => null]);
-            $helpMessage = implode("\n", [
+            $helpMessage = \implode("\n", [
                 '',
                 '```',
                 '$ php ./vendor/bin/ci-report-converter teamcity:stats --help',
@@ -79,9 +75,9 @@ class CliCommandsTest extends PHPUnit
         }
     }
 
-    public function testGitHubActionsYml()
+    public function testGitHubActionsYml(): void
     {
-        $helpJson = json($this->taskReal('convert', ['help' => null, 'format' => 'json']));
+        $helpJson  = json($this->taskReal('convert', ['help' => null, 'format' => 'json']));
         $actionYml = yml(PROJECT_ROOT . '/action.yml');
 
         $excludedOptions = [
@@ -92,10 +88,10 @@ class CliCommandsTest extends PHPUnit
             'ansi',
             'no-ansi',
             'no-interaction',
-            //
+
             'tc-flow-id',
             'root-path',
-            //
+
             'mute-errors',
             'no-progress',
             'profile',
@@ -106,15 +102,16 @@ class CliCommandsTest extends PHPUnit
             'cron',
         ];
 
-        $expectedInputs = [];
+        $expectedInputs   = [];
         $expectedRunsArgs = ['convert'];
+
         foreach ($helpJson->findArray('definition.options') as $key => $option) {
-            if (in_array($key, $excludedOptions, true)) {
+            if (\in_array($key, $excludedOptions, true)) {
                 continue;
             }
 
-            $expectedInputs[$key] = array_filter([
-                'description' => strip_tags($option['description']),
+            $expectedInputs[$key] = \array_filter([
+                'description' => \strip_tags($option['description']),
                 'default'     => $option['default'],
                 'required'    => $option['is_value_required'],
             ]);
@@ -126,11 +123,11 @@ class CliCommandsTest extends PHPUnit
         $expectedRunsArgs[] = '-vvv';
 
         $expectedInputs['output-format']['default'] = GithubCliConverter::TYPE;
-        $expectedInputs['input-file']['required'] = true;
-        ksort($expectedInputs);
+        $expectedInputs['input-file']['required']   = true;
+        \ksort($expectedInputs);
 
-        $errorMessage = implode("\n", [
-            "See: " . PROJECT_ROOT . "/action.yml",
+        $errorMessage = \implode("\n", [
+            'See: ' . PROJECT_ROOT . '/action.yml',
             'Expected',
             '```',
             yml(['inputs' => $expectedInputs]),
@@ -138,11 +135,11 @@ class CliCommandsTest extends PHPUnit
         ]);
         isSame($expectedInputs, $actionYml->getArray('inputs'), $errorMessage);
 
-        $errorMessage = implode("\n", [
-            "See: " . PROJECT_ROOT . "/action.yml",
+        $errorMessage = \implode("\n", [
+            'See: ' . PROJECT_ROOT . '/action.yml',
             'Expected',
             '```',
-            str_replace(["'\${{", "}}'"], ["\${{", "}}"], (string)yml($expectedRunsArgs)),
+            \str_replace(["'\${{", "}}'"], ['${{', '}}'], (string)yml($expectedRunsArgs)),
             '```',
         ]);
         isSame($expectedRunsArgs, $actionYml->findArray('runs.args'), $errorMessage);
@@ -151,9 +148,9 @@ class CliCommandsTest extends PHPUnit
     /**
      * @depends testGitHubActionsYml
      */
-    public function testGitHubActionsReadMe()
+    public function testGitHubActionsReadMe(): void
     {
-        $inputs = yml(PROJECT_ROOT . '/action.yml')->findArray('inputs');
+        $inputs   = yml(PROJECT_ROOT . '/action.yml')->findArray('inputs');
         $examples = [
             'input-file'    => './build/checkstyle.xml',
             'input-format'  => 'checkstyle',
@@ -166,7 +163,7 @@ class CliCommandsTest extends PHPUnit
         $expectedMessage = [
             '```yaml',
             '- uses: jbzoo/ci-report-converter@master # or see the specific version on releases page',
-            '  with:'
+            '  with:',
         ];
 
         foreach ($inputs as $key => $input) {
@@ -186,51 +183,51 @@ class CliCommandsTest extends PHPUnit
 
         $expectedMessage[] = '```';
 
-        isFileContains(implode("\n", $expectedMessage), PROJECT_ROOT . '/README.md');
+        isFileContains(\implode("\n", $expectedMessage), PROJECT_ROOT . '/README.md');
     }
 
-    public function testConvertCommandMapReadMe()
+    public function testConvertCommandMapReadMe(): void
     {
         isSame(Fixtures::getExpectedFileContent('md'), $this->task('convert:map'));
         isSame(Fixtures::getExpectedFileContent('md'), $this->taskReal('convert:map'));
     }
 
-    public function testConvertStatsUndefinedFile()
+    public function testConvertStatsUndefinedFile(): void
     {
         $output = $this->task('teamcity:stats', [
             'input-file'   => '/undefined/file.xml',
-            'input-format' => 'pdepend-xml'
+            'input-format' => 'pdepend-xml',
         ]);
 
-        isSame("Error: File \"/undefined/file.xml\" not found", trim($output));
+        isSame('Error: File "/undefined/file.xml" not found', \trim($output));
     }
 
-    public function testConvertStatsCustomFlowId()
+    public function testConvertStatsCustomFlowId(): void
     {
         $output = $this->task('teamcity:stats', [
             'input-file'   => Fixtures::PHPLOC_JSON,
             'input-format' => PhpLocStatsTcConverter::TYPE,
-            'tc-flow-id'   => 10000
+            'tc-flow-id'   => 10000,
         ]);
 
         isContain(" flowId='10000'", $output);
     }
 
-    public function testConvertCustomFlowId()
+    public function testConvertCustomFlowId(): void
     {
         $output = $this->task('convert', [
             'input-format'  => CheckStyleConverter::TYPE,
             'output-format' => TeamCityTestsConverter::TYPE,
             'input-file'    => Fixtures::PSALM_CHECKSTYLE,
-            'suite-name'    => "Test Suite",
-            'root-path'     => "src",
-            'tc-flow-id'    => "10101",
+            'suite-name'    => 'Test Suite',
+            'root-path'     => 'src',
+            'tc-flow-id'    => '10101',
         ]);
 
         isContain(" flowId='10101'", $output);
     }
 
-    public function testConvertToTcInspections()
+    public function testConvertToTcInspections(): void
     {
         $output = $this->task('convert', [
             'input-format'  => PhpMdJsonConverter::TYPE,
@@ -246,7 +243,7 @@ class CliCommandsTest extends PHPUnit
             'input-format'  => PhpMdJsonConverter::TYPE,
             'output-format' => TeamCityInspectionsConverter::TYPE,
             'input-file'    => Fixtures::PHPMD_JSON,
-            'suite-name'    => "Test Suite",
+            'suite-name'    => 'Test Suite',
         ]);
         isContain("inspectionType id='Test Suite:UnusedFormalParameter' " .
             "name='UnusedFormalParameter' " .
@@ -257,15 +254,16 @@ class CliCommandsTest extends PHPUnit
     /**
      * @depends testConvertToTcInspections
      */
-    public function testNonZeroCode()
+    public function testNonZeroCode(): void
     {
         $output = null;
+
         try {
             $this->task('convert', [
                 'input-format'  => PhpMdJsonConverter::TYPE,
                 'output-format' => TeamCityInspectionsConverter::TYPE,
                 'input-file'    => Fixtures::PHPMD_JSON,
-                'non-zero-code' => 'yes'
+                'non-zero-code' => 'yes',
             ]);
         } catch (\Exception $exception) {
             $output = $exception->getMessage();
@@ -277,31 +275,31 @@ class CliCommandsTest extends PHPUnit
             "description='Issues found while checking coding standards'", $output);
     }
 
-    public function testConvertUndefinedFile()
+    public function testConvertUndefinedFile(): void
     {
         $output = $this->task('convert', [
             'input-format'  => CheckStyleConverter::TYPE,
             'output-format' => JUnitConverter::TYPE,
             'input-file'    => '/undefined/file.xml',
-            'suite-name'    => "Test Suite",
-            'root-path'     => "src",
-            'non-zero-code' => 'yes'
+            'suite-name'    => 'Test Suite',
+            'root-path'     => 'src',
+            'non-zero-code' => 'yes',
         ]);
 
-        isSame("Error: File \"/undefined/file.xml\" not found", trim($output));
+        isSame('Error: File "/undefined/file.xml" not found', \trim($output));
     }
 
-    public function testConvertCommand()
+    public function testConvertCommand(): void
     {
         $output = $this->task('convert', [
             'input-format'  => CheckStyleConverter::TYPE,
             'output-format' => JUnitConverter::TYPE,
             'input-file'    => Fixtures::PSALM_CHECKSTYLE,
-            'suite-name'    => "Test Suite",
-            'root-path'     => "src",
+            'suite-name'    => 'Test Suite',
+            'root-path'     => 'src',
         ]);
 
-        $expectedFileContent = implode("\n", [
+        $expectedFileContent = \implode("\n", [
             '<?xml version="1.0" encoding="UTF-8"?>',
             '<testsuites>',
             '  <testsuite name="Test Suite" tests="5" failures="5">',
@@ -351,15 +349,15 @@ class CliCommandsTest extends PHPUnit
         isSame($expectedFileContent, $output);
     }
 
-    public function testConvertCommandSaveToFile()
+    public function testConvertCommandSaveToFile(): void
     {
         $output = $this->task('convert', [
             'input-format'  => CheckStyleConverter::TYPE,
             'output-format' => JUnitConverter::TYPE,
             'input-file'    => Fixtures::PSALM_CHECKSTYLE,
             'output-file'   => PROJECT_BUILD . '/testConvertCommandSaveToFile.xml',
-            'suite-name'    => "Test Suite",
-            'root-path'     => "src",
+            'suite-name'    => 'Test Suite',
+            'root-path'     => 'src',
         ]);
 
         isContain('/build/testConvertCommandSaveToFile.xml', $output);
@@ -367,9 +365,6 @@ class CliCommandsTest extends PHPUnit
     }
 
     /**
-     * @param string $action
-     * @param array  $params
-     * @return string
      * @throws \Exception
      */
     public function task(string $action, array $params = []): string
@@ -380,8 +375,8 @@ class CliCommandsTest extends PHPUnit
         $application->add(new TeamCityStats());
         $command = $application->find($action);
 
-        $buffer = new BufferedOutput();
-        $args = new StringInput(Cli::build('', $params));
+        $buffer   = new BufferedOutput();
+        $args     = new StringInput(Cli::build('', $params));
         $exitCode = $command->run($args, $buffer);
 
         if ($exitCode) {
@@ -391,25 +386,20 @@ class CliCommandsTest extends PHPUnit
         return $buffer->fetch();
     }
 
-    /**
-     * @param string $action
-     * @param array  $params
-     * @return string
-     */
     public function taskReal(string $action, array $params = []): string
     {
         $rootDir = PROJECT_ROOT;
 
         return Cli::exec(
-            implode(' ', [
+            \implode(' ', [
                 Sys::getBinary(),
                 "{$rootDir}/ci-report-converter.php --no-ansi",
                 $action,
-                '2>&1'
+                '2>&1',
             ]),
             $params,
             $rootDir,
-            false
+            false,
         );
     }
 }

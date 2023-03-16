@@ -19,26 +19,15 @@ namespace JBZoo\CIReportConverter\Formats\Metric;
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 use JBZoo\CIReportConverter\Formats\MetricMaps\AbstractMetricMap;
 
-/**
- * Class Metrics
- * @package JBZoo\CIReportConverter\Formats\Metric
- */
 class Metrics extends AbstractNode
 {
-    /**
-     * @var float[]|int[]|null[]
-     */
+    /** @var float[]|int[]|null[] */
     private array $metrics = [];
 
-    /**
-     * @var AbstractMetricMap|null
-     */
     private ?AbstractMetricMap $map = null;
 
     /**
-     * @param string         $key
-     * @param float|int|null $value
-     * @return $this
+     * @param null|float|int $value
      */
     public function add(string $key, $value = null): self
     {
@@ -54,24 +43,19 @@ class Metrics extends AbstractNode
         return $this;
     }
 
-    /**
-     * @param AbstractMetricMap $map
-     * @return $this
-     */
     public function setMap(AbstractMetricMap $map): self
     {
         $this->map = $map;
+
         return $this;
     }
 
-    /**
-     * @return array
-     */
     public function toArray(): array
     {
         $metrics = $this->getMetrics();
 
         $result = [];
+
         foreach ($metrics as $metric) {
             if ($metric->name) {
                 $result[$metric->name] = $metric->toArray();
@@ -87,33 +71,38 @@ class Metrics extends AbstractNode
     public function getMetrics(): array
     {
         $columnMap = [];
-        if (null !== $this->map) {
+        if ($this->map !== null) {
             $columnMap = $this->map->getMap();
         }
 
         $toolName = $this->map ? $this->map->getName() . ':' : '';
 
         $result = [];
+
         foreach ($this->metrics as $key => $value) {
-            if (null === $value) {
+            if ($value === null) {
                 continue;
             }
 
             $key = (string)$key;
 
-            $metric = new Metric();
-            $metric->key = $key;
+            $metric        = new Metric();
+            $metric->key   = $key;
             $metric->value = $value;
-            $metric->name = \array_key_exists($key, $columnMap)
+            $metric->name  = \array_key_exists($key, $columnMap)
                 ? "{$columnMap[$key]} ({$toolName}{$key})"
                 : "{$toolName}{$key}";
 
             $result[$key] = $metric;
         }
 
-        \uasort($result, static function (Metric $metric1, Metric $metric2): int {
-            return \strcmp((string)$metric1->name, (string)$metric2->name);
-        });
+        \uasort(
+            $result,
+            static fn (Metric $metric1, Metric $metric2): int => \strcmp(
+                (string)$metric1->name,
+                (string)$metric2->name,
+            ),
+        );
 
         return $result;
     }

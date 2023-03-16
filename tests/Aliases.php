@@ -18,17 +18,12 @@ namespace JBZoo\PHPUnit;
 
 use JBZoo\CIReportConverter\Formats\Xml;
 
-/**
- * Class Aliases
- * @package JBZoo\PHPUnit
- */
 class Aliases
 {
     /**
      * @param string $xmlString
-     * @param string $xsdFile
      */
-    public static function isValidXml($xmlString, string $xsdFile = Fixtures::XSD_JUNIT)
+    public static function isValidXml($xmlString, string $xsdFile = Fixtures::XSD_JUNIT): void
     {
         isNotEmpty($xmlString);
 
@@ -41,14 +36,10 @@ class Aliases
         }
     }
 
-    /**
-     * @param string $expectedCode
-     * @param string $actualCode
-     */
-    public static function isSameXml(string $expectedCode, string $actualCode)
+    public static function isSameXml(string $expectedCode, string $actualCode): void
     {
         $xmlExpected = Xml::createDomDocument($expectedCode);
-        $xmlActual = Xml::createDomDocument($actualCode);
+        $xmlActual   = Xml::createDomDocument($actualCode);
 
         isSame($xmlExpected->saveXML(), $xmlActual->saveXML());
     }

@@ -31,9 +31,10 @@ final class PackageTest extends \JBZoo\Codestyle\PHPUnit\AbstractPackageTest
         parent::setUp();
     }
 
-    public function testBuildGraphManually()
+    public function testBuildGraphManually(): void
     {
         $sources = [];
+
         foreach (Map::MAP_TESTS as $handler => $directions) {
             if ($directions[Map::INPUT]) {
                 $sources[$handler::TYPE] = $handler::NAME;
@@ -41,6 +42,7 @@ final class PackageTest extends \JBZoo\Codestyle\PHPUnit\AbstractPackageTest
         }
 
         $targets = [];
+
         foreach (Map::MAP_TESTS as $handler => $directions) {
             if ($directions[Map::OUTPUT]) {
                 $targets[$handler::TYPE] = $handler::NAME;
@@ -57,20 +59,20 @@ final class PackageTest extends \JBZoo\Codestyle\PHPUnit\AbstractPackageTest
         $graph->addNode($toolbox = new Node('ci-report-converter', 'CI-Report<br>Converter', Node::CIRCLE));
 
         foreach ($sources as $sourceType => $sourceName) {
-            $node = new Node($sourceType . "_src", $sourceName);
+            $node = new Node($sourceType . '_src', $sourceName);
             $graph->addNode($node);
             $graph->addLink(new Link($node, $toolbox, '', Link::THICK));
         }
 
         foreach ($targets as $targetType => $targetName) {
-            $node = new Node($targetType . "_target", $targetName);
+            $node = new Node($targetType . '_target', $targetName);
             $graph->addNode($node);
             $graph->addLink(new Link($toolbox, $node, '', Link::THICK));
         }
 
-        file_put_contents(PROJECT_ROOT . '/build/directions.html', $graph->renderHtml(['version' => '8.9.2']));
+        \file_put_contents(PROJECT_ROOT . '/build/directions.html', $graph->renderHtml(['version' => '8.9.2']));
 
-        $tmpl = implode("\n", [
+        $tmpl = \implode("\n", [
             '```mermaid',
             $graph->render(),
             '```',

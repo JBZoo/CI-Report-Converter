@@ -18,34 +18,24 @@ namespace JBZoo\CIReportConverter\Formats\TeamCity\Writers;
 
 use Symfony\Component\Console\Output\OutputInterface;
 
-/**
- * Class SymfonyConsole
- * @package JBZoo\CIReportConverter\Formats\TeamCity\Writers
- */
 class SymfonyConsole implements AbstractWriter
 {
-    /**
-     * @var OutputInterface|null
-     */
     private ?OutputInterface $output = null;
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function write(?string $message): void
     {
-        if (null === $this->output) {
+        if ($this->output === null) {
             throw new Exception('Symfony OutputInterface endpoint is not set');
         }
 
-        if (null !== $message) {
+        if ($message !== null) {
             $this->output->writeln($message);
         }
     }
 
-    /**
-     * @param OutputInterface $output
-     */
     public function setCallback(OutputInterface $output): void
     {
         $this->output = $output;

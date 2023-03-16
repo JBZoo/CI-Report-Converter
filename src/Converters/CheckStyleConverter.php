@@ -16,30 +16,26 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Converters;
 
-use JBZoo\Data\Data;
 use JBZoo\CIReportConverter\Formats\Source\SourceCaseOutput;
 use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 use JBZoo\CIReportConverter\Formats\Xml;
 use JBZoo\CIReportConverter\Helper;
+use JBZoo\Data\Data;
 
 use function JBZoo\Data\data;
 
-/**
- * Class CheckStyleConverter
- * @package JBZoo\CIReportConverter\Converters
- */
 class CheckStyleConverter extends AbstractConverter
 {
     public const TYPE = 'checkstyle';
     public const NAME = 'CheckStyle.xml';
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function toInternal(string $source): SourceSuite
     {
         $xmlDocument = Xml::createDomDocument($source);
-        $xmlAsArray = Xml::dom2Array($xmlDocument);
+        $xmlAsArray  = Xml::dom2Array($xmlDocument);
 
         $sourceSuite = new SourceSuite($this->rootSuiteName ?: 'CheckStyle');
 
@@ -48,27 +44,27 @@ class CheckStyleConverter extends AbstractConverter
                 $relFilename = $this->cleanFilepath($file['_attrs']['name'] ?? 'undefined');
                 $absFilename = $this->getFullPath($relFilename);
 
-                $suite = $sourceSuite->addSuite($relFilename);
+                $suite       = $sourceSuite->addSuite($relFilename);
                 $suite->file = $absFilename;
 
                 foreach ($file['_children'] as $errorNode) {
                     $error = data($errorNode['_attrs']);
                     $error->set('full_path', $absFilename);
 
-                    $line = $error->get('line');
+                    $line   = $error->get('line');
                     $column = $error->get('column');
-                    $type = $error->get('source') ?? 'ERROR';
+                    $type   = $error->get('source') ?? 'ERROR';
 
                     $caseName = $line > 0 ? "{$relFilename} line {$line}" : $relFilename;
                     $caseName = $column > 0 ? "{$caseName}, column {$column}" : $caseName;
 
-                    $case = $suite->addTestCase($caseName);
-                    $case->file = $absFilename;
-                    $case->line = $line ?: null;
-                    $case->column = $column ?: null;
-                    $case->class = $type;
+                    $case            = $suite->addTestCase($caseName);
+                    $case->file      = $absFilename;
+                    $case->line      = $line ?: null;
+                    $case->column    = $column ?: null;
+                    $case->class     = $type;
                     $case->classname = $type;
-                    $case->failure = new SourceCaseOutput($type, $error->get('message'), self::getDetails($error));
+                    $case->failure   = new SourceCaseOutput($type, $error->get('message'), self::getDetails($error));
                 }
             }
         }
@@ -76,10 +72,6 @@ class CheckStyleConverter extends AbstractConverter
         return $sourceSuite;
     }
 
-    /**
-     * @param Data $data
-     * @return string|null
-     */
     private static function getDetails(Data $data): ?string
     {
         return Helper::descAsList([

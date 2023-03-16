@@ -19,14 +19,10 @@ namespace JBZoo\CIReportConverter\Formats\GitLabJson;
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
 /**
- * Class GitLabJsonCase
- *
  * @property string      $description
  * @property string      $severity
- * @property string|null $name
- * @property int|null    $line
- *
- * @package JBZoo\CIReportConverter\Formats\GitLabJson
+ * @property null|string $name
+ * @property null|int    $line
  */
 class GitLabJsonCase extends AbstractNode
 {
@@ -40,9 +36,6 @@ class GitLabJsonCase extends AbstractNode
 
     public const DEFAULT_DESCRIPTION = 'Undefined error message';
 
-    /**
-     * @var array
-     */
     protected array $meta = [
         'description' => ['string'],
         'severity'    => ['string'],  // See self::SEVERITY_*
@@ -50,31 +43,23 @@ class GitLabJsonCase extends AbstractNode
         'line'        => ['int'],
     ];
 
-
-    /**
-     * GithubCase constructor.
-     * @param string|null $name
-     */
     public function __construct(?string $name = null)
     {
         parent::__construct($name);
-        $this->severity = self::DEFAULT_LEVEL;
+        $this->severity    = self::DEFAULT_LEVEL;
         $this->description = self::DEFAULT_DESCRIPTION;
     }
 
-    /**
-     * @return array
-     */
     public function toArray(): array
     {
         return [
             'description' => $this->description,
-            'fingerprint' => \hash('sha256', \implode([$this->name, $this->line, $this->description])),
+            'fingerprint' => \hash('sha256', \implode('', [$this->name, $this->line, $this->description])),
             'severity'    => $this->severity,
             'location'    => [
                 'path'  => $this->name,
-                'lines' => ['begin' => $this->line]
-            ]
+                'lines' => ['begin' => $this->line],
+            ],
         ];
     }
 }

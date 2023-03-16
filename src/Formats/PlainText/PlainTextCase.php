@@ -19,14 +19,10 @@ namespace JBZoo\CIReportConverter\Formats\PlainText;
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
 /**
- * Class PlainTextCase
- *
- * @property int|null    $line
- * @property int|null    $column
- * @property string|null $message
+ * @property null|int    $line
+ * @property null|int    $column
+ * @property null|string $message
  * @property string      $level
- *
- * @package JBZoo\CIReportConverter\Formats\PlainText
  */
 class PlainTextCase extends AbstractNode
 {
@@ -37,9 +33,6 @@ class PlainTextCase extends AbstractNode
     public const DEFAULT_LEVEL   = self::LEVEL_ERROR;
     public const DEFAULT_MESSAGE = 'Undefined Error Message';
 
-    /**
-     * @var array
-     */
     protected array $meta = [
         'name'    => ['string'], // It's relative path to file
         'level'   => ['string'], // See self::LEVEL_*
@@ -48,18 +41,14 @@ class PlainTextCase extends AbstractNode
         'message' => ['string'],
     ];
 
-    /**
-     * PlainTextCase constructor.
-     * @param string|null $name
-     */
     public function __construct(?string $name = null)
     {
         parent::__construct($name);
 
         // Set default values
-        $this->level = self::DEFAULT_LEVEL;
+        $this->level   = self::DEFAULT_LEVEL;
         $this->message = self::DEFAULT_MESSAGE;
-        $this->column = 1;
-        $this->line = 1;
+        $this->column  = 1;
+        $this->line    = 1;
     }
 }

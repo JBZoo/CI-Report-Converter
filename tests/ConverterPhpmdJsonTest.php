@@ -19,22 +19,17 @@ namespace JBZoo\PHPUnit;
 use JBZoo\CIReportConverter\Converters\JUnitConverter;
 use JBZoo\CIReportConverter\Converters\PhpMdJsonConverter;
 
-/**
- * Class PhpmdJson2JUnitTest
- *
- * @package JBZoo\PHPUnit
- */
 class ConverterPhpmdJsonTest extends PHPUnit
 {
-    public function testPhpmdJson2JUnit()
+    public function testPhpmdJson2JUnit(): void
     {
         $actual = (new PhpMdJsonConverter())
-            ->toInternal(file_get_contents(Fixtures::PHPMD_JSON));
+            ->toInternal(\file_get_contents(Fixtures::PHPMD_JSON));
 
         $actual = (new JUnitConverter())->fromInternal($actual);
         Aliases::isValidXml($actual);
 
-        isSame(implode("\n", [
+        isSame(\implode("\n", [
             '<?xml version="1.0" encoding="UTF-8"?>',
             '<testsuites>',
             '  <testsuite name="PHPmd" tests="10" failures="10">',

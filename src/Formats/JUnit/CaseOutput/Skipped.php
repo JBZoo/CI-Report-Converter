@@ -16,14 +16,7 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\JUnit\CaseOutput;
 
-/**
- * Class Skipped
- * @package JBZoo\CIReportConverter\Formats\JUnit\CaseOutput
- */
 class Skipped extends AbstractOutput
 {
-    /**
-     * @var string
-     */
     protected string $elementName = 'skipped';
 }

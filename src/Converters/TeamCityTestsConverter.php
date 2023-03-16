@@ -22,33 +22,20 @@ use JBZoo\CIReportConverter\Formats\TeamCity\TeamCity;
 use JBZoo\CIReportConverter\Formats\TeamCity\Writers\AbstractWriter;
 use JBZoo\CIReportConverter\Formats\TeamCity\Writers\Buffer;
 
-/**
- * Class TeamCityTestsConverter
- * @package JBZoo\CIReportConverter\Converters
- */
 class TeamCityTestsConverter extends AbstractConverter
 {
     public const TYPE = 'tc-tests';
     public const NAME = 'TeamCity - Tests';
 
-    /**
-     * @var TeamCity
-     */
     private TeamCity $tcLogger;
 
-    /**
-     * TeamCityTestsConverter constructor.
-     * @param array               $params
-     * @param int|null            $flowId
-     * @param AbstractWriter|null $tcWriter
-     */
     public function __construct(array $params = [], ?int $flowId = null, ?AbstractWriter $tcWriter = null)
     {
         $this->tcLogger = new TeamCity($tcWriter ?: new Buffer(), $flowId, $params);
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function fromInternal(SourceSuite $sourceSuite): string
     {
@@ -71,9 +58,6 @@ class TeamCityTestsConverter extends AbstractConverter
         return '';
     }
 
-    /**
-     * @param SourceSuite $sourceSuite
-     */
     private function renderSuite(SourceSuite $sourceSuite): void
     {
         $params = [];
@@ -99,7 +83,6 @@ class TeamCityTestsConverter extends AbstractConverter
     }
 
     /**
-     * @param SourceCase $case
      * @SuppressWarnings(PHPMD.NPathComplexity)
      */
     private function renderTestCase(SourceCase $case): void
@@ -126,11 +109,11 @@ class TeamCityTestsConverter extends AbstractConverter
                     'duration' => $case->time,
                 ];
 
-                $messageData = $failureObject->parseDescription();
-                $params['actual'] = $messageData->get('actual');
+                $messageData        = $failureObject->parseDescription();
+                $params['actual']   = $messageData->get('actual');
                 $params['expected'] = $messageData->get('expected');
-                $params['details'] = $messageData->get('description') ?? $params['details'];
-                $params['message'] = $messageData->get('message') ?? $params['message'];
+                $params['details']  = $messageData->get('description') ?? $params['details'];
+                $params['message']  = $messageData->get('message') ?? $params['message'];
                 $logger->testFailed($case->name, $params);
             }
         }

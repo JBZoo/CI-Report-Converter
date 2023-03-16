@@ -18,20 +18,12 @@ namespace JBZoo\CIReportConverter;
 
 use JBZoo\Utils\Str;
 
-/**
- * Class Helper
- * @package JBZoo\CIReportConverter
- */
 class Helper
 {
-    /**
-     * @param array $data
-     * @return string|null
-     */
     public static function descAsList(array $data): ?string
     {
         $result = Str::listToDescription($data, true);
-        if (null === $result) {
+        if ($result === null) {
             return null;
         }
 

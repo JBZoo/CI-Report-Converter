@@ -16,10 +16,6 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\JUnit;
 
-/**
- * Class Exception
- * @package JBZoo\CIReportConverter\Formats\JUnit
- */
 class Exception extends \JBZoo\CIReportConverter\Formats\Exception
 {
 }

@@ -22,17 +22,13 @@ use JBZoo\CIReportConverter\Formats\GithubActions\GithubSuite;
 use JBZoo\CIReportConverter\Formats\Source\SourceCase;
 use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 
-/**
- * Class GithubCliConverter
- * @package JBZoo\CIReportConverter\Converters
- */
 class GithubCliConverter extends AbstractConverter
 {
     public const TYPE = 'github-cli';
     public const NAME = 'GitHub Actions - CLI';
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function fromInternal(SourceSuite $sourceSuite): string
     {
@@ -48,7 +44,6 @@ class GithubCliConverter extends AbstractConverter
     }
 
     /**
-     * @param SourceSuite               $sourceSuite
      * @param GithubActions|GithubSuite $ghActions
      */
     private function renderSuite(SourceSuite $sourceSuite, $ghActions): void
@@ -63,22 +58,21 @@ class GithubCliConverter extends AbstractConverter
     }
 
     /**
-     * @param SourceCase                $sourceCase
      * @param GithubActions|GithubSuite $ghActions
      */
     private function renderTestCase(SourceCase $sourceCase, $ghActions): void
     {
-        if (null !== $sourceCase->stdOut) {
+        if ($sourceCase->stdOut !== null) {
             $level = GithubCase::LEVEL_ERROR;
-        } elseif (null !== $sourceCase->errOut) {
+        } elseif ($sourceCase->errOut !== null) {
             $level = GithubCase::LEVEL_ERROR;
-        } elseif (null !== $sourceCase->failure) {
+        } elseif ($sourceCase->failure !== null) {
             $level = GithubCase::LEVEL_ERROR;
-        } elseif (null !== $sourceCase->error) {
+        } elseif ($sourceCase->error !== null) {
             $level = GithubCase::LEVEL_ERROR;
-        } elseif (null !== $sourceCase->warning) {
+        } elseif ($sourceCase->warning !== null) {
             $level = GithubCase::LEVEL_WARNING;
-        } elseif (null !== $sourceCase->skipped) {
+        } elseif ($sourceCase->skipped !== null) {
             $level = GithubCase::LEVEL_DEBUG;
         } else {
             $level = GithubCase::LEVEL_ERROR;
@@ -86,10 +80,10 @@ class GithubCliConverter extends AbstractConverter
 
         $message = $sourceCase->getMessage();
         if ($message) {
-            $case = $ghActions->addCase($this->cleanFilepath($sourceCase->file ?: ''));
-            $case->line = $sourceCase->line;
-            $case->column = $sourceCase->column;
-            $case->level = $level;
+            $case          = $ghActions->addCase($this->cleanFilepath($sourceCase->file ?: ''));
+            $case->line    = $sourceCase->line;
+            $case->column  = $sourceCase->column;
+            $case->level   = $level;
             $case->message = $this->cleanFilepath($message);
         }
     }

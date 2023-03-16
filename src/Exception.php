@@ -16,10 +16,6 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter;
 
-/**
- * Class Exception
- * @package JBZoo\CIReportConverter
- */
 class Exception extends \RuntimeException
 {
 }

@@ -16,15 +16,7 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\TeamCity\Writers;
 
-/**
- * Interface AbstractWriter
- * @package JBZoo\CIReportConverter\Formats\TeamCity\Writers
- */
 interface AbstractWriter
 {
-    /**
-     * @param string|null $message
-     * @return void
-     */
     public function write(?string $message): void;
 }

@@ -22,58 +22,54 @@ use JBZoo\CIReportConverter\Converters\PhpLocStatsTcConverter;
 use JBZoo\CIReportConverter\Converters\PhpMetricsStatsTcConverter;
 use JBZoo\CIReportConverter\Converters\PhpUnitCloverStatsTcConverter;
 
-/**
- * Class ConverterTeamCityStatsTest
- * @package JBZoo\PHPUnit
- */
 class ConverterTeamCityStatsTest extends PHPUnit
 {
-    public function testPhpLocJson()
+    public function testPhpLocJson(): void
     {
         $converter = (new PhpLocStatsTcConverter(['show-datetime' => false], 1));
 
-        $sourceCode = $converter->toInternalMetric(file_get_contents(Fixtures::PHPLOC_JSON));
-        $output = $converter->fromInternalMetric($sourceCode);
+        $sourceCode = $converter->toInternalMetric(\file_get_contents(Fixtures::PHPLOC_JSON));
+        $output     = $converter->fromInternalMetric($sourceCode);
 
         isSame(Fixtures::getExpectedFileContent('txt'), $output);
     }
 
-    public function testPhpDependXml()
+    public function testPhpDependXml(): void
     {
         $converter = (new PhpDependStatsTcConverter(['show-datetime' => false], 1));
 
-        $sourceCode = $converter->toInternalMetric(file_get_contents(Fixtures::PHP_DEPEND_XML));
-        $output = $converter->fromInternalMetric($sourceCode);
+        $sourceCode = $converter->toInternalMetric(\file_get_contents(Fixtures::PHP_DEPEND_XML));
+        $output     = $converter->fromInternalMetric($sourceCode);
 
         isSame(Fixtures::getExpectedFileContent('txt'), $output);
     }
 
-    public function testPhpMetricsXml()
+    public function testPhpMetricsXml(): void
     {
         $converter = (new PhpMetricsStatsTcConverter(['show-datetime' => false], 1));
 
-        $sourceCode = $converter->toInternalMetric(file_get_contents(Fixtures::PHP_METRICS_XML));
-        $output = $converter->fromInternalMetric($sourceCode);
+        $sourceCode = $converter->toInternalMetric(\file_get_contents(Fixtures::PHP_METRICS_XML));
+        $output     = $converter->fromInternalMetric($sourceCode);
 
         isSame(Fixtures::getExpectedFileContent('txt'), $output);
     }
 
-    public function testPhpUnitCloverXml()
+    public function testPhpUnitCloverXml(): void
     {
         $converter = (new PhpUnitCloverStatsTcConverter(['show-datetime' => false], 1));
 
-        $sourceCode = $converter->toInternalMetric(file_get_contents(Fixtures::PHPUNIT_CLOVER));
-        $output = $converter->fromInternalMetric($sourceCode);
+        $sourceCode = $converter->toInternalMetric(\file_get_contents(Fixtures::PHPUNIT_CLOVER));
+        $output     = $converter->fromInternalMetric($sourceCode);
 
         isSame(Fixtures::getExpectedFileContent('txt'), $output);
     }
 
-    public function testJUnitXml()
+    public function testJUnitXml(): void
     {
         $converter = (new JUnitStatsTcConverter(['show-datetime' => false], 1));
 
-        $sourceCode = $converter->toInternalMetric(file_get_contents(Fixtures::PHPUNIT_JUNIT_NESTED));
-        $output = $converter->fromInternalMetric($sourceCode);
+        $sourceCode = $converter->toInternalMetric(\file_get_contents(Fixtures::PHPUNIT_JUNIT_NESTED));
+        $output     = $converter->fromInternalMetric($sourceCode);
 
         isSame(Fixtures::getExpectedFileContent('txt'), $output);
     }

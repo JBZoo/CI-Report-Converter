@@ -19,16 +19,9 @@ namespace JBZoo\PHPUnit;
 use JBZoo\Utils\Cli;
 use JBZoo\Utils\Sys;
 
-/**
- * Class CliCommandsPharTest
- * @package JBZoo\PHPUnit
- */
 class CliCommandsPharTest extends CliCommandsTest
 {
     /**
-     * @param string $action
-     * @param array  $params
-     * @return string
      * @throws \Exception
      */
     public function task(string $action, array $params = []): string
@@ -36,28 +29,23 @@ class CliCommandsPharTest extends CliCommandsTest
         return $this->taskReal($action, $params);
     }
 
-    /**
-     * @param string $action
-     * @param array  $params
-     * @return string
-     */
     public function taskReal(string $action, array $params = []): string
     {
         $rootDir = PROJECT_ROOT;
-        
-        $params['-v'] = null;
+
+        $params['-v']        = null;
         $params['--no-ansi'] = null;
 
         return Cli::exec(
-            implode(' ', [
+            \implode(' ', [
                 Sys::getBinary(),
                 "{$rootDir}/build/ci-report-converter.phar",
                 $action,
-                '2>&1'
+                '2>&1',
             ]),
             $params,
             $rootDir,
-            false
+            false,
         );
     }
 }

@@ -22,17 +22,13 @@ use JBZoo\CIReportConverter\Formats\Xml;
 
 use function JBZoo\Data\data;
 
-/**
- * Class PhpDependStatsTcConverter
- * @package JBZoo\CIReportConverter\Converters
- */
 class PhpDependStatsTcConverter extends AbstractStatsTcConverter
 {
     public const TYPE = 'pdepend-xml';
     public const NAME = 'PHP Depend (xml)';
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function toInternalMetric(string $sourceCode): Metrics
     {

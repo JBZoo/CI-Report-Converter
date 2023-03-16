@@ -22,38 +22,22 @@ use JBZoo\CIReportConverter\Formats\TeamCity\TeamCity;
 use JBZoo\CIReportConverter\Formats\TeamCity\Writers\AbstractWriter;
 use JBZoo\CIReportConverter\Formats\TeamCity\Writers\Buffer;
 
-/**
- * Class TeamCityInspectionsConverter
- * @package JBZoo\CIReportConverter\Converters
- */
 class TeamCityInspectionsConverter extends AbstractConverter
 {
     public const TYPE = 'tc-inspections';
     public const NAME = 'TeamCity - Inspections';
 
-    /**
-     * @var TeamCity
-     */
     private TeamCity $tcLogger;
 
-    /**
-     * @var string
-     */
     private string $globalPrefix = '';
 
-    /**
-     * TeamCityTestsConverter constructor.
-     * @param array               $params
-     * @param int|null            $flowId
-     * @param AbstractWriter|null $tcWriter
-     */
     public function __construct(array $params = [], ?int $flowId = null, ?AbstractWriter $tcWriter = null)
     {
         $this->tcLogger = new TeamCity($tcWriter ?: new Buffer(), $flowId, $params);
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function fromInternal(SourceSuite $sourceSuite): string
     {
@@ -72,9 +56,6 @@ class TeamCityInspectionsConverter extends AbstractConverter
         return '';
     }
 
-    /**
-     * @param SourceSuite $sourceSuite
-     */
     private function renderSuite(SourceSuite $sourceSuite): void
     {
         foreach ($sourceSuite->getCases() as $case) {
@@ -87,26 +68,24 @@ class TeamCityInspectionsConverter extends AbstractConverter
     }
 
     /**
-     * @param SourceCase $case
-     * @param string     $suiteName
      * @SuppressWarnings(PHPMD.NPathComplexity)
      */
     private function renderTestCase(SourceCase $case, string $suiteName): void
     {
         $failureObject = null;
-        $severity = null;
+        $severity      = null;
 
         if ($case->failure) {
-            $severity = TeamCity::SEVERITY_ERROR;
+            $severity      = TeamCity::SEVERITY_ERROR;
             $failureObject = $case->failure;
         } elseif ($case->error) {
-            $severity = TeamCity::SEVERITY_ERROR;
+            $severity      = TeamCity::SEVERITY_ERROR;
             $failureObject = $case->error;
         } elseif ($case->warning) {
-            $severity = TeamCity::SEVERITY_WARNING;
+            $severity      = TeamCity::SEVERITY_WARNING;
             $failureObject = $case->warning;
         } elseif ($case->skipped) {
-            $severity = TeamCity::SEVERITY_WARNING_WEAK;
+            $severity      = TeamCity::SEVERITY_WARNING_WEAK;
             $failureObject = $case->skipped;
         }
 
@@ -116,20 +95,20 @@ class TeamCityInspectionsConverter extends AbstractConverter
         }
 
         $messageData = $failureObject->parseDescription();
-        $title = "{$suiteName} / {$case->name}";
-        $message = $messageData->get('message') ?? $failureObject->message ?: '';
-        $details = $messageData->get('description') ?? $failureObject->details ?: '';
+        $title       = "{$suiteName} / {$case->name}";
+        $message     = $messageData->get('message') ?? $failureObject->message ?: '';
+        $details     = $messageData->get('description') ?? $failureObject->details ?: '';
 
-        if ($details && $message && \strpos($details, $message) !== false) {
+        if ($details && $message && \str_contains($details, $message)) {
             $message = null;
         }
 
-        if (\strpos($case->name, $suiteName) !== false) {
+        if (\str_contains($case->name, $suiteName)) {
             $title = $case->name;
         }
 
         $inspectionName = $case->class ?: $case->classname ?: $failureObject->type ?: $severity;
-        $inspectionId = ($this->globalPrefix ?: TeamCity::DEFAULT_INSPECTION_ID) . ':' . $inspectionName;
+        $inspectionId   = ($this->globalPrefix ?: TeamCity::DEFAULT_INSPECTION_ID) . ':' . $inspectionName;
 
         $this->tcLogger->addInspectionType($inspectionId, $inspectionName, $this->globalPrefix);
         $this->tcLogger->addInspectionIssue(
@@ -140,9 +119,9 @@ class TeamCityInspectionsConverter extends AbstractConverter
                 \str_repeat('-', 120),
                 $title,
                 $message,
-                $details
+                $details,
             ])))),
-            $severity
+            $severity,
         );
     }
 }

@@ -16,31 +16,28 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Converters;
 
-use JBZoo\Data\Data;
 use JBZoo\CIReportConverter\Formats\Source\SourceCaseOutput;
 use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 use JBZoo\CIReportConverter\Helper;
+use JBZoo\Data\Data;
 
 use function JBZoo\Data\data;
 use function JBZoo\Data\json;
 
-/**
- * Class PsalmJsonConverter
- * @package JBZoo\CIReportConverter\Converters
- */
 class PsalmJsonConverter extends AbstractConverter
 {
     public const TYPE = 'psalm-json';
     public const NAME = 'Psalm.json';
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function toInternal(string $source): SourceSuite
     {
         $sourceSuite = new SourceSuite($this->rootSuiteName ?: 'Psalm');
 
         $sourceCases = json($source)->getArrayCopy();
+
         foreach ($sourceCases as $sourceCase) {
             $sourceCase = data($sourceCase);
 
@@ -48,19 +45,20 @@ class PsalmJsonConverter extends AbstractConverter
             $fileName = $sourceCase['file_name'] ?? 'Undefined';
             $fileLine = $sourceCase['line_from'] ?? null;
 
-            $suite = $sourceSuite->addSuite($fileName);
+            $suite       = $sourceSuite->addSuite($fileName);
             $suite->file = $sourceCase['file_path'];
 
             $case = $suite->addTestCase($fileLine > 0 ? "{$fileName} line {$sourceCase['line_from']}" : $fileName);
-            $case->file = $sourceCase['file_path'];
-            $case->line = $sourceCase['line_from'];
-            $case->class = $sourceCase['type'];
+
+            $case->file      = $sourceCase['file_path'];
+            $case->line      = $sourceCase['line_from'];
+            $case->class     = $sourceCase['type'];
             $case->classname = $sourceCase['type'];
 
             $caseOutput = new SourceCaseOutput(
                 $sourceCase['type'],
                 $sourceCase['message'],
-                self::getDetails($sourceCase)
+                self::getDetails($sourceCase),
             );
 
             if ($sourceCase['error_level'] <= 0) {
@@ -73,10 +71,6 @@ class PsalmJsonConverter extends AbstractConverter
         return $sourceSuite;
     }
 
-    /**
-     * @param Data $data
-     * @return string|null
-     */
     private static function getDetails(Data $data): ?string
     {
         $snippet = \trim((string)$data->get('snippet'));

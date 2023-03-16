@@ -18,33 +18,18 @@ namespace JBZoo\CIReportConverter\Converters;
 
 use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 
-/**
- * Class AbstractConverter
- * @package JBZoo\CIReportConverter\Converters
- */
 abstract class AbstractConverter
 {
     public const TYPE = 'abstract';
     public const NAME = 'Abstract';
 
-    /**
-     * @var string|null
-     */
     protected ?string $rootPath = null;
 
-    /**
-     * @var string|null
-     */
     protected ?string $rootSuiteName = null;
 
-    /**
-     * @var int|null
-     */
     protected ?int $flowId = null;
 
     /**
-     * @param string $source
-     * @return SourceSuite
      * @phan-suppress PhanUnusedPublicMethodParameter
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
@@ -54,8 +39,6 @@ abstract class AbstractConverter
     }
 
     /**
-     * @param SourceSuite $sourceSuite
-     * @return string
      * @phan-suppress PhanUnusedPublicMethodParameter
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
@@ -64,10 +47,6 @@ abstract class AbstractConverter
         throw new Exception('Method \"' . __METHOD__ . '\" is not available');
     }
 
-    /**
-     * @param string|null $rootPath
-     * @return $this
-     */
     public function setRootPath(?string $rootPath): self
     {
         if ($rootPath === '.') {
@@ -75,33 +54,24 @@ abstract class AbstractConverter
         }
 
         $this->rootPath = (string)$rootPath ?: null;
+
         return $this;
     }
 
-    /**
-     * @param string|null $rootSuiteName
-     * @return $this
-     */
     public function setRootSuiteName(?string $rootSuiteName): self
     {
         $this->rootSuiteName = $rootSuiteName;
+
         return $this;
     }
 
-    /**
-     * @param int $flowId
-     * @return $this
-     */
     public function setFlowId(int $flowId): self
     {
         $this->flowId = $flowId;
+
         return $this;
     }
 
-    /**
-     * @param string $origPath
-     * @return string
-     */
     protected function cleanFilepath(string $origPath): string
     {
         if ($this->rootPath && $origPath) {
@@ -111,10 +81,6 @@ abstract class AbstractConverter
         return $origPath;
     }
 
-    /**
-     * @param string|null $relFilename
-     * @return string|null
-     */
     protected function getFullPath(?string $relFilename): ?string
     {
         if (!$relFilename) {
@@ -126,7 +92,7 @@ abstract class AbstractConverter
         }
 
         if ($this->rootPath) {
-            $rootPath = \rtrim($this->rootPath, '/');
+            $rootPath    = \rtrim($this->rootPath, '/');
             $relFilename = \ltrim($relFilename, '.');
             $relFilename = \ltrim($relFilename, '/');
 
@@ -139,10 +105,8 @@ abstract class AbstractConverter
     }
 
     /**
-     * @param string|null     $filename
-     * @param string|int|null $line
-     * @param string|int|null $column
-     * @return string|null
+     * @param null|int|string $line
+     * @param null|int|string $column
      */
     protected static function getFilePoint(?string $filename = null, $line = 0, $column = 0): ?string
     {

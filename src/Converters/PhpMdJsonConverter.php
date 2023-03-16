@@ -16,25 +16,21 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Converters;
 
-use JBZoo\Data\Data;
 use JBZoo\CIReportConverter\Formats\Source\SourceCaseOutput;
 use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 use JBZoo\CIReportConverter\Helper;
+use JBZoo\Data\Data;
 
 use function JBZoo\Data\data;
 use function JBZoo\Data\json;
 
-/**
- * Class PhpMdJsonConverter
- * @package JBZoo\CIReportConverter\Converters
- */
 class PhpMdJsonConverter extends AbstractConverter
 {
     public const TYPE = 'phpmd-json';
     public const NAME = 'PHPmd.json';
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function toInternal(string $source): SourceSuite
     {
@@ -45,7 +41,7 @@ class PhpMdJsonConverter extends AbstractConverter
         foreach ($files as $file) {
             $relFilename = $this->cleanFilepath($file['file']);
             $absFilename = $this->getFullPath($relFilename);
-            $suite = $sourceSuite->addSuite($relFilename);
+            $suite       = $sourceSuite->addSuite($relFilename);
             $suite->file = $absFilename;
 
             foreach ($file['violations'] as $violation) {
@@ -54,17 +50,17 @@ class PhpMdJsonConverter extends AbstractConverter
 
                 $case = $suite->addTestCase("{$relFilename} line {$violation['beginLine']}");
 
-                $case->file = $absFilename;
-                $case->line = $violation['beginLine'] ?? null;
+                $case->file    = $absFilename;
+                $case->line    = $violation['beginLine'] ?? null;
                 $case->failure = new SourceCaseOutput(
                     $violation['rule'] ?? null,
                     $violation['description'] ?? null,
-                    self::getDetails($violation)
+                    self::getDetails($violation),
                 );
 
                 $package = $violation['package'] ?? null;
-                if (null !== $package) {
-                    $case->class = $package;
+                if ($package !== null) {
+                    $case->class     = $package;
                     $case->classname = \str_replace('\\', '.', $package);
                 }
             }
@@ -73,10 +69,6 @@ class PhpMdJsonConverter extends AbstractConverter
         return $sourceSuite;
     }
 
-    /**
-     * @param Data $data
-     * @return string|null
-     */
     private static function getDetails(Data $data): ?string
     {
         $functionName = $data['function'] ? "{$data['function']}()" : null;

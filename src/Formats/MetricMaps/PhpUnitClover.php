@@ -16,20 +16,11 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\MetricMaps;
 
-/**
- * Class PhpUnitClover
- * @package JBZoo\CIReportConverter\Formats\MetricMaps
- */
 class PhpUnitClover extends AbstractMetricMap
 {
-    /**
-     * @var string
-     */
     protected string $name = 'PHPUnit';
 
-    /**
-     * @var string[]
-     */
+    /** @var string[] */
     protected array $map = [
         'CodeCoverageL'           => 'Coverage / Line-level, %',
         'CodeCoverageAbsLTotal'   => 'Coverage / Found LOC',

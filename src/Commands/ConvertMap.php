@@ -19,14 +19,10 @@ namespace JBZoo\CIReportConverter\Commands;
 use JBZoo\CIReportConverter\Converters\Map;
 use JBZoo\Cli\Codes;
 
-/**
- * Class ConvertMap
- * @package JBZoo\CIReportConverter\Commands
- */
 class ConvertMap extends AbstractCommand
 {
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     protected function configure(): void
     {
@@ -38,11 +34,12 @@ class ConvertMap extends AbstractCommand
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     protected function executeAction(): int
     {
         $this->_(Map::getMarkdownTable());
+
         return Codes::OK;
     }
 }

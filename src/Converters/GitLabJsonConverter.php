@@ -22,8 +22,6 @@ use JBZoo\CIReportConverter\Formats\Source\SourceCase;
 use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 
 /**
- * Class GitLabJsonConverter
- * @package JBZoo\CIReportConverter\Converters
  * @see     https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html#implementing-a-custom-tool
  */
 class GitLabJsonConverter extends AbstractConverter
@@ -32,20 +30,16 @@ class GitLabJsonConverter extends AbstractConverter
     public const NAME = 'GitLab - JSON';
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function fromInternal(SourceSuite $sourceSuite): string
     {
         $gitLabJson = new GitLabJson();
         $this->renderSuite($sourceSuite, $gitLabJson);
 
-        return (string)$gitLabJson . PHP_EOL;
+        return (string)$gitLabJson . \PHP_EOL;
     }
 
-    /**
-     * @param SourceSuite $sourceSuite
-     * @param GitLabJson  $gitLabJson
-     */
     private function renderSuite(SourceSuite $sourceSuite, GitLabJson $gitLabJson): void
     {
         foreach ($sourceSuite->getCases() as $sourceCase) {
@@ -57,23 +51,19 @@ class GitLabJsonConverter extends AbstractConverter
         }
     }
 
-    /**
-     * @param SourceCase $sourceCase
-     * @param GitLabJson $gitLabJson
-     */
     private function renderTestCase(SourceCase $sourceCase, GitLabJson $gitLabJson): void
     {
-        if (null !== $sourceCase->stdOut) {
+        if ($sourceCase->stdOut !== null) {
             $severity = GitLabJsonCase::SEVERITY_INFO;
-        } elseif (null !== $sourceCase->errOut) {
+        } elseif ($sourceCase->errOut !== null) {
             $severity = GitLabJsonCase::SEVERITY_MAJOR;
-        } elseif (null !== $sourceCase->failure) {
+        } elseif ($sourceCase->failure !== null) {
             $severity = GitLabJsonCase::SEVERITY_BLOCKER;
-        } elseif (null !== $sourceCase->error) {
+        } elseif ($sourceCase->error !== null) {
             $severity = GitLabJsonCase::SEVERITY_BLOCKER;
-        } elseif (null !== $sourceCase->warning) {
+        } elseif ($sourceCase->warning !== null) {
             $severity = GitLabJsonCase::SEVERITY_MAJOR;
-        } elseif (null !== $sourceCase->skipped) {
+        } elseif ($sourceCase->skipped !== null) {
             $severity = GitLabJsonCase::SEVERITY_INFO;
         } else {
             $severity = GitLabJsonCase::SEVERITY_MAJOR;
@@ -81,11 +71,11 @@ class GitLabJsonConverter extends AbstractConverter
 
         $description = $sourceCase->getMessage();
         if ($description) {
-            $case = $gitLabJson->addCase();
+            $case              = $gitLabJson->addCase();
             $case->description = $this->cleanFilepath($description);
-            $case->severity = $severity;
-            $case->name = $this->cleanFilepath($sourceCase->file ?: '');
-            $case->line = $sourceCase->line;
+            $case->severity    = $severity;
+            $case->name        = $this->cleanFilepath($sourceCase->file ?: '');
+            $case->line        = $sourceCase->line;
         }
     }
 }

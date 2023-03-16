@@ -19,14 +19,10 @@ namespace JBZoo\CIReportConverter\Formats\GithubActions;
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
 /**
- * Class GithubCase
- *
- * @property int|null    $line
- * @property int|null    $column
- * @property string|null $message
+ * @property null|int    $line
+ * @property null|int    $column
+ * @property null|string $message
  * @property string      $level
- *
- * @package JBZoo\CIReportConverter\Formats\GithubActions
  */
 class GithubCase extends AbstractNode
 {
@@ -37,9 +33,6 @@ class GithubCase extends AbstractNode
     public const DEFAULT_LEVEL   = self::LEVEL_ERROR;
     public const DEFAULT_MESSAGE = 'Undefined Error Message';
 
-    /**
-     * @var array
-     */
     protected array $meta = [
         'name'    => ['string'], // It's relative path to file
         'level'   => ['string'], // See self::LEVEL_*
@@ -48,22 +41,15 @@ class GithubCase extends AbstractNode
         'message' => ['string'],
     ];
 
-    /**
-     * GithubCase constructor.
-     * @param string|null $name
-     */
     public function __construct(?string $name = null)
     {
         parent::__construct($name);
 
         // Set default values
-        $this->level = self::DEFAULT_LEVEL;
+        $this->level   = self::DEFAULT_LEVEL;
         $this->message = self::DEFAULT_MESSAGE;
     }
 
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         $paramsAsString = \implode(',', \array_filter([
@@ -73,7 +59,7 @@ class GithubCase extends AbstractNode
         ]));
 
         $paramsAsString = $paramsAsString ? " {$paramsAsString}" : '';
-        $message = GithubActions::escape($this->message);
+        $message        = GithubActions::escape($this->message);
 
         return "::{$this->level}{$paramsAsString}::{$message}\n";
     }

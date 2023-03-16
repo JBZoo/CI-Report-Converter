@@ -16,26 +16,20 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\TeamCity\Writers;
 
-/**
- * Class CustomCallback
- * @package JBZoo\CIReportConverter\Formats\TeamCity\Writers
- */
 class CustomCallback implements AbstractWriter
 {
-    /**
-     * @var callable|null
-     */
+    /** @var null|callable */
     private $callback;
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function write(?string $message): void
     {
-        if (null === $this->callback) {
+        if ($this->callback === null) {
             throw new Exception('Callback function is not set');
         }
-        \call_user_func($this->callback, $message);
+        ($this->callback)($message);
     }
 
     /**

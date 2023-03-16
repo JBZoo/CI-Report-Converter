@@ -18,31 +18,11 @@ namespace JBZoo\CIReportConverter\Formats\GitLabJson;
 
 use function JBZoo\Data\json;
 
-/**
- * Class GitLabJson
- * @package JBZoo\CIReportConverter\Formats\GitLabJson
- */
 class GitLabJson
 {
-    /**
-     * @var GitLabJsonCase[]
-     */
+    /** @var GitLabJsonCase[] */
     private array $testCases = [];
 
-    /**
-     * @param string|null $name
-     * @return GitLabJsonCase
-     */
-    public function addCase(?string $name = null): GitLabJsonCase
-    {
-        $testSuite = new GitLabJsonCase($name);
-        $this->testCases[] = $testSuite;
-        return $testSuite;
-    }
-
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         $result = [];
@@ -52,5 +32,13 @@ class GitLabJson
         }
 
         return (string)json($result);
+    }
+
+    public function addCase(?string $name = null): GitLabJsonCase
+    {
+        $testSuite         = new GitLabJsonCase($name);
+        $this->testCases[] = $testSuite;
+
+        return $testSuite;
     }
 }

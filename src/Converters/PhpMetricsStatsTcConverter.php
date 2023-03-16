@@ -22,17 +22,13 @@ use JBZoo\CIReportConverter\Formats\Xml;
 
 use function JBZoo\Data\data;
 
-/**
- * Class PhpMetricsStatsTcConverter
- * @package JBZoo\CIReportConverter\Converters
- */
 class PhpMetricsStatsTcConverter extends AbstractStatsTcConverter
 {
     public const TYPE = 'phpmetrics-xml';
     public const NAME = 'PHP Metrics (xml)';
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function toInternalMetric(string $sourceCode): Metrics
     {

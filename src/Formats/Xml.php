@@ -16,47 +16,33 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats;
 
-/**
- * Class Xml
- * @package JBZoo\CIReportConverter\Formats
- */
 class Xml
 {
     public const VERSION  = '1.0';
     public const ENCODING = 'UTF-8';
 
-    /**
-     * @param string|null $source
-     * @return \DOMDocument
-     */
     public static function createDomDocument(?string $source = null): \DOMDocument
     {
-        $document = new \DOMDocument();
+        $document                     = new \DOMDocument();
         $document->preserveWhiteSpace = false;
 
         if ($source) {
             $document->loadXML($source);
         }
 
-        $document->version = self::VERSION;
-        $document->encoding = self::ENCODING;
+        $document->version      = self::VERSION;
+        $document->encoding     = self::ENCODING;
         $document->formatOutput = true;
 
         return $document;
     }
 
-    /**
-     * @param array             $xmlAsArray
-     * @param \DOMElement|null  $domElement
-     * @param \DOMDocument|null $document
-     * @return \DOMDocument
-     */
     public static function array2Dom(
         array $xmlAsArray,
         ?\DOMElement $domElement = null,
-        ?\DOMDocument $document = null
+        ?\DOMDocument $document = null,
     ): \DOMDocument {
-        if (null === $document) {
+        if ($document === null) {
             $document = self::createDomDocument();
         }
 
@@ -91,8 +77,7 @@ class Xml
     }
 
     /**
-     * @param \DOMNode|\DOMElement|\DOMDocument $element
-     * @return array
+     * @param \DOMDocument|\DOMElement|\DOMNode $element
      * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      */
     public static function dom2Array(\DOMNode $element): array
@@ -117,11 +102,13 @@ class Xml
             if ($children->length === 1 && $child = $children->item(0)) {
                 if ($child->nodeType === \XML_TEXT_NODE) {
                     $result['_text'] = $child->nodeValue;
+
                     return $result;
                 }
 
                 if ($child->nodeType === \XML_CDATA_SECTION_NODE) {
                     $result['_cdata'] = $child->nodeValue;
+
                     return $result;
                 }
             }

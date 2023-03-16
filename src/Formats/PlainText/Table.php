@@ -20,35 +20,17 @@ use Symfony\Component\Console\Helper\Table as SymfonyTable;
 use Symfony\Component\Console\Helper\TableSeparator;
 use Symfony\Component\Console\Output\BufferedOutput;
 
-/**
- * Class Table
- * @package JBZoo\CIReportConverter\Formats\PlainText
- */
 class Table
 {
-    /**
-     * @var BufferedOutput
-     */
     private BufferedOutput $buffer;
 
-    /**
-     * @var SymfonyTable
-     */
     private SymfonyTable $table;
 
-    /**
-     * @var array[]
-     */
+    /** @var array[] */
     private array $rows = [];
 
-    /**
-     * @var string
-     */
     private string $testCaseName = '';
 
-    /**
-     * @param string $testCaseName
-     */
     public function __construct(string $testCaseName)
     {
         $this->buffer = new BufferedOutput();
@@ -59,32 +41,23 @@ class Table
         $this->table->setColumnWidth(2, 80);
         $this->table->setColumnMaxWidth(2, 80);
 
-        if ('' !== $testCaseName) {
+        if ($testCaseName !== '') {
             $this->testCaseName = $testCaseName;
         }
     }
 
-    /**
-     * @return SymfonyTable
-     */
     public function getTable(): SymfonyTable
     {
         return $this->table;
     }
 
-    /**
-     * @param array $row
-     * @return $this
-     */
     public function appendRow(array $row): self
     {
         $this->rows[] = $row;
+
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function render(): string
     {
         $rowsCount = \count($this->rows);
@@ -106,6 +79,7 @@ class Table
         }
 
         $this->table->render();
+
         return $this->buffer->fetch();
     }
 }

@@ -16,28 +16,18 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\TeamCity\Writers;
 
-/**
- * Class Buffer
- * @package JBZoo\CIReportConverter\Formats\TeamCity\Writers
- */
 class Buffer implements AbstractWriter
 {
-    /**
-     * @var array
-     */
     private array $buffer = [];
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function write(?string $message): void
     {
         $this->buffer[] = $message;
     }
 
-    /**
-     * @return array
-     */
     public function getBuffer(): array
     {
         return $this->buffer;

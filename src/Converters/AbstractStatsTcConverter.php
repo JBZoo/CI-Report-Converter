@@ -25,56 +25,16 @@ use JBZoo\CIReportConverter\Formats\TeamCity\Writers\Buffer;
 use function JBZoo\Utils\float;
 use function JBZoo\Utils\int;
 
-/**
- * Class AbstractStatsTcConverter
- * @package JBZoo\CIReportConverter\Converters
- */
 abstract class AbstractStatsTcConverter extends AbstractConverter
 {
-    /**
-     * @var TeamCity
-     */
     private TeamCity $tcLogger;
 
-    /**
-     * TeamCityTestsConverter constructor.
-     * @param array               $params
-     * @param int|null            $flowId
-     * @param AbstractWriter|null $tcWriter
-     */
     public function __construct(array $params = [], ?int $flowId = null, ?AbstractWriter $tcWriter = null)
     {
         $this->tcLogger = new TeamCity($tcWriter ?: new Buffer(), $flowId, $params);
     }
 
     /**
-     * @param array             $data
-     * @param AbstractMetricMap $map
-     * @return Metrics
-     */
-    protected static function buildMetrics(array $data, AbstractMetricMap $map): Metrics
-    {
-        $metrics = new Metrics();
-        $metrics->setMap($map);
-
-        foreach ($data as $key => $value) {
-            if (null === $value || '' === $value) {
-                continue;
-            }
-
-            if (\is_float($value) || \strpos((string)$value, '.') !== false) {
-                $metrics->add((string)$key, float($value, 6));
-            } else {
-                $metrics->add((string)$key, int($value));
-            }
-        }
-
-        return $metrics;
-    }
-
-    /**
-     * @param string $sourceCode
-     * @return Metrics
      * @phan-suppress PhanUnusedPublicMethodParameter
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
@@ -83,10 +43,6 @@ abstract class AbstractStatsTcConverter extends AbstractConverter
         throw new Exception('Method \"' . __METHOD__ . '\" is not available');
     }
 
-    /**
-     * @param Metrics $metrics
-     * @return string
-     */
     public function fromInternalMetric(Metrics $metrics): string
     {
         foreach ($metrics->getMetrics() as $metric) {
@@ -102,5 +58,25 @@ abstract class AbstractStatsTcConverter extends AbstractConverter
         }
 
         return '';
+    }
+
+    protected static function buildMetrics(array $data, AbstractMetricMap $map): Metrics
+    {
+        $metrics = new Metrics();
+        $metrics->setMap($map);
+
+        foreach ($data as $key => $value) {
+            if ($value === null || $value === '') {
+                continue;
+            }
+
+            if (\is_float($value) || \str_contains((string)$value, '.')) {
+                $metrics->add((string)$key, float($value, 6));
+            } else {
+                $metrics->add((string)$key, int($value));
+            }
+        }
+
+        return $metrics;
     }
 }

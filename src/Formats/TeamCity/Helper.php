@@ -16,14 +16,8 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\TeamCity;
 
-/**
- * Class Helper
- * @package JBZoo\CIReportConverter\Formats\TeamCity
- */
 class Helper
 {
-    private const TIMESTAMP_FORMAT = 'Y-m-d\TH:i:s.uO';
-
     public const PREDEFINED_METRICS = [
         'ArtifactsSize',
         'VisibleArtifactsSize',
@@ -61,17 +55,14 @@ class Helper
         'SuccessRate',
         'TimeSpentInQueue',
     ];
+    private const TIMESTAMP_FORMAT = 'Y-m-d\TH:i:s.uO';
 
-    /**
-     * @param string $eventName
-     * @param array  $params
-     * @return string
-     */
     public static function printEvent(string $eventName, array $params = []): string
     {
         self::ensureValidJavaId($eventName);
 
         $result = "\n##teamcity[{$eventName}";
+
         foreach ($params as $propertyName => $propertyValue) {
             $escapedValue = self::escapeValue((string)$propertyValue);
             if (\is_int($propertyName)) {
@@ -90,7 +81,6 @@ class Helper
     /**
      * Checks if given value is valid Java ID.
      * Valid Java ID starts with alpha-character and continues with mix of alphanumeric characters and `-`.
-     * @param string $value
      */
     public static function ensureValidJavaId(string $value): void
     {
@@ -100,8 +90,7 @@ class Helper
     }
 
     /**
-     * @param \DateTime|null $datetime Either date with timestamp or `NULL` for now.
-     * @return string
+     * @param null|\DateTime $datetime either date with timestamp or `NULL` for now
      */
     public static function formatTimestamp(?\DateTime $datetime = null): string
     {
@@ -114,13 +103,9 @@ class Helper
         return \substr($formatted, 0, 23) . \substr($formatted, 26);
     }
 
-    /**
-     * @param string|null $value
-     * @return string|null
-     */
     private static function escapeValue(?string $value): ?string
     {
-        if (null === $value) {
+        if ($value === null) {
             return null;
         }
 
@@ -146,7 +131,7 @@ class Helper
 
                 throw new Exception('Unexpected match combination.');
             },
-            $value
+            $value,
         );
     }
 }

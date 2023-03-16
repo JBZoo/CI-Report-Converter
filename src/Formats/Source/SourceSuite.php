@@ -19,39 +19,26 @@ namespace JBZoo\CIReportConverter\Formats\Source;
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
 /**
- * Class SourceSuite
- * @package JBZoo\CIReportConverter\Formats\Source
- *
- * @property string|null $file
- * @property string|null $class
+ * @property null|string $file
+ * @property null|string $class
  *
  * @method self setFile(?string $file)
  * @method self setClass(?string $class)
  */
 class SourceSuite extends AbstractNode
 {
-    /**
-     * @var array
-     */
     protected array $meta = [
         'name'  => ['string'],
         'file'  => ['string'],
         'class' => ['string'],
     ];
 
-    /**
-     * @var SourceCase[]
-     */
+    /** @var SourceCase[] */
     private array $cases = [];
 
-    /**
-     * @var SourceSuite[]
-     */
+    /** @var SourceSuite[] */
     private array $suites = [];
 
-    /**
-     * @return bool
-     */
     public function hasSubSuites(): bool
     {
         return \count($this->suites) > 0;
@@ -73,42 +60,29 @@ class SourceSuite extends AbstractNode
         return $this->cases;
     }
 
-    /**
-     * @return bool
-     */
     public function isEmpty(): bool
     {
         return $this->getCasesCount() === 0;
     }
 
-    /**
-     * @param string $testSuiteName
-     * @return SourceSuite
-     */
     public function addSuite(string $testSuiteName): self
     {
         if (!\array_key_exists($testSuiteName, $this->suites)) {
-            $testSuite = new self($testSuiteName);
+            $testSuite                    = new self($testSuiteName);
             $this->suites[$testSuiteName] = $testSuite;
         }
 
         return $this->suites[$testSuiteName];
     }
 
-    /**
-     * @param string $testCaseName
-     * @return SourceCase
-     */
     public function addTestCase(string $testCaseName): SourceCase
     {
-        $testCase = new SourceCase($testCaseName);
+        $testCase      = new SourceCase($testCaseName);
         $this->cases[] = $testCase;
+
         return $testCase;
     }
 
-    /**
-     * @return array
-     */
     public function toArray(): array
     {
         $data = \array_filter(\array_merge(parent::toArray(), [
@@ -119,9 +93,7 @@ class SourceSuite extends AbstractNode
             'warnings'   => $this->getWarningCount(),
             'failure'    => $this->getFailureCount(),
             'skipped'    => $this->getSkippedCount(),
-        ]), static function ($value) {
-            return $value !== null;
-        });
+        ]), static fn ($value) => $value !== null);
 
         $result = [
             'data'   => $data,
@@ -140,10 +112,6 @@ class SourceSuite extends AbstractNode
         return $result;
     }
 
-    /**
-     * @param int $round
-     * @return float|null
-     */
     public function getTime(int $round = 6): ?float
     {
         $result = 0.0;
@@ -159,9 +127,6 @@ class SourceSuite extends AbstractNode
         return $result === 0.0 ? null : \round($result, $round);
     }
 
-    /**
-     * @return int|null
-     */
     public function getCasesCount(): ?int
     {
         $subResult = 0;
@@ -175,9 +140,6 @@ class SourceSuite extends AbstractNode
         return $result === 0 ? null : $result;
     }
 
-    /**
-     * @return int|null
-     */
     public function getAssertionsCount(): ?int
     {
         $result = 0;
@@ -193,9 +155,6 @@ class SourceSuite extends AbstractNode
         return $result === 0 ? null : $result;
     }
 
-    /**
-     * @return int|null
-     */
     public function getErrorsCount(): ?int
     {
         $result = 0;
@@ -211,9 +170,6 @@ class SourceSuite extends AbstractNode
         return $result === 0 ? null : $result;
     }
 
-    /**
-     * @return int|null
-     */
     public function getWarningCount(): ?int
     {
         $result = 0;
@@ -229,9 +185,6 @@ class SourceSuite extends AbstractNode
         return $result === 0 ? null : $result;
     }
 
-    /**
-     * @return int|null
-     */
     public function getFailureCount(): ?int
     {
         $result = 0;
@@ -247,9 +200,6 @@ class SourceSuite extends AbstractNode
         return $result === 0 ? null : $result;
     }
 
-    /**
-     * @return int|null
-     */
     public function getSkippedCount(): ?int
     {
         $result = 0;

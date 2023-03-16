@@ -25,15 +25,12 @@ use JBZoo\CIReportConverter\Formats\JUnit\CaseOutput\SystemOut;
 use JBZoo\CIReportConverter\Formats\JUnit\CaseOutput\Warning;
 
 /**
- * Class JUnitCase
- * @package JBZoo\CIReportConverter\Formats\JUnit
- *
- * @property string|null $class
- * @property string|null $classname
- * @property string|null $file
- * @property int|null    $line
- * @property float|null  $time
- * @property int|null    $assertions
+ * @property null|string $class
+ * @property null|string $classname
+ * @property null|string $file
+ * @property null|int    $line
+ * @property null|float  $time
+ * @property null|int    $assertions
  *
  * @method self setClass(?string $class)
  * @method self setClassname(?string $classname)
@@ -44,9 +41,9 @@ use JBZoo\CIReportConverter\Formats\JUnit\CaseOutput\Warning;
  */
 class JUnitCase extends AbstractNode
 {
-    /**
-     * @var array
-     */
+    /** @var AbstractOutput[] */
+    public array $outputs = [];
+
     protected array $meta = [
         'name'       => ['string'],
         'class'      => ['string'],
@@ -57,54 +54,30 @@ class JUnitCase extends AbstractNode
         'assertions' => ['int'],
     ];
 
-    /**
-     * @var AbstractOutput[]
-     */
-    public array $outputs = [];
-
-    /**
-     * @param string|null $type
-     * @param string|null $message
-     * @param string|null $description
-     * @return JUnitCase
-     */
-    public function addFailure(?string $type = null, ?string $message = null, ?string $description = null): JUnitCase
+    public function addFailure(?string $type = null, ?string $message = null, ?string $description = null): self
     {
         $this->outputs[] = new Failure($type ?: 'Failure', $message, $description);
+
         return $this;
     }
 
-    /**
-     * @param string|null $type
-     * @param string|null $message
-     * @param string|null $description
-     * @return JUnitCase
-     */
-    public function addError(?string $type = null, ?string $message = null, ?string $description = null): JUnitCase
+    public function addError(?string $type = null, ?string $message = null, ?string $description = null): self
     {
         $this->outputs[] = new Error($type ?: 'Error', $message, $description);
+
         return $this;
     }
 
-    /**
-     * @param string|null $type
-     * @param string|null $message
-     * @param string|null $description
-     * @return JUnitCase
-     */
-    public function addWarning(?string $type = null, ?string $message = null, ?string $description = null): JUnitCase
+    public function addWarning(?string $type = null, ?string $message = null, ?string $description = null): self
     {
         $this->outputs[] = new Warning($type ?: 'Warning', $message, $description);
+
         return $this;
     }
 
-    /**
-     * @param string|null $description
-     * @return $this
-     */
     public function addSystemOut(?string $description): self
     {
-        if (null !== $description) {
+        if ($description !== null) {
             $this->outputs[] = (new SystemOut())->setDescription($description);
         } else {
             $this->outputs[] = (new SystemOut());
@@ -113,18 +86,14 @@ class JUnitCase extends AbstractNode
         return $this;
     }
 
-    /**
-     * @return $this
-     */
-    public function markAsSkipped(): JUnitCase
+    public function markAsSkipped(): self
     {
         $this->outputs[] = new Skipped();
+
         return $this;
     }
 
     /**
-     * @param \DOMDocument $document
-     * @return \DOMNode
      * @SuppressWarnings(PHPMD.NPathComplexity)
      * @phan-suppress PhanPossiblyNonClassMethodCall
      * @phan-suppress PhanPluginSuspiciousParamPositionInternal
@@ -136,27 +105,27 @@ class JUnitCase extends AbstractNode
 
         $node->setAttribute('name', $this->name);
 
-        if (null !== $this->class) {
+        if ($this->class !== null) {
             $node->setAttribute('class', $this->class);
         }
 
-        if (null !== $this->classname) {
+        if ($this->classname !== null) {
             $node->setAttribute('classname', $this->classname);
         }
 
-        if (null !== $this->file) {
+        if ($this->file !== null) {
             $node->setAttribute('file', $this->file);
         }
 
-        if (null !== $this->line) {
+        if ($this->line !== null) {
             $node->setAttribute('line', (string)$this->line);
         }
 
-        if (null !== $this->assertions) {
+        if ($this->assertions !== null) {
             $node->setAttribute('assertions', (string)$this->assertions);
         }
 
-        if (null !== $this->time) {
+        if ($this->time !== null) {
             $node->setAttribute('time', \sprintf('%F', \round($this->time, 6)));
         }
 
@@ -167,59 +136,33 @@ class JUnitCase extends AbstractNode
         return $node;
     }
 
-    /**
-     * @return float|null
-     */
     public function getTime(): ?float
     {
         return $this->time;
     }
 
-    /**
-     * @return int
-     */
     public function getAssertionsCount(): int
     {
         return (int)$this->assertions;
     }
 
-    /**
-     * @return int
-     */
     public function getErrorsCount(): int
     {
-        return \count(\array_filter($this->outputs, static function (AbstractOutput $output) {
-            return $output instanceof Error;
-        }));
+        return \count(\array_filter($this->outputs, static fn (AbstractOutput $output) => $output instanceof Error));
     }
 
-    /**
-     * @return int
-     */
     public function getWarningsCount(): int
     {
-        return \count(\array_filter($this->outputs, static function (AbstractOutput $output) {
-            return $output instanceof Warning;
-        }));
+        return \count(\array_filter($this->outputs, static fn (AbstractOutput $output) => $output instanceof Warning));
     }
 
-    /**
-     * @return int
-     */
     public function getFailuresCount(): int
     {
-        return \count(\array_filter($this->outputs, static function (AbstractOutput $output) {
-            return $output instanceof Failure;
-        }));
+        return \count(\array_filter($this->outputs, static fn (AbstractOutput $output) => $output instanceof Failure));
     }
 
-    /**
-     * @return int
-     */
     public function getSkippedCount(): int
     {
-        return \count(\array_filter($this->outputs, static function (AbstractOutput $output) {
-            return $output instanceof Skipped;
-        }));
+        return \count(\array_filter($this->outputs, static fn (AbstractOutput $output) => $output instanceof Skipped));
     }
 }

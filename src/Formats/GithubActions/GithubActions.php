@@ -16,49 +16,16 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\GithubActions;
 
-/**
- * Class GithubActions
- * @package JBZoo\CIReportConverter\Formats\GithubActions
- */
 class GithubActions
 {
     public const DEFAULT_NAME = 'Undefined Suite Name';
 
-    /**
-     * @var GithubCase[]
-     */
+    /** @var GithubCase[] */
     private array $testCases = [];
 
-    /**
-     * @var GithubSuite[]
-     */
+    /** @var GithubSuite[] */
     private array $testSuites = [];
 
-    /**
-     * @param string|null $name
-     * @return GithubCase
-     */
-    public function addCase(?string $name = null): GithubCase
-    {
-        $testSuite = new GithubCase($name);
-        $this->testCases[] = $testSuite;
-        return $testSuite;
-    }
-
-    /**
-     * @param string|null $name
-     * @return GithubSuite
-     */
-    public function addSuite(?string $name = null): GithubSuite
-    {
-        $testSuite = new GithubSuite($name ?: self::DEFAULT_NAME);
-        $this->testSuites[] = $testSuite;
-        return $testSuite;
-    }
-
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         $result = [];
@@ -77,20 +44,32 @@ class GithubActions
         return \implode("\n", $result);
     }
 
-    /**
-     * @param string|null $message
-     * @return string
-     */
+    public function addCase(?string $name = null): GithubCase
+    {
+        $testSuite         = new GithubCase($name);
+        $this->testCases[] = $testSuite;
+
+        return $testSuite;
+    }
+
+    public function addSuite(?string $name = null): GithubSuite
+    {
+        $testSuite          = new GithubSuite($name ?: self::DEFAULT_NAME);
+        $this->testSuites[] = $testSuite;
+
+        return $testSuite;
+    }
+
     public static function escape(?string $message): string
     {
-        if (null === $message || '' === $message) {
+        if ($message === null || $message === '') {
             return '';
         }
 
         return \str_replace(
             ["\n", "\r"],
             ['%0A', ''],
-            \trim($message)
+            \trim($message),
         );
     }
 }

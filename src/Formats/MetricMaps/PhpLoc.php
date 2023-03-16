@@ -16,20 +16,11 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\MetricMaps;
 
-/**
- * Class PhpLoc
- * @package JBZoo\CIReportConverter\Formats\MetricMaps
- */
 class PhpLoc extends AbstractMetricMap
 {
-    /**
-     * @var string
-     */
     protected string $name = 'PHPloc';
 
-    /**
-     * @var string[]
-     */
+    /** @var string[] */
     protected array $map = [
         'files'       => 'FileSystem / Files',
         'directories' => 'FileSystem / Directories',
@@ -89,7 +80,7 @@ class PhpLoc extends AbstractMetricMap
         'classConstants'     => 'Constants / Classes',
 
         // Tests
-        'testClasses'        => 'Tests / Classes',
-        'testMethods'        => 'Tests / Methods',
+        'testClasses' => 'Tests / Classes',
+        'testMethods' => 'Tests / Methods',
     ];
 }

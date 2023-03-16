@@ -22,17 +22,13 @@ use JBZoo\CIReportConverter\Formats\MetricMaps\PhpUnitClover;
 use function JBZoo\Data\data;
 use function JBZoo\Utils\float;
 
-/**
- * Class PhpUnitCloverStatsTcConverter
- * @package JBZoo\CIReportConverter\Converters
- */
 class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
 {
     public const TYPE = 'phpunit-clover-xml';
     public const NAME = 'PHPUnit Clover (xml)';
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      * @SuppressWarnings(PHPMD.NPathComplexity)
      */
     public function toInternalMetric(string $sourceCode): Metrics
@@ -82,10 +78,10 @@ class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
         }
 
         $crapValuesCount = \count($crapValues) ?: 1;
-        $crapSummary = \array_sum($crapValues) ?: 0;
+        $crapSummary     = \array_sum($crapValues) ?: 0;
 
-        $data['CRAPTotal'] = $crapSummary;
-        $data['CRAPAmount'] = $crapAmount;
+        $data['CRAPTotal']   = $crapSummary;
+        $data['CRAPAmount']  = $crapAmount;
         $data['CRAPMaximum'] = \count($crapValues) > 0 ? \max($crapValues) : 0.0;
         $data['CRAPAverage'] = self::percent($crapSummary, $crapValuesCount) / 100;
         $data['CRAPPercent'] = self::percent($crapAmount, $crapValuesCount);
@@ -96,7 +92,6 @@ class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
     /**
      * @param float|int $current
      * @param float|int $total
-     * @return float
      */
     private static function percent($current, $total): float
     {

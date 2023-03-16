@@ -20,14 +20,10 @@ use JBZoo\CIReportConverter\Converters\Map;
 use JBZoo\Cli\Codes;
 use Symfony\Component\Console\Input\InputOption;
 
-/**
- * Class TeamCityStats
- * @package JBZoo\CIReportConverter\Commands
- */
 class TeamCityStats extends AbstractCommand
 {
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     protected function configure(): void
     {
@@ -40,10 +36,10 @@ class TeamCityStats extends AbstractCommand
             ->setName('teamcity:stats')
             ->setDescription('Push code metrics to TeamCity Stats')
             ->addOption('input-format', 'S', $req, "Source format. {$formats}")
-            ->addOption('input-file', 'I', $opt, "File path with the original report format. " .
-                "If not set or empty, then the STDIN is used.")
-            ->addOption('output-file', 'O', $opt, "File path with the result report format. " .
-                "If not set or empty, then the STDOUT is used.")
+            ->addOption('input-file', 'I', $opt, 'File path with the original report format. ' .
+                'If not set or empty, then the STDIN is used.')
+            ->addOption('output-file', 'O', $opt, 'File path with the result report format. ' .
+                'If not set or empty, then the STDOUT is used.')
             ->addOption('root-path', 'R', $opt, 'If option is set, ' .
                 'all absolute file paths will be converted to relative once.', '.')
             ->addOption('tc-flow-id', 'F', $opt, 'Custom flowId in TeamCity output. Default value is PID of the tool.');
@@ -52,7 +48,7 @@ class TeamCityStats extends AbstractCommand
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     protected function executeAction(): int
     {
@@ -65,9 +61,6 @@ class TeamCityStats extends AbstractCommand
         return Codes::OK;
     }
 
-    /**
-     * @return string
-     */
     private function getFormat(): string
     {
         $format = \strtolower($this->getOptString('input-format'));
@@ -77,23 +70,17 @@ class TeamCityStats extends AbstractCommand
         if (!\in_array($format, $validFormats, true)) {
             throw new Exception(
                 "Format \"{$format}\" not found. See the option \"--input-format\".\n" .
-                "Available options: " . \implode(',', $validFormats)
+                'Available options: ' . \implode(',', $validFormats),
             );
         }
 
         return $format;
     }
 
-    /**
-     * @param string   $sourceCode
-     * @param string   $sourceFormat
-     * @param int|null $flowId
-     * @return string
-     */
     private static function convertMetric(string $sourceCode, string $sourceFormat, ?int $flowId = null): string
     {
         $sourceCode = \trim($sourceCode);
-        if ('' === $sourceCode) {
+        if ($sourceCode === '') {
             return '';
         }
 

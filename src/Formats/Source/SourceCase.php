@@ -19,27 +19,24 @@ namespace JBZoo\CIReportConverter\Formats\Source;
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
 /**
- * Class SourceCase
- * @package JBZoo\CIReportConverter\Formats\Source
+ * @property null|string $class
+ * @property null|string $classname
+ * @property null|string $file
+ * @property null|int    $line
+ * @property null|int    $column
  *
- * @property string|null           $class
- * @property string|null           $classname
- * @property string|null           $file
- * @property int|null              $line
- * @property int|null              $column
+ * @property null|string $stdOut
+ * @property null|string $errOut
  *
- * @property string|null           $stdOut
- * @property string|null           $errOut
+ * @property null|float  $time
+ * @property null|int    $assertions
+ * @property null|string $actual
+ * @property null|string $expected
  *
- * @property float|null            $time
- * @property int|null              $assertions
- * @property string|null           $actual
- * @property string|null           $expected
- *
- * @property SourceCaseOutput|null $failure
- * @property SourceCaseOutput|null $error
- * @property SourceCaseOutput|null $warning
- * @property SourceCaseOutput|null $skipped
+ * @property null|SourceCaseOutput $failure
+ * @property null|SourceCaseOutput $error
+ * @property null|SourceCaseOutput $warning
+ * @property null|SourceCaseOutput $skipped
  *
  * @method self setClass(?string $class)
  * @method self setClassname(?string $classname)
@@ -61,22 +58,19 @@ use JBZoo\CIReportConverter\Formats\AbstractNode;
  */
 class SourceCase extends AbstractNode
 {
-    /**
-     * @var array
-     */
     protected array $meta = [
-        'name'       => ['string'],
+        'name' => ['string'],
 
         // Location
-        'class'      => ['string'],
-        'classname'  => ['string'],
-        'file'       => ['string'],
-        'line'       => ['int'],
-        'column'     => ['int'],
+        'class'     => ['string'],
+        'classname' => ['string'],
+        'file'      => ['string'],
+        'line'      => ['int'],
+        'column'    => ['int'],
 
         // Output
-        'stdOut'     => ['string'],
-        'errOut'     => ['string'],
+        'stdOut' => ['string'],
+        'errOut' => ['string'],
 
         // Test meta data
         'time'       => ['float'],
@@ -85,78 +79,56 @@ class SourceCase extends AbstractNode
         'expected'   => ['string'],
 
         // Type of negative result
-        'failure'    => [SourceCaseOutput::class],
-        'error'      => [SourceCaseOutput::class],
-        'warning'    => [SourceCaseOutput::class],
-        'skipped'    => [SourceCaseOutput::class],
+        'failure' => [SourceCaseOutput::class],
+        'error'   => [SourceCaseOutput::class],
+        'warning' => [SourceCaseOutput::class],
+        'skipped' => [SourceCaseOutput::class],
     ];
 
-    /**
-     * @param int $round
-     * @return string|null
-     */
     public function getTime(int $round = 6): ?string
     {
         return $this->time === null ? null : (string)\round($this->time, $round);
     }
 
-    /**
-     * @return bool
-     */
     public function isError(): bool
     {
         return $this->error !== null;
     }
 
-    /**
-     * @return bool
-     */
     public function isWarning(): bool
     {
         return $this->warning !== null;
     }
 
-    /**
-     * @return bool
-     */
     public function isFailure(): bool
     {
         return $this->failure !== null;
     }
 
-    /**
-     * @return bool
-     */
     public function isSkipped(): bool
     {
         return $this->skipped !== null;
     }
 
-    /**
-     * @return bool
-     */
     public function isComparison(): bool
     {
         return $this->actual !== null && $this->expected !== null;
     }
 
-    /**
-     * @return string|null
-     */
     public function getMessage(): ?string
     {
         $message = null;
-        if (null !== $this->stdOut) {
+        if ($this->stdOut !== null) {
             $message = self::buildMessage([$this->name, $this->stdOut]);
-        } elseif (null !== $this->errOut) {
+        } elseif ($this->errOut !== null) {
             $message = self::buildMessage([$this->name, $this->errOut]);
-        } elseif (null !== $this->failure) {
+        } elseif ($this->failure !== null) {
             $message = self::buildMessage([$this->failure->details]) ?: self::buildMessage([$this->failure->message]);
-        } elseif (null !== $this->error) {
+        } elseif ($this->error !== null) {
             $message = self::buildMessage([$this->error->details]) ?: self::buildMessage([$this->error->message]);
-        } elseif (null !== $this->warning) {
+        } elseif ($this->warning !== null) {
             $message = self::buildMessage([$this->warning->details]) ?: self::buildMessage([$this->warning->message]);
-        } elseif (null !== $this->skipped) {
+        } elseif ($this->skipped !== null) {
             $message = self::buildMessage([$this->skipped->details]) ?: self::buildMessage([$this->skipped->message]);
             $message = $message ?: 'Skipped';
         }
@@ -164,16 +136,12 @@ class SourceCase extends AbstractNode
         return $message ?: null;
     }
 
-    /**
-     * @param array $parts
-     * @return string
-     */
     private static function buildMessage(array $parts): string
     {
-        $parts = \array_filter($parts, '\is_string');
-        $parts = \array_map('\trim', $parts);
-        $parts = \array_filter($parts);
-        $parts = \array_unique($parts);
+        $parts   = \array_filter($parts, '\is_string');
+        $parts   = \array_map('\trim', $parts);
+        $parts   = \array_filter($parts);
+        $parts   = \array_unique($parts);
         $message = \implode("\n", $parts);
 
         return \trim($message);
