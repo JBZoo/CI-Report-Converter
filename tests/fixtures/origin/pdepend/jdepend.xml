@@ -224,12 +224,12 @@
         <Package>JBZoo\Data</Package>
         <Package>JBZoo\HttpClient</Package>
         <Package>JBZoo\MermaidPHP</Package>
-        <Package>JBZoo\CiReportConverter</Package>
-        <Package>JBZoo\CiReportConverter\Commands</Package>
-        <Package>JBZoo\CiReportConverter\Converters</Package>
-        <Package>JBZoo\CiReportConverter\Formats</Package>
-        <Package>JBZoo\CiReportConverter\Formats\JUnit</Package>
-        <Package>JBZoo\CiReportConverter\Formats\Source</Package>
+        <Package>JBZoo\CIReportConverter</Package>
+        <Package>JBZoo\CIReportConverter\Commands</Package>
+        <Package>JBZoo\CIReportConverter\Converters</Package>
+        <Package>JBZoo\CIReportConverter\Formats</Package>
+        <Package>JBZoo\CIReportConverter\Formats\JUnit</Package>
+        <Package>JBZoo\CIReportConverter\Formats\Source</Package>
         <Package>JBZoo\Utils</Package>
         <Package>PHPUnit\Framework</Package>
         <Package>PHPUnit\Framework\Error</Package>
@@ -308,9 +308,9 @@
         <Package>JBZoo\ComposerDiff\Renders</Package>
         <Package>JBZoo\ComposerGraph</Package>
         <Package>JBZoo\PHPUnit</Package>
-        <Package>JBZoo\CiReportConverter\Converters</Package>
-        <Package>JBZoo\CiReportConverter\Formats</Package>
-        <Package>JBZoo\CiReportConverter\Formats\Source</Package>
+        <Package>JBZoo\CIReportConverter\Converters</Package>
+        <Package>JBZoo\CIReportConverter\Formats</Package>
+        <Package>JBZoo\CIReportConverter\Formats\Source</Package>
         <Package>JBZoo\Utils</Package>
       </UsedBy>
     </Package>
@@ -365,7 +365,7 @@
         <Package>JBZoo\PHPUnit</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\CiReportConverter\Commands">
+    <Package name="JBZoo\CIReportConverter\Commands">
       <Stats>
         <TotalClasses>5</TotalClasses>
         <ConcreteClasses>4</ConcreteClasses>
@@ -386,8 +386,8 @@
         <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Commands/AbstractCommand.php">AbstractCommand</Class>
       </AbstractClasses>
       <DependsUpon>
-        <Package>JBZoo\CiReportConverter</Package>
-        <Package>JBZoo\CiReportConverter\Converters</Package>
+        <Package>JBZoo\CIReportConverter</Package>
+        <Package>JBZoo\CIReportConverter\Converters</Package>
         <Package>Symfony\Component\Console\Command</Package>
         <Package>Symfony\Component\Console\Input</Package>
         <Package>Symfony\Component\Console\Output</Package>
@@ -396,7 +396,7 @@
         <Package>JBZoo\PHPUnit</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\CiReportConverter\Converters">
+    <Package name="JBZoo\CIReportConverter\Converters">
       <Stats>
         <TotalClasses>14</TotalClasses>
         <ConcreteClasses>12</ConcreteClasses>
@@ -428,21 +428,21 @@
       <DependsUpon>
         <Package></Package>
         <Package>JBZoo\Data</Package>
-        <Package>JBZoo\CiReportConverter</Package>
-        <Package>JBZoo\CiReportConverter\Formats</Package>
-        <Package>JBZoo\CiReportConverter\Formats\JUnit</Package>
-        <Package>JBZoo\CiReportConverter\Formats\Metric</Package>
-        <Package>JBZoo\CiReportConverter\Formats\MetricMaps</Package>
-        <Package>JBZoo\CiReportConverter\Formats\Source</Package>
-        <Package>JBZoo\CiReportConverter\Formats\TeamCity</Package>
-        <Package>JBZoo\CiReportConverter\Formats\TeamCity\Writers</Package>
+        <Package>JBZoo\CIReportConverter</Package>
+        <Package>JBZoo\CIReportConverter\Formats</Package>
+        <Package>JBZoo\CIReportConverter\Formats\JUnit</Package>
+        <Package>JBZoo\CIReportConverter\Formats\Metric</Package>
+        <Package>JBZoo\CIReportConverter\Formats\MetricMaps</Package>
+        <Package>JBZoo\CIReportConverter\Formats\Source</Package>
+        <Package>JBZoo\CIReportConverter\Formats\TeamCity</Package>
+        <Package>JBZoo\CIReportConverter\Formats\TeamCity\Writers</Package>
       </DependsUpon>
       <UsedBy>
         <Package>JBZoo\PHPUnit</Package>
-        <Package>JBZoo\CiReportConverter\Commands</Package>
+        <Package>JBZoo\CIReportConverter\Commands</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\CiReportConverter">
+    <Package name="JBZoo\CIReportConverter">
       <Stats>
         <TotalClasses>3</TotalClasses>
         <ConcreteClasses>3</ConcreteClasses>
@@ -465,12 +465,12 @@
       </DependsUpon>
       <UsedBy>
         <Package>JBZoo\PHPUnit</Package>
-        <Package>JBZoo\CiReportConverter\Commands</Package>
-        <Package>JBZoo\CiReportConverter\Converters</Package>
-        <Package>JBZoo\CiReportConverter\Formats</Package>
+        <Package>JBZoo\CIReportConverter\Commands</Package>
+        <Package>JBZoo\CIReportConverter\Converters</Package>
+        <Package>JBZoo\CIReportConverter\Formats</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\CiReportConverter\Formats">
+    <Package name="JBZoo\CIReportConverter\Formats">
       <Stats>
         <TotalClasses>3</TotalClasses>
         <ConcreteClasses>3</ConcreteClasses>
@@ -490,20 +490,20 @@
       <DependsUpon>
         <Package></Package>
         <Package>JBZoo\Data</Package>
-        <Package>JBZoo\CiReportConverter</Package>
-        <Package>JBZoo\CiReportConverter\Formats\Source</Package>
+        <Package>JBZoo\CIReportConverter</Package>
+        <Package>JBZoo\CIReportConverter\Formats\Source</Package>
         <Package>JBZoo\Utils</Package>
       </DependsUpon>
       <UsedBy>
         <Package>JBZoo\PHPUnit</Package>
-        <Package>JBZoo\CiReportConverter\Converters</Package>
-        <Package>JBZoo\CiReportConverter\Formats\JUnit</Package>
-        <Package>JBZoo\CiReportConverter\Formats\Metric</Package>
-        <Package>JBZoo\CiReportConverter\Formats\Source</Package>
-        <Package>JBZoo\CiReportConverter\Formats\TeamCity</Package>
+        <Package>JBZoo\CIReportConverter\Converters</Package>
+        <Package>JBZoo\CIReportConverter\Formats\JUnit</Package>
+        <Package>JBZoo\CIReportConverter\Formats\Metric</Package>
+        <Package>JBZoo\CIReportConverter\Formats\Source</Package>
+        <Package>JBZoo\CIReportConverter\Formats\TeamCity</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\CiReportConverter\Formats\JUnit\CaseOutput">
+    <Package name="JBZoo\CIReportConverter\Formats\JUnit\CaseOutput">
       <Stats>
         <TotalClasses>6</TotalClasses>
         <ConcreteClasses>5</ConcreteClasses>
@@ -528,10 +528,10 @@
         <Package></Package>
       </DependsUpon>
       <UsedBy>
-        <Package>JBZoo\CiReportConverter\Formats\JUnit</Package>
+        <Package>JBZoo\CIReportConverter\Formats\JUnit</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\CiReportConverter\Formats\JUnit">
+    <Package name="JBZoo\CIReportConverter\Formats\JUnit">
       <Stats>
         <TotalClasses>4</TotalClasses>
         <ConcreteClasses>4</ConcreteClasses>
@@ -551,15 +551,15 @@
       <AbstractClasses/>
       <DependsUpon>
         <Package></Package>
-        <Package>JBZoo\CiReportConverter\Formats</Package>
-        <Package>JBZoo\CiReportConverter\Formats\JUnit\CaseOutput</Package>
+        <Package>JBZoo\CIReportConverter\Formats</Package>
+        <Package>JBZoo\CIReportConverter\Formats\JUnit\CaseOutput</Package>
       </DependsUpon>
       <UsedBy>
         <Package>JBZoo\PHPUnit</Package>
-        <Package>JBZoo\CiReportConverter\Converters</Package>
+        <Package>JBZoo\CIReportConverter\Converters</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\CiReportConverter\Formats\Metric">
+    <Package name="JBZoo\CIReportConverter\Formats\Metric">
       <Stats>
         <TotalClasses>2</TotalClasses>
         <ConcreteClasses>2</ConcreteClasses>
@@ -576,14 +576,14 @@
       </ConcreteClasses>
       <AbstractClasses/>
       <DependsUpon>
-        <Package>JBZoo\CiReportConverter\Formats</Package>
-        <Package>JBZoo\CiReportConverter\Formats\MetricMaps</Package>
+        <Package>JBZoo\CIReportConverter\Formats</Package>
+        <Package>JBZoo\CIReportConverter\Formats\MetricMaps</Package>
       </DependsUpon>
       <UsedBy>
-        <Package>JBZoo\CiReportConverter\Converters</Package>
+        <Package>JBZoo\CIReportConverter\Converters</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\CiReportConverter\Formats\MetricMaps">
+    <Package name="JBZoo\CIReportConverter\Formats\MetricMaps">
       <Stats>
         <TotalClasses>5</TotalClasses>
         <ConcreteClasses>4</ConcreteClasses>
@@ -605,11 +605,11 @@
       </AbstractClasses>
       <DependsUpon/>
       <UsedBy>
-        <Package>JBZoo\CiReportConverter\Converters</Package>
-        <Package>JBZoo\CiReportConverter\Formats\Metric</Package>
+        <Package>JBZoo\CIReportConverter\Converters</Package>
+        <Package>JBZoo\CIReportConverter\Formats\Metric</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\CiReportConverter\Formats\Source">
+    <Package name="JBZoo\CIReportConverter\Formats\Source">
       <Stats>
         <TotalClasses>4</TotalClasses>
         <ConcreteClasses>4</ConcreteClasses>
@@ -629,15 +629,15 @@
       <AbstractClasses/>
       <DependsUpon>
         <Package>JBZoo\Data</Package>
-        <Package>JBZoo\CiReportConverter\Formats</Package>
+        <Package>JBZoo\CIReportConverter\Formats</Package>
       </DependsUpon>
       <UsedBy>
         <Package>JBZoo\PHPUnit</Package>
-        <Package>JBZoo\CiReportConverter\Converters</Package>
-        <Package>JBZoo\CiReportConverter\Formats</Package>
+        <Package>JBZoo\CIReportConverter\Converters</Package>
+        <Package>JBZoo\CIReportConverter\Formats</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\CiReportConverter\Formats\TeamCity">
+    <Package name="JBZoo\CIReportConverter\Formats\TeamCity">
       <Stats>
         <TotalClasses>3</TotalClasses>
         <ConcreteClasses>3</ConcreteClasses>
@@ -656,16 +656,16 @@
       <AbstractClasses/>
       <DependsUpon>
         <Package></Package>
-        <Package>JBZoo\CiReportConverter\Formats</Package>
-        <Package>JBZoo\CiReportConverter\Formats\TeamCity\Writers</Package>
+        <Package>JBZoo\CIReportConverter\Formats</Package>
+        <Package>JBZoo\CIReportConverter\Formats\TeamCity\Writers</Package>
         <Package>JBZoo\Utils</Package>
       </DependsUpon>
       <UsedBy>
-        <Package>JBZoo\CiReportConverter\Converters</Package>
-        <Package>JBZoo\CiReportConverter\Formats\TeamCity\Writers</Package>
+        <Package>JBZoo\CIReportConverter\Converters</Package>
+        <Package>JBZoo\CIReportConverter\Formats\TeamCity\Writers</Package>
       </UsedBy>
     </Package>
-    <Package name="JBZoo\CiReportConverter\Formats\TeamCity\Writers">
+    <Package name="JBZoo\CIReportConverter\Formats\TeamCity\Writers">
       <Stats>
         <TotalClasses>6</TotalClasses>
         <ConcreteClasses>5</ConcreteClasses>
@@ -687,13 +687,13 @@
         <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/src/Formats/TeamCity/Writers/AbstractWriter.php">AbstractWriter</Class>
       </AbstractClasses>
       <DependsUpon>
-        <Package>JBZoo\CiReportConverter\Formats\TeamCity</Package>
+        <Package>JBZoo\CIReportConverter\Formats\TeamCity</Package>
         <Package>JBZoo\Utils</Package>
         <Package>Symfony\Component\Console\Output</Package>
       </DependsUpon>
       <UsedBy>
-        <Package>JBZoo\CiReportConverter\Converters</Package>
-        <Package>JBZoo\CiReportConverter\Formats\TeamCity</Package>
+        <Package>JBZoo\CIReportConverter\Converters</Package>
+        <Package>JBZoo\CIReportConverter\Formats\TeamCity</Package>
       </UsedBy>
     </Package>
     <Package name="JBZoo\Utils">
@@ -743,10 +743,10 @@
         <Package>JBZoo\ComposerGraph</Package>
         <Package>JBZoo\Data</Package>
         <Package>JBZoo\PHPUnit</Package>
-        <Package>JBZoo\CiReportConverter</Package>
-        <Package>JBZoo\CiReportConverter\Formats</Package>
-        <Package>JBZoo\CiReportConverter\Formats\TeamCity</Package>
-        <Package>JBZoo\CiReportConverter\Formats\TeamCity\Writers</Package>
+        <Package>JBZoo\CIReportConverter</Package>
+        <Package>JBZoo\CIReportConverter\Formats</Package>
+        <Package>JBZoo\CIReportConverter\Formats\TeamCity</Package>
+        <Package>JBZoo\CIReportConverter\Formats\TeamCity\Writers</Package>
       </UsedBy>
     </Package>
   </Packages>
@@ -795,62 +795,62 @@
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
     </Package>
-    <Package Name="JBZoo\CiReportConverter\Commands">
-      <Package>JBZoo\CiReportConverter\Commands</Package>
-      <Package>JBZoo\CiReportConverter</Package>
+    <Package Name="JBZoo\CIReportConverter\Commands">
+      <Package>JBZoo\CIReportConverter\Commands</Package>
+      <Package>JBZoo\CIReportConverter</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
     </Package>
-    <Package Name="JBZoo\CiReportConverter\Converters">
-      <Package>JBZoo\CiReportConverter\Converters</Package>
+    <Package Name="JBZoo\CIReportConverter\Converters">
+      <Package>JBZoo\CIReportConverter\Converters</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
     </Package>
-    <Package Name="JBZoo\CiReportConverter">
-      <Package>JBZoo\CiReportConverter</Package>
+    <Package Name="JBZoo\CIReportConverter">
+      <Package>JBZoo\CIReportConverter</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
     </Package>
-    <Package Name="JBZoo\CiReportConverter\Formats">
-      <Package>JBZoo\CiReportConverter\Formats</Package>
+    <Package Name="JBZoo\CIReportConverter\Formats">
+      <Package>JBZoo\CIReportConverter\Formats</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
     </Package>
-    <Package Name="JBZoo\CiReportConverter\Formats\JUnit">
-      <Package>JBZoo\CiReportConverter\Formats\JUnit</Package>
-      <Package>JBZoo\CiReportConverter\Formats</Package>
+    <Package Name="JBZoo\CIReportConverter\Formats\JUnit">
+      <Package>JBZoo\CIReportConverter\Formats\JUnit</Package>
+      <Package>JBZoo\CIReportConverter\Formats</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
     </Package>
-    <Package Name="JBZoo\CiReportConverter\Formats\Metric">
-      <Package>JBZoo\CiReportConverter\Formats\Metric</Package>
-      <Package>JBZoo\CiReportConverter\Formats</Package>
+    <Package Name="JBZoo\CIReportConverter\Formats\Metric">
+      <Package>JBZoo\CIReportConverter\Formats\Metric</Package>
+      <Package>JBZoo\CIReportConverter\Formats</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
     </Package>
-    <Package Name="JBZoo\CiReportConverter\Formats\Source">
-      <Package>JBZoo\CiReportConverter\Formats\Source</Package>
+    <Package Name="JBZoo\CIReportConverter\Formats\Source">
+      <Package>JBZoo\CIReportConverter\Formats\Source</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
     </Package>
-    <Package Name="JBZoo\CiReportConverter\Formats\TeamCity">
-      <Package>JBZoo\CiReportConverter\Formats\TeamCity</Package>
-      <Package>JBZoo\CiReportConverter\Formats</Package>
+    <Package Name="JBZoo\CIReportConverter\Formats\TeamCity">
+      <Package>JBZoo\CIReportConverter\Formats\TeamCity</Package>
+      <Package>JBZoo\CIReportConverter\Formats</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>
     </Package>
-    <Package Name="JBZoo\CiReportConverter\Formats\TeamCity\Writers">
-      <Package>JBZoo\CiReportConverter\Formats\TeamCity\Writers</Package>
-      <Package>JBZoo\CiReportConverter\Formats\TeamCity</Package>
-      <Package>JBZoo\CiReportConverter\Formats</Package>
+    <Package Name="JBZoo\CIReportConverter\Formats\TeamCity\Writers">
+      <Package>JBZoo\CIReportConverter\Formats\TeamCity\Writers</Package>
+      <Package>JBZoo\CIReportConverter\Formats\TeamCity</Package>
+      <Package>JBZoo\CIReportConverter\Formats</Package>
       <Package>JBZoo\Data</Package>
       <Package>JBZoo\Utils</Package>
       <Package>JBZoo\Data</Package>

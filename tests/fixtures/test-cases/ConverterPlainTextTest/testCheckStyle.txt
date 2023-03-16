@@ -9,7 +9,7 @@
 |             |          | File Path: src/JUnit/JUnitXml.php:37                                             |
 |             |          | Severity : warning                                                               |
 +-------------+----------+----------------------------------------------------------------------------------+
-| 44          | Error    | Can use \JBZoo\CiReportConverter\JUnit\TestSuiteElement as a return type of addT |
+| 44          | Error    | Can use \JBZoo\CIReportConverter\JUnit\TestSuiteElement as a return type of addT |
 |             |          | estSuite                                                                         |
 |             |          | Rule     : PhanPluginCanUseReturnType                                            |
 |             |          | File Path: src/JUnit/JUnitXml.php:44                                             |
@@ -26,7 +26,7 @@
 |             |          | Severity : warning                                                               |
 +-------------+----------+----------------------------------------------------------------------------------+
 | 36          | Error    | Suspicious order for argument name - This is getting passed to parameter #1 (str |
-|             |          | ing $name) of \JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute(strin |
+|             |          | ing $name) of \JBZoo\CIReportConverter\JUnit\TestCaseElement::setAttribute(strin |
 |             |          | g $name, string $value)                                                          |
 |             |          | Rule     : PhanPluginSuspiciousParamPositionInternal                             |
 |             |          | File Path: src/JUnit/TestCaseElement.php:36                                      |
@@ -48,7 +48,7 @@
 |             |          | Severity : warning                                                               |
 +-------------+----------+----------------------------------------------------------------------------------+
 | 37          | Error    | Suspicious order for argument name - This is getting passed to parameter #1 (str |
-|             |          | ing $name) of \JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute(stri |
+|             |          | ing $name) of \JBZoo\CIReportConverter\JUnit\TestSuiteElement::setAttribute(stri |
 |             |          | ng $name, string $value)                                                         |
 |             |          | Rule     : PhanPluginSuspiciousParamPositionInternal                             |
 |             |          | File Path: src/JUnit/TestSuiteElement.php:37                                     |

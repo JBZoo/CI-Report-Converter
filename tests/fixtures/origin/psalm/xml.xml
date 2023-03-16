@@ -5,7 +5,7 @@
     <line_from>34</line_from>
     <line_to>34</line_to>
     <type>MissingReturnType</type>
-    <message>Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setName does not have a return type, expecting void</message>
+    <message>Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setName does not have a return type, expecting void</message>
     <file_name>src/JUnit/TestCaseElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestCaseElement.php</file_path>
     <snippet>    public function setName($name)</snippet>
@@ -26,7 +26,7 @@
     <line_from>42</line_from>
     <line_to>42</line_to>
     <type>MissingReturnType</type>
-    <message>Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setClassname does not have a return type, expecting void</message>
+    <message>Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setClassname does not have a return type, expecting void</message>
     <file_name>src/JUnit/TestCaseElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestCaseElement.php</file_path>
     <snippet>    public function setClassname($classname)</snippet>
@@ -47,7 +47,7 @@
     <line_from>52</line_from>
     <line_to>52</line_to>
     <type>MissingReturnType</type>
-    <message>Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setTime does not have a return type, expecting void</message>
+    <message>Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setTime does not have a return type, expecting void</message>
     <file_name>src/JUnit/TestCaseElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestCaseElement.php</file_path>
     <snippet>    public function setTime($time)</snippet>
@@ -68,7 +68,7 @@
     <line_from>54</line_from>
     <line_to>54</line_to>
     <type>InvalidScalarArgument</type>
-    <message>Argument 2 of JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute expects string, float provided</message>
+    <message>Argument 2 of JBZoo\CIReportConverter\JUnit\TestCaseElement::setAttribute expects string, float provided</message>
     <file_name>src/JUnit/TestCaseElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestCaseElement.php</file_path>
     <snippet>        $this-&gt;setAttribute('time', $time);</snippet>
@@ -131,7 +131,7 @@
     <line_from>106</line_from>
     <line_to>106</line_to>
     <type>MissingReturnType</type>
-    <message>Method JBZoo\CiReportConverter\JUnit\TestCaseElement::incrementFailureCount does not have a return type, expecting void</message>
+    <message>Method JBZoo\CIReportConverter\JUnit\TestCaseElement::incrementFailureCount does not have a return type, expecting void</message>
     <file_name>src/JUnit/TestCaseElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestCaseElement.php</file_path>
     <snippet>    public function incrementFailureCount()</snippet>
@@ -152,7 +152,7 @@
     <line_from>109</line_from>
     <line_to>109</line_to>
     <type>InvalidScalarArgument</type>
-    <message>Argument 2 of JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute expects string, int provided</message>
+    <message>Argument 2 of JBZoo\CIReportConverter\JUnit\TestCaseElement::setAttribute expects string, int provided</message>
     <file_name>src/JUnit/TestCaseElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestCaseElement.php</file_path>
     <snippet>            $this-&gt;setAttribute('failures', (int)$this-&gt;getAttribute('failures') + 1);</snippet>
@@ -173,7 +173,7 @@
     <line_from>111</line_from>
     <line_to>111</line_to>
     <type>InvalidScalarArgument</type>
-    <message>Argument 2 of JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute expects string, int(1) provided</message>
+    <message>Argument 2 of JBZoo\CIReportConverter\JUnit\TestCaseElement::setAttribute expects string, int(1) provided</message>
     <file_name>src/JUnit/TestCaseElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestCaseElement.php</file_path>
     <snippet>            $this-&gt;setAttribute('failures', 1);</snippet>
@@ -194,7 +194,7 @@
     <line_from>118</line_from>
     <line_to>118</line_to>
     <type>MissingReturnType</type>
-    <message>Method JBZoo\CiReportConverter\JUnit\TestCaseElement::incrementErrorCount does not have a return type, expecting void</message>
+    <message>Method JBZoo\CIReportConverter\JUnit\TestCaseElement::incrementErrorCount does not have a return type, expecting void</message>
     <file_name>src/JUnit/TestCaseElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestCaseElement.php</file_path>
     <snippet>    public function incrementErrorCount()</snippet>
@@ -215,7 +215,7 @@
     <line_from>121</line_from>
     <line_to>121</line_to>
     <type>InvalidScalarArgument</type>
-    <message>Argument 2 of JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute expects string, int provided</message>
+    <message>Argument 2 of JBZoo\CIReportConverter\JUnit\TestCaseElement::setAttribute expects string, int provided</message>
     <file_name>src/JUnit/TestCaseElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestCaseElement.php</file_path>
     <snippet>            $this-&gt;setAttribute('errors', (int)$this-&gt;getAttribute('errors') + 1);</snippet>
@@ -236,7 +236,7 @@
     <line_from>123</line_from>
     <line_to>123</line_to>
     <type>InvalidScalarArgument</type>
-    <message>Argument 2 of JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute expects string, int(1) provided</message>
+    <message>Argument 2 of JBZoo\CIReportConverter\JUnit\TestCaseElement::setAttribute expects string, int(1) provided</message>
     <file_name>src/JUnit/TestCaseElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestCaseElement.php</file_path>
     <snippet>            $this-&gt;setAttribute('errors', 1);</snippet>
@@ -257,7 +257,7 @@
     <line_from>35</line_from>
     <line_to>35</line_to>
     <type>MissingReturnType</type>
-    <message>Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::setName does not have a return type, expecting void</message>
+    <message>Method JBZoo\CIReportConverter\JUnit\TestSuiteElement::setName does not have a return type, expecting void</message>
     <file_name>src/JUnit/TestSuiteElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestSuiteElement.php</file_path>
     <snippet>    public function setName($name)</snippet>
@@ -278,7 +278,7 @@
     <line_from>45</line_from>
     <line_to>45</line_to>
     <type>MissingReturnType</type>
-    <message>Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::setTimestamp does not have a return type, expecting void</message>
+    <message>Method JBZoo\CIReportConverter\JUnit\TestSuiteElement::setTimestamp does not have a return type, expecting void</message>
     <file_name>src/JUnit/TestSuiteElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestSuiteElement.php</file_path>
     <snippet>    public function setTimestamp(\DateTime $timestamp)</snippet>
@@ -299,7 +299,7 @@
     <line_from>55</line_from>
     <line_to>55</line_to>
     <type>MissingReturnType</type>
-    <message>Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::setTime does not have a return type, expecting void</message>
+    <message>Method JBZoo\CIReportConverter\JUnit\TestSuiteElement::setTime does not have a return type, expecting void</message>
     <file_name>src/JUnit/TestSuiteElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestSuiteElement.php</file_path>
     <snippet>    public function setTime($duration)</snippet>
@@ -320,7 +320,7 @@
     <line_from>57</line_from>
     <line_to>57</line_to>
     <type>InvalidScalarArgument</type>
-    <message>Argument 2 of JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute expects string, float provided</message>
+    <message>Argument 2 of JBZoo\CIReportConverter\JUnit\TestSuiteElement::setAttribute expects string, float provided</message>
     <file_name>src/JUnit/TestSuiteElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestSuiteElement.php</file_path>
     <snippet>        $this-&gt;setAttribute('time', $duration);</snippet>
@@ -341,7 +341,7 @@
     <line_from>65</line_from>
     <line_to>65</line_to>
     <type>MissingReturnType</type>
-    <message>Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::setHostname does not have a return type, expecting void</message>
+    <message>Method JBZoo\CIReportConverter\JUnit\TestSuiteElement::setHostname does not have a return type, expecting void</message>
     <file_name>src/JUnit/TestSuiteElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestSuiteElement.php</file_path>
     <snippet>    public function setHostname($hostname)</snippet>
@@ -362,7 +362,7 @@
     <line_from>86</line_from>
     <line_to>86</line_to>
     <type>MissingReturnType</type>
-    <message>Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::incrementTestCount does not have a return type, expecting void</message>
+    <message>Method JBZoo\CIReportConverter\JUnit\TestSuiteElement::incrementTestCount does not have a return type, expecting void</message>
     <file_name>src/JUnit/TestSuiteElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestSuiteElement.php</file_path>
     <snippet>    private function incrementTestCount()</snippet>
@@ -383,7 +383,7 @@
     <line_from>89</line_from>
     <line_to>89</line_to>
     <type>InvalidScalarArgument</type>
-    <message>Argument 2 of JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int provided</message>
+    <message>Argument 2 of JBZoo\CIReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int provided</message>
     <file_name>src/JUnit/TestSuiteElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestSuiteElement.php</file_path>
     <snippet>            $this-&gt;setAttribute('tests', (int)$this-&gt;getAttribute('tests') + 1);</snippet>
@@ -404,7 +404,7 @@
     <line_from>91</line_from>
     <line_to>91</line_to>
     <type>InvalidScalarArgument</type>
-    <message>Argument 2 of JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided</message>
+    <message>Argument 2 of JBZoo\CIReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided</message>
     <file_name>src/JUnit/TestSuiteElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestSuiteElement.php</file_path>
     <snippet>            $this-&gt;setAttribute('tests', 1);</snippet>
@@ -425,7 +425,7 @@
     <line_from>98</line_from>
     <line_to>98</line_to>
     <type>MissingReturnType</type>
-    <message>Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::incrementFailureCount does not have a return type, expecting void</message>
+    <message>Method JBZoo\CIReportConverter\JUnit\TestSuiteElement::incrementFailureCount does not have a return type, expecting void</message>
     <file_name>src/JUnit/TestSuiteElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestSuiteElement.php</file_path>
     <snippet>    public function incrementFailureCount()</snippet>
@@ -446,7 +446,7 @@
     <line_from>101</line_from>
     <line_to>101</line_to>
     <type>InvalidScalarArgument</type>
-    <message>Argument 2 of JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int provided</message>
+    <message>Argument 2 of JBZoo\CIReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int provided</message>
     <file_name>src/JUnit/TestSuiteElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestSuiteElement.php</file_path>
     <snippet>            $this-&gt;setAttribute('failures', (int)$this-&gt;getAttribute('failures') + 1);</snippet>
@@ -467,7 +467,7 @@
     <line_from>103</line_from>
     <line_to>103</line_to>
     <type>InvalidScalarArgument</type>
-    <message>Argument 2 of JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided</message>
+    <message>Argument 2 of JBZoo\CIReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided</message>
     <file_name>src/JUnit/TestSuiteElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestSuiteElement.php</file_path>
     <snippet>            $this-&gt;setAttribute('failures', 1);</snippet>
@@ -488,7 +488,7 @@
     <line_from>110</line_from>
     <line_to>110</line_to>
     <type>MissingReturnType</type>
-    <message>Method JBZoo\CiReportConverter\JUnit\TestSuiteElement::incrementErrorCount does not have a return type, expecting void</message>
+    <message>Method JBZoo\CIReportConverter\JUnit\TestSuiteElement::incrementErrorCount does not have a return type, expecting void</message>
     <file_name>src/JUnit/TestSuiteElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestSuiteElement.php</file_path>
     <snippet>    public function incrementErrorCount()</snippet>
@@ -509,7 +509,7 @@
     <line_from>113</line_from>
     <line_to>113</line_to>
     <type>InvalidScalarArgument</type>
-    <message>Argument 2 of JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int provided</message>
+    <message>Argument 2 of JBZoo\CIReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int provided</message>
     <file_name>src/JUnit/TestSuiteElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestSuiteElement.php</file_path>
     <snippet>            $this-&gt;setAttribute('errors', (int)$this-&gt;getAttribute('errors') + 1);</snippet>
@@ -530,7 +530,7 @@
     <line_from>115</line_from>
     <line_to>115</line_to>
     <type>InvalidScalarArgument</type>
-    <message>Argument 2 of JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided</message>
+    <message>Argument 2 of JBZoo\CIReportConverter\JUnit\TestSuiteElement::setAttribute expects string, int(1) provided</message>
     <file_name>src/JUnit/TestSuiteElement.php</file_name>
     <file_path>/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestSuiteElement.php</file_path>
     <snippet>            $this-&gt;setAttribute('errors', 1);</snippet>

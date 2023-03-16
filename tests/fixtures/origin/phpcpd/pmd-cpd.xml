@@ -6,13 +6,13 @@
     <file path="/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Helper2.php" line="18"/>
     <codefragment>declare(strict_types=1);
 
-namespace JBZoo\CiReportConverter;
+namespace JBZoo\CIReportConverter;
 
 use JBZoo\Utils\Str;
 
 /**
  * Class Helper
- * @package JBZoo\CiReportConverter
+ * @package JBZoo\CIReportConverter
  */
 class Helper
 {

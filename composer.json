@@ -1,9 +1,9 @@
 {
-    "name"         : "jbzoo/ci-report-converter",
-    "type"         : "library",
-    "license"      : "MIT",
-    "description"  : "The tool converts different error reporting standards for deep integration with popular CI systems (TeamCity, IntelliJ IDEA, GitHub Actions, etc)",
-    "keywords"     : [
+    "name"              : "jbzoo/ci-report-converter",
+    "type"              : "library",
+    "license"           : "MIT",
+    "description"       : "The tool converts different error reporting standards for deep integration with popular CI systems (TeamCity, IntelliJ IDEA, GitHub Actions, etc)",
+    "keywords"          : [
         "checkstyle",
         "codestyle",
         "phpstorm",
@@ -29,7 +29,7 @@
         "IntelliJ IDEA"
     ],
 
-    "authors"      : [
+    "authors"           : [
         {
             "name"  : "Denis Smetannikov",
             "email" : "admin@jbzoo.com",
@@ -37,53 +37,45 @@
         }
     ],
 
-    "require"      : {
-        "php"             : ">=7.4",
+    "minimum-stability" : "dev",
+    "prefer-stable"     : true,
+
+    "require"           : {
+        "php"             : "^8.1",
         "ext-dom"         : "*",
         "ext-simplexml"   : "*",
         "ext-hash"        : "*",
 
-        "jbzoo/data"      : "^5.0|dev-master|7.x-dev",
-        "jbzoo/utils"     : "^5.0|dev-master|7.x-dev",
-        "jbzoo/cli"       : "^2.0|dev-master|7.x-dev",
-        "jbzoo/markdown"  : "^1.2|dev-master|7.x-dev",
+        "jbzoo/data"      : "7.x-dev",
+        "jbzoo/utils"     : "7.x-dev",
+        "jbzoo/cli"       : "7.x-dev",
+        "jbzoo/markdown"  : "7.x-dev",
 
         "symfony/console" : ">=4.4"
     },
 
-    "require-dev"  : {
-        "jbzoo/toolbox-dev"         : "^4.1.0",
+    "require-dev"       : {
+        "jbzoo/toolbox-dev"         : "7.x-dev",
+        "jbzoo/mermaid-php"         : "7.x-dev",
         "roave/security-advisories" : "dev-master"
     },
 
-    "replace"      : {
-        "jbzoo/toolbox-ci" : "*"
+    "bin"               : ["ci-report-converter"],
+
+    "autoload"          : {
+        "psr-4" : {"JBZoo\\CIReportConverter\\" : "src"}
     },
 
-    "autoload"     : {
-        "psr-4" : {
-            "JBZoo\\CiReportConverter\\" : "src"
-        }
+    "autoload-dev"      : {
+        "psr-4" : {"JBZoo\\PHPUnit\\" : "tests"}
     },
 
-    "autoload-dev" : {
-        "classmap" : [
-            "tests"
-        ]
-    },
-
-    "bin"          : [
-        "ci-report-converter"
-    ],
-
-    "config"       : {
+    "config"            : {
         "optimize-autoloader" : true,
-        "allow-plugins"       : {
-            "composer/package-versions-deprecated" : true
-        }
+        "allow-plugins"       : {"composer/package-versions-deprecated" : true}
     },
 
-    "extra"        : {
+    "extra"             : {
         "branch-alias" : {
             "dev-master" : "7.x-dev"
         }

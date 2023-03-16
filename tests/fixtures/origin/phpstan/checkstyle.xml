@@ -2,11 +2,11 @@
 <checkstyle>
     <file name="src/JUnit/TestCaseElement.php">
         <error line="34" column="1" severity="error"
-               message="Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setName() has no return typehint specified."/>
+               message="Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setName() has no return typehint specified."/>
         <error line="42" column="1" severity="error"
-               message="Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setClassname() has no return typehint specified."/>
+               message="Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setClassname() has no return typehint specified."/>
         <error line="52" column="1" severity="error"
-               message="Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setTime() has no return typehint specified."/>
+               message="Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setTime() has no return typehint specified."/>
         <error line="54" column="1" severity="error"
                message="Parameter #2 $value of method DOMElement::setAttribute() expects string, float given."/>
     </file>

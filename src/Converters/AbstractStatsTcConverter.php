@@ -1,34 +1,33 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\CiReportConverter\Converters;
+namespace JBZoo\CIReportConverter\Converters;
 
-use JBZoo\CiReportConverter\Formats\Metric\Metrics;
-use JBZoo\CiReportConverter\Formats\MetricMaps\AbstractMetricMap;
-use JBZoo\CiReportConverter\Formats\TeamCity\TeamCity;
-use JBZoo\CiReportConverter\Formats\TeamCity\Writers\AbstractWriter;
-use JBZoo\CiReportConverter\Formats\TeamCity\Writers\Buffer;
+use JBZoo\CIReportConverter\Formats\Metric\Metrics;
+use JBZoo\CIReportConverter\Formats\MetricMaps\AbstractMetricMap;
+use JBZoo\CIReportConverter\Formats\TeamCity\TeamCity;
+use JBZoo\CIReportConverter\Formats\TeamCity\Writers\AbstractWriter;
+use JBZoo\CIReportConverter\Formats\TeamCity\Writers\Buffer;
 
 use function JBZoo\Utils\float;
 use function JBZoo\Utils\int;
 
 /**
  * Class AbstractStatsTcConverter
- * @package JBZoo\CiReportConverter\Converters
+ * @package JBZoo\CIReportConverter\Converters
  */
 abstract class AbstractStatsTcConverter extends AbstractConverter
 {

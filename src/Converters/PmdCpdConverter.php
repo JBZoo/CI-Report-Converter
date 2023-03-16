@@ -1,33 +1,32 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\CiReportConverter\Converters;
+namespace JBZoo\CIReportConverter\Converters;
 
-use JBZoo\CiReportConverter\Formats\Source\FileRef;
-use JBZoo\CiReportConverter\Formats\Source\SourceCaseOutput;
-use JBZoo\CiReportConverter\Formats\Source\SourceSuite;
-use JBZoo\CiReportConverter\Formats\Xml;
+use JBZoo\CIReportConverter\Formats\Source\FileRef;
+use JBZoo\CIReportConverter\Formats\Source\SourceCaseOutput;
+use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
+use JBZoo\CIReportConverter\Formats\Xml;
 use JBZoo\Data\Data;
 
 use function JBZoo\Data\data;
 
 /**
  * Class PmdCpdConverter
- * @package JBZoo\CiReportConverter\Converters
+ * @package JBZoo\CIReportConverter\Converters
  */
 class PmdCpdConverter extends AbstractConverter
 {

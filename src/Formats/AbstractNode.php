@@ -1,25 +1,24 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\CiReportConverter\Formats;
+namespace JBZoo\CIReportConverter\Formats;
 
 use JBZoo\Data\Data;
-use JBZoo\CiReportConverter\Formats\Source\Exception;
-use JBZoo\CiReportConverter\Formats\Source\SourceCaseOutput;
+use JBZoo\CIReportConverter\Formats\Source\Exception;
+use JBZoo\CIReportConverter\Formats\Source\SourceCaseOutput;
 use JBZoo\Utils\Str;
 
 use function JBZoo\Utils\bool;
@@ -28,7 +27,7 @@ use function JBZoo\Utils\int;
 
 /**
  * Class AbstractNode
- * @package JBZoo\CiReportConverter\Formats
+ * @package JBZoo\CIReportConverter\Formats
  *
  * @property string $name
  *
