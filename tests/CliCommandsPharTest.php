@@ -30,6 +30,8 @@ class CliCommandsPharTest extends CliCommandsTest
 
     public function taskReal(string $action, array $params = []): string
     {
+        skip('Phar tests are not implemented yet. Waiting for compiled phar');
+
         $rootDir = PROJECT_ROOT;
 
         $params['-v']        = null;
