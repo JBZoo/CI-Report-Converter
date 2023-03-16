@@ -20,9 +20,6 @@ use JBZoo\Utils\Cli;
 
 class Stdout implements AbstractWriter
 {
-    /**
-     * {@inheritDoc}
-     */
     public function write(?string $message): void
     {
         if ($message !== null) {

@@ -27,9 +27,6 @@ class PlainTextConverter extends AbstractConverter
     public const TYPE = 'plain';
     public const NAME = 'Plain Text';
 
-    /**
-     * {@inheritDoc}
-     */
     public function fromInternal(SourceSuite $sourceSuite): string
     {
         $plainTextSuite = new PlainText();

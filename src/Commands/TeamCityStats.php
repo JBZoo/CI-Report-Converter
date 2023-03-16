@@ -22,9 +22,6 @@ use Symfony\Component\Console\Input\InputOption;
 
 class TeamCityStats extends AbstractCommand
 {
-    /**
-     * {@inheritDoc}
-     */
     protected function configure(): void
     {
         $req = InputOption::VALUE_REQUIRED;
@@ -47,9 +44,6 @@ class TeamCityStats extends AbstractCommand
         parent::configure();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     protected function executeAction(): int
     {
         $inputFormat = $this->getFormat();

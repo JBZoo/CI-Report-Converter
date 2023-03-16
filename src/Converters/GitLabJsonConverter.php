@@ -29,9 +29,6 @@ class GitLabJsonConverter extends AbstractConverter
     public const TYPE = 'gitlab-json';
     public const NAME = 'GitLab - JSON';
 
-    /**
-     * {@inheritDoc}
-     */
     public function fromInternal(SourceSuite $sourceSuite): string
     {
         $gitLabJson = new GitLabJson();

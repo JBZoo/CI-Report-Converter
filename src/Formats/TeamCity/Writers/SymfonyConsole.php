@@ -22,9 +22,6 @@ class SymfonyConsole implements AbstractWriter
 {
     private ?OutputInterface $output = null;
 
-    /**
-     * {@inheritDoc}
-     */
     public function write(?string $message): void
     {
         if ($this->output === null) {

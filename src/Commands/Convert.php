@@ -27,9 +27,6 @@ use function JBZoo\Utils\bool;
 
 class Convert extends AbstractCommand
 {
-    /**
-     * {@inheritDoc}
-     */
     protected function configure(): void
     {
         $req = InputOption::VALUE_REQUIRED;
@@ -55,9 +52,6 @@ class Convert extends AbstractCommand
         parent::configure();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     protected function executeAction(): int
     {
         $sourceReport = $this->getSourceCode();

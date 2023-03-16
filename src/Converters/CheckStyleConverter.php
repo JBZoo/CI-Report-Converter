@@ -29,9 +29,6 @@ class CheckStyleConverter extends AbstractConverter
     public const TYPE = 'checkstyle';
     public const NAME = 'CheckStyle.xml';
 
-    /**
-     * {@inheritDoc}
-     */
     public function toInternal(string $source): SourceSuite
     {
         $xmlDocument = Xml::createDomDocument($source);

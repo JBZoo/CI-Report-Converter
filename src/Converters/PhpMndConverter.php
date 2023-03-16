@@ -29,9 +29,6 @@ class PhpMndConverter extends AbstractConverter
     public const TYPE = 'phpmnd';
     public const NAME = 'PHPmnd.xml';
 
-    /**
-     * {@inheritDoc}
-     */
     public function toInternal(string $source): SourceSuite
     {
         $xmlDocument = Xml::createDomDocument($source);

@@ -29,9 +29,6 @@ class PmdCpdConverter extends AbstractConverter
     public const TYPE = 'pmd-cpd';
     public const NAME = 'PmdCpd.xml';
 
-    /**
-     * {@inheritDoc}
-     */
     public function toInternal(string $source): SourceSuite
     {
         $xmlAsArray = data(Xml::dom2Array(Xml::createDomDocument($source)));

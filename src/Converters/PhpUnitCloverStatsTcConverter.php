@@ -28,7 +28,6 @@ class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
     public const NAME = 'PHPUnit Clover (xml)';
 
     /**
-     * {@inheritDoc}
      * @SuppressWarnings(PHPMD.NPathComplexity)
      */
     public function toInternalMetric(string $sourceCode): Metrics

@@ -29,9 +29,6 @@ class JUnitConverter extends AbstractConverter
     public const TYPE = 'junit';
     public const NAME = 'JUnit.xml';
 
-    /**
-     * {@inheritDoc}
-     */
     public function toInternal(string $source): SourceSuite
     {
         $xmlDocument = Xml::createDomDocument($source);
@@ -43,9 +40,6 @@ class JUnitConverter extends AbstractConverter
         return $testSuite;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function fromInternal(SourceSuite $sourceSuite): string
     {
         $junit = new JUnit();

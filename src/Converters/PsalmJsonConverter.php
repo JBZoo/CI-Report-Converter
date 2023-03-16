@@ -29,9 +29,6 @@ class PsalmJsonConverter extends AbstractConverter
     public const TYPE = 'psalm-json';
     public const NAME = 'Psalm.json';
 
-    /**
-     * {@inheritDoc}
-     */
     public function toInternal(string $source): SourceSuite
     {
         $sourceSuite = new SourceSuite($this->rootSuiteName ?: 'Psalm');

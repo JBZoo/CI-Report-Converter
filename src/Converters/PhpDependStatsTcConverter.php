@@ -27,9 +27,6 @@ class PhpDependStatsTcConverter extends AbstractStatsTcConverter
     public const TYPE = 'pdepend-xml';
     public const NAME = 'PHP Depend (xml)';
 
-    /**
-     * {@inheritDoc}
-     */
     public function toInternalMetric(string $sourceCode): Metrics
     {
         $xmlAsArray = Xml::dom2Array(Xml::createDomDocument($sourceCode));

@@ -29,9 +29,6 @@ class PhpMdJsonConverter extends AbstractConverter
     public const TYPE = 'phpmd-json';
     public const NAME = 'PHPmd.json';
 
-    /**
-     * {@inheritDoc}
-     */
     public function toInternal(string $source): SourceSuite
     {
         $sourceSuite = new SourceSuite($this->rootSuiteName ?: 'PHPmd');

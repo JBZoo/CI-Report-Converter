@@ -27,9 +27,6 @@ class GithubCliConverter extends AbstractConverter
     public const TYPE = 'github-cli';
     public const NAME = 'GitHub Actions - CLI';
 
-    /**
-     * {@inheritDoc}
-     */
     public function fromInternal(SourceSuite $sourceSuite): string
     {
         $ghActions = new GithubActions();

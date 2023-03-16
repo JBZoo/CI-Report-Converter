@@ -21,9 +21,6 @@ use JBZoo\Cli\Codes;
 
 class ConvertMap extends AbstractCommand
 {
-    /**
-     * {@inheritDoc}
-     */
     protected function configure(): void
     {
         $this
@@ -33,9 +30,6 @@ class ConvertMap extends AbstractCommand
         parent::configure();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     protected function executeAction(): int
     {
         $this->_(Map::getMarkdownTable());

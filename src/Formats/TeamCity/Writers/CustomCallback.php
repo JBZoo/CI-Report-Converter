@@ -21,9 +21,6 @@ class CustomCallback implements AbstractWriter
     /** @var null|callable */
     private $callback;
 
-    /**
-     * {@inheritDoc}
-     */
     public function write(?string $message): void
     {
         if ($this->callback === null) {

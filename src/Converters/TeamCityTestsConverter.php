@@ -34,9 +34,6 @@ class TeamCityTestsConverter extends AbstractConverter
         $this->tcLogger = new TeamCity($tcWriter ?: new Buffer(), $flowId, $params);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function fromInternal(SourceSuite $sourceSuite): string
     {
         if ($this->flowId > 0) {

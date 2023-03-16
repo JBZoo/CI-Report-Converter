@@ -27,9 +27,6 @@ class PhpMetricsStatsTcConverter extends AbstractStatsTcConverter
     public const TYPE = 'phpmetrics-xml';
     public const NAME = 'PHP Metrics (xml)';
 
-    /**
-     * {@inheritDoc}
-     */
     public function toInternalMetric(string $sourceCode): Metrics
     {
         $xmlAsArray = Xml::dom2Array(Xml::createDomDocument($sourceCode));

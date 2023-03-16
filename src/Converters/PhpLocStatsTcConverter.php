@@ -26,9 +26,6 @@ class PhpLocStatsTcConverter extends AbstractStatsTcConverter
     public const TYPE = 'phploc-json';
     public const NAME = 'PHPloc (json)';
 
-    /**
-     * {@inheritDoc}
-     */
     public function toInternalMetric(string $sourceCode): Metrics
     {
         $data = json($sourceCode)->getArrayCopy();

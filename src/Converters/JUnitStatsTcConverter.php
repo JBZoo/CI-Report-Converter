@@ -24,9 +24,6 @@ class JUnitStatsTcConverter extends AbstractStatsTcConverter
     public const TYPE = 'junit-xml';
     public const NAME = 'JUnit.xml';
 
-    /**
-     * {@inheritDoc}
-     */
     public function toInternalMetric(string $sourceCode): Metrics
     {
         $sourceCode = (new JUnitConverter())->toInternal($sourceCode);
