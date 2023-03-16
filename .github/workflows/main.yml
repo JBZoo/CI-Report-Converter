@@ -18,9 +18,7 @@ on:
       - "*"
   push:
     branches:
-      - master
-    tags:
-      - '*'
+      - 'master'
   schedule:
     - cron: '30 */8 * * *'
 
@@ -30,47 +28,48 @@ env:
 
 jobs:
   phpunit:
-    name: PHPUnit Tests
+    name: PHPUnit
     runs-on: ubuntu-latest
     env:
       JBZOO_COMPOSER_UPDATE_FLAGS: ${{ matrix.composer_flags }}
     strategy:
       matrix:
-        php-version: [ 7.4, 8.0, 8.1 ]
-        build-way: [ "update" ]
+        php-version: [ 8.1, 8.2 ]
+        coverage: [ xdebug, none ]
         composer_flags: [ "--prefer-lowest", "" ]
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Setup PHP and composer
+      - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-version }}
-          coverage: xdebug
+          coverage: ${{ matrix.coverage }}
           tools: composer
+          extensions: ast
 
       - name: Build the Project
-        run: make build ${{ matrix.build-way }} --no-print-directory
+        run: make update --no-print-directory
 
       - name: 🧪 PHPUnit Tests
         run: make test --no-print-directory
 
       - name: Uploading coverage to coveralls
+        if: ${{ matrix.coverage == 'xdebug' }}
+        continue-on-error: true
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: make report-coveralls --no-print-directory || true
 
-      - name: Codecov Report
-        uses: codecov/codecov-action@v1
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
         continue-on-error: true
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: '*.xml'
-          directory: ./build/coverage_xml/
-          fail_ci_if_error: true
+          name: PHPUnit - ${{ matrix.php-version }} - ${{ matrix.coverage }}
+          path: build/
 
 
   linters:
@@ -78,17 +77,18 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-version: [ 7.4, 8.0, 8.1 ]
+        php-version: [ 8.1, 8.2 ]
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Setup PHP and composer
+      - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-version }}
+          coverage: none
           tools: composer
           extensions: ast
 
@@ -98,38 +98,82 @@ jobs:
       - name: 👍 Code Quality
         run: make codestyle --no-print-directory
 
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        continue-on-error: true
+        with:
+          name: Linters - ${{ matrix.php-version }}
+          path: build/
+
+
+  report:
+    name: Reports
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-version: [ 8.1, 8.2 ]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          coverage: xdebug
+          tools: composer
+          extensions: ast
+
+      - name: Build the Project
+        run: make update --no-print-directory
+
+      - name: 📝 Build Reports
+        run: make report-all --no-print-directory
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        continue-on-error: true
+        with:
+          name: Reports - ${{ matrix.php-version }}
+          path: build/
+
 
   phar:
     name: Phar
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-version: [ 7.4, 8.0, 8.1 ]
-        experimental: [ false ]
-        build-way: [ "build", "update build" ]
-        include:
-          - php-version: 8.0
-            experimental: true
-            build-way: update
+        php-version: [ 8.1, 8.2 ]
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Setup PHP and composer
+      - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-version }}
+          coverage: xdebug
           tools: composer
+          extensions: ast
 
       - name: Building Phar binary file
         continue-on-error: ${{ matrix.experimental }}
-        run: make ${{ matrix.build-way }} --no-print-directory
+        run: make build --no-print-directory
 
       - name: Trying to use the phar file
         continue-on-error: ${{ matrix.experimental }}
         run: ./build/ci-report-converter.phar convert --help
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        continue-on-error: true
+        with:
+          name: Reports - ${{ matrix.php-version }}
+          path: build/
 
 
   docker:
@@ -137,7 +181,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 

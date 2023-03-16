@@ -25,6 +25,12 @@ final class PackageTest extends \JBZoo\Codestyle\PHPUnit\AbstractPackageTest
 {
     protected string $packageName = 'CI-Report-Converter';
 
+    protected function setUp(): void
+    {
+        $this->excludePaths[] = 'assets';
+        parent::setUp();
+    }
+
     public function testBuildGraphManually()
     {
         $sources = [];
