@@ -39,45 +39,37 @@ class CliCommandsTest extends PHPUnit
 {
     public function testConvertCommandReadMe(): void
     {
-        skip('Fix me');
+        $helpMessage = $this->taskReal('convert', ['help' => null]);
+        $helpMessage = \implode("\n", [
+            '',
+            '```',
+            '$ php ./vendor/bin/ci-report-converter convert --help',
+            $helpMessage,
+            '```',
+            '',
+        ]);
 
-        if (\version_compare(\PHP_VERSION, '7.4.99') < 0) {
-            $helpMessage = $this->taskReal('convert', ['help' => null]);
-            $helpMessage = \implode("\n", [
-                '',
-                '```',
-                '$ php ./vendor/bin/ci-report-converter convert --help',
-                $helpMessage,
-                '```',
-                '',
-            ]);
-
-            isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
-        }
+        isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
     }
 
     public function testTcStatsCommandReadMe(): void
     {
-        skip('Fix me');
+        $helpMessage = $this->taskReal('teamcity:stats', ['help' => null]);
+        $helpMessage = \implode("\n", [
+            '',
+            '```',
+            '$ php ./vendor/bin/ci-report-converter teamcity:stats --help',
+            $helpMessage,
+            '```',
+            '',
+        ]);
 
-        if (\version_compare(\PHP_VERSION, '7.4.99') < 0) {
-            $helpMessage = $this->taskReal('teamcity:stats', ['help' => null]);
-            $helpMessage = \implode("\n", [
-                '',
-                '```',
-                '$ php ./vendor/bin/ci-report-converter teamcity:stats --help',
-                $helpMessage,
-                '```',
-                '',
-            ]);
-
-            isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
-        }
+        isFileContains($helpMessage, PROJECT_ROOT . '/README.md');
     }
 
     public function testGitHubActionsYml(): void
     {
-        $helpJson  = json($this->taskReal('convert', ['help' => null, 'format' => 'json']));
+        $helpJson = json($this->taskReal('convert', ['help' => null, 'format' => 'json']));
         $actionYml = yml(PROJECT_ROOT . '/action.yml');
 
         $excludedOptions = [
@@ -102,7 +94,7 @@ class CliCommandsTest extends PHPUnit
             'cron',
         ];
 
-        $expectedInputs   = [];
+        $expectedInputs = [];
         $expectedRunsArgs = ['convert'];
 
         foreach ($helpJson->findArray('definition.options') as $key => $option) {
@@ -123,7 +115,7 @@ class CliCommandsTest extends PHPUnit
         $expectedRunsArgs[] = '-vvv';
 
         $expectedInputs['output-format']['default'] = GithubCliConverter::TYPE;
-        $expectedInputs['input-file']['required']   = true;
+        $expectedInputs['input-file']['required'] = true;
         \ksort($expectedInputs);
 
         $errorMessage = \implode("\n", [
@@ -150,7 +142,7 @@ class CliCommandsTest extends PHPUnit
      */
     public function testGitHubActionsReadMe(): void
     {
-        $inputs   = yml(PROJECT_ROOT . '/action.yml')->findArray('inputs');
+        $inputs = yml(PROJECT_ROOT . '/action.yml')->findArray('inputs');
         $examples = [
             'input-file'    => './build/checkstyle.xml',
             'input-format'  => 'checkstyle',
@@ -234,10 +226,13 @@ class CliCommandsTest extends PHPUnit
             'output-format' => TeamCityInspectionsConverter::TYPE,
             'input-file'    => Fixtures::PHPMD_JSON,
         ]);
-        isContain("##teamcity[inspectionType id='PHPmd:UnusedFormalParameter' " .
+        isContain(
+            "##teamcity[inspectionType id='PHPmd:UnusedFormalParameter' " .
             "name='UnusedFormalParameter' " .
             "category='PHPmd' " .
-            "description='Issues found while checking coding standards'", $output);
+            "description='Issues found while checking coding standards'",
+            $output
+        );
 
         $output = $this->task('convert', [
             'input-format'  => PhpMdJsonConverter::TYPE,
@@ -245,10 +240,13 @@ class CliCommandsTest extends PHPUnit
             'input-file'    => Fixtures::PHPMD_JSON,
             'suite-name'    => 'Test Suite',
         ]);
-        isContain("inspectionType id='Test Suite:UnusedFormalParameter' " .
+        isContain(
+            "inspectionType id='Test Suite:UnusedFormalParameter' " .
             "name='UnusedFormalParameter' " .
             "category='Test Suite' " .
-            "description='Issues found while checking coding standards'", $output);
+            "description='Issues found while checking coding standards'",
+            $output
+        );
     }
 
     /**
@@ -269,10 +267,13 @@ class CliCommandsTest extends PHPUnit
             $output = $exception->getMessage();
         }
 
-        isContain("##teamcity[inspectionType id='PHPmd:UnusedFormalParameter' " .
+        isContain(
+            "##teamcity[inspectionType id='PHPmd:UnusedFormalParameter' " .
             "name='UnusedFormalParameter' " .
             "category='PHPmd' " .
-            "description='Issues found while checking coding standards'", $output);
+            "description='Issues found while checking coding standards'",
+            $output
+        );
     }
 
     public function testConvertUndefinedFile(): void
@@ -375,8 +376,8 @@ class CliCommandsTest extends PHPUnit
         $application->add(new TeamCityStats());
         $command = $application->find($action);
 
-        $buffer   = new BufferedOutput();
-        $args     = new StringInput(Cli::build('', $params));
+        $buffer = new BufferedOutput();
+        $args = new StringInput(Cli::build('', $params));
         $exitCode = $command->run($args, $buffer);
 
         if ($exitCode) {
