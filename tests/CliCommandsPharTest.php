@@ -21,11 +21,10 @@ use JBZoo\Utils\Sys;
 
 class CliCommandsPharTest extends CliCommandsTest
 {
-    /**
-     * @throws \Exception
-     */
     public function task(string $action, array $params = []): string
     {
+        skip('Phar tests are not implemented yet. Waiting for compiled phar');
+
         return $this->taskReal($action, $params);
     }
 

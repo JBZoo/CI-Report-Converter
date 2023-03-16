@@ -365,9 +365,6 @@ class CliCommandsTest extends PHPUnit
         isContain('Found failures: 5', $output);
     }
 
-    /**
-     * @throws \Exception
-     */
     public function task(string $action, array $params = []): string
     {
         $application = new Application();
