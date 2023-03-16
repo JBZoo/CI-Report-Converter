@@ -93,7 +93,7 @@ class AbstractNode
         return $this->data->get($name);
     }
 
-    public function __call(string $name, array $arguments): string
+    public function __call(string $name, array $arguments): string|self
     {
         if (\str_starts_with($name, 'set')) {
             $name     = \strtolower((string)\preg_replace('#^set#', '', $name));
