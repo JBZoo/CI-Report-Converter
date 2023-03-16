@@ -18,6 +18,7 @@ RUN chmod +x /usr/local/bin/install-php-extensions      \
     && sync                                             \
     && install-php-extensions                           \
         opcache                                         \
+        gd                                              \
         zip                                             \
         @composer
 
