@@ -103,6 +103,7 @@ class CliCommandsTest extends PHPUnit
             'stdout-only',
             'non-zero-on-error',
             'timestamp',
+            'cron',
         ];
 
         $expectedInputs = [];

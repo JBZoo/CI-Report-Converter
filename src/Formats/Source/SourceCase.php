@@ -170,6 +170,7 @@ class SourceCase extends AbstractNode
      */
     private static function buildMessage(array $parts): string
     {
+        $parts = \array_filter($parts, '\is_string');
         $parts = \array_map('\trim', $parts);
         $parts = \array_filter($parts);
         $parts = \array_unique($parts);

@@ -546,9 +546,9 @@ PS: More examples are coming soon.
 #### JUnit.xml (API)
 
 ```php
-use JBZoo\CiReportConverter\Converters\JUnitConverter;
-use JBZoo\CiReportConverter\Formats\Source\SourceCaseOutput;
-use JBZoo\CiReportConverter\Formats\Source\SourceSuite;
+use JBZoo\CIReportConverter\Converters\JUnitConverter;
+use JBZoo\CIReportConverter\Formats\Source\SourceCaseOutput;
+use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 
 $class = \JBZoo\PHPUnit\ExampleTest::class;
 $className = str_replace('\\', '.', $class);
@@ -594,7 +594,7 @@ Some err output</system-out>
 #### GitHub Actions (API)
 
 ```php
-use JBZoo\CiReportConverter\Formats\GithubActions\GithubActions;
+use JBZoo\CIReportConverter\Formats\GithubActions\GithubActions;
 
 $ghActions = new GithubActions();
 $case0 = $ghActions->addCase('src/Root.php');

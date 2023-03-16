@@ -39,7 +39,7 @@ class GitLabJsonConverter extends AbstractConverter
         $gitLabJson = new GitLabJson();
         $this->renderSuite($sourceSuite, $gitLabJson);
 
-        return (string)$gitLabJson;
+        return (string)$gitLabJson . PHP_EOL;
     }
 
     /**

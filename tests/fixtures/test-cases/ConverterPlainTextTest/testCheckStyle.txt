@@ -2,7 +2,7 @@
 +-------------+----------+---------------- src/JUnit/JUnitXml.php ------------------------------------------+
 | Line:Column | Severity | Message                                                                          |
 +-------------+----------+----------------------------------------------------------------------------------+
-| 37          | Error    | Assigning $this->rootElement of type \DOMElement|false to property but \JBZoo\Ci |
+| 37          | Error    | Assigning $this->rootElement of type \DOMElement|false to property but \JBZoo\CI |
 |             |          | ReportConverter\JUnit\JUnitXml->rootElement is \DOMElement (false is incompatibl |
 |             |          | e)                                                                               |
 |             |          | Rule     : PhanPossiblyFalseTypeMismatchProperty                                 |

@@ -1,6 +1,6 @@
 [
     {
-        "description" : "Method JBZoo\\CiReportConverter\\JUnit\\TestCaseElement::setName() has no return typehint specified.",
+        "description" : "Method JBZoo\\CIReportConverter\\JUnit\\TestCaseElement::setName() has no return typehint specified.",
         "fingerprint" : "aea772c778f246ed5a99ab9fd3a8517ff7e69309ffccd84939ecf646dea8ae23",
         "severity": "major",
         "location"    : {
@@ -11,7 +11,7 @@
         }
     },
     {
-        "description" : "Method JBZoo\\CiReportConverter\\JUnit\\TestCaseElement::setClassname() has no return typehint specified.",
+        "description" : "Method JBZoo\\CIReportConverter\\JUnit\\TestCaseElement::setClassname() has no return typehint specified.",
         "fingerprint" : "290dd7ea67a8e3dad2458bde3a4aabd02323caebd1b2a47317a292f3892ced4f",
         "severity": "major",
         "location"    : {
@@ -22,7 +22,7 @@
         }
     },
     {
-        "description" : "Method JBZoo\\CiReportConverter\\JUnit\\TestCaseElement::setTime() has no return typehint specified.",
+        "description" : "Method JBZoo\\CIReportConverter\\JUnit\\TestCaseElement::setTime() has no return typehint specified.",
         "fingerprint" : "bca475e51d19a2a2d345d503f9a7ae48582f53f931229cbe7ba00c71e21a63ae",
         "severity": "major",
         "location"    : {
@@ -66,7 +66,7 @@
         }
     },
     {
-        "description" : "Method JBZoo\\CiReportConverter\\JUnit\\TestCaseElement::incrementFailureCount() has no return typehint specified.",
+        "description" : "Method JBZoo\\CIReportConverter\\JUnit\\TestCaseElement::incrementFailureCount() has no return typehint specified.",
         "fingerprint" : "39776773050bcbcc901b2212b8e435e32079deab8788ab90c15090bbd17e95da",
         "severity": "blocker",
         "location"    : {
@@ -98,7 +98,7 @@
         }
     },
     {
-        "description" : "Method JBZoo\\CiReportConverter\\JUnit\\TestCaseElement::incrementErrorCount() has no return typehint specified.",
+        "description" : "Method JBZoo\\CIReportConverter\\JUnit\\TestCaseElement::incrementErrorCount() has no return typehint specified.",
         "fingerprint" : "dd8ee83414abab59c0858344419741bbed680389afa931b256f8d6feed8d0f18",
         "location"    : {
             "path"  : "src/JUnit/TestCaseElement.php",
@@ -128,7 +128,7 @@
         }
     },
     {
-        "description" : "Method JBZoo\\CiReportConverter\\JUnit\\TestSuiteElement::setName() has no return typehint specified.",
+        "description" : "Method JBZoo\\CIReportConverter\\JUnit\\TestSuiteElement::setName() has no return typehint specified.",
         "fingerprint" : "26600bcf761b9fb9d2b9b047f87583169e7368129ca141151ba0f56bad0ce5b5",
         "location"    : {
             "path"  : "src/JUnit/TestSuiteElement.php",
@@ -138,7 +138,7 @@
         }
     },
     {
-        "description" : "Method JBZoo\\CiReportConverter\\JUnit\\TestSuiteElement::setTimestamp() has no return typehint specified.",
+        "description" : "Method JBZoo\\CIReportConverter\\JUnit\\TestSuiteElement::setTimestamp() has no return typehint specified.",
         "fingerprint" : "2bad00be4bc4e2dea9b2c13cfb9ccf11c00dc055a59284a7287e4c9226a1c662",
         "location"    : {
             "path"  : "src/JUnit/TestSuiteElement.php",
@@ -148,7 +148,7 @@
         }
     },
     {
-        "description" : "Method JBZoo\\CiReportConverter\\JUnit\\TestSuiteElement::setTime() has no return typehint specified.",
+        "description" : "Method JBZoo\\CIReportConverter\\JUnit\\TestSuiteElement::setTime() has no return typehint specified.",
         "fingerprint" : "af56e5192c076739244e2f61c93e20b16ab0834eb0036e62baa416d150f7b20c",
         "location"    : {
             "path"  : "src/JUnit/TestSuiteElement.php",
@@ -168,7 +168,7 @@
         }
     },
     {
-        "description" : "Method JBZoo\\CiReportConverter\\JUnit\\TestSuiteElement::setHostname() has no return typehint specified.",
+        "description" : "Method JBZoo\\CIReportConverter\\JUnit\\TestSuiteElement::setHostname() has no return typehint specified.",
         "fingerprint" : "36b18b52bcc5ee4eebdcb0a92fec9f1d131617d24d6af269f12893dc33f24ef4",
         "location"    : {
             "path"  : "src/JUnit/TestSuiteElement.php",
@@ -178,7 +178,7 @@
         }
     },
     {
-        "description" : "Method JBZoo\\CiReportConverter\\JUnit\\TestSuiteElement::incrementTestCount() has no return typehint specified.",
+        "description" : "Method JBZoo\\CIReportConverter\\JUnit\\TestSuiteElement::incrementTestCount() has no return typehint specified.",
         "fingerprint" : "c0c869172407dd6a559dc2f19da36a80dedfc857b86beeb7687e9721ef352a8f",
         "location"    : {
             "path"  : "src/JUnit/TestSuiteElement.php",
@@ -208,7 +208,7 @@
         }
     },
     {
-        "description" : "Method JBZoo\\CiReportConverter\\JUnit\\TestSuiteElement::incrementFailureCount() has no return typehint specified.",
+        "description" : "Method JBZoo\\CIReportConverter\\JUnit\\TestSuiteElement::incrementFailureCount() has no return typehint specified.",
         "fingerprint" : "d6b2cadc2bf66a1656a9bf3209067fe66c85fc4472c55e20856a1159193bfefe",
         "location"    : {
             "path"  : "src/JUnit/TestSuiteElement.php",
@@ -238,7 +238,7 @@
         }
     },
     {
-        "description" : "Method JBZoo\\CiReportConverter\\JUnit\\TestSuiteElement::incrementErrorCount() has no return typehint specified.",
+        "description" : "Method JBZoo\\CIReportConverter\\JUnit\\TestSuiteElement::incrementErrorCount() has no return typehint specified.",
         "fingerprint" : "9997b8a89f78552075a6907de52cb3720f1910837380b1e33d17a6373f09a4fc",
         "location"    : {
             "path"  : "src/JUnit/TestSuiteElement.php",

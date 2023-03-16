@@ -68,10 +68,10 @@
     <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/ConverterTeamCityTest.php" loc="189" cloc="16" eloc="156" lloc="42" ncloc="173"/>
     <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/FormatJUnitTest.php" loc="131" cloc="20" eloc="88" lloc="30" ncloc="111"/>
     <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/FormatSourceTest.php" loc="236" cloc="16" eloc="194" lloc="86" ncloc="220"/>
-    <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterCodestyleTest.php" loc="27" cloc="17" eloc="5" lloc="1" ncloc="10"/>
-    <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterComposerTest.php" loc="27" cloc="17" eloc="5" lloc="1" ncloc="10"/>
-    <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterCopyrightTest.php" loc="30" cloc="20" eloc="6" lloc="2" ncloc="10"/>
-    <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterReadmeTest.php" loc="37" cloc="20" eloc="11" lloc="5" ncloc="17"/>
+    <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CIReportConverterCodestyleTest.php" loc="27" cloc="17" eloc="5" lloc="1" ncloc="10"/>
+    <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CIReportConverterComposerTest.php" loc="27" cloc="17" eloc="5" lloc="1" ncloc="10"/>
+    <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CIReportConverterCopyrightTest.php" loc="30" cloc="20" eloc="6" lloc="2" ncloc="10"/>
+    <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CIReportConverterReadmeTest.php" loc="37" cloc="20" eloc="11" lloc="5" ncloc="17"/>
     <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/Tools/Aliases.php" loc="55" cloc="24" eloc="23" lloc="14" ncloc="31"/>
     <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/Tools/ExampleTest.php" loc="106" cloc="17" eloc="70" lloc="36" ncloc="89"/>
     <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/Tools/Fixtures.php" loc="80" cloc="0" eloc="3" lloc="2" ncloc="80"/>
@@ -735,17 +735,17 @@
       <method name="testUsingProperties" start="213" end="225" ccn="1" ccn2="1" loc="13" cloc="0" eloc="10" lloc="8" ncloc="13" npath="1" hnt="19" hnd="48" hv="106.1142875137" hd="4.9" hl="0.20408163265306" he="519.96000881714" ht="28.886667156508" hb="0.021553875680235" hi="21.655977043613" mi="63.867037817028"/>
       <method name="testSettingInvalidProperty" start="227" end="234" ccn="1" ccn2="1" loc="8" cloc="0" eloc="6" lloc="4" ncloc="8" npath="1" hnt="19" hnd="29" hv="92.301638907424" hd="3.6923076923077" hl="0.27083333333333" he="340.80605135049" ht="18.933669519472" hb="0.016263609707895" hi="24.998360537427" mi="69.130511538402"/>
     </class>
-    <class name="CiReportConverterCodestyleTest" fqname="JBZoo\PHPUnit\CiReportConverterCodestyleTest" start="23" end="26" loc="4" cloc="0" eloc="0" lloc="0" ncloc="4" dit="4" noam="0" nocc="0" noom="0" nom="0" cr="0.15" rcr="0.16877589285714" ca="0" cbo="0" ce="0" impl="0" cis="0" csz="0" npm="0" vars="0" varsi="2" varsnp="0" wmc="0" wmci="26" wmcnp="0">
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterCodestyleTest.php"/>
+    <class name="CIReportConverterCodestyleTest" fqname="JBZoo\PHPUnit\CIReportConverterCodestyleTest" start="23" end="26" loc="4" cloc="0" eloc="0" lloc="0" ncloc="4" dit="4" noam="0" nocc="0" noom="0" nom="0" cr="0.15" rcr="0.16877589285714" ca="0" cbo="0" ce="0" impl="0" cis="0" csz="0" npm="0" vars="0" varsi="2" varsnp="0" wmc="0" wmci="26" wmcnp="0">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CIReportConverterCodestyleTest.php"/>
     </class>
-    <class name="CiReportConverterComposerTest" fqname="JBZoo\PHPUnit\CiReportConverterComposerTest" start="23" end="26" loc="4" cloc="0" eloc="0" lloc="0" ncloc="4" dit="4" noam="0" nocc="0" noom="0" nom="0" cr="0.15" rcr="0.16877589285714" ca="0" cbo="0" ce="0" impl="0" cis="0" csz="0" npm="0" vars="0" varsi="5" varsnp="0" wmc="0" wmci="7" wmcnp="0">
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterComposerTest.php"/>
+    <class name="CIReportConverterComposerTest" fqname="JBZoo\PHPUnit\CIReportConverterComposerTest" start="23" end="26" loc="4" cloc="0" eloc="0" lloc="0" ncloc="4" dit="4" noam="0" nocc="0" noom="0" nom="0" cr="0.15" rcr="0.16877589285714" ca="0" cbo="0" ce="0" impl="0" cis="0" csz="0" npm="0" vars="0" varsi="5" varsnp="0" wmc="0" wmci="7" wmcnp="0">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CIReportConverterComposerTest.php"/>
     </class>
-    <class name="CiReportConverterCopyrightTest" fqname="JBZoo\PHPUnit\CiReportConverterCopyrightTest" start="23" end="29" loc="7" cloc="3" eloc="0" lloc="0" ncloc="4" dit="4" noam="0" nocc="0" noom="0" nom="0" cr="0.15" rcr="0.16877589285714" ca="0" cbo="0" ce="0" impl="0" cis="0" csz="1" npm="0" vars="1" varsi="20" varsnp="0" wmc="0" wmci="26" wmcnp="0">
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterCopyrightTest.php"/>
+    <class name="CIReportConverterCopyrightTest" fqname="JBZoo\PHPUnit\CIReportConverterCopyrightTest" start="23" end="29" loc="7" cloc="3" eloc="0" lloc="0" ncloc="4" dit="4" noam="0" nocc="0" noom="0" nom="0" cr="0.15" rcr="0.16877589285714" ca="0" cbo="0" ce="0" impl="0" cis="0" csz="1" npm="0" vars="1" varsi="20" varsnp="0" wmc="0" wmci="26" wmcnp="0">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CIReportConverterCopyrightTest.php"/>
     </class>
-    <class name="CiReportConverterReadmeTest" fqname="JBZoo\PHPUnit\CiReportConverterReadmeTest" start="25" end="36" loc="12" cloc="3" eloc="3" lloc="1" ncloc="9" dit="4" noam="1" nocc="0" noom="0" nom="1" cr="0.15" rcr="0.16877589285714" ca="0" cbo="1" ce="1" impl="0" cis="1" csz="2" npm="1" vars="1" varsi="6" varsnp="0" wmc="1" wmci="38" wmcnp="1">
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterReadmeTest.php"/>
+    <class name="CIReportConverterReadmeTest" fqname="JBZoo\PHPUnit\CIReportConverterReadmeTest" start="25" end="36" loc="12" cloc="3" eloc="3" lloc="1" ncloc="9" dit="4" noam="1" nocc="0" noom="0" nom="1" cr="0.15" rcr="0.16877589285714" ca="0" cbo="1" ce="1" impl="0" cis="1" csz="2" npm="1" vars="1" varsi="6" varsnp="0" wmc="1" wmci="38" wmcnp="1">
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CIReportConverterReadmeTest.php"/>
       <method name="testMapTable" start="32" end="35" ccn="1" ccn2="1" loc="4" cloc="0" eloc="3" lloc="1" ncloc="4" npath="1" hnt="8" hnd="10" hv="26.575424759099" hd="12" hl="0.083333333333333" he="318.90509710919" ht="17.716949839399" hb="0.015559168559817" hi="2.2146187299249" mi="79.483361990952"/>
     </class>
     <class name="Aliases" fqname="JBZoo\PHPUnit\Aliases" start="24" end="54" loc="31" cloc="8" eloc="15" lloc="10" ncloc="23" dit="0" noam="0" nocc="0" noom="0" nom="2" cr="0.15" rcr="0.15" ca="5" cbo="3" ce="3" impl="0" cis="2" csz="2" npm="2" vars="0" varsi="0" varsnp="0" wmc="3" wmci="3" wmcnp="3">

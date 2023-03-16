@@ -172,10 +172,10 @@
         <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/ConverterTeamCityTest.php">ConverterTeamCityTest</Class>
         <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/FormatJUnitTest.php">FormatJUnitTest</Class>
         <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/FormatSourceTest.php">FormatSourceTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterCodestyleTest.php">CiReportConverterCodestyleTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterComposerTest.php">CiReportConverterComposerTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterCopyrightTest.php">CiReportConverterCopyrightTest</Class>
-        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterReadmeTest.php">CiReportConverterReadmeTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CIReportConverterCodestyleTest.php">CIReportConverterCodestyleTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CIReportConverterComposerTest.php">CIReportConverterComposerTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CIReportConverterCopyrightTest.php">CIReportConverterCopyrightTest</Class>
+        <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CIReportConverterReadmeTest.php">CIReportConverterReadmeTest</Class>
         <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/Tools/Aliases.php">Aliases</Class>
         <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/Tools/ExampleTest.php">ExampleTest</Class>
         <Class sourceFile="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/Tools/Fixtures.php">Fixtures</Class>

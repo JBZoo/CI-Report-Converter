@@ -452,7 +452,7 @@
         <type namespace="JBZoo\PHPUnit" name="DataCodeStyleTest"/>
         <type namespace="JBZoo\PHPUnit" name="MermaidCodeStyleTest"/>
         <type namespace="JBZoo\PHPUnit" name="PHPUnitCodeStyleTest"/>
-        <type namespace="JBZoo\PHPUnit" name="CiReportConverterCodestyleTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CIReportConverterCodestyleTest"/>
         <type namespace="JBZoo\PHPUnit" name="UtilsCodestyleTest"/>
       </afferent>
       <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/AbstractCodestyleTest.php"/>
@@ -467,7 +467,7 @@
         <type namespace="JBZoo\PHPUnit" name="DataComposerTest"/>
         <type namespace="JBZoo\PHPUnit" name="MermaidComposerTest"/>
         <type namespace="JBZoo\PHPUnit" name="PHPUnitComposerTest"/>
-        <type namespace="JBZoo\PHPUnit" name="CiReportConverterComposerTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CIReportConverterComposerTest"/>
         <type namespace="JBZoo\PHPUnit" name="UtilsComposerTest"/>
       </afferent>
       <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/AbstractComposerTest.php"/>
@@ -484,7 +484,7 @@
         <type namespace="JBZoo\PHPUnit" name="DataCopyrightTest"/>
         <type namespace="JBZoo\PHPUnit" name="MermaidCopyrightsTest"/>
         <type namespace="JBZoo\PHPUnit" name="PHPUnitCopyrightTest"/>
-        <type namespace="JBZoo\PHPUnit" name="CiReportConverterCopyrightTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CIReportConverterCopyrightTest"/>
         <type namespace="JBZoo\PHPUnit" name="UtilsCopyrightsTest"/>
       </afferent>
       <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/AbstractCopyrightTest.php"/>
@@ -499,7 +499,7 @@
         <type namespace="JBZoo\PHPUnit" name="DataReadmeTest"/>
         <type namespace="JBZoo\PHPUnit" name="MermaidPhpReadmeTest"/>
         <type namespace="JBZoo\PHPUnit" name="PHPUnitReadmeTest"/>
-        <type namespace="JBZoo\PHPUnit" name="CiReportConverterReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CIReportConverterReadmeTest"/>
         <type namespace="JBZoo\PHPUnit" name="UtilsReadmeTest"/>
       </afferent>
       <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/phpunit/src/AbstractReadmeTest.php"/>
@@ -779,34 +779,34 @@
       <afferent/>
       <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/FormatSourceTest.php"/>
     </class>
-    <class name="CiReportConverterCodestyleTest">
+    <class name="CIReportConverterCodestyleTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="AbstractCodestyleTest"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterCodestyleTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CIReportConverterCodestyleTest.php"/>
     </class>
-    <class name="CiReportConverterComposerTest">
+    <class name="CIReportConverterComposerTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="AbstractComposerTest"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterComposerTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CIReportConverterComposerTest.php"/>
     </class>
-    <class name="CiReportConverterCopyrightTest">
+    <class name="CIReportConverterCopyrightTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="AbstractCopyrightTest"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterCopyrightTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CIReportConverterCopyrightTest.php"/>
     </class>
-    <class name="CiReportConverterReadmeTest">
+    <class name="CIReportConverterReadmeTest">
       <efferent>
         <type namespace="JBZoo\PHPUnit" name="AbstractReadmeTest"/>
         <type namespace="JBZoo\CIReportConverter\Converters" name="Map"/>
       </efferent>
       <afferent/>
-      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CiReportConverterReadmeTest.php"/>
+      <file name="/Users/smetdenis/Work/projects/jbzoo-codestyle/vendor/jbzoo/ci-report-converter/tests/CIReportConverterReadmeTest.php"/>
     </class>
     <class name="Aliases">
       <efferent>
@@ -1532,7 +1532,7 @@
         <type namespace="JBZoo\CIReportConverter\Converters" name="AbstractStatsTcConverter"/>
       </efferent>
       <afferent>
-        <type namespace="JBZoo\PHPUnit" name="CiReportConverterReadmeTest"/>
+        <type namespace="JBZoo\PHPUnit" name="CIReportConverterReadmeTest"/>
         <type namespace="JBZoo\CIReportConverter\Commands" name="Convert"/>
         <type namespace="JBZoo\CIReportConverter\Commands" name="ConvertMap"/>
         <type namespace="JBZoo\CIReportConverter\Commands" name="TeamCityStats"/>
