@@ -36,7 +36,7 @@ class GithubActions
 
         foreach ($this->testSuites as $testSuite) {
             $result[] = '';
-            $result[] = '::group::' . self::escape($testSuite->name ?: self::DEFAULT_NAME);
+            $result[] = '::group::' . self::escape($testSuite->name ?? self::DEFAULT_NAME);
             $result[] = (string)$testSuite;
             $result[] = "::endgroup::\n\n";
         }
@@ -54,7 +54,7 @@ class GithubActions
 
     public function addSuite(?string $name = null): GithubSuite
     {
-        $testSuite          = new GithubSuite($name ?: self::DEFAULT_NAME);
+        $testSuite          = new GithubSuite($name ?? self::DEFAULT_NAME);
         $this->testSuites[] = $testSuite;
 
         return $testSuite;

@@ -31,7 +31,7 @@ class TeamCityTestsConverter extends AbstractConverter
 
     public function __construct(array $params = [], ?int $flowId = null, ?AbstractWriter $tcWriter = null)
     {
-        $this->tcLogger = new TeamCity($tcWriter ?: new Buffer(), $flowId, $params);
+        $this->tcLogger = new TeamCity($tcWriter ?? new Buffer(), $flowId, $params);
     }
 
     public function fromInternal(SourceSuite $sourceSuite): string
@@ -58,11 +58,11 @@ class TeamCityTestsConverter extends AbstractConverter
     private function renderSuite(SourceSuite $sourceSuite): void
     {
         $params = [];
-        if ($sourceSuite->file) {
+        if ($sourceSuite->file !== null && $sourceSuite->file !== '') {
             $params = ['locationHint' => "php_qn://{$sourceSuite->file}::\\{$sourceSuite->name}"];
         }
 
-        if ($sourceSuite->name) {
+        if ($sourceSuite->name !== '') {
             $this->tcLogger->testSuiteStarted($sourceSuite->name, $params);
         }
 
@@ -74,7 +74,7 @@ class TeamCityTestsConverter extends AbstractConverter
             $this->renderSuite($suite);
         }
 
-        if ($sourceSuite->name) {
+        if ($sourceSuite->name !== '') {
             $this->tcLogger->testSuiteFinished($sourceSuite->name);
         }
     }
@@ -87,19 +87,19 @@ class TeamCityTestsConverter extends AbstractConverter
         $logger = $this->tcLogger;
 
         $params = [];
-        if ($case->file && $case->class) {
+        if ($case->file !== null && $case->class !== null) {
             $params = ['locationHint' => "php_qn://{$case->file}::\\{$case->class}::{$case->name}"];
-        } elseif ($case->file) {
+        } elseif ($case->file !== null) {
             $params = ['locationHint' => "php_qn://{$case->file}"];
         }
 
         $logger->testStarted($case->name, $params);
 
-        if ($skippedOutput = $case->skipped) {
-            $logger->testSkipped($case->name, $skippedOutput->message, $skippedOutput->details, $case->time);
+        if ($case->skipped !== null) {
+            $logger->testSkipped($case->name, $case->skipped->message, $case->skipped->details, $case->time);
         } else {
             $failureObject = $case->failure ?? $case->error ?? $case->warning;
-            if ($failureObject) {
+            if ($failureObject !== null) {
                 $params = [
                     'message'  => $failureObject->message,
                     'details'  => $failureObject->details,
@@ -115,11 +115,11 @@ class TeamCityTestsConverter extends AbstractConverter
             }
         }
 
-        if ($case->stdOut) {
+        if ($case->stdOut !== null) {
             $logger->getWriter()->write($case->stdOut);
         }
 
-        if ($case->errOut) {
+        if ($case->errOut !== null) {
             $logger->getWriter()->write($case->errOut);
         }
 

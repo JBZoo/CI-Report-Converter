@@ -31,7 +31,9 @@ class PhpMdJsonConverter extends AbstractConverter
 
     public function toInternal(string $source): SourceSuite
     {
-        $sourceSuite = new SourceSuite($this->rootSuiteName ?: 'PHPmd');
+        $sourceSuite = new SourceSuite(
+            $this->rootSuiteName !== null && $this->rootSuiteName !== '' ? $this->rootSuiteName : 'PHPmd',
+        );
 
         $files = (array)json($source)->get('files');
 
@@ -68,20 +70,25 @@ class PhpMdJsonConverter extends AbstractConverter
 
     private static function getDetails(Data $data): ?string
     {
-        $functionName = $data['function'] ? "{$data['function']}()" : null;
-        if ($data['method']) {
-            $functionName = "{$data['method']}()";
+        $package  = $data->getString('package');
+        $class    = $data->getString('class');
+        $method   = $data->getString('method');
+        $function = $data->getString('function');
+
+        $functionName = $function !== '' ? "{$function}()" : null;
+        if ($method !== '') {
+            $functionName = "{$method}()";
         }
 
-        if ($data['class'] && $data['method']) {
-            $functionName = "{$data['class']}->{$data['method']}()";
+        if ($class !== '' && $method !== '') {
+            $functionName = "{$class}->{$method}()";
         }
 
-        if ($data['class'] && $data['method'] && $data['package']) {
-            $functionName = "{$data['package']}\\{$data['class']}->{$data['method']}()";
+        if ($class !== '' && $method !== '' && $package !== '') {
+            $functionName = "{$package}\\{$class}->{$method}()";
         }
 
-        $line = (int)$data->get('beginLine');
+        $line = $data->getInt('beginLine');
         $line = $line > 0 ? ":{$line}" : '';
 
         return Helper::descAsList([

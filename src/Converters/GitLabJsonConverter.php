@@ -22,7 +22,7 @@ use JBZoo\CIReportConverter\Formats\Source\SourceCase;
 use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 
 /**
- * @see     https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html#implementing-a-custom-tool
+ * @see https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html#implementing-a-custom-tool
  */
 class GitLabJsonConverter extends AbstractConverter
 {
@@ -67,11 +67,11 @@ class GitLabJsonConverter extends AbstractConverter
         }
 
         $description = $sourceCase->getMessage();
-        if ($description) {
+        if ($description !== null && $description !== '') {
             $case              = $gitLabJson->addCase();
             $case->description = $this->cleanFilepath($description);
             $case->severity    = $severity;
-            $case->name        = $this->cleanFilepath($sourceCase->file ?: '');
+            $case->name        = $this->cleanFilepath($sourceCase->file ?? '');
             $case->line        = $sourceCase->line;
         }
     }

@@ -33,7 +33,11 @@ class PmdCpdConverter extends AbstractConverter
     {
         $xmlAsArray = data(Xml::dom2Array(Xml::createDomDocument($source)));
 
-        $sourceSuite = new SourceSuite($this->rootSuiteName ?: 'PMD Copy/Paste Detector');
+        $sourceSuite = new SourceSuite(
+            $this->rootSuiteName !== null && $this->rootSuiteName !== ''
+                ? $this->rootSuiteName
+                : 'PMD Copy/Paste Detector',
+        );
 
         foreach ($xmlAsArray->find('_children.0._children') as $duplication) {
             $duplication = data($duplication);
@@ -57,7 +61,7 @@ class PmdCpdConverter extends AbstractConverter
         $fileRef           = new FileRef();
         $fileRef->fullpath = $duplication->findString("_children.{$index}._attrs.path");
         $fileRef->line     = $duplication->findInt("_children.{$index}._attrs.line");
-        $fileRef->name     = $this->cleanFilepath($fileRef->fullpath ?: '');
+        $fileRef->name     = $this->cleanFilepath($fileRef->fullpath ?? '');
 
         return $fileRef;
     }
@@ -99,7 +103,8 @@ class PmdCpdConverter extends AbstractConverter
             $filesAsString,
         ];
 
-        if ($codeFragment = self::getCodeFragment($duplication)) {
+        $codeFragment = self::getCodeFragment($duplication);
+        if ($codeFragment !== null) {
             $result[] = 'Code Fragment:';
             $result[] = '```';
             $result[] = $codeFragment;

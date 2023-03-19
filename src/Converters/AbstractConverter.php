@@ -23,11 +23,9 @@ abstract class AbstractConverter
     public const TYPE = 'abstract';
     public const NAME = 'Abstract';
 
-    protected ?string $rootPath = null;
-
+    protected ?string $rootPath      = null;
     protected ?string $rootSuiteName = null;
-
-    protected ?int $flowId = null;
+    protected ?int    $flowId        = null;
 
     /**
      * @phan-suppress PhanUnusedPublicMethodParameter
@@ -47,13 +45,13 @@ abstract class AbstractConverter
         throw new Exception('Method \"' . __METHOD__ . '\" is not available');
     }
 
-    public function setRootPath(?string $rootPath): self
+    public function setRootPath(string $rootPath): self
     {
         if ($rootPath === '.') {
             $rootPath = \realpath($rootPath);
         }
 
-        $this->rootPath = (string)$rootPath ?: null;
+        $this->rootPath = $rootPath === false || $rootPath === '' ? null : $rootPath;
 
         return $this;
     }
@@ -74,7 +72,11 @@ abstract class AbstractConverter
 
     protected function cleanFilepath(string $origPath): string
     {
-        if ($this->rootPath && $origPath) {
+        if (
+            $this->rootPath !== null
+            && $this->rootPath !== ''
+            && $origPath !== ''
+        ) {
             return \str_replace(\rtrim($this->rootPath, '/') . '/', '', $origPath);
         }
 
@@ -83,20 +85,22 @@ abstract class AbstractConverter
 
     protected function getFullPath(?string $relFilename): ?string
     {
-        if (!$relFilename) {
+        if ($relFilename === '' || $relFilename === null) {
             return null;
         }
 
-        if ($absFilename = \realpath($relFilename)) {
+        $absFilename = \realpath($relFilename);
+        if ($absFilename !== false) {
             return $absFilename;
         }
 
-        if ($this->rootPath) {
+        if ($this->rootPath !== null && $this->rootPath !== '') {
             $rootPath    = \rtrim($this->rootPath, '/');
             $relFilename = \ltrim($relFilename, '.');
             $relFilename = \ltrim($relFilename, '/');
 
-            if ($absFilename = \realpath($rootPath . '/' . $relFilename)) {
+            $absFilename = \realpath($rootPath . '/' . $relFilename);
+            if ($absFilename !== false) {
                 return $absFilename;
             }
         }
@@ -104,13 +108,12 @@ abstract class AbstractConverter
         return $relFilename;
     }
 
-    /**
-     * @param null|int|string $line
-     * @param null|int|string $column
-     */
-    protected static function getFilePoint(?string $filename = null, $line = 0, $column = 0): ?string
-    {
-        if (!$filename) {
+    protected static function getFilePoint(
+        ?string $filename = null,
+        int|string|null $line = 0,
+        int|string|null $column = 0,
+    ): ?string {
+        if ($filename === '' || $filename === null) {
             return null;
         }
 

@@ -29,11 +29,13 @@ class PlainTextSuite extends AbstractNode
 
         foreach ($this->testCases as $testCase) {
             if (!isset($tables[$testCase->name])) {
-                $tables[$testCase->name] = new Table($testCase->name ?: PlainText::DEFAULT_NAME);
+                $tables[$testCase->name] = new Table(
+                    $testCase->name !== null && $testCase->name !== '' ? $testCase->name : PlainText::DEFAULT_NAME,
+                );
             }
 
             $tables[$testCase->name]->appendRow([
-                ($testCase->line ?: 1) . ($testCase->column ? ":{$testCase->column}" : ''),
+                ($testCase->line ?? 1) . ($testCase->column > 0 ? ":{$testCase->column}" : ''),
                 $testCase->level,
                 $testCase->message,
             ]);

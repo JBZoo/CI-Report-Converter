@@ -48,9 +48,9 @@ class TeamCity
      */
     public function __construct(AbstractWriter $writer, ?int $flowId = null, array $params = [])
     {
-        $flowId = (int)$flowId ?: null;
+        $flowId = $flowId > 0 ? $flowId : null;
         if ($flowId === null && Sys::isFunc('getmypid')) {
-            $this->flowId = (int)\getmypid() ?: null;
+            $this->flowId = \getmypid() !== false ? \getmypid() : null;
         } else {
             $this->flowId = $flowId;
         }
@@ -172,16 +172,16 @@ class TeamCity
         ?string $description = null,
     ): void {
         $cleanInspectionId = \trim($inspectionId);
-        if (!$cleanInspectionId) {
+        if ($cleanInspectionId === '') {
             throw new Exception("Inspection Id can't be empty");
         }
 
         if (!\in_array($inspectionId, $this->inspectionTypes, true)) {
             $this->write('inspectionType', [
                 'id'          => $cleanInspectionId,
-                'name'        => $name ?: self::DEFAULT_INSPECTION_NAME,
-                'category'    => $category ?: self::DEFAULT_INSPECTION_CATEGORY,
-                'description' => $description ?: self::DEFAULT_INSPECTION_DESC,
+                'name'        => $name ?? self::DEFAULT_INSPECTION_NAME,
+                'category'    => $category ?? self::DEFAULT_INSPECTION_CATEGORY,
+                'description' => $description ?? self::DEFAULT_INSPECTION_DESC,
             ]);
 
             $this->inspectionTypes[] = $inspectionId;
@@ -202,8 +202,8 @@ class TeamCity
     ): void {
         $this->write('inspection', [
             'typeId'  => $typeId,
-            'file'    => $filename ?: 'Undefined file',
-            'line'    => $line ?: 0,
+            'file'    => $filename ?? 'Undefined file',
+            'line'    => $line ?? 0,
             'message' => $message,
             // Custom props
             'SEVERITY' => $severity,

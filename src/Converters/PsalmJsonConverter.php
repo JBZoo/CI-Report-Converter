@@ -31,7 +31,9 @@ class PsalmJsonConverter extends AbstractConverter
 
     public function toInternal(string $source): SourceSuite
     {
-        $sourceSuite = new SourceSuite($this->rootSuiteName ?: 'Psalm');
+        $sourceSuite = new SourceSuite(
+            $this->rootSuiteName !== '' && $this->rootSuiteName !== null ? $this->rootSuiteName : 'Psalm',
+        );
 
         $sourceCases = json($source)->getArrayCopy();
 
@@ -76,7 +78,7 @@ class PsalmJsonConverter extends AbstractConverter
             ''            => \htmlspecialchars_decode((string)$data->get('message')),
             'Rule'        => $data->get('type'),
             'File Path'   => self::getFilePoint($data->get('file_path'), $data->get('line_from')),
-            'Snippet'     => $snippet ? "`{$snippet}`" : null,
+            'Snippet'     => $snippet !== '' ? "`{$snippet}`" : null,
             'Taint Trace' => $data->get('taint_trace'),
             'Docs'        => $data->get('link'),
             'Severity'    => $data->get('severity'),

@@ -21,12 +21,9 @@ use JBZoo\Utils\Xml;
 abstract class AbstractOutput
 {
     protected string $elementName = '';
-
-    private ?string $type;
-
-    private ?string $message;
-
-    private ?string $description;
+    private ?string  $type;
+    private ?string  $message;
+    private ?string  $description;
 
     public function __construct(?string $type = null, ?string $message = null, ?string $description = null)
     {

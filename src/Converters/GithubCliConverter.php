@@ -31,7 +31,7 @@ class GithubCliConverter extends AbstractConverter
     {
         $ghActions = new GithubActions();
 
-        if ($this->rootSuiteName) {
+        if ($this->rootSuiteName !== '' && $this->rootSuiteName !== null) {
             $this->renderSuite($sourceSuite, $ghActions->addSuite($this->rootSuiteName));
         } else {
             $this->renderSuite($sourceSuite, $ghActions);
@@ -76,8 +76,8 @@ class GithubCliConverter extends AbstractConverter
         }
 
         $message = $sourceCase->getMessage();
-        if ($message) {
-            $case          = $ghActions->addCase($this->cleanFilepath($sourceCase->file ?: ''));
+        if ($message !== '' && $message !== null) {
+            $case          = $ghActions->addCase($this->cleanFilepath($sourceCase->file ?? ''));
             $case->line    = $sourceCase->line;
             $case->column  = $sourceCase->column;
             $case->level   = $level;

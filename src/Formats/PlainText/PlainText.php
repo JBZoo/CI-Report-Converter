@@ -32,11 +32,11 @@ class PlainText
 
         foreach ($this->testCases as $testCase) {
             if (!isset($tables[$testCase->name])) {
-                $tables[$testCase->name] = new Table($testCase->name ?: self::DEFAULT_NAME);
+                $tables[$testCase->name] = new Table($testCase->name ?? self::DEFAULT_NAME);
             }
 
             $tables[$testCase->name]->appendRow([
-                ($testCase->line ?: 1) . ($testCase->column ? ":{$testCase->column}" : ''),
+                ($testCase->line ?? 1) . ($testCase->column > 0 ? ":{$testCase->column}" : ''),
                 $testCase->level,
                 $testCase->message,
             ]);
@@ -65,7 +65,7 @@ class PlainText
 
     public function addSuite(?string $name = null): PlainTextSuite
     {
-        $testSuite          = new PlainTextSuite($name ?: self::DEFAULT_NAME);
+        $testSuite          = new PlainTextSuite($name ?? self::DEFAULT_NAME);
         $this->testSuites[] = $testSuite;
 
         return $testSuite;

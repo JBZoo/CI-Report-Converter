@@ -33,17 +33,14 @@ class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
     public function toInternalMetric(string $sourceCode): Metrics
     {
         $cloverXml = new \SimpleXMLElement($sourceCode);
-
-        $info = data((array)$cloverXml->project->metrics)->getSelf('@attributes');
+        $info      = data((array)$cloverXml->project->metrics)->getSelf('@attributes');
 
         $coveredClasses = 0;
+        $nodeClasses    = $cloverXml->xpath('//class');
 
-        $nodeClasses = $cloverXml->xpath('//class');
-        if ($nodeClasses) {
-            foreach ($nodeClasses as $class) {
-                if ((int)$class->metrics['coveredmethods'] === (int)$class->metrics['methods']) {
-                    $coveredClasses++;
-                }
+        foreach ($nodeClasses as $class) {
+            if ((int)$class->metrics['coveredmethods'] === (int)$class->metrics['methods']) {
+                $coveredClasses++;
             }
         }
 
@@ -69,15 +66,14 @@ class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
         $crapAmount = 0;
 
         $allCrapAttrs = $cloverXml->xpath('//@crap');
-        if ($allCrapAttrs) {
-            foreach ($allCrapAttrs as $crap) {
-                $crapValues[] = float($crap);
-                $crapAmount++;
-            }
+
+        foreach ($allCrapAttrs as $crap) {
+            $crapValues[] = float($crap);
+            $crapAmount++;
         }
 
-        $crapValuesCount = \count($crapValues) ?: 1;
-        $crapSummary     = \array_sum($crapValues) ?: 0;
+        $crapValuesCount = \count($crapValues) > 0 ? \count($crapValues) : 1;
+        $crapSummary     = \max(\array_sum($crapValues), 0);
 
         $data['CRAPTotal']   = $crapSummary;
         $data['CRAPAmount']  = $crapAmount;
@@ -88,11 +84,7 @@ class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
         return self::buildMetrics($data, new PhpUnitClover());
     }
 
-    /**
-     * @param float|int $current
-     * @param float|int $total
-     */
-    private static function percent($current, $total): float
+    private static function percent(float|int $current, float|int $total): float
     {
         if ($total <= 0) {
             $total = 1;

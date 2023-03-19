@@ -21,20 +21,22 @@ use JBZoo\Cli\OutLvl;
 
 abstract class AbstractCommand extends CliCommand
 {
-    protected function getSourceCode(): string
+    protected function getSourceCode(): ?string
     {
-        if ($filename = $this->getOptString('input-file')) {
-            if (!\realpath($filename) && !\file_exists($filename)) {
+        $filename = $this->getOptString('input-file');
+
+        if ($filename !== '') {
+            if (\realpath($filename) === false && !\file_exists($filename)) {
                 $this->_("File \"{$filename}\" not found", OutLvl::ERROR);
 
-                return '';
+                return null;
             }
 
             return (string)\file_get_contents($filename);
         }
 
-        $contents = (string)self::getStdIn();
-        if (\trim($contents) === '') {
+        $contents = self::getStdIn();
+        if (\trim((string)$contents) === '') {
             throw new Exception('Please provide input-file or use STDIN as input (CLI pipeline).');
         }
 
@@ -43,7 +45,8 @@ abstract class AbstractCommand extends CliCommand
 
     protected function saveResult(string $result): bool
     {
-        if ($filename = $this->getOptString('output-file')) {
+        $filename = $this->getOptString('output-file');
+        if ($filename !== '') {
             \file_put_contents($filename, $result);
             $this->_("Result is saved: {$filename}");
 

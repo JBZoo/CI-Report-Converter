@@ -27,8 +27,7 @@ use function JBZoo\Utils\int;
 
 /**
  * @property string $name
- *
- * @method self setName(?string $name)
+ * @method   self   setName(?string $name)
  */
 class AbstractNode
 {
@@ -43,8 +42,8 @@ class AbstractNode
     public function __construct(?string $name = null)
     {
         $this->data     = new Data();
-        $this->name     = (string)$name;
-        $this->nodeName = Str::getClassName(static::class);
+        $this->name     = $name ?? '';
+        $this->nodeName = Str::getClassName(static::class) ?? '';
     }
 
     /**
@@ -101,6 +100,7 @@ class AbstractNode
 
             if (\array_key_exists($name, $this->meta)) {
                 if ($newValue !== null) {
+                    // @phpstan-ignore-next-line
                     $this->{$name} = $newValue;
                 }
 
@@ -111,6 +111,7 @@ class AbstractNode
         if (\str_starts_with($name, 'get')) {
             $name = (string)\preg_replace('#^get#', '', $name);
             if (\array_key_exists($name, $this->meta)) {
+                // @phpstan-ignore-next-line
                 return $this->{$name};
             }
         }

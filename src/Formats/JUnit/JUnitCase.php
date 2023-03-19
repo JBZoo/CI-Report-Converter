@@ -31,13 +31,12 @@ use JBZoo\CIReportConverter\Formats\JUnit\CaseOutput\Warning;
  * @property null|int    $line
  * @property null|float  $time
  * @property null|int    $assertions
- *
- * @method self setClass(?string $class)
- * @method self setClassname(?string $classname)
- * @method self setFile(?string $file)
- * @method self setLine(?string $line)
- * @method self setTime(?string $time)
- * @method self setAssertions(?string $assertions)
+ * @method   self        setClass(?string $class)
+ * @method   self        setClassname(?string $classname)
+ * @method   self        setFile(?string $file)
+ * @method   self        setLine(?string $line)
+ * @method   self        setTime(?string $time)
+ * @method   self        setAssertions(?string $assertions)
  */
 class JUnitCase extends AbstractNode
 {
@@ -56,21 +55,21 @@ class JUnitCase extends AbstractNode
 
     public function addFailure(?string $type = null, ?string $message = null, ?string $description = null): self
     {
-        $this->outputs[] = new Failure($type ?: 'Failure', $message, $description);
+        $this->outputs[] = new Failure($type ?? 'Failure', $message, $description);
 
         return $this;
     }
 
     public function addError(?string $type = null, ?string $message = null, ?string $description = null): self
     {
-        $this->outputs[] = new Error($type ?: 'Error', $message, $description);
+        $this->outputs[] = new Error($type ?? 'Error', $message, $description);
 
         return $this;
     }
 
     public function addWarning(?string $type = null, ?string $message = null, ?string $description = null): self
     {
-        $this->outputs[] = new Warning($type ?: 'Warning', $message, $description);
+        $this->outputs[] = new Warning($type ?? 'Warning', $message, $description);
 
         return $this;
     }

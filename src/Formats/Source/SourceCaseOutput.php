@@ -64,7 +64,7 @@ class SourceCaseOutput
             foreach ($diffLines as $diffLine) {
                 $diffLine = \trim($diffLine);
 
-                if (!$diffLine) {
+                if ($diffLine === '') {
                     $isDiffPart = false;
                     continue;
                 }

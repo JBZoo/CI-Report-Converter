@@ -28,12 +28,11 @@ class TeamCityInspectionsConverter extends AbstractConverter
     public const NAME = 'TeamCity - Inspections';
 
     private TeamCity $tcLogger;
-
-    private string $globalPrefix = '';
+    private string   $globalPrefix = '';
 
     public function __construct(array $params = [], ?int $flowId = null, ?AbstractWriter $tcWriter = null)
     {
-        $this->tcLogger = new TeamCity($tcWriter ?: new Buffer(), $flowId, $params);
+        $this->tcLogger = new TeamCity($tcWriter ?? new Buffer(), $flowId, $params);
     }
 
     public function fromInternal(SourceSuite $sourceSuite): string
@@ -42,7 +41,10 @@ class TeamCityInspectionsConverter extends AbstractConverter
             $this->tcLogger->setFlowId($this->flowId);
         }
 
-        $this->globalPrefix = \trim($sourceSuite->name) ?: TeamCity::DEFAULT_INSPECTION_ID;
+        $this->globalPrefix = \trim($sourceSuite->name) !== ''
+            ? \trim($sourceSuite->name)
+            : TeamCity::DEFAULT_INSPECTION_ID;
+
         $this->renderSuite($sourceSuite);
 
         $buffer = $this->tcLogger->getWriter();
@@ -72,31 +74,31 @@ class TeamCityInspectionsConverter extends AbstractConverter
         $failureObject = null;
         $severity      = null;
 
-        if ($case->failure) {
+        if ($case->failure !== null) {
             $severity      = TeamCity::SEVERITY_ERROR;
             $failureObject = $case->failure;
-        } elseif ($case->error) {
+        } elseif ($case->error !== null) {
             $severity      = TeamCity::SEVERITY_ERROR;
             $failureObject = $case->error;
-        } elseif ($case->warning) {
+        } elseif ($case->warning !== null) {
             $severity      = TeamCity::SEVERITY_WARNING;
             $failureObject = $case->warning;
-        } elseif ($case->skipped) {
+        } elseif ($case->skipped !== null) {
             $severity      = TeamCity::SEVERITY_WARNING_WEAK;
             $failureObject = $case->skipped;
         }
 
-        /** @phpstan-ignore-next-line */
-        if (!$failureObject || !$severity) {
+        if ($failureObject === null) {
             return;
         }
 
         $messageData = $failureObject->parseDescription();
-        $title       = "{$suiteName} / {$case->name}";
-        $message     = $messageData->get('message') ?? $failureObject->message ?: '';
-        $details     = $messageData->get('description') ?? $failureObject->details ?: '';
 
-        if ($details && $message && \str_contains($details, $message)) {
+        $title   = "{$suiteName} / {$case->name}";
+        $message = $messageData->getStringNull('message') ?? $failureObject->message ?? '';
+        $details = $messageData->getStringNull('description') ?? $failureObject->details ?? '';
+
+        if ($details !== '' && $message !== '' && \str_contains($details, $message)) {
             $message = null;
         }
 
@@ -104,20 +106,22 @@ class TeamCityInspectionsConverter extends AbstractConverter
             $title = $case->name;
         }
 
-        $inspectionName = $case->class ?: $case->classname ?: $failureObject->type ?: $severity;
-        $inspectionId   = ($this->globalPrefix ?: TeamCity::DEFAULT_INSPECTION_ID) . ':' . $inspectionName;
+        $inspectionName = $case->class ?? $case->classname ?? $failureObject->type ?? $severity;
+        $inspectionId   = ($this->globalPrefix !== ''
+                ? $this->globalPrefix
+                : TeamCity::DEFAULT_INSPECTION_ID) . ':' . $inspectionName;
 
         $this->tcLogger->addInspectionType($inspectionId, $inspectionName, $this->globalPrefix);
         $this->tcLogger->addInspectionIssue(
             $inspectionId,
             $this->cleanFilepath((string)$case->file),
             $case->line,
-            \trim(\implode("\n", \array_unique(\array_filter([
-                \str_repeat('-', 120),
-                $title,
-                $message,
-                $details,
-            ])))),
+            \trim(
+                \implode(
+                    "\n",
+                    \array_unique(\array_filter([\str_repeat('-', 120), $title, $message, $details])),
+                ),
+            ),
             $severity,
         );
     }

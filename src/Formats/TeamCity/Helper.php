@@ -84,7 +84,7 @@ class Helper
      */
     public static function ensureValidJavaId(string $value): void
     {
-        if (!\preg_match('/^[a-z][-a-z0-9]+$/i', $value)) {
+        if (\preg_match('/^[a-z][-a-z0-9]+$/i', $value) === 0) {
             throw new Exception("Value \"{$value}\" is not valid Java ID.");
         }
     }
@@ -121,11 +121,11 @@ class Helper
         return \preg_replace_callback(
             '/([\'\n\r|[\]])|\\\\u(\d{4})/',
             static function (array $matches) use ($escapeCharacterMap) {
-                if ($matches[1]) {
+                if ($matches[1] !== '') {
                     return $escapeCharacterMap[$matches[1]];
                 }
 
-                if ($matches[2]) {
+                if ($matches[2] !== '') {
                     return '|0x' . $matches[2];
                 }
 

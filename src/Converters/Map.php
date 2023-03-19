@@ -54,8 +54,9 @@ class Map
 
         foreach ($drivers as $source) {
             foreach ($drivers as $target) {
-                $sourceName                       = $source::NAME;
-                $targetName                       = $target::TYPE;
+                $sourceName = $source::NAME;
+                $targetName = $target::TYPE;
+
                 $result[$sourceName][$targetName] = self::isAvailable($source, $target);
             }
         }
@@ -69,13 +70,17 @@ class Map
         \sort($drivers);
 
         if ($direction !== null) {
-            return \array_filter(\array_map(static function (string $converterClass) use ($direction): ?string {
-                if (self::MAP_TESTS[$converterClass][$direction]) {
-                    return $converterClass::TYPE;
-                }
+            return \array_filter(
+                // @phpstan-ignore-next-line
+                \array_map(static function (string $converterClass) use ($direction): ?string {
+                    if (self::MAP_TESTS[$converterClass][$direction]) {
+                        // @phpstan-ignore-next-line
+                        return (string)$converterClass::TYPE;
+                    }
 
-                return null;
-            }, $drivers));
+                    return null;
+                }, $drivers),
+            );
         }
 
         return \array_map(static fn (string $converterClass): string => $converterClass::TYPE, $drivers);

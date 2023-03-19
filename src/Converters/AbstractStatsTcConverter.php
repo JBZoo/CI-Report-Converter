@@ -31,7 +31,7 @@ abstract class AbstractStatsTcConverter extends AbstractConverter
 
     public function __construct(array $params = [], ?int $flowId = null, ?AbstractWriter $tcWriter = null)
     {
-        $this->tcLogger = new TeamCity($tcWriter ?: new Buffer(), $flowId, $params);
+        $this->tcLogger = new TeamCity($tcWriter ?? new Buffer(), $flowId, $params);
     }
 
     /**

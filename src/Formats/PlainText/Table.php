@@ -70,7 +70,7 @@ class Table
             }
         }
 
-        if ($this->testCaseName) {
+        if ($this->testCaseName !== '') {
             $this->table
                 ->setHeaderTitle($this->testCaseName)
                 ->setFooterTitle($this->testCaseName);

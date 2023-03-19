@@ -34,7 +34,7 @@ class GithubCase extends AbstractNode
     public const DEFAULT_MESSAGE = 'Undefined Error Message';
 
     protected array $meta = [
-        'name'    => ['string'], // It's relative path to file
+        'name'    => ['string'], // Relative path to file
         'level'   => ['string'], // See self::LEVEL_*
         'line'    => ['int'],
         'column'  => ['int'],
@@ -52,13 +52,16 @@ class GithubCase extends AbstractNode
 
     public function __toString(): string
     {
-        $paramsAsString = \implode(',', \array_filter([
-            $this->name ? "file={$this->name}" : null,
-            $this->line ? "line={$this->line}" : null,
-            $this->column ? "col={$this->column}" : null,
-        ]));
+        $paramsAsString = \implode(
+            ',',
+            \array_filter([
+                $this->name !== '' ? "file={$this->name}" : null,
+                $this->line !== 0 && $this->line !== null ? "line={$this->line}" : null,
+                $this->column !== 0 && $this->column !== null ? "col={$this->column}" : null,
+            ]),
+        );
 
-        $paramsAsString = $paramsAsString ? " {$paramsAsString}" : '';
+        $paramsAsString = $paramsAsString !== '' ? " {$paramsAsString}" : '';
         $message        = GithubActions::escape($this->message);
 
         return "::{$this->level}{$paramsAsString}::{$message}\n";

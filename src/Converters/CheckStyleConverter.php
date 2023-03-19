@@ -34,7 +34,9 @@ class CheckStyleConverter extends AbstractConverter
         $xmlDocument = Xml::createDomDocument($source);
         $xmlAsArray  = Xml::dom2Array($xmlDocument);
 
-        $sourceSuite = new SourceSuite($this->rootSuiteName ?: 'CheckStyle');
+        $sourceSuite = new SourceSuite(
+            $this->rootSuiteName === '' || $this->rootSuiteName === null ? 'CheckStyle' : $this->rootSuiteName,
+        );
 
         foreach ($xmlAsArray['_children'] as $files) {
             foreach ($files['_children'] as $file) {
@@ -48,17 +50,17 @@ class CheckStyleConverter extends AbstractConverter
                     $error = data($errorNode['_attrs']);
                     $error->set('full_path', $absFilename);
 
-                    $line   = $error->get('line');
-                    $column = $error->get('column');
-                    $type   = $error->get('source') ?? 'ERROR';
+                    $line   = $error->getIntNull('line');
+                    $column = $error->getIntNull('column');
+                    $type   = $error->getStringNull('source') ?? 'ERROR';
 
                     $caseName = $line > 0 ? "{$relFilename} line {$line}" : $relFilename;
                     $caseName = $column > 0 ? "{$caseName}, column {$column}" : $caseName;
 
                     $case            = $suite->addTestCase($caseName);
                     $case->file      = $absFilename;
-                    $case->line      = $line ?: null;
-                    $case->column    = $column ?: null;
+                    $case->line      = $line;
+                    $case->column    = $column;
                     $case->class     = $type;
                     $case->classname = $type;
                     $case->failure   = new SourceCaseOutput($type, $error->get('message'), self::getDetails($error));

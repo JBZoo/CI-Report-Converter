@@ -49,14 +49,13 @@ class JUnitConverter extends AbstractConverter
     }
 
     /**
-     * @param  JUnit|JUnitSuite $junitSuite
      * @return JUnit|JUnitSuite
      * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      * @SuppressWarnings(PHPMD.NPathComplexity)
      */
-    public function createJUnitNodes(SourceSuite $source, $junitSuite)
+    public function createJUnitNodes(SourceSuite $source, JUnit|JUnitSuite $junitSuite)
     {
-        if ($source->name) {
+        if ($source->name !== '') {
             $junitSuite       = $junitSuite->addSuite($source->name);
             $junitSuite->file = $source->file;
         }
@@ -75,27 +74,30 @@ class JUnitConverter extends AbstractConverter
                 $junitCase->line       = $sourceCase->line;
                 $junitCase->assertions = $sourceCase->assertions;
 
-                if ($failure = $sourceCase->failure) {
+                $failure = $sourceCase->failure;
+                if ($failure !== null) {
                     $junitCase->addFailure($failure->type, $failure->message, $failure->details);
                 }
 
-                if ($warning = $sourceCase->warning) {
+                $warning = $sourceCase->warning;
+                if ($warning !== null) {
                     $junitCase->addWarning($warning->type, $warning->message, $warning->details);
                 }
 
-                if ($error = $sourceCase->error) {
+                $error = $sourceCase->error;
+                if ($error !== null) {
                     $junitCase->addError($error->type, $error->message, $error->details);
                 }
 
-                if ($sourceCase->stdOut && $sourceCase->errOut) {
+                if ($sourceCase->stdOut !== null && $sourceCase->errOut !== null) {
                     $junitCase->addSystemOut("{$sourceCase->stdOut}\n{$sourceCase->errOut}");
-                } elseif ($sourceCase->stdOut && !$sourceCase->errOut) {
+                } elseif ($sourceCase->stdOut !== null && $sourceCase->errOut === null) {
                     $junitCase->addSystemOut($sourceCase->stdOut);
-                } elseif ($sourceCase->errOut) {
+                } elseif ($sourceCase->errOut !== null) {
                     $junitCase->addSystemOut($sourceCase->errOut);
                 }
 
-                if ($sourceCase->skipped) {
+                if ($sourceCase->skipped !== null) {
                     $junitCase->markAsSkipped();
                 }
             }

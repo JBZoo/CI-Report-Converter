@@ -31,7 +31,7 @@ class PlainTextConverter extends AbstractConverter
     {
         $plainTextSuite = new PlainText();
 
-        if ($this->rootSuiteName) {
+        if ($this->rootSuiteName !== null && $this->rootSuiteName !== '') {
             $this->renderSuite($sourceSuite, $plainTextSuite->addSuite($this->rootSuiteName));
         } else {
             $this->renderSuite($sourceSuite, $plainTextSuite);
@@ -76,8 +76,8 @@ class PlainTextConverter extends AbstractConverter
         }
 
         $message = $sourceCase->getMessage();
-        if ($message) {
-            $case          = $plainTextSuite->addCase($this->cleanFilepath($sourceCase->file ?: ''));
+        if ($message !== null && $message !== '') {
+            $case          = $plainTextSuite->addCase($this->cleanFilepath($sourceCase->file ?? ''));
             $case->line    = $sourceCase->line;
             $case->column  = $sourceCase->column;
             $case->level   = $level;

@@ -26,11 +26,11 @@ class Xml
         $document                     = new \DOMDocument();
         $document->preserveWhiteSpace = false;
 
-        if ($source) {
+        if ($source !== null) {
             $document->loadXML($source);
         }
 
-        $document->version      = self::VERSION;
+        $document->xmlVersion   = self::VERSION;
         $document->encoding     = self::ENCODING;
         $document->formatOutput = true;
 
@@ -54,9 +54,7 @@ class Xml
 
         if ($xmlAsArray['_cdata'] !== null) {
             $newNode = $document->createCDATASection($xmlAsArray['_cdata']);
-            if ($newNode !== false) {
-                $domElement->appendChild($newNode);
-            }
+            $domElement->appendChild($newNode);
         }
 
         if ($domElement instanceof \DOMElement) {
@@ -67,10 +65,8 @@ class Xml
 
         foreach ($xmlAsArray['_children'] as $mixedElement) {
             $newNode = $document->createElement($mixedElement['_node']);
-            if ($newNode !== false) {
-                $domElement->appendChild($newNode);
-                self::array2Dom($mixedElement, $newNode, $document);
-            }
+            $domElement->appendChild($newNode);
+            self::array2Dom($mixedElement, $newNode, $document);
         }
 
         return $document;
@@ -90,7 +86,7 @@ class Xml
             '_children' => [],
         ];
 
-        if ($element->attributes && $element->hasAttributes()) {
+        if ($element->attributes !== null && $element->hasAttributes()) {
             foreach ($element->attributes as $attr) {
                 $result['_attrs'][$attr->name] = $attr->value;
             }
@@ -99,7 +95,8 @@ class Xml
         if ($element->hasChildNodes()) {
             $children = $element->childNodes;
 
-            if ($children->length === 1 && $child = $children->item(0)) {
+            if ($children->length === 1 && $children->item(0) !== null) {
+                $child = $children->item(0);
                 if ($child->nodeType === \XML_TEXT_NODE) {
                     $result['_text'] = $child->nodeValue;
 

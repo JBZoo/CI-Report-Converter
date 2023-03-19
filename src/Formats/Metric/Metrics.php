@@ -26,10 +26,7 @@ class Metrics extends AbstractNode
 
     private ?AbstractMetricMap $map = null;
 
-    /**
-     * @param null|float|int $value
-     */
-    public function add(string $key, $value = null): self
+    public function add(string $key, float|int $value = null): self
     {
         $key = \trim($key);
         if ($key === '') {
@@ -57,7 +54,7 @@ class Metrics extends AbstractNode
         $result = [];
 
         foreach ($metrics as $metric) {
-            if ($metric->name) {
+            if ($metric->name !== null) {
                 $result[$metric->name] = $metric->toArray();
             }
         }
@@ -71,11 +68,12 @@ class Metrics extends AbstractNode
     public function getMetrics(): array
     {
         $columnMap = [];
+        $toolName  = '';
+
         if ($this->map !== null) {
             $columnMap = $this->map->getMap();
+            $toolName  = $this->map->getName() . ':';
         }
-
-        $toolName = $this->map ? $this->map->getName() . ':' : '';
 
         $result = [];
 

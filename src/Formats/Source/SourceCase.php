@@ -123,27 +123,36 @@ class SourceCase extends AbstractNode
         } elseif ($this->errOut !== null) {
             $message = self::buildMessage([$this->name, $this->errOut]);
         } elseif ($this->failure !== null) {
-            $message = self::buildMessage([$this->failure->details]) ?: self::buildMessage([$this->failure->message]);
+            $message = $this->failure->details !== ''
+                ? self::buildMessage([$this->failure->details])
+                : self::buildMessage([$this->failure->message]);
         } elseif ($this->error !== null) {
-            $message = self::buildMessage([$this->error->details]) ?: self::buildMessage([$this->error->message]);
+            $message = $this->error->details !== ''
+                ? self::buildMessage([$this->error->details])
+                : self::buildMessage([$this->error->message]);
         } elseif ($this->warning !== null) {
-            $message = self::buildMessage([$this->warning->details]) ?: self::buildMessage([$this->warning->message]);
+            $message = $this->warning->details !== ''
+                ? self::buildMessage([$this->warning->details])
+                : self::buildMessage([$this->warning->message]);
         } elseif ($this->skipped !== null) {
-            $message = self::buildMessage([$this->skipped->details]) ?: self::buildMessage([$this->skipped->message]);
-            $message = $message ?: 'Skipped';
+            $message = $this->skipped->details !== ''
+                ? self::buildMessage([$this->skipped->details])
+                : self::buildMessage([$this->skipped->message]);
+            $message ??= 'Skipped';
         }
 
-        return $message ?: null;
+        return $message !== '' ? $message : null;
     }
 
-    private static function buildMessage(array $parts): string
+    private static function buildMessage(array $parts): ?string
     {
         $parts   = \array_filter($parts, '\is_string');
         $parts   = \array_map('\trim', $parts);
         $parts   = \array_filter($parts);
         $parts   = \array_unique($parts);
         $message = \implode("\n", $parts);
+        $message = \trim($message);
 
-        return \trim($message);
+        return $message !== '' ? $message : null;
     }
 }

@@ -35,7 +35,9 @@ class PhpMndConverter extends AbstractConverter
         $xmlAsArray  = Xml::dom2Array($xmlDocument);
         $files       = data($xmlAsArray)->findArray('_children.0._children.0._children');
 
-        $sourceSuite = new SourceSuite($this->rootSuiteName ?: 'PHPmnd');
+        $sourceSuite = new SourceSuite(
+            $this->rootSuiteName !== '' && $this->rootSuiteName !== null ? $this->rootSuiteName : 'PHPmnd',
+        );
 
         foreach ($files as $file) {
             $relFilename = $this->cleanFilepath($file['_attrs']['path'] ?? 'undefined');
@@ -58,8 +60,8 @@ class PhpMndConverter extends AbstractConverter
 
                 $case            = $suite->addTestCase($caseName);
                 $case->file      = $absFilename;
-                $case->line      = $line ?: null;
-                $case->column    = $column ?: null;
+                $case->line      = $line;
+                $case->column    = $column;
                 $case->class     = $type;
                 $case->classname = $type;
                 $case->warning   = new SourceCaseOutput($type, $error->get('message'), self::getDetails($error));
