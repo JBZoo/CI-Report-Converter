@@ -20,10 +20,10 @@ return \array_merge($default, [
     'directory_list' => [
         'src',
 
-        'vendor/jbzoo/data/src',
-        'vendor/jbzoo/utils/src',
         'vendor/jbzoo/cli/src',
+        'vendor/jbzoo/data/src',
         'vendor/jbzoo/markdown/src',
+        'vendor/jbzoo/utils/src',
         'vendor/symfony/console',
     ],
 ]);

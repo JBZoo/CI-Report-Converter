@@ -27,16 +27,13 @@ final class Convert extends AbstractCommand
 {
     protected function configure(): void
     {
-        $req = InputOption::VALUE_REQUIRED;
-        $opt = InputOption::VALUE_OPTIONAL;
-
         $this
             ->setName('convert')
             ->setDescription('Convert one report format to another one')
             ->addOption(
                 'input-format',
                 'S',
-                $req,
+                InputOption::VALUE_REQUIRED,
                 'Source format. Available options: <info>' . \implode(
                     ', ',
                     Map::getAvailableFormats(Map::INPUT),
@@ -46,13 +43,13 @@ final class Convert extends AbstractCommand
             ->addOption(
                 'input-file',
                 'I',
-                $opt,
+                InputOption::VALUE_OPTIONAL,
                 'File path with the original report format. If not set or empty, then the STDIN is used.',
             )
             ->addOption(
                 'output-format',
                 'T',
-                $req,
+                InputOption::VALUE_REQUIRED,
                 'Target format. Available options: <info>' . \implode(
                     ', ',
                     Map::getAvailableFormats(Map::OUTPUT),
@@ -62,19 +59,35 @@ final class Convert extends AbstractCommand
             ->addOption(
                 'output-file',
                 'O',
-                $opt,
+                InputOption::VALUE_OPTIONAL,
                 'File path with the result report format. If not set or empty, then the STDOUT is used.',
             )
             ->addOption(
                 'root-path',
                 'R',
-                $opt,
+                InputOption::VALUE_OPTIONAL,
                 'If option is set, all absolute file paths will be converted to relative once.',
                 '.',
             )
-            ->addOption('suite-name', 'N', $req, "Set custom name of root group/suite (if it's possible).")
-            ->addOption('tc-flow-id', 'F', $opt, 'Custom flowId in TeamCity output. Default value is PID of the tool.')
-            ->addOption('non-zero-code', 'Q', $opt, 'Will exit with the code=1, if any violations are found.', 'no');
+            ->addOption(
+                'suite-name',
+                'N',
+                InputOption::VALUE_REQUIRED,
+                "Set custom name of root group/suite (if it's possible).",
+            )
+            ->addOption(
+                'tc-flow-id',
+                'F',
+                InputOption::VALUE_OPTIONAL,
+                'Custom flowId in TeamCity output. Default value is PID of the tool.',
+            )
+            ->addOption(
+                'non-zero-code',
+                'Q',
+                InputOption::VALUE_OPTIONAL,
+                'Will exit with the code=1, if any violations are found.',
+                'no',
+            );
 
         parent::configure();
     }

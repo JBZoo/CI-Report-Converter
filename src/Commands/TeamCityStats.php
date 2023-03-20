@@ -24,38 +24,46 @@ final class TeamCityStats extends AbstractCommand
 {
     protected function configure(): void
     {
-        $req = InputOption::VALUE_REQUIRED;
-        $opt = InputOption::VALUE_OPTIONAL;
-
-        $formats = 'Available options: <comment>' . \implode(', ', Map::getAvailableMetrics()) . '</comment>';
-
         $this
             ->setName('teamcity:stats')
             ->setDescription('Push code metrics to TeamCity Stats')
-            ->addOption('input-format', 'S', $req, "Source format. {$formats}")
+            ->addOption(
+                'input-format',
+                'S',
+                InputOption::VALUE_REQUIRED,
+                'Source format. Available options: <comment>' . \implode(
+                    ', ',
+                    Map::getAvailableMetrics(),
+                ) . '</comment>',
+            )
             ->addOption(
                 'input-file',
                 'I',
-                $opt,
+                InputOption::VALUE_OPTIONAL,
                 'File path with the original report format. ' .
                 'If not set or empty, then the STDIN is used.',
             )
             ->addOption(
                 'output-file',
                 'O',
-                $opt,
+                InputOption::VALUE_OPTIONAL,
                 'File path with the result report format. ' .
                 'If not set or empty, then the STDOUT is used.',
             )
             ->addOption(
                 'root-path',
                 'R',
-                $opt,
+                InputOption::VALUE_OPTIONAL,
                 'If option is set, ' .
                 'all absolute file paths will be converted to relative once.',
                 '.',
             )
-            ->addOption('tc-flow-id', 'F', $opt, 'Custom flowId in TeamCity output. Default value is PID of the tool.');
+            ->addOption(
+                'tc-flow-id',
+                'F',
+                InputOption::VALUE_OPTIONAL,
+                'Custom flowId in TeamCity output. Default value is PID of the tool.',
+            );
 
         parent::configure();
     }
