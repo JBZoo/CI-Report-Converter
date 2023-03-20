@@ -22,7 +22,7 @@ use JBZoo\CIReportConverter\Converters\PlainTextConverter;
 use JBZoo\CIReportConverter\Formats\PlainText\PlainText;
 use JBZoo\CIReportConverter\Formats\PlainText\PlainTextCase;
 
-class ConverterPlainTextTest extends PHPUnit
+final class ConverterPlainTextTest extends PHPUnit
 {
     public function testPhpcsCodestyle(): void
     {

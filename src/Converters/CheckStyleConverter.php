@@ -24,7 +24,7 @@ use JBZoo\Data\Data;
 
 use function JBZoo\Data\data;
 
-class CheckStyleConverter extends AbstractConverter
+final class CheckStyleConverter extends AbstractConverter
 {
     public const TYPE = 'checkstyle';
     public const NAME = 'CheckStyle.xml';

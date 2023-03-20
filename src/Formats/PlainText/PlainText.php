@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\PlainText;
 
-class PlainText
+final class PlainText
 {
     public const DEFAULT_NAME = 'Undefined Suite Name';
 
@@ -32,7 +32,7 @@ class PlainText
 
         foreach ($this->testCases as $testCase) {
             if (!isset($tables[$testCase->name])) {
-                $tables[$testCase->name] = new Table($testCase->name ?? self::DEFAULT_NAME);
+                $tables[$testCase->name] = new Table($testCase->name !== '' ? $testCase->name : self::DEFAULT_NAME);
             }
 
             $tables[$testCase->name]->appendRow([

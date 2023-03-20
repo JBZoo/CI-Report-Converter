@@ -24,7 +24,7 @@ use JBZoo\Data\Data;
 use function JBZoo\Data\data;
 use function JBZoo\Data\json;
 
-class PsalmJsonConverter extends AbstractConverter
+final class PsalmJsonConverter extends AbstractConverter
 {
     public const TYPE = 'psalm-json';
     public const NAME = 'Psalm.json';

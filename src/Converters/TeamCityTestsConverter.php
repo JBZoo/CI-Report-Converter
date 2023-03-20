@@ -22,7 +22,7 @@ use JBZoo\CIReportConverter\Formats\TeamCity\TeamCity;
 use JBZoo\CIReportConverter\Formats\TeamCity\Writers\AbstractWriter;
 use JBZoo\CIReportConverter\Formats\TeamCity\Writers\Buffer;
 
-class TeamCityTestsConverter extends AbstractConverter
+final class TeamCityTestsConverter extends AbstractConverter
 {
     public const TYPE = 'tc-tests';
     public const NAME = 'TeamCity - Tests';

@@ -22,7 +22,7 @@ use JBZoo\CIReportConverter\Formats\TeamCity\TeamCity;
 use JBZoo\CIReportConverter\Formats\TeamCity\Writers\AbstractWriter;
 use JBZoo\CIReportConverter\Formats\TeamCity\Writers\Buffer;
 
-class TeamCityInspectionsConverter extends AbstractConverter
+final class TeamCityInspectionsConverter extends AbstractConverter
 {
     public const TYPE = 'tc-inspections';
     public const NAME = 'TeamCity - Inspections';
@@ -88,7 +88,8 @@ class TeamCityInspectionsConverter extends AbstractConverter
             $failureObject = $case->skipped;
         }
 
-        if ($failureObject === null) {
+        // @phpstan-ignore-next-line
+        if ($failureObject === null || $severity === null) {
             return;
         }
 
@@ -107,9 +108,8 @@ class TeamCityInspectionsConverter extends AbstractConverter
         }
 
         $inspectionName = $case->class ?? $case->classname ?? $failureObject->type ?? $severity;
-        $inspectionId   = ($this->globalPrefix !== ''
-                ? $this->globalPrefix
-                : TeamCity::DEFAULT_INSPECTION_ID) . ':' . $inspectionName;
+        $inspectionId   = $this->globalPrefix !== '' ? $this->globalPrefix : TeamCity::DEFAULT_INSPECTION_ID;
+        $inspectionId .= ":{$inspectionName}";
 
         $this->tcLogger->addInspectionType($inspectionId, $inspectionName, $this->globalPrefix);
         $this->tcLogger->addInspectionIssue(

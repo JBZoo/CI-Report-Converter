@@ -20,7 +20,7 @@ use JBZoo\CIReportConverter\Converters\JUnitConverter;
 use JBZoo\CIReportConverter\Converters\PsalmJsonConverter;
 use JBZoo\CIReportConverter\Converters\TeamCityTestsConverter;
 
-class ConverterPsalmJsonTest extends PHPUnit
+final class ConverterPsalmJsonTest extends PHPUnit
 {
     public function testConvertToInternal(): void
     {

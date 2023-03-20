@@ -18,7 +18,7 @@ namespace JBZoo\CIReportConverter\Formats\GitLabJson;
 
 use function JBZoo\Data\json;
 
-class GitLabJson
+final class GitLabJson
 {
     /** @var GitLabJsonCase[] */
     private array $testCases = [];

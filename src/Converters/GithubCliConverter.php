@@ -22,7 +22,7 @@ use JBZoo\CIReportConverter\Formats\GithubActions\GithubSuite;
 use JBZoo\CIReportConverter\Formats\Source\SourceCase;
 use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 
-class GithubCliConverter extends AbstractConverter
+final class GithubCliConverter extends AbstractConverter
 {
     public const TYPE = 'github-cli';
     public const NAME = 'GitHub Actions - CLI';
@@ -77,7 +77,7 @@ class GithubCliConverter extends AbstractConverter
 
         $message = $sourceCase->getMessage();
         if ($message !== '' && $message !== null) {
-            $case          = $ghActions->addCase($this->cleanFilepath($sourceCase->file ?? ''));
+            $case          = $ghActions->addCase($this->cleanFilepath($sourceCase->file));
             $case->line    = $sourceCase->line;
             $case->column  = $sourceCase->column;
             $case->level   = $level;

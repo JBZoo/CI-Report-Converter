@@ -21,7 +21,7 @@ use JBZoo\CIReportConverter\Converters\GitLabJsonConverter;
 use JBZoo\CIReportConverter\Converters\JUnitConverter;
 use JBZoo\CIReportConverter\Converters\PmdCpdConverter;
 
-class ConverterGitLabJsonTest extends PHPUnit
+final class ConverterGitLabJsonTest extends PHPUnit
 {
     public function testJUnitSimple(): void
     {

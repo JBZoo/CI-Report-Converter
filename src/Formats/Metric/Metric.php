@@ -24,7 +24,7 @@ use JBZoo\CIReportConverter\Formats\AbstractNode;
  * @property null|string $description
  * @property null|float  $value
  */
-class Metric extends AbstractNode
+final class Metric extends AbstractNode
 {
     protected array $meta = [
         'key'         => ['string'],

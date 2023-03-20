@@ -24,7 +24,7 @@ use JBZoo\CIReportConverter\Formats\AbstractNode;
  * @property null|string $name
  * @property null|int    $line
  */
-class GitLabJsonCase extends AbstractNode
+final class GitLabJsonCase extends AbstractNode
 {
     public const SEVERITY_INFO     = 'info';
     public const SEVERITY_MINOR    = 'minor';

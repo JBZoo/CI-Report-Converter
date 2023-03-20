@@ -24,7 +24,7 @@ use JBZoo\CIReportConverter\Formats\AbstractNode;
  * @property null|int    $line
  * @property null|int    $column
  */
-class FileRef extends AbstractNode
+final class FileRef extends AbstractNode
 {
     protected array $meta = [
         'name'     => ['string'], // Relative path to file

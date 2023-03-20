@@ -18,7 +18,7 @@ namespace JBZoo\CIReportConverter\Formats\TeamCity\Writers;
 
 use Symfony\Component\Console\Output\OutputInterface;
 
-class SymfonyConsole implements AbstractWriter
+final class SymfonyConsole implements AbstractWriter
 {
     private ?OutputInterface $output = null;
 

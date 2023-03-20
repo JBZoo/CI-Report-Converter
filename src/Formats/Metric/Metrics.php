@@ -19,7 +19,7 @@ namespace JBZoo\CIReportConverter\Formats\Metric;
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 use JBZoo\CIReportConverter\Formats\MetricMaps\AbstractMetricMap;
 
-class Metrics extends AbstractNode
+final class Metrics extends AbstractNode
 {
     /** @var float[]|int[]|null[] */
     private array $metrics = [];

@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\TeamCity\Writers;
 
-class CustomCallback implements AbstractWriter
+final class CustomCallback implements AbstractWriter
 {
     /** @var null|callable */
     private $callback;

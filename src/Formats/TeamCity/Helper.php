@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\TeamCity;
 
-class Helper
+final class Helper
 {
     public const PREDEFINED_METRICS = [
         'ArtifactsSize',

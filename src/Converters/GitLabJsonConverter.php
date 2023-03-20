@@ -24,7 +24,7 @@ use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 /**
  * @see https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html#implementing-a-custom-tool
  */
-class GitLabJsonConverter extends AbstractConverter
+final class GitLabJsonConverter extends AbstractConverter
 {
     public const TYPE = 'gitlab-json';
     public const NAME = 'GitLab - JSON';
@@ -71,7 +71,7 @@ class GitLabJsonConverter extends AbstractConverter
             $case              = $gitLabJson->addCase();
             $case->description = $this->cleanFilepath($description);
             $case->severity    = $severity;
-            $case->name        = $this->cleanFilepath($sourceCase->file ?? '');
+            $case->name        = $this->cleanFilepath($sourceCase->file);
             $case->line        = $sourceCase->line;
         }
     }

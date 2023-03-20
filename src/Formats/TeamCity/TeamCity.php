@@ -19,7 +19,7 @@ namespace JBZoo\CIReportConverter\Formats\TeamCity;
 use JBZoo\CIReportConverter\Formats\TeamCity\Writers\AbstractWriter;
 use JBZoo\Utils\Sys;
 
-class TeamCity
+final class TeamCity
 {
     public const SEVERITY_INFO         = 'INFO';
     public const SEVERITY_WARNING_WEAK = 'WEAK WARNING';

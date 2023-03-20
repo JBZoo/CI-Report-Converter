@@ -20,7 +20,7 @@ use Symfony\Component\Console\Helper\Table as SymfonyTable;
 use Symfony\Component\Console\Helper\TableSeparator;
 use Symfony\Component\Console\Output\BufferedOutput;
 
-class Table
+final class Table
 {
     private BufferedOutput $buffer;
 

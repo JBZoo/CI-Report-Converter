@@ -19,7 +19,7 @@ namespace JBZoo\PHPUnit;
 use JBZoo\Utils\Cli;
 use JBZoo\Utils\Sys;
 
-class CliCommandsPharTest extends CliCommandsTest
+final class CliCommandsPharTest extends CliCommandsTest
 {
     public function task(string $action, array $params = []): string
     {

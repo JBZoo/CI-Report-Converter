@@ -19,7 +19,7 @@ namespace JBZoo\CIReportConverter\Commands;
 use JBZoo\CIReportConverter\Converters\Map;
 use JBZoo\Cli\Codes;
 
-class ConvertMap extends AbstractCommand
+final class ConvertMap extends AbstractCommand
 {
     protected function configure(): void
     {

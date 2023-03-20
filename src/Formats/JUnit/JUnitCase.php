@@ -38,7 +38,7 @@ use JBZoo\CIReportConverter\Formats\JUnit\CaseOutput\Warning;
  * @method   self        setTime(?string $time)
  * @method   self        setAssertions(?string $assertions)
  */
-class JUnitCase extends AbstractNode
+final class JUnitCase extends AbstractNode
 {
     /** @var AbstractOutput[] */
     public array $outputs = [];

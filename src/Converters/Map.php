@@ -18,7 +18,7 @@ namespace JBZoo\CIReportConverter\Converters;
 
 use JBZoo\Markdown\Table;
 
-class Map
+final class Map
 {
     public const INPUT  = 'input';
     public const OUTPUT = 'output';
@@ -75,7 +75,7 @@ class Map
                 \array_map(static function (string $converterClass) use ($direction): ?string {
                     if (self::MAP_TESTS[$converterClass][$direction]) {
                         // @phpstan-ignore-next-line
-                        return (string)$converterClass::TYPE;
+                        return $converterClass::TYPE;
                     }
 
                     return null;

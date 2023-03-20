@@ -18,7 +18,7 @@ namespace JBZoo\CIReportConverter\Formats\TeamCity\Writers;
 
 use JBZoo\Utils\Cli;
 
-class Stdout implements AbstractWriter
+final class Stdout implements AbstractWriter
 {
     public function write(?string $message): void
     {

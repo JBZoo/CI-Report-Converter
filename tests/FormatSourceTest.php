@@ -20,7 +20,7 @@ use JBZoo\CIReportConverter\Formats\Source\SourceCase;
 use JBZoo\CIReportConverter\Formats\Source\SourceCaseOutput;
 use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 
-class FormatSourceTest extends PHPUnit
+final class FormatSourceTest extends PHPUnit
 {
     public function testCollection(): void
     {

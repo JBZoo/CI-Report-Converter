@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\JUnit\CaseOutput;
 
-class SystemOut extends AbstractOutput
+final class SystemOut extends AbstractOutput
 {
     protected string $elementName = 'system-out';
 }

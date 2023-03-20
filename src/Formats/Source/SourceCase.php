@@ -56,7 +56,7 @@ use JBZoo\CIReportConverter\Formats\AbstractNode;
  * @method self setWarning(?SourceCaseOutput $warning)
  * @method self setSkipped(?SourceCaseOutput $skipped)
  */
-class SourceCase extends AbstractNode
+final class SourceCase extends AbstractNode
 {
     protected array $meta = [
         'name' => ['string'],

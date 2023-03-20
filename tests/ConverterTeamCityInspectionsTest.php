@@ -20,7 +20,7 @@ use JBZoo\CIReportConverter\Converters\CheckStyleConverter;
 use JBZoo\CIReportConverter\Converters\JUnitConverter;
 use JBZoo\CIReportConverter\Converters\TeamCityInspectionsConverter;
 
-class ConverterTeamCityInspectionsTest extends PHPUnit
+final class ConverterTeamCityInspectionsTest extends PHPUnit
 {
     public function testPhpCsCodestyle(): void
     {

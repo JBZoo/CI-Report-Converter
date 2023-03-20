@@ -22,7 +22,7 @@ use JBZoo\CIReportConverter\Converters\PhpLocStatsTcConverter;
 use JBZoo\CIReportConverter\Converters\PhpMetricsStatsTcConverter;
 use JBZoo\CIReportConverter\Converters\PhpUnitCloverStatsTcConverter;
 
-class ConverterTeamCityStatsTest extends PHPUnit
+final class ConverterTeamCityStatsTest extends PHPUnit
 {
     public function testPhpLocJson(): void
     {

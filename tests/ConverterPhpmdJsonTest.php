@@ -19,7 +19,7 @@ namespace JBZoo\PHPUnit;
 use JBZoo\CIReportConverter\Converters\JUnitConverter;
 use JBZoo\CIReportConverter\Converters\PhpMdJsonConverter;
 
-class ConverterPhpmdJsonTest extends PHPUnit
+final class ConverterPhpmdJsonTest extends PHPUnit
 {
     public function testPhpmdJson2JUnit(): void
     {

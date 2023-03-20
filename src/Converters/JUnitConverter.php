@@ -24,7 +24,7 @@ use JBZoo\CIReportConverter\Formats\Xml;
 
 use function JBZoo\Data\data;
 
-class JUnitConverter extends AbstractConverter
+final class JUnitConverter extends AbstractConverter
 {
     public const TYPE = 'junit';
     public const NAME = 'JUnit.xml';

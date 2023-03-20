@@ -22,7 +22,7 @@ use JBZoo\CIReportConverter\Formats\AbstractNode;
  * @property null|string $file
  * @method   self        setFile(?string $file)
  */
-class JUnitSuite extends AbstractNode
+final class JUnitSuite extends AbstractNode
 {
     protected array $meta = [
         'name' => ['string', 'required'],

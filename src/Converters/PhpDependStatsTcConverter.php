@@ -22,7 +22,7 @@ use JBZoo\CIReportConverter\Formats\Xml;
 
 use function JBZoo\Data\data;
 
-class PhpDependStatsTcConverter extends AbstractStatsTcConverter
+final class PhpDependStatsTcConverter extends AbstractStatsTcConverter
 {
     public const TYPE = 'pdepend-xml';
     public const NAME = 'PHP Depend (xml)';

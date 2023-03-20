@@ -19,7 +19,7 @@ namespace JBZoo\PHPUnit;
 use JBZoo\CIReportConverter\Converters\CheckStyleConverter;
 use JBZoo\CIReportConverter\Converters\JUnitConverter;
 
-class ConverterCheckStyleTest extends PHPUnit
+final class ConverterCheckStyleTest extends PHPUnit
 {
     public function testToInternalPhan(): void
     {

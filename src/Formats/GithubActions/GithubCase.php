@@ -24,7 +24,7 @@ use JBZoo\CIReportConverter\Formats\AbstractNode;
  * @property null|string $message
  * @property string      $level
  */
-class GithubCase extends AbstractNode
+final class GithubCase extends AbstractNode
 {
     public const LEVEL_ERROR   = 'error';
     public const LEVEL_WARNING = 'warning';

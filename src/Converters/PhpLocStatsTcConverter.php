@@ -21,7 +21,7 @@ use JBZoo\CIReportConverter\Formats\MetricMaps\PhpLoc;
 
 use function JBZoo\Data\json;
 
-class PhpLocStatsTcConverter extends AbstractStatsTcConverter
+final class PhpLocStatsTcConverter extends AbstractStatsTcConverter
 {
     public const TYPE = 'phploc-json';
     public const NAME = 'PHPloc (json)';

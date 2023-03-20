@@ -22,7 +22,7 @@ use JBZoo\CIReportConverter\Formats\MetricMaps\PhpUnitClover;
 use function JBZoo\Data\data;
 use function JBZoo\Utils\float;
 
-class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
+final class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
 {
     public const TYPE = 'phpunit-clover-xml';
     public const NAME = 'PHPUnit Clover (xml)';
@@ -36,11 +36,14 @@ class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
         $info      = data((array)$cloverXml->project->metrics)->getSelf('@attributes');
 
         $coveredClasses = 0;
-        $nodeClasses    = $cloverXml->xpath('//class');
 
-        foreach ($nodeClasses as $class) {
-            if ((int)$class->metrics['coveredmethods'] === (int)$class->metrics['methods']) {
-                $coveredClasses++;
+        $nodeClasses = $cloverXml->xpath('//class');
+        // @phpstan-ignore-next-line
+        if (\is_iterable($nodeClasses)) {
+            foreach ($nodeClasses as $class) {
+                if ((int)$class->metrics['coveredmethods'] === (int)$class->metrics['methods']) {
+                    $coveredClasses++;
+                }
             }
         }
 
@@ -66,10 +69,12 @@ class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
         $crapAmount = 0;
 
         $allCrapAttrs = $cloverXml->xpath('//@crap');
-
-        foreach ($allCrapAttrs as $crap) {
-            $crapValues[] = float($crap);
-            $crapAmount++;
+        // @phpstan-ignore-next-line
+        if (\is_iterable($allCrapAttrs)) {
+            foreach ($allCrapAttrs as $crap) {
+                $crapValues[] = float($crap);
+                $crapAmount++;
+            }
         }
 
         $crapValuesCount = \count($crapValues) > 0 ? \count($crapValues) : 1;

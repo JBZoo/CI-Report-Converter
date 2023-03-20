@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 namespace JBZoo\PHPUnit;
 
-class Fixtures
+final class Fixtures
 {
     public const ROOT      = __DIR__ . '/fixtures';
     public const ROOT_ORIG = self::ROOT . '/origin';

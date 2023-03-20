@@ -20,7 +20,7 @@ use JBZoo\CIReportConverter\Converters\Map;
 use JBZoo\Cli\Codes;
 use Symfony\Component\Console\Input\InputOption;
 
-class TeamCityStats extends AbstractCommand
+final class TeamCityStats extends AbstractCommand
 {
     protected function configure(): void
     {

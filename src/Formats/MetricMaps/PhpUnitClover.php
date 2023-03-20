@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\MetricMaps;
 
-class PhpUnitClover extends AbstractMetricMap
+final class PhpUnitClover extends AbstractMetricMap
 {
     protected string $name = 'PHPUnit';
 

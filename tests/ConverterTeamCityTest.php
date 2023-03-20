@@ -20,7 +20,7 @@ use JBZoo\CIReportConverter\Converters\JUnitConverter;
 use JBZoo\CIReportConverter\Converters\TeamCityTestsConverter;
 use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 
-class ConverterTeamCityTest extends PHPUnit
+final class ConverterTeamCityTest extends PHPUnit
 {
     public function testJUnit(): void
     {

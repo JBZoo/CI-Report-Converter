@@ -18,7 +18,7 @@ namespace JBZoo\CIReportConverter\Formats\JUnit;
 
 use JBZoo\CIReportConverter\Formats\Xml;
 
-class JUnit
+final class JUnit
 {
     /** @var JUnitSuite[] */
     private array $testSuites = [];

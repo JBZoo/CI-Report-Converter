@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\GithubActions;
 
-class GithubActions
+final class GithubActions
 {
     public const DEFAULT_NAME = 'Undefined Suite Name';
 
@@ -36,7 +36,7 @@ class GithubActions
 
         foreach ($this->testSuites as $testSuite) {
             $result[] = '';
-            $result[] = '::group::' . self::escape($testSuite->name ?? self::DEFAULT_NAME);
+            $result[] = '::group::' . self::escape($testSuite->name !== '' ? $testSuite->name : self::DEFAULT_NAME);
             $result[] = (string)$testSuite;
             $result[] = "::endgroup::\n\n";
         }

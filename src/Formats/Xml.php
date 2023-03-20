@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats;
 
-class Xml
+final class Xml
 {
     public const VERSION  = '1.0';
     public const ENCODING = 'UTF-8';
@@ -88,6 +88,7 @@ class Xml
 
         if ($element->attributes !== null && $element->hasAttributes()) {
             foreach ($element->attributes as $attr) {
+                /** @var \DOMAttr $attr */
                 $result['_attrs'][$attr->name] = $attr->value;
             }
         }

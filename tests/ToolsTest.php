@@ -20,7 +20,7 @@ use JBZoo\CIReportConverter\Formats\JUnit\JUnit;
 use JBZoo\CIReportConverter\Formats\Xml;
 use JBZoo\CIReportConverter\Helper;
 
-class ToolsTest extends PHPUnit
+final class ToolsTest extends PHPUnit
 {
     public function testDescAsList(): void
     {

@@ -18,7 +18,7 @@ namespace JBZoo\CIReportConverter\Formats\GithubActions;
 
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
-class GithubSuite extends AbstractNode
+final class GithubSuite extends AbstractNode
 {
     /** @var GithubCase[] */
     private array $testCases = [];

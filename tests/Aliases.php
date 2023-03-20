@@ -18,7 +18,7 @@ namespace JBZoo\PHPUnit;
 
 use JBZoo\CIReportConverter\Formats\Xml;
 
-class Aliases
+final class Aliases
 {
     /**
      * @param string $xmlString

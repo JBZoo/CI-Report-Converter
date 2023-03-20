@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\MetricMaps;
 
-class JUnit extends AbstractMetricMap
+final class JUnit extends AbstractMetricMap
 {
     protected string $name = 'JUnit';
 

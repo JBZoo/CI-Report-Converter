@@ -23,7 +23,7 @@ use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\RiskyTestError;
 use PHPUnit\Framework\Warning;
 
-class FormatJUnitTest extends PHPUnit
+final class FormatJUnitTest extends PHPUnit
 {
     public function testJunitBuilder(): void
     {

@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\TeamCity\Writers;
 
-class Buffer implements AbstractWriter
+final class Buffer implements AbstractWriter
 {
     private array $buffer = [];
 

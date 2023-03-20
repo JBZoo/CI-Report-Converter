@@ -24,7 +24,7 @@ use JBZoo\Data\Data;
 use function JBZoo\Data\data;
 use function JBZoo\Data\json;
 
-class PhpMdJsonConverter extends AbstractConverter
+final class PhpMdJsonConverter extends AbstractConverter
 {
     public const TYPE = 'phpmd-json';
     public const NAME = 'PHPmd.json';

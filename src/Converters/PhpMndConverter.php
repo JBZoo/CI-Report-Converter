@@ -24,7 +24,7 @@ use JBZoo\Data\Data;
 
 use function JBZoo\Data\data;
 
-class PhpMndConverter extends AbstractConverter
+final class PhpMndConverter extends AbstractConverter
 {
     public const TYPE = 'phpmnd';
     public const NAME = 'PHPmnd.xml';

@@ -24,7 +24,7 @@ use JBZoo\Data\Data;
 
 use function JBZoo\Data\data;
 
-class PmdCpdConverter extends AbstractConverter
+final class PmdCpdConverter extends AbstractConverter
 {
     public const TYPE = 'pmd-cpd';
     public const NAME = 'PmdCpd.xml';
@@ -61,7 +61,7 @@ class PmdCpdConverter extends AbstractConverter
         $fileRef           = new FileRef();
         $fileRef->fullpath = $duplication->findString("_children.{$index}._attrs.path");
         $fileRef->line     = $duplication->findInt("_children.{$index}._attrs.line");
-        $fileRef->name     = $this->cleanFilepath($fileRef->fullpath ?? '');
+        $fileRef->name     = $this->cleanFilepath($fileRef->fullpath);
 
         return $fileRef;
     }

@@ -20,7 +20,7 @@ use JBZoo\CIReportConverter\Converters\JUnitConverter;
 use JBZoo\CIReportConverter\Converters\PmdCpdConverter;
 use JBZoo\CIReportConverter\Converters\TeamCityTestsConverter;
 
-class ConverterPmdCpdTest extends PHPUnit
+final class ConverterPmdCpdTest extends PHPUnit
 {
     public function testToJUnit(): void
     {

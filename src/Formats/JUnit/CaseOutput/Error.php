@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Formats\JUnit\CaseOutput;
 
-class Error extends AbstractOutput
+final class Error extends AbstractOutput
 {
     protected string $elementName = 'error';
 }

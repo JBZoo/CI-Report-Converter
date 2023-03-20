@@ -24,7 +24,7 @@ use JBZoo\CIReportConverter\Formats\AbstractNode;
  * @property null|string $message
  * @property string      $level
  */
-class PlainTextCase extends AbstractNode
+final class PlainTextCase extends AbstractNode
 {
     public const LEVEL_ERROR   = 'Error';
     public const LEVEL_WARNING = 'Warning';

@@ -19,7 +19,7 @@ namespace JBZoo\PHPUnit;
 use JBZoo\Utils\Cli;
 use PHPUnit\Framework\Warning;
 
-class ExampleTestClass extends PHPUnit
+final class ExampleTestClass extends PHPUnit
 {
     protected function setUp(): void
     {

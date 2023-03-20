@@ -20,7 +20,7 @@ use JBZoo\Data\Data;
 
 use function JBZoo\Data\data;
 
-class SourceCaseOutput
+final class SourceCaseOutput
 {
     public ?string $type = null;
 

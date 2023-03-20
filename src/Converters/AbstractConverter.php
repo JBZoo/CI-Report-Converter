@@ -20,7 +20,10 @@ use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 
 abstract class AbstractConverter
 {
+    /** @var string */
     public const TYPE = 'abstract';
+
+    /** @var string */
     public const NAME = 'Abstract';
 
     protected ?string $rootPath      = null;
@@ -70,17 +73,18 @@ abstract class AbstractConverter
         return $this;
     }
 
-    protected function cleanFilepath(string $origPath): string
+    protected function cleanFilepath(?string $origPath): string
     {
         if (
             $this->rootPath !== null
             && $this->rootPath !== ''
             && $origPath !== ''
+            && $origPath !== null
         ) {
             return \str_replace(\rtrim($this->rootPath, '/') . '/', '', $origPath);
         }
 
-        return $origPath;
+        return (string)$origPath;
     }
 
     protected function getFullPath(?string $relFilename): ?string

@@ -22,7 +22,7 @@ use JBZoo\CIReportConverter\Formats\Xml;
 
 use function JBZoo\Data\data;
 
-class PhpMetricsStatsTcConverter extends AbstractStatsTcConverter
+final class PhpMetricsStatsTcConverter extends AbstractStatsTcConverter
 {
     public const TYPE = 'phpmetrics-xml';
     public const NAME = 'PHP Metrics (xml)';

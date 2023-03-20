@@ -18,7 +18,7 @@ namespace JBZoo\CIReportConverter;
 
 use JBZoo\Utils\Str;
 
-class Helper
+final class Helper
 {
     public static function descAsList(array $data): ?string
     {

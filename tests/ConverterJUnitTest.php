@@ -21,7 +21,7 @@ use JBZoo\CIReportConverter\Formats\JUnit\JUnit;
 use JBZoo\CIReportConverter\Formats\Source\SourceCaseOutput;
 use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 
-class ConverterJUnitTest extends PHPUnit
+final class ConverterJUnitTest extends PHPUnit
 {
     public function testConvertToInternal(): void
     {

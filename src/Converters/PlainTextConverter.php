@@ -22,7 +22,7 @@ use JBZoo\CIReportConverter\Formats\PlainText\PlainTextSuite;
 use JBZoo\CIReportConverter\Formats\Source\SourceCase;
 use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 
-class PlainTextConverter extends AbstractConverter
+final class PlainTextConverter extends AbstractConverter
 {
     public const TYPE = 'plain';
     public const NAME = 'Plain Text';
@@ -77,7 +77,7 @@ class PlainTextConverter extends AbstractConverter
 
         $message = $sourceCase->getMessage();
         if ($message !== null && $message !== '') {
-            $case          = $plainTextSuite->addCase($this->cleanFilepath($sourceCase->file ?? ''));
+            $case          = $plainTextSuite->addCase($this->cleanFilepath($sourceCase->file));
             $case->line    = $sourceCase->line;
             $case->column  = $sourceCase->column;
             $case->level   = $level;

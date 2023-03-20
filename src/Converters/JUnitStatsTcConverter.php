@@ -19,7 +19,7 @@ namespace JBZoo\CIReportConverter\Converters;
 use JBZoo\CIReportConverter\Formats\Metric\Metrics;
 use JBZoo\CIReportConverter\Formats\MetricMaps\JUnit;
 
-class JUnitStatsTcConverter extends AbstractStatsTcConverter
+final class JUnitStatsTcConverter extends AbstractStatsTcConverter
 {
     public const TYPE = 'junit-xml';
     public const NAME = 'JUnit.xml';

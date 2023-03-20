@@ -23,7 +23,7 @@ use JBZoo\Cli\Codes;
 use JBZoo\Cli\OutLvl;
 use Symfony\Component\Console\Input\InputOption;
 
-class Convert extends AbstractCommand
+final class Convert extends AbstractCommand
 {
     protected function configure(): void
     {

@@ -20,7 +20,7 @@ use JBZoo\CIReportConverter\Converters\PhpMndConverter;
 use JBZoo\CIReportConverter\Converters\TeamCityInspectionsConverter;
 use JBZoo\CIReportConverter\Converters\TeamCityTestsConverter;
 
-class ConverterPhpMndTest extends PHPUnit
+final class ConverterPhpMndTest extends PHPUnit
 {
     public function testToTcTests(): void
     {

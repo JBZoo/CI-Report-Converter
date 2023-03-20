@@ -22,7 +22,7 @@ use JBZoo\CIReportConverter\Converters\JUnitConverter;
 use JBZoo\CIReportConverter\Formats\GithubActions\GithubActions;
 use JBZoo\CIReportConverter\Formats\GithubActions\GithubCase;
 
-class ConverterGithubTest extends PHPUnit
+final class ConverterGithubTest extends PHPUnit
 {
     public function testJUnitSimple(): void
     {

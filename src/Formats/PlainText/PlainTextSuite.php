@@ -18,7 +18,7 @@ namespace JBZoo\CIReportConverter\Formats\PlainText;
 
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
-class PlainTextSuite extends AbstractNode
+final class PlainTextSuite extends AbstractNode
 {
     /** @var PlainTextCase[] */
     private array $testCases = [];
@@ -30,7 +30,7 @@ class PlainTextSuite extends AbstractNode
         foreach ($this->testCases as $testCase) {
             if (!isset($tables[$testCase->name])) {
                 $tables[$testCase->name] = new Table(
-                    $testCase->name !== null && $testCase->name !== '' ? $testCase->name : PlainText::DEFAULT_NAME,
+                    $testCase->name !== '' ? $testCase->name : PlainText::DEFAULT_NAME,
                 );
             }
 
