@@ -30,13 +30,17 @@ class AbstractNode
         $this->nodeName = Str::getClassName(static::class) ?? '';
     }
 
-    public function __call(string $name, array $arguments)
+    public function __call(string $name, array $arguments): self
     {
         if (\str_starts_with($name, 'set')) {
             $name     = \strtolower((string)\preg_replace('#^set#', '', $name));
             $newValue = $arguments[0] ?? null;
 
-            if ((new \ReflectionProperty($this, $name))->isPublic()) {
+            if (
+                \property_exists($this, $name)
+                && (new \ReflectionProperty($this, $name))->isPublic()
+            ) {
+                // @phpstan-ignore-next-line
                 $this->{$name} = $newValue;
 
                 return $this;

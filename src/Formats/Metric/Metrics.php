@@ -54,7 +54,7 @@ final class Metrics extends AbstractNode
         $result = [];
 
         foreach ($metrics as $metric) {
-            if ($metric->name !== null) {
+            if ($metric->name !== '') {
                 $result[$metric->name] = $metric->toArray();
             }
         }
@@ -94,13 +94,7 @@ final class Metrics extends AbstractNode
             $result[$key] = $metric;
         }
 
-        \uasort(
-            $result,
-            static fn (Metric $metric1, Metric $metric2): int => \strcmp(
-                (string)$metric1->name,
-                (string)$metric2->name,
-            ),
-        );
+        \uasort($result, static fn (Metric $metric1, Metric $metric2): int => \strcmp($metric1->name, $metric2->name));
 
         return $result;
     }
