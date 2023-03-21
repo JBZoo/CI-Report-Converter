@@ -26,8 +26,8 @@ final class FormatSourceTest extends PHPUnit
     {
         $suite = new SourceSuite('Suite');
         isFalse($suite->hasSubSuites());
-        $suite->addTestCase('Case #1')->time = 11;
-        $suite->addTestCase('Case #2')->time = 2.2;
+        $suite->addTestCase('Case #1')->time    = 11;
+        $suite->addTestCase('Case #2')->time    = 2.2;
         $suite->addTestCase('Case #3')->failure = new SourceCaseOutput('Failed');
         isFalse($suite->hasSubSuites());
         $suite->file = __FILE__;
@@ -67,16 +67,16 @@ final class FormatSourceTest extends PHPUnit
         $suite->addTestCase('Case #1');
         isSame(null, $suite->getTime());
 
-        $suite = new SourceSuite('Suite');
+        $suite                               = new SourceSuite('Suite');
         $suite->addTestCase('Case #1')->time = 11;
         $suite->addTestCase('Case #2');
         $suite->addTestCase('Case #3')->time = 2.2;
         isSame(13.2, $suite->getTime());
 
-        $suite = new SourceSuite('Suite');
-        $subSuite = $suite->addSuite('Suite 2');
-        $suite->addTestCase('Case #1')->time = 1;
-        $suite->addTestCase('Case #2')->time = 2;
+        $suite                                  = new SourceSuite('Suite');
+        $subSuite                               = $suite->addSuite('Suite 2');
+        $suite->addTestCase('Case #1')->time    = 1;
+        $suite->addTestCase('Case #2')->time    = 2;
         $subSuite->addTestCase('Case #3')->time = 0.0001;
         isSame(3.0001, $suite->getTime());
     }
@@ -94,7 +94,7 @@ final class FormatSourceTest extends PHPUnit
         ], $suite->toArray());
 
         $suite->class = self::class;
-        $suite->file = '/some/file/name.php';
+        $suite->file  = '/some/file/name.php';
 
         isSame([
             'data' => [
@@ -110,20 +110,20 @@ final class FormatSourceTest extends PHPUnit
 
     public function testAllProperties(): void
     {
-        $suite = new SourceSuite('Suite');
-        $case = $suite->addTestCase('Test Name');
-        $case->time = 0.001824;
-        $case->file = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php';
-        $case->line = 28;
-        $case->class = ExampleTest::class;
-        $case->classname = \str_replace('\\', '.', ExampleTest::class);
+        $suite            = new SourceSuite('Suite');
+        $case             = $suite->addTestCase('Test Name');
+        $case->time       = 0.001824;
+        $case->file       = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php';
+        $case->line       = 28;
+        $case->class      = ExampleTest::class;
+        $case->classname  = \str_replace('\\', '.', ExampleTest::class);
         $case->assertions = 5;
-        $case->stdOut = 'Some std output';
-        $case->errOut = 'Some err output';
-        $case->failure = new SourceCaseOutput('Failure', 'Failure Message', 'Failure Details');
-        $case->warning = new SourceCaseOutput('Warning', 'Warning Message', 'Warning Details');
-        $case->error = new SourceCaseOutput('Error', 'Error Message', 'Error Details');
-        $case->skipped = new SourceCaseOutput('Skipped', 'Skipped Message', 'Skipped Details');
+        $case->stdOut     = 'Some std output';
+        $case->errOut     = 'Some err output';
+        $case->failure    = new SourceCaseOutput('Failure', 'Failure Message', 'Failure Details');
+        $case->warning    = new SourceCaseOutput('Warning', 'Warning Message', 'Warning Details');
+        $case->error      = new SourceCaseOutput('Error', 'Error Message', 'Error Details');
+        $case->skipped    = new SourceCaseOutput('Skipped', 'Skipped Message', 'Skipped Details');
 
         isSame([
             'data' => [
@@ -180,12 +180,12 @@ final class FormatSourceTest extends PHPUnit
         $case = new SourceCase(' Case ');
         isSame(['_node' => 'SourceCase', 'name' => 'Case'], $case->toArray());
 
-        $case->class = self::class;
-        $case->line = 100;
-        $case->file = '/some/file/name.php';
+        $case->class      = self::class;
+        $case->line       = 100;
+        $case->file       = '/some/file/name.php';
         $case->assertions = 10;
-        $case->actual = '20';
-        $case->expected = '30';
+        $case->actual     = '20';
+        $case->expected   = '30';
 
         isSame([
             '_node'      => 'SourceCase',

@@ -333,7 +333,7 @@ final class ToolsTest extends PHPUnit
      */
     public function getXmlFixture()
     {
-        $junit = new JUnit();
+        $junit  = new JUnit();
         $suite1 = $junit->addSuite('Package #1');
         $suite1->addCase('Test case 1')->addFailure('TypeOfFailure', 'Message');
         $suite1->addCase('Test case 2')->addSystemOut('Custom message');
@@ -350,12 +350,12 @@ final class ToolsTest extends PHPUnit
         $xmlExamples = \glob(\realpath(Fixtures::ROOT) . '/**/**/*.xml');
 
         foreach ($xmlExamples as $xmlFile) {
-            $originalXml = new \DOMDocument();
+            $originalXml                     = new \DOMDocument();
             $originalXml->preserveWhiteSpace = false;
             $originalXml->loadXML(\file_get_contents($xmlFile));
             $originalXml->formatOutput = true;
-            $originalXml->encoding = 'UTF-8';
-            $originalXml->version = '1.0';
+            $originalXml->encoding     = 'UTF-8';
+            $originalXml->version      = '1.0';
 
             $actualXml = Xml::array2Dom(Xml::dom2Array($originalXml));
 

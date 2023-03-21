@@ -106,11 +106,11 @@ final class TeamCityTestsConverter extends AbstractConverter
                     'duration' => $case->time,
                 ];
 
-                $messageData = $failureObject->parseDescription();
-                $params['actual'] = $messageData->get('actual');
+                $messageData        = $failureObject->parseDescription();
+                $params['actual']   = $messageData->get('actual');
                 $params['expected'] = $messageData->get('expected');
-                $params['details'] = $messageData->get('description') ?? $params['details'];
-                $params['message'] = $messageData->get('message') ?? $params['message'];
+                $params['details']  = $messageData->get('description') ?? $params['details'];
+                $params['message']  = $messageData->get('message') ?? $params['message'];
                 $logger->testFailed($case->name, $params);
             }
         }

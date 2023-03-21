@@ -77,10 +77,10 @@ final class GithubCliConverter extends AbstractConverter
 
         $message = $sourceCase->getMessage();
         if ($message !== '' && $message !== null) {
-            $case = $ghActions->addCase($this->cleanFilepath($sourceCase->file));
-            $case->line = $sourceCase->line;
-            $case->column = $sourceCase->column;
-            $case->level = $level;
+            $case          = $ghActions->addCase($this->cleanFilepath($sourceCase->file));
+            $case->line    = $sourceCase->line;
+            $case->column  = $sourceCase->column;
+            $case->level   = $level;
             $case->message = $this->cleanFilepath($message);
         }
     }

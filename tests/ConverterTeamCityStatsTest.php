@@ -29,7 +29,7 @@ final class ConverterTeamCityStatsTest extends PHPUnit
         $converter = (new PhpLocStatsTcConverter(['show-datetime' => false], 1));
 
         $sourceCode = $converter->toInternalMetric(\file_get_contents(Fixtures::PHPLOC_JSON));
-        $output = $converter->fromInternalMetric($sourceCode);
+        $output     = $converter->fromInternalMetric($sourceCode);
 
         isSame(Fixtures::getExpectedFileContent('txt'), $output);
     }
@@ -39,7 +39,7 @@ final class ConverterTeamCityStatsTest extends PHPUnit
         $converter = (new PhpDependStatsTcConverter(['show-datetime' => false], 1));
 
         $sourceCode = $converter->toInternalMetric(\file_get_contents(Fixtures::PHP_DEPEND_XML));
-        $output = $converter->fromInternalMetric($sourceCode);
+        $output     = $converter->fromInternalMetric($sourceCode);
 
         isSame(Fixtures::getExpectedFileContent('txt'), $output);
     }
@@ -49,7 +49,7 @@ final class ConverterTeamCityStatsTest extends PHPUnit
         $converter = (new PhpMetricsStatsTcConverter(['show-datetime' => false], 1));
 
         $sourceCode = $converter->toInternalMetric(\file_get_contents(Fixtures::PHP_METRICS_XML));
-        $output = $converter->fromInternalMetric($sourceCode);
+        $output     = $converter->fromInternalMetric($sourceCode);
 
         isSame(Fixtures::getExpectedFileContent('txt'), $output);
     }
@@ -59,7 +59,7 @@ final class ConverterTeamCityStatsTest extends PHPUnit
         $converter = (new PhpUnitCloverStatsTcConverter(['show-datetime' => false], 1));
 
         $sourceCode = $converter->toInternalMetric(\file_get_contents(Fixtures::PHPUNIT_CLOVER));
-        $output = $converter->fromInternalMetric($sourceCode);
+        $output     = $converter->fromInternalMetric($sourceCode);
 
         isSame(Fixtures::getExpectedFileContent('txt'), $output);
     }
@@ -69,7 +69,7 @@ final class ConverterTeamCityStatsTest extends PHPUnit
         $converter = (new JUnitStatsTcConverter(['show-datetime' => false], 1));
 
         $sourceCode = $converter->toInternalMetric(\file_get_contents(Fixtures::PHPUNIT_JUNIT_NESTED));
-        $output = $converter->fromInternalMetric($sourceCode);
+        $output     = $converter->fromInternalMetric($sourceCode);
 
         isSame(Fixtures::getExpectedFileContent('txt'), $output);
     }

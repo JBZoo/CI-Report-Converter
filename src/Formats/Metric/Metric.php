@@ -20,7 +20,7 @@ use JBZoo\CIReportConverter\Formats\AbstractNode;
 
 final class Metric extends AbstractNode
 {
-    public ?string $key = null;
+    public ?string $key         = null;
     public ?string $description = null;
-    public ?float  $value = null;
+    public ?float  $value       = null;
 }

@@ -26,14 +26,14 @@ class AbstractNode
 
     public function __construct(?string $name = null)
     {
-        $this->name = \trim($name ?? '');
+        $this->name     = \trim($name ?? '');
         $this->nodeName = Str::getClassName(static::class) ?? '';
     }
 
     public function __call(string $name, array $arguments)
     {
         if (\str_starts_with($name, 'set')) {
-            $name = \strtolower((string)\preg_replace('#^set#', '', $name));
+            $name     = \strtolower((string)\preg_replace('#^set#', '', $name));
             $newValue = $arguments[0] ?? null;
 
             if ((new \ReflectionProperty($this, $name))->isPublic()) {

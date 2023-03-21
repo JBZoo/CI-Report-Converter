@@ -25,9 +25,9 @@ final class ConverterJUnitTest extends PHPUnit
 {
     public function testConvertToInternal(): void
     {
-        $junit = new JUnit();
+        $junit    = new JUnit();
         $suiteAll = $junit->addSuite('All');
-        $suite1 = $suiteAll->addSuite('Suite #1');
+        $suite1   = $suiteAll->addSuite('Suite #1');
 
         $suite1->addCase('Test #1.1')->time = 1;
         $suite1->addCase('Test #1.2')->time = 2;
@@ -41,8 +41,8 @@ final class ConverterJUnitTest extends PHPUnit
         $actual = (new JUnitConverter())->toInternal((string)$junit)->toArray();
 
         $collection = new SourceSuite();
-        $suiteAll = $collection->addSuite('All');
-        $suite1 = $suiteAll->addSuite('Suite #1');
+        $suiteAll   = $collection->addSuite('All');
+        $suite1     = $suiteAll->addSuite('Suite #1');
 
         $suite1->addTestCase('Test #1.1')->time = 1;
         $suite1->addTestCase('Test #1.2')->time = 2;
@@ -61,7 +61,7 @@ final class ConverterJUnitTest extends PHPUnit
     public function testConvertToInternalReal(): void
     {
         $suiteAll = new SourceSuite('All');
-        $suite1 = $suiteAll->addSuite('Suite #1');
+        $suite1   = $suiteAll->addSuite('Suite #1');
 
         $suite1->addTestCase('Test #1.1')->time = 1;
         $suite1->addTestCase('Test #1.2')->time = 2;
@@ -75,12 +75,12 @@ final class ConverterJUnitTest extends PHPUnit
         $junitActual = (new JUnitConverter())->fromInternal($suiteAll);
 
         $junitExpected = new JUnit();
-        $suiteAll = $junitExpected->addSuite('All');
-        $suite1 = $suiteAll->addSuite('Suite #1');
+        $suiteAll      = $junitExpected->addSuite('All');
+        $suite1        = $suiteAll->addSuite('Suite #1');
 
         $suite1->addCase('Test #1.1')->time = 1;
         $suite1->addCase('Test #1.2')->time = 2;
-        $suite2 = $suiteAll->addSuite('Suite #2');
+        $suite2                             = $suiteAll->addSuite('Suite #2');
         $suite2->addCase('Test #2.1')->time = 3;
         $suite2->addCase('Test #2.2')->time = 4;
         $suite2->addCase('Test #2.3')->time = 5;
@@ -91,25 +91,25 @@ final class ConverterJUnitTest extends PHPUnit
     public function testConvertToInternalRealFull(): void
     {
         // Fixtures
-        $class = ExampleTest::class;
+        $class     = ExampleTest::class;
         $className = \str_replace('\\', '.', $class);
-        $filename = './tests/ExampleTest.php';
-        $line = 28;
+        $filename  = './tests/ExampleTest.php';
+        $line      = 28;
 
-        $suite = new SourceSuite('Suite');
-        $case = $suite->addTestCase('Test Name');
-        $case->time = 0.001824;
-        $case->file = $filename;
-        $case->line = $line;
-        $case->class = $class;
-        $case->classname = $className;
+        $suite            = new SourceSuite('Suite');
+        $case             = $suite->addTestCase('Test Name');
+        $case->time       = 0.001824;
+        $case->file       = $filename;
+        $case->line       = $line;
+        $case->class      = $class;
+        $case->classname  = $className;
         $case->assertions = 5;
-        $case->stdOut = 'Some std output';
-        $case->errOut = 'Some err output';
-        $case->failure = new SourceCaseOutput('Failure', 'Failure Message', 'Failure Details');
-        $case->error = new SourceCaseOutput('Error', 'Error Message', 'Error Details');
-        $case->warning = new SourceCaseOutput('Warning', 'Warning Message', 'Warning Details');
-        $case->skipped = new SourceCaseOutput('Skipped', 'Skipped Message', 'Skipped Details');
+        $case->stdOut     = 'Some std output';
+        $case->errOut     = 'Some err output';
+        $case->failure    = new SourceCaseOutput('Failure', 'Failure Message', 'Failure Details');
+        $case->error      = new SourceCaseOutput('Error', 'Error Message', 'Error Details');
+        $case->warning    = new SourceCaseOutput('Warning', 'Warning Message', 'Warning Details');
+        $case->skipped    = new SourceCaseOutput('Skipped', 'Skipped Message', 'Skipped Details');
 
         isSame(
             \implode("\n", [
@@ -146,8 +146,8 @@ final class ConverterJUnitTest extends PHPUnit
             $expectedXmlCode = \file_get_contents($junitFile);
 
             $converter = new JUnitConverter();
-            $source = $converter->toInternal($expectedXmlCode);
-            $junit = $converter->fromInternal($source);
+            $source    = $converter->toInternal($expectedXmlCode);
+            $junit     = $converter->fromInternal($source);
 
             Aliases::isValidXml($expectedXmlCode);
             Aliases::isValidXml($junit);

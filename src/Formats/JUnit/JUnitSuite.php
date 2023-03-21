@@ -92,7 +92,7 @@ final class JUnitSuite extends AbstractNode
 
     public function addSuite(string $name): self
     {
-        $testSuite = new self($name);
+        $testSuite          = new self($name);
         $this->testSuites[] = $testSuite;
 
         return $testSuite;
@@ -100,7 +100,7 @@ final class JUnitSuite extends AbstractNode
 
     public function addCase(string $name): JUnitCase
     {
-        $testCase = new JUnitCase($name);
+        $testCase          = new JUnitCase($name);
         $this->testCases[] = $testCase;
 
         return $testCase;

@@ -32,8 +32,8 @@ final class PhpMndConverter extends AbstractConverter
     public function toInternal(string $source): SourceSuite
     {
         $xmlDocument = Xml::createDomDocument($source);
-        $xmlAsArray = Xml::dom2Array($xmlDocument);
-        $files = data($xmlAsArray)->findArray('_children.0._children.0._children');
+        $xmlAsArray  = Xml::dom2Array($xmlDocument);
+        $files       = data($xmlAsArray)->findArray('_children.0._children.0._children');
 
         $sourceSuite = new SourceSuite(
             $this->rootSuiteName !== '' && $this->rootSuiteName !== null ? $this->rootSuiteName : 'PHPmnd',
@@ -43,14 +43,14 @@ final class PhpMndConverter extends AbstractConverter
             $relFilename = $this->cleanFilepath($file['_attrs']['path'] ?? 'undefined');
             $absFilename = $this->getFullPath($relFilename);
 
-            $suite = $sourceSuite->addSuite($relFilename);
+            $suite       = $sourceSuite->addSuite($relFilename);
             $suite->file = $absFilename;
 
             foreach ($file['_children'] as $errorNode) {
                 $error = data($errorNode);
-                $type = 'Magic Number';
+                $type  = 'Magic Number';
 
-                $line = $error->findInt('_attrs.line');
+                $line   = $error->findInt('_attrs.line');
                 $column = $error->findInt('_attrs.start');
 
                 $caseName = $line > 0 ? "{$relFilename} line {$line}" : $relFilename;
@@ -58,13 +58,13 @@ final class PhpMndConverter extends AbstractConverter
 
                 $error->set('full_path', self::getFilePoint($absFilename, $line, $column));
 
-                $case = $suite->addTestCase($caseName);
-                $case->file = $absFilename;
-                $case->line = $line;
-                $case->column = $column;
-                $case->class = $type;
+                $case            = $suite->addTestCase($caseName);
+                $case->file      = $absFilename;
+                $case->line      = $line;
+                $case->column    = $column;
+                $case->class     = $type;
                 $case->classname = $type;
-                $case->warning = new SourceCaseOutput($type, $error->get('message'), self::getDetails($error));
+                $case->warning   = new SourceCaseOutput($type, $error->get('message'), self::getDetails($error));
             }
         }
 
@@ -73,7 +73,7 @@ final class PhpMndConverter extends AbstractConverter
 
     private static function getDetails(Data $data): ?string
     {
-        $snippet = '';
+        $snippet     = '';
         $suggestions = [];
 
         foreach ($data->findArray('_children') as $child) {

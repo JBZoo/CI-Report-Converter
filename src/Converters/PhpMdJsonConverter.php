@@ -40,7 +40,7 @@ final class PhpMdJsonConverter extends AbstractConverter
         foreach ($files as $file) {
             $relFilename = $this->cleanFilepath($file['file']);
             $absFilename = $this->getFullPath($relFilename);
-            $suite = $sourceSuite->addSuite($relFilename);
+            $suite       = $sourceSuite->addSuite($relFilename);
             $suite->file = $absFilename;
 
             foreach ($file['violations'] as $violation) {
@@ -49,8 +49,8 @@ final class PhpMdJsonConverter extends AbstractConverter
 
                 $case = $suite->addTestCase("{$relFilename} line {$violation['beginLine']}");
 
-                $case->file = $absFilename;
-                $case->line = $violation['beginLine'] ?? null;
+                $case->file    = $absFilename;
+                $case->line    = $violation['beginLine'] ?? null;
                 $case->failure = new SourceCaseOutput(
                     $violation['rule'] ?? null,
                     $violation['description'] ?? null,
@@ -59,7 +59,7 @@ final class PhpMdJsonConverter extends AbstractConverter
 
                 $package = $violation['package'] ?? null;
                 if ($package !== null) {
-                    $case->class = $package;
+                    $case->class     = $package;
                     $case->classname = \str_replace('\\', '.', $package);
                 }
             }
@@ -70,9 +70,9 @@ final class PhpMdJsonConverter extends AbstractConverter
 
     private static function getDetails(Data $data): ?string
     {
-        $package = $data->getString('package');
-        $class = $data->getString('class');
-        $method = $data->getString('method');
+        $package  = $data->getString('package');
+        $class    = $data->getString('class');
+        $method   = $data->getString('method');
         $function = $data->getString('function');
 
         $functionName = $function !== '' ? "{$function}()" : null;

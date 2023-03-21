@@ -33,7 +33,7 @@ final class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
     public function toInternalMetric(string $sourceCode): Metrics
     {
         $cloverXml = new \SimpleXMLElement($sourceCode);
-        $info = data((array)$cloverXml->project->metrics)->getSelf('@attributes');
+        $info      = data((array)$cloverXml->project->metrics)->getSelf('@attributes');
 
         $coveredClasses = 0;
 
@@ -78,10 +78,10 @@ final class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
         }
 
         $crapValuesCount = \count($crapValues) > 0 ? \count($crapValues) : 1;
-        $crapSummary = \max(\array_sum($crapValues), 0);
+        $crapSummary     = \max(\array_sum($crapValues), 0);
 
-        $data['CRAPTotal'] = $crapSummary;
-        $data['CRAPAmount'] = $crapAmount;
+        $data['CRAPTotal']   = $crapSummary;
+        $data['CRAPAmount']  = $crapAmount;
         $data['CRAPMaximum'] = \count($crapValues) > 0 ? \max($crapValues) : 0.0;
         $data['CRAPAverage'] = self::percent($crapSummary, $crapValuesCount) / 100;
         $data['CRAPPercent'] = self::percent($crapAmount, $crapValuesCount);

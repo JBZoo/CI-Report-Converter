@@ -46,7 +46,7 @@ final class GithubActions
 
     public function addCase(?string $name = null): GithubCase
     {
-        $testSuite = new GithubCase($name);
+        $testSuite         = new GithubCase($name);
         $this->testCases[] = $testSuite;
 
         return $testSuite;
@@ -54,7 +54,7 @@ final class GithubActions
 
     public function addSuite(?string $name = null): GithubSuite
     {
-        $testSuite = new GithubSuite($name ?? self::DEFAULT_NAME);
+        $testSuite          = new GithubSuite($name ?? self::DEFAULT_NAME);
         $this->testSuites[] = $testSuite;
 
         return $testSuite;

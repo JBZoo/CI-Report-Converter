@@ -20,15 +20,16 @@ use JBZoo\CIReportConverter\Formats\AbstractNode;
 
 final class GithubCase extends AbstractNode
 {
-    public const LEVEL_ERROR = 'error';
+    public const LEVEL_ERROR   = 'error';
     public const LEVEL_WARNING = 'warning';
-    public const LEVEL_DEBUG = 'debug';
+    public const LEVEL_DEBUG   = 'debug';
 
-    public const DEFAULT_LEVEL = self::LEVEL_ERROR;
+    public const DEFAULT_LEVEL   = self::LEVEL_ERROR;
     public const DEFAULT_MESSAGE = 'Undefined Error Message';
 
-    public ?int    $line = null;
-    public ?int    $column = null;
+    public string  $level;
+    public ?int    $line    = null;
+    public ?int    $column  = null;
     public ?string $message = null;
 
     public function __construct(?string $name = null)
@@ -36,7 +37,7 @@ final class GithubCase extends AbstractNode
         parent::__construct($name);
 
         // Set default values
-        $this->level = self::DEFAULT_LEVEL;
+        $this->level   = self::DEFAULT_LEVEL;
         $this->message = self::DEFAULT_MESSAGE;
     }
 
@@ -52,7 +53,7 @@ final class GithubCase extends AbstractNode
         );
 
         $paramsAsString = $paramsAsString !== '' ? " {$paramsAsString}" : '';
-        $message = GithubActions::escape($this->message);
+        $message        = GithubActions::escape($this->message);
 
         return "::{$this->level}{$paramsAsString}::{$message}\n";
     }

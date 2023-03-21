@@ -27,8 +27,8 @@ abstract class AbstractOutput
 
     public function __construct(?string $type = null, ?string $message = null, ?string $description = null)
     {
-        $this->type = $type;
-        $this->message = $message;
+        $this->type        = $type;
+        $this->message     = $message;
         $this->description = $description;
     }
 

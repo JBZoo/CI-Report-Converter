@@ -22,8 +22,8 @@ final class FileRef extends AbstractNode
 {
     public string  $name;
     public ?string $fullpath = null;
-    public ?int    $line = null;
-    public ?int    $column = null;
+    public ?int    $line     = null;
+    public ?int    $column   = null;
 
     public function getFullName(): string
     {

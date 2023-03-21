@@ -21,25 +21,25 @@ use JBZoo\CIReportConverter\Formats\AbstractNode;
 final class SourceCase extends AbstractNode
 {
     // Location
-    public ?string $class = null;
+    public ?string $class     = null;
     public ?string $classname = null;
-    public ?string $file = null;
-    public ?int    $line = null;
-    public ?int    $column = null;
+    public ?string $file      = null;
+    public ?int    $line      = null;
+    public ?int    $column    = null;
 
     // Output
     public ?string $stdOut = null;
     public ?string $errOut = null;
 
     // Test meta data
-    public ?float  $time = null;
+    public ?float  $time       = null;
     public ?int    $assertions = null;
-    public ?string $actual = null;
-    public ?string $expected = null;
+    public ?string $actual     = null;
+    public ?string $expected   = null;
 
     // Type of negative results
     public ?SourceCaseOutput $failure = null;
-    public ?SourceCaseOutput $error = null;
+    public ?SourceCaseOutput $error   = null;
     public ?SourceCaseOutput $warning = null;
     public ?SourceCaseOutput $skipped = null;
 
@@ -104,10 +104,10 @@ final class SourceCase extends AbstractNode
 
     private static function buildMessage(array $parts): ?string
     {
-        $parts = \array_filter($parts, '\is_string');
-        $parts = \array_map('\trim', $parts);
-        $parts = \array_filter($parts);
-        $parts = \array_unique($parts);
+        $parts   = \array_filter($parts, '\is_string');
+        $parts   = \array_map('\trim', $parts);
+        $parts   = \array_filter($parts);
+        $parts   = \array_unique($parts);
         $message = \implode("\n", $parts);
         $message = \trim($message);
 

@@ -28,9 +28,9 @@ final class FormatJUnitTest extends PHPUnit
     public function testJunitBuilder(): void
     {
         // Fixtures
-        $class = ExampleTest::class;
+        $class     = ExampleTest::class;
         $className = \str_replace('\\', '.', $class);
-        $filename = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php';
+        $filename  = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php';
 
         // Build XML
         $junit = new JUnit();

@@ -34,7 +34,7 @@ final class CliCommandsPharTest extends CliCommandsTest
 
         $rootDir = PROJECT_ROOT;
 
-        $params['-v'] = null;
+        $params['-v']        = null;
         $params['--no-ansi'] = null;
 
         return Cli::exec(

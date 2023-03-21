@@ -20,7 +20,7 @@ use JBZoo\CIReportConverter\Formats\AbstractNode;
 
 final class SourceSuite extends AbstractNode
 {
-    public ?string $file = null;
+    public ?string $file  = null;
     public ?string $class = null;
 
     /** @var SourceCase[] */
@@ -58,7 +58,7 @@ final class SourceSuite extends AbstractNode
     public function addSuite(string $testSuiteName): self
     {
         if (!\array_key_exists($testSuiteName, $this->suites)) {
-            $testSuite = new self($testSuiteName);
+            $testSuite                    = new self($testSuiteName);
             $this->suites[$testSuiteName] = $testSuite;
         }
 
@@ -67,7 +67,7 @@ final class SourceSuite extends AbstractNode
 
     public function addTestCase(string $testCaseName): SourceCase
     {
-        $testCase = new SourceCase($testCaseName);
+        $testCase      = new SourceCase($testCaseName);
         $this->cases[] = $testCase;
 
         return $testCase;

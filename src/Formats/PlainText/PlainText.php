@@ -57,7 +57,7 @@ final class PlainText
 
     public function addCase(?string $name = null): PlainTextCase
     {
-        $testSuite = new PlainTextCase($name);
+        $testSuite         = new PlainTextCase($name);
         $this->testCases[] = $testSuite;
 
         return $testSuite;
@@ -65,7 +65,7 @@ final class PlainText
 
     public function addSuite(?string $name = null): PlainTextSuite
     {
-        $testSuite = new PlainTextSuite($name ?? self::DEFAULT_NAME);
+        $testSuite          = new PlainTextSuite($name ?? self::DEFAULT_NAME);
         $this->testSuites[] = $testSuite;
 
         return $testSuite;

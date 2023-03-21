@@ -68,11 +68,11 @@ final class Metrics extends AbstractNode
     public function getMetrics(): array
     {
         $columnMap = [];
-        $toolName = '';
+        $toolName  = '';
 
         if ($this->map !== null) {
             $columnMap = $this->map->getMap();
-            $toolName = $this->map->getName() . ':';
+            $toolName  = $this->map->getName() . ':';
         }
 
         $result = [];
@@ -84,10 +84,10 @@ final class Metrics extends AbstractNode
 
             $key = (string)$key;
 
-            $metric = new Metric();
-            $metric->key = $key;
+            $metric        = new Metric();
+            $metric->key   = $key;
             $metric->value = $value;
-            $metric->name = \array_key_exists($key, $columnMap)
+            $metric->name  = \array_key_exists($key, $columnMap)
                 ? "{$columnMap[$key]} ({$toolName}{$key})"
                 : "{$toolName}{$key}";
 

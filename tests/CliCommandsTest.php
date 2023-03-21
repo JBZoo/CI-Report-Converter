@@ -69,7 +69,7 @@ class CliCommandsTest extends PHPUnit
 
     public function testGitHubActionsYml(): void
     {
-        $helpJson = json($this->taskReal('convert', ['help' => null, 'format' => 'json']));
+        $helpJson  = json($this->taskReal('convert', ['help' => null, 'format' => 'json']));
         $actionYml = yml(PROJECT_ROOT . '/action.yml');
 
         $excludedOptions = [
@@ -94,7 +94,7 @@ class CliCommandsTest extends PHPUnit
             'cron',
         ];
 
-        $expectedInputs = [];
+        $expectedInputs   = [];
         $expectedRunsArgs = ['convert'];
 
         foreach ($helpJson->findArray('definition.options') as $key => $option) {
@@ -115,7 +115,7 @@ class CliCommandsTest extends PHPUnit
         $expectedRunsArgs[] = '-vvv';
 
         $expectedInputs['output-format']['default'] = GithubCliConverter::TYPE;
-        $expectedInputs['input-file']['required'] = true;
+        $expectedInputs['input-file']['required']   = true;
         \ksort($expectedInputs);
 
         $errorMessage = \implode("\n", [
@@ -142,7 +142,7 @@ class CliCommandsTest extends PHPUnit
      */
     public function testGitHubActionsReadMe(): void
     {
-        $inputs = yml(PROJECT_ROOT . '/action.yml')->findArray('inputs');
+        $inputs   = yml(PROJECT_ROOT . '/action.yml')->findArray('inputs');
         $examples = [
             'input-file'    => './build/checkstyle.xml',
             'input-format'  => 'checkstyle',
@@ -373,8 +373,8 @@ class CliCommandsTest extends PHPUnit
         $application->add(new TeamCityStats());
         $command = $application->find($action);
 
-        $buffer = new BufferedOutput();
-        $args = new StringInput(Cli::build('', $params));
+        $buffer   = new BufferedOutput();
+        $args     = new StringInput(Cli::build('', $params));
         $exitCode = $command->run($args, $buffer);
 
         if ($exitCode) {

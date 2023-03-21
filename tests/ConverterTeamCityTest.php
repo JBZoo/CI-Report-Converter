@@ -24,9 +24,9 @@ final class ConverterTeamCityTest extends PHPUnit
 {
     public function testJUnit(): void
     {
-        $flowId = 159753;
+        $flowId     = 159753;
         $sourceCode = (new JUnitConverter())->toInternal(\file_get_contents(Fixtures::PHPUNIT_JUNIT_NESTED));
-        $converter = (new TeamCityTestsConverter(['show-datetime' => false], $flowId));
+        $converter  = (new TeamCityTestsConverter(['show-datetime' => false], $flowId));
 
         isSame(Fixtures::getExpectedFileContent('txt'), $converter->fromInternal($sourceCode));
     }
@@ -34,7 +34,7 @@ final class ConverterTeamCityTest extends PHPUnit
     public function testSimpleSources(): void
     {
         $source = new SourceSuite('All');
-        $suite = $source->addSuite('Tests');
+        $suite  = $source->addSuite('Tests');
         $suite->addTestCase('Test Case');
 
         $converter = (new TeamCityTestsConverter(['show-datetime' => false], 1));
@@ -63,34 +63,34 @@ final class ConverterTeamCityTest extends PHPUnit
 
     public function testShowDatetime(): void
     {
-        $source = new SourceSuite('All');
+        $source    = new SourceSuite('All');
         $converter = (new TeamCityTestsConverter(['show-datetime' => true], 1));
         isContain("timestamp='202", $converter->fromInternal($source));
     }
 
     public function testFlowId(): void
     {
-        $source = new SourceSuite('All');
+        $source    = new SourceSuite('All');
         $converter = new TeamCityTestsConverter();
-        $flowId = \getmypid();
+        $flowId    = \getmypid();
         isTrue($flowId > 0);
         isContain("flowId='{$flowId}'", $converter->fromInternal($source));
 
-        $source = new SourceSuite('All');
+        $source    = new SourceSuite('All');
         $converter = new TeamCityTestsConverter(['show-datetime' => true], 1);
         isContain("flowId='1'", $converter->fromInternal($source));
 
-        $source = new SourceSuite('All');
+        $source    = new SourceSuite('All');
         $converter = new TeamCityTestsConverter(['show-datetime' => true], 0);
         isNotContain("flowId='0'", $converter->fromInternal($source));
     }
 
     public function testJUnit2(): void
     {
-        $flowId = 159753;
-        $filepath = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php';
+        $flowId         = 159753;
+        $filepath       = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php';
         $junitConverter = (new JUnitConverter())->toInternal(\file_get_contents(Fixtures::PHPUNIT_JUNIT_SIMPLE));
-        $converter = (new TeamCityTestsConverter(['show-datetime' => false], $flowId));
+        $converter      = (new TeamCityTestsConverter(['show-datetime' => false], $flowId));
 
         isSame(\implode('', [
             "\n##teamcity[testCount count='12' flowId='{$flowId}']\n",

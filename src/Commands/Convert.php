@@ -95,9 +95,9 @@ final class Convert extends AbstractCommand
     protected function executeAction(): int
     {
         $sourceReport = $this->getSourceCode();
-        $rootPath = $this->getOptString('root-path');
-        $suiteName = $this->getOptString('suite-name');
-        $nonZeroCode = $this->getOptBool('non-zero-code');
+        $rootPath     = $this->getOptString('root-path');
+        $suiteName    = $this->getOptString('suite-name');
+        $nonZeroCode  = $this->getOptBool('non-zero-code');
 
         $casesAreFound = false;
 
@@ -107,7 +107,7 @@ final class Convert extends AbstractCommand
                 ->setRootSuiteName($suiteName)
                 ->toInternal($sourceReport);
 
-            $errorsCount = $internalReport->getErrorsCount();
+            $errorsCount  = $internalReport->getErrorsCount();
             $warningCount = $internalReport->getWarningCount();
             $failureCount = $internalReport->getFailureCount();
 

@@ -20,7 +20,7 @@ use JBZoo\Markdown\Table;
 
 final class Map
 {
-    public const INPUT = 'input';
+    public const INPUT  = 'input';
     public const OUTPUT = 'output';
 
     public const MAP_TESTS = [
@@ -107,7 +107,7 @@ final class Map
     public static function getMarkdownTable(): string
     {
         $tableData = self::getTable();
-        $header = \array_keys($tableData);
+        $header    = \array_keys($tableData);
 
         $rows = [];
 

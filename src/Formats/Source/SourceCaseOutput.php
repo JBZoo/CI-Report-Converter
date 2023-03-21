@@ -22,13 +22,13 @@ use function JBZoo\Data\data;
 
 final class SourceCaseOutput
 {
-    public ?string $type = null;
+    public ?string $type    = null;
     public ?string $message = null;
     public ?string $details = null;
 
     public function __construct(?string $type = null, ?string $message = null, ?string $details = null)
     {
-        $this->type = $type;
+        $this->type    = $type;
         $this->message = $message;
         $this->details = $details;
     }
@@ -37,25 +37,25 @@ final class SourceCaseOutput
     {
         $result = [];
 
-        $text = (string)$this->details;
+        $text  = (string)$this->details;
         $lines = \explode("\n", $text);
         if (\array_key_exists(1, $lines)) {
             $result['message'] = $lines[1];
             unset($lines[0], $lines[1]);
             $result['description'] = ' ' . \ltrim(\implode("\n ", $lines));
         } else {
-            $result['message'] = $lines[0];
+            $result['message']     = $lines[0];
             $result['description'] = null;
         }
 
         if (\strpos($text, '@@ @@') > 0) {
-            $diff = \trim(\explode('@@ @@', $text)[1]);
+            $diff      = \trim(\explode('@@ @@', $text)[1]);
             $diffLines = \explode("\n", $diff);
 
-            $actual = [];
-            $expected = [];
+            $actual      = [];
+            $expected    = [];
             $description = [];
-            $isDiffPart = true;
+            $isDiffPart  = true;
 
             foreach ($diffLines as $diffLine) {
                 $diffLine = \trim($diffLine);
@@ -79,8 +79,8 @@ final class SourceCaseOutput
                 }
             }
 
-            $result['actual'] = \implode("\n", $actual);
-            $result['expected'] = \implode("\n", $expected);
+            $result['actual']      = \implode("\n", $actual);
+            $result['expected']    = \implode("\n", $expected);
             $result['description'] = ' ' . \ltrim(\implode("\n ", $description)) . "\n ";
         }
 

@@ -26,11 +26,11 @@ use JBZoo\CIReportConverter\Formats\JUnit\CaseOutput\Warning;
 
 final class JUnitCase extends AbstractNode
 {
-    public ?string $class = null;
-    public ?string $classname = null;
-    public ?string $file = null;
-    public ?int    $line = null;
-    public ?float  $time = null;
+    public ?string $class      = null;
+    public ?string $classname  = null;
+    public ?string $file       = null;
+    public ?int    $line       = null;
+    public ?float  $time       = null;
     public ?int    $assertions = null;
 
     /** @var AbstractOutput[] */

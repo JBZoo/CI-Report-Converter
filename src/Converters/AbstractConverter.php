@@ -26,9 +26,9 @@ abstract class AbstractConverter
     /** @var string */
     public const NAME = 'Abstract';
 
-    protected ?string $rootPath = null;
+    protected ?string $rootPath      = null;
     protected ?string $rootSuiteName = null;
-    protected ?int    $flowId = null;
+    protected ?int    $flowId        = null;
 
     /**
      * @phan-suppress PhanUnusedPublicMethodParameter
@@ -99,7 +99,7 @@ abstract class AbstractConverter
         }
 
         if ($this->rootPath !== null && $this->rootPath !== '') {
-            $rootPath = \rtrim($this->rootPath, '/');
+            $rootPath    = \rtrim($this->rootPath, '/');
             $relFilename = \ltrim($relFilename, '.');
             $relFilename = \ltrim($relFilename, '/');
 

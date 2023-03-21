@@ -36,7 +36,7 @@ final class GithubSuite extends AbstractNode
 
     public function addCase(?string $name = null): GithubCase
     {
-        $testSuite = new GithubCase($name);
+        $testSuite         = new GithubCase($name);
         $this->testCases[] = $testSuite;
 
         return $testSuite;
