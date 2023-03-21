@@ -18,35 +18,25 @@ namespace JBZoo\CIReportConverter\Formats\GitLabJson;
 
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
-/**
- * @property string      $description
- * @property string      $severity
- * @property null|string $name
- * @property null|int    $line
- */
 final class GitLabJsonCase extends AbstractNode
 {
-    public const SEVERITY_INFO     = 'info';
-    public const SEVERITY_MINOR    = 'minor';
-    public const SEVERITY_MAJOR    = 'major';
+    public const SEVERITY_INFO = 'info';
+    public const SEVERITY_MINOR = 'minor';
+    public const SEVERITY_MAJOR = 'major';
     public const SEVERITY_CRITICAL = 'critical';
-    public const SEVERITY_BLOCKER  = 'blocker';
+    public const SEVERITY_BLOCKER = 'blocker';
 
     public const DEFAULT_LEVEL = self::SEVERITY_MAJOR;
-
     public const DEFAULT_DESCRIPTION = 'Undefined error message';
 
-    protected array $meta = [
-        'description' => ['string'],
-        'severity'    => ['string'],  // See self::SEVERITY_*
-        'name'        => ['string'],  // It's relative path to file
-        'line'        => ['int'],
-    ];
+    public string $description;
+    public string $severity; // See self::SEVERITY_*
+    public ?int   $line = null;
 
     public function __construct(?string $name = null)
     {
         parent::__construct($name);
-        $this->severity    = self::DEFAULT_LEVEL;
+        $this->severity = self::DEFAULT_LEVEL;
         $this->description = self::DEFAULT_DESCRIPTION;
     }
 

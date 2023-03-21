@@ -24,34 +24,17 @@ use JBZoo\CIReportConverter\Formats\JUnit\CaseOutput\Skipped;
 use JBZoo\CIReportConverter\Formats\JUnit\CaseOutput\SystemOut;
 use JBZoo\CIReportConverter\Formats\JUnit\CaseOutput\Warning;
 
-/**
- * @property null|string $class
- * @property null|string $classname
- * @property null|string $file
- * @property null|int    $line
- * @property null|float  $time
- * @property null|int    $assertions
- * @method   self        setClass(?string $class)
- * @method   self        setClassname(?string $classname)
- * @method   self        setFile(?string $file)
- * @method   self        setLine(?string $line)
- * @method   self        setTime(?string $time)
- * @method   self        setAssertions(?string $assertions)
- */
 final class JUnitCase extends AbstractNode
 {
+    public ?string $class = null;
+    public ?string $classname = null;
+    public ?string $file = null;
+    public ?int    $line = null;
+    public ?float  $time = null;
+    public ?int    $assertions = null;
+
     /** @var AbstractOutput[] */
     public array $outputs = [];
-
-    protected array $meta = [
-        'name'       => ['string'],
-        'class'      => ['string'],
-        'classname'  => ['string'],
-        'file'       => ['string'],
-        'line'       => ['int'],
-        'time'       => ['float'],
-        'assertions' => ['int'],
-    ];
 
     public function addFailure(?string $type = null, ?string $message = null, ?string $description = null): self
     {
@@ -95,7 +78,6 @@ final class JUnitCase extends AbstractNode
     /**
      * @SuppressWarnings(PHPMD.NPathComplexity)
      * @phan-suppress PhanPossiblyNonClassMethodCall
-     * @phan-suppress PhanPluginSuspiciousParamPositionInternal
      * @phan-suppress PhanPossiblyFalseTypeReturn
      */
     public function toXML(\DOMDocument $document): \DOMNode

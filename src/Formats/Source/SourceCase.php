@@ -18,72 +18,30 @@ namespace JBZoo\CIReportConverter\Formats\Source;
 
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
-/**
- * @property null|string $class
- * @property null|string $classname
- * @property null|string $file
- * @property null|int    $line
- * @property null|int    $column
- *
- * @property null|string $stdOut
- * @property null|string $errOut
- *
- * @property null|float  $time
- * @property null|int    $assertions
- * @property null|string $actual
- * @property null|string $expected
- *
- * @property null|SourceCaseOutput $failure
- * @property null|SourceCaseOutput $error
- * @property null|SourceCaseOutput $warning
- * @property null|SourceCaseOutput $skipped
- *
- * @method self setClass(?string $class)
- * @method self setClassname(?string $classname)
- * @method self setFile(?string $file)
- * @method self setLine(?string $line)
- *
- * @method self setStdOut(?string $stdOut)
- * @method self setErrOut(?string $errOut)
- *
- * @method self setAssertions(?string $assertions)
- * @method self setTime(?string $time)
- * @method self setActual(?string $actual)
- * @method self setExpected(?string $expected)
- *
- * @method self setFailure(?SourceCaseOutput $failure)
- * @method self setError(?SourceCaseOutput $error)
- * @method self setWarning(?SourceCaseOutput $warning)
- * @method self setSkipped(?SourceCaseOutput $skipped)
- */
 final class SourceCase extends AbstractNode
 {
-    protected array $meta = [
-        'name' => ['string'],
+    // Location
+    public ?string $class = null;
+    public ?string $classname = null;
+    public ?string $file = null;
+    public ?int    $line = null;
+    public ?int    $column = null;
 
-        // Location
-        'class'     => ['string'],
-        'classname' => ['string'],
-        'file'      => ['string'],
-        'line'      => ['int'],
-        'column'    => ['int'],
+    // Output
+    public ?string $stdOut = null;
+    public ?string $errOut = null;
 
-        // Output
-        'stdOut' => ['string'],
-        'errOut' => ['string'],
+    // Test meta data
+    public ?float  $time = null;
+    public ?int    $assertions = null;
+    public ?string $actual = null;
+    public ?string $expected = null;
 
-        // Test meta data
-        'time'       => ['float'],
-        'assertions' => ['int'],
-        'actual'     => ['string'],
-        'expected'   => ['string'],
-
-        // Type of negative result
-        'failure' => [SourceCaseOutput::class],
-        'error'   => [SourceCaseOutput::class],
-        'warning' => [SourceCaseOutput::class],
-        'skipped' => [SourceCaseOutput::class],
-    ];
+    // Type of negative results
+    public ?SourceCaseOutput $failure = null;
+    public ?SourceCaseOutput $error = null;
+    public ?SourceCaseOutput $warning = null;
+    public ?SourceCaseOutput $skipped = null;
 
     public function getTime(int $round = 6): ?string
     {
@@ -146,10 +104,10 @@ final class SourceCase extends AbstractNode
 
     private static function buildMessage(array $parts): ?string
     {
-        $parts   = \array_filter($parts, '\is_string');
-        $parts   = \array_map('\trim', $parts);
-        $parts   = \array_filter($parts);
-        $parts   = \array_unique($parts);
+        $parts = \array_filter($parts, '\is_string');
+        $parts = \array_map('\trim', $parts);
+        $parts = \array_filter($parts);
+        $parts = \array_unique($parts);
         $message = \implode("\n", $parts);
         $message = \trim($message);
 

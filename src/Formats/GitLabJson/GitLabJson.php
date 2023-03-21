@@ -36,7 +36,7 @@ final class GitLabJson
 
     public function addCase(?string $name = null): GitLabJsonCase
     {
-        $testSuite         = new GitLabJsonCase($name);
+        $testSuite = new GitLabJsonCase($name);
         $this->testCases[] = $testSuite;
 
         return $testSuite;

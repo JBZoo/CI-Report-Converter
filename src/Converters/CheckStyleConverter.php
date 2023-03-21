@@ -32,7 +32,7 @@ final class CheckStyleConverter extends AbstractConverter
     public function toInternal(string $source): SourceSuite
     {
         $xmlDocument = Xml::createDomDocument($source);
-        $xmlAsArray  = Xml::dom2Array($xmlDocument);
+        $xmlAsArray = Xml::dom2Array($xmlDocument);
 
         $sourceSuite = new SourceSuite(
             $this->rootSuiteName === '' || $this->rootSuiteName === null ? 'CheckStyle' : $this->rootSuiteName,
@@ -43,27 +43,27 @@ final class CheckStyleConverter extends AbstractConverter
                 $relFilename = $this->cleanFilepath($file['_attrs']['name'] ?? 'undefined');
                 $absFilename = $this->getFullPath($relFilename);
 
-                $suite       = $sourceSuite->addSuite($relFilename);
+                $suite = $sourceSuite->addSuite($relFilename);
                 $suite->file = $absFilename;
 
                 foreach ($file['_children'] as $errorNode) {
                     $error = data($errorNode['_attrs']);
                     $error->set('full_path', $absFilename);
 
-                    $line   = $error->getIntNull('line');
+                    $line = $error->getIntNull('line');
                     $column = $error->getIntNull('column');
-                    $type   = $error->getStringNull('source') ?? 'ERROR';
+                    $type = $error->getStringNull('source') ?? 'ERROR';
 
                     $caseName = $line > 0 ? "{$relFilename} line {$line}" : $relFilename;
                     $caseName = $column > 0 ? "{$caseName}, column {$column}" : $caseName;
 
-                    $case            = $suite->addTestCase($caseName);
-                    $case->file      = $absFilename;
-                    $case->line      = $line;
-                    $case->column    = $column;
-                    $case->class     = $type;
+                    $case = $suite->addTestCase($caseName);
+                    $case->file = $absFilename;
+                    $case->line = $line;
+                    $case->column = $column;
+                    $case->class = $type;
                     $case->classname = $type;
-                    $case->failure   = new SourceCaseOutput($type, $error->get('message'), self::getDetails($error));
+                    $case->failure = new SourceCaseOutput($type, $error->get('message'), self::getDetails($error));
                 }
             }
         }

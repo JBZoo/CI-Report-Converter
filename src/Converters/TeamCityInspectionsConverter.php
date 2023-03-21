@@ -72,19 +72,19 @@ final class TeamCityInspectionsConverter extends AbstractConverter
     private function renderTestCase(SourceCase $case, string $suiteName): void
     {
         $failureObject = null;
-        $severity      = null;
+        $severity = null;
 
         if ($case->failure !== null) {
-            $severity      = TeamCity::SEVERITY_ERROR;
+            $severity = TeamCity::SEVERITY_ERROR;
             $failureObject = $case->failure;
         } elseif ($case->error !== null) {
-            $severity      = TeamCity::SEVERITY_ERROR;
+            $severity = TeamCity::SEVERITY_ERROR;
             $failureObject = $case->error;
         } elseif ($case->warning !== null) {
-            $severity      = TeamCity::SEVERITY_WARNING;
+            $severity = TeamCity::SEVERITY_WARNING;
             $failureObject = $case->warning;
         } elseif ($case->skipped !== null) {
-            $severity      = TeamCity::SEVERITY_WARNING_WEAK;
+            $severity = TeamCity::SEVERITY_WARNING_WEAK;
             $failureObject = $case->skipped;
         }
 
@@ -95,7 +95,7 @@ final class TeamCityInspectionsConverter extends AbstractConverter
 
         $messageData = $failureObject->parseDescription();
 
-        $title   = "{$suiteName} / {$case->name}";
+        $title = "{$suiteName} / {$case->name}";
         $message = $messageData->getStringNull('message') ?? $failureObject->message ?? '';
         $details = $messageData->getStringNull('description') ?? $failureObject->details ?? '';
 
@@ -108,7 +108,7 @@ final class TeamCityInspectionsConverter extends AbstractConverter
         }
 
         $inspectionName = $case->class ?? $case->classname ?? $failureObject->type ?? $severity;
-        $inspectionId   = $this->globalPrefix !== '' ? $this->globalPrefix : TeamCity::DEFAULT_INSPECTION_ID;
+        $inspectionId = $this->globalPrefix !== '' ? $this->globalPrefix : TeamCity::DEFAULT_INSPECTION_ID;
         $inspectionId .= ":{$inspectionName}";
 
         $this->tcLogger->addInspectionType($inspectionId, $inspectionName, $this->globalPrefix);

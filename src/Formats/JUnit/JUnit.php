@@ -30,7 +30,7 @@ final class JUnit
 
     public function addSuite(?string $name = null): JUnitSuite
     {
-        $testSuite          = new JUnitSuite($name);
+        $testSuite = new JUnitSuite($name);
         $this->testSuites[] = $testSuite;
 
         return $testSuite;

@@ -83,28 +83,28 @@ final class ConverterPlainTextTest extends PHPUnit
 
     public function testPlainTextPrinter(): void
     {
-        $plainText      = new PlainText();
-        $case0          = $plainText->addCase('src/Root.php');
-        $case0->line    = 789;
-        $case0->column  = null;
+        $plainText = new PlainText();
+        $case0 = $plainText->addCase('src/Root.php');
+        $case0->line = 789;
+        $case0->column = null;
         $case0->message = 'Something went wrong #0';
 
-        $suite1         = $plainText->addSuite('src/File.php');
-        $case1          = $suite1->addCase('src/Class.php');
-        $case1->line    = 123;
-        $case1->column  = 4;
+        $suite1 = $plainText->addSuite('src/File.php');
+        $case1 = $suite1->addCase('src/Class.php');
+        $case1->line = 123;
+        $case1->column = 4;
         $case1->message = "Something went wrong once again. It's a really really really long-long-long-long message.\n"
-            . "Another line.\n";
+            . "Another line.";
 
-        $suite2         = $plainText->addSuite();
-        $case2          = $suite2->addCase('src/AnotherFile.php');
-        $case2->line    = 456;
-        $case2->column  = 0;
-        $case2->level   = PlainTextCase::LEVEL_WARNING;
-        $case2->message = "Something\nwent\nwrong\n\n#2\n";
+        $suite2 = $plainText->addSuite();
+        $case2 = $suite2->addCase('src/AnotherFile.php');
+        $case2->line = 456;
+        $case2->column = 0;
+        $case2->level = PlainTextCase::LEVEL_WARNING;
+        $case2->message = "Something\nwent\nwrong\n\n#2";
 
-        $case3          = $suite2->addCase('src/SomeFiles.php');
-        $case3->level   = PlainTextCase::LEVEL_DEBUG;
+        $case3 = $suite2->addCase('src/SomeFiles.php');
+        $case3->level = PlainTextCase::LEVEL_DEBUG;
         $case3->message = \implode("\n", [
             'Failed asserting that two arrays are identical.',
             '--- Expected',

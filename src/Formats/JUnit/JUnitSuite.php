@@ -18,16 +18,9 @@ namespace JBZoo\CIReportConverter\Formats\JUnit;
 
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
-/**
- * @property null|string $file
- * @method   self        setFile(?string $file)
- */
 final class JUnitSuite extends AbstractNode
 {
-    protected array $meta = [
-        'name' => ['string', 'required'],
-        'file' => ['string'],
-    ];
+    public ?string $file = null;
 
     /** @var JUnitCase[] */
     private array $testCases = [];
@@ -39,7 +32,6 @@ final class JUnitSuite extends AbstractNode
      * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      * @SuppressWarnings(PHPMD.NPathComplexity)
      * @phan-suppress PhanPossiblyNonClassMethodCall
-     * @phan-suppress PhanPluginSuspiciousParamPositionInternal
      * @phan-suppress PhanPossiblyFalseTypeReturn
      */
     public function toXML(\DOMDocument $document): \DOMNode
@@ -100,7 +92,7 @@ final class JUnitSuite extends AbstractNode
 
     public function addSuite(string $name): self
     {
-        $testSuite          = new self($name);
+        $testSuite = new self($name);
         $this->testSuites[] = $testSuite;
 
         return $testSuite;
@@ -108,7 +100,7 @@ final class JUnitSuite extends AbstractNode
 
     public function addCase(string $name): JUnitCase
     {
-        $testCase          = new JUnitCase($name);
+        $testCase = new JUnitCase($name);
         $this->testCases[] = $testCase;
 
         return $testCase;

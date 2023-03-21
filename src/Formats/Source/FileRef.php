@@ -18,19 +18,12 @@ namespace JBZoo\CIReportConverter\Formats\Source;
 
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
-/**
- * @property string      $name
- * @property null|string $fullpath
- * @property null|int    $line
- * @property null|int    $column
- */
 final class FileRef extends AbstractNode
 {
-    protected array $meta = [
-        'name'     => ['string'], // Relative path to file
-        'fullpath' => ['string'],
-        'line'     => ['int'],
-    ];
+    public string  $name;
+    public ?string $fullpath = null;
+    public ?int    $line = null;
+    public ?int    $column = null;
 
     public function getFullName(): string
     {

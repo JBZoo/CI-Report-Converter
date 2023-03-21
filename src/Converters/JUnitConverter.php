@@ -32,7 +32,7 @@ final class JUnitConverter extends AbstractConverter
     public function toInternal(string $source): SourceSuite
     {
         $xmlDocument = Xml::createDomDocument($source);
-        $xmlAsArray  = Xml::dom2Array($xmlDocument);
+        $xmlAsArray = Xml::dom2Array($xmlDocument);
 
         $testSuite = new SourceSuite($this->rootSuiteName);
         $this->createSourceNodes($xmlAsArray, $testSuite);
@@ -56,7 +56,7 @@ final class JUnitConverter extends AbstractConverter
     public function createJUnitNodes(SourceSuite $source, JUnit|JUnitSuite $junitSuite)
     {
         if ($source->name !== '') {
-            $junitSuite       = $junitSuite->addSuite($source->name);
+            $junitSuite = $junitSuite->addSuite($source->name);
             $junitSuite->file = $source->file;
         }
 
@@ -66,12 +66,12 @@ final class JUnitConverter extends AbstractConverter
 
         if ($junitSuite instanceof JUnitSuite) {
             foreach ($source->getCases() as $sourceCase) {
-                $junitCase             = $junitSuite->addCase($sourceCase->name);
-                $junitCase->time       = $sourceCase->time;
-                $junitCase->class      = $sourceCase->class;
-                $junitCase->classname  = $sourceCase->classname;
-                $junitCase->file       = $sourceCase->file;
-                $junitCase->line       = $sourceCase->line;
+                $junitCase = $junitSuite->addCase($sourceCase->name);
+                $junitCase->time = $sourceCase->time;
+                $junitCase->class = $sourceCase->class;
+                $junitCase->classname = $sourceCase->classname;
+                $junitCase->file = $sourceCase->file;
+                $junitCase->line = $sourceCase->line;
                 $junitCase->assertions = $sourceCase->assertions;
 
                 $failure = $sourceCase->failure;
@@ -114,19 +114,19 @@ final class JUnitConverter extends AbstractConverter
         $attrs = data($xmlAsArray['_attrs'] ?? []);
 
         if ($xmlAsArray['_node'] === 'testcase') {
-            $case             = $currentSuite->addTestCase($attrs->get('name'));
-            $case->time       = $attrs->get('time');
-            $case->file       = $attrs->get('file');
-            $case->line       = $attrs->get('line');
-            $case->class      = $attrs->get('class');
-            $case->classname  = $attrs->get('classname');
-            $case->assertions = $attrs->get('assertions');
+            $case = $currentSuite->addTestCase($attrs->get('name'));
+            $case->time = $attrs->getFloatNull('time');
+            $case->file = $attrs->getStringNull('file');
+            $case->line = $attrs->getIntNull('line');
+            $case->class = $attrs->getStringNull('class');
+            $case->classname = $attrs->getStringNull('classname');
+            $case->assertions = $attrs->getIntNull('assertions');
 
             foreach ($xmlAsArray['_children'] as $output) {
                 $typeOfOutput = $output['_node'];
-                $type         = $output['_attrs']['type'] ?? null;
-                $message      = $output['_attrs']['message'] ?? null;
-                $details      = ($output['_cdata'] ?? null) ?? $output['_text'] ?? null;
+                $type = $output['_attrs']['type'] ?? null;
+                $message = $output['_attrs']['message'] ?? null;
+                $details = ($output['_cdata'] ?? null) ?? $output['_text'] ?? null;
 
                 $caseOutput = new SourceCaseOutput($type, $message, $details);
 
@@ -149,7 +149,7 @@ final class JUnitConverter extends AbstractConverter
                 if ($childNode['_node'] === 'testcase') {
                     $this->createSourceNodes($childNode, $currentSuite);
                 } else {
-                    $subSuite       = $currentSuite->addSuite((string)$attrs->get('name'));
+                    $subSuite = $currentSuite->addSuite((string)$attrs->get('name'));
                     $subSuite->file = $attrs->get('file');
                     $this->createSourceNodes($childNode, $subSuite);
                 }

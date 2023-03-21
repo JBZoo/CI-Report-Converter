@@ -24,7 +24,7 @@ final class ConverterCheckStyleTest extends PHPUnit
     public function testToInternalPhan(): void
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
-        $source     = (new CheckStyleConverter())
+        $source = (new CheckStyleConverter())
             ->setRootPath($pathPrefix)
             ->toInternal(\file_get_contents(Fixtures::PHAN_CHECKSTYLE));
 
@@ -134,7 +134,7 @@ final class ConverterCheckStyleTest extends PHPUnit
     public function testToInternalPHPcs(): void
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
-        $source     = (new CheckStyleConverter())
+        $source = (new CheckStyleConverter())
             ->setRootPath($pathPrefix)
             ->toInternal(\file_get_contents(Fixtures::PHPCS_CODESTYLE));
 
@@ -180,7 +180,7 @@ final class ConverterCheckStyleTest extends PHPUnit
     public function testToInternalPhpStan(): void
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
-        $source     = (new CheckStyleConverter())
+        $source = (new CheckStyleConverter())
             ->setRootPath($pathPrefix)
             ->toInternal(\file_get_contents(Fixtures::PHPSTAN_CHECKSTYLE));
 
@@ -240,7 +240,7 @@ final class ConverterCheckStyleTest extends PHPUnit
     public function testToInternalPsalm(): void
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
-        $source     = (new CheckStyleConverter())
+        $source = (new CheckStyleConverter())
             ->setRootPath($pathPrefix)
             ->toInternal(\file_get_contents(Fixtures::PSALM_CHECKSTYLE));
 

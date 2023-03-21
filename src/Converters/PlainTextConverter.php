@@ -77,10 +77,10 @@ final class PlainTextConverter extends AbstractConverter
 
         $message = $sourceCase->getMessage();
         if ($message !== null && $message !== '') {
-            $case          = $plainTextSuite->addCase($this->cleanFilepath($sourceCase->file));
-            $case->line    = $sourceCase->line;
-            $case->column  = $sourceCase->column;
-            $case->level   = $level;
+            $case = $plainTextSuite->addCase($this->cleanFilepath($sourceCase->file));
+            $case->line = $sourceCase->line;
+            $case->column = $sourceCase->column;
+            $case->level = $level;
             $case->message = $this->cleanFilepath($message);
         }
     }

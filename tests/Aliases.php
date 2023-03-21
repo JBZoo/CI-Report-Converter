@@ -39,7 +39,7 @@ final class Aliases
     public static function isSameXml(string $expectedCode, string $actualCode): void
     {
         $xmlExpected = Xml::createDomDocument($expectedCode);
-        $xmlActual   = Xml::createDomDocument($actualCode);
+        $xmlActual = Xml::createDomDocument($actualCode);
 
         isSame($xmlExpected->saveXML(), $xmlActual->saveXML());
     }

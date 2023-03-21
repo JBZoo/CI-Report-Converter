@@ -41,15 +41,15 @@ final class PmdCpdConverter extends AbstractConverter
 
         foreach ($xmlAsArray->find('_children.0._children') as $duplication) {
             $duplication = data($duplication);
-            $lines       = self::getLinesNumber($duplication);
-            $tokens      = self::getTokens($duplication);
+            $lines = self::getLinesNumber($duplication);
+            $tokens = self::getTokens($duplication);
 
-            $mainFile   = $this->getFileByIndex($duplication);
+            $mainFile = $this->getFileByIndex($duplication);
             $errorTitle = "Duplicate code found (lines={$lines}, tokens={$tokens})";
 
-            $case          = $sourceSuite->addTestCase(self::getTestCaseName($mainFile, $lines));
-            $case->file    = $mainFile->fullpath;
-            $case->line    = $mainFile->line;
+            $case = $sourceSuite->addTestCase(self::getTestCaseName($mainFile, $lines));
+            $case->file = $mainFile->fullpath;
+            $case->line = $mainFile->line;
             $case->warning = new SourceCaseOutput('Warning', $errorTitle, $this->getDetails($duplication));
         }
 
@@ -58,10 +58,10 @@ final class PmdCpdConverter extends AbstractConverter
 
     private function getFileByIndex(Data $duplication, int $index = 0): FileRef
     {
-        $fileRef           = new FileRef();
+        $fileRef = new FileRef();
         $fileRef->fullpath = $duplication->findString("_children.{$index}._attrs.path");
-        $fileRef->line     = $duplication->findInt("_children.{$index}._attrs.line");
-        $fileRef->name     = $this->cleanFilepath($fileRef->fullpath);
+        $fileRef->line = $duplication->findInt("_children.{$index}._attrs.line");
+        $fileRef->name = $this->cleanFilepath($fileRef->fullpath);
 
         return $fileRef;
     }
@@ -86,8 +86,8 @@ final class PmdCpdConverter extends AbstractConverter
     {
         $fileList = $this->getFileList($duplication);
 
-        $lines      = self::getLinesNumber($duplication);
-        $tokens     = self::getTokens($duplication);
+        $lines = self::getLinesNumber($duplication);
+        $tokens = self::getTokens($duplication);
         $fileNumber = \count($fileList);
 
         $filesAsString = '';
@@ -140,8 +140,8 @@ final class PmdCpdConverter extends AbstractConverter
     private static function getTestCaseName(FileRef $fileRef, int $lines): string
     {
         $startLine = (int)$fileRef->line;
-        $endLine   = $startLine + $lines;
-        $place     = $startLine === $endLine ? (string)$startLine : "{$startLine}-{$endLine}";
+        $endLine = $startLine + $lines;
+        $place = $startLine === $endLine ? (string)$startLine : "{$startLine}-{$endLine}";
 
         if ($lines > 0) {
             return "{$fileRef->name}:{$place} ({$lines} lines)";
@@ -153,8 +153,8 @@ final class PmdCpdConverter extends AbstractConverter
     private static function getFileName(FileRef $fileRef, int $lines = 0): string
     {
         $startLine = (int)$fileRef->line;
-        $endLine   = $startLine + $lines;
-        $place     = $startLine === $endLine ? (string)$startLine : "{$startLine}-{$endLine}";
+        $endLine = $startLine + $lines;
+        $place = $startLine === $endLine ? (string)$startLine : "{$startLine}-{$endLine}";
 
         return "{$fileRef->fullpath}:{$place}";
     }

@@ -52,7 +52,7 @@ final class PlainTextSuite extends AbstractNode
 
     public function addCase(?string $name = null): PlainTextCase
     {
-        $testSuite         = new PlainTextCase($name);
+        $testSuite = new PlainTextCase($name);
         $this->testCases[] = $testSuite;
 
         return $testSuite;

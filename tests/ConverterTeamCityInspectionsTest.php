@@ -25,7 +25,7 @@ final class ConverterTeamCityInspectionsTest extends PHPUnit
     public function testPhpCsCodestyle(): void
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
-        $source     = (new CheckStyleConverter())
+        $source = (new CheckStyleConverter())
             ->setRootPath($pathPrefix)
             ->toInternal(\file_get_contents(Fixtures::PHPCS_CODESTYLE));
 
@@ -39,7 +39,7 @@ final class ConverterTeamCityInspectionsTest extends PHPUnit
     public function testPhanCodeStyle(): void
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
-        $source     = (new CheckStyleConverter())
+        $source = (new CheckStyleConverter())
             ->setRootPath($pathPrefix)
             ->toInternal(\file_get_contents(Fixtures::PHAN_CHECKSTYLE));
 

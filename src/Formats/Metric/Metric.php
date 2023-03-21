@@ -18,18 +18,9 @@ namespace JBZoo\CIReportConverter\Formats\Metric;
 
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
-/**
- * @property null|string $name
- * @property null|string $key
- * @property null|string $description
- * @property null|float  $value
- */
 final class Metric extends AbstractNode
 {
-    protected array $meta = [
-        'key'         => ['string'],
-        'name'        => ['string'],
-        'description' => ['string'],
-        'value'       => ['float'],
-    ];
+    public ?string $key = null;
+    public ?string $description = null;
+    public ?float  $value = null;
 }

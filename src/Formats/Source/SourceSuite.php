@@ -18,20 +18,10 @@ namespace JBZoo\CIReportConverter\Formats\Source;
 
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
-/**
- * @property null|string $file
- * @property null|string $class
- *
- * @method self setFile(?string $file)
- * @method self setClass(?string $class)
- */
 final class SourceSuite extends AbstractNode
 {
-    protected array $meta = [
-        'name'  => ['string'],
-        'file'  => ['string'],
-        'class' => ['string'],
-    ];
+    public ?string $file = null;
+    public ?string $class = null;
 
     /** @var SourceCase[] */
     private array $cases = [];
@@ -68,7 +58,7 @@ final class SourceSuite extends AbstractNode
     public function addSuite(string $testSuiteName): self
     {
         if (!\array_key_exists($testSuiteName, $this->suites)) {
-            $testSuite                    = new self($testSuiteName);
+            $testSuite = new self($testSuiteName);
             $this->suites[$testSuiteName] = $testSuite;
         }
 
@@ -77,7 +67,7 @@ final class SourceSuite extends AbstractNode
 
     public function addTestCase(string $testCaseName): SourceCase
     {
-        $testCase      = new SourceCase($testCaseName);
+        $testCase = new SourceCase($testCaseName);
         $this->cases[] = $testCase;
 
         return $testCase;
@@ -85,15 +75,18 @@ final class SourceSuite extends AbstractNode
 
     public function toArray(): array
     {
-        $data = \array_filter(\array_merge(parent::toArray(), [
-            'time'       => $this->getTime(),
-            'tests'      => $this->getCasesCount(),
-            'assertions' => $this->getAssertionsCount(),
-            'errors'     => $this->getErrorsCount(),
-            'warnings'   => $this->getWarningCount(),
-            'failure'    => $this->getFailureCount(),
-            'skipped'    => $this->getSkippedCount(),
-        ]), static fn ($value) => $value !== null);
+        $data = \array_filter(
+            \array_merge(parent::toArray(), [
+                'time'       => $this->getTime(),
+                'tests'      => $this->getCasesCount(),
+                'assertions' => $this->getAssertionsCount(),
+                'errors'     => $this->getErrorsCount(),
+                'warnings'   => $this->getWarningCount(),
+                'failure'    => $this->getFailureCount(),
+                'skipped'    => $this->getSkippedCount(),
+            ]),
+            static fn ($value) => $value !== null,
+        );
 
         $result = [
             'data'   => $data,

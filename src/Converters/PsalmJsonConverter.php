@@ -44,14 +44,14 @@ final class PsalmJsonConverter extends AbstractConverter
             $fileName = $sourceCase['file_name'] ?? 'Undefined';
             $fileLine = $sourceCase['line_from'] ?? null;
 
-            $suite       = $sourceSuite->addSuite($fileName);
+            $suite = $sourceSuite->addSuite($fileName);
             $suite->file = $sourceCase['file_path'];
 
             $case = $suite->addTestCase($fileLine > 0 ? "{$fileName} line {$sourceCase['line_from']}" : $fileName);
 
-            $case->file      = $sourceCase['file_path'];
-            $case->line      = $sourceCase['line_from'];
-            $case->class     = $sourceCase['type'];
+            $case->file = $sourceCase['file_path'];
+            $case->line = $sourceCase['line_from'];
+            $case->class = $sourceCase['type'];
             $case->classname = $sourceCase['type'];
 
             $caseOutput = new SourceCaseOutput(

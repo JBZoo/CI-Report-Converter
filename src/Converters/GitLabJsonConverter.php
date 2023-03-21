@@ -68,11 +68,11 @@ final class GitLabJsonConverter extends AbstractConverter
 
         $description = $sourceCase->getMessage();
         if ($description !== null && $description !== '') {
-            $case              = $gitLabJson->addCase();
+            $case = $gitLabJson->addCase();
             $case->description = $this->cleanFilepath($description);
-            $case->severity    = $severity;
-            $case->name        = $this->cleanFilepath($sourceCase->file);
-            $case->line        = $sourceCase->line;
+            $case->severity = $severity;
+            $case->name = $this->cleanFilepath($sourceCase->file);
+            $case->line = $sourceCase->line;
         }
     }
 }
