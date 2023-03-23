@@ -44,9 +44,12 @@ final class GitLabJsonCase extends AbstractNode
     {
         return [
             'description' => $this->description,
-            'fingerprint' => \hash('sha256', \implode('', [$this->name, $this->line, $this->description])),
-            'severity'    => $this->severity,
-            'location'    => [
+            'fingerprint' => \hash(
+                'sha256',
+                \implode('', [$this->name, (string)$this->line, $this->description]),
+            ),
+            'severity' => $this->severity,
+            'location' => [
                 'path'  => $this->name,
                 'lines' => ['begin' => $this->line],
             ],

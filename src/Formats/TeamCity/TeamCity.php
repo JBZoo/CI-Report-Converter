@@ -31,12 +31,11 @@ final class TeamCity
     public const DEFAULT_INSPECTION_CATEGORY = 'Coding Standard';
     public const DEFAULT_INSPECTION_DESC     = 'Issues found while checking coding standards';
 
-    private ?int $flowId = null;
+    private int $flowId;
 
     private AbstractWriter $writer;
 
-    /** @var array */
-    private $params = [
+    private array $params = [
         'show-datetime' => true,
     ];
 
@@ -44,22 +43,20 @@ final class TeamCity
 
     /**
      * @param AbstractWriter $writer the writer used to write messages
-     * @param null|int       $flowId the flow ID or `null`
+     * @param int            $flowId the flow ID or `null`
      */
-    public function __construct(AbstractWriter $writer, ?int $flowId = null, array $params = [])
+    public function __construct(AbstractWriter $writer, int $flowId = 0, array $params = [])
     {
-        $flowId = $flowId > 0 ? $flowId : null;
-        if ($flowId === null && Sys::isFunc('getmypid')) {
-            $this->flowId = \getmypid() !== false ? \getmypid() : null;
-        } else {
-            $this->flowId = $flowId;
+        $this->flowId = \max($flowId, 0);
+        if ($flowId === 0 && Sys::isFunc('getmypid')) {
+            $this->flowId = (int)\getmypid();
         }
 
         $this->writer = $writer;
         $this->params = \array_merge($this->params, $params);
     }
 
-    public function setFlowId(?int $flowId): self
+    public function setFlowId(int $flowId): self
     {
         $this->flowId = $flowId;
 
@@ -99,8 +96,11 @@ final class TeamCity
     {
         $parameters = \array_merge($parameters, [
             'timestamp' => Helper::formatTimestamp(),
-            'flowId'    => $this->flowId,
         ]);
+
+        if ($this->flowId > 0) {
+            $parameters['flowId'] = $this->flowId;
+        }
 
         if (!$this->params['show-datetime']) {
             unset($parameters['timestamp']);

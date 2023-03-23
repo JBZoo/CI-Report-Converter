@@ -21,7 +21,6 @@ use JBZoo\CIReportConverter\Formats\MetricMaps\AbstractMetricMap;
 
 final class Metrics extends AbstractNode
 {
-    /** @var float[]|int[]|null[] */
     private array $metrics = [];
 
     private ?AbstractMetricMap $map = null;

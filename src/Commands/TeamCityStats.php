@@ -99,7 +99,7 @@ final class TeamCityStats extends AbstractCommand
         return $format;
     }
 
-    private static function convertMetric(?string $sourceCode, string $sourceFormat, ?int $flowId = null): string
+    private static function convertMetric(?string $sourceCode, string $sourceFormat, int $flowId = 0): string
     {
         if ($sourceCode === null) {
             return '';

@@ -4995,12 +4995,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "ad434708152844968e15adf8eb3f4a2d7066242e"
+                "reference": "598b39ce7ff2650d4b268df6c128cafd28930927"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/ad434708152844968e15adf8eb3f4a2d7066242e",
-                "reference": "ad434708152844968e15adf8eb3f4a2d7066242e",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/598b39ce7ff2650d4b268df6c128cafd28930927",
+                "reference": "598b39ce7ff2650d4b268df6c128cafd28930927",
                 "shasum": ""
             },
             "conflict": {
@@ -5034,7 +5034,7 @@
                 "barrelstrength/sprout-forms": "<3.9",
                 "barryvdh/laravel-translation-manager": "<0.6.2",
                 "barzahlen/barzahlen-php": "<2.0.1",
-                "baserproject/basercms": "<4.7.2",
+                "baserproject/basercms": "<4.7.5",
                 "bassjobsen/bootstrap-3-typeahead": ">4.0.2",
                 "billz/raspap-webgui": "<=2.6.6",
                 "bk2k/bootstrap-package": ">=7.1,<7.1.2|>=8,<8.0.8|>=9,<9.0.4|>=9.1,<9.1.3|>=10,<10.0.10|>=11,<11.0.3",
@@ -5580,7 +5580,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-03-17T19:03:58+00:00"
+            "time": "2023-03-23T20:04:28+00:00"
         },
         {
             "name": "sabre/event",

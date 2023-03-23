@@ -28,7 +28,7 @@ abstract class AbstractConverter
 
     protected ?string $rootPath      = null;
     protected ?string $rootSuiteName = null;
-    protected ?int    $flowId        = null;
+    protected int     $flowId        = 0;
 
     /**
      * @phan-suppress PhanUnusedPublicMethodParameter

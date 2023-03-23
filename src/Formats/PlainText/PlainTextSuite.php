@@ -29,7 +29,7 @@ final class PlainTextSuite extends AbstractNode
 
         foreach ($this->testCases as $testCase) {
             if (!isset($tables[$testCase->name])) {
-                $tables[$testCase->name] = new Table(
+                $tables[$testCase->name] = new PlainTable(
                     $testCase->name !== '' ? $testCase->name : PlainText::DEFAULT_NAME,
                 );
             }
@@ -41,7 +41,7 @@ final class PlainTextSuite extends AbstractNode
             ]);
         }
 
-        $list = \array_reduce($tables, static function (array $acc, Table $table): array {
+        $list = \array_reduce($tables, static function (array $acc, PlainTable $table): array {
             $acc[] = $table->render();
 
             return $acc;

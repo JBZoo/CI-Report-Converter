@@ -32,7 +32,9 @@ final class PlainText
 
         foreach ($this->testCases as $testCase) {
             if (!isset($tables[$testCase->name])) {
-                $tables[$testCase->name] = new Table($testCase->name !== '' ? $testCase->name : self::DEFAULT_NAME);
+                $tables[$testCase->name] = new PlainTable(
+                    $testCase->name !== '' ? $testCase->name : self::DEFAULT_NAME,
+                );
             }
 
             $tables[$testCase->name]->appendRow([
@@ -42,7 +44,7 @@ final class PlainText
             ]);
         }
 
-        $result = \array_reduce($tables, static function (array $acc, Table $table): array {
+        $result = \array_reduce($tables, static function (array $acc, PlainTable $table): array {
             $acc[] = $table->render();
 
             return $acc;
