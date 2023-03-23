@@ -18,6 +18,7 @@ namespace JBZoo\CIReportConverter\Commands;
 
 use JBZoo\CIReportConverter\Converters\Map;
 use JBZoo\Cli\Codes;
+use JBZoo\Markdown\Table;
 
 final class ConvertMap extends AbstractCommand
 {
@@ -32,8 +33,29 @@ final class ConvertMap extends AbstractCommand
 
     protected function executeAction(): int
     {
-        $this->_(Map::getMarkdownTable());
+        $this->_(self::getMarkdownTable());
 
         return Codes::OK;
+    }
+
+    private static function getMarkdownTable(): string
+    {
+        $tableData = Map::getTable();
+        $header    = \array_keys($tableData);
+
+        $rows = [];
+
+        foreach ($tableData as $key => $info) {
+            $rows[$key] = \array_values(\array_map(static fn (bool $value) => $value ? 'Yes' : '-', $info));
+
+            \array_unshift($rows[$key], $key);
+        }
+
+        \array_unshift($header, 'Source/Target');
+
+        return (new Table())
+            ->setHeaders($header)
+            ->appendRows($rows)
+            ->render();
     }
 }

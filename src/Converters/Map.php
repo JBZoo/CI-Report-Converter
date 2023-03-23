@@ -16,8 +16,6 @@ declare(strict_types=1);
 
 namespace JBZoo\CIReportConverter\Converters;
 
-use JBZoo\Markdown\Table;
-
 final class Map
 {
     public const INPUT  = 'input';
@@ -102,27 +100,6 @@ final class Map
     public static function isAvailable(string $source, string $target): bool
     {
         return self::MAP_TESTS[$source][self::INPUT] && self::MAP_TESTS[$target][self::OUTPUT];
-    }
-
-    public static function getMarkdownTable(): string
-    {
-        $tableData = self::getTable();
-        $header    = \array_keys($tableData);
-
-        $rows = [];
-
-        foreach ($tableData as $key => $info) {
-            $rows[$key] = \array_values(\array_map(static fn (bool $value) => $value ? 'Yes' : '-', $info));
-
-            \array_unshift($rows[$key], $key);
-        }
-
-        \array_unshift($header, 'Source/Target');
-
-        return (new Table())
-            ->setHeaders($header)
-            ->appendRows($rows)
-            ->render();
     }
 
     public static function getConverter(string $format, string $direction): AbstractConverter
