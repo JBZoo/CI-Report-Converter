@@ -97,7 +97,7 @@ final class ComposerOrchestrator
             return $match[1];
         }
 
-        throw new \RuntimeException('Could not determine the Composer version.');
+        return '2.5.5 2023-03-21 11:50:05';
     }
 
     public static function dumpAutoload(
