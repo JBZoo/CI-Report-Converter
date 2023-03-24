@@ -22,9 +22,6 @@ use JBZoo\Markdown\Table;
 
 final class ConvertMap extends AbstractCommand
 {
-    /**
-     * @suppress PhanUndeclaredMethod
-     */
     protected function configure(): void
     {
         $this

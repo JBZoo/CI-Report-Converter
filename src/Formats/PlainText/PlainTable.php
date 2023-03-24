@@ -23,18 +23,11 @@ use Symfony\Component\Console\Output\BufferedOutput;
 final class PlainTable
 {
     /** @var array[] */
-    private array $rows = [];
-
+    private array          $rows = [];
     private BufferedOutput $buffer;
+    private Table          $table;
+    private string         $testCaseName;
 
-    /** @suppress PhanUndeclaredTypeProperty */
-    private Table $table;
-
-    private string $testCaseName;
-
-    /**
-     * @suppress PhanUndeclaredClassMethod
-     */
     public function __construct(string $testCaseName)
     {
         $this->buffer = new BufferedOutput();
@@ -48,9 +41,6 @@ final class PlainTable
         $this->testCaseName = $testCaseName;
     }
 
-    /**
-     * @suppress PhanUndeclaredTypeReturnType
-     */
     public function getTable(): Table
     {
         return $this->table;
@@ -63,9 +53,6 @@ final class PlainTable
         return $this;
     }
 
-    /**
-     * @suppress PhanUndeclaredClassMethod
-     */
     public function render(): string
     {
         $rowsCount = \count($this->rows);
