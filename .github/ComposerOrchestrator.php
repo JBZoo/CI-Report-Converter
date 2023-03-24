@@ -97,7 +97,7 @@ final class ComposerOrchestrator
             return $match[1];
         }
 
-        return '2.5.5 2023-03-21 11:50:05';
+        return '2.5.5';
     }
 
     public static function dumpAutoload(
