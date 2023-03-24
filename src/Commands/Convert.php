@@ -25,6 +25,9 @@ use Symfony\Component\Console\Input\InputOption;
 
 final class Convert extends AbstractCommand
 {
+    /**
+     * @suppress PhanUndeclaredMethod
+     */
     protected function configure(): void
     {
         $this

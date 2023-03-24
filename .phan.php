@@ -22,10 +22,10 @@ return \array_merge($default, [
 
         'vendor/jbzoo/cli/src',
         'vendor/jbzoo/data/src',
-        'vendor/jbzoo/markdown/src',
         'vendor/jbzoo/utils/src',
 
         'vendor/symfony/console',
-        'vendor/symfony/console/Helper',
+
+        'vendor/jbzoo/markdown/src',
     ],
 ]);

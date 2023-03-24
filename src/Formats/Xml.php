@@ -37,6 +37,10 @@ final class Xml
         return $document;
     }
 
+    /**
+     * @suppress PhanPossiblyFalseTypeArgumentInternal
+     * @suppress PhanPossiblyFalseTypeArgument
+     */
     public static function array2Dom(
         array $xmlAsArray,
         ?\DOMElement $domElement = null,

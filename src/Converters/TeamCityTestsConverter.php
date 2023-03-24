@@ -81,6 +81,7 @@ final class TeamCityTestsConverter extends AbstractConverter
 
     /**
      * @SuppressWarnings(PHPMD.NPathComplexity)
+     * @suppress PhanPossiblyUndeclaredProperty
      */
     private function renderTestCase(SourceCase $case): void
     {

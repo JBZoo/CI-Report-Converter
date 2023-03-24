@@ -22,6 +22,9 @@ use JBZoo\Markdown\Table;
 
 final class ConvertMap extends AbstractCommand
 {
+    /**
+     * @suppress PhanUndeclaredMethod
+     */
     protected function configure(): void
     {
         $this
@@ -32,13 +35,6 @@ final class ConvertMap extends AbstractCommand
     }
 
     protected function executeAction(): int
-    {
-        $this->_(self::getMarkdownTable());
-
-        return Codes::OK;
-    }
-
-    private static function getMarkdownTable(): string
     {
         $tableData = Map::getTable();
         $header    = \array_keys($tableData);
@@ -53,9 +49,13 @@ final class ConvertMap extends AbstractCommand
 
         \array_unshift($header, 'Source/Target');
 
-        return (new Table())
+        $output = (new Table())
             ->setHeaders($header)
             ->appendRows($rows)
             ->render();
+
+        $this->_($output);
+
+        return Codes::OK;
     }
 }

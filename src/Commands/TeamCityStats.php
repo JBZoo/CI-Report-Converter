@@ -22,6 +22,9 @@ use Symfony\Component\Console\Input\InputOption;
 
 final class TeamCityStats extends AbstractCommand
 {
+    /**
+     * @suppress PhanUndeclaredMethod
+     */
     protected function configure(): void
     {
         $this
