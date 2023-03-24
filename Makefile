@@ -54,11 +54,3 @@ test-example:
         ./tests/ExampleTest.php                   \
         --order-by=default                        \
         --teamcity > ./tests/fixtures/phpunit/teamcity-real.txt
-
-build-phar-alt: ##@Project Compile phar file
-	$(call download_phar,https://github.com/box-project/box/releases/download/4.3.0/box.phar,"box")
-	@$(BOX_BIN) --version
-	@$(BOX_BIN) validate -vvv || true
-	@$(COMPOSER_BIN) config autoloader-suffix $(PROJECT_ALIAS) -v
-	@$(BOX_BIN) compile --allow-composer-check-failure -vv
-	@$(COMPOSER_BIN) config autoloader-suffix --unset          -v
