@@ -164,6 +164,9 @@ jobs:
       - name: Download Composer
         run: wget https://getcomposer.org/composer.phar
 
+      - name: Build the project
+        run: make update --no-print-directory
+
       - name: Building Phar binary file
         run: make build-phar --no-print-directory
 
