@@ -162,7 +162,7 @@ jobs:
           extensions: ast
 
       - name: Building Phar binary file
-        run: make update build-phar-alt --no-print-directory
+        run: make build-phar-alt --no-print-directory
 
       - name: Trying to use the phar file
         run: ./build/ci-report-converter.phar convert --help
