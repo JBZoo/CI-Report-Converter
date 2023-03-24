@@ -12,6 +12,8 @@
 
 .PHONY: build
 
+BOX_PHAR           = https://github.com/box-project/box/releases/download/3.12.3/box.phar
+
 ifneq (, $(wildcard ./vendor/jbzoo/codestyle/src/init.Makefile))
     include ./vendor/jbzoo/codestyle/src/init.Makefile
 endif

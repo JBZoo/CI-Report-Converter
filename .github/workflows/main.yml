@@ -158,7 +158,7 @@ jobs:
         with:
           php-version: ${{ matrix.php-version }}
           coverage: xdebug
-          tools: composer:2.2
+          tools: composer
           extensions: ast
 
       - name: Building Phar binary file
