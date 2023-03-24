@@ -162,11 +162,9 @@ jobs:
           extensions: ast
 
       - name: Building Phar binary file
-        continue-on-error: ${{ matrix.experimental }}
         run: make build --no-print-directory
 
       - name: Trying to use the phar file
-        continue-on-error: ${{ matrix.experimental }}
         run: ./build/ci-report-converter.phar convert --help
 
       - name: Upload Artifacts
