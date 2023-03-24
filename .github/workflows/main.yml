@@ -161,7 +161,7 @@ jobs:
           extensions: ast
 
       - name: Download Composer
-        run: wget https://getcomposer.org/composer.phar
+        run: composer require --dev humbug/box
 
       - name: Build the project
         run: make update --no-print-directory
