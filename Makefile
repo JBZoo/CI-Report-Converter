@@ -54,7 +54,3 @@ test-example:
         ./tests/ExampleTest.php                   \
         --order-by=default                        \
         --teamcity > ./tests/fixtures/phpunit/teamcity-real.txt
-
-build-phar-alt: ##@Project Compile phar file
-	$(call download_phar,,"box")
-	@$(BOX_BIN) compile -vvv

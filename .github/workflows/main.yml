@@ -160,14 +160,11 @@ jobs:
           tools: composer
           extensions: ast
 
-      - name: Download Composer
-        run: composer require --working-dir=./build humbug/box
-
       - name: Build the project
-        run: make update --no-print-directory
+        run: make build --no-print-directory
 
       - name: Building Phar binary file
-        run: make build-phar-alt --no-print-directory
+        run: make build-phar --no-print-directory
 
       - name: Trying to use the phar file
         run: ./build/ci-report-converter.phar convert --help
