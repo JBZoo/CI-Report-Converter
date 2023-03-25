@@ -57,4 +57,4 @@ test-example:
 
 build-phar-alt: ##@Project Compile phar file
 	$(call download_phar,https://github.com/box-project/box/releases/download/3.16.0/box.phar,"box")
-	@$(BOX_BIN) compile --allow-composer-check-failure -vvv
+	@$(BOX_BIN) compile -vvv
