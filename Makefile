@@ -56,5 +56,4 @@ test-example:
         --teamcity > ./tests/fixtures/phpunit/teamcity-real.txt
 
 build-phar-alt: ##@Project Compile phar file
-	cp -fv ./.github/ComposerOrchestrator.php ./build/vendor/humbug/box/src/Composer/ComposerOrchestrator.php
-	@php ./build/vendor/bin/box compile --allow-composer-check-failure -vvv --working-dir=.
+	@BOX_REQUIREMENT_CHECKER=0 php ./build/vendor/bin/box compile --allow-composer-check-failure -vvv --working-dir=.
