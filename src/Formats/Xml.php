@@ -1,63 +1,52 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\CiReportConverter\Formats;
+namespace JBZoo\CIReportConverter\Formats;
 
-/**
- * Class Xml
- * @package JBZoo\CiReportConverter\Formats
- */
-class Xml
+final class Xml
 {
     public const VERSION  = '1.0';
     public const ENCODING = 'UTF-8';
 
-    /**
-     * @param string|null $source
-     * @return \DOMDocument
-     */
     public static function createDomDocument(?string $source = null): \DOMDocument
     {
-        $document = new \DOMDocument();
+        $document                     = new \DOMDocument();
         $document->preserveWhiteSpace = false;
 
-        if ($source) {
+        if ($source !== null) {
             $document->loadXML($source);
         }
 
-        $document->version = self::VERSION;
-        $document->encoding = self::ENCODING;
+        $document->xmlVersion   = self::VERSION;
+        $document->encoding     = self::ENCODING;
         $document->formatOutput = true;
 
         return $document;
     }
 
     /**
-     * @param array             $xmlAsArray
-     * @param \DOMElement|null  $domElement
-     * @param \DOMDocument|null $document
-     * @return \DOMDocument
+     * @suppress PhanPossiblyFalseTypeArgumentInternal
+     * @suppress PhanPossiblyFalseTypeArgument
      */
     public static function array2Dom(
         array $xmlAsArray,
         ?\DOMElement $domElement = null,
-        ?\DOMDocument $document = null
+        ?\DOMDocument $document = null,
     ): \DOMDocument {
-        if (null === $document) {
+        if ($document === null) {
             $document = self::createDomDocument();
         }
 
@@ -69,9 +58,7 @@ class Xml
 
         if ($xmlAsArray['_cdata'] !== null) {
             $newNode = $document->createCDATASection($xmlAsArray['_cdata']);
-            if ($newNode !== false) {
-                $domElement->appendChild($newNode);
-            }
+            $domElement->appendChild($newNode);
         }
 
         if ($domElement instanceof \DOMElement) {
@@ -82,18 +69,15 @@ class Xml
 
         foreach ($xmlAsArray['_children'] as $mixedElement) {
             $newNode = $document->createElement($mixedElement['_node']);
-            if ($newNode !== false) {
-                $domElement->appendChild($newNode);
-                self::array2Dom($mixedElement, $newNode, $document);
-            }
+            $domElement->appendChild($newNode);
+            self::array2Dom($mixedElement, $newNode, $document);
         }
 
         return $document;
     }
 
     /**
-     * @param \DOMNode|\DOMElement|\DOMDocument $element
-     * @return array
+     * @param \DOMDocument|\DOMElement|\DOMNode $element
      * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      */
     public static function dom2Array(\DOMNode $element): array
@@ -106,8 +90,9 @@ class Xml
             '_children' => [],
         ];
 
-        if ($element->attributes && $element->hasAttributes()) {
+        if ($element->attributes !== null && $element->hasAttributes()) {
             foreach ($element->attributes as $attr) {
+                /** @var \DOMAttr $attr */
                 $result['_attrs'][$attr->name] = $attr->value;
             }
         }
@@ -115,14 +100,23 @@ class Xml
         if ($element->hasChildNodes()) {
             $children = $element->childNodes;
 
-            if ($children->length === 1 && $child = $children->item(0)) {
+            if ($children->length === 1 && $children->item(0) !== null) {
+                /** @var null|\DOMNode $child */
+                $child = $children->item(0);
+
+                if ($child === null) {
+                    return $result;
+                }
+
                 if ($child->nodeType === \XML_TEXT_NODE) {
                     $result['_text'] = $child->nodeValue;
+
                     return $result;
                 }
 
                 if ($child->nodeType === \XML_CDATA_SECTION_NODE) {
                     $result['_cdata'] = $child->nodeValue;
+
                     return $result;
                 }
             }

@@ -1,41 +1,35 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
 namespace JBZoo\PHPUnit;
 
-use JBZoo\CiReportConverter\Converters\JUnitConverter;
-use JBZoo\CiReportConverter\Converters\PhpMdJsonConverter;
+use JBZoo\CIReportConverter\Converters\JUnitConverter;
+use JBZoo\CIReportConverter\Converters\PhpMdJsonConverter;
 
-/**
- * Class PhpmdJson2JUnitTest
- *
- * @package JBZoo\PHPUnit
- */
-class ConverterPhpmdJsonTest extends PHPUnit
+final class ConverterPhpmdJsonTest extends PHPUnit
 {
-    public function testPhpmdJson2JUnit()
+    public function testPhpmdJson2JUnit(): void
     {
         $actual = (new PhpMdJsonConverter())
-            ->toInternal(file_get_contents(Fixtures::PHPMD_JSON));
+            ->toInternal(\file_get_contents(Fixtures::PHPMD_JSON));
 
         $actual = (new JUnitConverter())->fromInternal($actual);
         Aliases::isValidXml($actual);
 
-        isSame(implode("\n", [
+        isSame(\implode("\n", [
             '<?xml version="1.0" encoding="UTF-8"?>',
             '<testsuites>',
             '  <testsuite name="PHPmd" tests="10" failures="10">',

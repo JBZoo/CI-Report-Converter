@@ -12,13 +12,13 @@ Code Fragment:
 ```
 declare(strict_types=1);
 
-namespace JBZoo\CiReportConverter;
+namespace JBZoo\CIReportConverter;
 
 use JBZoo\Utils\Str;
 
 /**
  * Class Helper
- * @package JBZoo\CiReportConverter
+ * @package JBZoo\CIReportConverter
  */
 class Helper
 {

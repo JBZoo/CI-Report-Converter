@@ -1,7 +1,7 @@
 # JBZoo / CI-Report-Converter
 
-[![CI](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/main.yml?query=branch%3Amaster)    [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/jbzoo/ci-report-converter.svg)](https://hub.docker.com/r/jbzoo/ci-report-converter)    [![codecov](https://codecov.io/gh/JBZoo/CI-Report-Converter/branch/master/graph/badge.svg)](https://codecov.io/gh/JBZoo/CI-Report-Converter)    [![Psalm Coverage](https://shepherd.dev/github/JBZoo/CI-Report-Converter/coverage.svg)](https://shepherd.dev/github/JBZoo/CI-Report-Converter)    [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jbzoo/ci-report-converter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jbzoo/ci-report-converter/?branch=master)    
-[![PHP Version](https://img.shields.io/packagist/php-v/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/blob/master/composer.json)    [![PHP Strict Types](https://img.shields.io/badge/strict__types-%3D1-brightgreen)](https://www.php.net/manual/en/language.types.declarations.php#language.types.declarations.strict)    [![Stable Version](https://poser.pugx.org/jbzoo/ci-report-converter/version)](https://packagist.org/packages/jbzoo/ci-report-converter)    [![Total Downloads](https://poser.pugx.org/jbzoo/ci-report-converter/downloads)](https://packagist.org/packages/jbzoo/ci-report-converter/stats)    [![Docker Pulls](https://img.shields.io/docker/pulls/jbzoo/ci-report-converter.svg)](https://hub.docker.com/r/jbzoo/ci-report-converter)    [![GitHub Issues](https://img.shields.io/github/issues/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/issues)    [![GitHub License](https://img.shields.io/github/license/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/blob/master/LICENSE)
+[![CI](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/main.yml?query=branch%3Amaster)    [![Coverage Status](https://coveralls.io/repos/github/JBZoo/CI-Report-Converter/badge.svg?branch=master)](https://coveralls.io/github/JBZoo/CI-Report-Converter?branch=master)    [![Psalm Coverage](https://shepherd.dev/github/JBZoo/CI-Report-Converter/coverage.svg)](https://shepherd.dev/github/JBZoo/CI-Report-Converter)    [![Psalm Level](https://shepherd.dev/github/JBZoo/CI-Report-Converter/level.svg)](https://shepherd.dev/github/JBZoo/CI-Report-Converter)    [![CodeFactor](https://www.codefactor.io/repository/github/jbzoo/ci-report-converter/badge)](https://www.codefactor.io/repository/github/jbzoo/ci-report-converter/issues)    
+[![Stable Version](https://poser.pugx.org/jbzoo/ci-report-converter/version)](https://packagist.org/packages/jbzoo/ci-report-converter/)    [![Total Downloads](https://poser.pugx.org/jbzoo/ci-report-converter/downloads)](https://packagist.org/packages/jbzoo/ci-report-converter/stats)    [![Dependents](https://poser.pugx.org/jbzoo/ci-report-converter/dependents)](https://packagist.org/packages/jbzoo/ci-report-converter/dependents?order_by=downloads)    [![Visitors](https://visitor-badge.glitch.me/badge?page_id=jbzoo.ci-report-converter)]()    [![GitHub License](https://img.shields.io/github/license/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/blob/master/LICENSE)
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -220,6 +220,7 @@ Options:
       --non-zero-on-error              None-zero exit code on any StdErr message
       --timestamp                      Show timestamp at the beginning of each message
       --profile                        Display timing and memory usage information
+      --cron                           Shortcut for crontab. It's basically focused on logs output. It's combination of --timestamp --profile --stdout-only --no-progress -vv
   -h, --help                           Display help for the given command. When no command is given display help for the list command
   -q, --quiet                          Do not output any message
   -V, --version                        Display this application version
@@ -256,6 +257,7 @@ Options:
       --non-zero-on-error          None-zero exit code on any StdErr message
       --timestamp                  Show timestamp at the beginning of each message
       --profile                    Display timing and memory usage information
+      --cron                       Shortcut for crontab. It's basically focused on logs output. It's combination of --timestamp --profile --stdout-only --no-progress -vv
   -h, --help                       Display help for the given command. When no command is given display help for the list command
   -q, --quiet                      Do not output any message
   -V, --version                    Display this application version
@@ -546,9 +548,9 @@ PS: More examples are coming soon.
 #### JUnit.xml (API)
 
 ```php
-use JBZoo\CiReportConverter\Converters\JUnitConverter;
-use JBZoo\CiReportConverter\Formats\Source\SourceCaseOutput;
-use JBZoo\CiReportConverter\Formats\Source\SourceSuite;
+use JBZoo\CIReportConverter\Converters\JUnitConverter;
+use JBZoo\CIReportConverter\Formats\Source\SourceCaseOutput;
+use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 
 $class = \JBZoo\PHPUnit\ExampleTest::class;
 $className = str_replace('\\', '.', $class);
@@ -594,7 +596,7 @@ Some err output</system-out>
 #### GitHub Actions (API)
 
 ```php
-use JBZoo\CiReportConverter\Formats\GithubActions\GithubActions;
+use JBZoo\CIReportConverter\Formats\GithubActions\GithubActions;
 
 $ghActions = new GithubActions();
 $case0 = $ghActions->addCase('src/Root.php');

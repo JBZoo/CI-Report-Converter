@@ -1,52 +1,46 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\CiReportConverter\Converters;
+namespace JBZoo\CIReportConverter\Converters;
 
+use JBZoo\CIReportConverter\Formats\Source\SourceCaseOutput;
+use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
+use JBZoo\CIReportConverter\Helper;
 use JBZoo\Data\Data;
-use JBZoo\CiReportConverter\Formats\Source\SourceCaseOutput;
-use JBZoo\CiReportConverter\Formats\Source\SourceSuite;
-use JBZoo\CiReportConverter\Helper;
 
 use function JBZoo\Data\data;
 use function JBZoo\Data\json;
 
-/**
- * Class PhpMdJsonConverter
- * @package JBZoo\CiReportConverter\Converters
- */
-class PhpMdJsonConverter extends AbstractConverter
+final class PhpMdJsonConverter extends AbstractConverter
 {
     public const TYPE = 'phpmd-json';
     public const NAME = 'PHPmd.json';
 
-    /**
-     * @inheritDoc
-     */
     public function toInternal(string $source): SourceSuite
     {
-        $sourceSuite = new SourceSuite($this->rootSuiteName ?: 'PHPmd');
+        $sourceSuite = new SourceSuite(
+            $this->rootSuiteName !== null && $this->rootSuiteName !== '' ? $this->rootSuiteName : 'PHPmd',
+        );
 
         $files = (array)json($source)->get('files');
 
         foreach ($files as $file) {
             $relFilename = $this->cleanFilepath($file['file']);
             $absFilename = $this->getFullPath($relFilename);
-            $suite = $sourceSuite->addSuite($relFilename);
+            $suite       = $sourceSuite->addSuite($relFilename);
             $suite->file = $absFilename;
 
             foreach ($file['violations'] as $violation) {
@@ -55,17 +49,17 @@ class PhpMdJsonConverter extends AbstractConverter
 
                 $case = $suite->addTestCase("{$relFilename} line {$violation['beginLine']}");
 
-                $case->file = $absFilename;
-                $case->line = $violation['beginLine'] ?? null;
+                $case->file    = $absFilename;
+                $case->line    = $violation['beginLine'] ?? null;
                 $case->failure = new SourceCaseOutput(
                     $violation['rule'] ?? null,
                     $violation['description'] ?? null,
-                    self::getDetails($violation)
+                    self::getDetails($violation),
                 );
 
                 $package = $violation['package'] ?? null;
-                if (null !== $package) {
-                    $case->class = $package;
+                if ($package !== null) {
+                    $case->class     = $package;
                     $case->classname = \str_replace('\\', '.', $package);
                 }
             }
@@ -74,26 +68,27 @@ class PhpMdJsonConverter extends AbstractConverter
         return $sourceSuite;
     }
 
-    /**
-     * @param Data $data
-     * @return string|null
-     */
     private static function getDetails(Data $data): ?string
     {
-        $functionName = $data['function'] ? "{$data['function']}()" : null;
-        if ($data['method']) {
-            $functionName = "{$data['method']}()";
+        $package  = $data->getString('package');
+        $class    = $data->getString('class');
+        $method   = $data->getString('method');
+        $function = $data->getString('function');
+
+        $functionName = $function !== '' ? "{$function}()" : null;
+        if ($method !== '') {
+            $functionName = "{$method}()";
         }
 
-        if ($data['class'] && $data['method']) {
-            $functionName = "{$data['class']}->{$data['method']}()";
+        if ($class !== '' && $method !== '') {
+            $functionName = "{$class}->{$method}()";
         }
 
-        if ($data['class'] && $data['method'] && $data['package']) {
-            $functionName = "{$data['package']}\\{$data['class']}->{$data['method']}()";
+        if ($class !== '' && $method !== '' && $package !== '') {
+            $functionName = "{$package}\\{$class}->{$method}()";
         }
 
-        $line = (int)$data->get('beginLine');
+        $line = $data->getInt('beginLine');
         $line = $line > 0 ? ":{$line}" : '';
 
         return Helper::descAsList([

@@ -1135,8 +1135,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Markdown": {
-        "name": "JBZoo\\CiReportConverter\\Markdown",
+    "JBZoo\\CIReportConverter\\Markdown": {
+        "name": "JBZoo\\CIReportConverter\\Markdown",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -1208,7 +1208,7 @@
         "ccn": 17,
         "ccnMethodMax": 6,
         "externals": [
-            "JBZoo\\CiReportConverter\\Exception"
+            "JBZoo\\CIReportConverter\\Exception"
         ],
         "parents": [],
         "lcom": 3,
@@ -1238,7 +1238,7 @@
         "totalStructuralComplexity": 288,
         "totalDataComplexity": 11.86,
         "totalSystemComplexity": 299.86,
-        "package": "JBZoo\\CiReportConverter\\",
+        "package": "JBZoo\\CIReportConverter\\",
         "pageRank": 0,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
@@ -1246,26 +1246,26 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\": {
-        "name": "JBZoo\\CiReportConverter\\",
+    "JBZoo\\CIReportConverter\\": {
+        "name": "JBZoo\\CIReportConverter\\",
         "classes": [
-            "JBZoo\\CiReportConverter\\Markdown",
-            "JBZoo\\CiReportConverter\\Helper",
-            "JBZoo\\CiReportConverter\\Exception"
+            "JBZoo\\CIReportConverter\\Markdown",
+            "JBZoo\\CIReportConverter\\Helper",
+            "JBZoo\\CIReportConverter\\Exception"
         ],
         "incoming_class_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\Exception",
-            "JBZoo\\CiReportConverter\\Converters\\PsalmJsonConverter",
-            "JBZoo\\CiReportConverter\\Converters\\Map",
-            "JBZoo\\CiReportConverter\\Converters\\CheckStyleConverter",
-            "JBZoo\\CiReportConverter\\Converters\\PhpMdJsonConverter",
-            "JBZoo\\CiReportConverter\\Converters\\Exception",
-            "JBZoo\\CiReportConverter\\Commands\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\Exception",
+            "JBZoo\\CIReportConverter\\Converters\\PsalmJsonConverter",
+            "JBZoo\\CIReportConverter\\Converters\\Map",
+            "JBZoo\\CIReportConverter\\Converters\\CheckStyleConverter",
+            "JBZoo\\CIReportConverter\\Converters\\PhpMdJsonConverter",
+            "JBZoo\\CIReportConverter\\Converters\\Exception",
+            "JBZoo\\CIReportConverter\\Commands\\Exception"
         ],
         "incoming_package_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\",
-            "JBZoo\\CiReportConverter\\Converters\\",
-            "JBZoo\\CiReportConverter\\Commands\\"
+            "JBZoo\\CIReportConverter\\Formats\\",
+            "JBZoo\\CIReportConverter\\Converters\\",
+            "JBZoo\\CIReportConverter\\Commands\\"
         ],
         "outgoing_class_dependencies": [
             "JBZoo\\Utils\\Str",
@@ -1285,8 +1285,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\PackageMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpDepend": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpDepend",
+    "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpDepend": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpDepend",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -1301,10 +1301,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
         ],
         "lcom": 0,
         "length": 81,
@@ -1333,7 +1333,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\",
         "pageRank": 0,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
@@ -1341,26 +1341,26 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\",
+    "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\",
         "classes": [
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpDepend",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpLoc",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\AbstractMetricMap",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpMetrics",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpUnitClover"
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpDepend",
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpLoc",
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\AbstractMetricMap",
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpMetrics",
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpUnitClover"
         ],
         "incoming_class_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\Metrics",
-            "JBZoo\\CiReportConverter\\Converters\\PhpDependStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Converters\\PhpLocStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Converters\\AbstractStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Converters\\PhpUnitCloverStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Converters\\PhpMetricsStatsTcConverter"
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\Metrics",
+            "JBZoo\\CIReportConverter\\Converters\\PhpDependStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Converters\\PhpLocStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Converters\\AbstractStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Converters\\PhpUnitCloverStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Converters\\PhpMetricsStatsTcConverter"
         ],
         "incoming_package_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\",
-            "JBZoo\\CiReportConverter\\Converters\\"
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\",
+            "JBZoo\\CIReportConverter\\Converters\\"
         ],
         "abstraction": 0.2,
         "instability": 0,
@@ -1370,8 +1370,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\PackageMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpLoc": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpLoc",
+    "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpLoc": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpLoc",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -1386,10 +1386,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
         ],
         "lcom": 0,
         "length": 109,
@@ -1418,7 +1418,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\",
         "pageRank": 0,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
@@ -1426,8 +1426,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\AbstractMetricMap": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\AbstractMetricMap",
+    "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\AbstractMetricMap": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\AbstractMetricMap",
         "interface": false,
         "abstract": true,
         "final": false,
@@ -1481,7 +1481,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 4,
         "totalSystemComplexity": 4,
-        "package": "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\",
         "pageRank": 0.01,
         "afferentCoupling": 6,
         "efferentCoupling": 0,
@@ -1489,8 +1489,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpMetrics": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpMetrics",
+    "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpMetrics": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpMetrics",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -1505,10 +1505,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
         ],
         "lcom": 0,
         "length": 79,
@@ -1537,7 +1537,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\",
         "pageRank": 0,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
@@ -1545,8 +1545,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpUnitClover": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpUnitClover",
+    "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpUnitClover": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpUnitClover",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -1561,10 +1561,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
         ],
         "lcom": 0,
         "length": 41,
@@ -1593,7 +1593,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\",
         "pageRank": 0,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
@@ -1601,8 +1601,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitCase": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitCase",
+    "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitCase": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitCase",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -1698,22 +1698,22 @@
         "ccn": 12,
         "ccnMethodMax": 8,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitCase",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Failure",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitCase",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Error",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitCase",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Warning",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\SystemOut",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\SystemOut",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitCase",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Skipped",
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitCase",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Failure",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitCase",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Error",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitCase",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Warning",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\SystemOut",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\SystemOut",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitCase",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Skipped",
             "DOMNode",
             "DOMDocument"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode"
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode"
         ],
         "lcom": 1,
         "length": 142,
@@ -1742,7 +1742,7 @@
         "totalStructuralComplexity": 300,
         "totalDataComplexity": 33.83,
         "totalSystemComplexity": 333.83,
-        "package": "JBZoo\\CiReportConverter\\Formats\\JUnit\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\JUnit\\",
         "pageRank": 0,
         "afferentCoupling": 3,
         "efferentCoupling": 10,
@@ -1750,50 +1750,50 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\JUnit\\": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\JUnit\\",
+    "JBZoo\\CIReportConverter\\Formats\\JUnit\\": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\JUnit\\",
         "classes": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitCase",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitSuite",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnit",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitCase",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitSuite",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnit",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\Exception"
         ],
         "outgoing_class_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Failure",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Error",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Warning",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\SystemOut",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Skipped",
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Failure",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Error",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Warning",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\SystemOut",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Skipped",
             "DOMNode",
             "DOMDocument",
-            "JBZoo\\CiReportConverter\\Formats\\Xml",
-            "JBZoo\\CiReportConverter\\Formats\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\Xml",
+            "JBZoo\\CIReportConverter\\Formats\\Exception"
         ],
         "outgoing_package_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\",
+            "JBZoo\\CIReportConverter\\Formats\\",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\",
             "\\"
         ],
         "incoming_class_dependencies": [
-            "JBZoo\\CiReportConverter\\Converters\\JUnitConverter"
+            "JBZoo\\CIReportConverter\\Converters\\JUnitConverter"
         ],
         "incoming_package_dependencies": [
-            "JBZoo\\CiReportConverter\\Converters\\"
+            "JBZoo\\CIReportConverter\\Converters\\"
         ],
         "abstraction": 0,
         "instability": 0.9090909090909091,
         "dependent_instabilities": {
-            "JBZoo\\CiReportConverter\\Formats\\": 0.3,
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\": 0.6666666666666666
+            "JBZoo\\CIReportConverter\\Formats\\": 0.3,
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\": 0.6666666666666666
         },
         "distance": 0.06428243465332252,
         "normalized_distance": 0.09090909090909094,
         "violations": {},
         "_type": "Hal\\Metric\\PackageMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitSuite": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitSuite",
+    "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitSuite": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitSuite",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -1879,14 +1879,14 @@
         "ccn": 18,
         "ccnMethodMax": 11,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode",
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode",
             "DOMNode",
             "DOMDocument",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitCase",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitCase"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitCase",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitCase"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode"
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode"
         ],
         "lcom": 1,
         "length": 245,
@@ -1915,7 +1915,7 @@
         "totalStructuralComplexity": 1210,
         "totalDataComplexity": 13.58,
         "totalSystemComplexity": 1223.58,
-        "package": "JBZoo\\CiReportConverter\\Formats\\JUnit\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\JUnit\\",
         "pageRank": 0,
         "afferentCoupling": 1,
         "efferentCoupling": 4,
@@ -1923,8 +1923,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Warning": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Warning",
+    "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Warning": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Warning",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -1939,10 +1939,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
         ],
         "lcom": 0,
         "length": 1,
@@ -1971,7 +1971,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\",
         "pageRank": 0,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
@@ -1979,21 +1979,21 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\",
+    "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\",
         "classes": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Warning",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Skipped",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Error",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Failure",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\SystemOut"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Warning",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Skipped",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Error",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Failure",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\SystemOut"
         ],
         "incoming_class_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitCase"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitCase"
         ],
         "incoming_package_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\"
         ],
         "outgoing_class_dependencies": [
             "DOMNode",
@@ -2010,8 +2010,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\PackageMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Skipped": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Skipped",
+    "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Skipped": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Skipped",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -2026,10 +2026,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
         ],
         "lcom": 0,
         "length": 1,
@@ -2058,7 +2058,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\",
         "pageRank": 0,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
@@ -2066,8 +2066,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput",
+    "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput",
         "interface": false,
         "abstract": true,
         "final": false,
@@ -2138,7 +2138,7 @@
         "totalStructuralComplexity": 16,
         "totalDataComplexity": 6,
         "totalSystemComplexity": 22,
-        "package": "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\",
         "pageRank": 0.01,
         "afferentCoupling": 5,
         "efferentCoupling": 2,
@@ -2146,8 +2146,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Error": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Error",
+    "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Error": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Error",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -2162,10 +2162,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
         ],
         "lcom": 0,
         "length": 1,
@@ -2194,7 +2194,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\",
         "pageRank": 0,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
@@ -2202,8 +2202,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Failure": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\Failure",
+    "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Failure": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\Failure",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -2218,10 +2218,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
         ],
         "lcom": 0,
         "length": 1,
@@ -2250,7 +2250,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\",
         "pageRank": 0,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
@@ -2258,8 +2258,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\SystemOut": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\SystemOut",
+    "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\SystemOut": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\SystemOut",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -2274,10 +2274,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\AbstractOutput"
         ],
         "lcom": 0,
         "length": 1,
@@ -2306,7 +2306,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Formats\\JUnit\\CaseOutput\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\JUnit\\CaseOutput\\",
         "pageRank": 0,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
@@ -2314,8 +2314,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnit": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnit",
+    "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnit": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnit",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -2352,10 +2352,10 @@
         "ccn": 2,
         "ccnMethodMax": 2,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitSuite",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitSuite",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitSuite",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitSuite",
             "DOMDocument",
-            "JBZoo\\CiReportConverter\\Formats\\Xml"
+            "JBZoo\\CIReportConverter\\Formats\\Xml"
         ],
         "parents": [],
         "lcom": 1,
@@ -2385,7 +2385,7 @@
         "totalStructuralComplexity": 108,
         "totalDataComplexity": 1.43,
         "totalSystemComplexity": 109.43,
-        "package": "JBZoo\\CiReportConverter\\Formats\\JUnit\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\JUnit\\",
         "pageRank": 0,
         "afferentCoupling": 1,
         "efferentCoupling": 3,
@@ -2393,8 +2393,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\JUnit\\Exception": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\JUnit\\Exception",
+    "JBZoo\\CIReportConverter\\Formats\\JUnit\\Exception": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\JUnit\\Exception",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -2409,10 +2409,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\Exception"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\Exception"
         ],
         "lcom": 0,
         "length": 0,
@@ -2441,7 +2441,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Formats\\JUnit\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\JUnit\\",
         "pageRank": 0,
         "afferentCoupling": 0,
         "efferentCoupling": 1,
@@ -2449,8 +2449,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
+    "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -2560,12 +2560,12 @@
         "ccn": 28,
         "ccnMethodMax": 5,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceCase",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceCase"
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceCase",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceCase"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode"
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode"
         ],
         "lcom": 1,
         "length": 227,
@@ -2594,7 +2594,7 @@
         "totalStructuralComplexity": 2366,
         "totalDataComplexity": 15.21,
         "totalSystemComplexity": 2381.21,
-        "package": "JBZoo\\CiReportConverter\\Formats\\Source\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\Source\\",
         "pageRank": 0.01,
         "afferentCoupling": 5,
         "efferentCoupling": 2,
@@ -2602,39 +2602,39 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\Source\\": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\Source\\",
+    "JBZoo\\CIReportConverter\\Formats\\Source\\": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\Source\\",
         "classes": [
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceCaseOutput",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceCase",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceCaseOutput",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceCase",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\Exception"
         ],
         "outgoing_class_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode",
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode",
             "JBZoo\\Data\\Data",
-            "JBZoo\\CiReportConverter\\Formats\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\Exception"
         ],
         "outgoing_package_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\",
+            "JBZoo\\CIReportConverter\\Formats\\",
             "JBZoo\\Data\\"
         ],
         "incoming_class_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode",
-            "JBZoo\\CiReportConverter\\Converters\\PsalmJsonConverter",
-            "JBZoo\\CiReportConverter\\Converters\\CheckStyleConverter",
-            "JBZoo\\CiReportConverter\\Converters\\JUnitConverter",
-            "JBZoo\\CiReportConverter\\Converters\\PhpMdJsonConverter",
-            "JBZoo\\CiReportConverter\\Converters\\AbstractConverter"
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode",
+            "JBZoo\\CIReportConverter\\Converters\\PsalmJsonConverter",
+            "JBZoo\\CIReportConverter\\Converters\\CheckStyleConverter",
+            "JBZoo\\CIReportConverter\\Converters\\JUnitConverter",
+            "JBZoo\\CIReportConverter\\Converters\\PhpMdJsonConverter",
+            "JBZoo\\CIReportConverter\\Converters\\AbstractConverter"
         ],
         "incoming_package_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\",
-            "JBZoo\\CiReportConverter\\Converters\\"
+            "JBZoo\\CIReportConverter\\Formats\\",
+            "JBZoo\\CIReportConverter\\Converters\\"
         ],
         "abstraction": 0,
         "instability": 0.3333333333333333,
         "dependent_instabilities": {
-            "JBZoo\\CiReportConverter\\Formats\\": 0.3,
+            "JBZoo\\CIReportConverter\\Formats\\": 0.3,
             "JBZoo\\Data\\": 0.4117647058823529
         },
         "distance": 0.4714045207910317,
@@ -2642,8 +2642,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\PackageMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\Source\\SourceCaseOutput": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\Source\\SourceCaseOutput",
+    "JBZoo\\CIReportConverter\\Formats\\Source\\SourceCaseOutput": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\Source\\SourceCaseOutput",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -2710,7 +2710,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 9,
         "totalSystemComplexity": 9,
-        "package": "JBZoo\\CiReportConverter\\Formats\\Source\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\Source\\",
         "pageRank": 0,
         "afferentCoupling": 4,
         "efferentCoupling": 1,
@@ -2718,8 +2718,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\Source\\SourceCase": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\Source\\SourceCase",
+    "JBZoo\\CIReportConverter\\Formats\\Source\\SourceCase": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\Source\\SourceCase",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -2777,10 +2777,10 @@
         "ccn": 3,
         "ccnMethodMax": 2,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode"
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode"
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode"
         ],
         "lcom": 1,
         "length": 54,
@@ -2809,7 +2809,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 37,
         "totalSystemComplexity": 37,
-        "package": "JBZoo\\CiReportConverter\\Formats\\Source\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\Source\\",
         "pageRank": 0.01,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
@@ -2817,8 +2817,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\Source\\Exception": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\Source\\Exception",
+    "JBZoo\\CIReportConverter\\Formats\\Source\\Exception": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\Source\\Exception",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -2833,10 +2833,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\Exception"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\Exception"
         ],
         "lcom": 0,
         "length": 0,
@@ -2865,7 +2865,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Formats\\Source\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\Source\\",
         "pageRank": 0.01,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
@@ -2873,8 +2873,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\AbstractNode": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\AbstractNode",
+    "JBZoo\\CIReportConverter\\Formats\\AbstractNode": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\AbstractNode",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -2934,9 +2934,9 @@
         "externals": [
             "JBZoo\\Data\\Data",
             "JBZoo\\Utils\\Str",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\Exception",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\Exception",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\Source\\Exception",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\Exception",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\Exception"
         ],
         "parents": [],
         "lcom": 1,
@@ -2966,7 +2966,7 @@
         "totalStructuralComplexity": 216,
         "totalDataComplexity": 5.29,
         "totalSystemComplexity": 221.29,
-        "package": "JBZoo\\CiReportConverter\\Formats\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\",
         "pageRank": 0.02,
         "afferentCoupling": 6,
         "efferentCoupling": 3,
@@ -2974,66 +2974,66 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\",
+    "JBZoo\\CIReportConverter\\Formats\\": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\",
         "classes": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode",
-            "JBZoo\\CiReportConverter\\Formats\\Xml",
-            "JBZoo\\CiReportConverter\\Formats\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode",
+            "JBZoo\\CIReportConverter\\Formats\\Xml",
+            "JBZoo\\CIReportConverter\\Formats\\Exception"
         ],
         "incoming_class_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitCase",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnitSuite",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnit",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\Exception",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceCase",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\Exception",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Exception",
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\Metric",
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\Metrics",
-            "JBZoo\\CiReportConverter\\Converters\\PhpDependStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Converters\\CheckStyleConverter",
-            "JBZoo\\CiReportConverter\\Converters\\JUnitConverter",
-            "JBZoo\\CiReportConverter\\Converters\\PhpMetricsStatsTcConverter"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitCase",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnitSuite",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnit",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\Exception",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceCase",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\Exception",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Exception",
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\Metric",
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\Metrics",
+            "JBZoo\\CIReportConverter\\Converters\\PhpDependStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Converters\\CheckStyleConverter",
+            "JBZoo\\CIReportConverter\\Converters\\JUnitConverter",
+            "JBZoo\\CIReportConverter\\Converters\\PhpMetricsStatsTcConverter"
         ],
         "incoming_package_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\",
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\",
-            "JBZoo\\CiReportConverter\\Converters\\"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\",
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\",
+            "JBZoo\\CIReportConverter\\Converters\\"
         ],
         "outgoing_class_dependencies": [
             "JBZoo\\Data\\Data",
             "JBZoo\\Utils\\Str",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\Exception",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\Exception",
             "DOMDocument",
             "DOMNode",
-            "JBZoo\\CiReportConverter\\Exception"
+            "JBZoo\\CIReportConverter\\Exception"
         ],
         "outgoing_package_dependencies": [
             "JBZoo\\Data\\",
             "JBZoo\\Utils\\",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\",
             "\\",
-            "JBZoo\\CiReportConverter\\"
+            "JBZoo\\CIReportConverter\\"
         ],
         "abstraction": 0,
         "instability": 0.3,
         "dependent_instabilities": {
             "JBZoo\\Data\\": 0.4117647058823529,
             "JBZoo\\Utils\\": 0.5454545454545454,
-            "JBZoo\\CiReportConverter\\Formats\\Source\\": 0.3333333333333333,
-            "JBZoo\\CiReportConverter\\": 0.2222222222222222
+            "JBZoo\\CIReportConverter\\Formats\\Source\\": 0.3333333333333333,
+            "JBZoo\\CIReportConverter\\": 0.2222222222222222
         },
         "distance": 0.4949747468305832,
         "normalized_distance": 0.7,
         "violations": {},
         "_type": "Hal\\Metric\\PackageMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\Xml": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\Xml",
+    "JBZoo\\CIReportConverter\\Formats\\Xml": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\Xml",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -3103,7 +3103,7 @@
         "totalStructuralComplexity": 300,
         "totalDataComplexity": 1.82,
         "totalSystemComplexity": 301.82,
-        "package": "JBZoo\\CiReportConverter\\Formats\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\",
         "pageRank": 0,
         "afferentCoupling": 5,
         "efferentCoupling": 2,
@@ -3111,8 +3111,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\TeamCity\\TeamCity": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\TeamCity",
+    "JBZoo\\CIReportConverter\\Formats\\TeamCity\\TeamCity": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\TeamCity",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -3210,12 +3210,12 @@
         "ccn": 24,
         "ccnMethodMax": 8,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter",
             "JBZoo\\Utils\\Sys",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Helper",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Helper",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Helper",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Helper",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Exception"
         ],
         "parents": [],
         "lcom": 1,
@@ -3245,7 +3245,7 @@
         "totalStructuralComplexity": 192,
         "totalDataComplexity": 10.4,
         "totalSystemComplexity": 202.4,
-        "package": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\",
         "pageRank": 0,
         "afferentCoupling": 1,
         "efferentCoupling": 4,
@@ -3253,47 +3253,47 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\TeamCity\\": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\",
+    "JBZoo\\CIReportConverter\\Formats\\TeamCity\\": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\",
         "classes": [
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\TeamCity",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Helper",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\TeamCity",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Helper",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Exception"
         ],
         "outgoing_class_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter",
             "JBZoo\\Utils\\Sys",
             "DateTime",
-            "JBZoo\\CiReportConverter\\Formats\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\Exception"
         ],
         "outgoing_package_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\",
             "JBZoo\\Utils\\",
             "\\",
-            "JBZoo\\CiReportConverter\\Formats\\"
+            "JBZoo\\CIReportConverter\\Formats\\"
         ],
         "incoming_class_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\Exception",
-            "JBZoo\\CiReportConverter\\Converters\\AbstractStatsTcConverter"
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\Exception",
+            "JBZoo\\CIReportConverter\\Converters\\AbstractStatsTcConverter"
         ],
         "incoming_package_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\",
-            "JBZoo\\CiReportConverter\\Converters\\"
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\",
+            "JBZoo\\CIReportConverter\\Converters\\"
         ],
         "abstraction": 0,
         "instability": 0.6666666666666666,
         "dependent_instabilities": {
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\": 0.6,
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\": 0.6,
             "JBZoo\\Utils\\": 0.5454545454545454,
-            "JBZoo\\CiReportConverter\\Formats\\": 0.3
+            "JBZoo\\CIReportConverter\\Formats\\": 0.3
         },
         "distance": 0.23570226039551584,
         "normalized_distance": 0.33333333333333337,
         "violations": {},
         "_type": "Hal\\Metric\\PackageMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\Stdout": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\Stdout",
+    "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\Stdout": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\Stdout",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -3316,7 +3316,7 @@
         "ccn": 2,
         "ccnMethodMax": 2,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter",
             "JBZoo\\Utils\\Cli"
         ],
         "parents": [],
@@ -3347,7 +3347,7 @@
         "totalStructuralComplexity": 1,
         "totalDataComplexity": 0.5,
         "totalSystemComplexity": 1.5,
-        "package": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\",
         "pageRank": 0,
         "afferentCoupling": 0,
         "efferentCoupling": 2,
@@ -3355,47 +3355,47 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\",
+    "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\",
         "classes": [
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\Stdout",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\CustomCallback",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\Buffer",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\SymfonyConsole",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\Stdout",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\CustomCallback",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\Buffer",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\SymfonyConsole",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\Exception"
         ],
         "incoming_class_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\TeamCity",
-            "JBZoo\\CiReportConverter\\Converters\\AbstractStatsTcConverter"
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\TeamCity",
+            "JBZoo\\CIReportConverter\\Converters\\AbstractStatsTcConverter"
         ],
         "incoming_package_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\",
-            "JBZoo\\CiReportConverter\\Converters\\"
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\",
+            "JBZoo\\CIReportConverter\\Converters\\"
         ],
         "outgoing_class_dependencies": [
             "JBZoo\\Utils\\Cli",
             "Symfony\\Component\\Console\\Output\\OutputInterface",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Exception"
         ],
         "outgoing_package_dependencies": [
             "JBZoo\\Utils\\",
             "Symfony\\Component\\Console\\Output\\",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\"
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\"
         ],
         "abstraction": 0.16666666666666666,
         "instability": 0.6,
         "dependent_instabilities": {
             "JBZoo\\Utils\\": 0.5454545454545454,
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\": 0.6666666666666666
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\": 0.6666666666666666
         },
         "distance": 0.16499158227686112,
         "normalized_distance": 0.2333333333333334,
         "violations": {},
         "_type": "Hal\\Metric\\PackageMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\CustomCallback": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\CustomCallback",
+    "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\CustomCallback": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\CustomCallback",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -3423,8 +3423,8 @@
         "ccn": 2,
         "ccnMethodMax": 2,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\Exception"
         ],
         "parents": [],
         "lcom": 1,
@@ -3454,7 +3454,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 2,
         "totalSystemComplexity": 2,
-        "package": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\",
         "pageRank": 0,
         "afferentCoupling": 0,
         "efferentCoupling": 2,
@@ -3462,8 +3462,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\Buffer": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\Buffer",
+    "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\Buffer": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\Buffer",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -3491,7 +3491,7 @@
         "ccn": 1,
         "ccnMethodMax": 1,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter"
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter"
         ],
         "parents": [],
         "lcom": 1,
@@ -3521,7 +3521,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 3,
         "totalSystemComplexity": 3,
-        "package": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\",
         "pageRank": 0,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
@@ -3529,8 +3529,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\SymfonyConsole": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\SymfonyConsole",
+    "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\SymfonyConsole": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\SymfonyConsole",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -3558,8 +3558,8 @@
         "ccn": 3,
         "ccnMethodMax": 3,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\Exception",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\Exception",
             "Symfony\\Component\\Console\\Output\\OutputInterface"
         ],
         "parents": [],
@@ -3590,7 +3590,7 @@
         "totalStructuralComplexity": 2,
         "totalDataComplexity": 1,
         "totalSystemComplexity": 3,
-        "package": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\",
         "pageRank": 0,
         "afferentCoupling": 0,
         "efferentCoupling": 3,
@@ -3598,8 +3598,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter",
+    "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\AbstractWriter",
         "interface": true,
         "abstract": true,
         "methods": [
@@ -3623,7 +3623,7 @@
         "externals": [],
         "parents": [],
         "kanDefect": 0.15,
-        "package": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\",
         "pageRank": 0.01,
         "afferentCoupling": 5,
         "efferentCoupling": 0,
@@ -3631,8 +3631,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\InterfaceMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\Exception": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\Exception",
+    "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\Exception": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\Exception",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -3647,10 +3647,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Exception"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Exception"
         ],
         "lcom": 0,
         "length": 0,
@@ -3679,7 +3679,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\",
         "pageRank": 0,
         "afferentCoupling": 2,
         "efferentCoupling": 1,
@@ -3687,8 +3687,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Helper": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Helper",
+    "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Helper": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Helper",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -3732,9 +3732,9 @@
         "ccn": 8,
         "ccnMethodMax": 4,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Exception",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Exception",
             "DateTime",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Exception"
         ],
         "parents": [],
         "lcom": 4,
@@ -3764,7 +3764,7 @@
         "totalStructuralComplexity": 16,
         "totalDataComplexity": 9.67,
         "totalSystemComplexity": 25.67,
-        "package": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\",
         "pageRank": 0,
         "afferentCoupling": 1,
         "efferentCoupling": 2,
@@ -3772,8 +3772,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Exception": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Exception",
+    "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Exception": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Exception",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -3788,10 +3788,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\Exception"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\Exception"
         ],
         "lcom": 0,
         "length": 0,
@@ -3820,7 +3820,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Formats\\TeamCity\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\TeamCity\\",
         "pageRank": 0.01,
         "afferentCoupling": 3,
         "efferentCoupling": 1,
@@ -3828,8 +3828,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\Metric\\Metric": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\Metric\\Metric",
+    "JBZoo\\CIReportConverter\\Formats\\Metric\\Metric": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\Metric\\Metric",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -3844,10 +3844,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode"
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode"
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode"
         ],
         "lcom": 0,
         "length": 8,
@@ -3876,7 +3876,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Formats\\Metric\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\Metric\\",
         "pageRank": 0,
         "afferentCoupling": 1,
         "efferentCoupling": 1,
@@ -3884,43 +3884,43 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\Metric\\": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\Metric\\",
+    "JBZoo\\CIReportConverter\\Formats\\Metric\\": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\Metric\\",
         "classes": [
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\Metric",
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\Metrics"
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\Metric",
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\Metrics"
         ],
         "outgoing_class_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode",
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\AbstractMetricMap"
         ],
         "outgoing_package_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\"
+            "JBZoo\\CIReportConverter\\Formats\\",
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\"
         ],
         "incoming_class_dependencies": [
-            "JBZoo\\CiReportConverter\\Converters\\PhpDependStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Converters\\PhpLocStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Converters\\AbstractStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Converters\\PhpUnitCloverStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Converters\\PhpMetricsStatsTcConverter"
+            "JBZoo\\CIReportConverter\\Converters\\PhpDependStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Converters\\PhpLocStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Converters\\AbstractStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Converters\\PhpUnitCloverStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Converters\\PhpMetricsStatsTcConverter"
         ],
         "incoming_package_dependencies": [
-            "JBZoo\\CiReportConverter\\Converters\\"
+            "JBZoo\\CIReportConverter\\Converters\\"
         ],
         "abstraction": 0,
         "instability": 0.2857142857142857,
         "dependent_instabilities": {
-            "JBZoo\\CiReportConverter\\Formats\\": 0.3,
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\": 0
+            "JBZoo\\CIReportConverter\\Formats\\": 0.3,
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\": 0
         },
         "distance": 0.5050762722761053,
         "normalized_distance": 0.7142857142857143,
         "violations": {},
         "_type": "Hal\\Metric\\PackageMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\Metric\\Metrics": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\Metric\\Metrics",
+    "JBZoo\\CIReportConverter\\Formats\\Metric\\Metrics": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\Metric\\Metrics",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -3962,12 +3962,12 @@
         "ccn": 10,
         "ccnMethodMax": 6,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\AbstractMetricMap",
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\Metric"
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode",
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\AbstractMetricMap",
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\Metric"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode"
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode"
         ],
         "lcom": 1,
         "length": 104,
@@ -3996,7 +3996,7 @@
         "totalStructuralComplexity": 64,
         "totalDataComplexity": 5.4,
         "totalSystemComplexity": 69.4,
-        "package": "JBZoo\\CiReportConverter\\Formats\\Metric\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\Metric\\",
         "pageRank": 0.01,
         "afferentCoupling": 5,
         "efferentCoupling": 3,
@@ -4004,8 +4004,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Formats\\Exception": {
-        "name": "JBZoo\\CiReportConverter\\Formats\\Exception",
+    "JBZoo\\CIReportConverter\\Formats\\Exception": {
+        "name": "JBZoo\\CIReportConverter\\Formats\\Exception",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -4020,10 +4020,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Exception"
+            "JBZoo\\CIReportConverter\\Exception"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Exception"
+            "JBZoo\\CIReportConverter\\Exception"
         ],
         "lcom": 0,
         "length": 0,
@@ -4052,7 +4052,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Formats\\",
+        "package": "JBZoo\\CIReportConverter\\Formats\\",
         "pageRank": 0.03,
         "afferentCoupling": 3,
         "efferentCoupling": 1,
@@ -4060,8 +4060,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Converters\\Factory": {
-        "name": "JBZoo\\CiReportConverter\\Converters\\Factory",
+    "JBZoo\\CIReportConverter\\Converters\\Factory": {
+        "name": "JBZoo\\CIReportConverter\\Converters\\Factory",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -4091,9 +4091,9 @@
         "ccn": 2,
         "ccnMethodMax": 2,
         "externals": [
-            "JBZoo\\CiReportConverter\\Converters\\Map",
-            "JBZoo\\CiReportConverter\\Converters\\Map",
-            "JBZoo\\CiReportConverter\\Converters\\Map"
+            "JBZoo\\CIReportConverter\\Converters\\Map",
+            "JBZoo\\CIReportConverter\\Converters\\Map",
+            "JBZoo\\CIReportConverter\\Converters\\Map"
         ],
         "parents": [],
         "lcom": 2,
@@ -4123,7 +4123,7 @@
         "totalStructuralComplexity": 128,
         "totalDataComplexity": 1.33,
         "totalSystemComplexity": 129.33,
-        "package": "JBZoo\\CiReportConverter\\Converters\\",
+        "package": "JBZoo\\CIReportConverter\\Converters\\",
         "pageRank": 0,
         "afferentCoupling": 2,
         "efferentCoupling": 1,
@@ -4131,83 +4131,83 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Converters\\": {
-        "name": "JBZoo\\CiReportConverter\\Converters\\",
+    "JBZoo\\CIReportConverter\\Converters\\": {
+        "name": "JBZoo\\CIReportConverter\\Converters\\",
         "classes": [
-            "JBZoo\\CiReportConverter\\Converters\\Factory",
-            "JBZoo\\CiReportConverter\\Converters\\PsalmJsonConverter",
-            "JBZoo\\CiReportConverter\\Converters\\PhpDependStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Converters\\PhpLocStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Converters\\Map",
-            "JBZoo\\CiReportConverter\\Converters\\CheckStyleConverter",
-            "JBZoo\\CiReportConverter\\Converters\\JUnitConverter",
-            "JBZoo\\CiReportConverter\\Converters\\AbstractStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Converters\\PhpMdJsonConverter",
-            "JBZoo\\CiReportConverter\\Converters\\AbstractConverter",
-            "JBZoo\\CiReportConverter\\Converters\\PhpUnitCloverStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Converters\\Exception",
-            "JBZoo\\CiReportConverter\\Converters\\PhpMetricsStatsTcConverter"
+            "JBZoo\\CIReportConverter\\Converters\\Factory",
+            "JBZoo\\CIReportConverter\\Converters\\PsalmJsonConverter",
+            "JBZoo\\CIReportConverter\\Converters\\PhpDependStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Converters\\PhpLocStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Converters\\Map",
+            "JBZoo\\CIReportConverter\\Converters\\CheckStyleConverter",
+            "JBZoo\\CIReportConverter\\Converters\\JUnitConverter",
+            "JBZoo\\CIReportConverter\\Converters\\AbstractStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Converters\\PhpMdJsonConverter",
+            "JBZoo\\CIReportConverter\\Converters\\AbstractConverter",
+            "JBZoo\\CIReportConverter\\Converters\\PhpUnitCloverStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Converters\\Exception",
+            "JBZoo\\CIReportConverter\\Converters\\PhpMetricsStatsTcConverter"
         ],
         "outgoing_class_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceCaseOutput",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceCaseOutput",
             "JBZoo\\Data\\Data",
-            "JBZoo\\CiReportConverter\\Helper",
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\Metrics",
-            "JBZoo\\CiReportConverter\\Formats\\Xml",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpDepend",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpLoc",
-            "JBZoo\\CiReportConverter\\Markdown",
+            "JBZoo\\CIReportConverter\\Helper",
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\Metrics",
+            "JBZoo\\CIReportConverter\\Formats\\Xml",
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpDepend",
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpLoc",
+            "JBZoo\\CIReportConverter\\Markdown",
             "class",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnit",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\Buffer",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\TeamCity",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\AbstractMetricMap",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnit",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\Buffer",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\TeamCity",
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\AbstractMetricMap",
             "SimpleXMLElement",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpUnitClover",
-            "JBZoo\\CiReportConverter\\Exception",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpMetrics"
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpUnitClover",
+            "JBZoo\\CIReportConverter\\Exception",
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpMetrics"
         ],
         "outgoing_package_dependencies": [
-            "JBZoo\\CiReportConverter\\Formats\\Source\\",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\",
             "JBZoo\\Data\\",
-            "JBZoo\\CiReportConverter\\",
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\",
-            "JBZoo\\CiReportConverter\\Formats\\",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\",
+            "JBZoo\\CIReportConverter\\",
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\",
+            "JBZoo\\CIReportConverter\\Formats\\",
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\",
             "\\",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\"
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\"
         ],
         "incoming_class_dependencies": [
-            "JBZoo\\CiReportConverter\\Commands\\TeamCityStats",
-            "JBZoo\\CiReportConverter\\Commands\\Convert",
-            "JBZoo\\CiReportConverter\\Commands\\ConvertMap"
+            "JBZoo\\CIReportConverter\\Commands\\TeamCityStats",
+            "JBZoo\\CIReportConverter\\Commands\\Convert",
+            "JBZoo\\CIReportConverter\\Commands\\ConvertMap"
         ],
         "incoming_package_dependencies": [
-            "JBZoo\\CiReportConverter\\Commands\\"
+            "JBZoo\\CIReportConverter\\Commands\\"
         ],
         "abstraction": 0.15384615384615385,
         "instability": 0.8571428571428571,
         "dependent_instabilities": {
-            "JBZoo\\CiReportConverter\\Formats\\Source\\": 0.3333333333333333,
+            "JBZoo\\CIReportConverter\\Formats\\Source\\": 0.3333333333333333,
             "JBZoo\\Data\\": 0.4117647058823529,
-            "JBZoo\\CiReportConverter\\": 0.2222222222222222,
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\": 0.2857142857142857,
-            "JBZoo\\CiReportConverter\\Formats\\": 0.3,
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\": 0,
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\": 0.9090909090909091,
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\": 0.6,
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\": 0.6666666666666666
+            "JBZoo\\CIReportConverter\\": 0.2222222222222222,
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\": 0.2857142857142857,
+            "JBZoo\\CIReportConverter\\Formats\\": 0.3,
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\": 0,
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\": 0.9090909090909091,
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\": 0.6,
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\": 0.6666666666666666
         },
         "distance": 0.007770404188863132,
         "normalized_distance": 0.01098901098901095,
         "violations": {},
         "_type": "Hal\\Metric\\PackageMetric"
     },
-    "JBZoo\\CiReportConverter\\Converters\\PsalmJsonConverter": {
-        "name": "JBZoo\\CiReportConverter\\Converters\\PsalmJsonConverter",
+    "JBZoo\\CIReportConverter\\Converters\\PsalmJsonConverter": {
+        "name": "JBZoo\\CIReportConverter\\Converters\\PsalmJsonConverter",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -4237,15 +4237,15 @@
         "ccn": 8,
         "ccnMethodMax": 7,
         "externals": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractConverter",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceCaseOutput",
+            "JBZoo\\CIReportConverter\\Converters\\AbstractConverter",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceCaseOutput",
             "JBZoo\\Data\\Data",
-            "JBZoo\\CiReportConverter\\Helper"
+            "JBZoo\\CIReportConverter\\Helper"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractConverter"
+            "JBZoo\\CIReportConverter\\Converters\\AbstractConverter"
         ],
         "lcom": 2,
         "length": 117,
@@ -4274,7 +4274,7 @@
         "totalStructuralComplexity": 72,
         "totalDataComplexity": 0.86,
         "totalSystemComplexity": 72.86,
-        "package": "JBZoo\\CiReportConverter\\Converters\\",
+        "package": "JBZoo\\CIReportConverter\\Converters\\",
         "pageRank": 0,
         "afferentCoupling": 0,
         "efferentCoupling": 5,
@@ -4282,8 +4282,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Converters\\PhpDependStatsTcConverter": {
-        "name": "JBZoo\\CiReportConverter\\Converters\\PhpDependStatsTcConverter",
+    "JBZoo\\CIReportConverter\\Converters\\PhpDependStatsTcConverter": {
+        "name": "JBZoo\\CIReportConverter\\Converters\\PhpDependStatsTcConverter",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -4306,14 +4306,14 @@
         "ccn": 1,
         "ccnMethodMax": 1,
         "externals": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\Metrics",
-            "JBZoo\\CiReportConverter\\Formats\\Xml",
-            "JBZoo\\CiReportConverter\\Formats\\Xml",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpDepend"
+            "JBZoo\\CIReportConverter\\Converters\\AbstractStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\Metrics",
+            "JBZoo\\CIReportConverter\\Formats\\Xml",
+            "JBZoo\\CIReportConverter\\Formats\\Xml",
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpDepend"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractStatsTcConverter"
+            "JBZoo\\CIReportConverter\\Converters\\AbstractStatsTcConverter"
         ],
         "lcom": 1,
         "length": 16,
@@ -4342,7 +4342,7 @@
         "totalStructuralComplexity": 9,
         "totalDataComplexity": 0.5,
         "totalSystemComplexity": 9.5,
-        "package": "JBZoo\\CiReportConverter\\Converters\\",
+        "package": "JBZoo\\CIReportConverter\\Converters\\",
         "pageRank": 0,
         "afferentCoupling": 0,
         "efferentCoupling": 4,
@@ -4350,8 +4350,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Converters\\PhpLocStatsTcConverter": {
-        "name": "JBZoo\\CiReportConverter\\Converters\\PhpLocStatsTcConverter",
+    "JBZoo\\CIReportConverter\\Converters\\PhpLocStatsTcConverter": {
+        "name": "JBZoo\\CIReportConverter\\Converters\\PhpLocStatsTcConverter",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -4374,12 +4374,12 @@
         "ccn": 1,
         "ccnMethodMax": 1,
         "externals": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\Metrics",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpLoc"
+            "JBZoo\\CIReportConverter\\Converters\\AbstractStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\Metrics",
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpLoc"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractStatsTcConverter"
+            "JBZoo\\CIReportConverter\\Converters\\AbstractStatsTcConverter"
         ],
         "lcom": 1,
         "length": 8,
@@ -4408,7 +4408,7 @@
         "totalStructuralComplexity": 4,
         "totalDataComplexity": 0.67,
         "totalSystemComplexity": 4.67,
-        "package": "JBZoo\\CiReportConverter\\Converters\\",
+        "package": "JBZoo\\CIReportConverter\\Converters\\",
         "pageRank": 0,
         "afferentCoupling": 0,
         "efferentCoupling": 3,
@@ -4416,8 +4416,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Converters\\Map": {
-        "name": "JBZoo\\CiReportConverter\\Converters\\Map",
+    "JBZoo\\CIReportConverter\\Converters\\Map": {
+        "name": "JBZoo\\CIReportConverter\\Converters\\Map",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -4482,13 +4482,13 @@
         "ccn": 12,
         "ccnMethodMax": 4,
         "externals": [
-            "JBZoo\\CiReportConverter\\Markdown",
-            "JBZoo\\CiReportConverter\\Converters\\AbstractConverter",
+            "JBZoo\\CIReportConverter\\Markdown",
+            "JBZoo\\CIReportConverter\\Converters\\AbstractConverter",
             "class",
-            "JBZoo\\CiReportConverter\\Converters\\Exception",
-            "JBZoo\\CiReportConverter\\Converters\\AbstractStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Converters\\Exception",
+            "JBZoo\\CIReportConverter\\Converters\\AbstractStatsTcConverter",
             "class",
-            "JBZoo\\CiReportConverter\\Converters\\Exception"
+            "JBZoo\\CIReportConverter\\Converters\\Exception"
         ],
         "parents": [],
         "lcom": 7,
@@ -4518,7 +4518,7 @@
         "totalStructuralComplexity": 28,
         "totalDataComplexity": 22.67,
         "totalSystemComplexity": 50.67,
-        "package": "JBZoo\\CiReportConverter\\Converters\\",
+        "package": "JBZoo\\CIReportConverter\\Converters\\",
         "pageRank": 0.01,
         "afferentCoupling": 4,
         "efferentCoupling": 5,
@@ -4526,8 +4526,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Converters\\CheckStyleConverter": {
-        "name": "JBZoo\\CiReportConverter\\Converters\\CheckStyleConverter",
+    "JBZoo\\CIReportConverter\\Converters\\CheckStyleConverter": {
+        "name": "JBZoo\\CIReportConverter\\Converters\\CheckStyleConverter",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -4557,17 +4557,17 @@
         "ccn": 10,
         "ccnMethodMax": 10,
         "externals": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractConverter",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Formats\\Xml",
-            "JBZoo\\CiReportConverter\\Formats\\Xml",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceCaseOutput",
+            "JBZoo\\CIReportConverter\\Converters\\AbstractConverter",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Formats\\Xml",
+            "JBZoo\\CIReportConverter\\Formats\\Xml",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceCaseOutput",
             "JBZoo\\Data\\Data",
-            "JBZoo\\CiReportConverter\\Helper"
+            "JBZoo\\CIReportConverter\\Helper"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractConverter"
+            "JBZoo\\CIReportConverter\\Converters\\AbstractConverter"
         ],
         "lcom": 2,
         "length": 125,
@@ -4596,7 +4596,7 @@
         "totalStructuralComplexity": 162,
         "totalDataComplexity": 0.6,
         "totalSystemComplexity": 162.6,
-        "package": "JBZoo\\CiReportConverter\\Converters\\",
+        "package": "JBZoo\\CIReportConverter\\Converters\\",
         "pageRank": 0,
         "afferentCoupling": 0,
         "efferentCoupling": 6,
@@ -4604,8 +4604,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Converters\\JUnitConverter": {
-        "name": "JBZoo\\CiReportConverter\\Converters\\JUnitConverter",
+    "JBZoo\\CIReportConverter\\Converters\\JUnitConverter": {
+        "name": "JBZoo\\CIReportConverter\\Converters\\JUnitConverter",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -4649,20 +4649,20 @@
         "ccn": 31,
         "ccnMethodMax": 17,
         "externals": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractConverter",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Formats\\Xml",
-            "JBZoo\\CiReportConverter\\Formats\\Xml",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Formats\\JUnit\\JUnit",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceCaseOutput"
+            "JBZoo\\CIReportConverter\\Converters\\AbstractConverter",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Formats\\Xml",
+            "JBZoo\\CIReportConverter\\Formats\\Xml",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Formats\\JUnit\\JUnit",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceCaseOutput"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractConverter"
+            "JBZoo\\CIReportConverter\\Converters\\AbstractConverter"
         ],
         "lcom": 2,
         "length": 252,
@@ -4691,7 +4691,7 @@
         "totalStructuralComplexity": 784,
         "totalDataComplexity": 1.47,
         "totalSystemComplexity": 785.47,
-        "package": "JBZoo\\CiReportConverter\\Converters\\",
+        "package": "JBZoo\\CIReportConverter\\Converters\\",
         "pageRank": 0,
         "afferentCoupling": 0,
         "efferentCoupling": 5,
@@ -4699,8 +4699,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Converters\\AbstractStatsTcConverter": {
-        "name": "JBZoo\\CiReportConverter\\Converters\\AbstractStatsTcConverter",
+    "JBZoo\\CIReportConverter\\Converters\\AbstractStatsTcConverter": {
+        "name": "JBZoo\\CIReportConverter\\Converters\\AbstractStatsTcConverter",
         "interface": false,
         "abstract": true,
         "final": false,
@@ -4744,18 +4744,18 @@
         "ccn": 9,
         "ccnMethodMax": 6,
         "externals": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractConverter",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\Buffer",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\TeamCity",
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\Metrics",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\AbstractMetricMap",
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\Metrics",
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\Metrics",
-            "JBZoo\\CiReportConverter\\Converters\\Exception",
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\Metrics"
+            "JBZoo\\CIReportConverter\\Converters\\AbstractConverter",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\Buffer",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\TeamCity",
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\Metrics",
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\AbstractMetricMap",
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\Metrics",
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\Metrics",
+            "JBZoo\\CIReportConverter\\Converters\\Exception",
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\Metrics"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractConverter"
+            "JBZoo\\CIReportConverter\\Converters\\AbstractConverter"
         ],
         "lcom": 3,
         "length": 64,
@@ -4784,7 +4784,7 @@
         "totalStructuralComplexity": 144,
         "totalDataComplexity": 2.71,
         "totalSystemComplexity": 146.71,
-        "package": "JBZoo\\CiReportConverter\\Converters\\",
+        "package": "JBZoo\\CIReportConverter\\Converters\\",
         "pageRank": 0,
         "afferentCoupling": 5,
         "efferentCoupling": 6,
@@ -4792,8 +4792,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Converters\\PhpMdJsonConverter": {
-        "name": "JBZoo\\CiReportConverter\\Converters\\PhpMdJsonConverter",
+    "JBZoo\\CIReportConverter\\Converters\\PhpMdJsonConverter": {
+        "name": "JBZoo\\CIReportConverter\\Converters\\PhpMdJsonConverter",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -4823,15 +4823,15 @@
         "ccn": 18,
         "ccnMethodMax": 10,
         "externals": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractConverter",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceCaseOutput",
+            "JBZoo\\CIReportConverter\\Converters\\AbstractConverter",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceCaseOutput",
             "JBZoo\\Data\\Data",
-            "JBZoo\\CiReportConverter\\Helper"
+            "JBZoo\\CIReportConverter\\Helper"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractConverter"
+            "JBZoo\\CIReportConverter\\Converters\\AbstractConverter"
         ],
         "lcom": 2,
         "length": 183,
@@ -4860,7 +4860,7 @@
         "totalStructuralComplexity": 128,
         "totalDataComplexity": 0.67,
         "totalSystemComplexity": 128.67,
-        "package": "JBZoo\\CiReportConverter\\Converters\\",
+        "package": "JBZoo\\CIReportConverter\\Converters\\",
         "pageRank": 0,
         "afferentCoupling": 0,
         "efferentCoupling": 5,
@@ -4868,8 +4868,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Converters\\AbstractConverter": {
-        "name": "JBZoo\\CiReportConverter\\Converters\\AbstractConverter",
+    "JBZoo\\CIReportConverter\\Converters\\AbstractConverter": {
+        "name": "JBZoo\\CIReportConverter\\Converters\\AbstractConverter",
         "interface": false,
         "abstract": true,
         "final": false,
@@ -4930,10 +4930,10 @@
         "ccn": 10,
         "ccnMethodMax": 5,
         "externals": [
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Converters\\Exception",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceSuite",
-            "JBZoo\\CiReportConverter\\Converters\\Exception"
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Converters\\Exception",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceSuite",
+            "JBZoo\\CIReportConverter\\Converters\\Exception"
         ],
         "parents": [],
         "lcom": 4,
@@ -4963,7 +4963,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 79,
         "totalSystemComplexity": 79,
-        "package": "JBZoo\\CiReportConverter\\Converters\\",
+        "package": "JBZoo\\CIReportConverter\\Converters\\",
         "pageRank": 0,
         "afferentCoupling": 6,
         "efferentCoupling": 2,
@@ -4971,8 +4971,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Converters\\PhpUnitCloverStatsTcConverter": {
-        "name": "JBZoo\\CiReportConverter\\Converters\\PhpUnitCloverStatsTcConverter",
+    "JBZoo\\CIReportConverter\\Converters\\PhpUnitCloverStatsTcConverter": {
+        "name": "JBZoo\\CIReportConverter\\Converters\\PhpUnitCloverStatsTcConverter",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -5002,13 +5002,13 @@
         "ccn": 10,
         "ccnMethodMax": 8,
         "externals": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\Metrics",
+            "JBZoo\\CIReportConverter\\Converters\\AbstractStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\Metrics",
             "SimpleXMLElement",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpUnitClover"
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpUnitClover"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractStatsTcConverter"
+            "JBZoo\\CIReportConverter\\Converters\\AbstractStatsTcConverter"
         ],
         "lcom": 2,
         "length": 158,
@@ -5037,7 +5037,7 @@
         "totalStructuralComplexity": 32,
         "totalDataComplexity": 1.8,
         "totalSystemComplexity": 33.8,
-        "package": "JBZoo\\CiReportConverter\\Converters\\",
+        "package": "JBZoo\\CIReportConverter\\Converters\\",
         "pageRank": 0,
         "afferentCoupling": 0,
         "efferentCoupling": 4,
@@ -5045,8 +5045,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Converters\\Exception": {
-        "name": "JBZoo\\CiReportConverter\\Converters\\Exception",
+    "JBZoo\\CIReportConverter\\Converters\\Exception": {
+        "name": "JBZoo\\CIReportConverter\\Converters\\Exception",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -5061,10 +5061,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Exception"
+            "JBZoo\\CIReportConverter\\Exception"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Exception"
+            "JBZoo\\CIReportConverter\\Exception"
         ],
         "lcom": 0,
         "length": 0,
@@ -5093,7 +5093,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Converters\\",
+        "package": "JBZoo\\CIReportConverter\\Converters\\",
         "pageRank": 0.01,
         "afferentCoupling": 3,
         "efferentCoupling": 1,
@@ -5101,8 +5101,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Converters\\PhpMetricsStatsTcConverter": {
-        "name": "JBZoo\\CiReportConverter\\Converters\\PhpMetricsStatsTcConverter",
+    "JBZoo\\CIReportConverter\\Converters\\PhpMetricsStatsTcConverter": {
+        "name": "JBZoo\\CIReportConverter\\Converters\\PhpMetricsStatsTcConverter",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -5125,14 +5125,14 @@
         "ccn": 1,
         "ccnMethodMax": 1,
         "externals": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractStatsTcConverter",
-            "JBZoo\\CiReportConverter\\Formats\\Metric\\Metrics",
-            "JBZoo\\CiReportConverter\\Formats\\Xml",
-            "JBZoo\\CiReportConverter\\Formats\\Xml",
-            "JBZoo\\CiReportConverter\\Formats\\MetricMaps\\PhpMetrics"
+            "JBZoo\\CIReportConverter\\Converters\\AbstractStatsTcConverter",
+            "JBZoo\\CIReportConverter\\Formats\\Metric\\Metrics",
+            "JBZoo\\CIReportConverter\\Formats\\Xml",
+            "JBZoo\\CIReportConverter\\Formats\\Xml",
+            "JBZoo\\CIReportConverter\\Formats\\MetricMaps\\PhpMetrics"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Converters\\AbstractStatsTcConverter"
+            "JBZoo\\CIReportConverter\\Converters\\AbstractStatsTcConverter"
         ],
         "lcom": 1,
         "length": 16,
@@ -5161,7 +5161,7 @@
         "totalStructuralComplexity": 9,
         "totalDataComplexity": 0.5,
         "totalSystemComplexity": 9.5,
-        "package": "JBZoo\\CiReportConverter\\Converters\\",
+        "package": "JBZoo\\CIReportConverter\\Converters\\",
         "pageRank": 0,
         "afferentCoupling": 0,
         "efferentCoupling": 4,
@@ -5169,8 +5169,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Helper": {
-        "name": "JBZoo\\CiReportConverter\\Helper",
+    "JBZoo\\CIReportConverter\\Helper": {
+        "name": "JBZoo\\CIReportConverter\\Helper",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -5223,7 +5223,7 @@
         "totalStructuralComplexity": 1,
         "totalDataComplexity": 1.5,
         "totalSystemComplexity": 2.5,
-        "package": "JBZoo\\CiReportConverter\\",
+        "package": "JBZoo\\CIReportConverter\\",
         "pageRank": 0,
         "afferentCoupling": 3,
         "efferentCoupling": 1,
@@ -5231,8 +5231,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Commands\\TeamCityStats": {
-        "name": "JBZoo\\CiReportConverter\\Commands\\TeamCityStats",
+    "JBZoo\\CIReportConverter\\Commands\\TeamCityStats": {
+        "name": "JBZoo\\CIReportConverter\\Commands\\TeamCityStats",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -5269,14 +5269,14 @@
         "ccn": 2,
         "ccnMethodMax": 2,
         "externals": [
-            "JBZoo\\CiReportConverter\\Commands\\AbstractCommand",
-            "JBZoo\\CiReportConverter\\Converters\\Map",
-            "JBZoo\\CiReportConverter\\Converters\\Factory",
-            "JBZoo\\CiReportConverter\\Converters\\Map",
-            "JBZoo\\CiReportConverter\\Commands\\Exception"
+            "JBZoo\\CIReportConverter\\Commands\\AbstractCommand",
+            "JBZoo\\CIReportConverter\\Converters\\Map",
+            "JBZoo\\CIReportConverter\\Converters\\Factory",
+            "JBZoo\\CIReportConverter\\Converters\\Map",
+            "JBZoo\\CIReportConverter\\Commands\\Exception"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Commands\\AbstractCommand"
+            "JBZoo\\CIReportConverter\\Commands\\AbstractCommand"
         ],
         "lcom": 2,
         "length": 47,
@@ -5305,7 +5305,7 @@
         "totalStructuralComplexity": 300,
         "totalDataComplexity": 0.55,
         "totalSystemComplexity": 300.55,
-        "package": "JBZoo\\CiReportConverter\\Commands\\",
+        "package": "JBZoo\\CIReportConverter\\Commands\\",
         "pageRank": 0,
         "afferentCoupling": 0,
         "efferentCoupling": 4,
@@ -5313,43 +5313,43 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Commands\\": {
-        "name": "JBZoo\\CiReportConverter\\Commands\\",
+    "JBZoo\\CIReportConverter\\Commands\\": {
+        "name": "JBZoo\\CIReportConverter\\Commands\\",
         "classes": [
-            "JBZoo\\CiReportConverter\\Commands\\TeamCityStats",
-            "JBZoo\\CiReportConverter\\Commands\\AbstractCommand",
-            "JBZoo\\CiReportConverter\\Commands\\Exception",
-            "JBZoo\\CiReportConverter\\Commands\\Convert",
-            "JBZoo\\CiReportConverter\\Commands\\ConvertMap"
+            "JBZoo\\CIReportConverter\\Commands\\TeamCityStats",
+            "JBZoo\\CIReportConverter\\Commands\\AbstractCommand",
+            "JBZoo\\CIReportConverter\\Commands\\Exception",
+            "JBZoo\\CIReportConverter\\Commands\\Convert",
+            "JBZoo\\CIReportConverter\\Commands\\ConvertMap"
         ],
         "outgoing_class_dependencies": [
-            "JBZoo\\CiReportConverter\\Converters\\Map",
-            "JBZoo\\CiReportConverter\\Converters\\Factory",
+            "JBZoo\\CIReportConverter\\Converters\\Map",
+            "JBZoo\\CIReportConverter\\Converters\\Factory",
             "Symfony\\Component\\Console\\Command\\Command",
             "Symfony\\Component\\Console\\Input\\InputInterface",
             "Symfony\\Component\\Console\\Output\\OutputInterface",
-            "JBZoo\\CiReportConverter\\Exception"
+            "JBZoo\\CIReportConverter\\Exception"
         ],
         "outgoing_package_dependencies": [
-            "JBZoo\\CiReportConverter\\Converters\\",
+            "JBZoo\\CIReportConverter\\Converters\\",
             "Symfony\\Component\\Console\\Command\\",
             "Symfony\\Component\\Console\\Input\\",
             "Symfony\\Component\\Console\\Output\\",
-            "JBZoo\\CiReportConverter\\"
+            "JBZoo\\CIReportConverter\\"
         ],
         "abstraction": 0.2,
         "instability": 1,
         "dependent_instabilities": {
-            "JBZoo\\CiReportConverter\\Converters\\": 0.8571428571428571,
-            "JBZoo\\CiReportConverter\\": 0.2222222222222222
+            "JBZoo\\CIReportConverter\\Converters\\": 0.8571428571428571,
+            "JBZoo\\CIReportConverter\\": 0.2222222222222222
         },
         "distance": 0.14142135623730948,
         "normalized_distance": 0.19999999999999996,
         "violations": {},
         "_type": "Hal\\Metric\\PackageMetric"
     },
-    "JBZoo\\CiReportConverter\\Commands\\AbstractCommand": {
-        "name": "JBZoo\\CiReportConverter\\Commands\\AbstractCommand",
+    "JBZoo\\CIReportConverter\\Commands\\AbstractCommand": {
+        "name": "JBZoo\\CIReportConverter\\Commands\\AbstractCommand",
         "interface": false,
         "abstract": true,
         "final": false,
@@ -5410,7 +5410,7 @@
             "Symfony\\Component\\Console\\Command\\Command",
             "Symfony\\Component\\Console\\Input\\InputInterface",
             "Symfony\\Component\\Console\\Output\\OutputInterface",
-            "JBZoo\\CiReportConverter\\Commands\\Exception"
+            "JBZoo\\CIReportConverter\\Commands\\Exception"
         ],
         "parents": [
             "Symfony\\Component\\Console\\Command\\Command"
@@ -5442,7 +5442,7 @@
         "totalStructuralComplexity": 150,
         "totalDataComplexity": 6.67,
         "totalSystemComplexity": 156.67,
-        "package": "JBZoo\\CiReportConverter\\Commands\\",
+        "package": "JBZoo\\CIReportConverter\\Commands\\",
         "pageRank": 0,
         "afferentCoupling": 3,
         "efferentCoupling": 4,
@@ -5450,8 +5450,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Commands\\Exception": {
-        "name": "JBZoo\\CiReportConverter\\Commands\\Exception",
+    "JBZoo\\CIReportConverter\\Commands\\Exception": {
+        "name": "JBZoo\\CIReportConverter\\Commands\\Exception",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -5466,10 +5466,10 @@
         "ccn": 1,
         "ccnMethodMax": 0,
         "externals": [
-            "JBZoo\\CiReportConverter\\Exception"
+            "JBZoo\\CIReportConverter\\Exception"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Exception"
+            "JBZoo\\CIReportConverter\\Exception"
         ],
         "lcom": 0,
         "length": 0,
@@ -5498,7 +5498,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\Commands\\",
+        "package": "JBZoo\\CIReportConverter\\Commands\\",
         "pageRank": 0,
         "afferentCoupling": 3,
         "efferentCoupling": 1,
@@ -5506,8 +5506,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Commands\\Convert": {
-        "name": "JBZoo\\CiReportConverter\\Commands\\Convert",
+    "JBZoo\\CIReportConverter\\Commands\\Convert": {
+        "name": "JBZoo\\CIReportConverter\\Commands\\Convert",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -5544,14 +5544,14 @@
         "ccn": 2,
         "ccnMethodMax": 2,
         "externals": [
-            "JBZoo\\CiReportConverter\\Commands\\AbstractCommand",
-            "JBZoo\\CiReportConverter\\Converters\\Map",
-            "JBZoo\\CiReportConverter\\Converters\\Factory",
-            "JBZoo\\CiReportConverter\\Converters\\Map",
-            "JBZoo\\CiReportConverter\\Commands\\Exception"
+            "JBZoo\\CIReportConverter\\Commands\\AbstractCommand",
+            "JBZoo\\CIReportConverter\\Converters\\Map",
+            "JBZoo\\CIReportConverter\\Converters\\Factory",
+            "JBZoo\\CIReportConverter\\Converters\\Map",
+            "JBZoo\\CIReportConverter\\Commands\\Exception"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Commands\\AbstractCommand"
+            "JBZoo\\CIReportConverter\\Commands\\AbstractCommand"
         ],
         "lcom": 2,
         "length": 73,
@@ -5580,7 +5580,7 @@
         "totalStructuralComplexity": 300,
         "totalDataComplexity": 0.64,
         "totalSystemComplexity": 300.64,
-        "package": "JBZoo\\CiReportConverter\\Commands\\",
+        "package": "JBZoo\\CIReportConverter\\Commands\\",
         "pageRank": 0,
         "afferentCoupling": 0,
         "efferentCoupling": 4,
@@ -5588,8 +5588,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Commands\\ConvertMap": {
-        "name": "JBZoo\\CiReportConverter\\Commands\\ConvertMap",
+    "JBZoo\\CIReportConverter\\Commands\\ConvertMap": {
+        "name": "JBZoo\\CIReportConverter\\Commands\\ConvertMap",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -5619,11 +5619,11 @@
         "ccn": 1,
         "ccnMethodMax": 1,
         "externals": [
-            "JBZoo\\CiReportConverter\\Commands\\AbstractCommand",
-            "JBZoo\\CiReportConverter\\Converters\\Map"
+            "JBZoo\\CIReportConverter\\Commands\\AbstractCommand",
+            "JBZoo\\CIReportConverter\\Converters\\Map"
         ],
         "parents": [
-            "JBZoo\\CiReportConverter\\Commands\\AbstractCommand"
+            "JBZoo\\CIReportConverter\\Commands\\AbstractCommand"
         ],
         "lcom": 2,
         "length": 6,
@@ -5652,7 +5652,7 @@
         "totalStructuralComplexity": 32,
         "totalDataComplexity": 0.4,
         "totalSystemComplexity": 32.4,
-        "package": "JBZoo\\CiReportConverter\\Commands\\",
+        "package": "JBZoo\\CIReportConverter\\Commands\\",
         "pageRank": 0,
         "afferentCoupling": 0,
         "efferentCoupling": 2,
@@ -5660,8 +5660,8 @@
         "violations": {},
         "_type": "Hal\\Metric\\ClassMetric"
     },
-    "JBZoo\\CiReportConverter\\Exception": {
-        "name": "JBZoo\\CiReportConverter\\Exception",
+    "JBZoo\\CIReportConverter\\Exception": {
+        "name": "JBZoo\\CIReportConverter\\Exception",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -5708,7 +5708,7 @@
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 0,
         "totalSystemComplexity": 0,
-        "package": "JBZoo\\CiReportConverter\\",
+        "package": "JBZoo\\CIReportConverter\\",
         "pageRank": 0.04,
         "afferentCoupling": 4,
         "efferentCoupling": 1,
@@ -5876,10 +5876,10 @@
         ],
         "incoming_class_dependencies": [
             "JBZoo\\ComposerDiff\\Comparator",
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\TeamCity",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\Stdout",
-            "JBZoo\\CiReportConverter\\Helper",
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\TeamCity",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\Stdout",
+            "JBZoo\\CIReportConverter\\Helper",
             "JBZoo\\PHPUnit\\CovCatcher",
             "JBZoo\\PHPUnit\\PHPUnit",
             "JBZoo\\ComposerGraph\\CommandBuild",
@@ -5888,10 +5888,10 @@
         ],
         "incoming_package_dependencies": [
             "JBZoo\\ComposerDiff\\",
-            "JBZoo\\CiReportConverter\\Formats\\",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\",
-            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Writers\\",
-            "JBZoo\\CiReportConverter\\",
+            "JBZoo\\CIReportConverter\\Formats\\",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\",
+            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Writers\\",
+            "JBZoo\\CIReportConverter\\",
             "JBZoo\\PHPUnit\\",
             "JBZoo\\ComposerGraph\\Commands\\",
             "JBZoo\\ComposerGraph\\",
@@ -11143,11 +11143,11 @@
         ],
         "incoming_class_dependencies": [
             "JBZoo\\ComposerDiff\\Renders\\AbstractRender",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\SourceCaseOutput",
-            "JBZoo\\CiReportConverter\\Formats\\AbstractNode",
-            "JBZoo\\CiReportConverter\\Converters\\PsalmJsonConverter",
-            "JBZoo\\CiReportConverter\\Converters\\CheckStyleConverter",
-            "JBZoo\\CiReportConverter\\Converters\\PhpMdJsonConverter",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\SourceCaseOutput",
+            "JBZoo\\CIReportConverter\\Formats\\AbstractNode",
+            "JBZoo\\CIReportConverter\\Converters\\PsalmJsonConverter",
+            "JBZoo\\CIReportConverter\\Converters\\CheckStyleConverter",
+            "JBZoo\\CIReportConverter\\Converters\\PhpMdJsonConverter",
             "JBZoo\\Utils\\Filter",
             "JBZoo\\PHPUnit\\CovCatcher",
             "JBZoo\\ComposerGraph\\CommandBuild",
@@ -11155,9 +11155,9 @@
         ],
         "incoming_package_dependencies": [
             "JBZoo\\ComposerDiff\\",
-            "JBZoo\\CiReportConverter\\Formats\\Source\\",
-            "JBZoo\\CiReportConverter\\Formats\\",
-            "JBZoo\\CiReportConverter\\Converters\\",
+            "JBZoo\\CIReportConverter\\Formats\\Source\\",
+            "JBZoo\\CIReportConverter\\Formats\\",
+            "JBZoo\\CIReportConverter\\Converters\\",
             "JBZoo\\Utils\\",
             "JBZoo\\PHPUnit\\",
             "JBZoo\\ComposerGraph\\Commands\\",

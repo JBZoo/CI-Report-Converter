@@ -1,30 +1,23 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\CiReportConverter\Formats\TeamCity;
+namespace JBZoo\CIReportConverter\Formats\TeamCity;
 
-/**
- * Class Helper
- * @package JBZoo\CiReportConverter\Formats\TeamCity
- */
-class Helper
+final class Helper
 {
-    private const TIMESTAMP_FORMAT = 'Y-m-d\TH:i:s.uO';
-
     public const PREDEFINED_METRICS = [
         'ArtifactsSize',
         'VisibleArtifactsSize',
@@ -62,17 +55,14 @@ class Helper
         'SuccessRate',
         'TimeSpentInQueue',
     ];
+    private const TIMESTAMP_FORMAT = 'Y-m-d\TH:i:s.uO';
 
-    /**
-     * @param string $eventName
-     * @param array  $params
-     * @return string
-     */
     public static function printEvent(string $eventName, array $params = []): string
     {
         self::ensureValidJavaId($eventName);
 
         $result = "\n##teamcity[{$eventName}";
+
         foreach ($params as $propertyName => $propertyValue) {
             $escapedValue = self::escapeValue((string)$propertyValue);
             if (\is_int($propertyName)) {
@@ -91,18 +81,16 @@ class Helper
     /**
      * Checks if given value is valid Java ID.
      * Valid Java ID starts with alpha-character and continues with mix of alphanumeric characters and `-`.
-     * @param string $value
      */
     public static function ensureValidJavaId(string $value): void
     {
-        if (!\preg_match('/^[a-z][-a-z0-9]+$/i', $value)) {
+        if (\preg_match('/^[a-z][-a-z0-9]+$/i', $value) === 0) {
             throw new Exception("Value \"{$value}\" is not valid Java ID.");
         }
     }
 
     /**
-     * @param \DateTime|null $datetime Either date with timestamp or `NULL` for now.
-     * @return string
+     * @param null|\DateTime $datetime either date with timestamp or `NULL` for now
      */
     public static function formatTimestamp(?\DateTime $datetime = null): string
     {
@@ -115,13 +103,9 @@ class Helper
         return \substr($formatted, 0, 23) . \substr($formatted, 26);
     }
 
-    /**
-     * @param string|null $value
-     * @return string|null
-     */
     private static function escapeValue(?string $value): ?string
     {
-        if (null === $value) {
+        if ($value === null) {
             return null;
         }
 
@@ -137,17 +121,17 @@ class Helper
         return \preg_replace_callback(
             '/([\'\n\r|[\]])|\\\\u(\d{4})/',
             static function (array $matches) use ($escapeCharacterMap) {
-                if ($matches[1]) {
+                if ($matches[1] !== '') {
                     return $escapeCharacterMap[$matches[1]];
                 }
 
-                if ($matches[2]) {
+                if ($matches[2] !== '') {
                     return '|0x' . $matches[2];
                 }
 
                 throw new Exception('Unexpected match combination.');
             },
-            $value
+            $value,
         );
     }
 }

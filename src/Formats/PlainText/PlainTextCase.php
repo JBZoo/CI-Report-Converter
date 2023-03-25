@@ -1,35 +1,24 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\CiReportConverter\Formats\PlainText;
+namespace JBZoo\CIReportConverter\Formats\PlainText;
 
-use JBZoo\CiReportConverter\Formats\AbstractNode;
+use JBZoo\CIReportConverter\Formats\AbstractNode;
 
-/**
- * Class PlainTextCase
- *
- * @property int|null    $line
- * @property int|null    $column
- * @property string|null $message
- * @property string      $level
- *
- * @package JBZoo\CiReportConverter\Formats\PlainText
- */
-class PlainTextCase extends AbstractNode
+final class PlainTextCase extends AbstractNode
 {
     public const LEVEL_ERROR   = 'Error';
     public const LEVEL_WARNING = 'Warning';
@@ -38,29 +27,20 @@ class PlainTextCase extends AbstractNode
     public const DEFAULT_LEVEL   = self::LEVEL_ERROR;
     public const DEFAULT_MESSAGE = 'Undefined Error Message';
 
-    /**
-     * @var array
-     */
-    protected array $meta = [
-        'name'    => ['string'], // It's relative path to file
-        'level'   => ['string'], // See self::LEVEL_*
-        'line'    => ['int'],
-        'column'  => ['int'],
-        'message' => ['string'],
-    ];
+    // `$this->name` is relative path to file
+    public ?int    $line    = null;
+    public ?int    $column  = null;
+    public ?string $message = null;
+    public string  $level; // See self::LEVEL_*
 
-    /**
-     * PlainTextCase constructor.
-     * @param string|null $name
-     */
     public function __construct(?string $name = null)
     {
         parent::__construct($name);
 
         // Set default values
-        $this->level = self::DEFAULT_LEVEL;
+        $this->level   = self::DEFAULT_LEVEL;
         $this->message = self::DEFAULT_MESSAGE;
-        $this->column = 1;
-        $this->line = 1;
+        $this->column  = 1;
+        $this->line    = 1;
     }
 }

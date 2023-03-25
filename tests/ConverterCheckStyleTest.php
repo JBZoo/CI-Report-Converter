@@ -1,38 +1,32 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
 namespace JBZoo\PHPUnit;
 
-use JBZoo\CiReportConverter\Converters\CheckStyleConverter;
-use JBZoo\CiReportConverter\Converters\JUnitConverter;
+use JBZoo\CIReportConverter\Converters\CheckStyleConverter;
+use JBZoo\CIReportConverter\Converters\JUnitConverter;
 
-/**
- * Class ConverterCheckStyleTest
- *
- * @package JBZoo\PHPUnit
- */
-class ConverterCheckStyleTest extends PHPUnit
+final class ConverterCheckStyleTest extends PHPUnit
 {
-    public function testToInternalPhan()
+    public function testToInternalPhan(): void
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
-        $source = (new CheckStyleConverter())
+        $source     = (new CheckStyleConverter())
             ->setRootPath($pathPrefix)
-            ->toInternal(file_get_contents(Fixtures::PHAN_CHECKSTYLE));
+            ->toInternal(\file_get_contents(Fixtures::PHAN_CHECKSTYLE));
 
         $actual = (new JUnitConverter())->fromInternal($source);
         Aliases::isValidXml($actual);
@@ -46,41 +40,41 @@ class ConverterCheckStyleTest extends PHPUnit
             'line'      => 37,
             'failure'   => [
                 'type'    => 'PhanPossiblyFalseTypeMismatchProperty',
-                'message' => 'Assigning $this-&gt;rootElement of type \\DOMElement|false to property but \\JBZoo\\CiReportConverter\\JUnit\\JUnitXml-&gt;rootElement is \\DOMElement (false is incompatible)',
-                'details' => implode("\n", [
+                'message' => 'Assigning $this-&gt;rootElement of type \\DOMElement|false to property but \\JBZoo\\CIReportConverter\\JUnit\\JUnitXml-&gt;rootElement is \\DOMElement (false is incompatible)',
+                'details' => \implode("\n", [
                     '',
-                    'Assigning $this->rootElement of type \DOMElement|false to property but \JBZoo\CiReportConverter\JUnit\JUnitXml->rootElement is \DOMElement (false is incompatible)',
+                    'Assigning $this->rootElement of type \DOMElement|false to property but \JBZoo\CIReportConverter\JUnit\JUnitXml->rootElement is \DOMElement (false is incompatible)',
                     'Rule     : PhanPossiblyFalseTypeMismatchProperty',
                     'File Path: src/JUnit/JUnitXml.php:37',
                     'Severity : warning',
                     '',
                 ]),
-            ]
+            ],
         ], $source->toArray()['suites'][0]['cases'][0]);
 
         isSame([
-            "_node"   => "SourceSuite",
-            "name"    => "CheckStyle",
-            "tests"   => 7,
-            "failure" => 7
+            '_node'   => 'SourceSuite',
+            'name'    => 'CheckStyle',
+            'tests'   => 7,
+            'failure' => 7,
         ], $source->toArray()['data']);
 
-        isSame(implode("\n", [
+        isSame(\implode("\n", [
             '<?xml version="1.0" encoding="UTF-8"?>',
             '<testsuites>',
             '  <testsuite name="CheckStyle" tests="7" failures="7">',
             '    <testsuite name="src/JUnit/JUnitXml.php" file="src/JUnit/JUnitXml.php" tests="2" failures="2">',
             '      <testcase name="src/JUnit/JUnitXml.php line 37" class="PhanPossiblyFalseTypeMismatchProperty" classname="PhanPossiblyFalseTypeMismatchProperty" file="src/JUnit/JUnitXml.php" line="37">',
-            '        <failure type="PhanPossiblyFalseTypeMismatchProperty" message="Assigning $this-&amp;gt;rootElement of type \DOMElement|false to property but \JBZoo\CiReportConverter\JUnit\JUnitXml-&amp;gt;rootElement is \DOMElement (false is incompatible)">',
-            'Assigning $this-&gt;rootElement of type \DOMElement|false to property but \JBZoo\CiReportConverter\JUnit\JUnitXml-&gt;rootElement is \DOMElement (false is incompatible)',
+            '        <failure type="PhanPossiblyFalseTypeMismatchProperty" message="Assigning $this-&amp;gt;rootElement of type \DOMElement|false to property but \JBZoo\CIReportConverter\JUnit\JUnitXml-&amp;gt;rootElement is \DOMElement (false is incompatible)">',
+            'Assigning $this-&gt;rootElement of type \DOMElement|false to property but \JBZoo\CIReportConverter\JUnit\JUnitXml-&gt;rootElement is \DOMElement (false is incompatible)',
             'Rule     : PhanPossiblyFalseTypeMismatchProperty',
             'File Path: src/JUnit/JUnitXml.php:37',
             'Severity : warning',
             '</failure>',
             '      </testcase>',
             '      <testcase name="src/JUnit/JUnitXml.php line 44" class="PhanPluginCanUseReturnType" classname="PhanPluginCanUseReturnType" file="src/JUnit/JUnitXml.php" line="44">',
-            '        <failure type="PhanPluginCanUseReturnType" message="Can use \JBZoo\CiReportConverter\JUnit\TestSuiteElement as a return type of addTestSuite">',
-            'Can use \JBZoo\CiReportConverter\JUnit\TestSuiteElement as a return type of addTestSuite',
+            '        <failure type="PhanPluginCanUseReturnType" message="Can use \JBZoo\CIReportConverter\JUnit\TestSuiteElement as a return type of addTestSuite">',
+            'Can use \JBZoo\CIReportConverter\JUnit\TestSuiteElement as a return type of addTestSuite',
             'Rule     : PhanPluginCanUseReturnType',
             'File Path: src/JUnit/JUnitXml.php:44',
             'Severity : warning',
@@ -97,8 +91,8 @@ class ConverterCheckStyleTest extends PHPUnit
             '</failure>',
             '      </testcase>',
             '      <testcase name="src/JUnit/TestCaseElement.php line 36" class="PhanPluginSuspiciousParamPositionInternal" classname="PhanPluginSuspiciousParamPositionInternal" file="src/JUnit/TestCaseElement.php" line="36">',
-            '        <failure type="PhanPluginSuspiciousParamPositionInternal" message="Suspicious order for argument name - This is getting passed to parameter #1 (string $name) of \JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute(string $name, string $value)">',
-            'Suspicious order for argument name - This is getting passed to parameter #1 (string $name) of \JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute(string $name, string $value)',
+            '        <failure type="PhanPluginSuspiciousParamPositionInternal" message="Suspicious order for argument name - This is getting passed to parameter #1 (string $name) of \JBZoo\CIReportConverter\JUnit\TestCaseElement::setAttribute(string $name, string $value)">',
+            'Suspicious order for argument name - This is getting passed to parameter #1 (string $name) of \JBZoo\CIReportConverter\JUnit\TestCaseElement::setAttribute(string $name, string $value)',
             'Rule     : PhanPluginSuspiciousParamPositionInternal',
             'File Path: src/JUnit/TestCaseElement.php:36',
             'Severity : warning',
@@ -123,8 +117,8 @@ class ConverterCheckStyleTest extends PHPUnit
             '</failure>',
             '      </testcase>',
             '      <testcase name="src/JUnit/TestSuiteElement.php line 37" class="PhanPluginSuspiciousParamPositionInternal" classname="PhanPluginSuspiciousParamPositionInternal" file="src/JUnit/TestSuiteElement.php" line="37">',
-            '        <failure type="PhanPluginSuspiciousParamPositionInternal" message="Suspicious order for argument name - This is getting passed to parameter #1 (string $name) of \JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute(string $name, string $value)">',
-            'Suspicious order for argument name - This is getting passed to parameter #1 (string $name) of \JBZoo\CiReportConverter\JUnit\TestSuiteElement::setAttribute(string $name, string $value)',
+            '        <failure type="PhanPluginSuspiciousParamPositionInternal" message="Suspicious order for argument name - This is getting passed to parameter #1 (string $name) of \JBZoo\CIReportConverter\JUnit\TestSuiteElement::setAttribute(string $name, string $value)">',
+            'Suspicious order for argument name - This is getting passed to parameter #1 (string $name) of \JBZoo\CIReportConverter\JUnit\TestSuiteElement::setAttribute(string $name, string $value)',
             'Rule     : PhanPluginSuspiciousParamPositionInternal',
             'File Path: src/JUnit/TestSuiteElement.php:37',
             'Severity : warning',
@@ -133,21 +127,21 @@ class ConverterCheckStyleTest extends PHPUnit
             '    </testsuite>',
             '  </testsuite>',
             '</testsuites>',
-            ''
+            '',
         ]), $actual);
     }
 
-    public function testToInternalPHPcs()
+    public function testToInternalPHPcs(): void
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
-        $source = (new CheckStyleConverter())
+        $source     = (new CheckStyleConverter())
             ->setRootPath($pathPrefix)
-            ->toInternal(file_get_contents(Fixtures::PHPCS_CODESTYLE));
+            ->toInternal(\file_get_contents(Fixtures::PHPCS_CODESTYLE));
 
         $actual = (new JUnitConverter())->fromInternal($source);
         Aliases::isValidXml($actual);
 
-        isSame(implode("\n", [
+        isSame(\implode("\n", [
             '<?xml version="1.0" encoding="UTF-8"?>',
             '<testsuites>',
             '  <testsuite name="CheckStyle" tests="3" failures="3">',
@@ -183,39 +177,39 @@ class ConverterCheckStyleTest extends PHPUnit
         ]), $actual);
     }
 
-    public function testToInternalPhpStan()
+    public function testToInternalPhpStan(): void
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
-        $source = (new CheckStyleConverter())
+        $source     = (new CheckStyleConverter())
             ->setRootPath($pathPrefix)
-            ->toInternal(file_get_contents(Fixtures::PHPSTAN_CHECKSTYLE));
+            ->toInternal(\file_get_contents(Fixtures::PHPSTAN_CHECKSTYLE));
 
         $actual = (new JUnitConverter())->fromInternal($source);
 
         Aliases::isValidXml($actual);
 
-        isSame(implode("\n", [
+        isSame(\implode("\n", [
             '<?xml version="1.0" encoding="UTF-8"?>',
             '<testsuites>',
             '  <testsuite name="CheckStyle" tests="5" failures="5">',
             '    <testsuite name="src/JUnit/TestCaseElement.php" file="src/JUnit/TestCaseElement.php" tests="4" failures="4">',
             '      <testcase name="src/JUnit/TestCaseElement.php line 34, column 1" class="ERROR" classname="ERROR" file="src/JUnit/TestCaseElement.php" line="34">',
-            '        <failure type="ERROR" message="Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setName() has no return typehint specified.">',
-            'Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setName() has no return typehint specified.',
+            '        <failure type="ERROR" message="Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setName() has no return typehint specified.">',
+            'Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setName() has no return typehint specified.',
             'File Path: src/JUnit/TestCaseElement.php:34',
             'Severity : error',
             '</failure>',
             '      </testcase>',
             '      <testcase name="src/JUnit/TestCaseElement.php line 42, column 1" class="ERROR" classname="ERROR" file="src/JUnit/TestCaseElement.php" line="42">',
-            '        <failure type="ERROR" message="Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setClassname() has no return typehint specified.">',
-            'Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setClassname() has no return typehint specified.',
+            '        <failure type="ERROR" message="Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setClassname() has no return typehint specified.">',
+            'Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setClassname() has no return typehint specified.',
             'File Path: src/JUnit/TestCaseElement.php:42',
             'Severity : error',
             '</failure>',
             '      </testcase>',
             '      <testcase name="src/JUnit/TestCaseElement.php line 52, column 1" class="ERROR" classname="ERROR" file="src/JUnit/TestCaseElement.php" line="52">',
-            '        <failure type="ERROR" message="Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setTime() has no return typehint specified.">',
-            'Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setTime() has no return typehint specified.',
+            '        <failure type="ERROR" message="Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setTime() has no return typehint specified.">',
+            'Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setTime() has no return typehint specified.',
             'File Path: src/JUnit/TestCaseElement.php:52',
             'Severity : error',
             '</failure>',
@@ -243,46 +237,46 @@ class ConverterCheckStyleTest extends PHPUnit
         ]), $actual);
     }
 
-    public function testToInternalPsalm()
+    public function testToInternalPsalm(): void
     {
         $pathPrefix = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter';
-        $source = (new CheckStyleConverter())
+        $source     = (new CheckStyleConverter())
             ->setRootPath($pathPrefix)
-            ->toInternal(file_get_contents(Fixtures::PSALM_CHECKSTYLE));
+            ->toInternal(\file_get_contents(Fixtures::PSALM_CHECKSTYLE));
 
         $actual = (new JUnitConverter())->fromInternal($source);
 
         Aliases::isValidXml($actual);
 
-        isSame(implode("\n", [
+        isSame(\implode("\n", [
             '<?xml version="1.0" encoding="UTF-8"?>',
             '<testsuites>',
             '  <testsuite name="CheckStyle" tests="5" failures="5">',
             '    <testsuite name="src/JUnit/TestCaseElement.php" file="src/JUnit/TestCaseElement.php" tests="5" failures="5">',
             '      <testcase name="src/JUnit/TestCaseElement.php line 34, column 21" class="ERROR" classname="ERROR" file="src/JUnit/TestCaseElement.php" line="34">',
-            '        <failure type="ERROR" message="MissingReturnType: Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setName does not have a return type, expecting void">',
-            'MissingReturnType: Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setName does not have a return type, expecting void',
+            '        <failure type="ERROR" message="MissingReturnType: Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setName does not have a return type, expecting void">',
+            'MissingReturnType: Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setName does not have a return type, expecting void',
             'File Path: src/JUnit/TestCaseElement.php:34:21',
             'Severity : error',
             '</failure>',
             '      </testcase>',
             '      <testcase name="src/JUnit/TestCaseElement.php line 42, column 21" class="ERROR" classname="ERROR" file="src/JUnit/TestCaseElement.php" line="42">',
-            '        <failure type="ERROR" message="MissingReturnType: Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setClassname does not have a return type, expecting void">',
-            'MissingReturnType: Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setClassname does not have a return type, expecting void',
+            '        <failure type="ERROR" message="MissingReturnType: Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setClassname does not have a return type, expecting void">',
+            'MissingReturnType: Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setClassname does not have a return type, expecting void',
             'File Path: src/JUnit/TestCaseElement.php:42:21',
             'Severity : error',
             '</failure>',
             '      </testcase>',
             '      <testcase name="src/JUnit/TestCaseElement.php line 52, column 21" class="ERROR" classname="ERROR" file="src/JUnit/TestCaseElement.php" line="52">',
-            '        <failure type="ERROR" message="MissingReturnType: Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setTime does not have a return type, expecting void">',
-            'MissingReturnType: Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setTime does not have a return type, expecting void',
+            '        <failure type="ERROR" message="MissingReturnType: Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setTime does not have a return type, expecting void">',
+            'MissingReturnType: Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setTime does not have a return type, expecting void',
             'File Path: src/JUnit/TestCaseElement.php:52:21',
             'Severity : error',
             '</failure>',
             '      </testcase>',
             '      <testcase name="src/JUnit/TestCaseElement.php line 54, column 37" class="ERROR" classname="ERROR" file="src/JUnit/TestCaseElement.php" line="54">',
-            '        <failure type="ERROR" message="InvalidScalarArgument: Argument 2 of JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute expects string, float provided">',
-            'InvalidScalarArgument: Argument 2 of JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute expects string, float provided',
+            '        <failure type="ERROR" message="InvalidScalarArgument: Argument 2 of JBZoo\CIReportConverter\JUnit\TestCaseElement::setAttribute expects string, float provided">',
+            'InvalidScalarArgument: Argument 2 of JBZoo\CIReportConverter\JUnit\TestCaseElement::setAttribute expects string, float provided',
             'File Path: src/JUnit/TestCaseElement.php:54:37',
             'Severity : error',
             '</failure>',

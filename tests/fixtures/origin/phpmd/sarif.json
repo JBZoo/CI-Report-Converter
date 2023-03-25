@@ -189,10 +189,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Converters\\Map",
+                            "\\JBZoo\\CIReportConverter\\Converters\\Map",
                             "configure"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Converters\\Map\u0027 in method \u0027configure\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Converters\\Map\u0027 in method \u0027configure\u0027."
                     },
                     "locations": [
                         {
@@ -215,10 +215,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Converters\\Map",
+                            "\\JBZoo\\CIReportConverter\\Converters\\Map",
                             "configure"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Converters\\Map\u0027 in method \u0027configure\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Converters\\Map\u0027 in method \u0027configure\u0027."
                     },
                     "locations": [
                         {
@@ -241,10 +241,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Converters\\Factory",
+                            "\\JBZoo\\CIReportConverter\\Converters\\Factory",
                             "executeAction"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Converters\\Factory\u0027 in method \u0027executeAction\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Converters\\Factory\u0027 in method \u0027executeAction\u0027."
                     },
                     "locations": [
                         {
@@ -267,10 +267,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Converters\\Map",
+                            "\\JBZoo\\CIReportConverter\\Converters\\Map",
                             "getFormat"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Converters\\Map\u0027 in method \u0027getFormat\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Converters\\Map\u0027 in method \u0027getFormat\u0027."
                     },
                     "locations": [
                         {
@@ -293,10 +293,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Converters\\Map",
+                            "\\JBZoo\\CIReportConverter\\Converters\\Map",
                             "executeAction"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Converters\\Map\u0027 in method \u0027executeAction\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Converters\\Map\u0027 in method \u0027executeAction\u0027."
                     },
                     "locations": [
                         {
@@ -319,10 +319,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Converters\\Map",
+                            "\\JBZoo\\CIReportConverter\\Converters\\Map",
                             "configure"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Converters\\Map\u0027 in method \u0027configure\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Converters\\Map\u0027 in method \u0027configure\u0027."
                     },
                     "locations": [
                         {
@@ -345,10 +345,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Converters\\Factory",
+                            "\\JBZoo\\CIReportConverter\\Converters\\Factory",
                             "executeAction"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Converters\\Factory\u0027 in method \u0027executeAction\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Converters\\Factory\u0027 in method \u0027executeAction\u0027."
                     },
                     "locations": [
                         {
@@ -371,10 +371,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Converters\\Map",
+                            "\\JBZoo\\CIReportConverter\\Converters\\Map",
                             "getFormat"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Converters\\Map\u0027 in method \u0027getFormat\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Converters\\Map\u0027 in method \u0027getFormat\u0027."
                     },
                     "locations": [
                         {
@@ -499,10 +499,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "\\JBZoo\\CIReportConverter\\Formats\\Xml",
                             "toInternal"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
                     },
                     "locations": [
                         {
@@ -525,10 +525,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "\\JBZoo\\CIReportConverter\\Formats\\Xml",
                             "toInternal"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
                     },
                     "locations": [
                         {
@@ -551,10 +551,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Helper",
+                            "\\JBZoo\\CIReportConverter\\Helper",
                             "getDetails"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Helper\u0027 in method \u0027getDetails\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Helper\u0027 in method \u0027getDetails\u0027."
                     },
                     "locations": [
                         {
@@ -577,10 +577,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "JBZoo\\CiReportConverter\\Converters\\Map",
+                            "JBZoo\\CIReportConverter\\Converters\\Map",
                             "convertMetric"
                         ],
-                        "text": "Avoid using static access to class \u0027JBZoo\\CiReportConverter\\Converters\\Map\u0027 in method \u0027convertMetric\u0027."
+                        "text": "Avoid using static access to class \u0027JBZoo\\CIReportConverter\\Converters\\Map\u0027 in method \u0027convertMetric\u0027."
                     },
                     "locations": [
                         {
@@ -678,10 +678,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "\\JBZoo\\CIReportConverter\\Formats\\Xml",
                             "toInternal"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
                     },
                     "locations": [
                         {
@@ -704,10 +704,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "\\JBZoo\\CIReportConverter\\Formats\\Xml",
                             "toInternal"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
                     },
                     "locations": [
                         {
@@ -858,10 +858,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "\\JBZoo\\CIReportConverter\\Formats\\Xml",
                             "toInternalMetric"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternalMetric\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Formats\\Xml\u0027 in method \u0027toInternalMetric\u0027."
                     },
                     "locations": [
                         {
@@ -884,10 +884,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "\\JBZoo\\CIReportConverter\\Formats\\Xml",
                             "toInternalMetric"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternalMetric\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Formats\\Xml\u0027 in method \u0027toInternalMetric\u0027."
                     },
                     "locations": [
                         {
@@ -910,10 +910,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Helper",
+                            "\\JBZoo\\CIReportConverter\\Helper",
                             "getDetails"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Helper\u0027 in method \u0027getDetails\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Helper\u0027 in method \u0027getDetails\u0027."
                     },
                     "locations": [
                         {
@@ -936,10 +936,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "\\JBZoo\\CIReportConverter\\Formats\\Xml",
                             "toInternalMetric"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternalMetric\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Formats\\Xml\u0027 in method \u0027toInternalMetric\u0027."
                     },
                     "locations": [
                         {
@@ -962,10 +962,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "\\JBZoo\\CIReportConverter\\Formats\\Xml",
                             "toInternalMetric"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternalMetric\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Formats\\Xml\u0027 in method \u0027toInternalMetric\u0027."
                     },
                     "locations": [
                         {
@@ -988,10 +988,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "\\JBZoo\\CIReportConverter\\Formats\\Xml",
                             "toInternal"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
                     },
                     "locations": [
                         {
@@ -1014,10 +1014,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "\\JBZoo\\CIReportConverter\\Formats\\Xml",
                             "toInternal"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
                     },
                     "locations": [
                         {
@@ -1040,10 +1040,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Helper",
+                            "\\JBZoo\\CIReportConverter\\Helper",
                             "getDetails"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Helper\u0027 in method \u0027getDetails\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Helper\u0027 in method \u0027getDetails\u0027."
                     },
                     "locations": [
                         {
@@ -1092,10 +1092,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "\\JBZoo\\CIReportConverter\\Formats\\Xml",
                             "toInternal"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
                     },
                     "locations": [
                         {
@@ -1118,10 +1118,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "\\JBZoo\\CIReportConverter\\Formats\\Xml",
                             "toInternal"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Formats\\Xml\u0027 in method \u0027toInternal\u0027."
                     },
                     "locations": [
                         {
@@ -1220,10 +1220,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Helper",
+                            "\\JBZoo\\CIReportConverter\\Helper",
                             "getDetails"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Helper\u0027 in method \u0027getDetails\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Helper\u0027 in method \u0027getDetails\u0027."
                     },
                     "locations": [
                         {
@@ -1348,10 +1348,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "JBZoo\\CiReportConverter\\Formats\\GithubActions\\GithubActions",
+                            "JBZoo\\CIReportConverter\\Formats\\GithubActions\\GithubActions",
                             "__toString"
                         ],
-                        "text": "Avoid using static access to class \u0027JBZoo\\CiReportConverter\\Formats\\GithubActions\\GithubActions\u0027 in method \u0027__toString\u0027."
+                        "text": "Avoid using static access to class \u0027JBZoo\\CIReportConverter\\Formats\\GithubActions\\GithubActions\u0027 in method \u0027__toString\u0027."
                     },
                     "locations": [
                         {
@@ -1425,10 +1425,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "\\JBZoo\\CiReportConverter\\Formats\\Xml",
+                            "\\JBZoo\\CIReportConverter\\Formats\\Xml",
                             "getDom"
                         ],
-                        "text": "Avoid using static access to class \u0027\\JBZoo\\CiReportConverter\\Formats\\Xml\u0027 in method \u0027getDom\u0027."
+                        "text": "Avoid using static access to class \u0027\\JBZoo\\CIReportConverter\\Formats\\Xml\u0027 in method \u0027getDom\u0027."
                     },
                     "locations": [
                         {
@@ -1810,10 +1810,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Helper",
+                            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Helper",
                             "write"
                         ],
-                        "text": "Avoid using static access to class \u0027JBZoo\\CiReportConverter\\Formats\\TeamCity\\Helper\u0027 in method \u0027write\u0027."
+                        "text": "Avoid using static access to class \u0027JBZoo\\CIReportConverter\\Formats\\TeamCity\\Helper\u0027 in method \u0027write\u0027."
                     },
                     "locations": [
                         {
@@ -1836,10 +1836,10 @@
                     "message": {
                         "id": "default",
                         "arguments": [
-                            "JBZoo\\CiReportConverter\\Formats\\TeamCity\\Helper",
+                            "JBZoo\\CIReportConverter\\Formats\\TeamCity\\Helper",
                             "write"
                         ],
-                        "text": "Avoid using static access to class \u0027JBZoo\\CiReportConverter\\Formats\\TeamCity\\Helper\u0027 in method \u0027write\u0027."
+                        "text": "Avoid using static access to class \u0027JBZoo\\CIReportConverter\\Formats\\TeamCity\\Helper\u0027 in method \u0027write\u0027."
                     },
                     "locations": [
                         {

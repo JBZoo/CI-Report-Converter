@@ -2,19 +2,19 @@
 <checkstyle>
     <file name="src/JUnit/TestCaseElement.php">
         <error line="34" column="21" severity="error"
-               message="MissingReturnType: Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setName does not have a return type, expecting void"/>
+               message="MissingReturnType: Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setName does not have a return type, expecting void"/>
     </file>
     <file name="src/JUnit/TestCaseElement.php">
         <error line="42" column="21" severity="error"
-               message="MissingReturnType: Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setClassname does not have a return type, expecting void"/>
+               message="MissingReturnType: Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setClassname does not have a return type, expecting void"/>
     </file>
     <file name="src/JUnit/TestCaseElement.php">
         <error line="52" column="21" severity="error"
-               message="MissingReturnType: Method JBZoo\CiReportConverter\JUnit\TestCaseElement::setTime does not have a return type, expecting void"/>
+               message="MissingReturnType: Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setTime does not have a return type, expecting void"/>
     </file>
     <file name="src/JUnit/TestCaseElement.php">
         <error line="54" column="37" severity="error"
-               message="InvalidScalarArgument: Argument 2 of JBZoo\CiReportConverter\JUnit\TestCaseElement::setAttribute expects string, float provided"/>
+               message="InvalidScalarArgument: Argument 2 of JBZoo\CIReportConverter\JUnit\TestCaseElement::setAttribute expects string, float provided"/>
     </file>
     <file name="src/JUnit/TestCaseElement.php">
         <error line="65" column="47" severity="error"

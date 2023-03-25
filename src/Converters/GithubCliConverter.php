@@ -1,45 +1,37 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\CiReportConverter\Converters;
+namespace JBZoo\CIReportConverter\Converters;
 
-use JBZoo\CiReportConverter\Formats\GithubActions\GithubActions;
-use JBZoo\CiReportConverter\Formats\GithubActions\GithubCase;
-use JBZoo\CiReportConverter\Formats\GithubActions\GithubSuite;
-use JBZoo\CiReportConverter\Formats\Source\SourceCase;
-use JBZoo\CiReportConverter\Formats\Source\SourceSuite;
+use JBZoo\CIReportConverter\Formats\GithubActions\GithubActions;
+use JBZoo\CIReportConverter\Formats\GithubActions\GithubCase;
+use JBZoo\CIReportConverter\Formats\GithubActions\GithubSuite;
+use JBZoo\CIReportConverter\Formats\Source\SourceCase;
+use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 
-/**
- * Class GithubCliConverter
- * @package JBZoo\CiReportConverter\Converters
- */
-class GithubCliConverter extends AbstractConverter
+final class GithubCliConverter extends AbstractConverter
 {
     public const TYPE = 'github-cli';
     public const NAME = 'GitHub Actions - CLI';
 
-    /**
-     * @inheritDoc
-     */
     public function fromInternal(SourceSuite $sourceSuite): string
     {
         $ghActions = new GithubActions();
 
-        if ($this->rootSuiteName) {
+        if ($this->rootSuiteName !== '' && $this->rootSuiteName !== null) {
             $this->renderSuite($sourceSuite, $ghActions->addSuite($this->rootSuiteName));
         } else {
             $this->renderSuite($sourceSuite, $ghActions);
@@ -49,7 +41,6 @@ class GithubCliConverter extends AbstractConverter
     }
 
     /**
-     * @param SourceSuite               $sourceSuite
      * @param GithubActions|GithubSuite $ghActions
      */
     private function renderSuite(SourceSuite $sourceSuite, $ghActions): void
@@ -64,33 +55,32 @@ class GithubCliConverter extends AbstractConverter
     }
 
     /**
-     * @param SourceCase                $sourceCase
      * @param GithubActions|GithubSuite $ghActions
      */
     private function renderTestCase(SourceCase $sourceCase, $ghActions): void
     {
-        if (null !== $sourceCase->stdOut) {
+        if ($sourceCase->stdOut !== null) {
             $level = GithubCase::LEVEL_ERROR;
-        } elseif (null !== $sourceCase->errOut) {
+        } elseif ($sourceCase->errOut !== null) {
             $level = GithubCase::LEVEL_ERROR;
-        } elseif (null !== $sourceCase->failure) {
+        } elseif ($sourceCase->failure !== null) {
             $level = GithubCase::LEVEL_ERROR;
-        } elseif (null !== $sourceCase->error) {
+        } elseif ($sourceCase->error !== null) {
             $level = GithubCase::LEVEL_ERROR;
-        } elseif (null !== $sourceCase->warning) {
+        } elseif ($sourceCase->warning !== null) {
             $level = GithubCase::LEVEL_WARNING;
-        } elseif (null !== $sourceCase->skipped) {
+        } elseif ($sourceCase->skipped !== null) {
             $level = GithubCase::LEVEL_DEBUG;
         } else {
             $level = GithubCase::LEVEL_ERROR;
         }
 
         $message = $sourceCase->getMessage();
-        if ($message) {
-            $case = $ghActions->addCase($this->cleanFilepath($sourceCase->file ?: ''));
-            $case->line = $sourceCase->line;
-            $case->column = $sourceCase->column;
-            $case->level = $level;
+        if ($message !== '' && $message !== null) {
+            $case          = $ghActions->addCase($this->cleanFilepath($sourceCase->file));
+            $case->line    = $sourceCase->line;
+            $case->column  = $sourceCase->column;
+            $case->level   = $level;
             $case->message = $this->cleanFilepath($message);
         }
     }

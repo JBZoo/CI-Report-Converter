@@ -8,15 +8,15 @@
             "errors"   : 12,
             "messages" : [
                 {
-                    "message"   : "Method JBZoo\\CiReportConverter\\JUnit\\TestCaseElement::setName() has no return typehint specified.",
+                    "message"   : "Method JBZoo\\CIReportConverter\\JUnit\\TestCaseElement::setName() has no return typehint specified.",
                     "line"      : 34,
                     "ignorable" : true
                 }, {
-                    "message"   : "Method JBZoo\\CiReportConverter\\JUnit\\TestCaseElement::setClassname() has no return typehint specified.",
+                    "message"   : "Method JBZoo\\CIReportConverter\\JUnit\\TestCaseElement::setClassname() has no return typehint specified.",
                     "line"      : 42,
                     "ignorable" : true
                 }, {
-                    "message"   : "Method JBZoo\\CiReportConverter\\JUnit\\TestCaseElement::setTime() has no return typehint specified.",
+                    "message"   : "Method JBZoo\\CIReportConverter\\JUnit\\TestCaseElement::setTime() has no return typehint specified.",
                     "line"      : 52,
                     "ignorable" : true
                 }, {
@@ -33,7 +33,7 @@
                     "line"      : 88,
                     "ignorable" : true
                 }, {
-                    "message"   : "Method JBZoo\\CiReportConverter\\JUnit\\TestCaseElement::incrementFailureCount() has no return typehint specified.",
+                    "message"   : "Method JBZoo\\CIReportConverter\\JUnit\\TestCaseElement::incrementFailureCount() has no return typehint specified.",
                     "line"      : 106,
                     "ignorable" : true
                 }, {
@@ -45,7 +45,7 @@
                     "line"      : 111,
                     "ignorable" : true
                 }, {
-                    "message"   : "Method JBZoo\\CiReportConverter\\JUnit\\TestCaseElement::incrementErrorCount() has no return typehint specified.",
+                    "message"   : "Method JBZoo\\CIReportConverter\\JUnit\\TestCaseElement::incrementErrorCount() has no return typehint specified.",
                     "line"      : 118,
                     "ignorable" : true
                 }, {
@@ -63,15 +63,15 @@
             "errors"   : 14,
             "messages" : [
                 {
-                    "message"   : "Method JBZoo\\CiReportConverter\\JUnit\\TestSuiteElement::setName() has no return typehint specified.",
+                    "message"   : "Method JBZoo\\CIReportConverter\\JUnit\\TestSuiteElement::setName() has no return typehint specified.",
                     "line"      : 35,
                     "ignorable" : true
                 }, {
-                    "message"   : "Method JBZoo\\CiReportConverter\\JUnit\\TestSuiteElement::setTimestamp() has no return typehint specified.",
+                    "message"   : "Method JBZoo\\CIReportConverter\\JUnit\\TestSuiteElement::setTimestamp() has no return typehint specified.",
                     "line"      : 45,
                     "ignorable" : true
                 }, {
-                    "message"   : "Method JBZoo\\CiReportConverter\\JUnit\\TestSuiteElement::setTime() has no return typehint specified.",
+                    "message"   : "Method JBZoo\\CIReportConverter\\JUnit\\TestSuiteElement::setTime() has no return typehint specified.",
                     "line"      : 55,
                     "ignorable" : true
                 }, {
@@ -79,11 +79,11 @@
                     "line"      : 57,
                     "ignorable" : true
                 }, {
-                    "message"   : "Method JBZoo\\CiReportConverter\\JUnit\\TestSuiteElement::setHostname() has no return typehint specified.",
+                    "message"   : "Method JBZoo\\CIReportConverter\\JUnit\\TestSuiteElement::setHostname() has no return typehint specified.",
                     "line"      : 65,
                     "ignorable" : true
                 }, {
-                    "message"   : "Method JBZoo\\CiReportConverter\\JUnit\\TestSuiteElement::incrementTestCount() has no return typehint specified.",
+                    "message"   : "Method JBZoo\\CIReportConverter\\JUnit\\TestSuiteElement::incrementTestCount() has no return typehint specified.",
                     "line"      : 86,
                     "ignorable" : true
                 }, {
@@ -95,7 +95,7 @@
                     "line"      : 91,
                     "ignorable" : true
                 }, {
-                    "message"   : "Method JBZoo\\CiReportConverter\\JUnit\\TestSuiteElement::incrementFailureCount() has no return typehint specified.",
+                    "message"   : "Method JBZoo\\CIReportConverter\\JUnit\\TestSuiteElement::incrementFailureCount() has no return typehint specified.",
                     "line"      : 98,
                     "ignorable" : true
                 }, {
@@ -107,7 +107,7 @@
                     "line"      : 103,
                     "ignorable" : true
                 }, {
-                    "message"   : "Method JBZoo\\CiReportConverter\\JUnit\\TestSuiteElement::incrementErrorCount() has no return typehint specified.",
+                    "message"   : "Method JBZoo\\CIReportConverter\\JUnit\\TestSuiteElement::incrementErrorCount() has no return typehint specified.",
                     "line"      : 110,
                     "ignorable" : true
                 }, {

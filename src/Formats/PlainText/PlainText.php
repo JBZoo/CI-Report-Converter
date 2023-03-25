@@ -1,83 +1,52 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\CiReportConverter\Formats\PlainText;
+namespace JBZoo\CIReportConverter\Formats\PlainText;
 
-/**
- * Class PlainText
- * @package JBZoo\CiReportConverter\Formats\PlainText
- */
-class PlainText
+final class PlainText
 {
     public const DEFAULT_NAME = 'Undefined Suite Name';
 
-    /**
-     * @var PlainTextCase[]
-     */
+    /** @var PlainTextCase[] */
     private array $testCases = [];
 
-    /**
-     * @var PlainTextSuite[]
-     */
+    /** @var PlainTextSuite[] */
     private array $testSuites = [];
 
-    /**
-     * @param string|null $name
-     * @return PlainTextCase
-     */
-    public function addCase(?string $name = null): PlainTextCase
-    {
-        $testSuite = new PlainTextCase($name);
-        $this->testCases[] = $testSuite;
-        return $testSuite;
-    }
-
-    /**
-     * @param string|null $name
-     * @return PlainTextSuite
-     */
-    public function addSuite(?string $name = null): PlainTextSuite
-    {
-        $testSuite = new PlainTextSuite($name ?: self::DEFAULT_NAME);
-        $this->testSuites[] = $testSuite;
-        return $testSuite;
-    }
-
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         $tables = [];
 
         foreach ($this->testCases as $testCase) {
             if (!isset($tables[$testCase->name])) {
-                $tables[$testCase->name] = new Table($testCase->name ?: self::DEFAULT_NAME);
+                $tables[$testCase->name] = new PlainTable(
+                    $testCase->name !== '' ? $testCase->name : self::DEFAULT_NAME,
+                );
             }
 
             $tables[$testCase->name]->appendRow([
-                ($testCase->line ?: 1) . ($testCase->column ? ":{$testCase->column}" : ''),
+                ($testCase->line ?? 1) . ($testCase->column > 0 ? ":{$testCase->column}" : ''),
                 $testCase->level,
-                $testCase->message
+                $testCase->message,
             ]);
         }
 
-        $result = \array_reduce($tables, static function (array $acc, Table $table): array {
+        $result = \array_reduce($tables, static function (array $acc, PlainTable $table): array {
             $acc[] = $table->render();
+
             return $acc;
         }, []);
 
@@ -86,5 +55,21 @@ class PlainText
         }
 
         return \trim(\implode("\n", $result)) . "\n";
+    }
+
+    public function addCase(?string $name = null): PlainTextCase
+    {
+        $testSuite         = new PlainTextCase($name);
+        $this->testCases[] = $testSuite;
+
+        return $testSuite;
+    }
+
+    public function addSuite(?string $name = null): PlainTextSuite
+    {
+        $testSuite          = new PlainTextSuite($name ?? self::DEFAULT_NAME);
+        $this->testSuites[] = $testSuite;
+
+        return $testSuite;
     }
 }

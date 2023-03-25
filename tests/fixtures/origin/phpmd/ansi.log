@@ -7,20 +7,20 @@ FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Commands/Abst
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Commands/Convert.php
 ---------------------------------------------------------------------------------------
- 46  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Converters\Map' in method 'configure'.
- 54  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Converters\Map' in method 'configure'.
- 72  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Converters\Factory' in method 'executeAction'.
- 91  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Converters\Map' in method 'getFormat'.
+ 46  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Converters\Map' in method 'configure'.
+ 54  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Converters\Map' in method 'configure'.
+ 72  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Converters\Factory' in method 'executeAction'.
+ 91  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Converters\Map' in method 'getFormat'.
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Commands/ConvertMap.php
 ------------------------------------------------------------------------------------------
- 43  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Converters\Map' in method 'executeAction'.
+ 43  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Converters\Map' in method 'executeAction'.
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Commands/TeamCityStats.php
 ---------------------------------------------------------------------------------------------
- 37  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Converters\Map' in method 'configure'.
- 54  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Converters\Factory' in method 'executeAction'.
- 68  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Converters\Map' in method 'getFormat'.
+ 37  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Converters\Map' in method 'configure'.
+ 54  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Converters\Factory' in method 'executeAction'.
+ 68  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Converters\Map' in method 'getFormat'.
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/AbstractConverter.php
 ---------------------------------------------------------------------------------------------------
@@ -34,13 +34,13 @@ FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/Ab
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/CheckStyleConverter.php
 -----------------------------------------------------------------------------------------------------
- 42  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternal'.
- 43  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternal'.
- 86  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Helper' in method 'getDetails'.
+ 42  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Formats\Xml' in method 'toInternal'.
+ 43  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Formats\Xml' in method 'toInternal'.
+ 86  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Helper' in method 'getDetails'.
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/Factory.php
 -----------------------------------------------------------------------------------------
- 72  | [31mVIOLATION[0m | Avoid using static access to class 'JBZoo\CiReportConverter\Converters\Map' in method 'convertMetric'.
+ 72  | [31mVIOLATION[0m | Avoid using static access to class 'JBZoo\CIReportConverter\Converters\Map' in method 'convertMetric'.
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/GitLabJsonConverter.php
 -----------------------------------------------------------------------------------------------------
@@ -53,8 +53,8 @@ FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/Gi
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/JUnitConverter.php
 ------------------------------------------------------------------------------------------------
- 42  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternal'.
- 43  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternal'.
+ 42  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Formats\Xml' in method 'toInternal'.
+ 43  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Formats\Xml' in method 'toInternal'.
  68  | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '89', column '21').
  68  | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '93', column '21').
  68  | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '97', column '21').
@@ -63,23 +63,23 @@ FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/JU
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpDependStatsTcConverter.php
 -----------------------------------------------------------------------------------------------------------
- 40  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternalMetric'.
- 40  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternalMetric'.
+ 40  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Formats\Xml' in method 'toInternalMetric'.
+ 40  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Formats\Xml' in method 'toInternalMetric'.
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMdJsonConverter.php
 ----------------------------------------------------------------------------------------------------
- 99  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Helper' in method 'getDetails'.
+ 99  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Helper' in method 'getDetails'.
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMetricsStatsTcConverter.php
 ------------------------------------------------------------------------------------------------------------
- 40  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternalMetric'.
- 40  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternalMetric'.
+ 40  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Formats\Xml' in method 'toInternalMetric'.
+ 40  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Formats\Xml' in method 'toInternalMetric'.
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpMndConverter.php
 -------------------------------------------------------------------------------------------------
- 42  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternal'.
- 43  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternal'.
- 109 | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Helper' in method 'getDetails'.
+ 42  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Formats\Xml' in method 'toInternal'.
+ 43  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Formats\Xml' in method 'toInternal'.
+ 109 | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Helper' in method 'getDetails'.
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PhpUnitCloverStatsTcConverter.php
 ---------------------------------------------------------------------------------------------------------------
@@ -87,15 +87,15 @@ FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/Ph
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PmdCpdConverter.php
 -------------------------------------------------------------------------------------------------
- 42  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternal'.
- 42  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'toInternal'.
+ 42  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Formats\Xml' in method 'toInternal'.
+ 42  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Formats\Xml' in method 'toInternal'.
  132 | [31mVIOLATION[0m | Avoid assigning values to variables in if clauses and the like (line '152', column '13').
  157 | [31mVIOLATION[0m | The method getDetails uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/PsalmJsonConverter.php
 ----------------------------------------------------------------------------------------------------
  69  | [31mVIOLATION[0m | The method toInternal uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
- 85  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Helper' in method 'getDetails'.
+ 85  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Helper' in method 'getDetails'.
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Converters/TeamCityTestsConverter.php
 --------------------------------------------------------------------------------------------------------
@@ -109,7 +109,7 @@ FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/Abstr
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/GithubActions/GithubCase.php
 -------------------------------------------------------------------------------------------------------
- 77  | [31mVIOLATION[0m | Avoid using static access to class 'JBZoo\CiReportConverter\Formats\GithubActions\GithubActions' in method '__toString'.
+ 77  | [31mVIOLATION[0m | Avoid using static access to class 'JBZoo\CIReportConverter\Formats\GithubActions\GithubActions' in method '__toString'.
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/CaseOutput/AbstractOutput.php
 --------------------------------------------------------------------------------------------------------------
@@ -118,7 +118,7 @@ FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/JUnit.php
 ------------------------------------------------------------------------------------------
- 49  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CiReportConverter\Formats\Xml' in method 'getDom'.
+ 49  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\CIReportConverter\Formats\Xml' in method 'getDom'.
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/JUnit/JUnitCase.php
 ----------------------------------------------------------------------------------------------
@@ -148,8 +148,8 @@ FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/TeamC
 ------------------------------------------------------------------------------------------------
  69  | [31mVIOLATION[0m | Avoid using static access to class '\JBZoo\Utils\Sys' in method '__construct'.
  71  | [31mVIOLATION[0m | The method __construct uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
- 124 | [31mVIOLATION[0m | Avoid using static access to class 'JBZoo\CiReportConverter\Formats\TeamCity\Helper' in method 'write'.
- 137 | [31mVIOLATION[0m | Avoid using static access to class 'JBZoo\CiReportConverter\Formats\TeamCity\Helper' in method 'write'.
+ 124 | [31mVIOLATION[0m | Avoid using static access to class 'JBZoo\CIReportConverter\Formats\TeamCity\Helper' in method 'write'.
+ 137 | [31mVIOLATION[0m | Avoid using static access to class 'JBZoo\CIReportConverter\Formats\TeamCity\Helper' in method 'write'.
 
 FILE: /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/Formats/TeamCity/Writers/Stdout.php
 ------------------------------------------------------------------------------------------------------

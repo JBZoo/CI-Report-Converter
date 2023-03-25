@@ -1,93 +1,66 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\CiReportConverter\Formats\Source;
+namespace JBZoo\CIReportConverter\Formats\Source;
 
 use JBZoo\Data\Data;
 
 use function JBZoo\Data\data;
 
-/**
- * Class SourceCaseOutput
- * @package JBZoo\CiReportConverter\Formats\Source
- */
-class SourceCaseOutput
+final class SourceCaseOutput
 {
-    /**
-     * @var string|null
-     */
-    public ?string $type = null;
-
-    /**
-     * @var string|null
-     */
+    public ?string $type    = null;
     public ?string $message = null;
-
-    /**
-     * @var string|null
-     */
     public ?string $details = null;
 
-    /**
-     * SourceCaseOutput constructor.
-     * @param string|null $type
-     * @param string|null $message
-     * @param string|null $details
-     */
     public function __construct(?string $type = null, ?string $message = null, ?string $details = null)
     {
-        $this->type = $type;
+        $this->type    = $type;
         $this->message = $message;
         $this->details = $details;
     }
 
-    /**
-     * @return Data
-     */
     public function parseDescription(): Data
     {
         $result = [];
 
-        $text = (string)$this->details;
-        $result['description'] = $text;
-
+        $text  = (string)$this->details;
         $lines = \explode("\n", $text);
         if (\array_key_exists(1, $lines)) {
             $result['message'] = $lines[1];
             unset($lines[0], $lines[1]);
             $result['description'] = ' ' . \ltrim(\implode("\n ", $lines));
         } else {
-            $result['message'] = $lines[0];
+            $result['message']     = $lines[0];
             $result['description'] = null;
         }
 
         if (\strpos($text, '@@ @@') > 0) {
-            $diff = \trim(\explode('@@ @@', $text)[1]);
+            $diff      = \trim(\explode('@@ @@', $text)[1]);
             $diffLines = \explode("\n", $diff);
 
-            $actual = [];
-            $expected = [];
+            $actual      = [];
+            $expected    = [];
             $description = [];
-            $isDiffPart = true;
+            $isDiffPart  = true;
 
             foreach ($diffLines as $diffLine) {
                 $diffLine = \trim($diffLine);
 
-                if (!$diffLine) {
+                if ($diffLine === '') {
                     $isDiffPart = false;
                     continue;
                 }
@@ -106,23 +79,22 @@ class SourceCaseOutput
                 }
             }
 
-            $result['actual'] = \implode("\n", $actual);
-            $result['expected'] = \implode("\n", $expected);
+            $result['actual']      = \implode("\n", $actual);
+            $result['expected']    = \implode("\n", $expected);
             $result['description'] = ' ' . \ltrim(\implode("\n ", $description)) . "\n ";
         }
 
         return data($result);
     }
 
-    /**
-     * @return array
-     */
     public function toArray(): array
     {
-        return [
+        $result = [
             'type'    => $this->type,
             'message' => $this->message,
-            'details' => $this->details
+            'details' => $this->details,
         ];
+
+        return \array_filter($result, static fn ($value) => $value !== null);
     }
 }

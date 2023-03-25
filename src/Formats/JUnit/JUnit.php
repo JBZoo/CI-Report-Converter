@@ -1,49 +1,41 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\CiReportConverter\Formats\JUnit;
+namespace JBZoo\CIReportConverter\Formats\JUnit;
 
-use JBZoo\CiReportConverter\Formats\Xml;
+use JBZoo\CIReportConverter\Formats\Xml;
 
-/**
- * Class JUnit
- * @package JBZoo\CiReportConverter\Formats\JUnit
- */
-class JUnit
+final class JUnit
 {
-    /**
-     * @var JUnitSuite[]
-     */
+    /** @var JUnitSuite[] */
     private array $testSuites = [];
 
-    /**
-     * @param string|null $name
-     * @return JUnitSuite
-     */
+    public function __toString(): string
+    {
+        return (string)$this->getDom()->saveXML();
+    }
+
     public function addSuite(?string $name = null): JUnitSuite
     {
-        $testSuite = new JUnitSuite($name);
+        $testSuite          = new JUnitSuite($name);
         $this->testSuites[] = $testSuite;
+
         return $testSuite;
     }
 
-    /**
-     * @return \DOMDocument
-     */
     public function getDom(): \DOMDocument
     {
         $document = Xml::createDomDocument();
@@ -56,13 +48,5 @@ class JUnit
         }
 
         return $document;
-    }
-
-    /**
-     * @return string
-     */
-    public function __toString(): string
-    {
-        return (string)$this->getDom()->saveXML();
     }
 }

@@ -1,47 +1,30 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\CiReportConverter\Formats\Source;
+namespace JBZoo\CIReportConverter\Formats\Source;
 
-use JBZoo\CiReportConverter\Formats\AbstractNode;
+use JBZoo\CIReportConverter\Formats\AbstractNode;
 
-/**
- * Class FileRef
- * @package JBZoo\CiReportConverter\Formats\Source
- *
- * @property string      $name
- * @property string|null $fullpath
- * @property int|null    $line
- * @property int|null    $column
- */
-class FileRef extends AbstractNode
+final class FileRef extends AbstractNode
 {
-    /**
-     * @var array
-     */
-    protected array $meta = [
-        'name'     => ['string'], // It's relative path to file
-        'fullpath' => ['string'],
-        'line'     => ['int'],
-    ];
+    public string  $name;
+    public ?string $fullpath = null;
+    public ?int    $line     = null;
+    public ?int    $column   = null;
 
-    /**
-     * @return string
-     */
     public function getFullName(): string
     {
         $result = (string)$this->fullpath;
@@ -52,9 +35,6 @@ class FileRef extends AbstractNode
         return $result;
     }
 
-    /**
-     * @return string
-     */
     public function getShortName(): string
     {
         $result = $this->name;

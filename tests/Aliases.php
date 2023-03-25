@@ -1,35 +1,29 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
 namespace JBZoo\PHPUnit;
 
-use JBZoo\CiReportConverter\Formats\Xml;
+use JBZoo\CIReportConverter\Formats\Xml;
 
-/**
- * Class Aliases
- * @package JBZoo\PHPUnit
- */
-class Aliases
+final class Aliases
 {
     /**
      * @param string $xmlString
-     * @param string $xsdFile
      */
-    public static function isValidXml($xmlString, string $xsdFile = Fixtures::XSD_JUNIT)
+    public static function isValidXml($xmlString, string $xsdFile = Fixtures::XSD_JUNIT): void
     {
         isNotEmpty($xmlString);
 
@@ -42,14 +36,10 @@ class Aliases
         }
     }
 
-    /**
-     * @param string $expectedCode
-     * @param string $actualCode
-     */
-    public static function isSameXml(string $expectedCode, string $actualCode)
+    public static function isSameXml(string $expectedCode, string $actualCode): void
     {
         $xmlExpected = Xml::createDomDocument($expectedCode);
-        $xmlActual = Xml::createDomDocument($actualCode);
+        $xmlActual   = Xml::createDomDocument($actualCode);
 
         isSame($xmlExpected->saveXML(), $xmlActual->saveXML());
     }

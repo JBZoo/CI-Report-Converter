@@ -1,34 +1,27 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
-namespace JBZoo\CiReportConverter\Commands;
+namespace JBZoo\CIReportConverter\Commands;
 
-use JBZoo\CiReportConverter\Converters\Map;
+use JBZoo\CIReportConverter\Converters\Map;
 use JBZoo\Cli\Codes;
+use JBZoo\Markdown\Table;
 
-/**
- * Class ConvertMap
- * @package JBZoo\CiReportConverter\Commands
- */
-class ConvertMap extends AbstractCommand
+final class ConvertMap extends AbstractCommand
 {
-    /**
-     * @inheritDoc
-     */
     protected function configure(): void
     {
         $this
@@ -38,12 +31,28 @@ class ConvertMap extends AbstractCommand
         parent::configure();
     }
 
-    /**
-     * @inheritDoc
-     */
     protected function executeAction(): int
     {
-        $this->_(Map::getMarkdownTable());
+        $tableData = Map::getTable();
+        $header    = \array_keys($tableData);
+
+        $rows = [];
+
+        foreach ($tableData as $key => $info) {
+            $rows[$key] = \array_values(\array_map(static fn (bool $value) => $value ? 'Yes' : '-', $info));
+
+            \array_unshift($rows[$key], $key);
+        }
+
+        \array_unshift($header, 'Source/Target');
+
+        $output = (new Table())
+            ->setHeaders($header)
+            ->appendRows($rows)
+            ->render();
+
+        $this->_($output);
+
         return Codes::OK;
     }
 }

@@ -1,16 +1,15 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
@@ -20,45 +19,34 @@ namespace JBZoo\PHPUnit;
 use JBZoo\Utils\Cli;
 use JBZoo\Utils\Sys;
 
-/**
- * Class CliCommandsPharTest
- * @package JBZoo\PHPUnit
- */
-class CliCommandsPharTest extends CliCommandsTest
+final class CliCommandsPharTest extends CliCommandsTest
 {
-    /**
-     * @param string $action
-     * @param array  $params
-     * @return string
-     * @throws \Exception
-     */
     public function task(string $action, array $params = []): string
     {
+        skip('Phar tests are not implemented yet. Waiting for compiled phar');
+
         return $this->taskReal($action, $params);
     }
 
-    /**
-     * @param string $action
-     * @param array  $params
-     * @return string
-     */
     public function taskReal(string $action, array $params = []): string
     {
+        skip('Phar tests are not implemented yet. Waiting for compiled phar');
+
         $rootDir = PROJECT_ROOT;
-        
-        $params['-v'] = null;
+
+        $params['-v']        = null;
         $params['--no-ansi'] = null;
 
         return Cli::exec(
-            implode(' ', [
+            \implode(' ', [
                 Sys::getBinary(),
                 "{$rootDir}/build/ci-report-converter.phar",
                 $action,
-                '2>&1'
+                '2>&1',
             ]),
             $params,
             $rootDir,
-            false
+            false,
         );
     }
 }

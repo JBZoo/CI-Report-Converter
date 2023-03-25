@@ -1,7 +1,7 @@
 [
     {
-        "description": "Found 24 cloned lines in 3 files (34 tokens):\n- src\/Helper.php:16-40\n- src\/Helper1.php:17-41\n- src\/Helper2.php:18-42\n\nCode Fragment:\n```\ndeclare(strict_types=1);\n\nnamespace JBZoo\\CiReportConverter;\n\nuse JBZoo\\Utils\\Str;\n\n\/**\n * Class Helper\n * @package JBZoo\\CiReportConverter\n *\/\nclass Helper\n{\n    \/**\n     * @param array $data\n     * @return string|null\n     *\/\n    public static function descAsList(array $data): ?string\n    {\n        $result = Str::listToDescription($data, true);\n        if (null === $result) {\n            return null;\n        }\n\n        return \"\\n{$result}\";\n\n```",
-        "fingerprint": "bdb6af15462990297d3b73e27a491c6877c71feb763062953dda7429b9e439d0",
+        "description": "Found 24 cloned lines in 3 files (34 tokens):\n- src\/Helper.php:16-40\n- src\/Helper1.php:17-41\n- src\/Helper2.php:18-42\n\nCode Fragment:\n```\ndeclare(strict_types=1);\n\nnamespace JBZoo\\CIReportConverter;\n\nuse JBZoo\\Utils\\Str;\n\n\/**\n * Class Helper\n * @package JBZoo\\CIReportConverter\n *\/\nclass Helper\n{\n    \/**\n     * @param array $data\n     * @return string|null\n     *\/\n    public static function descAsList(array $data): ?string\n    {\n        $result = Str::listToDescription($data, true);\n        if (null === $result) {\n            return null;\n        }\n\n        return \"\\n{$result}\";\n\n```",
+        "fingerprint": "0dca3390b2a17a8b7f53ce826ab67cbb4a580a1f41dfe55a12287a37c0f47891",
         "severity": "major",
         "location": {
             "path": "src\/Helper.php",

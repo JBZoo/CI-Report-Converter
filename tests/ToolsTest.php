@@ -1,33 +1,28 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
 namespace JBZoo\PHPUnit;
 
-use JBZoo\CiReportConverter\Formats\JUnit\JUnit;
-use JBZoo\CiReportConverter\Formats\Xml;
-use JBZoo\CiReportConverter\Helper;
+use JBZoo\CIReportConverter\Formats\JUnit\JUnit;
+use JBZoo\CIReportConverter\Formats\Xml;
+use JBZoo\CIReportConverter\Helper;
 
-/**
- * Class ToolsTest
- * @package JBZoo\PHPUnit
- */
-class ToolsTest extends PHPUnit
+final class ToolsTest extends PHPUnit
 {
-    public function testDescAsList()
+    public function testDescAsList(): void
     {
         $result = Helper::descAsList([
             '0'              => 'QWERTY',
@@ -38,7 +33,7 @@ class ToolsTest extends PHPUnit
             'qweqwerty 1234' => '',
         ]);
 
-        isSame(implode("\n", [
+        isSame(\implode("\n", [
             '',
             'QWERTY',
             'QWERTY123',
@@ -49,55 +44,55 @@ class ToolsTest extends PHPUnit
         ]), $result);
     }
 
-    public function testCheckstyleSchema()
+    public function testCheckstyleSchema(): void
     {
-        $xmlFiles = glob(realpath(Fixtures::ROOT) . '/**/**/checkstyle.xml');
+        $xmlFiles = \glob(\realpath(Fixtures::ROOT) . '/**/**/checkstyle.xml');
 
         foreach ($xmlFiles as $junitXmlFile) {
-            Aliases::isValidXml(file_get_contents($junitXmlFile), Fixtures::XSD_CHECKSTYLE);
+            Aliases::isValidXml(\file_get_contents($junitXmlFile), Fixtures::XSD_CHECKSTYLE);
         }
     }
 
-    public function testPmdSchema()
+    public function testPmdSchema(): void
     {
-        $xmlFiles = glob(realpath(Fixtures::ROOT) . '/**/**/pmd.xml');
+        $xmlFiles = \glob(\realpath(Fixtures::ROOT) . '/**/**/pmd.xml');
 
         foreach ($xmlFiles as $xmlFile) {
-            Aliases::isValidXml(file_get_contents($xmlFile), Fixtures::XSD_PMD);
+            Aliases::isValidXml(\file_get_contents($xmlFile), Fixtures::XSD_PMD);
         }
     }
 
-    public function testJUnitSchema()
+    public function testJUnitSchema(): void
     {
-        $xmlFiles = glob(realpath(Fixtures::ROOT) . '/**/**/junit.xml');
+        $xmlFiles = \glob(\realpath(Fixtures::ROOT) . '/**/**/junit.xml');
 
         foreach ($xmlFiles as $xmlFile) {
-            Aliases::isValidXml(file_get_contents($xmlFile));
+            Aliases::isValidXml(\file_get_contents($xmlFile));
         }
     }
 
-    public function testFixturesExists()
+    public function testFixturesExists(): void
     {
         $oClass = new \ReflectionClass(Fixtures::class);
 
         foreach ($oClass->getConstants() as $name => $path) {
-            if (in_array($name, ['ROOT', 'ROOT_ORIG'], true)) {
+            if (\in_array($name, ['ROOT', 'ROOT_ORIG'], true)) {
                 continue;
             }
 
-            isTrue((bool)realpath($path), "{$name} => {$path}");
+            isTrue((bool)\realpath($path), "{$name} => {$path}");
             isFile($path, $name);
         }
     }
 
-    public function testDom2Array()
+    public function testDom2Array(): void
     {
         isSame([
             '_node'     => '#document',
             '_text'     => null,
             '_cdata'    => null,
             '_attrs'    => [],
-            '_children' => []
+            '_children' => [],
         ], Xml::dom2Array(new \DOMDocument()));
 
         isSame([
@@ -111,9 +106,9 @@ class ToolsTest extends PHPUnit
                     '_text'     => null,
                     '_cdata'    => null,
                     '_attrs'    => [],
-                    '_children' => []
-                ]
-            ]
+                    '_children' => [],
+                ],
+            ],
         ], Xml::dom2Array((new JUnit())->getDom()));
 
         isSame([
@@ -129,10 +124,10 @@ class ToolsTest extends PHPUnit
                     '_attrs'    => [],
                     '_children' => [
                         [
-                            '_node'     => 'testsuite',
-                            '_text'     => null,
-                            '_cdata'    => null,
-                            '_attrs'    => [
+                            '_node'  => 'testsuite',
+                            '_text'  => null,
+                            '_cdata' => null,
+                            '_attrs' => [
                                 'name'     => 'Package #1',
                                 'tests'    => '2',
                                 'failures' => '1',
@@ -143,19 +138,18 @@ class ToolsTest extends PHPUnit
                                     '_text'     => null,
                                     '_cdata'    => null,
                                     '_attrs'    => ['name' => 'Test case 1'],
-                                    '_children' =>
+                                    '_children' => [
                                         [
-                                            [
-                                                '_node'     => 'failure',
-                                                '_text'     => null,
-                                                '_cdata'    => null,
-                                                '_attrs'    => [
-                                                    'type'    => 'TypeOfFailure',
-                                                    'message' => 'Message',
-                                                ],
-                                                '_children' => [],
+                                            '_node'  => 'failure',
+                                            '_text'  => null,
+                                            '_cdata' => null,
+                                            '_attrs' => [
+                                                'type'    => 'TypeOfFailure',
+                                                'message' => 'Message',
                                             ],
+                                            '_children' => [],
                                         ],
+                                    ],
                                 ],
                                 [
                                     '_node'     => 'testcase',
@@ -187,10 +181,10 @@ class ToolsTest extends PHPUnit
                                     '_attrs'    => ['name' => 'Test case 3'],
                                     '_children' => [
                                         [
-                                            '_node'     => 'error',
-                                            '_text'     => null,
-                                            '_cdata'    => null,
-                                            '_attrs'    => [
+                                            '_node'  => 'error',
+                                            '_text'  => null,
+                                            '_cdata' => null,
+                                            '_attrs' => [
                                                 'type'    => 'TypeOfError',
                                                 'message' => 'Error message',
                                             ],
@@ -228,9 +222,10 @@ class ToolsTest extends PHPUnit
         ], Xml::dom2Array($this->getXmlFixture()->getDom()));
     }
 
-    public function testArray2Dom()
+    public function testArray2Dom(): void
     {
-        isSame((string)$this->getXmlFixture(),
+        isSame(
+            (string)$this->getXmlFixture(),
             Xml::array2Dom([
                 '_node'     => '#document',
                 '_text'     => null,
@@ -329,7 +324,7 @@ class ToolsTest extends PHPUnit
                         ],
                     ],
                 ],
-            ])->saveXML()
+            ])->saveXML(),
         );
     }
 
@@ -338,7 +333,7 @@ class ToolsTest extends PHPUnit
      */
     public function getXmlFixture()
     {
-        $junit = new JUnit();
+        $junit  = new JUnit();
         $suite1 = $junit->addSuite('Package #1');
         $suite1->addCase('Test case 1')->addFailure('TypeOfFailure', 'Message');
         $suite1->addCase('Test case 2')->addSystemOut('Custom message');
@@ -350,17 +345,17 @@ class ToolsTest extends PHPUnit
         return $junit;
     }
 
-    public function testArrayToXmlComplex()
+    public function testArrayToXmlComplex(): void
     {
-        $xmlExamples = glob(realpath(Fixtures::ROOT) . '/**/**/*.xml');
+        $xmlExamples = \glob(\realpath(Fixtures::ROOT) . '/**/**/*.xml');
 
         foreach ($xmlExamples as $xmlFile) {
-            $originalXml = new \DOMDocument();
+            $originalXml                     = new \DOMDocument();
             $originalXml->preserveWhiteSpace = false;
-            $originalXml->loadXML(file_get_contents($xmlFile));
+            $originalXml->loadXML(\file_get_contents($xmlFile));
             $originalXml->formatOutput = true;
-            $originalXml->encoding = 'UTF-8';
-            $originalXml->version = '1.0';
+            $originalXml->encoding     = 'UTF-8';
+            $originalXml->version      = '1.0';
 
             $actualXml = Xml::array2Dom(Xml::dom2Array($originalXml));
 

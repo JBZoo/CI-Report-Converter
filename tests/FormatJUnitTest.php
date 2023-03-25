@@ -1,42 +1,36 @@
 <?php
 
 /**
- * JBZoo Toolbox - CI-Report-Converter
+ * JBZoo Toolbox - CI-Report-Converter.
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    CI-Report-Converter
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/CI-Report-Converter
+ * @see        https://github.com/JBZoo/CI-Report-Converter
  */
 
 declare(strict_types=1);
 
 namespace JBZoo\PHPUnit;
 
-use JBZoo\CiReportConverter\Formats\JUnit\JUnit;
+use JBZoo\CIReportConverter\Formats\JUnit\JUnit;
 use PHPUnit\Framework\AssertionFailedError;
 use PHPUnit\Framework\Error\Notice;
 use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\RiskyTestError;
 use PHPUnit\Framework\Warning;
 
-/**
- * Class FormatJUnitTest
- *
- * @package JBZoo\PHPUnit
- */
-class FormatJUnitTest extends PHPUnit
+final class FormatJUnitTest extends PHPUnit
 {
-    public function testJunitBuilder()
+    public function testJunitBuilder(): void
     {
         // Fixtures
-        $class = ExampleTest::class;
-        $className = str_replace('\\', '.', $class);
-        $filename = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php';
+        $class     = ExampleTest::class;
+        $className = \str_replace('\\', '.', $class);
+        $filename  = '/Users/smetdenis/Work/projects/jbzoo-ci-report-converter/tests/ExampleTest.php';
 
         // Build XML
         $junit = new JUnit();
@@ -47,7 +41,7 @@ class FormatJUnitTest extends PHPUnit
 
         $suite->addCase('testInValid')->setFile($filename)->setClass($class)->setClassname($className)
             ->setLine(33)->setAssertions(1)->setTime(0.001824)
-            ->addFailure(ExpectationFailedException::class, null, implode("\n", [
+            ->addFailure(ExpectationFailedException::class, null, \implode("\n", [
                 'JBZoo\PHPUnit\ExampleTest::testInValid',
                 'Failed asserting that false is true.',
                 '',
@@ -64,7 +58,7 @@ class FormatJUnitTest extends PHPUnit
 
         $suite->addCase('testFail')->setFile($filename)->setClass($class)->setClassname($className)
             ->setLine(48)->setAssertions(1)->setTime(0.000142)
-            ->addFailure(AssertionFailedError::class, null, implode("\n", [
+            ->addFailure(AssertionFailedError::class, null, \implode("\n", [
                 'JBZoo\PHPUnit\ExampleTest::testFail',
                 'Some reason to fail',
                 '',
@@ -89,7 +83,7 @@ class FormatJUnitTest extends PHPUnit
 
         $suite->addCase('testNotice')->setFile($filename)->setClass($class)->setClassname($className)
             ->setLine(75)->setAssertions(0)->setTime(0.000370)
-            ->addError(Notice::class, null, implode("\n", [
+            ->addError(Notice::class, null, \implode("\n", [
                 'JBZoo\PHPUnit\ExampleTest::testNotice',
                 'Undefined variable: aaa',
                 '',
@@ -99,7 +93,7 @@ class FormatJUnitTest extends PHPUnit
 
         $suite->addCase('testWarning')->setFile($filename)->setClass($class)->setClassname($className)
             ->setLine(80)->setAssertions(0)->setTime(0.000317)
-            ->addWarning(Warning::class, null, implode("\n", [
+            ->addWarning(Warning::class, null, \implode("\n", [
                 'JBZoo\PHPUnit\ExampleTest::testWarning',
                 'Some warning',
                 '',
@@ -107,11 +101,10 @@ class FormatJUnitTest extends PHPUnit
                 '',
             ]));
 
-
         $anotherSuite = $junit->addSuite($class . '-2')->setFile($filename);
         $anotherSuite->addCase('testException')->setFile($filename)->setClass($class)->setClassname($className)
             ->setLine(85)->setAssertions(0)->setTime(5.000593)
-            ->addError(Exception::class, null, implode("\n", [
+            ->addError(Exception::class, null, \implode("\n", [
                 'JBZoo\PHPUnit\ExampleTest::testException',
                 'JBZoo\PHPUnit\Exception: Exception message',
                 '',
@@ -120,12 +113,11 @@ class FormatJUnitTest extends PHPUnit
             ]))
             ->addSystemOut('Some echo output');
 
-
         // validate
         Aliases::isValidXml((string)$junit);
 
         $expectedXml = new \DOMDocument();
-        $expectedXml->loadXML(file_get_contents(Fixtures::PHPUNIT_JUNIT_SIMPLE));
+        $expectedXml->loadXML(\file_get_contents(Fixtures::PHPUNIT_JUNIT_SIMPLE));
 
         isSame($expectedXml->saveXML(), (string)$junit);
     }
