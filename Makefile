@@ -56,4 +56,5 @@ test-example:
         --teamcity > ./tests/fixtures/phpunit/teamcity-real.txt
 
 build-phar-alt: ##@Project Compile phar file
-	@BOX_REQUIREMENT_CHECKER=0 php ./build/vendor/bin/box compile --allow-composer-check-failure -vvv --working-dir=.
+	$(call download_phar,https://github.com/box-project/box/releases/download/3.16.0/box.phar,"box")
+	@$(BOX_BIN) compile --allow-composer-check-failure -vvv
