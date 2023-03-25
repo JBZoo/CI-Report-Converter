@@ -2693,12 +2693,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JBZoo/Codestyle.git",
-                "reference": "aebb8415074ad631381ca20917d2f29c7394174b"
+                "reference": "4c9d0f3e96c3a0eca8fd5505470f0dfcbd2bab3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBZoo/Codestyle/zipball/aebb8415074ad631381ca20917d2f29c7394174b",
-                "reference": "aebb8415074ad631381ca20917d2f29c7394174b",
+                "url": "https://api.github.com/repos/JBZoo/Codestyle/zipball/4c9d0f3e96c3a0eca8fd5505470f0dfcbd2bab3c",
+                "reference": "4c9d0f3e96c3a0eca8fd5505470f0dfcbd2bab3c",
                 "shasum": ""
             },
             "require": {
@@ -2773,7 +2773,7 @@
                 "issues": "https://github.com/JBZoo/Codestyle/issues",
                 "source": "https://github.com/JBZoo/Codestyle/tree/master"
             },
-            "time": "2023-03-20T07:39:30+00:00"
+            "time": "2023-03-25T22:12:04+00:00"
         },
         {
             "name": "jbzoo/jbdump",
@@ -4105,16 +4105,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.7",
+            "version": "1.10.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "b10ceb526d9607903c5b2673f1fc8775dbe48975"
+                "reference": "0166aef76e066f0dd2adc2799bdadfa1635711e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/b10ceb526d9607903c5b2673f1fc8775dbe48975",
-                "reference": "b10ceb526d9607903c5b2673f1fc8775dbe48975",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/0166aef76e066f0dd2adc2799bdadfa1635711e9",
+                "reference": "0166aef76e066f0dd2adc2799bdadfa1635711e9",
                 "shasum": ""
             },
             "require": {
@@ -4163,7 +4163,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-03-16T15:24:20+00:00"
+            "time": "2023-03-24T10:28:16+00:00"
         },
         {
             "name": "phpstan/phpstan-strict-rules",
@@ -4995,12 +4995,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "598b39ce7ff2650d4b268df6c128cafd28930927"
+                "reference": "ca6f1d633e0a8d82bd27376fe7e27a92500417f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/598b39ce7ff2650d4b268df6c128cafd28930927",
-                "reference": "598b39ce7ff2650d4b268df6c128cafd28930927",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/ca6f1d633e0a8d82bd27376fe7e27a92500417f1",
+                "reference": "ca6f1d633e0a8d82bd27376fe7e27a92500417f1",
                 "shasum": ""
             },
             "conflict": {
@@ -5259,7 +5259,7 @@
                 "modx/revolution": "<= 2.8.3-pl|<2.8",
                 "mojo42/jirafeau": "<4.4",
                 "monolog/monolog": ">=1.8,<1.12",
-                "moodle/moodle": "<4.0.6|= 3.11|>=4.1-beta,<4.1.1",
+                "moodle/moodle": "<4.0.7|>=4.1-beta,<4.1.2|= 3.11",
                 "mustache/mustache": ">=2,<2.14.1",
                 "namshi/jose": "<2.2",
                 "neoan3-apps/template": "<1.1.1",
@@ -5580,7 +5580,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-03-23T20:04:28+00:00"
+            "time": "2023-03-24T00:14:17+00:00"
         },
         {
             "name": "sabre/event",
