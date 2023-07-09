@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c53feaf6135b4ccfd4d635993853f20",
+    "content-hash": "8d16e2766bdcb5b3b7e0863558a4233a",
     "packages": [
         {
             "name": "bluepsyduck/symfony-process-manager",
