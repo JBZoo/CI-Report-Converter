@@ -31,6 +31,7 @@ build-docker:
 update: ##@Project Install/Update all 3rd party dependencies
 	@echo "Composer flags: $(JBZOO_COMPOSER_UPDATE_FLAGS)"
 	@composer update $(JBZOO_COMPOSER_UPDATE_FLAGS)
+	@make build-phar
 
 
 test-all: ##@Project Run all project tests at once
