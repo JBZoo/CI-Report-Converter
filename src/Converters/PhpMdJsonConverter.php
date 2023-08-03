@@ -60,7 +60,7 @@ final class PhpMdJsonConverter extends AbstractConverter
                 $package = $violation['package'] ?? null;
                 if ($package !== null) {
                     $case->class     = $package;
-                    $case->classname = \str_replace('\\', '.', $package);
+                    $case->classname = \str_replace('\\', '.', (string)$package);
                 }
             }
         }
