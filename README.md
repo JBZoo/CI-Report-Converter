@@ -4,38 +4,36 @@
 [![Stable Version](https://poser.pugx.org/jbzoo/ci-report-converter/version)](https://packagist.org/packages/jbzoo/ci-report-converter/)    [![Total Downloads](https://poser.pugx.org/jbzoo/ci-report-converter/downloads)](https://packagist.org/packages/jbzoo/ci-report-converter/stats)    [![Dependents](https://poser.pugx.org/jbzoo/ci-report-converter/dependents)](https://packagist.org/packages/jbzoo/ci-report-converter/dependents?order_by=downloads)    [![GitHub License](https://img.shields.io/github/license/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/blob/master/LICENSE)
 
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!--ts-->
+   * [Why?](#why)
+   * [Installing](#installing)
+   * [Using as GitHub Action](#using-as-github-action)
+      * [Example GitHub Action workflow](#example-github-action-workflow)
+   * [Available Directions](#available-directions)
+   * [Help description in terminal](#help-description-in-terminal)
+      * [Converting](#converting)
+      * [Custom Metrics in TeamCity](#custom-metrics-in-teamcity)
+   * [Examples](#examples)
+      * [JetBrains IDE (IntelliJ IDEA, PhpStorm, WebStorm, etc)](#jetbrains-ide-intellij-idea-phpstorm-webstorm-etc)
+         * [Mess Detector (phpmd-json)](#mess-detector-phpmd-json)
+         * [Magic Number Detector (phpmnd)](#magic-number-detector-phpmnd)
+         * [Copy/Paste Detector (pmd-cpd)](#copypaste-detector-pmd-cpd)
+         * [PHPStan (checkstyle)](#phpstan-checkstyle)
+         * [Psalm (psalm-json)](#psalm-psalm-json)
+         * [Phan (checkstyle)](#phan-checkstyle)
+      * [TeamCity - Style Issue As Failed Unit test](#teamcity---style-issue-as-failed-unit-test)
+      * [TeamCity - Style Issue As Code Inspections](#teamcity---style-issue-as-code-inspections)
+      * [TeamCity - Reported Statistic Values](#teamcity---reported-statistic-values)
+      * [GitHub Actions](#github-actions)
+      * [GitLab CI](#gitlab-ci)
+      * [Use tool as SDK to generate reports](#use-tool-as-sdk-to-generate-reports)
+         * [JUnit.xml (API)](#junitxml-api)
+         * [GitHub Actions (API)](#github-actions-api)
+   * [Contributing](#contributing)
+   * [License](#license)
+   * [See Also](#see-also)
+<!--te-->
 
-- [Why?](#why)
-- [Installing](#installing)
-- [Using as GitHub Action](#using-as-github-action)
-  - [Example GitHub Action workflow](#example-github-action-workflow)
-- [Available Directions](#available-directions)
-- [Help description in terminal](#help-description-in-terminal)
-  - [Converting](#converting)
-  - [Custom Metrics in TeamCity](#custom-metrics-in-teamcity)
-- [Examples](#examples)
-  - [JetBrains IDE (IntelliJ IDEA, PhpStorm, WebStorm, etc)](#jetbrains-ide-intellij-idea-phpstorm-webstorm-etc)
-    - [Mess Detector (phpmd-json)](#mess-detector-phpmd-json)
-    - [Magic Number Detector (phpmnd)](#magic-number-detector-phpmnd)
-    - [Copy/Paste Detector (pmd-cpd)](#copypaste-detector-pmd-cpd)
-    - [PHPStan (checkstyle)](#phpstan-checkstyle)
-    - [Psalm (psalm-json)](#psalm-psalm-json)
-    - [Phan (checkstyle)](#phan-checkstyle)
-  - [TeamCity - Style Issue As Failed Unit test](#teamcity---style-issue-as-failed-unit-test)
-  - [TeamCity - Style Issue As Code Inspections](#teamcity---style-issue-as-code-inspections)
-  - [TeamCity - Reported Statistic Values](#teamcity---reported-statistic-values)
-  - [GitHub Actions](#github-actions)
-  - [GitLab CI](#gitlab-ci)
-  - [Use tool as SDK to generate reports](#use-tool-as-sdk-to-generate-reports)
-    - [JUnit.xml (API)](#junitxml-api)
-    - [GitHub Actions (API)](#github-actions-api)
-- [Contributing](#contributing)
-- [License](#license)
-- [See Also](#see-also)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Why?
 
@@ -213,14 +211,20 @@ Options:
   -N, --suite-name=SUITE-NAME          Set custom name of root group/suite (if it's possible).
   -F, --tc-flow-id[=TC-FLOW-ID]        Custom flowId in TeamCity output. Default value is PID of the tool.
   -Q, --non-zero-code[=NON-ZERO-CODE]  Will exit with the code=1, if any violations are found. [default: "no"]
-      --no-progress                    Disable progress bar animation for logs
+      --no-progress                    Disable progress bar animation for logs. It will be used only for text output format.
       --mute-errors                    Mute any sort of errors. So exit code will be always "0" (if it's possible).
                                        It has major priority then --non-zero-on-error. It's on your own risk!
       --stdout-only                    For any errors messages application will use StdOut instead of StdErr. It's on your own risk!
-      --non-zero-on-error              None-zero exit code on any StdErr message
-      --timestamp                      Show timestamp at the beginning of each message
-      --profile                        Display timing and memory usage information
-      --cron                           Shortcut for crontab. It's basically focused on logs output. It's combination of --timestamp --profile --stdout-only --no-progress -vv
+      --non-zero-on-error              None-zero exit code on any StdErr message.
+      --timestamp                      Show timestamp at the beginning of each message.It will be used only for text output format.
+      --profile                        Display timing and memory usage information.
+      --output-mode=OUTPUT-MODE        Output format. Available options:
+                                       text - Default text output format, userfriendly and easy to read.
+                                       cron - Shortcut for crontab. It's basically focused on human-readable logs output.
+                                       It's combination of --timestamp --profile --stdout-only --no-progress -vv.
+                                       logstash - Logstash output format, for integration with ELK stack.
+                                        [default: "text"]
+      --cron                           Alias for --output-mode=cron. Deprecated!
   -h, --help                           Display help for the given command. When no command is given display help for the list command
   -q, --quiet                          Do not output any message
   -V, --version                        Display this application version
@@ -250,14 +254,20 @@ Options:
   -O, --output-file[=OUTPUT-FILE]  File path with the result report format. If not set or empty, then the STDOUT is used.
   -R, --root-path[=ROOT-PATH]      If option is set, all absolute file paths will be converted to relative once. [default: "."]
   -F, --tc-flow-id[=TC-FLOW-ID]    Custom flowId in TeamCity output. Default value is PID of the tool.
-      --no-progress                Disable progress bar animation for logs
+      --no-progress                Disable progress bar animation for logs. It will be used only for text output format.
       --mute-errors                Mute any sort of errors. So exit code will be always "0" (if it's possible).
                                    It has major priority then --non-zero-on-error. It's on your own risk!
       --stdout-only                For any errors messages application will use StdOut instead of StdErr. It's on your own risk!
-      --non-zero-on-error          None-zero exit code on any StdErr message
-      --timestamp                  Show timestamp at the beginning of each message
-      --profile                    Display timing and memory usage information
-      --cron                       Shortcut for crontab. It's basically focused on logs output. It's combination of --timestamp --profile --stdout-only --no-progress -vv
+      --non-zero-on-error          None-zero exit code on any StdErr message.
+      --timestamp                  Show timestamp at the beginning of each message.It will be used only for text output format.
+      --profile                    Display timing and memory usage information.
+      --output-mode=OUTPUT-MODE    Output format. Available options:
+                                   text - Default text output format, userfriendly and easy to read.
+                                   cron - Shortcut for crontab. It's basically focused on human-readable logs output.
+                                   It's combination of --timestamp --profile --stdout-only --no-progress -vv.
+                                   logstash - Logstash output format, for integration with ELK stack.
+                                    [default: "text"]
+      --cron                       Alias for --output-mode=cron. Deprecated!
   -h, --help                       Display help for the given command. When no command is given display help for the list command
   -q, --quiet                      Do not output any message
   -V, --version                    Display this application version

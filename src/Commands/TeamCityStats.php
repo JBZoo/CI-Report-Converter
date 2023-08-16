@@ -20,6 +20,9 @@ use JBZoo\CIReportConverter\Converters\Map;
 use JBZoo\Cli\Codes;
 use Symfony\Component\Console\Input\InputOption;
 
+/**
+ * @psalm-suppress PropertyNotSetInConstructor
+ */
 final class TeamCityStats extends AbstractCommand
 {
     protected function configure(): void

@@ -18,7 +18,7 @@ namespace JBZoo\CiReportConverter;
 
 use JBZoo\Cli\CliApplication;
 
-const PATH_ROOT = __DIR__;
+\define('PATH_ROOT', __DIR__);
 
 $vendorPaths = [
     __DIR__ . '/../../autoload.php',
