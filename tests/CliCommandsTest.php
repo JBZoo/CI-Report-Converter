@@ -26,9 +26,9 @@ use JBZoo\CIReportConverter\Converters\PhpLocStatsTcConverter;
 use JBZoo\CIReportConverter\Converters\PhpMdJsonConverter;
 use JBZoo\CIReportConverter\Converters\TeamCityInspectionsConverter;
 use JBZoo\CIReportConverter\Converters\TeamCityTestsConverter;
+use JBZoo\Cli\CliApplication;
 use JBZoo\Utils\Cli;
 use JBZoo\Utils\Sys;
-use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\StringInput;
 use Symfony\Component\Console\Output\BufferedOutput;
 
@@ -92,6 +92,7 @@ class CliCommandsTest extends PHPUnit
             'non-zero-on-error',
             'timestamp',
             'cron',
+            'output-mode',
         ];
 
         $expectedInputs   = [];
@@ -367,7 +368,7 @@ class CliCommandsTest extends PHPUnit
 
     public function task(string $action, array $params = []): string
     {
-        $application = new Application();
+        $application = new CliApplication();
         $application->add(new Convert());
         $application->add(new ConvertMap());
         $application->add(new TeamCityStats());

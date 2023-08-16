@@ -20,6 +20,9 @@ use JBZoo\CIReportConverter\Converters\Map;
 use JBZoo\Cli\Codes;
 use JBZoo\Markdown\Table;
 
+/**
+ * @psalm-suppress PropertyNotSetInConstructor
+ */
 final class ConvertMap extends AbstractCommand
 {
     protected function configure(): void

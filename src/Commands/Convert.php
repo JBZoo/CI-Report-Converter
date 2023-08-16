@@ -23,6 +23,9 @@ use JBZoo\Cli\Codes;
 use JBZoo\Cli\OutLvl;
 use Symfony\Component\Console\Input\InputOption;
 
+/**
+ * @psalm-suppress PropertyNotSetInConstructor
+ */
 final class Convert extends AbstractCommand
 {
     protected function configure(): void

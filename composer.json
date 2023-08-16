@@ -48,7 +48,7 @@
 
         "jbzoo/data"      : "^7.0",
         "jbzoo/utils"     : "^7.0",
-        "jbzoo/cli"       : "^7.0",
+        "jbzoo/cli"       : "^7.1.1",
         "jbzoo/markdown"  : "^7.0",
 
         "symfony/console" : ">=5.4"
