@@ -4,38 +4,36 @@
 [![Stable Version](https://poser.pugx.org/jbzoo/ci-report-converter/version)](https://packagist.org/packages/jbzoo/ci-report-converter/)    [![Total Downloads](https://poser.pugx.org/jbzoo/ci-report-converter/downloads)](https://packagist.org/packages/jbzoo/ci-report-converter/stats)    [![Dependents](https://poser.pugx.org/jbzoo/ci-report-converter/dependents)](https://packagist.org/packages/jbzoo/ci-report-converter/dependents?order_by=downloads)    [![GitHub License](https://img.shields.io/github/license/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/blob/master/LICENSE)
 
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!--ts-->
+   * [Why?](#why)
+   * [Installing](#installing)
+   * [Using as GitHub Action](#using-as-github-action)
+      * [Example GitHub Action workflow](#example-github-action-workflow)
+   * [Available Directions](#available-directions)
+   * [Help description in terminal](#help-description-in-terminal)
+      * [Converting](#converting)
+      * [Custom Metrics in TeamCity](#custom-metrics-in-teamcity)
+   * [Examples](#examples)
+      * [JetBrains IDE (IntelliJ IDEA, PhpStorm, WebStorm, etc)](#jetbrains-ide-intellij-idea-phpstorm-webstorm-etc)
+         * [Mess Detector (phpmd-json)](#mess-detector-phpmd-json)
+         * [Magic Number Detector (phpmnd)](#magic-number-detector-phpmnd)
+         * [Copy/Paste Detector (pmd-cpd)](#copypaste-detector-pmd-cpd)
+         * [PHPStan (checkstyle)](#phpstan-checkstyle)
+         * [Psalm (psalm-json)](#psalm-psalm-json)
+         * [Phan (checkstyle)](#phan-checkstyle)
+      * [TeamCity - Style Issue As Failed Unit test](#teamcity---style-issue-as-failed-unit-test)
+      * [TeamCity - Style Issue As Code Inspections](#teamcity---style-issue-as-code-inspections)
+      * [TeamCity - Reported Statistic Values](#teamcity---reported-statistic-values)
+      * [GitHub Actions](#github-actions)
+      * [GitLab CI](#gitlab-ci)
+      * [Use tool as SDK to generate reports](#use-tool-as-sdk-to-generate-reports)
+         * [JUnit.xml (API)](#junitxml-api)
+         * [GitHub Actions (API)](#github-actions-api)
+   * [Contributing](#contributing)
+   * [License](#license)
+   * [See Also](#see-also)
+<!--te-->
 
-- [Why?](#why)
-- [Installing](#installing)
-- [Using as GitHub Action](#using-as-github-action)
-  - [Example GitHub Action workflow](#example-github-action-workflow)
-- [Available Directions](#available-directions)
-- [Help description in terminal](#help-description-in-terminal)
-  - [Converting](#converting)
-  - [Custom Metrics in TeamCity](#custom-metrics-in-teamcity)
-- [Examples](#examples)
-  - [JetBrains IDE (IntelliJ IDEA, PhpStorm, WebStorm, etc)](#jetbrains-ide-intellij-idea-phpstorm-webstorm-etc)
-    - [Mess Detector (phpmd-json)](#mess-detector-phpmd-json)
-    - [Magic Number Detector (phpmnd)](#magic-number-detector-phpmnd)
-    - [Copy/Paste Detector (pmd-cpd)](#copypaste-detector-pmd-cpd)
-    - [PHPStan (checkstyle)](#phpstan-checkstyle)
-    - [Psalm (psalm-json)](#psalm-psalm-json)
-    - [Phan (checkstyle)](#phan-checkstyle)
-  - [TeamCity - Style Issue As Failed Unit test](#teamcity---style-issue-as-failed-unit-test)
-  - [TeamCity - Style Issue As Code Inspections](#teamcity---style-issue-as-code-inspections)
-  - [TeamCity - Reported Statistic Values](#teamcity---reported-statistic-values)
-  - [GitHub Actions](#github-actions)
-  - [GitLab CI](#gitlab-ci)
-  - [Use tool as SDK to generate reports](#use-tool-as-sdk-to-generate-reports)
-    - [JUnit.xml (API)](#junitxml-api)
-    - [GitHub Actions (API)](#github-actions-api)
-- [Contributing](#contributing)
-- [License](#license)
-- [See Also](#see-also)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Why?
 
