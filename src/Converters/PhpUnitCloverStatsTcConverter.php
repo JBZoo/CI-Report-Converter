@@ -33,7 +33,7 @@ final class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
     public function toInternalMetric(string $sourceCode): Metrics
     {
         $cloverXml = new \SimpleXMLElement($sourceCode);
-        $info      = data((array)$cloverXml->project->metrics)->getSelf('@attributes');
+        $info      = data((array)$cloverXml->project?->metrics)->getSelf('@attributes');
 
         $coveredClasses = 0;
 
@@ -41,6 +41,10 @@ final class PhpUnitCloverStatsTcConverter extends AbstractStatsTcConverter
         // @phpstan-ignore-next-line
         if (\is_iterable($nodeClasses)) {
             foreach ($nodeClasses as $class) {
+                if ($class->metrics === null) {
+                    continue;
+                }
+
                 if ((int)$class->metrics['coveredmethods'] === (int)$class->metrics['methods']) {
                     $coveredClasses++;
                 }

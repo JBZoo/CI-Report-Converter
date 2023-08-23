@@ -122,11 +122,12 @@ final class JUnitConverter extends AbstractConverter
             $case->classname  = $attrs->getStringNull('classname');
             $case->assertions = $attrs->getIntNull('assertions');
 
+            /** @var array $output */
             foreach ($xmlAsArray['_children'] as $output) {
                 $typeOfOutput = $output['_node'];
                 $type         = $output['_attrs']['type'] ?? null;
                 $message      = $output['_attrs']['message'] ?? null;
-                $details      = ($output['_cdata'] ?? null) ?? $output['_text'] ?? null;
+                $details      = $output['_cdata'] ?? $output['_text'] ?? null;
 
                 $caseOutput = new SourceCaseOutput($type, $message, $details);
 
