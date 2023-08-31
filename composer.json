@@ -51,7 +51,7 @@
         "jbzoo/cli"       : "^7.1.1",
         "jbzoo/markdown"  : "^7.0",
 
-        "symfony/console" : ">=5.4"
+        "symfony/console" : ">=6.3"
     },
 
     "require-dev"       : {
