@@ -82,7 +82,6 @@ class CliCommandsTest extends PHPUnit
             'no-interaction',
 
             'tc-flow-id',
-            'root-path',
 
             'mute-errors',
             'no-progress',
@@ -149,6 +148,7 @@ class CliCommandsTest extends PHPUnit
             'input-format'  => 'checkstyle',
             'output-file'   => './build/junit.xml',
             'output-format' => 'junit',
+            'root-path'     => './custom/project/path',
             'suite-name'    => 'My Tests',
             'non-zero-code' => 'yes',
         ];

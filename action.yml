@@ -35,6 +35,9 @@ inputs:
     description: 'Target format. Available options: gitlab-json, github-cli, junit, plain, tc-inspections, tc-tests'
     default: github-cli
     required: true
+  root-path:
+      description: If option is set, all absolute file paths will be converted to relative once.
+      default: "."
   suite-name:
     description: 'Set custom name of root group/suite (if it''s possible).'
     required: true
@@ -52,6 +55,8 @@ runs:
     - ${{ inputs.output-format }}
     - '--output-file'
     - ${{ inputs.output-file }}
+    - '--root-path'
+    - ${{ inputs.root-path }}
     - '--suite-name'
     - ${{ inputs.suite-name }}
     - '--non-zero-code'
