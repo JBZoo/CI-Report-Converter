@@ -48,10 +48,10 @@
 
         "jbzoo/data"      : "^7.0",
         "jbzoo/utils"     : "^7.0",
-        "jbzoo/cli"       : "^7.1.1",
+        "jbzoo/cli"       : "^7.1.3",
         "jbzoo/markdown"  : "^7.0",
 
-        "symfony/console" : ">=6.3"
+        "symfony/console" : ">=6.3.4"
     },
 
     "require-dev"       : {
