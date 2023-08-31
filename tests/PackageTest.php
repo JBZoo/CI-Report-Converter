@@ -28,6 +28,9 @@ final class PackageTest extends \JBZoo\Codestyle\PHPUnit\AbstractPackageTest
     protected function setUp(): void
     {
         $this->excludePaths[] = 'assets';
+
+        $this->params['docker_pulls'] = true;
+
         parent::setUp();
     }
 
