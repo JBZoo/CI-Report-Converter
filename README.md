@@ -1,6 +1,6 @@
 # JBZoo / CI-Report-Converter
 
-[![CI](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/main.yml?query=branch%3Amaster)    [![Coverage Status](https://coveralls.io/repos/github/JBZoo/CI-Report-Converter/badge.svg?branch=master)](https://coveralls.io/github/JBZoo/CI-Report-Converter?branch=master)    [![Psalm Coverage](https://shepherd.dev/github/JBZoo/CI-Report-Converter/coverage.svg)](https://shepherd.dev/github/JBZoo/CI-Report-Converter)    [![Psalm Level](https://shepherd.dev/github/JBZoo/CI-Report-Converter/level.svg)](https://shepherd.dev/github/JBZoo/CI-Report-Converter)    [![CodeFactor](https://www.codefactor.io/repository/github/jbzoo/ci-report-converter/badge)](https://www.codefactor.io/repository/github/jbzoo/ci-report-converter/issues)    
+[![CI](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/main.yml?query=branch%3Amaster)    [![Coverage Status](https://coveralls.io/repos/github/JBZoo/CI-Report-Converter/badge.svg?branch=master)](https://coveralls.io/github/JBZoo/CI-Report-Converter?branch=master)    [![Psalm Coverage](https://shepherd.dev/github/JBZoo/CI-Report-Converter/coverage.svg)](https://shepherd.dev/github/JBZoo/CI-Report-Converter)    [![Psalm Level](https://shepherd.dev/github/JBZoo/CI-Report-Converter/level.svg)](https://shepherd.dev/github/JBZoo/CI-Report-Converter)    [![CodeFactor](https://www.codefactor.io/repository/github/jbzoo/ci-report-converter/badge)](https://www.codefactor.io/repository/github/jbzoo/ci-report-converter/issues)
 [![Stable Version](https://poser.pugx.org/jbzoo/ci-report-converter/version)](https://packagist.org/packages/jbzoo/ci-report-converter/)    [![Total Downloads](https://poser.pugx.org/jbzoo/ci-report-converter/downloads)](https://packagist.org/packages/jbzoo/ci-report-converter/stats)    [![Dependents](https://poser.pugx.org/jbzoo/ci-report-converter/dependents)](https://packagist.org/packages/jbzoo/ci-report-converter/dependents?order_by=downloads)    [![GitHub License](https://img.shields.io/github/license/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/blob/master/LICENSE)
 
 
@@ -37,7 +37,7 @@
 
 ## Why?
 
-I believe you are familiar with the huge zoo of various utilities for testing, checking code standards, linters etc. 
+I believe you are familiar with the huge zoo of various utilities for testing, checking code standards, linters etc.
 It's really often the output of utilities is not supported in popular CI systems (TeamCity, GitHub, etc...).
 I guess you are lucky if the utility saves the error report in the `junit.xml` format, because it works pretty fine with almost all modern dev software.
 
@@ -63,7 +63,7 @@ chmod +x ./ci-report-converter.phar
 ./ci-report-converter.phar --help
 
 # OR just pull the Docker Image
-docker run --rm jbzoo/ci-report-converter --help 
+docker run --rm jbzoo/ci-report-converter --help
 ```
 
 
@@ -98,6 +98,10 @@ Action allows you to convert error reports to the [GitHub Annotations format](ht
     # Required: true
     output-format: junit
 
+    # Set a root path and convert absolute file paths to relative.
+    # Default value: '.'
+    root-path: '/my/project/root/directory'
+
     # Set custom name of root group/suite (if it's possible).
     # Required: true
     suite-name: My Tests
@@ -120,10 +124,10 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
-        
+
       - name: PHP Code Sniffer
         run: ./vendor/bin/phpcs --report=checkstyle --standard=PSR12 -q ./src > ./build/phpcs-checkstyle.xml
-        
+
       - name: Converting checkstyle.xml to Github Annotations
         uses: jbzoo/ci-report-converter@master
         with:
@@ -293,8 +297,8 @@ Yeah, I know that the integration is not the cleanest, and it's not super beauti
 Therefore, I prefer to use the same workflow to check the quality of the code as I do with regular PHPUnit tests. It's like "just one click!"
 Also, you will have the awesome bonus - navigating the project and gives the most detailed information about errors.
 
-**The general idea is pretty simple:** 
- - We take almost any utility for testing. 
+**The general idea is pretty simple:**
+ - We take almost any utility for testing.
  - It saves report in the file or outputs error to StdOut as xml/json.
  - CI-Report-Converter changes the report format. It saves result somewhere or just outputs it in StdOut.
  - ???
@@ -357,7 +361,7 @@ class CheckStyleExamplesTest extends TestCase
             ' --input-file=./build/phpcs-report.xml' .  # Using prepared file on previous step as source.
             ' --output-format=tc-tests' .               # Target reporting format. Default value is "tc-tests".
             ' --suite-name=PHPcs' .                     # Define the name of group. See screenshot below.
-            ' --root-path=`pwd`'                        # Specify the project path for pretty printing paths in UI. Default value is `.` (current dir). 
+            ' --root-path=`pwd`'                        # Specify the project path for pretty printing paths in UI. Default value is `.` (current dir).
         );
 
         # The same reason like in `testPipelineWay()`.
@@ -385,7 +389,7 @@ php ./vendor/bin/phpcs --report=checkstyle --standard=PSR12 -q ./src | ./ci-repo
   <summary>Screenshot</summary>
 
   ![PHPmd in JetBrains PhpStorm](.github/assets/phpstorm-phpmd.png)
-  
+
 </details>
 
 ```shell
@@ -400,12 +404,12 @@ php ./vendor/bin/phpmd ./src json cleancode | ./ci-report-converter.phar -Sphpmd
   <summary>Screenshot</summary>
 
   ![PHPmd in JetBrains PhpStorm](.github/assets/phpstorm-phpmnd.png)
-  
+
 </details>
 
 ```shell
 php ./vendor/bin/phpmnd ./src --hint --quiet --xml-output=./build/phpmnd-report.xml
-./ci-report-converter.phar --root-path=./src --input-file=./build/phpmnd-report.xml --input-format=phpmnd 
+./ci-report-converter.phar --root-path=./src --input-file=./build/phpmnd-report.xml --input-format=phpmnd
 ```
 
 
@@ -416,7 +420,7 @@ php ./vendor/bin/phpmnd ./src --hint --quiet --xml-output=./build/phpmnd-report.
   <summary>Screenshot</summary>
 
   ![PHPcpd in JetBrains PhpStorm](.github/assets/phpstorm-phpcpd.png)
-  
+
 </details>
 
 ```shell
@@ -432,7 +436,7 @@ php ./vendor/bin/phpcpd ./src --log-pmd=./build/phpcpd-report.xml
   <summary>Screenshot</summary>
 
   ![PHPstan in JetBrains PhpStorm](.github/assets/phpstorm-phpstan.png)
-  
+
 </details>
 
 ```shell
@@ -445,7 +449,7 @@ php ./vendor/bin/phpstan analyse --error-format=checkstyle --no-progress ./src |
 
 <details>
   <summary>Screenshot</summary>
-  
+
   ![PHP Psalm in JetBrains PhpStorm](.github/assets/phpstorm-psalm.png)
 
 </details>
@@ -530,7 +534,7 @@ Use the option `--output-format=tc-inspections` to convert any style report to u
 
 ### GitHub Actions
 
-You can find a lot of [life examples here](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/gh-action.yml?query=is%3Asuccess+branch%3Amaster) and see [real examples in YML file](.github/workflows/gh-action.yml)   
+You can find a lot of [life examples here](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/gh-action.yml?query=is%3Asuccess+branch%3Amaster) and see [real examples in YML file](.github/workflows/gh-action.yml)
 
 ![GitHub Actions 1](.github/assets/github-actions-1.png)
 
@@ -663,6 +667,6 @@ MIT
 - [Mermaid-PHP](https://github.com/JBZoo/Mermaid-PHP) - Generate diagrams and flowcharts with the help of the mermaid script language.
 - [Utils](https://github.com/JBZoo/Utils) - Collection of useful PHP functions, mini-classes, and snippets for every day.
 - [Image](https://github.com/JBZoo/Image) - Package provides object-oriented way to manipulate with images as simple as possible.
-- [Data](https://github.com/JBZoo/Data) - Extended implementation of ArrayObject. Use files as config/array. 
+- [Data](https://github.com/JBZoo/Data) - Extended implementation of ArrayObject. Use files as config/array.
 - [Retry](https://github.com/JBZoo/Retry) - Tiny PHP library providing retry/backoff functionality with multiple backoff strategies and jitter support.
 - [SimpleTypes](https://github.com/JBZoo/SimpleTypes) - Converting any values and measures - money, weight, exchange rates, length, ...
