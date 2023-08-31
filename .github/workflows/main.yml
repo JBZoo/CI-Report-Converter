@@ -39,7 +39,7 @@ jobs:
         composer_flags: [ "--prefer-lowest", "" ]
     steps:
       - name: Checkout code
-        run: echo ${{ GITHUB_REF_NAME }}
+        run: echo "${{ env.GITHUB_REF_NAME }}"
 
 #
 #      - name: Checkout code
