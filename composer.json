@@ -73,7 +73,8 @@
     "config"            : {
         "optimize-autoloader" : true,
         "allow-plugins"       : {"composer/package-versions-deprecated" : true},
-        "platform-check"      : true
+        "platform-check"      : true,
+        "autoloader-suffix": "jbzoocireportconverter"
     },
 
     "extra"             : {
