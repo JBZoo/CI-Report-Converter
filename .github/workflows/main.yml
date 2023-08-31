@@ -39,7 +39,7 @@ jobs:
         composer_flags: [ "--prefer-lowest", "" ]
     steps:
       - name: Checkout code
-        run: echo "${{ github.base_ref }}"
+        run: echo "${{ github.event.release.tag_name }}"
 
 #
 #      - name: Checkout code
