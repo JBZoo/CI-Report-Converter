@@ -1,6 +1,6 @@
 # JBZoo / CI-Report-Converter
 
-[![CI](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/main.yml?query=branch%3Amaster)    [![Coverage Status](https://coveralls.io/repos/github/JBZoo/CI-Report-Converter/badge.svg?branch=master)](https://coveralls.io/github/JBZoo/CI-Report-Converter?branch=master)    [![Psalm Coverage](https://shepherd.dev/github/JBZoo/CI-Report-Converter/coverage.svg)](https://shepherd.dev/github/JBZoo/CI-Report-Converter)    [![Psalm Level](https://shepherd.dev/github/JBZoo/CI-Report-Converter/level.svg)](https://shepherd.dev/github/JBZoo/CI-Report-Converter)    [![CodeFactor](https://www.codefactor.io/repository/github/jbzoo/ci-report-converter/badge)](https://www.codefactor.io/repository/github/jbzoo/ci-report-converter/issues)
+[![CI](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/JBZoo/CI-Report-Converter/actions/workflows/main.yml?query=branch%3Amaster)    [![Coverage Status](https://coveralls.io/repos/github/JBZoo/CI-Report-Converter/badge.svg?branch=master)](https://coveralls.io/github/JBZoo/CI-Report-Converter?branch=master)    [![Psalm Coverage](https://shepherd.dev/github/JBZoo/CI-Report-Converter/coverage.svg)](https://shepherd.dev/github/JBZoo/CI-Report-Converter)    [![Psalm Level](https://shepherd.dev/github/JBZoo/CI-Report-Converter/level.svg)](https://shepherd.dev/github/JBZoo/CI-Report-Converter)    [![CodeFactor](https://www.codefactor.io/repository/github/jbzoo/ci-report-converter/badge)](https://www.codefactor.io/repository/github/jbzoo/ci-report-converter/issues)    
 [![Stable Version](https://poser.pugx.org/jbzoo/ci-report-converter/version)](https://packagist.org/packages/jbzoo/ci-report-converter/)    [![Total Downloads](https://poser.pugx.org/jbzoo/ci-report-converter/downloads)](https://packagist.org/packages/jbzoo/ci-report-converter/stats)    [![Dependents](https://poser.pugx.org/jbzoo/ci-report-converter/dependents)](https://packagist.org/packages/jbzoo/ci-report-converter/dependents?order_by=downloads)    [![GitHub License](https://img.shields.io/github/license/jbzoo/ci-report-converter)](https://github.com/JBZoo/CI-Report-Converter/blob/master/LICENSE)
 
 
@@ -98,9 +98,9 @@ Action allows you to convert error reports to the [GitHub Annotations format](ht
     # Required: true
     output-format: junit
 
-    # Set a root path and convert absolute file paths to relative.
-    # Default value: '.'
-    root-path: '/my/project/root/directory'
+    # If option is set, all absolute file paths will be converted to relative once.
+    # Default value: .
+    root-path: ./custom/project/path
 
     # Set custom name of root group/suite (if it's possible).
     # Required: true
