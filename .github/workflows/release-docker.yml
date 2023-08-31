@@ -30,4 +30,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: jbzoo/ci-report-converter:latest
+          tags: jbzoo/ci-report-converter:${{ env.GITHUB_REF_NAME }}
