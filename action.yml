@@ -38,6 +38,9 @@ inputs:
   suite-name:
     description: 'Set custom name of root group/suite (if it''s possible).'
     required: true
+  root-path:
+    description: If option is set, all absolute file paths will be converted to relative once.
+    default: "."
 
 runs:
   using: 'docker'
@@ -57,3 +60,5 @@ runs:
     - '--non-zero-code'
     - ${{ inputs.non-zero-code }}
     - '-vvv'
+    - '--root-path'
+    - ${{ inputs.root-path }}
