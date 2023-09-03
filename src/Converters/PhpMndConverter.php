@@ -20,7 +20,7 @@ use JBZoo\CIReportConverter\Formats\Source\SourceCaseOutput;
 use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 use JBZoo\CIReportConverter\Formats\Xml;
 use JBZoo\CIReportConverter\Helper;
-use JBZoo\Data\Data;
+use JBZoo\Data\AbstractData;
 
 use function JBZoo\Data\data;
 
@@ -56,7 +56,7 @@ final class PhpMndConverter extends AbstractConverter
                 $caseName = $line > 0 ? "{$relFilename} line {$line}" : $relFilename;
                 $caseName = $column > 0 ? "{$caseName}, column {$column}" : $caseName;
 
-                $error->set('full_path', self::getFilePoint($absFilename, $line, $column));
+                $error = $error->set('full_path', self::getFilePoint($absFilename, $line, $column));
 
                 $case            = $suite->addTestCase($caseName);
                 $case->file      = $absFilename;
@@ -71,7 +71,7 @@ final class PhpMndConverter extends AbstractConverter
         return $sourceSuite;
     }
 
-    private static function getDetails(Data $data): ?string
+    private static function getDetails(AbstractData $data): ?string
     {
         $snippet     = '';
         $suggestions = [];

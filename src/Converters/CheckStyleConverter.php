@@ -20,7 +20,7 @@ use JBZoo\CIReportConverter\Formats\Source\SourceCaseOutput;
 use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 use JBZoo\CIReportConverter\Formats\Xml;
 use JBZoo\CIReportConverter\Helper;
-use JBZoo\Data\Data;
+use JBZoo\Data\AbstractData;
 
 use function JBZoo\Data\data;
 
@@ -47,8 +47,7 @@ final class CheckStyleConverter extends AbstractConverter
                 $suite->file = $absFilename;
 
                 foreach ($file['_children'] as $errorNode) {
-                    $error = data($errorNode['_attrs']);
-                    $error->set('full_path', $absFilename);
+                    $error = data($errorNode['_attrs'])->set('full_path', $absFilename);
 
                     $line   = $error->getIntNull('line');
                     $column = $error->getIntNull('column');
@@ -71,7 +70,7 @@ final class CheckStyleConverter extends AbstractConverter
         return $sourceSuite;
     }
 
-    private static function getDetails(Data $data): ?string
+    private static function getDetails(AbstractData $data): ?string
     {
         return Helper::descAsList([
             ''          => \htmlspecialchars_decode($data->getString('message')),

@@ -19,7 +19,7 @@ namespace JBZoo\CIReportConverter\Converters;
 use JBZoo\CIReportConverter\Formats\Source\SourceCaseOutput;
 use JBZoo\CIReportConverter\Formats\Source\SourceSuite;
 use JBZoo\CIReportConverter\Helper;
-use JBZoo\Data\Data;
+use JBZoo\Data\AbstractData;
 
 use function JBZoo\Data\data;
 use function JBZoo\Data\json;
@@ -44,8 +44,7 @@ final class PhpMdJsonConverter extends AbstractConverter
             $suite->file = $absFilename;
 
             foreach ($file['violations'] as $violation) {
-                $violation = data($violation);
-                $violation->set('full_path', $absFilename);
+                $violation = data($violation)->set('full_path', $absFilename);
 
                 $case = $suite->addTestCase("{$relFilename} line {$violation['beginLine']}");
 
@@ -68,7 +67,7 @@ final class PhpMdJsonConverter extends AbstractConverter
         return $sourceSuite;
     }
 
-    private static function getDetails(Data $data): ?string
+    private static function getDetails(AbstractData $data): ?string
     {
         $package  = $data->getString('package');
         $class    = $data->getString('class');
