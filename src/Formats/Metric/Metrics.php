@@ -25,7 +25,7 @@ final class Metrics extends AbstractNode
 
     private ?AbstractMetricMap $map = null;
 
-    public function add(string $key, float|int|null $value = null): self
+    public function add(string $key, null|float|int $value = null): self
     {
         $key = \trim($key);
         if ($key === '') {
