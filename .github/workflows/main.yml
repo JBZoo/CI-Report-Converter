@@ -25,6 +25,7 @@ on:
 env:
   COLUMNS: 120
   TERM_PROGRAM: Hyper
+  BOX_PHAR: https://github.com/box-project/box/releases/download/4.5.1/box.phar
 
 jobs:
   phpunit:
