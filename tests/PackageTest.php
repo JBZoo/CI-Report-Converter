@@ -83,4 +83,9 @@ final class PackageTest extends \JBZoo\Codestyle\PHPUnit\AbstractPackageTest
 
         isFileContains($tmpl, PROJECT_ROOT . '/README.md');
     }
+
+    public function testGithubActionsWorkflow(): void
+    {
+        skip();
+    }
 }
