@@ -86,6 +86,6 @@ final class PackageTest extends \JBZoo\Codestyle\PHPUnit\AbstractPackageTest
 
     public function testGithubActionsWorkflow(): void
     {
-        skip();
+        skip('asd');
     }
 }
