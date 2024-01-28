@@ -36,7 +36,7 @@ abstract class AbstractConverter
      */
     public function toInternal(string $source): SourceSuite
     {
-        throw new Exception('Method \"' . __METHOD__ . '\" is not available');
+        throw new Exception('Method "' . __METHOD__ . '" is not available');
     }
 
     /**
@@ -45,7 +45,7 @@ abstract class AbstractConverter
      */
     public function fromInternal(SourceSuite $sourceSuite): string
     {
-        throw new Exception('Method \"' . __METHOD__ . '\" is not available');
+        throw new Exception('Method "' . __METHOD__ . '" is not available');
     }
 
     public function setRootPath(string $rootPath): self
