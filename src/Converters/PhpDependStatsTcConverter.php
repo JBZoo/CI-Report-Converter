@@ -34,7 +34,7 @@ final class PhpDependStatsTcConverter extends AbstractStatsTcConverter
         $attrs = data($xmlAsArray)->findArray('_children.0._attrs');
         unset(
             $attrs['generated'],
-            $attrs['pdepend']
+            $attrs['pdepend'],
         );
 
         return self::buildMetrics($attrs, new PhpDepend());
