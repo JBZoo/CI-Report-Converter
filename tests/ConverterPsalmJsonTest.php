@@ -44,9 +44,9 @@ final class ConverterPsalmJsonTest extends PHPUnit
             'line'      => 34,
             'failure'   => [
                 'type'    => 'MissingReturnType',
-                'message' => 'Method JBZoo\\CIReportConverter\\JUnit\\TestCaseElement::setName does not have a return type, expecting void',
+                'message' => 'Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setName does not have a return type, expecting void',
                 'details' => '
-Method JBZoo\\CIReportConverter\\JUnit\\TestCaseElement::setName does not have a return type, expecting void
+Method JBZoo\CIReportConverter\JUnit\TestCaseElement::setName does not have a return type, expecting void
 Rule       : MissingReturnType
 File Path  : /Users/smetdenis/Work/projects/jbzoo-ci-report-converter/src/JUnit/TestCaseElement.php:34
 Snippet    : `public function setName()`

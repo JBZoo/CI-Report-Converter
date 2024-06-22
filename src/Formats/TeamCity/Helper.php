@@ -119,7 +119,7 @@ final class Helper
         ];
 
         return \preg_replace_callback(
-            '/([\'\n\r|[\]])|\\\\u(\d{4})/',
+            '/([\'\n\r|[\]])|\\\u(\d{4})/',
             static function (array $matches) use ($escapeCharacterMap) {
                 if ($matches[1] !== '') {
                     return $escapeCharacterMap[$matches[1]];
