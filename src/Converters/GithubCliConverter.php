@@ -40,10 +40,7 @@ final class GithubCliConverter extends AbstractConverter
         return (string)$ghActions;
     }
 
-    /**
-     * @param GithubActions|GithubSuite $ghActions
-     */
-    private function renderSuite(SourceSuite $sourceSuite, $ghActions): void
+    private function renderSuite(SourceSuite $sourceSuite, GithubActions|GithubSuite $ghActions): void
     {
         foreach ($sourceSuite->getCases() as $sourceCase) {
             $this->renderTestCase($sourceCase, $ghActions);
@@ -54,10 +51,7 @@ final class GithubCliConverter extends AbstractConverter
         }
     }
 
-    /**
-     * @param GithubActions|GithubSuite $ghActions
-     */
-    private function renderTestCase(SourceCase $sourceCase, $ghActions): void
+    private function renderTestCase(SourceCase $sourceCase, GithubActions|GithubSuite $ghActions): void
     {
         if ($sourceCase->stdOut !== null) {
             $level = GithubCase::LEVEL_ERROR;

@@ -148,8 +148,8 @@ final class Convert extends AbstractCommand
 
         if (!\in_array($format, $validFormats, true)) {
             throw new Exception(
-                "Format \"{$format}\" not found. See the option \"--{$optionName}\".\n" .
-                'Available options: ' . \implode(',', $validFormats),
+                "Format \"{$format}\" not found. See the option \"--{$optionName}\".\n"
+                . 'Available options: ' . \implode(',', $validFormats),
             );
         }
 

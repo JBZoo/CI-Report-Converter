@@ -104,8 +104,6 @@ final class Map
 
     public static function getConverter(string $format, string $direction): AbstractConverter
     {
-        /** @var AbstractConverter $class */
-        /** @var array $options */
         foreach (self::MAP_TESTS as $class => $options) {
             if ($class::TYPE === $format && $options[$direction]) {
                 return new $class();
@@ -113,8 +111,8 @@ final class Map
         }
 
         throw new Exception(
-            "The format \"{$format}\" is not available as \"{$direction}\" direction. " .
-            'See `ci-report-converter convert:map`',
+            "The format \"{$format}\" is not available as \"{$direction}\" direction. "
+            . 'See `ci-report-converter convert:map`',
         );
     }
 

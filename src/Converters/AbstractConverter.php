@@ -114,8 +114,8 @@ abstract class AbstractConverter
 
     protected static function getFilePoint(
         ?string $filename = null,
-        null|int|string $line = 0,
-        null|int|string $column = 0,
+        int|string|null $line = 0,
+        int|string|null $column = 0,
     ): ?string {
         if ($filename === '' || $filename === null) {
             return null;

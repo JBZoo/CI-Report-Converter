@@ -36,10 +36,10 @@ inputs:
     default: github-cli
     required: true
   root-path:
-      description: If option is set, all absolute file paths will be converted to relative once.
-      default: "."
+    description: 'If option is set, all absolute file paths will be converted to relative once.'
+    default: .
   suite-name:
-    description: 'Set custom name of root group/suite (if it''s possible).'
+    description: "Set custom name of root group/suite (if it's possible)."
     required: true
 
 runs:

@@ -92,6 +92,7 @@ class CliCommandsTest extends PHPUnit
             'timestamp',
             'cron',
             'output-mode',
+            'silent',
         ];
 
         $expectedInputs   = [];
@@ -228,10 +229,10 @@ class CliCommandsTest extends PHPUnit
             'input-file'    => Fixtures::PHPMD_JSON,
         ]);
         isContain(
-            "##teamcity[inspectionType id='PHPmd:UnusedFormalParameter' " .
-            "name='UnusedFormalParameter' " .
-            "category='PHPmd' " .
-            "description='Issues found while checking coding standards'",
+            "##teamcity[inspectionType id='PHPmd:UnusedFormalParameter' "
+            . "name='UnusedFormalParameter' "
+            . "category='PHPmd' "
+            . "description='Issues found while checking coding standards'",
             $output,
         );
 
@@ -242,10 +243,10 @@ class CliCommandsTest extends PHPUnit
             'suite-name'    => 'Test Suite',
         ]);
         isContain(
-            "inspectionType id='Test Suite:UnusedFormalParameter' " .
-            "name='UnusedFormalParameter' " .
-            "category='Test Suite' " .
-            "description='Issues found while checking coding standards'",
+            "inspectionType id='Test Suite:UnusedFormalParameter' "
+            . "name='UnusedFormalParameter' "
+            . "category='Test Suite' "
+            . "description='Issues found while checking coding standards'",
             $output,
         );
     }
@@ -269,10 +270,10 @@ class CliCommandsTest extends PHPUnit
         }
 
         isContain(
-            "##teamcity[inspectionType id='PHPmd:UnusedFormalParameter' " .
-            "name='UnusedFormalParameter' " .
-            "category='PHPmd' " .
-            "description='Issues found while checking coding standards'",
+            "##teamcity[inspectionType id='PHPmd:UnusedFormalParameter' "
+            . "name='UnusedFormalParameter' "
+            . "category='PHPmd' "
+            . "description='Issues found while checking coding standards'",
             $output,
         );
     }

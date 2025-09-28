@@ -79,6 +79,8 @@ final class Xml
     /**
      * @param \DOMDocument|\DOMElement|\DOMNode $element
      * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     * @psalm-suppress PossiblyNullPropertyFetch
+     * @phan-suppress PhanPossiblyUndeclaredProperty
      */
     public static function dom2Array(\DOMNode $element): array
     {
@@ -101,12 +103,7 @@ final class Xml
             $children = $element->childNodes;
 
             if ($children->length === 1 && $children->item(0) !== null) {
-                /** @var null|\DOMNode $child */
                 $child = $children->item(0);
-
-                if ($child === null) {
-                    return $result;
-                }
 
                 if ($child->nodeType === \XML_TEXT_NODE) {
                     $result['_text'] = $child->nodeValue;
