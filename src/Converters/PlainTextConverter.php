@@ -40,10 +40,7 @@ final class PlainTextConverter extends AbstractConverter
         return (string)$plainTextSuite;
     }
 
-    /**
-     * @param PlainText|PlainTextSuite $plainTextSuite
-     */
-    private function renderSuite(SourceSuite $sourceSuite, $plainTextSuite): void
+    private function renderSuite(SourceSuite $sourceSuite, PlainText|PlainTextSuite $plainTextSuite): void
     {
         foreach ($sourceSuite->getCases() as $sourceCase) {
             $this->renderTestCase($sourceCase, $plainTextSuite);
@@ -54,10 +51,7 @@ final class PlainTextConverter extends AbstractConverter
         }
     }
 
-    /**
-     * @param PlainText|PlainTextSuite $plainTextSuite
-     */
-    private function renderTestCase(SourceCase $sourceCase, $plainTextSuite): void
+    private function renderTestCase(SourceCase $sourceCase, PlainText|PlainTextSuite $plainTextSuite): void
     {
         if ($sourceCase->stdOut !== null) {
             $level = PlainTextCase::LEVEL_ERROR;

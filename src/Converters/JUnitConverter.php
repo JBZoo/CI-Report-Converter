@@ -49,11 +49,10 @@ final class JUnitConverter extends AbstractConverter
     }
 
     /**
-     * @return JUnit|JUnitSuite
      * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      * @SuppressWarnings(PHPMD.NPathComplexity)
      */
-    public function createJUnitNodes(SourceSuite $source, JUnit|JUnitSuite $junitSuite)
+    public function createJUnitNodes(SourceSuite $source, JUnit|JUnitSuite $junitSuite): JUnit|JUnitSuite
     {
         if ($source->name !== '') {
             $junitSuite       = $junitSuite->addSuite($source->name);
@@ -108,6 +107,7 @@ final class JUnitConverter extends AbstractConverter
 
     /**
      * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     * @psalm-suppress UnusedReturnValue
      */
     private function createSourceNodes(array $xmlAsArray, SourceSuite $currentSuite): SourceSuite
     {

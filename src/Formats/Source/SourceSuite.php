@@ -18,6 +18,9 @@ namespace JBZoo\CIReportConverter\Formats\Source;
 
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
+/**
+ * @psalm-suppress PossiblyUnusedProperty
+ */
 final class SourceSuite extends AbstractNode
 {
     public ?string $file  = null;

@@ -18,6 +18,9 @@ namespace JBZoo\CIReportConverter\Formats\Metric;
 
 use JBZoo\CIReportConverter\Formats\AbstractNode;
 
+/**
+ * @psalm-suppress PossiblyUnusedProperty
+ */
 final class Metric extends AbstractNode
 {
     public ?string $key         = null;

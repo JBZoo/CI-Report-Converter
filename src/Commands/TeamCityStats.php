@@ -43,22 +43,22 @@ final class TeamCityStats extends AbstractCommand
                 'input-file',
                 'I',
                 InputOption::VALUE_OPTIONAL,
-                'File path with the original report format. ' .
-                'If not set or empty, then the STDIN is used.',
+                'File path with the original report format. '
+                . 'If not set or empty, then the STDIN is used.',
             )
             ->addOption(
                 'output-file',
                 'O',
                 InputOption::VALUE_OPTIONAL,
-                'File path with the result report format. ' .
-                'If not set or empty, then the STDOUT is used.',
+                'File path with the result report format. '
+                . 'If not set or empty, then the STDOUT is used.',
             )
             ->addOption(
                 'root-path',
                 'R',
                 InputOption::VALUE_OPTIONAL,
-                'If option is set, ' .
-                'all absolute file paths will be converted to relative once.',
+                'If option is set, '
+                . 'all absolute file paths will be converted to relative once.',
                 '.',
             )
             ->addOption(
@@ -94,8 +94,8 @@ final class TeamCityStats extends AbstractCommand
 
         if (!\in_array($format, $validFormats, true)) {
             throw new Exception(
-                "Format \"{$format}\" not found. See help for the option \"--input-format\".\n" .
-                'Available options: ' . \implode(',', $validFormats),
+                "Format \"{$format}\" not found. See help for the option \"--input-format\".\n"
+                . 'Available options: ' . \implode(',', $validFormats),
             );
         }
 

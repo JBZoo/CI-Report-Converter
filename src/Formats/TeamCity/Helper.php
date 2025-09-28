@@ -125,11 +125,7 @@ final class Helper
                     return $escapeCharacterMap[$matches[1]];
                 }
 
-                if ($matches[2] !== '') {
-                    return '|0x' . $matches[2];
-                }
-
-                throw new Exception('Unexpected match combination.');
+                return '|0x' . $matches[2];
             },
             $value,
         );
