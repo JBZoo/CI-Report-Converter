@@ -60,6 +60,11 @@ Well... It may seem to you it's a useless thing, and _your favorite super tool_ 
 
 
 
+## Requirements
+
+- PHP 8.2 or higher
+- Extensions: dom, simplexml, hash
+
 ## Installing
 
 ```shell
@@ -132,7 +137,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.2
+          tools: composer
+
+      - name: Install Dependencies
+        run: composer install
 
       - name: PHP Code Sniffer
         run: ./vendor/bin/phpcs --report=checkstyle --standard=PSR12 -q ./src > ./build/phpcs-checkstyle.xml
@@ -555,9 +569,9 @@ You can find a lot of [life examples here](https://github.com/JBZoo/CI-Report-Co
 
 ### GitLab CI
 
-Use the option `--output-format=gitlab-json` to convert the report to Gitlab JSON format.
+Use the option `--output-format=gitlab-json` to convert the report to GitLab JSON format.
 
-Als, see [how to implemente GitLab Custom Report](https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html#implementing-a-custom-tool)
+Also, see [how to implement GitLab Custom Report](https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html#implementing-a-custom-tool)
 
 ![GitLab Code Quality Report](.github/assets/gitlab-code-quality-report.png)
 
